@@ -13,7 +13,8 @@
     "high_risk_count": 6,
     "metadata_only_count": 1,
     "value_change_count": 0,
-    "merged_external_review_count": 6
+    "merged_external_review_count": 6,
+    "card_count": 8
   },
   "items": [
     {
@@ -262,7 +263,12 @@
       "source_queue": "source_conflict_resolution_candidates",
       "merged_external_review": true,
       "created_at": "2026-06-27T13:23:22.760083+00:00",
-      "updated_at": "2026-06-27T13:58:47.715751+00:00"
+      "updated_at": "2026-06-27T13:58:47.715751+00:00",
+      "user_facing_summary": "天王星 的 HAS_MASS 被列入质量复查。当前记录是：0.0013 × 10 25 kg。问题原因：不同来源给出的事实值不一致。",
+      "recommended_user_action": "需要进一步查证",
+      "risk_explanation": "这条可能涉及事实值冲突或抽取错误。建议先暂缓，不建议直接合并。",
+      "evidence_summary": "外部复核建议：mark_extraction_error；比较结果：likely_zhwiki_extraction_error；置信度：0.8。外部值：86810 Q613726；来源：https://www.wikidata.org/wiki/Q324；许可：CC0-1.0。",
+      "merge_impact_summary": "默认不会合并为正式事实值；需要额外来源确认和显式 value-change 许可。"
     },
     {
       "review_id": "qr_source_conflict_v4_002",
@@ -483,7 +489,12 @@
       "source_queue": "source_conflict_resolution_candidates",
       "merged_external_review": false,
       "created_at": "2026-06-27T13:23:22.760083+00:00",
-      "updated_at": "2026-06-27T13:58:47.715751+00:00"
+      "updated_at": "2026-06-27T13:58:47.715751+00:00",
+      "user_facing_summary": "天王星 的 HAS_RADIUS 被列入质量复查。当前记录是：4km、20km。问题原因：数值缺少清楚的测量口径。",
+      "recommended_user_action": "通过低风险标注",
+      "risk_explanation": "这条只涉及补充测量口径或质量状态，不改变 subject/relation/object。",
+      "evidence_summary": "暂无额外外部复核；请以审计证据和原始来源为准。",
+      "merge_impact_summary": "若审批通过并执行低风险标注，只会给匹配 triples 增加质量元数据；不会改变正式事实值。"
     },
     {
       "review_id": "qr_source_conflict_v4_003",
@@ -729,7 +740,12 @@
       "source_queue": "source_conflict_resolution_candidates",
       "merged_external_review": true,
       "created_at": "2026-06-27T13:23:22.760083+00:00",
-      "updated_at": "2026-06-27T13:58:47.715751+00:00"
+      "updated_at": "2026-06-27T13:58:47.715751+00:00",
+      "user_facing_summary": "月球 的 ORBITS 被列入质量复查。当前记录是：太阳系内密度第二高。问题原因：不同来源给出的事实值不一致。",
+      "recommended_user_action": "需要进一步查证",
+      "risk_explanation": "这条可能涉及事实值冲突或抽取错误。建议先暂缓，不建议直接合并。",
+      "evidence_summary": "外部复核建议：mark_extraction_error；比较结果：ontology_rule_needed；置信度：0.86。外部值：Q2；来源：https://www.wikidata.org/wiki/Q405；许可：CC0-1.0。",
+      "merge_impact_summary": "默认不会合并为正式事实值；需要额外来源确认和显式 value-change 许可。"
     },
     {
       "review_id": "qr_source_conflict_v4_004",
@@ -973,7 +989,12 @@
       "source_queue": "source_conflict_resolution_candidates",
       "merged_external_review": true,
       "created_at": "2026-06-27T13:23:22.760083+00:00",
-      "updated_at": "2026-06-27T13:58:47.715751+00:00"
+      "updated_at": "2026-06-27T13:58:47.715751+00:00",
+      "user_facing_summary": "木卫二 的 HAS_MASS 被列入质量复查。当前记录是：0.000 013 × 10 22 kg。问题原因：不同来源给出的事实值不一致。",
+      "recommended_user_action": "需要进一步查证",
+      "risk_explanation": "这条可能涉及事实值冲突或抽取错误。建议先暂缓，不建议直接合并。",
+      "evidence_summary": "外部复核建议：mark_extraction_error；比较结果：likely_zhwiki_extraction_error；置信度：0.78。外部值：90 Q2612219；来源：https://www.wikidata.org/wiki/Q17439；许可：CC0-1.0。",
+      "merge_impact_summary": "默认不会合并为正式事实值；需要额外来源确认和显式 value-change 许可。"
     },
     {
       "review_id": "qr_source_conflict_v4_005",
@@ -1217,7 +1238,12 @@
       "source_queue": "source_conflict_resolution_candidates",
       "merged_external_review": true,
       "created_at": "2026-06-27T13:23:22.760083+00:00",
-      "updated_at": "2026-06-27T13:58:47.715751+00:00"
+      "updated_at": "2026-06-27T13:58:47.715751+00:00",
+      "user_facing_summary": "木卫四 的 HAS_MASS 被列入质量复查。当前记录是：0.000 137 × 10 23 kg。问题原因：不同来源给出的事实值不一致。",
+      "recommended_user_action": "需要进一步查证",
+      "risk_explanation": "这条可能涉及事实值冲突或抽取错误。建议先暂缓，不建议直接合并。",
+      "evidence_summary": "外部复核建议：mark_extraction_error；比较结果：likely_zhwiki_extraction_error；置信度：0.78。外部值：90 Q2612219；来源：https://www.wikidata.org/wiki/Q16898；许可：CC0-1.0。",
+      "merge_impact_summary": "默认不会合并为正式事实值；需要额外来源确认和显式 value-change 许可。"
     },
     {
       "review_id": "qr_source_conflict_v4_006",
@@ -1386,7 +1412,12 @@
       "source_queue": "source_conflict_resolution_candidates",
       "merged_external_review": false,
       "created_at": "2026-06-27T13:23:22.760083+00:00",
-      "updated_at": "2026-06-27T13:58:47.715751+00:00"
+      "updated_at": "2026-06-27T13:58:47.715751+00:00",
+      "user_facing_summary": "火卫一 的 HAS_MASS 被列入质量复查。当前记录是：1.072 × 10 16 kg。问题原因：来源精度或粒度不同。",
+      "recommended_user_action": "拒绝",
+      "risk_explanation": "这条更像不同来源的精度差异，通常不需要改正式数据。",
+      "evidence_summary": "暂无额外外部复核；请以审计证据和原始来源为准。",
+      "merge_impact_summary": "默认不会写入正式 triples。"
     },
     {
       "review_id": "qr_source_conflict_v4_007",
@@ -1594,7 +1625,12 @@
       "source_queue": "source_conflict_resolution_candidates",
       "merged_external_review": true,
       "created_at": "2026-06-27T13:23:22.760083+00:00",
-      "updated_at": "2026-06-27T13:58:47.715751+00:00"
+      "updated_at": "2026-06-27T13:58:47.715751+00:00",
+      "user_facing_summary": "火卫一 的 HAS_RADIUS 被列入质量复查。当前记录是：11.1km。问题原因：不同来源给出的事实值不一致。",
+      "recommended_user_action": "需要进一步查证",
+      "risk_explanation": "这条可能涉及事实值冲突或抽取错误。建议先暂缓，不建议直接合并。",
+      "evidence_summary": "外部复核建议：defer_unresolved；比较结果：unresolved；置信度：0.35。外部值：未给出标准化值；来源：未给出链接；许可：未说明许可。",
+      "merge_impact_summary": "默认不会合并为正式事实值；需要额外来源确认和显式 value-change 许可。"
     },
     {
       "review_id": "qr_source_conflict_v4_008",
@@ -1802,7 +1838,13 @@
       "source_queue": "source_conflict_resolution_candidates",
       "merged_external_review": true,
       "created_at": "2026-06-27T13:23:22.760083+00:00",
-      "updated_at": "2026-06-27T13:58:47.715751+00:00"
+      "updated_at": "2026-06-27T13:58:47.715751+00:00",
+      "user_facing_summary": "金星 的 HAS_RADIUS 被列入质量复查。当前记录是：1.0km。问题原因：不同来源给出的事实值不一致。",
+      "recommended_user_action": "需要进一步查证",
+      "risk_explanation": "这条可能涉及事实值冲突或抽取错误。建议先暂缓，不建议直接合并。",
+      "evidence_summary": "外部复核建议：defer_unresolved；比较结果：unresolved；置信度：0.35。外部值：未给出标准化值；来源：未给出链接；许可：未说明许可。",
+      "merge_impact_summary": "默认不会合并为正式事实值；需要额外来源确认和显式 value-change 许可。"
     }
-  ]
+  ],
+  "cards_generated_at": "2026-06-27T14:43:43.047950+00:00"
 }

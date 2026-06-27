@@ -1,42 +1,42 @@
 {
-  "generated_at": "2026-06-27T22:34:38",
+  "generated_at": "2026-06-27T22:46:38",
   "passed": true,
   "steps": [
     {
       "command": "python -m unittest discover tests",
       "exit_code": 0,
       "passed": true,
-      "duration_seconds": 10.056
+      "duration_seconds": 11.755
     },
     {
       "command": "python scripts/run_single_source_retrieval_eval.py",
       "exit_code": 0,
       "passed": true,
-      "duration_seconds": 81.485
+      "duration_seconds": 101.877
     },
     {
       "command": "python scripts/run_source_expansion_eval.py --source wikidata",
       "exit_code": 0,
       "passed": true,
-      "duration_seconds": 1.683
+      "duration_seconds": 1.693
     },
     {
       "command": "python scripts/run_source_expansion_eval.py --source nasa",
       "exit_code": 0,
       "passed": true,
-      "duration_seconds": 0.81
+      "duration_seconds": 0.773
     },
     {
       "command": "python scripts/collect_eval_failures.py",
       "exit_code": 0,
       "passed": true,
-      "duration_seconds": 0.078
+      "duration_seconds": 0.081
     },
     {
       "command": "python scripts/smoke_default_source_boundary.py",
       "exit_code": 0,
       "passed": true,
-      "duration_seconds": 27.895
+      "duration_seconds": 33.962
     }
   ],
   "reports": {

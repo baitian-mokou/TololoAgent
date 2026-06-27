@@ -831,11 +831,12 @@ class QualityReviewTab(BaseTab):
         tool_buttons.pack(fill="x", pady=(4, 8))
         self.btn_refresh = tb.Button(tool_buttons, text="刷新", command=self._refresh_queue)
         self.btn_build = tb.Button(tool_buttons, text="生成队列", command=self._build_queue)
+        self.btn_defer_high = tb.Button(tool_buttons, text="暂缓全部高风险项", command=self._defer_all_high_risk, bootstyle="warning")
         self.btn_dry_run = tb.Button(tool_buttons, text="预演合并", command=self._dry_run_apply)
         self.btn_apply = tb.Button(tool_buttons, text="合并低风险标注", command=self._apply_metadata_only, bootstyle="danger")
         self.btn_export = tb.Button(tool_buttons, text="导出复查报告", command=self._export_review_report)
         self.btn_show_report = tb.Button(tool_buttons, text="显示最近 apply report", command=self._show_apply_report)
-        for button in (self.btn_refresh, self.btn_build, self.btn_dry_run, self.btn_apply, self.btn_export, self.btn_show_report):
+        for button in (self.btn_refresh, self.btn_build, self.btn_defer_high, self.btn_dry_run, self.btn_apply, self.btn_export, self.btn_show_report):
             button.pack(side="left", padx=(0, 6))
 
         self.log_title = tb.Label(self.frame, text="操作记录", font=("微软雅黑", 10, "bold"), style="Heading.TLabel")
@@ -902,6 +903,30 @@ class QualityReviewTab(BaseTab):
         if not item:
             return
         decision = self.decisions_by_patch.get(item.get("patch_id"), {})
+        if item.get("user_facing_summary"):
+            lines = [
+                f"对象：{item.get('subject', '')}",
+                f"关系：{item.get('relation', '')}",
+                f"风险：{self._risk_label(item.get('risk_level', ''))}",
+                f"当前决定：{self._decision_label(decision.get('human_decision') or item.get('human_decision', 'pending'))}",
+                "",
+                f"复查摘要：{item.get('user_facing_summary')}",
+                f"推荐操作：{item.get('recommended_user_action', '暂缓')}",
+                f"为什么：{item.get('risk_explanation', '需要人工复核。')}",
+                f"外部证据：{item.get('evidence_summary', '暂无额外外部复核。')}",
+                f"合并影响：{item.get('merge_impact_summary', '默认不写入正式 triples。')}",
+                "",
+                f"系统建议：{item.get('system_recommendation', '建议人工复核。')}",
+            ]
+            if item.get("risk_level") == "high":
+                lines.extend(["", "高风险提示：建议暂缓，不建议直接合并为正式事实值。"])
+            if decision.get("human_reason"):
+                lines.extend(["", f"审批说明：{decision.get('human_reason')}"])
+            self.detail_text.config(state="normal")
+            self.detail_text.delete("1.0", "end")
+            self.detail_text.insert("end", "\n".join(lines))
+            self.detail_text.config(state="disabled")
+            return
         lines = [
             f"对象：{item.get('subject', '')}",
             f"关系：{item.get('relation', '')}",
@@ -968,6 +993,48 @@ class QualityReviewTab(BaseTab):
         self._refresh_queue()
         self.tree.selection_set(item.get("review_id"))
         self._show_selected_detail()
+
+    def _defer_all_high_risk(self):
+        confirmed = messagebox.askyesno(
+            "暂缓全部高风险项",
+            "此操作只会把高风险复查项标记为“暂缓”，不会写 triples，也不会执行合并。\n\n继续吗？",
+            icon="warning",
+        )
+        if not confirmed:
+            return
+        payload = self._load_json(self.decisions_path, {"schema_version": "quality_review_decisions_v1", "decisions": []})
+        decisions = payload.setdefault("decisions", [])
+        by_patch = {item.get("patch_id"): item for item in decisions if item.get("patch_id")}
+        now = datetime.now(timezone.utc).isoformat()
+        changed = 0
+        for item in self.items:
+            if item.get("risk_level") != "high":
+                continue
+            decision = by_patch.get(item.get("patch_id"))
+            if decision is None:
+                decision = {"review_id": item.get("review_id"), "patch_id": item.get("patch_id")}
+                decisions.append(decision)
+            if decision.get("human_decision") != "deferred":
+                changed += 1
+            decision.update({
+                "review_id": item.get("review_id"),
+                "patch_id": item.get("patch_id"),
+                "subject": item.get("subject"),
+                "relation": item.get("relation"),
+                "issue_type": item.get("issue_type"),
+                "risk_level": item.get("risk_level"),
+                "change_type": item.get("change_type"),
+                "human_decision": "deferred",
+                "human_reason": "deferred_high_risk_in_gui",
+                "approved_action": None,
+                "safe_to_apply": False,
+                "reviewed_by": "gui",
+                "reviewed_at": now,
+                "updated_at": now,
+            })
+        self._dump_json(self.decisions_path, payload)
+        self._log(f"已暂缓 {changed} 条高风险复查项；未写入 triples。")
+        self._refresh_queue()
 
     def _build_queue(self):
         self._run_worker("正在生成质量复查队列...", self._build_queue_worker)
