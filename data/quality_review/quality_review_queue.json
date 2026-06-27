@@ -1,0 +1,1808 @@
+{
+  "schema_version": "quality_review_queue_v1",
+  "generated_at": "2026-06-27T13:58:47.715751+00:00",
+  "inputs": {
+    "candidates": "F:\\知识表示与处理结课作业\\第二次托洛洛测试 -重大进展\\data\\quality_patches\\source_conflict_resolution_candidates.json",
+    "audit": "F:\\知识表示与处理结课作业\\第二次托洛洛测试 -重大进展\\evaluation\\source_conflict_audit_v4.json",
+    "external_candidates": "F:\\知识表示与处理结课作业\\第二次托洛洛测试 -重大进展\\data\\quality_patches\\external_source_review_candidates.json"
+  },
+  "summary": {
+    "item_count": 8,
+    "pending_count": 8,
+    "approved_count": 0,
+    "high_risk_count": 6,
+    "metadata_only_count": 1,
+    "value_change_count": 0,
+    "merged_external_review_count": 6
+  },
+  "items": [
+    {
+      "review_id": "qr_source_conflict_v4_001",
+      "patch_id": "source_conflict_v4_001",
+      "subject": "天王星",
+      "relation": "HAS_MASS",
+      "current_value": "0.0013 × 10 25 kg",
+      "proposed_value": "manual review; no automatic data change",
+      "proposed_metadata": {},
+      "issue_type": "true_value_conflict",
+      "risk_level": "high",
+      "source_evidence": {
+        "values_by_source": {
+          "zh_wikipedia": [
+            "0.0013 × 10 25 kg"
+          ],
+          "wikidata": [
+            "8.6810e25 kg"
+          ]
+        },
+        "target_source": "zh_wikipedia",
+        "target_file": "F:\\知识表示与处理结课作业\\第二次托洛洛测试 -重大进展\\data\\triples\\天王星_triples.json",
+        "target_record_hint": {
+          "subject": "天王星",
+          "relation": "HAS_MASS",
+          "object": "0.0013 × 10 25 kg"
+        },
+        "sources_involved": [
+          "wikidata",
+          "zh_wikipedia"
+        ],
+        "evidence_by_source": {
+          "zh_wikipedia": [
+            {
+              "raw_value": "0.0013 × 10 25 kg",
+              "normalized_value": "1.3e+22",
+              "unit": "kg",
+              "parse_status": "parsed",
+              "measurement_kind": "mass",
+              "measurement_confidence": 0.75,
+              "measurement_evidence": [
+                "generic mass relation"
+              ],
+              "measurement_warning": "",
+              "source_title": "天王星",
+              "source_url": "",
+              "source_record_id": "",
+              "target_file": "F:\\知识表示与处理结课作业\\第二次托洛洛测试 -重大进展\\data\\triples\\天王星_triples.json",
+              "target_record_hint": {
+                "subject": "天王星",
+                "relation": "HAS_MASS",
+                "object": "0.0013 × 10 25 kg"
+              }
+            }
+          ],
+          "wikidata": [
+            {
+              "raw_value": "8.6810e25 kg",
+              "normalized_value": "8.681e+25",
+              "unit": "kg",
+              "parse_status": "parsed",
+              "measurement_kind": "mass",
+              "measurement_confidence": 0.75,
+              "measurement_evidence": [
+                "generic mass relation"
+              ],
+              "measurement_warning": "",
+              "source_title": "天王星",
+              "source_url": "",
+              "source_record_id": "",
+              "target_file": "F:\\知识表示与处理结课作业\\第二次托洛洛测试 -重大进展\\data\\triples\\wikidata\\天王星_triples.json",
+              "target_record_hint": {
+                "subject": "天王星",
+                "relation": "HAS_MASS",
+                "object": "8.6810e25 kg"
+              }
+            }
+          ]
+        },
+        "audit_reason": "Values remain materially different after unit, alias, synonym, and measurement-kind checks.",
+        "external_review": {
+          "external_patch_id": "external_review_source_conflict_v4_001",
+          "source_patch_id": "source_conflict_v4_001",
+          "action": "mark_extraction_error",
+          "comparison_result": "likely_zhwiki_extraction_error",
+          "recommendation": "mark_extraction_error",
+          "confidence": 0.8,
+          "requires_human_approval": true,
+          "safe_to_apply": false,
+          "values_by_source": {
+            "zh_wikipedia": [
+              "0.0013 × 10 25 kg"
+            ],
+            "wikidata": [
+              "8.6810e25 kg"
+            ]
+          },
+          "proposal": "candidate only; no formal triples change without human approval",
+          "external_evidence": {
+            "relation": "HAS_MASS",
+            "object": "86810 Q613726",
+            "property_id": "P2067",
+            "source_record_id": "Q324:P2067:Q324$be9a3549-4555-ae2c-54e2-17e036b87a5a",
+            "source_url": "https://www.wikidata.org/wiki/Q324",
+            "source_license": "CC0-1.0",
+            "license_hint": "CC0-1.0",
+            "fetched_at": "2026-06-27T13:23:33.283782+00:00",
+            "raw_value": {
+              "amount": "+86810",
+              "unit": "http://www.wikidata.org/entity/Q613726",
+              "upperBound": "+86823",
+              "lowerBound": "+86797"
+            },
+            "normalized_value": "86810 Q613726",
+            "unit": "Q613726",
+            "confidence": 0.85,
+            "evidence_source": "wikidata_live_preview",
+            "title": "天王星"
+          }
+        }
+      },
+      "review_evidence": {
+        "audit_v4": {
+          "values_by_source": {
+            "zh_wikipedia": [
+              "0.0013 × 10 25 kg"
+            ],
+            "wikidata": [
+              "8.6810e25 kg"
+            ]
+          },
+          "target_source": "zh_wikipedia",
+          "target_file": "F:\\知识表示与处理结课作业\\第二次托洛洛测试 -重大进展\\data\\triples\\天王星_triples.json",
+          "target_record_hint": {
+            "subject": "天王星",
+            "relation": "HAS_MASS",
+            "object": "0.0013 × 10 25 kg"
+          },
+          "sources_involved": [
+            "wikidata",
+            "zh_wikipedia"
+          ],
+          "evidence_by_source": {
+            "zh_wikipedia": [
+              {
+                "raw_value": "0.0013 × 10 25 kg",
+                "normalized_value": "1.3e+22",
+                "unit": "kg",
+                "parse_status": "parsed",
+                "measurement_kind": "mass",
+                "measurement_confidence": 0.75,
+                "measurement_evidence": [
+                  "generic mass relation"
+                ],
+                "measurement_warning": "",
+                "source_title": "天王星",
+                "source_url": "",
+                "source_record_id": "",
+                "target_file": "F:\\知识表示与处理结课作业\\第二次托洛洛测试 -重大进展\\data\\triples\\天王星_triples.json",
+                "target_record_hint": {
+                  "subject": "天王星",
+                  "relation": "HAS_MASS",
+                  "object": "0.0013 × 10 25 kg"
+                }
+              }
+            ],
+            "wikidata": [
+              {
+                "raw_value": "8.6810e25 kg",
+                "normalized_value": "8.681e+25",
+                "unit": "kg",
+                "parse_status": "parsed",
+                "measurement_kind": "mass",
+                "measurement_confidence": 0.75,
+                "measurement_evidence": [
+                  "generic mass relation"
+                ],
+                "measurement_warning": "",
+                "source_title": "天王星",
+                "source_url": "",
+                "source_record_id": "",
+                "target_file": "F:\\知识表示与处理结课作业\\第二次托洛洛测试 -重大进展\\data\\triples\\wikidata\\天王星_triples.json",
+                "target_record_hint": {
+                  "subject": "天王星",
+                  "relation": "HAS_MASS",
+                  "object": "8.6810e25 kg"
+                }
+              }
+            ]
+          },
+          "audit_reason": "Values remain materially different after unit, alias, synonym, and measurement-kind checks."
+        },
+        "external_source_review": {
+          "external_patch_id": "external_review_source_conflict_v4_001",
+          "source_patch_id": "source_conflict_v4_001",
+          "action": "mark_extraction_error",
+          "comparison_result": "likely_zhwiki_extraction_error",
+          "recommendation": "mark_extraction_error",
+          "confidence": 0.8,
+          "requires_human_approval": true,
+          "safe_to_apply": false,
+          "values_by_source": {
+            "zh_wikipedia": [
+              "0.0013 × 10 25 kg"
+            ],
+            "wikidata": [
+              "8.6810e25 kg"
+            ]
+          },
+          "proposal": "candidate only; no formal triples change without human approval",
+          "external_evidence": {
+            "relation": "HAS_MASS",
+            "object": "86810 Q613726",
+            "property_id": "P2067",
+            "source_record_id": "Q324:P2067:Q324$be9a3549-4555-ae2c-54e2-17e036b87a5a",
+            "source_url": "https://www.wikidata.org/wiki/Q324",
+            "source_license": "CC0-1.0",
+            "license_hint": "CC0-1.0",
+            "fetched_at": "2026-06-27T13:23:33.283782+00:00",
+            "raw_value": {
+              "amount": "+86810",
+              "unit": "http://www.wikidata.org/entity/Q613726",
+              "upperBound": "+86823",
+              "lowerBound": "+86797"
+            },
+            "normalized_value": "86810 Q613726",
+            "unit": "Q613726",
+            "confidence": 0.85,
+            "evidence_source": "wikidata_live_preview",
+            "title": "天王星"
+          }
+        }
+      },
+      "system_recommendation": "建议暂缓；需要外部权威来源或人工确认后才能考虑正式改值。 外部复核：mark_extraction_error（likely_zhwiki_extraction_error，confidence=0.8），仍需人工审批后才能处理。",
+      "human_decision": "pending",
+      "safe_to_apply": false,
+      "change_type": "manual_review",
+      "action": "no_action_manual_review",
+      "target_file": "F:\\知识表示与处理结课作业\\第二次托洛洛测试 -重大进展\\data\\triples\\天王星_triples.json",
+      "target_record_hint": {
+        "subject": "天王星",
+        "relation": "HAS_MASS",
+        "object": "0.0013 × 10 25 kg"
+      },
+      "source_queue": "source_conflict_resolution_candidates",
+      "merged_external_review": true,
+      "created_at": "2026-06-27T13:23:22.760083+00:00",
+      "updated_at": "2026-06-27T13:58:47.715751+00:00"
+    },
+    {
+      "review_id": "qr_source_conflict_v4_002",
+      "patch_id": "source_conflict_v4_002",
+      "subject": "天王星",
+      "relation": "HAS_RADIUS",
+      "current_value": [
+        "4km",
+        "20km"
+      ],
+      "proposed_value": null,
+      "proposed_metadata": {
+        "action": "add_measurement_kind",
+        "measurement_kind": "unspecified_radius",
+        "quality_status": "approved_metadata_only",
+        "note": "annotate candidate measurement_kind only; do not mutate formal triples"
+      },
+      "issue_type": "measurement_kind_mismatch",
+      "risk_level": "low",
+      "source_evidence": {
+        "values_by_source": {
+          "zh_wikipedia": [
+            "4km",
+            "20km"
+          ],
+          "wikidata": [
+            "25362 km"
+          ]
+        },
+        "target_source": "zh_wikipedia",
+        "target_file": "F:\\知识表示与处理结课作业\\第二次托洛洛测试 -重大进展\\data\\triples\\天王星_triples.json",
+        "target_record_hint": {
+          "subject": "天王星",
+          "relation": "HAS_RADIUS",
+          "object": "4km"
+        },
+        "sources_involved": [
+          "wikidata",
+          "zh_wikipedia"
+        ],
+        "evidence_by_source": {
+          "zh_wikipedia": [
+            {
+              "raw_value": "4km",
+              "normalized_value": "4km",
+              "unit": "",
+              "parse_status": "unparsed",
+              "measurement_kind": "equatorial_radius",
+              "measurement_confidence": 0.92,
+              "measurement_evidence": [
+                "matched equatorial radius marker"
+              ],
+              "measurement_warning": "",
+              "source_title": "天王星",
+              "source_url": "",
+              "source_record_id": "",
+              "target_file": "F:\\知识表示与处理结课作业\\第二次托洛洛测试 -重大进展\\data\\triples\\天王星_triples.json",
+              "target_record_hint": {
+                "subject": "天王星",
+                "relation": "HAS_RADIUS",
+                "object": "4km"
+              }
+            },
+            {
+              "raw_value": "20km",
+              "normalized_value": "20km",
+              "unit": "",
+              "parse_status": "unparsed",
+              "measurement_kind": "polar_radius",
+              "measurement_confidence": 0.92,
+              "measurement_evidence": [
+                "matched polar radius marker"
+              ],
+              "measurement_warning": "",
+              "source_title": "天王星",
+              "source_url": "",
+              "source_record_id": "",
+              "target_file": "F:\\知识表示与处理结课作业\\第二次托洛洛测试 -重大进展\\data\\triples\\天王星_triples.json",
+              "target_record_hint": {
+                "subject": "天王星",
+                "relation": "HAS_RADIUS",
+                "object": "20km"
+              }
+            }
+          ],
+          "wikidata": [
+            {
+              "raw_value": "25362 km",
+              "normalized_value": "25362",
+              "unit": "km",
+              "parse_status": "parsed",
+              "measurement_kind": "unknown",
+              "measurement_confidence": 0.2,
+              "measurement_evidence": [
+                "no radius measurement-kind marker"
+              ],
+              "measurement_warning": "",
+              "source_title": "天王星",
+              "source_url": "",
+              "source_record_id": "",
+              "target_file": "F:\\知识表示与处理结课作业\\第二次托洛洛测试 -重大进展\\data\\triples\\wikidata\\天王星_triples.json",
+              "target_record_hint": {
+                "subject": "天王星",
+                "relation": "HAS_RADIUS",
+                "object": "25362 km"
+              }
+            }
+          ]
+        },
+        "audit_reason": "Radius records mix mean/equatorial/polar or unspecified radius kinds."
+      },
+      "review_evidence": {
+        "audit_v4": {
+          "values_by_source": {
+            "zh_wikipedia": [
+              "4km",
+              "20km"
+            ],
+            "wikidata": [
+              "25362 km"
+            ]
+          },
+          "target_source": "zh_wikipedia",
+          "target_file": "F:\\知识表示与处理结课作业\\第二次托洛洛测试 -重大进展\\data\\triples\\天王星_triples.json",
+          "target_record_hint": {
+            "subject": "天王星",
+            "relation": "HAS_RADIUS",
+            "object": "4km"
+          },
+          "sources_involved": [
+            "wikidata",
+            "zh_wikipedia"
+          ],
+          "evidence_by_source": {
+            "zh_wikipedia": [
+              {
+                "raw_value": "4km",
+                "normalized_value": "4km",
+                "unit": "",
+                "parse_status": "unparsed",
+                "measurement_kind": "equatorial_radius",
+                "measurement_confidence": 0.92,
+                "measurement_evidence": [
+                  "matched equatorial radius marker"
+                ],
+                "measurement_warning": "",
+                "source_title": "天王星",
+                "source_url": "",
+                "source_record_id": "",
+                "target_file": "F:\\知识表示与处理结课作业\\第二次托洛洛测试 -重大进展\\data\\triples\\天王星_triples.json",
+                "target_record_hint": {
+                  "subject": "天王星",
+                  "relation": "HAS_RADIUS",
+                  "object": "4km"
+                }
+              },
+              {
+                "raw_value": "20km",
+                "normalized_value": "20km",
+                "unit": "",
+                "parse_status": "unparsed",
+                "measurement_kind": "polar_radius",
+                "measurement_confidence": 0.92,
+                "measurement_evidence": [
+                  "matched polar radius marker"
+                ],
+                "measurement_warning": "",
+                "source_title": "天王星",
+                "source_url": "",
+                "source_record_id": "",
+                "target_file": "F:\\知识表示与处理结课作业\\第二次托洛洛测试 -重大进展\\data\\triples\\天王星_triples.json",
+                "target_record_hint": {
+                  "subject": "天王星",
+                  "relation": "HAS_RADIUS",
+                  "object": "20km"
+                }
+              }
+            ],
+            "wikidata": [
+              {
+                "raw_value": "25362 km",
+                "normalized_value": "25362",
+                "unit": "km",
+                "parse_status": "parsed",
+                "measurement_kind": "unknown",
+                "measurement_confidence": 0.2,
+                "measurement_evidence": [
+                  "no radius measurement-kind marker"
+                ],
+                "measurement_warning": "",
+                "source_title": "天王星",
+                "source_url": "",
+                "source_record_id": "",
+                "target_file": "F:\\知识表示与处理结课作业\\第二次托洛洛测试 -重大进展\\data\\triples\\wikidata\\天王星_triples.json",
+                "target_record_hint": {
+                  "subject": "天王星",
+                  "relation": "HAS_RADIUS",
+                  "object": "25362 km"
+                }
+              }
+            ]
+          },
+          "audit_reason": "Radius records mix mean/equatorial/polar or unspecified radius kinds."
+        },
+        "external_source_review": null
+      },
+      "system_recommendation": "建议只补充元数据标注，不修改 subject/relation/object 正式事实值。",
+      "human_decision": "pending",
+      "safe_to_apply": true,
+      "change_type": "metadata_only",
+      "action": "add_measurement_kind",
+      "target_file": "F:\\知识表示与处理结课作业\\第二次托洛洛测试 -重大进展\\data\\triples\\天王星_triples.json",
+      "target_record_hint": {
+        "subject": "天王星",
+        "relation": "HAS_RADIUS",
+        "object": "4km"
+      },
+      "source_queue": "source_conflict_resolution_candidates",
+      "merged_external_review": false,
+      "created_at": "2026-06-27T13:23:22.760083+00:00",
+      "updated_at": "2026-06-27T13:58:47.715751+00:00"
+    },
+    {
+      "review_id": "qr_source_conflict_v4_003",
+      "patch_id": "source_conflict_v4_003",
+      "subject": "月球",
+      "relation": "ORBITS",
+      "current_value": "太阳系内密度第二高",
+      "proposed_value": "manual review; no automatic data change",
+      "proposed_metadata": {},
+      "issue_type": "true_value_conflict",
+      "risk_level": "high",
+      "source_evidence": {
+        "values_by_source": {
+          "zh_wikipedia": [
+            "太阳系内密度第二高"
+          ],
+          "wikidata": [
+            "地球"
+          ]
+        },
+        "target_source": "zh_wikipedia",
+        "target_file": "F:\\知识表示与处理结课作业\\第二次托洛洛测试 -重大进展\\data\\triples\\月球_triples.json",
+        "target_record_hint": {
+          "subject": "月球",
+          "relation": "ORBITS",
+          "object": "太阳系内密度第二高"
+        },
+        "sources_involved": [
+          "wikidata",
+          "zh_wikipedia"
+        ],
+        "evidence_by_source": {
+          "zh_wikipedia": [
+            {
+              "raw_value": "太阳系内密度第二高",
+              "normalized_value": "太阳系内密度第二高",
+              "unit": "",
+              "parse_status": "text_normalized",
+              "measurement_kind": "orbit_target",
+              "measurement_confidence": 0.75,
+              "measurement_evidence": [
+                "generic orbit target relation"
+              ],
+              "measurement_warning": "",
+              "source_title": "月球",
+              "source_url": "",
+              "source_record_id": "",
+              "target_file": "F:\\知识表示与处理结课作业\\第二次托洛洛测试 -重大进展\\data\\triples\\月球_triples.json",
+              "target_record_hint": {
+                "subject": "月球",
+                "relation": "ORBITS",
+                "object": "太阳系内密度第二高"
+              }
+            }
+          ],
+          "wikidata": [
+            {
+              "raw_value": "地球",
+              "normalized_value": "地球",
+              "unit": "",
+              "parse_status": "text_normalized",
+              "measurement_kind": "orbit_target",
+              "measurement_confidence": 0.75,
+              "measurement_evidence": [
+                "generic orbit target relation"
+              ],
+              "measurement_warning": "",
+              "source_title": "月球",
+              "source_url": "",
+              "source_record_id": "",
+              "target_file": "F:\\知识表示与处理结课作业\\第二次托洛洛测试 -重大进展\\data\\triples\\wikidata\\月球_triples.json",
+              "target_record_hint": {
+                "subject": "月球",
+                "relation": "ORBITS",
+                "object": "地球"
+              }
+            }
+          ]
+        },
+        "audit_reason": "Orbit targets remain different after alias normalization.",
+        "external_review": {
+          "external_patch_id": "external_review_source_conflict_v4_003",
+          "source_patch_id": "source_conflict_v4_003",
+          "action": "mark_extraction_error",
+          "comparison_result": "ontology_rule_needed",
+          "recommendation": "mark_extraction_error",
+          "confidence": 0.86,
+          "requires_human_approval": true,
+          "safe_to_apply": false,
+          "values_by_source": {
+            "zh_wikipedia": [
+              "太阳系内密度第二高"
+            ],
+            "wikidata": [
+              "地球"
+            ]
+          },
+          "proposal": "candidate only; no formal triples change without human approval",
+          "external_evidence": {
+            "relation": "ORBITS",
+            "object": "Q2",
+            "property_id": "P397",
+            "source_record_id": "Q405:P397:q405$35C122DD-4371-43A7-9002-BD33ECD59B7A",
+            "source_url": "https://www.wikidata.org/wiki/Q405",
+            "source_license": "CC0-1.0",
+            "license_hint": "CC0-1.0",
+            "fetched_at": "2026-06-27T13:23:36.278967+00:00",
+            "raw_value": {
+              "entity-type": "item",
+              "numeric-id": 2,
+              "id": "Q2"
+            },
+            "normalized_value": "Q2",
+            "unit": "",
+            "confidence": 0.85,
+            "evidence_source": "wikidata_live_preview",
+            "title": "月球"
+          }
+        }
+      },
+      "review_evidence": {
+        "audit_v4": {
+          "values_by_source": {
+            "zh_wikipedia": [
+              "太阳系内密度第二高"
+            ],
+            "wikidata": [
+              "地球"
+            ]
+          },
+          "target_source": "zh_wikipedia",
+          "target_file": "F:\\知识表示与处理结课作业\\第二次托洛洛测试 -重大进展\\data\\triples\\月球_triples.json",
+          "target_record_hint": {
+            "subject": "月球",
+            "relation": "ORBITS",
+            "object": "太阳系内密度第二高"
+          },
+          "sources_involved": [
+            "wikidata",
+            "zh_wikipedia"
+          ],
+          "evidence_by_source": {
+            "zh_wikipedia": [
+              {
+                "raw_value": "太阳系内密度第二高",
+                "normalized_value": "太阳系内密度第二高",
+                "unit": "",
+                "parse_status": "text_normalized",
+                "measurement_kind": "orbit_target",
+                "measurement_confidence": 0.75,
+                "measurement_evidence": [
+                  "generic orbit target relation"
+                ],
+                "measurement_warning": "",
+                "source_title": "月球",
+                "source_url": "",
+                "source_record_id": "",
+                "target_file": "F:\\知识表示与处理结课作业\\第二次托洛洛测试 -重大进展\\data\\triples\\月球_triples.json",
+                "target_record_hint": {
+                  "subject": "月球",
+                  "relation": "ORBITS",
+                  "object": "太阳系内密度第二高"
+                }
+              }
+            ],
+            "wikidata": [
+              {
+                "raw_value": "地球",
+                "normalized_value": "地球",
+                "unit": "",
+                "parse_status": "text_normalized",
+                "measurement_kind": "orbit_target",
+                "measurement_confidence": 0.75,
+                "measurement_evidence": [
+                  "generic orbit target relation"
+                ],
+                "measurement_warning": "",
+                "source_title": "月球",
+                "source_url": "",
+                "source_record_id": "",
+                "target_file": "F:\\知识表示与处理结课作业\\第二次托洛洛测试 -重大进展\\data\\triples\\wikidata\\月球_triples.json",
+                "target_record_hint": {
+                  "subject": "月球",
+                  "relation": "ORBITS",
+                  "object": "地球"
+                }
+              }
+            ]
+          },
+          "audit_reason": "Orbit targets remain different after alias normalization."
+        },
+        "external_source_review": {
+          "external_patch_id": "external_review_source_conflict_v4_003",
+          "source_patch_id": "source_conflict_v4_003",
+          "action": "mark_extraction_error",
+          "comparison_result": "ontology_rule_needed",
+          "recommendation": "mark_extraction_error",
+          "confidence": 0.86,
+          "requires_human_approval": true,
+          "safe_to_apply": false,
+          "values_by_source": {
+            "zh_wikipedia": [
+              "太阳系内密度第二高"
+            ],
+            "wikidata": [
+              "地球"
+            ]
+          },
+          "proposal": "candidate only; no formal triples change without human approval",
+          "external_evidence": {
+            "relation": "ORBITS",
+            "object": "Q2",
+            "property_id": "P397",
+            "source_record_id": "Q405:P397:q405$35C122DD-4371-43A7-9002-BD33ECD59B7A",
+            "source_url": "https://www.wikidata.org/wiki/Q405",
+            "source_license": "CC0-1.0",
+            "license_hint": "CC0-1.0",
+            "fetched_at": "2026-06-27T13:23:36.278967+00:00",
+            "raw_value": {
+              "entity-type": "item",
+              "numeric-id": 2,
+              "id": "Q2"
+            },
+            "normalized_value": "Q2",
+            "unit": "",
+            "confidence": 0.85,
+            "evidence_source": "wikidata_live_preview",
+            "title": "月球"
+          }
+        }
+      },
+      "system_recommendation": "建议暂缓；需要外部权威来源或人工确认后才能考虑正式改值。 外部复核：mark_extraction_error（ontology_rule_needed，confidence=0.86），仍需人工审批后才能处理。",
+      "human_decision": "pending",
+      "safe_to_apply": false,
+      "change_type": "manual_review",
+      "action": "no_action_manual_review",
+      "target_file": "F:\\知识表示与处理结课作业\\第二次托洛洛测试 -重大进展\\data\\triples\\月球_triples.json",
+      "target_record_hint": {
+        "subject": "月球",
+        "relation": "ORBITS",
+        "object": "太阳系内密度第二高"
+      },
+      "source_queue": "source_conflict_resolution_candidates",
+      "merged_external_review": true,
+      "created_at": "2026-06-27T13:23:22.760083+00:00",
+      "updated_at": "2026-06-27T13:58:47.715751+00:00"
+    },
+    {
+      "review_id": "qr_source_conflict_v4_004",
+      "patch_id": "source_conflict_v4_004",
+      "subject": "木卫二",
+      "relation": "HAS_MASS",
+      "current_value": "0.000 013 × 10 22 kg",
+      "proposed_value": "manual review; no automatic data change",
+      "proposed_metadata": {},
+      "issue_type": "true_value_conflict",
+      "risk_level": "high",
+      "source_evidence": {
+        "values_by_source": {
+          "zh_wikipedia": [
+            "0.000 013 × 10 22 kg"
+          ],
+          "wikidata": [
+            "4.7998e22 kg"
+          ]
+        },
+        "target_source": "zh_wikipedia",
+        "target_file": "F:\\知识表示与处理结课作业\\第二次托洛洛测试 -重大进展\\data\\triples\\木卫二_triples.json",
+        "target_record_hint": {
+          "subject": "木卫二",
+          "relation": "HAS_MASS",
+          "object": "0.000 013 × 10 22 kg"
+        },
+        "sources_involved": [
+          "wikidata",
+          "zh_wikipedia"
+        ],
+        "evidence_by_source": {
+          "zh_wikipedia": [
+            {
+              "raw_value": "0.000 013 × 10 22 kg",
+              "normalized_value": "1.3e+17",
+              "unit": "kg",
+              "parse_status": "parsed",
+              "measurement_kind": "mass",
+              "measurement_confidence": 0.75,
+              "measurement_evidence": [
+                "generic mass relation"
+              ],
+              "measurement_warning": "",
+              "source_title": "木卫二",
+              "source_url": "",
+              "source_record_id": "",
+              "target_file": "F:\\知识表示与处理结课作业\\第二次托洛洛测试 -重大进展\\data\\triples\\木卫二_triples.json",
+              "target_record_hint": {
+                "subject": "木卫二",
+                "relation": "HAS_MASS",
+                "object": "0.000 013 × 10 22 kg"
+              }
+            }
+          ],
+          "wikidata": [
+            {
+              "raw_value": "4.7998e22 kg",
+              "normalized_value": "4.7998e+22",
+              "unit": "kg",
+              "parse_status": "parsed",
+              "measurement_kind": "mass",
+              "measurement_confidence": 0.75,
+              "measurement_evidence": [
+                "generic mass relation"
+              ],
+              "measurement_warning": "",
+              "source_title": "木卫二",
+              "source_url": "",
+              "source_record_id": "",
+              "target_file": "F:\\知识表示与处理结课作业\\第二次托洛洛测试 -重大进展\\data\\triples\\wikidata\\木卫二_triples.json",
+              "target_record_hint": {
+                "subject": "木卫二",
+                "relation": "HAS_MASS",
+                "object": "4.7998e22 kg"
+              }
+            }
+          ]
+        },
+        "audit_reason": "Values remain materially different after unit, alias, synonym, and measurement-kind checks.",
+        "external_review": {
+          "external_patch_id": "external_review_source_conflict_v4_004",
+          "source_patch_id": "source_conflict_v4_004",
+          "action": "mark_extraction_error",
+          "comparison_result": "likely_zhwiki_extraction_error",
+          "recommendation": "mark_extraction_error",
+          "confidence": 0.78,
+          "requires_human_approval": true,
+          "safe_to_apply": false,
+          "values_by_source": {
+            "zh_wikipedia": [
+              "0.000 013 × 10 22 kg"
+            ],
+            "wikidata": [
+              "4.7998e22 kg"
+            ]
+          },
+          "proposal": "candidate only; no formal triples change without human approval",
+          "external_evidence": {
+            "relation": "HAS_MASS",
+            "object": "90 Q2612219",
+            "property_id": "P2067",
+            "source_record_id": "Q17439:P2067:Q17439$91215AB5-6CA4-4EC2-BC1B-CF231B2C6400",
+            "source_url": "https://www.wikidata.org/wiki/Q17439",
+            "source_license": "CC0-1.0",
+            "license_hint": "CC0-1.0",
+            "fetched_at": "2026-06-27T13:23:38.374753+00:00",
+            "raw_value": {
+              "amount": "+90",
+              "unit": "http://www.wikidata.org/entity/Q2612219"
+            },
+            "normalized_value": "90 Q2612219",
+            "unit": "Q2612219",
+            "confidence": 0.85,
+            "evidence_source": "wikidata_live_preview",
+            "title": "木卫二十八"
+          }
+        }
+      },
+      "review_evidence": {
+        "audit_v4": {
+          "values_by_source": {
+            "zh_wikipedia": [
+              "0.000 013 × 10 22 kg"
+            ],
+            "wikidata": [
+              "4.7998e22 kg"
+            ]
+          },
+          "target_source": "zh_wikipedia",
+          "target_file": "F:\\知识表示与处理结课作业\\第二次托洛洛测试 -重大进展\\data\\triples\\木卫二_triples.json",
+          "target_record_hint": {
+            "subject": "木卫二",
+            "relation": "HAS_MASS",
+            "object": "0.000 013 × 10 22 kg"
+          },
+          "sources_involved": [
+            "wikidata",
+            "zh_wikipedia"
+          ],
+          "evidence_by_source": {
+            "zh_wikipedia": [
+              {
+                "raw_value": "0.000 013 × 10 22 kg",
+                "normalized_value": "1.3e+17",
+                "unit": "kg",
+                "parse_status": "parsed",
+                "measurement_kind": "mass",
+                "measurement_confidence": 0.75,
+                "measurement_evidence": [
+                  "generic mass relation"
+                ],
+                "measurement_warning": "",
+                "source_title": "木卫二",
+                "source_url": "",
+                "source_record_id": "",
+                "target_file": "F:\\知识表示与处理结课作业\\第二次托洛洛测试 -重大进展\\data\\triples\\木卫二_triples.json",
+                "target_record_hint": {
+                  "subject": "木卫二",
+                  "relation": "HAS_MASS",
+                  "object": "0.000 013 × 10 22 kg"
+                }
+              }
+            ],
+            "wikidata": [
+              {
+                "raw_value": "4.7998e22 kg",
+                "normalized_value": "4.7998e+22",
+                "unit": "kg",
+                "parse_status": "parsed",
+                "measurement_kind": "mass",
+                "measurement_confidence": 0.75,
+                "measurement_evidence": [
+                  "generic mass relation"
+                ],
+                "measurement_warning": "",
+                "source_title": "木卫二",
+                "source_url": "",
+                "source_record_id": "",
+                "target_file": "F:\\知识表示与处理结课作业\\第二次托洛洛测试 -重大进展\\data\\triples\\wikidata\\木卫二_triples.json",
+                "target_record_hint": {
+                  "subject": "木卫二",
+                  "relation": "HAS_MASS",
+                  "object": "4.7998e22 kg"
+                }
+              }
+            ]
+          },
+          "audit_reason": "Values remain materially different after unit, alias, synonym, and measurement-kind checks."
+        },
+        "external_source_review": {
+          "external_patch_id": "external_review_source_conflict_v4_004",
+          "source_patch_id": "source_conflict_v4_004",
+          "action": "mark_extraction_error",
+          "comparison_result": "likely_zhwiki_extraction_error",
+          "recommendation": "mark_extraction_error",
+          "confidence": 0.78,
+          "requires_human_approval": true,
+          "safe_to_apply": false,
+          "values_by_source": {
+            "zh_wikipedia": [
+              "0.000 013 × 10 22 kg"
+            ],
+            "wikidata": [
+              "4.7998e22 kg"
+            ]
+          },
+          "proposal": "candidate only; no formal triples change without human approval",
+          "external_evidence": {
+            "relation": "HAS_MASS",
+            "object": "90 Q2612219",
+            "property_id": "P2067",
+            "source_record_id": "Q17439:P2067:Q17439$91215AB5-6CA4-4EC2-BC1B-CF231B2C6400",
+            "source_url": "https://www.wikidata.org/wiki/Q17439",
+            "source_license": "CC0-1.0",
+            "license_hint": "CC0-1.0",
+            "fetched_at": "2026-06-27T13:23:38.374753+00:00",
+            "raw_value": {
+              "amount": "+90",
+              "unit": "http://www.wikidata.org/entity/Q2612219"
+            },
+            "normalized_value": "90 Q2612219",
+            "unit": "Q2612219",
+            "confidence": 0.85,
+            "evidence_source": "wikidata_live_preview",
+            "title": "木卫二十八"
+          }
+        }
+      },
+      "system_recommendation": "建议暂缓；需要外部权威来源或人工确认后才能考虑正式改值。 外部复核：mark_extraction_error（likely_zhwiki_extraction_error，confidence=0.78），仍需人工审批后才能处理。",
+      "human_decision": "pending",
+      "safe_to_apply": false,
+      "change_type": "manual_review",
+      "action": "no_action_manual_review",
+      "target_file": "F:\\知识表示与处理结课作业\\第二次托洛洛测试 -重大进展\\data\\triples\\木卫二_triples.json",
+      "target_record_hint": {
+        "subject": "木卫二",
+        "relation": "HAS_MASS",
+        "object": "0.000 013 × 10 22 kg"
+      },
+      "source_queue": "source_conflict_resolution_candidates",
+      "merged_external_review": true,
+      "created_at": "2026-06-27T13:23:22.760083+00:00",
+      "updated_at": "2026-06-27T13:58:47.715751+00:00"
+    },
+    {
+      "review_id": "qr_source_conflict_v4_005",
+      "patch_id": "source_conflict_v4_005",
+      "subject": "木卫四",
+      "relation": "HAS_MASS",
+      "current_value": "0.000 137 × 10 23 kg",
+      "proposed_value": "manual review; no automatic data change",
+      "proposed_metadata": {},
+      "issue_type": "true_value_conflict",
+      "risk_level": "high",
+      "source_evidence": {
+        "values_by_source": {
+          "zh_wikipedia": [
+            "0.000 137 × 10 23 kg"
+          ],
+          "wikidata": [
+            "1.0759e23 kg"
+          ]
+        },
+        "target_source": "zh_wikipedia",
+        "target_file": "F:\\知识表示与处理结课作业\\第二次托洛洛测试 -重大进展\\data\\triples\\木卫四_triples.json",
+        "target_record_hint": {
+          "subject": "木卫四",
+          "relation": "HAS_MASS",
+          "object": "0.000 137 × 10 23 kg"
+        },
+        "sources_involved": [
+          "wikidata",
+          "zh_wikipedia"
+        ],
+        "evidence_by_source": {
+          "zh_wikipedia": [
+            {
+              "raw_value": "0.000 137 × 10 23 kg",
+              "normalized_value": "1.37e+19",
+              "unit": "kg",
+              "parse_status": "parsed",
+              "measurement_kind": "mass",
+              "measurement_confidence": 0.75,
+              "measurement_evidence": [
+                "generic mass relation"
+              ],
+              "measurement_warning": "",
+              "source_title": "木卫四",
+              "source_url": "",
+              "source_record_id": "",
+              "target_file": "F:\\知识表示与处理结课作业\\第二次托洛洛测试 -重大进展\\data\\triples\\木卫四_triples.json",
+              "target_record_hint": {
+                "subject": "木卫四",
+                "relation": "HAS_MASS",
+                "object": "0.000 137 × 10 23 kg"
+              }
+            }
+          ],
+          "wikidata": [
+            {
+              "raw_value": "1.0759e23 kg",
+              "normalized_value": "1.0759e+23",
+              "unit": "kg",
+              "parse_status": "parsed",
+              "measurement_kind": "mass",
+              "measurement_confidence": 0.75,
+              "measurement_evidence": [
+                "generic mass relation"
+              ],
+              "measurement_warning": "",
+              "source_title": "木卫四",
+              "source_url": "",
+              "source_record_id": "",
+              "target_file": "F:\\知识表示与处理结课作业\\第二次托洛洛测试 -重大进展\\data\\triples\\wikidata\\木卫四_triples.json",
+              "target_record_hint": {
+                "subject": "木卫四",
+                "relation": "HAS_MASS",
+                "object": "1.0759e23 kg"
+              }
+            }
+          ]
+        },
+        "audit_reason": "Values remain materially different after unit, alias, synonym, and measurement-kind checks.",
+        "external_review": {
+          "external_patch_id": "external_review_source_conflict_v4_005",
+          "source_patch_id": "source_conflict_v4_005",
+          "action": "mark_extraction_error",
+          "comparison_result": "likely_zhwiki_extraction_error",
+          "recommendation": "mark_extraction_error",
+          "confidence": 0.78,
+          "requires_human_approval": true,
+          "safe_to_apply": false,
+          "values_by_source": {
+            "zh_wikipedia": [
+              "0.000 137 × 10 23 kg"
+            ],
+            "wikidata": [
+              "1.0759e23 kg"
+            ]
+          },
+          "proposal": "candidate only; no formal triples change without human approval",
+          "external_evidence": {
+            "relation": "HAS_MASS",
+            "object": "90 Q2612219",
+            "property_id": "P2067",
+            "source_record_id": "Q16898:P2067:Q16898$28F43CD4-BCF2-4CC5-B500-0ADED9B15A50",
+            "source_url": "https://www.wikidata.org/wiki/Q16898",
+            "source_license": "CC0-1.0",
+            "license_hint": "CC0-1.0",
+            "fetched_at": "2026-06-27T13:23:40.795045+00:00",
+            "raw_value": {
+              "amount": "+90",
+              "unit": "http://www.wikidata.org/entity/Q2612219"
+            },
+            "normalized_value": "90 Q2612219",
+            "unit": "Q2612219",
+            "confidence": 0.85,
+            "evidence_source": "wikidata_live_preview",
+            "title": "木卫四十五"
+          }
+        }
+      },
+      "review_evidence": {
+        "audit_v4": {
+          "values_by_source": {
+            "zh_wikipedia": [
+              "0.000 137 × 10 23 kg"
+            ],
+            "wikidata": [
+              "1.0759e23 kg"
+            ]
+          },
+          "target_source": "zh_wikipedia",
+          "target_file": "F:\\知识表示与处理结课作业\\第二次托洛洛测试 -重大进展\\data\\triples\\木卫四_triples.json",
+          "target_record_hint": {
+            "subject": "木卫四",
+            "relation": "HAS_MASS",
+            "object": "0.000 137 × 10 23 kg"
+          },
+          "sources_involved": [
+            "wikidata",
+            "zh_wikipedia"
+          ],
+          "evidence_by_source": {
+            "zh_wikipedia": [
+              {
+                "raw_value": "0.000 137 × 10 23 kg",
+                "normalized_value": "1.37e+19",
+                "unit": "kg",
+                "parse_status": "parsed",
+                "measurement_kind": "mass",
+                "measurement_confidence": 0.75,
+                "measurement_evidence": [
+                  "generic mass relation"
+                ],
+                "measurement_warning": "",
+                "source_title": "木卫四",
+                "source_url": "",
+                "source_record_id": "",
+                "target_file": "F:\\知识表示与处理结课作业\\第二次托洛洛测试 -重大进展\\data\\triples\\木卫四_triples.json",
+                "target_record_hint": {
+                  "subject": "木卫四",
+                  "relation": "HAS_MASS",
+                  "object": "0.000 137 × 10 23 kg"
+                }
+              }
+            ],
+            "wikidata": [
+              {
+                "raw_value": "1.0759e23 kg",
+                "normalized_value": "1.0759e+23",
+                "unit": "kg",
+                "parse_status": "parsed",
+                "measurement_kind": "mass",
+                "measurement_confidence": 0.75,
+                "measurement_evidence": [
+                  "generic mass relation"
+                ],
+                "measurement_warning": "",
+                "source_title": "木卫四",
+                "source_url": "",
+                "source_record_id": "",
+                "target_file": "F:\\知识表示与处理结课作业\\第二次托洛洛测试 -重大进展\\data\\triples\\wikidata\\木卫四_triples.json",
+                "target_record_hint": {
+                  "subject": "木卫四",
+                  "relation": "HAS_MASS",
+                  "object": "1.0759e23 kg"
+                }
+              }
+            ]
+          },
+          "audit_reason": "Values remain materially different after unit, alias, synonym, and measurement-kind checks."
+        },
+        "external_source_review": {
+          "external_patch_id": "external_review_source_conflict_v4_005",
+          "source_patch_id": "source_conflict_v4_005",
+          "action": "mark_extraction_error",
+          "comparison_result": "likely_zhwiki_extraction_error",
+          "recommendation": "mark_extraction_error",
+          "confidence": 0.78,
+          "requires_human_approval": true,
+          "safe_to_apply": false,
+          "values_by_source": {
+            "zh_wikipedia": [
+              "0.000 137 × 10 23 kg"
+            ],
+            "wikidata": [
+              "1.0759e23 kg"
+            ]
+          },
+          "proposal": "candidate only; no formal triples change without human approval",
+          "external_evidence": {
+            "relation": "HAS_MASS",
+            "object": "90 Q2612219",
+            "property_id": "P2067",
+            "source_record_id": "Q16898:P2067:Q16898$28F43CD4-BCF2-4CC5-B500-0ADED9B15A50",
+            "source_url": "https://www.wikidata.org/wiki/Q16898",
+            "source_license": "CC0-1.0",
+            "license_hint": "CC0-1.0",
+            "fetched_at": "2026-06-27T13:23:40.795045+00:00",
+            "raw_value": {
+              "amount": "+90",
+              "unit": "http://www.wikidata.org/entity/Q2612219"
+            },
+            "normalized_value": "90 Q2612219",
+            "unit": "Q2612219",
+            "confidence": 0.85,
+            "evidence_source": "wikidata_live_preview",
+            "title": "木卫四十五"
+          }
+        }
+      },
+      "system_recommendation": "建议暂缓；需要外部权威来源或人工确认后才能考虑正式改值。 外部复核：mark_extraction_error（likely_zhwiki_extraction_error，confidence=0.78），仍需人工审批后才能处理。",
+      "human_decision": "pending",
+      "safe_to_apply": false,
+      "change_type": "manual_review",
+      "action": "no_action_manual_review",
+      "target_file": "F:\\知识表示与处理结课作业\\第二次托洛洛测试 -重大进展\\data\\triples\\木卫四_triples.json",
+      "target_record_hint": {
+        "subject": "木卫四",
+        "relation": "HAS_MASS",
+        "object": "0.000 137 × 10 23 kg"
+      },
+      "source_queue": "source_conflict_resolution_candidates",
+      "merged_external_review": true,
+      "created_at": "2026-06-27T13:23:22.760083+00:00",
+      "updated_at": "2026-06-27T13:58:47.715751+00:00"
+    },
+    {
+      "review_id": "qr_source_conflict_v4_006",
+      "patch_id": "source_conflict_v4_006",
+      "subject": "火卫一",
+      "relation": "HAS_MASS",
+      "current_value": "1.072 × 10 16 kg",
+      "proposed_value": "manual review; no automatic data change",
+      "proposed_metadata": {},
+      "issue_type": "source_granularity_mismatch",
+      "risk_level": "medium",
+      "source_evidence": {
+        "values_by_source": {
+          "zh_wikipedia": [
+            "1.072 × 10 16 kg"
+          ],
+          "wikidata": [
+            "1.0659e16 kg"
+          ]
+        },
+        "target_source": "zh_wikipedia",
+        "target_file": "F:\\知识表示与处理结课作业\\第二次托洛洛测试 -重大进展\\data\\triples\\火卫一_triples.json",
+        "target_record_hint": {
+          "subject": "火卫一",
+          "relation": "HAS_MASS",
+          "object": "1.072 × 10 16 kg"
+        },
+        "sources_involved": [
+          "wikidata",
+          "zh_wikipedia"
+        ],
+        "evidence_by_source": {
+          "zh_wikipedia": [
+            {
+              "raw_value": "1.072 × 10 16 kg",
+              "normalized_value": "1.072e+16",
+              "unit": "kg",
+              "parse_status": "parsed",
+              "measurement_kind": "mass",
+              "measurement_confidence": 0.75,
+              "measurement_evidence": [
+                "generic mass relation"
+              ],
+              "measurement_warning": "",
+              "source_title": "火卫一",
+              "source_url": "",
+              "source_record_id": "",
+              "target_file": "F:\\知识表示与处理结课作业\\第二次托洛洛测试 -重大进展\\data\\triples\\火卫一_triples.json",
+              "target_record_hint": {
+                "subject": "火卫一",
+                "relation": "HAS_MASS",
+                "object": "1.072 × 10 16 kg"
+              }
+            }
+          ],
+          "wikidata": [
+            {
+              "raw_value": "1.0659e16 kg",
+              "normalized_value": "1.0659e+16",
+              "unit": "kg",
+              "parse_status": "parsed",
+              "measurement_kind": "mass",
+              "measurement_confidence": 0.75,
+              "measurement_evidence": [
+                "generic mass relation"
+              ],
+              "measurement_warning": "",
+              "source_title": "火卫一",
+              "source_url": "",
+              "source_record_id": "",
+              "target_file": "F:\\知识表示与处理结课作业\\第二次托洛洛测试 -重大进展\\data\\triples\\wikidata\\火卫一_triples.json",
+              "target_record_hint": {
+                "subject": "火卫一",
+                "relation": "HAS_MASS",
+                "object": "1.0659e16 kg"
+              }
+            }
+          ]
+        },
+        "audit_reason": "Mass values differ by less than 1%; likely precision/significant-figure or source granularity difference."
+      },
+      "review_evidence": {
+        "audit_v4": {
+          "values_by_source": {
+            "zh_wikipedia": [
+              "1.072 × 10 16 kg"
+            ],
+            "wikidata": [
+              "1.0659e16 kg"
+            ]
+          },
+          "target_source": "zh_wikipedia",
+          "target_file": "F:\\知识表示与处理结课作业\\第二次托洛洛测试 -重大进展\\data\\triples\\火卫一_triples.json",
+          "target_record_hint": {
+            "subject": "火卫一",
+            "relation": "HAS_MASS",
+            "object": "1.072 × 10 16 kg"
+          },
+          "sources_involved": [
+            "wikidata",
+            "zh_wikipedia"
+          ],
+          "evidence_by_source": {
+            "zh_wikipedia": [
+              {
+                "raw_value": "1.072 × 10 16 kg",
+                "normalized_value": "1.072e+16",
+                "unit": "kg",
+                "parse_status": "parsed",
+                "measurement_kind": "mass",
+                "measurement_confidence": 0.75,
+                "measurement_evidence": [
+                  "generic mass relation"
+                ],
+                "measurement_warning": "",
+                "source_title": "火卫一",
+                "source_url": "",
+                "source_record_id": "",
+                "target_file": "F:\\知识表示与处理结课作业\\第二次托洛洛测试 -重大进展\\data\\triples\\火卫一_triples.json",
+                "target_record_hint": {
+                  "subject": "火卫一",
+                  "relation": "HAS_MASS",
+                  "object": "1.072 × 10 16 kg"
+                }
+              }
+            ],
+            "wikidata": [
+              {
+                "raw_value": "1.0659e16 kg",
+                "normalized_value": "1.0659e+16",
+                "unit": "kg",
+                "parse_status": "parsed",
+                "measurement_kind": "mass",
+                "measurement_confidence": 0.75,
+                "measurement_evidence": [
+                  "generic mass relation"
+                ],
+                "measurement_warning": "",
+                "source_title": "火卫一",
+                "source_url": "",
+                "source_record_id": "",
+                "target_file": "F:\\知识表示与处理结课作业\\第二次托洛洛测试 -重大进展\\data\\triples\\wikidata\\火卫一_triples.json",
+                "target_record_hint": {
+                  "subject": "火卫一",
+                  "relation": "HAS_MASS",
+                  "object": "1.0659e16 kg"
+                }
+              }
+            ]
+          },
+          "audit_reason": "Mass values differ by less than 1%; likely precision/significant-figure or source granularity difference."
+        },
+        "external_source_review": null
+      },
+      "system_recommendation": "建议拒绝自动修复；这更像来源精度或粒度差异，保留复查记录即可。",
+      "human_decision": "pending",
+      "safe_to_apply": false,
+      "change_type": "manual_review",
+      "action": "no_action_manual_review",
+      "target_file": "F:\\知识表示与处理结课作业\\第二次托洛洛测试 -重大进展\\data\\triples\\火卫一_triples.json",
+      "target_record_hint": {
+        "subject": "火卫一",
+        "relation": "HAS_MASS",
+        "object": "1.072 × 10 16 kg"
+      },
+      "source_queue": "source_conflict_resolution_candidates",
+      "merged_external_review": false,
+      "created_at": "2026-06-27T13:23:22.760083+00:00",
+      "updated_at": "2026-06-27T13:58:47.715751+00:00"
+    },
+    {
+      "review_id": "qr_source_conflict_v4_007",
+      "patch_id": "source_conflict_v4_007",
+      "subject": "火卫一",
+      "relation": "HAS_RADIUS",
+      "current_value": "11.1km",
+      "proposed_value": "manual review; no automatic data change",
+      "proposed_metadata": {},
+      "issue_type": "true_value_conflict",
+      "risk_level": "high",
+      "source_evidence": {
+        "values_by_source": {
+          "zh_wikipedia": [
+            "11.1km"
+          ],
+          "wikidata": [
+            "11.2667 km"
+          ]
+        },
+        "target_source": "zh_wikipedia",
+        "target_file": "F:\\知识表示与处理结课作业\\第二次托洛洛测试 -重大进展\\data\\triples\\火卫一_triples.json",
+        "target_record_hint": {
+          "subject": "火卫一",
+          "relation": "HAS_RADIUS",
+          "object": "11.1km"
+        },
+        "sources_involved": [
+          "wikidata",
+          "zh_wikipedia"
+        ],
+        "evidence_by_source": {
+          "zh_wikipedia": [
+            {
+              "raw_value": "11.1km",
+              "normalized_value": "11.1km",
+              "unit": "",
+              "parse_status": "unparsed",
+              "measurement_kind": "mean_radius",
+              "measurement_confidence": 0.92,
+              "measurement_evidence": [
+                "matched mean radius marker"
+              ],
+              "measurement_warning": "",
+              "source_title": "火卫一",
+              "source_url": "",
+              "source_record_id": "",
+              "target_file": "F:\\知识表示与处理结课作业\\第二次托洛洛测试 -重大进展\\data\\triples\\火卫一_triples.json",
+              "target_record_hint": {
+                "subject": "火卫一",
+                "relation": "HAS_RADIUS",
+                "object": "11.1km"
+              }
+            }
+          ],
+          "wikidata": [
+            {
+              "raw_value": "11.2667 km",
+              "normalized_value": "11.2667",
+              "unit": "km",
+              "parse_status": "parsed",
+              "measurement_kind": "unknown",
+              "measurement_confidence": 0.2,
+              "measurement_evidence": [
+                "no radius measurement-kind marker"
+              ],
+              "measurement_warning": "",
+              "source_title": "火卫一",
+              "source_url": "",
+              "source_record_id": "",
+              "target_file": "F:\\知识表示与处理结课作业\\第二次托洛洛测试 -重大进展\\data\\triples\\wikidata\\火卫一_triples.json",
+              "target_record_hint": {
+                "subject": "火卫一",
+                "relation": "HAS_RADIUS",
+                "object": "11.2667 km"
+              }
+            }
+          ]
+        },
+        "audit_reason": "Values remain materially different after unit, alias, synonym, and measurement-kind checks.",
+        "external_review": {
+          "external_patch_id": "external_review_source_conflict_v4_007",
+          "source_patch_id": "source_conflict_v4_007",
+          "action": "defer_unresolved",
+          "comparison_result": "unresolved",
+          "recommendation": "defer_unresolved",
+          "confidence": 0.35,
+          "requires_human_approval": true,
+          "safe_to_apply": false,
+          "values_by_source": {
+            "zh_wikipedia": [
+              "11.1km"
+            ],
+            "wikidata": [
+              "11.2667 km"
+            ]
+          },
+          "proposal": "candidate only; no formal triples change without human approval",
+          "external_evidence": {}
+        }
+      },
+      "review_evidence": {
+        "audit_v4": {
+          "values_by_source": {
+            "zh_wikipedia": [
+              "11.1km"
+            ],
+            "wikidata": [
+              "11.2667 km"
+            ]
+          },
+          "target_source": "zh_wikipedia",
+          "target_file": "F:\\知识表示与处理结课作业\\第二次托洛洛测试 -重大进展\\data\\triples\\火卫一_triples.json",
+          "target_record_hint": {
+            "subject": "火卫一",
+            "relation": "HAS_RADIUS",
+            "object": "11.1km"
+          },
+          "sources_involved": [
+            "wikidata",
+            "zh_wikipedia"
+          ],
+          "evidence_by_source": {
+            "zh_wikipedia": [
+              {
+                "raw_value": "11.1km",
+                "normalized_value": "11.1km",
+                "unit": "",
+                "parse_status": "unparsed",
+                "measurement_kind": "mean_radius",
+                "measurement_confidence": 0.92,
+                "measurement_evidence": [
+                  "matched mean radius marker"
+                ],
+                "measurement_warning": "",
+                "source_title": "火卫一",
+                "source_url": "",
+                "source_record_id": "",
+                "target_file": "F:\\知识表示与处理结课作业\\第二次托洛洛测试 -重大进展\\data\\triples\\火卫一_triples.json",
+                "target_record_hint": {
+                  "subject": "火卫一",
+                  "relation": "HAS_RADIUS",
+                  "object": "11.1km"
+                }
+              }
+            ],
+            "wikidata": [
+              {
+                "raw_value": "11.2667 km",
+                "normalized_value": "11.2667",
+                "unit": "km",
+                "parse_status": "parsed",
+                "measurement_kind": "unknown",
+                "measurement_confidence": 0.2,
+                "measurement_evidence": [
+                  "no radius measurement-kind marker"
+                ],
+                "measurement_warning": "",
+                "source_title": "火卫一",
+                "source_url": "",
+                "source_record_id": "",
+                "target_file": "F:\\知识表示与处理结课作业\\第二次托洛洛测试 -重大进展\\data\\triples\\wikidata\\火卫一_triples.json",
+                "target_record_hint": {
+                  "subject": "火卫一",
+                  "relation": "HAS_RADIUS",
+                  "object": "11.2667 km"
+                }
+              }
+            ]
+          },
+          "audit_reason": "Values remain materially different after unit, alias, synonym, and measurement-kind checks."
+        },
+        "external_source_review": {
+          "external_patch_id": "external_review_source_conflict_v4_007",
+          "source_patch_id": "source_conflict_v4_007",
+          "action": "defer_unresolved",
+          "comparison_result": "unresolved",
+          "recommendation": "defer_unresolved",
+          "confidence": 0.35,
+          "requires_human_approval": true,
+          "safe_to_apply": false,
+          "values_by_source": {
+            "zh_wikipedia": [
+              "11.1km"
+            ],
+            "wikidata": [
+              "11.2667 km"
+            ]
+          },
+          "proposal": "candidate only; no formal triples change without human approval",
+          "external_evidence": {}
+        }
+      },
+      "system_recommendation": "建议暂缓；需要外部权威来源或人工确认后才能考虑正式改值。 外部复核：defer_unresolved（unresolved，confidence=0.35），仍需人工审批后才能处理。",
+      "human_decision": "pending",
+      "safe_to_apply": false,
+      "change_type": "manual_review",
+      "action": "no_action_manual_review",
+      "target_file": "F:\\知识表示与处理结课作业\\第二次托洛洛测试 -重大进展\\data\\triples\\火卫一_triples.json",
+      "target_record_hint": {
+        "subject": "火卫一",
+        "relation": "HAS_RADIUS",
+        "object": "11.1km"
+      },
+      "source_queue": "source_conflict_resolution_candidates",
+      "merged_external_review": true,
+      "created_at": "2026-06-27T13:23:22.760083+00:00",
+      "updated_at": "2026-06-27T13:58:47.715751+00:00"
+    },
+    {
+      "review_id": "qr_source_conflict_v4_008",
+      "patch_id": "source_conflict_v4_008",
+      "subject": "金星",
+      "relation": "HAS_RADIUS",
+      "current_value": "1.0km",
+      "proposed_value": "manual review; no automatic data change",
+      "proposed_metadata": {},
+      "issue_type": "true_value_conflict",
+      "risk_level": "high",
+      "source_evidence": {
+        "values_by_source": {
+          "zh_wikipedia": [
+            "1.0km"
+          ],
+          "wikidata": [
+            "6051.8 km"
+          ]
+        },
+        "target_source": "zh_wikipedia",
+        "target_file": "F:\\知识表示与处理结课作业\\第二次托洛洛测试 -重大进展\\data\\triples\\金星_triples.json",
+        "target_record_hint": {
+          "subject": "金星",
+          "relation": "HAS_RADIUS",
+          "object": "1.0km"
+        },
+        "sources_involved": [
+          "wikidata",
+          "zh_wikipedia"
+        ],
+        "evidence_by_source": {
+          "zh_wikipedia": [
+            {
+              "raw_value": "1.0km",
+              "normalized_value": "1.0km",
+              "unit": "",
+              "parse_status": "unparsed",
+              "measurement_kind": "mean_radius",
+              "measurement_confidence": 0.92,
+              "measurement_evidence": [
+                "matched mean radius marker"
+              ],
+              "measurement_warning": "",
+              "source_title": "金星",
+              "source_url": "",
+              "source_record_id": "",
+              "target_file": "F:\\知识表示与处理结课作业\\第二次托洛洛测试 -重大进展\\data\\triples\\金星_triples.json",
+              "target_record_hint": {
+                "subject": "金星",
+                "relation": "HAS_RADIUS",
+                "object": "1.0km"
+              }
+            }
+          ],
+          "wikidata": [
+            {
+              "raw_value": "6051.8 km",
+              "normalized_value": "6051.8",
+              "unit": "km",
+              "parse_status": "parsed",
+              "measurement_kind": "unknown",
+              "measurement_confidence": 0.2,
+              "measurement_evidence": [
+                "no radius measurement-kind marker"
+              ],
+              "measurement_warning": "",
+              "source_title": "金星",
+              "source_url": "",
+              "source_record_id": "",
+              "target_file": "F:\\知识表示与处理结课作业\\第二次托洛洛测试 -重大进展\\data\\triples\\wikidata\\金星_triples.json",
+              "target_record_hint": {
+                "subject": "金星",
+                "relation": "HAS_RADIUS",
+                "object": "6051.8 km"
+              }
+            }
+          ]
+        },
+        "audit_reason": "Values remain materially different after unit, alias, synonym, and measurement-kind checks.",
+        "external_review": {
+          "external_patch_id": "external_review_source_conflict_v4_008",
+          "source_patch_id": "source_conflict_v4_008",
+          "action": "defer_unresolved",
+          "comparison_result": "unresolved",
+          "recommendation": "defer_unresolved",
+          "confidence": 0.35,
+          "requires_human_approval": true,
+          "safe_to_apply": false,
+          "values_by_source": {
+            "zh_wikipedia": [
+              "1.0km"
+            ],
+            "wikidata": [
+              "6051.8 km"
+            ]
+          },
+          "proposal": "candidate only; no formal triples change without human approval",
+          "external_evidence": {}
+        }
+      },
+      "review_evidence": {
+        "audit_v4": {
+          "values_by_source": {
+            "zh_wikipedia": [
+              "1.0km"
+            ],
+            "wikidata": [
+              "6051.8 km"
+            ]
+          },
+          "target_source": "zh_wikipedia",
+          "target_file": "F:\\知识表示与处理结课作业\\第二次托洛洛测试 -重大进展\\data\\triples\\金星_triples.json",
+          "target_record_hint": {
+            "subject": "金星",
+            "relation": "HAS_RADIUS",
+            "object": "1.0km"
+          },
+          "sources_involved": [
+            "wikidata",
+            "zh_wikipedia"
+          ],
+          "evidence_by_source": {
+            "zh_wikipedia": [
+              {
+                "raw_value": "1.0km",
+                "normalized_value": "1.0km",
+                "unit": "",
+                "parse_status": "unparsed",
+                "measurement_kind": "mean_radius",
+                "measurement_confidence": 0.92,
+                "measurement_evidence": [
+                  "matched mean radius marker"
+                ],
+                "measurement_warning": "",
+                "source_title": "金星",
+                "source_url": "",
+                "source_record_id": "",
+                "target_file": "F:\\知识表示与处理结课作业\\第二次托洛洛测试 -重大进展\\data\\triples\\金星_triples.json",
+                "target_record_hint": {
+                  "subject": "金星",
+                  "relation": "HAS_RADIUS",
+                  "object": "1.0km"
+                }
+              }
+            ],
+            "wikidata": [
+              {
+                "raw_value": "6051.8 km",
+                "normalized_value": "6051.8",
+                "unit": "km",
+                "parse_status": "parsed",
+                "measurement_kind": "unknown",
+                "measurement_confidence": 0.2,
+                "measurement_evidence": [
+                  "no radius measurement-kind marker"
+                ],
+                "measurement_warning": "",
+                "source_title": "金星",
+                "source_url": "",
+                "source_record_id": "",
+                "target_file": "F:\\知识表示与处理结课作业\\第二次托洛洛测试 -重大进展\\data\\triples\\wikidata\\金星_triples.json",
+                "target_record_hint": {
+                  "subject": "金星",
+                  "relation": "HAS_RADIUS",
+                  "object": "6051.8 km"
+                }
+              }
+            ]
+          },
+          "audit_reason": "Values remain materially different after unit, alias, synonym, and measurement-kind checks."
+        },
+        "external_source_review": {
+          "external_patch_id": "external_review_source_conflict_v4_008",
+          "source_patch_id": "source_conflict_v4_008",
+          "action": "defer_unresolved",
+          "comparison_result": "unresolved",
+          "recommendation": "defer_unresolved",
+          "confidence": 0.35,
+          "requires_human_approval": true,
+          "safe_to_apply": false,
+          "values_by_source": {
+            "zh_wikipedia": [
+              "1.0km"
+            ],
+            "wikidata": [
+              "6051.8 km"
+            ]
+          },
+          "proposal": "candidate only; no formal triples change without human approval",
+          "external_evidence": {}
+        }
+      },
+      "system_recommendation": "建议暂缓；需要外部权威来源或人工确认后才能考虑正式改值。 外部复核：defer_unresolved（unresolved，confidence=0.35），仍需人工审批后才能处理。",
+      "human_decision": "pending",
+      "safe_to_apply": false,
+      "change_type": "manual_review",
+      "action": "no_action_manual_review",
+      "target_file": "F:\\知识表示与处理结课作业\\第二次托洛洛测试 -重大进展\\data\\triples\\金星_triples.json",
+      "target_record_hint": {
+        "subject": "金星",
+        "relation": "HAS_RADIUS",
+        "object": "1.0km"
+      },
+      "source_queue": "source_conflict_resolution_candidates",
+      "merged_external_review": true,
+      "created_at": "2026-06-27T13:23:22.760083+00:00",
+      "updated_at": "2026-06-27T13:58:47.715751+00:00"
+    }
+  ]
+}

@@ -3,10 +3,12 @@
 """
 import sys
 import os
+import json
 import threading
 import webbrowser
 import tkinter as tk
 from tkinter import scrolledtext, messagebox
+from datetime import datetime, timezone
 import ttkbootstrap as tb
 from ttkbootstrap.constants import *
 
@@ -107,11 +109,13 @@ class MainWindow:
         self.crawl_tab = CrawlTab(self.inner_notebook, self)
         self.nlp_tab = NlpTab(self.inner_notebook, self)
         self.db_tab = DatabaseTab(self.inner_notebook, self)
+        self.quality_review_tab = QualityReviewTab(self.inner_notebook, self)
         self.visualize_tab = VisualizeTab(self.inner_notebook, self)
 
         self.inner_notebook.add(self.crawl_tab.frame, text=self.i18n.t("tab_crawler"))
         self.inner_notebook.add(self.nlp_tab.frame, text=self.i18n.t("tab_nlp"))
         self.inner_notebook.add(self.db_tab.frame, text=self.i18n.t("tab_database"))
+        self.inner_notebook.add(self.quality_review_tab.frame, text="质量复查")
         self.inner_notebook.add(self.visualize_tab.frame, text=self.i18n.t("tab_visualize"))
 
         self.status_var = tk.StringVar(value=self.i18n.t("status_ready"))
@@ -361,11 +365,13 @@ class MainWindow:
         self.inner_notebook.tab(0, text=self.i18n.t("tab_crawler"))
         self.inner_notebook.tab(1, text=self.i18n.t("tab_nlp"))
         self.inner_notebook.tab(2, text=self.i18n.t("tab_database"))
-        self.inner_notebook.tab(3, text=self.i18n.t("tab_visualize"))
+        self.inner_notebook.tab(3, text="质量复查")
+        self.inner_notebook.tab(4, text=self.i18n.t("tab_visualize"))
 
         self.crawl_tab.refresh_texts()
         self.nlp_tab.refresh_texts()
         self.db_tab.refresh_texts()
+        self.quality_review_tab.refresh_texts()
         self.visualize_tab.refresh_texts()
         self.agent_tab.refresh_texts()
 
@@ -742,6 +748,331 @@ class DatabaseTab(BaseTab):
             self.frame.after(0, finish)
 
         threading.Thread(target=worker, daemon=True).start()
+
+
+class QualityReviewTab(BaseTab):
+    """质量复查标签页：只记录审批并预览合并，不写数据库。"""
+    def __init__(self, parent, main_window):
+        super().__init__(parent, main_window)
+        self.queue_path = os.path.join(PROJECT_ROOT, "data", "quality_review", "quality_review_queue.json")
+        self.decisions_path = os.path.join(PROJECT_ROOT, "data", "quality_review", "quality_review_decisions.json")
+        self.report_path = os.path.join(PROJECT_ROOT, "evaluation", "quality_review_apply_preview.json")
+        self.items = []
+        self.decisions_by_patch = {}
+        self._build_ui()
+        self._refresh_queue()
+
+    def _build_ui(self):
+        self.title_label = tb.Label(
+            self.frame,
+            text="质量复查 - 有争议数据审批台",
+            font=("微软雅黑", 16, "bold"),
+            style="Title.TLabel",
+        )
+        self.title_label.pack(anchor="w", pady=(0, 8))
+        self.desc_label = tb.Label(
+            self.frame,
+            text="这里只审批待复查数据；默认只生成预览，不写 Chroma 或 Neo4j。",
+            font=("微软雅黑", 10),
+            foreground="#777",
+        )
+        self.desc_label.pack(anchor="w", pady=(0, 12))
+
+        body = tb.Frame(self.frame)
+        body.pack(fill="both", expand=True)
+
+        left = tb.Frame(body)
+        left.pack(side="left", fill="both", expand=True, padx=(0, 10))
+        right = tb.Frame(body)
+        right.pack(side="left", fill="both", expand=True)
+
+        columns = ("subject", "relation", "issue_type", "risk_level", "human_decision")
+        self.tree = tb.Treeview(left, columns=columns, show="headings", height=18)
+        headings = {
+            "subject": "对象",
+            "relation": "关系",
+            "issue_type": "问题类型",
+            "risk_level": "风险",
+            "human_decision": "决定",
+        }
+        widths = {"subject": 110, "relation": 120, "issue_type": 170, "risk_level": 70, "human_decision": 80}
+        for column in columns:
+            self.tree.heading(column, text=headings[column])
+            self.tree.column(column, width=widths[column], anchor="w", stretch=True)
+        self.tree.pack(side="left", fill="both", expand=True)
+        scrollbar = tb.Scrollbar(left, orient="vertical", command=self.tree.yview)
+        scrollbar.pack(side="right", fill="y")
+        self.tree.configure(yscrollcommand=scrollbar.set)
+        self.tree.bind("<<TreeviewSelect>>", lambda _event: self._show_selected_detail())
+
+        self.detail_title = tb.Label(right, text="复查详情", font=("微软雅黑", 12, "bold"))
+        self.detail_title.pack(anchor="w", pady=(0, 6))
+        self.detail_text = scrolledtext.ScrolledText(
+            right,
+            height=18,
+            state="disabled",
+            font=("微软雅黑", 10),
+            wrap="word",
+            relief="sunken",
+            borderwidth=1,
+        )
+        self.detail_text.pack(fill="both", expand=True)
+
+        decision_buttons = tb.Frame(right)
+        decision_buttons.pack(fill="x", pady=(8, 4))
+        self.btn_approve = tb.Button(decision_buttons, text="通过", command=lambda: self._set_decision("approved"), bootstyle="success")
+        self.btn_defer = tb.Button(decision_buttons, text="暂缓", command=lambda: self._set_decision("deferred"), bootstyle="warning")
+        self.btn_reject = tb.Button(decision_buttons, text="拒绝", command=lambda: self._set_decision("rejected"), bootstyle="danger")
+        for button in (self.btn_approve, self.btn_defer, self.btn_reject):
+            button.pack(side="left", padx=(0, 6))
+
+        tool_buttons = tb.Frame(right)
+        tool_buttons.pack(fill="x", pady=(4, 8))
+        self.btn_refresh = tb.Button(tool_buttons, text="刷新", command=self._refresh_queue)
+        self.btn_build = tb.Button(tool_buttons, text="生成队列", command=self._build_queue)
+        self.btn_dry_run = tb.Button(tool_buttons, text="Dry-run 合并", command=self._dry_run_apply)
+        self.btn_apply = tb.Button(tool_buttons, text="正式合并", command=self._formal_apply, bootstyle="danger")
+        for button in (self.btn_refresh, self.btn_build, self.btn_dry_run, self.btn_apply):
+            button.pack(side="left", padx=(0, 6))
+
+        self.log_title = tb.Label(self.frame, text="操作记录", font=("微软雅黑", 10, "bold"), style="Heading.TLabel")
+        self.log_title.pack(anchor="w", pady=(8, 0))
+        self.log_text = self._create_log_text(7)
+
+    def refresh_texts(self):
+        self.title_label.config(text="质量复查 - 有争议数据审批台")
+        self.desc_label.config(text="这里只审批待复查数据；默认只生成预览，不写 Chroma 或 Neo4j。")
+
+    def _load_json(self, path, default):
+        if not os.path.exists(path):
+            return default
+        with open(path, "r", encoding="utf-8") as handle:
+            return json.load(handle)
+
+    def _dump_json(self, path, payload):
+        os.makedirs(os.path.dirname(path), exist_ok=True)
+        with open(path, "w", encoding="utf-8") as handle:
+            json.dump(payload, handle, ensure_ascii=False, indent=2)
+            handle.write("\n")
+
+    def _refresh_queue(self):
+        queue = self._load_json(self.queue_path, {"items": []})
+        decisions = self._load_json(self.decisions_path, {"decisions": []})
+        self.decisions_by_patch = {
+            item.get("patch_id"): item for item in decisions.get("decisions", []) if item.get("patch_id")
+        }
+        self.items = queue.get("items", [])
+        for row in self.tree.get_children():
+            self.tree.delete(row)
+        for item in self.items:
+            decision = self.decisions_by_patch.get(item.get("patch_id"), {})
+            human_decision = decision.get("human_decision") or item.get("human_decision", "pending")
+            self.tree.insert(
+                "",
+                "end",
+                iid=item.get("review_id"),
+                values=(
+                    item.get("subject", ""),
+                    item.get("relation", ""),
+                    self._issue_label(item.get("issue_type", "")),
+                    self._risk_label(item.get("risk_level", "")),
+                    self._decision_label(human_decision),
+                ),
+            )
+        self._log(f"已加载 {len(self.items)} 条复查记录。")
+        if self.items and not self.tree.selection():
+            self.tree.selection_set(self.items[0].get("review_id"))
+            self._show_selected_detail()
+
+    def _selected_item(self):
+        selection = self.tree.selection()
+        if not selection:
+            return None
+        review_id = selection[0]
+        for item in self.items:
+            if item.get("review_id") == review_id:
+                return item
+        return None
+
+    def _show_selected_detail(self):
+        item = self._selected_item()
+        if not item:
+            return
+        decision = self.decisions_by_patch.get(item.get("patch_id"), {})
+        lines = [
+            f"对象：{item.get('subject', '')}",
+            f"关系：{item.get('relation', '')}",
+            f"问题：{self._issue_label(item.get('issue_type', ''))}",
+            f"风险：{self._risk_label(item.get('risk_level', ''))}",
+            f"当前决定：{self._decision_label(decision.get('human_decision') or item.get('human_decision', 'pending'))}",
+            "",
+            f"当前值：{self._format_value(item.get('current_value'))}",
+            f"候选值：{self._format_value(item.get('proposed_value')) if item.get('proposed_value') else self._format_metadata(item.get('proposed_metadata'))}",
+            "",
+            f"系统建议：{item.get('system_recommendation', '建议人工复核。')}",
+            f"风险说明：{self._risk_explanation(item)}",
+            "",
+            "来源证据：",
+        ]
+        lines.extend(self._format_evidence(item.get("source_evidence", {})))
+        if decision.get("human_reason"):
+            lines.extend(["", f"审批说明：{decision.get('human_reason')}"])
+        self.detail_text.config(state="normal")
+        self.detail_text.delete("1.0", "end")
+        self.detail_text.insert("end", "\n".join(lines))
+        self.detail_text.config(state="disabled")
+
+    def _set_decision(self, human_decision):
+        item = self._selected_item()
+        if not item:
+            messagebox.showinfo("质量复查", "请先选择一条复查记录。")
+            return
+        payload = self._load_json(self.decisions_path, {"schema_version": "quality_review_decisions_v1", "decisions": []})
+        decisions = payload.setdefault("decisions", [])
+        target = None
+        for decision in decisions:
+            if decision.get("patch_id") == item.get("patch_id"):
+                target = decision
+                break
+        if target is None:
+            target = {"review_id": item.get("review_id"), "patch_id": item.get("patch_id")}
+            decisions.append(target)
+
+        now = datetime.now(timezone.utc).isoformat()
+        reason_by_decision = {
+            "approved": "approved_in_gui",
+            "deferred": "deferred_in_gui",
+            "rejected": "rejected_in_gui",
+        }
+        target.update({
+            "review_id": item.get("review_id"),
+            "patch_id": item.get("patch_id"),
+            "subject": item.get("subject"),
+            "relation": item.get("relation"),
+            "issue_type": item.get("issue_type"),
+            "risk_level": item.get("risk_level"),
+            "change_type": item.get("change_type"),
+            "human_decision": human_decision,
+            "human_reason": reason_by_decision[human_decision],
+            "approved_action": item.get("action") if human_decision == "approved" else None,
+            "safe_to_apply": bool(item.get("safe_to_apply")) if human_decision == "approved" else False,
+            "reviewed_by": "gui",
+            "reviewed_at": now,
+            "updated_at": now,
+        })
+        self._dump_json(self.decisions_path, payload)
+        self._log(f"{item.get('subject')} / {item.get('relation')} 已标记为：{self._decision_label(human_decision)}。")
+        self._refresh_queue()
+        self.tree.selection_set(item.get("review_id"))
+        self._show_selected_detail()
+
+    def _build_queue(self):
+        self._run_worker("正在生成质量复查队列...", self._build_queue_worker)
+
+    def _build_queue_worker(self):
+        self._add_path()
+        from scripts.build_quality_review_queue import build_quality_review_queue
+        result = build_quality_review_queue()
+        self.frame.after(0, lambda: self._log(f"队列已生成：{result['item_count']} 条，待处理 {result['pending_count']} 条。"))
+        self.frame.after(0, self._refresh_queue)
+
+    def _dry_run_apply(self):
+        self._run_worker("正在生成 dry-run 合并预览...", lambda: self._apply_worker(False))
+
+    def _formal_apply(self):
+        confirmed = messagebox.askyesno(
+            "确认正式合并",
+            "正式合并只会写入已通过且安全的本地 triples JSON；高风险 value change 默认不会写入。\n\n继续吗？",
+            icon="warning",
+        )
+        if confirmed:
+            self._run_worker("正在执行正式合并（高风险改值仍保持禁用）...", lambda: self._apply_worker(True))
+
+    def _apply_worker(self, should_apply):
+        self._add_path()
+        from scripts.apply_quality_patches import apply_quality_patch
+        result = apply_quality_patch(apply=should_apply, allow_value_change=False)
+        mode = "正式合并" if should_apply else "dry-run"
+        self.frame.after(
+            0,
+            lambda: self._log(
+                f"{mode}完成：计划 {len(result['apply_plan'])} 项，实际写入 {result['patches_applied']} 个文件；Chroma/Neo4j 未写入。"
+            ),
+        )
+
+    def _run_worker(self, start_message, target):
+        self._log(start_message)
+        def worker():
+            try:
+                target()
+            except Exception as exc:
+                self.frame.after(0, lambda exc=exc: self._log(f"操作失败：{exc}"))
+        threading.Thread(target=worker, daemon=True).start()
+
+    def _issue_label(self, value):
+        return {
+            "true_value_conflict": "事实值冲突",
+            "measurement_kind_mismatch": "测量口径不明",
+            "source_granularity_mismatch": "来源精度差异",
+            "manual_review": "人工复核",
+        }.get(value, value or "待判断")
+
+    def _risk_label(self, value):
+        return {"high": "高", "medium": "中", "low": "低"}.get(value, value or "未定")
+
+    def _decision_label(self, value):
+        return {"pending": "待审批", "approved": "通过", "rejected": "拒绝", "deferred": "暂缓"}.get(value, value or "待审批")
+
+    def _format_value(self, value):
+        if isinstance(value, list):
+            return "、".join(str(item) for item in value)
+        return str(value or "无")
+
+    def _format_metadata(self, value):
+        if not value:
+            return "不改事实值；仅补充元数据。"
+        labels = []
+        if value.get("measurement_kind"):
+            labels.append(f"测量口径：{value.get('measurement_kind')}")
+        if value.get("quality_status"):
+            labels.append(f"质量状态：{value.get('quality_status')}")
+        return "；".join(labels) if labels else "仅补充元数据。"
+
+    def _format_evidence(self, evidence):
+        values = evidence.get("values_by_source", {})
+        lines = []
+        for source, source_values in values.items():
+            lines.append(f"- {source}: {self._format_value(source_values)}")
+        packet = evidence.get("evidence_by_source", {})
+        for source, records in packet.items():
+            for record in records[:2]:
+                raw = record.get("raw_value", "")
+                kind = record.get("measurement_kind", "")
+                parsed = record.get("parse_status", "")
+                title = record.get("source_title", "")
+                lines.append(f"- {source} 证据：{title}，原值 {raw}，口径 {kind or '未标注'}，解析 {parsed or '未说明'}")
+        if evidence.get("audit_reason"):
+            lines.append(f"- 审计说明：{evidence.get('audit_reason')}")
+        external = evidence.get("external_review") or {}
+        if external:
+            lines.append(
+                f"- 外部复核：{external.get('recommendation') or external.get('action')}，"
+                f"比较结果 {external.get('comparison_result') or '未说明'}，置信度 {external.get('confidence')}"
+            )
+            external_evidence = external.get("external_evidence") or {}
+            if external_evidence:
+                value = external_evidence.get("normalized_value") or external_evidence.get("object") or ""
+                url = external_evidence.get("source_url") or ""
+                license_text = external_evidence.get("source_license") or external_evidence.get("license_hint") or ""
+                lines.append(f"- 外部证据：{value or '未给出标准化值'}；来源 {url or '未给出链接'}；许可 {license_text or '未说明'}")
+        return lines or ["- 暂无可显示证据。"]
+
+    def _risk_explanation(self, item):
+        if item.get("risk_level") == "high":
+            return "这类记录可能改变正式事实值，默认只进入计划，不直接写入。"
+        if item.get("change_type") == "metadata_only":
+            return "仅补充质量/测量口径元数据，不改变正式事实值。"
+        return "需要人工判断后再决定是否进入后续处理。"
 
 
 class VisualizeTab(BaseTab):

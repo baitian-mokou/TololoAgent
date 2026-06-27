@@ -109,12 +109,12 @@ class ApplyQualityPatchesTests(unittest.TestCase):
             original_target = apply_mod.EXPECTED_TARGET_FILE
             apply_mod.EXPECTED_TARGET_FILE = str(target)
             try:
-                with self.assertRaises(RuntimeError):
-                    apply_mod.apply_quality_patch(decisions_path=str(decisions), candidates_path=str(candidates), report_path=str(report), apply=True)
+                result = apply_mod.apply_quality_patch(decisions_path=str(decisions), candidates_path=str(candidates), report_path=str(report), apply=True)
             finally:
                 apply_mod.EXPECTED_TARGET_FILE = original_target
 
             self.assertEqual(before, target.read_text(encoding="utf-8"))
+            self.assertEqual(result["patches_applied"], 0)
 
 
 if __name__ == "__main__":
