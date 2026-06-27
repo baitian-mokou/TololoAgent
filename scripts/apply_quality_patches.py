@@ -1,8 +1,10 @@
 from __future__ import annotations
 
 import argparse
+import hashlib
 import json
 import os
+import shutil
 import sys
 from copy import deepcopy
 from datetime import datetime, timezone
@@ -18,7 +20,8 @@ from config import BASE_DIR
 
 DEFAULT_DECISIONS = os.path.join(BASE_DIR, "data", "quality_review", "quality_review_decisions.json")
 DEFAULT_CANDIDATES = os.path.join(BASE_DIR, "data", "quality_review", "quality_review_queue.json")
-DEFAULT_REPORT = os.path.join(BASE_DIR, "evaluation", "quality_review_apply_preview.json")
+DEFAULT_REPORT = os.path.join(BASE_DIR, "evaluation", "quality_review_apply_report.json")
+DEFAULT_BACKUP_ROOT = os.path.join(BASE_DIR, "data", "backups", "quality_review")
 
 # Kept for older focused tests that monkey-patch this path.
 EXPECTED_TARGET_FILE = os.path.join(BASE_DIR, "data", "triples", "天王星_triples.json")
@@ -42,6 +45,14 @@ def dump_json(path: str, payload: Any) -> None:
     with open(path, "w", encoding="utf-8") as handle:
         json.dump(payload, handle, ensure_ascii=False, indent=2)
         handle.write("\n")
+
+
+def file_sha256(path: str) -> str:
+    digest = hashlib.sha256()
+    with open(path, "rb") as handle:
+        for chunk in iter(lambda: handle.read(1024 * 1024), b""):
+            digest.update(chunk)
+    return digest.hexdigest()
 
 
 def _items(payload: Dict[str, Any]) -> List[Dict[str, Any]]:
@@ -182,19 +193,130 @@ def prepare_metadata_change(
     }, errors
 
 
-def prepare_value_change(item: Dict[str, Any], allow_value_change: bool) -> Dict[str, Any]:
-    blocked = item.get("risk_level") == "high" and not allow_value_change
-    return {
+def prepare_value_change(
+    item: Dict[str, Any],
+    decision: Dict[str, Any],
+    records: List[Dict[str, Any]],
+    allow_value_change: bool,
+    apply_requested: bool,
+) -> Tuple[List[Dict[str, Any]], Dict[str, Any], List[str]]:
+    errors: List[str] = []
+    updated_records = deepcopy(records)
+    expected_values = set(values_for_zh_source(item))
+    proposed_value = item.get("proposed_value")
+    subject = item.get("subject")
+    relation = item.get("relation")
+    blocked = not allow_value_change
+    matched_records = []
+    changed_records = []
+
+    if blocked:
+        if apply_requested:
+            errors.append(f"{item.get('patch_id')}: value_change requires --allow-value-change")
+        return updated_records, {
+            "review_id": item.get("review_id"),
+            "patch_id": item.get("patch_id"),
+            "change_type": "value_change",
+            "risk_level": item.get("risk_level"),
+            "target_file": target_file_for_item(item),
+            "current_value": item.get("current_value"),
+            "proposed_value": proposed_value,
+            "status": "blocked_value_change" if apply_requested else "plan_only_high_risk",
+            "blocked_by_default": True,
+        }, errors
+
+    if proposed_value is None:
+        errors.append(f"{item.get('patch_id')}: value_change requires proposed_value")
+    if not expected_values:
+        errors.append(f"{item.get('patch_id')}: value_change requires current zh_wikipedia value evidence")
+
+    for index, record in enumerate(updated_records):
+        if not isinstance(record, dict):
+            continue
+        if record.get("subject") == subject and record.get("relation") == relation and record.get("object") in expected_values:
+            matched_records.append({
+                "index": index,
+                "subject": record.get("subject"),
+                "relation": record.get("relation"),
+                "object": record.get("object"),
+            })
+            before = deepcopy(record)
+            record["object"] = proposed_value
+            record["quality_patch_id"] = item.get("patch_id")
+            record["quality_review_id"] = item.get("review_id")
+            record["quality_annotation"] = {
+                "classification": item.get("issue_type"),
+                "rationale": decision.get("human_reason") or item.get("system_recommendation", ""),
+                "formal_value_changed": True,
+                "reviewed_decision_source": "quality_review_decisions.json",
+            }
+            if record != before:
+                changed_records.append({
+                    "index": index,
+                    "before": {key: before.get(key) for key in ("subject", "relation", "object")},
+                    "after": {key: record.get(key) for key in ("subject", "relation", "object")},
+                })
+
+    if not matched_records:
+        errors.append(f"{item.get('patch_id')}: no matching records found for value_change")
+
+    return updated_records, {
         "review_id": item.get("review_id"),
         "patch_id": item.get("patch_id"),
         "change_type": "value_change",
         "risk_level": item.get("risk_level"),
         "target_file": target_file_for_item(item),
         "current_value": item.get("current_value"),
-        "proposed_value": item.get("proposed_value"),
-        "status": "plan_only_high_risk" if blocked else "plan_only_value_change",
-        "blocked_by_default": blocked,
+        "proposed_value": proposed_value,
+        "matched_records": matched_records,
+        "changed_records": changed_records,
+        "status": "ready" if not errors else "error",
+        "blocked_by_default": False,
+    }, errors
+
+
+def make_backup_dir(backup_root: str) -> str:
+    timestamp = datetime.now().strftime("%Y%m%d_%H%M%S")
+    base = os.path.join(backup_root, timestamp)
+    candidate = base
+    suffix = 2
+    while os.path.exists(candidate):
+        candidate = f"{base}_{suffix}"
+        suffix += 1
+    os.makedirs(candidate, exist_ok=False)
+    return candidate
+
+
+def create_rollback_manifest(backup_dir: str, target_files: Dict[str, List[str]]) -> Dict[str, Any]:
+    entries = []
+    for target_file, patch_ids in sorted(target_files.items()):
+        source_path = os.path.abspath(target_file)
+        backup_name = os.path.basename(source_path)
+        backup_path = os.path.join(backup_dir, backup_name)
+        counter = 2
+        while os.path.exists(backup_path):
+            stem, ext = os.path.splitext(backup_name)
+            backup_path = os.path.join(backup_dir, f"{stem}_{counter}{ext}")
+            counter += 1
+        shutil.copy2(source_path, backup_path)
+        entries.append({
+            "original_path": source_path,
+            "backup_path": os.path.abspath(backup_path),
+            "original_sha256": file_sha256(source_path),
+            "patch_ids": sorted(set(patch_ids)),
+            "restore_instruction": "Copy backup_path back to original_path to roll back this file.",
+        })
+    manifest = {
+        "created_at": datetime.now(timezone.utc).isoformat(),
+        "backup_dir": os.path.abspath(backup_dir),
+        "entries": entries,
+        "chroma_written": False,
+        "neo4j_written": False,
     }
+    manifest_path = os.path.join(backup_dir, "rollback_manifest.json")
+    dump_json(manifest_path, manifest)
+    manifest["path"] = os.path.abspath(manifest_path)
+    return manifest
 
 
 def apply_quality_patch(
@@ -204,6 +326,7 @@ def apply_quality_patch(
     report_path: str = DEFAULT_REPORT,
     apply: bool = False,
     allow_value_change: bool = False,
+    backup_root: str = DEFAULT_BACKUP_ROOT,
 ) -> Dict[str, Any]:
     dry_run = not apply
     decisions_payload = load_json(decisions_path)
@@ -216,8 +339,11 @@ def apply_quality_patch(
     matched_records: List[Dict[str, Any]] = []
     changed_records: List[Dict[str, Any]] = []
     changed_by_file: Dict[str, List[Dict[str, Any]]] = {}
+    patch_ids_by_file: Dict[str, List[str]] = {}
     records_by_file: Dict[str, List[Dict[str, Any]]] = {}
+    value_change_files = set()
     formal_values_changed = False
+    approved_count = 0
 
     for decision in decisions:
         patch_id = decision.get("patch_id")
@@ -229,6 +355,7 @@ def apply_quality_patch(
         if human_decision != APPROVED_DECISION:
             skipped_items.append({"patch_id": patch_id, "human_decision": human_decision or "missing"})
             continue
+        approved_count += 1
         if not item:
             errors.append(f"{patch_id}: approved decision has no review item")
             continue
@@ -253,6 +380,8 @@ def apply_quality_patch(
             updated_records, plan_item, item_errors = prepare_metadata_change(item, decision, records_by_file[target_file])
             records_by_file[target_file] = updated_records
             changed_by_file.setdefault(target_file, []).extend(plan_item.get("changed_records", []))
+            if plan_item.get("changed_records"):
+                patch_ids_by_file.setdefault(target_file, []).append(patch_id)
             matched_records.extend(plan_item.get("matched_records", []))
             changed_records.extend(plan_item.get("changed_records", []))
             apply_plan.append(plan_item)
@@ -260,7 +389,28 @@ def apply_quality_patch(
             continue
 
         if change_type == "value_change":
-            apply_plan.append(prepare_value_change(item, allow_value_change))
+            target_file = target_file_for_item(item)
+            if target_file not in records_by_file:
+                records_by_file[target_file] = load_json(target_file)
+                if not isinstance(records_by_file[target_file], list):
+                    errors.append(f"{patch_id}: target file is not a list of triples")
+                    continue
+            updated_records, plan_item, item_errors = prepare_value_change(
+                item,
+                decision,
+                records_by_file[target_file],
+                allow_value_change,
+                apply,
+            )
+            records_by_file[target_file] = updated_records
+            changed_by_file.setdefault(target_file, []).extend(plan_item.get("changed_records", []))
+            if plan_item.get("changed_records"):
+                patch_ids_by_file.setdefault(target_file, []).append(patch_id)
+                value_change_files.add(target_file)
+            matched_records.extend(plan_item.get("matched_records", []))
+            changed_records.extend(plan_item.get("changed_records", []))
+            apply_plan.append(plan_item)
+            errors.extend(item_errors)
             continue
 
         skipped_items.append({
@@ -271,24 +421,45 @@ def apply_quality_patch(
 
     for target_file, records in records_by_file.items():
         before = load_json(target_file)
-        if formal_values_differ(before, records):
+        values_changed = formal_values_differ(before, records)
+        if values_changed:
             formal_values_changed = True
+        if values_changed and target_file not in value_change_files:
             errors.append(f"{target_file}: formal values changed unexpectedly")
+        if values_changed and target_file in value_change_files and not allow_value_change:
+            errors.append(f"{target_file}: value_change requires --allow-value-change")
 
     patches_applied = 0
+    applied_count = 0
+    backup_dir = None
+    rollback_manifest = None
     if apply and not errors:
+        files_to_write = {target_file: patch_ids_by_file.get(target_file, []) for target_file in changed_by_file if changed_by_file.get(target_file)}
+        if files_to_write:
+            backup_dir = make_backup_dir(backup_root)
+            rollback_manifest = create_rollback_manifest(backup_dir, files_to_write)
         for target_file, records in records_by_file.items():
             if changed_by_file.get(target_file):
                 dump_json(target_file, records)
                 patches_applied += 1
+                for plan_item in apply_plan:
+                    if plan_item.get("target_file") == target_file and plan_item.get("changed_records"):
+                        plan_item["status"] = "applied"
+                        applied_count += 1
 
     report = {
         "generated_at": datetime.now(timezone.utc).isoformat(),
         "dry_run": dry_run,
         "apply": bool(apply),
+        "apply_metadata_only": bool(apply and not allow_value_change),
         "allow_value_change": bool(allow_value_change),
+        "backup_dir": backup_dir,
+        "rollback_manifest": rollback_manifest,
         "decisions_path": decisions_path,
         "queue_path": candidates_path,
+        "approved_count": approved_count,
+        "applied_count": applied_count,
+        "skipped_count": len(skipped_items),
         "apply_plan": apply_plan,
         "matched_records": matched_records,
         "changed_records": changed_records,
@@ -311,19 +482,23 @@ def main() -> None:
     parser = argparse.ArgumentParser(description="Preview or apply approved quality review decisions. Defaults to dry-run.")
     mode = parser.add_mutually_exclusive_group()
     mode.add_argument("--dry-run", action="store_true", help="Preview only. This is the default.")
-    mode.add_argument("--apply", action="store_true", help="Write supported approved metadata-only changes.")
+    mode.add_argument("--apply", action="store_true", help="Deprecated alias for --apply-metadata-only.")
+    mode.add_argument("--apply-metadata-only", action="store_true", help="Write supported approved metadata-only changes with backup and rollback manifest.")
     parser.add_argument("--allow-value-change", action="store_true", help="Allow approved value changes. High-risk changes are blocked without this flag.")
     parser.add_argument("--decisions", default=DEFAULT_DECISIONS)
     parser.add_argument("--queue", default=DEFAULT_CANDIDATES)
     parser.add_argument("--candidates", default=None, help="Deprecated alias for --queue.")
     parser.add_argument("--report", default=DEFAULT_REPORT)
+    parser.add_argument("--backup-root", default=DEFAULT_BACKUP_ROOT)
     args = parser.parse_args()
+    apply_requested = bool(args.apply or args.apply_metadata_only)
     report = apply_quality_patch(
         decisions_path=args.decisions,
         candidates_path=args.candidates or args.queue,
         report_path=args.report,
-        apply=args.apply,
+        apply=apply_requested,
         allow_value_change=args.allow_value_change,
+        backup_root=args.backup_root,
     )
     print(json.dumps(report, ensure_ascii=False, indent=2))
 

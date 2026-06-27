@@ -26,13 +26,13 @@ python scripts/build_quality_review_queue.py
 python scripts/apply_quality_patches.py --dry-run
 ```
 
-6. 只有确认是安全 metadata-only 变更时，才考虑正式合并：
+6. 只有确认是安全 metadata-only 变更时，才考虑正式合并低风险标注：
 
 ```bash
-python scripts/apply_quality_patches.py --apply
+python scripts/apply_quality_patches.py --apply-metadata-only
 ```
 
-不要为普通复查任务使用 `--allow-value-change`。高风险 value change 需要单独的来源证据、回滚方案和明确批准。
+正式写入前会自动生成备份目录和 `rollback_manifest.json`。不要为普通复查任务使用 `--allow-value-change`。高风险 value change 需要单独的来源证据、回滚方案和明确批准。
 
 ## 安全验收
 
@@ -55,6 +55,8 @@ python scripts/smoke_quality_review_workflow.py
 - 最近一次 `run_all_gates.py` 报告仍是 passed
 
 输出报告在 `evaluation/quality_review_workflow_smoke_report.json`。
+
+正式合并或预演合并的 apply report 在 `evaluation/quality_review_apply_report.json`。如果发生正式 metadata-only 写入，报告里会记录 `backup_dir` 和 `rollback_manifest`。
 
 ## 不变边界
 

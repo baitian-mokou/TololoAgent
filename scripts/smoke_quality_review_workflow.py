@@ -143,15 +143,23 @@ def run_smoke(final_report_path: Path = FINAL_ACCEPTANCE_REPORT, write_report: b
             ],
         }
         write_json(decisions_path, value_only_decisions)
-        apply_report = apply_quality_patch(
-            decisions_path=str(decisions_path),
-            candidates_path=str(queue_path),
-            report_path=str(preview_path),
-            apply=True,
-            allow_value_change=False,
-        )
+        apply_error = ""
+        try:
+            apply_report = apply_quality_patch(
+                decisions_path=str(decisions_path),
+                candidates_path=str(queue_path),
+                report_path=str(preview_path),
+                apply=True,
+                allow_value_change=False,
+            )
+        except RuntimeError as exc:
+            apply_error = str(exc)
+            apply_report = read_json(preview_path)
         after_apply_attempt = target.read_text(encoding="utf-8")
-        checks.append(check("high_risk_apply_attempt_writes_no_formal_value", before == after_apply_attempt and apply_report.get("patches_applied") == 0))
+        checks.append(check(
+            "high_risk_apply_attempt_writes_no_formal_value",
+            before == after_apply_attempt and apply_report.get("patches_applied") == 0 and "value_change requires --allow-value-change" in apply_error,
+        ))
         checks.append(check("apply_attempt_writes_no_chroma", apply_report.get("chroma_written") is False))
         checks.append(check("apply_attempt_writes_no_neo4j", apply_report.get("neo4j_written") is False))
 

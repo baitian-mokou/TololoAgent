@@ -84,7 +84,13 @@ class ApplyQualityPatchesTests(unittest.TestCase):
             original_target = apply_mod.EXPECTED_TARGET_FILE
             apply_mod.EXPECTED_TARGET_FILE = str(target)
             try:
-                result = apply_mod.apply_quality_patch(decisions_path=str(decisions), candidates_path=str(candidates), report_path=str(report), apply=True)
+                result = apply_mod.apply_quality_patch(
+                    decisions_path=str(decisions),
+                    candidates_path=str(candidates),
+                    report_path=str(report),
+                    apply=True,
+                    backup_root=str(Path(tmpdir) / "backups"),
+                )
             finally:
                 apply_mod.EXPECTED_TARGET_FILE = original_target
 

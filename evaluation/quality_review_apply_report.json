@@ -1,0 +1,57 @@
+{
+  "generated_at": "2026-06-27T14:32:16.332401+00:00",
+  "dry_run": true,
+  "apply": false,
+  "apply_metadata_only": false,
+  "allow_value_change": false,
+  "backup_dir": null,
+  "rollback_manifest": null,
+  "decisions_path": "F:\\知识表示与处理结课作业\\第二次托洛洛测试 -重大进展\\data\\quality_review\\quality_review_decisions.json",
+  "queue_path": "F:\\知识表示与处理结课作业\\第二次托洛洛测试 -重大进展\\data\\quality_review\\quality_review_queue.json",
+  "approved_count": 0,
+  "applied_count": 0,
+  "skipped_count": 8,
+  "apply_plan": [],
+  "matched_records": [],
+  "changed_records": [],
+  "skipped_items": [
+    {
+      "patch_id": "source_conflict_v4_001",
+      "human_decision": "pending"
+    },
+    {
+      "patch_id": "source_conflict_v4_002",
+      "human_decision": "pending"
+    },
+    {
+      "patch_id": "source_conflict_v4_003",
+      "human_decision": "pending"
+    },
+    {
+      "patch_id": "source_conflict_v4_004",
+      "human_decision": "pending"
+    },
+    {
+      "patch_id": "source_conflict_v4_005",
+      "human_decision": "pending"
+    },
+    {
+      "patch_id": "source_conflict_v4_006",
+      "human_decision": "pending"
+    },
+    {
+      "patch_id": "source_conflict_v4_007",
+      "human_decision": "pending"
+    },
+    {
+      "patch_id": "source_conflict_v4_008",
+      "human_decision": "pending"
+    }
+  ],
+  "formal_values_changed": false,
+  "patches_applied": 0,
+  "formal_data_written": false,
+  "chroma_written": false,
+  "neo4j_written": false,
+  "errors": []
+}

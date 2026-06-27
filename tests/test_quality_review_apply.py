@@ -144,15 +144,17 @@ class QualityReviewApplyTests(unittest.TestCase):
             })
             write_json(decisions_path, decisions)
 
-            report = apply_quality_patch(
-                decisions_path=str(decisions_path),
-                candidates_path=str(queue_path),
-                report_path=str(report_path),
-                apply=True,
-            )
+            with self.assertRaises(RuntimeError):
+                apply_quality_patch(
+                    decisions_path=str(decisions_path),
+                    candidates_path=str(queue_path),
+                    report_path=str(report_path),
+                    apply=True,
+                )
+            report = json.loads(report_path.read_text(encoding="utf-8"))
 
             self.assertEqual(before, target.read_text(encoding="utf-8"))
-            self.assertEqual(report["apply_plan"][0]["status"], "plan_only_high_risk")
+            self.assertEqual(report["apply_plan"][0]["status"], "blocked_value_change")
             self.assertEqual(report["patches_applied"], 0)
             self.assertFalse(report["formal_data_written"])
 

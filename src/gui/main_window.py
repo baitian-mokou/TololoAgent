@@ -756,7 +756,8 @@ class QualityReviewTab(BaseTab):
         super().__init__(parent, main_window)
         self.queue_path = os.path.join(PROJECT_ROOT, "data", "quality_review", "quality_review_queue.json")
         self.decisions_path = os.path.join(PROJECT_ROOT, "data", "quality_review", "quality_review_decisions.json")
-        self.report_path = os.path.join(PROJECT_ROOT, "evaluation", "quality_review_apply_preview.json")
+        self.report_path = os.path.join(PROJECT_ROOT, "evaluation", "quality_review_apply_report.json")
+        self.gui_report_path = os.path.join(PROJECT_ROOT, "evaluation", "quality_review_gui_report.json")
         self.items = []
         self.decisions_by_patch = {}
         self._build_ui()
@@ -830,9 +831,11 @@ class QualityReviewTab(BaseTab):
         tool_buttons.pack(fill="x", pady=(4, 8))
         self.btn_refresh = tb.Button(tool_buttons, text="刷新", command=self._refresh_queue)
         self.btn_build = tb.Button(tool_buttons, text="生成队列", command=self._build_queue)
-        self.btn_dry_run = tb.Button(tool_buttons, text="Dry-run 合并", command=self._dry_run_apply)
-        self.btn_apply = tb.Button(tool_buttons, text="正式合并", command=self._formal_apply, bootstyle="danger")
-        for button in (self.btn_refresh, self.btn_build, self.btn_dry_run, self.btn_apply):
+        self.btn_dry_run = tb.Button(tool_buttons, text="预演合并", command=self._dry_run_apply)
+        self.btn_apply = tb.Button(tool_buttons, text="合并低风险标注", command=self._apply_metadata_only, bootstyle="danger")
+        self.btn_export = tb.Button(tool_buttons, text="导出复查报告", command=self._export_review_report)
+        self.btn_show_report = tb.Button(tool_buttons, text="显示最近 apply report", command=self._show_apply_report)
+        for button in (self.btn_refresh, self.btn_build, self.btn_dry_run, self.btn_apply, self.btn_export, self.btn_show_report):
             button.pack(side="left", padx=(0, 6))
 
         self.log_title = tb.Label(self.frame, text="操作记录", font=("微软雅黑", 10, "bold"), style="Heading.TLabel")
@@ -979,26 +982,82 @@ class QualityReviewTab(BaseTab):
     def _dry_run_apply(self):
         self._run_worker("正在生成 dry-run 合并预览...", lambda: self._apply_worker(False))
 
-    def _formal_apply(self):
+    def _apply_metadata_only(self):
         confirmed = messagebox.askyesno(
-            "确认正式合并",
-            "正式合并只会写入已通过且安全的本地 triples JSON；高风险 value change 默认不会写入。\n\n继续吗？",
+            "确认合并低风险标注",
+            "此操作只写入已通过的 metadata-only 标注，并会先生成备份和 rollback manifest。\n\n高风险 value change 不会写入。继续吗？",
             icon="warning",
         )
         if confirmed:
-            self._run_worker("正在执行正式合并（高风险改值仍保持禁用）...", lambda: self._apply_worker(True))
+            self._run_worker("正在合并低风险标注（会先生成备份）...", lambda: self._apply_worker(True))
 
     def _apply_worker(self, should_apply):
         self._add_path()
         from scripts.apply_quality_patches import apply_quality_patch
         result = apply_quality_patch(apply=should_apply, allow_value_change=False)
-        mode = "正式合并" if should_apply else "dry-run"
+        mode = "合并低风险标注" if should_apply else "预演合并"
         self.frame.after(
             0,
             lambda: self._log(
-                f"{mode}完成：计划 {len(result['apply_plan'])} 项，实际写入 {result['patches_applied']} 个文件；Chroma/Neo4j 未写入。"
+                f"{mode}完成：approved {result.get('approved_count', 0)} 项，实际应用 {result.get('applied_count', 0)} 项；Chroma/Neo4j 未写入。"
             ),
         )
+        self.frame.after(0, self._show_apply_report)
+
+    def _export_review_report(self):
+        queue = self._load_json(self.queue_path, {"items": [], "summary": {}})
+        decisions = self._load_json(self.decisions_path, {"decisions": []})
+        decision_by_patch = {item.get("patch_id"): item for item in decisions.get("decisions", []) if item.get("patch_id")}
+        rows = []
+        for item in queue.get("items", []):
+            decision = decision_by_patch.get(item.get("patch_id"), {})
+            rows.append({
+                "patch_id": item.get("patch_id"),
+                "subject": item.get("subject"),
+                "relation": item.get("relation"),
+                "issue_type": item.get("issue_type"),
+                "risk_level": item.get("risk_level"),
+                "human_decision": decision.get("human_decision") or item.get("human_decision"),
+                "has_external_review": bool(item.get("source_evidence", {}).get("external_review")),
+                "system_recommendation": item.get("system_recommendation"),
+            })
+        payload = {
+            "generated_at": datetime.now(timezone.utc).isoformat(),
+            "queue_summary": queue.get("summary", {}),
+            "decision_count": len(decisions.get("decisions", [])),
+            "items": rows,
+        }
+        self._dump_json(self.gui_report_path, payload)
+        self._log(f"复查报告已导出：{self.gui_report_path}")
+
+    def _show_apply_report(self):
+        report = self._load_json(self.report_path, None)
+        if not report:
+            self._log("还没有 apply report。请先点击“预演合并”。")
+            return
+        lines = [
+            "最近 apply report",
+            "",
+            f"dry_run：{report.get('dry_run')}",
+            f"apply：{report.get('apply')}",
+            f"approved_count：{report.get('approved_count', 0)}",
+            f"applied_count：{report.get('applied_count', 0)}",
+            f"skipped_count：{report.get('skipped_count', 0)}",
+            f"formal_values_changed：{report.get('formal_values_changed')}",
+            f"backup_dir：{report.get('backup_dir') or '无'}",
+            f"rollback_manifest：{(report.get('rollback_manifest') or {}).get('path') or '无'}",
+            f"Chroma 写入：{report.get('chroma_written')}",
+            f"Neo4j 写入：{report.get('neo4j_written')}",
+        ]
+        errors = report.get("errors") or []
+        if errors:
+            lines.extend(["", "错误："])
+            lines.extend(f"- {error}" for error in errors)
+        self.detail_text.config(state="normal")
+        self.detail_text.delete("1.0", "end")
+        self.detail_text.insert("end", "\n".join(lines))
+        self.detail_text.config(state="disabled")
+        self._log("已显示最近 apply report。")
 
     def _run_worker(self, start_message, target):
         self._log(start_message)

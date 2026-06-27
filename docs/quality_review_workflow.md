@@ -24,17 +24,17 @@
 python scripts/apply_quality_patches.py
 ```
 
-预览报告写到 `evaluation/quality_review_apply_preview.json`。它会告诉你哪些 approved 项准备怎么处理、哪些被跳过、是否会写正式数据。它不会写 Chroma，也不会写 Neo4j。
+预览报告写到 `evaluation/quality_review_apply_report.json`。它会告诉你哪些 approved 项准备怎么处理、哪些被跳过、是否会写正式数据。它不会写 Chroma，也不会写 Neo4j。
 
 ## 什么情况下才正式合并
 
-正式合并必须显式加 `--apply`：
+正式合并低风险标注必须显式加 `--apply-metadata-only`：
 
 ```bash
-python scripts/apply_quality_patches.py --apply
+python scripts/apply_quality_patches.py --apply-metadata-only
 ```
 
-默认只允许安全的 metadata-only 变更写入本地 triples JSON，例如给半径记录补充 `measurement_kind` 或质量状态标注。这类变更不修改 `subject`、`relation`、`object`。
+正式写入前，脚本会先把即将修改的 triples 文件备份到 `data/backups/quality_review/YYYYMMDD_HHMMSS/`，并生成 `rollback_manifest.json`。默认只允许安全的 metadata-only 变更写入本地 triples JSON，例如给半径记录补充 `measurement_kind` 或质量状态标注。这类变更不修改 `subject`、`relation`、`object`。
 
 高风险 value change 即使已经通过，也只会生成 apply plan，不会直接改正式值。要允许改值必须再显式传入类似 `--allow-value-change` 的参数，并且应先由人确认来源证据和回滚方案。
 
@@ -46,7 +46,7 @@ GUI 的“正式合并”按钮也会二次确认，并且默认不启用高风�
 python scripts/build_quality_review_queue.py
 python scripts/validate_quality_patch_decisions.py
 python scripts/apply_quality_patches.py
-python scripts/apply_quality_patches.py --apply
+python scripts/apply_quality_patches.py --apply-metadata-only
 ```
 
 当前边界保持不变：`ACTIVE_SOURCE` 仍是 `zh_wikipedia`，`wikidata`、`nasa`、`esa` 仍是 disabled；质量复查不会启用默认 SourceRouter，不做默认多源融合，也不会自动写 Chroma 或 Neo4j。
