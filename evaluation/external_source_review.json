@@ -1,0 +1,259 @@
+{
+  "generated_at": "2026-06-27T13:23:44.630265+00:00",
+  "phase": "P8_external_source_conflict_review",
+  "remaining_patch_ids": [
+    "source_conflict_v4_001",
+    "source_conflict_v4_003",
+    "source_conflict_v4_004",
+    "source_conflict_v4_005",
+    "source_conflict_v4_007",
+    "source_conflict_v4_008"
+  ],
+  "summary": {
+    "reviewed_conflict_count": 6,
+    "comparison_result_counts": {
+      "likely_zhwiki_extraction_error": 3,
+      "ontology_rule_needed": 1,
+      "unresolved": 2
+    },
+    "recommendation_counts": {
+      "mark_extraction_error": 4,
+      "defer_unresolved": 2
+    },
+    "requires_human_approval_count": 6
+  },
+  "records": [
+    {
+      "patch_id": "source_conflict_v4_001",
+      "subject": "天王星",
+      "relation": "HAS_MASS",
+      "current_values_by_source": {
+        "zh_wikipedia": [
+          "0.0013 × 10 25 kg"
+        ],
+        "wikidata": [
+          "8.6810e25 kg"
+        ]
+      },
+      "external_evidence": {
+        "relation": "HAS_MASS",
+        "object": "86810 Q613726",
+        "property_id": "P2067",
+        "source_record_id": "Q324:P2067:Q324$be9a3549-4555-ae2c-54e2-17e036b87a5a",
+        "source_url": "https://www.wikidata.org/wiki/Q324",
+        "source_license": "CC0-1.0",
+        "license_hint": "CC0-1.0",
+        "fetched_at": "2026-06-27T13:23:33.283782+00:00",
+        "raw_value": {
+          "amount": "+86810",
+          "unit": "http://www.wikidata.org/entity/Q613726",
+          "upperBound": "+86823",
+          "lowerBound": "+86797"
+        },
+        "normalized_value": "86810 Q613726",
+        "unit": "Q613726",
+        "confidence": 0.85,
+        "evidence_source": "wikidata_live_preview",
+        "title": "天王星"
+      },
+      "evidence_source": "wikidata_live_preview",
+      "evidence_url": "https://www.wikidata.org/wiki/Q324",
+      "source_record_id": "Q324:P2067:Q324$be9a3549-4555-ae2c-54e2-17e036b87a5a",
+      "normalized_external_value": "86810 Q613726",
+      "comparison_result": "likely_zhwiki_extraction_error",
+      "recommendation": "mark_extraction_error",
+      "confidence": 0.8,
+      "fetch_errors": [],
+      "requires_human_approval": true
+    },
+    {
+      "patch_id": "source_conflict_v4_003",
+      "subject": "月球",
+      "relation": "ORBITS",
+      "current_values_by_source": {
+        "zh_wikipedia": [
+          "太阳系内密度第二高"
+        ],
+        "wikidata": [
+          "地球"
+        ]
+      },
+      "external_evidence": {
+        "relation": "ORBITS",
+        "object": "Q2",
+        "property_id": "P397",
+        "source_record_id": "Q405:P397:q405$35C122DD-4371-43A7-9002-BD33ECD59B7A",
+        "source_url": "https://www.wikidata.org/wiki/Q405",
+        "source_license": "CC0-1.0",
+        "license_hint": "CC0-1.0",
+        "fetched_at": "2026-06-27T13:23:36.278967+00:00",
+        "raw_value": {
+          "entity-type": "item",
+          "numeric-id": 2,
+          "id": "Q2"
+        },
+        "normalized_value": "Q2",
+        "unit": "",
+        "confidence": 0.85,
+        "evidence_source": "wikidata_live_preview",
+        "title": "月球"
+      },
+      "evidence_source": "wikidata_live_preview",
+      "evidence_url": "https://www.wikidata.org/wiki/Q405",
+      "source_record_id": "Q405:P397:q405$35C122DD-4371-43A7-9002-BD33ECD59B7A",
+      "normalized_external_value": "Q2",
+      "comparison_result": "ontology_rule_needed",
+      "recommendation": "mark_extraction_error",
+      "confidence": 0.86,
+      "fetch_errors": [],
+      "requires_human_approval": true
+    },
+    {
+      "patch_id": "source_conflict_v4_004",
+      "subject": "木卫二",
+      "relation": "HAS_MASS",
+      "current_values_by_source": {
+        "zh_wikipedia": [
+          "0.000 013 × 10 22 kg"
+        ],
+        "wikidata": [
+          "4.7998e22 kg"
+        ]
+      },
+      "external_evidence": {
+        "relation": "HAS_MASS",
+        "object": "90 Q2612219",
+        "property_id": "P2067",
+        "source_record_id": "Q17439:P2067:Q17439$91215AB5-6CA4-4EC2-BC1B-CF231B2C6400",
+        "source_url": "https://www.wikidata.org/wiki/Q17439",
+        "source_license": "CC0-1.0",
+        "license_hint": "CC0-1.0",
+        "fetched_at": "2026-06-27T13:23:38.374753+00:00",
+        "raw_value": {
+          "amount": "+90",
+          "unit": "http://www.wikidata.org/entity/Q2612219"
+        },
+        "normalized_value": "90 Q2612219",
+        "unit": "Q2612219",
+        "confidence": 0.85,
+        "evidence_source": "wikidata_live_preview",
+        "title": "木卫二十八"
+      },
+      "evidence_source": "wikidata_live_preview",
+      "evidence_url": "https://www.wikidata.org/wiki/Q17439",
+      "source_record_id": "Q17439:P2067:Q17439$91215AB5-6CA4-4EC2-BC1B-CF231B2C6400",
+      "normalized_external_value": "90 Q2612219",
+      "comparison_result": "likely_zhwiki_extraction_error",
+      "recommendation": "mark_extraction_error",
+      "confidence": 0.78,
+      "fetch_errors": [],
+      "requires_human_approval": true
+    },
+    {
+      "patch_id": "source_conflict_v4_005",
+      "subject": "木卫四",
+      "relation": "HAS_MASS",
+      "current_values_by_source": {
+        "zh_wikipedia": [
+          "0.000 137 × 10 23 kg"
+        ],
+        "wikidata": [
+          "1.0759e23 kg"
+        ]
+      },
+      "external_evidence": {
+        "relation": "HAS_MASS",
+        "object": "90 Q2612219",
+        "property_id": "P2067",
+        "source_record_id": "Q16898:P2067:Q16898$28F43CD4-BCF2-4CC5-B500-0ADED9B15A50",
+        "source_url": "https://www.wikidata.org/wiki/Q16898",
+        "source_license": "CC0-1.0",
+        "license_hint": "CC0-1.0",
+        "fetched_at": "2026-06-27T13:23:40.795045+00:00",
+        "raw_value": {
+          "amount": "+90",
+          "unit": "http://www.wikidata.org/entity/Q2612219"
+        },
+        "normalized_value": "90 Q2612219",
+        "unit": "Q2612219",
+        "confidence": 0.85,
+        "evidence_source": "wikidata_live_preview",
+        "title": "木卫四十五"
+      },
+      "evidence_source": "wikidata_live_preview",
+      "evidence_url": "https://www.wikidata.org/wiki/Q16898",
+      "source_record_id": "Q16898:P2067:Q16898$28F43CD4-BCF2-4CC5-B500-0ADED9B15A50",
+      "normalized_external_value": "90 Q2612219",
+      "comparison_result": "likely_zhwiki_extraction_error",
+      "recommendation": "mark_extraction_error",
+      "confidence": 0.78,
+      "fetch_errors": [],
+      "requires_human_approval": true
+    },
+    {
+      "patch_id": "source_conflict_v4_007",
+      "subject": "火卫一",
+      "relation": "HAS_RADIUS",
+      "current_values_by_source": {
+        "zh_wikipedia": [
+          "11.1km"
+        ],
+        "wikidata": [
+          "11.2667 km"
+        ]
+      },
+      "external_evidence": {},
+      "evidence_source": "",
+      "evidence_url": "",
+      "source_record_id": "",
+      "normalized_external_value": "",
+      "comparison_result": "unresolved",
+      "recommendation": "defer_unresolved",
+      "confidence": 0.35,
+      "fetch_errors": [],
+      "requires_human_approval": true
+    },
+    {
+      "patch_id": "source_conflict_v4_008",
+      "subject": "金星",
+      "relation": "HAS_RADIUS",
+      "current_values_by_source": {
+        "zh_wikipedia": [
+          "1.0km"
+        ],
+        "wikidata": [
+          "6051.8 km"
+        ]
+      },
+      "external_evidence": {},
+      "evidence_source": "",
+      "evidence_url": "",
+      "source_record_id": "",
+      "normalized_external_value": "",
+      "comparison_result": "unresolved",
+      "recommendation": "defer_unresolved",
+      "confidence": 0.35,
+      "fetch_errors": [
+        {
+          "source": "wikidata_live_preview",
+          "error": "HTTP Error 429: Too Many Requests"
+        }
+      ],
+      "requires_human_approval": true
+    }
+  ],
+  "boundary": {
+    "read_only": true,
+    "formal_triples_written": false,
+    "chroma_written": false,
+    "neo4j_written": false,
+    "patches_applied": false,
+    "requires_human_approval_for_all_candidates": true
+  },
+  "outputs": {
+    "json": "F:\\知识表示与处理结课作业\\第二次托洛洛测试 -重大进展\\evaluation\\external_source_review.json",
+    "markdown": "F:\\知识表示与处理结课作业\\第二次托洛洛测试 -重大进展\\docs\\external_source_review.md",
+    "orbits_ontology_review": "F:\\知识表示与处理结课作业\\第二次托洛洛测试 -重大进展\\docs\\orbits_ontology_review.md",
+    "candidate_patches": "F:\\知识表示与处理结课作业\\第二次托洛洛测试 -重大进展\\data\\quality_patches\\external_source_review_candidates.json"
+  }
+}
