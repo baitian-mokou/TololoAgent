@@ -1,0 +1,29 @@
+{
+  "generated_at": "2026-06-27T15:04:13.276327+00:00",
+  "decisions_path": "F:\\知识表示与处理结课作业\\第二次托洛洛测试 -重大进展\\data\\quality_review\\quality_review_decisions.json",
+  "passed": true,
+  "summary": {
+    "total_decisions": 8,
+    "counts": {
+      "pending": 8,
+      "approved": 0,
+      "deferred": 0,
+      "rejected": 0
+    },
+    "unknown_decision_count": 0,
+    "approved_metadata_only_count": 0,
+    "approved_value_change_count": 0,
+    "approved_value_change_patch_ids": [],
+    "warnings": []
+  },
+  "formal_triples_written": false,
+  "chroma_written": false,
+  "neo4j_written": false,
+  "active_source": "zh_wikipedia",
+  "source_registry": {
+    "zh_wikipedia": "active",
+    "wikidata": "disabled",
+    "nasa": "disabled",
+    "esa": "disabled"
+  }
+}
