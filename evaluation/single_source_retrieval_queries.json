@@ -1,0 +1,722 @@
+{
+  "version": "single_source_retrieval_gold_set_v1",
+  "active_source": "zh_wikipedia",
+  "source_schema_version": "zh_wikipedia_single_source_v1",
+  "top_k_default": 5,
+  "gates": {
+    "exact_accuracy_min": 0.85,
+    "source_filter_failure_max": 0,
+    "metadata_contract_break_max": 0,
+    "inferred_boundary_break_max": 0
+  },
+  "queries": [
+    {
+      "id": "orbit_moon_graph",
+      "category": "ORBITS",
+      "query_kind": "structured",
+      "query": "月球绕谁公转",
+      "expected_path": "graph",
+      "allowed_final_sources": [
+        "graph"
+      ],
+      "expected_top_k_hit": true,
+      "expected_result": {
+        "subject": "月球",
+        "relation": "ORBITS",
+        "object": "地球"
+      },
+      "normalized_expected_value": null,
+      "source_filter": null,
+      "expected_failure_if_any": null
+    },
+    {
+      "id": "orbit_phobos_graph",
+      "category": "ORBITS",
+      "query_kind": "structured",
+      "query": "火卫一绕谁公转",
+      "expected_path": "graph",
+      "allowed_final_sources": [
+        "graph"
+      ],
+      "expected_top_k_hit": true,
+      "expected_result": {
+        "subject": "火卫一",
+        "relation": "ORBITS",
+        "object": "火星"
+      },
+      "normalized_expected_value": null,
+      "source_filter": null,
+      "expected_failure_if_any": null
+    },
+    {
+      "id": "part_of_io_graph",
+      "category": "PART_OF",
+      "query_kind": "structured",
+      "query": "木卫一属于什么系统",
+      "expected_path": "graph",
+      "allowed_final_sources": [
+        "graph"
+      ],
+      "expected_top_k_hit": true,
+      "expected_result": {
+        "subject": "木卫一",
+        "relation": "PART_OF",
+        "object": "木星系统"
+      },
+      "normalized_expected_value": null,
+      "source_filter": null,
+      "expected_failure_if_any": null
+    },
+    {
+      "id": "located_neptune_graph",
+      "category": "LOCATED_IN",
+      "query_kind": "structured",
+      "query": "海王星在哪里",
+      "expected_path": "graph",
+      "allowed_final_sources": [
+        "graph"
+      ],
+      "expected_top_k_hit": true,
+      "expected_result": {
+        "subject": "海王星",
+        "relation": "LOCATED_IN",
+        "object": "太阳系"
+      },
+      "normalized_expected_value": null,
+      "source_filter": null,
+      "expected_failure_if_any": null
+    },
+    {
+      "id": "mass_sun_graph",
+      "category": "HAS_MASS",
+      "query_kind": "structured",
+      "query": "太阳质量是多少",
+      "expected_path": "graph",
+      "allowed_final_sources": [
+        "graph"
+      ],
+      "expected_top_k_hit": true,
+      "expected_result": {
+        "subject": "太阳",
+        "relation": "HAS_MASS",
+        "object": "1.9885 × 10 30 kg"
+      },
+      "normalized_expected_value": "1.9885×1030kg",
+      "source_filter": null,
+      "expected_failure_if_any": null
+    },
+    {
+      "id": "mass_jupiter_graph",
+      "category": "HAS_MASS",
+      "query_kind": "structured",
+      "query": "木星质量是多少",
+      "expected_path": "graph",
+      "allowed_final_sources": [
+        "graph"
+      ],
+      "expected_top_k_hit": true,
+      "expected_result": {
+        "subject": "木星",
+        "relation": "HAS_MASS",
+        "object": "1.8981 × 10 27 kg"
+      },
+      "normalized_expected_value": "1.8981×1027kg",
+      "source_filter": null,
+      "expected_failure_if_any": null
+    },
+    {
+      "id": "radius_earth_graph",
+      "category": "HAS_RADIUS",
+      "query_kind": "structured",
+      "query": "地球半径是多少",
+      "expected_path": "graph",
+      "allowed_final_sources": [
+        "graph"
+      ],
+      "expected_top_k_hit": true,
+      "expected_result": {
+        "subject": "地球",
+        "relation": "HAS_RADIUS",
+        "object": "6,371.0 km"
+      },
+      "normalized_expected_value": "6371.0km",
+      "source_filter": null,
+      "expected_failure_if_any": null
+    },
+    {
+      "id": "radius_mars_graph",
+      "category": "HAS_RADIUS",
+      "query_kind": "structured",
+      "query": "火星半径是多少",
+      "expected_path": "graph",
+      "allowed_final_sources": [
+        "graph"
+      ],
+      "expected_top_k_hit": true,
+      "expected_result": {
+        "subject": "火星",
+        "relation": "HAS_RADIUS",
+        "object": "3389.5 km"
+      },
+      "normalized_expected_value": "3389.5km",
+      "source_filter": null,
+      "expected_failure_if_any": null
+    },
+    {
+      "id": "radius_moon_graph",
+      "category": "HAS_RADIUS",
+      "query_kind": "structured",
+      "query": "月球半径是多少",
+      "expected_path": "graph",
+      "allowed_final_sources": [
+        "graph"
+      ],
+      "expected_top_k_hit": true,
+      "expected_result": {
+        "subject": "月球",
+        "relation": "HAS_RADIUS",
+        "object": "1,737.10 km"
+      },
+      "normalized_expected_value": "1737.10km",
+      "source_filter": null,
+      "expected_failure_if_any": null
+    },
+    {
+      "id": "radius_io_graph",
+      "category": "HAS_RADIUS",
+      "query_kind": "structured",
+      "query": "木卫一半径是多少",
+      "expected_path": "graph",
+      "allowed_final_sources": [
+        "graph"
+      ],
+      "expected_top_k_hit": true,
+      "expected_result": {
+        "subject": "木卫一",
+        "relation": "HAS_RADIUS",
+        "object": "1,821.3 km"
+      },
+      "normalized_expected_value": "1821.3km",
+      "source_filter": null,
+      "expected_failure_if_any": null
+    },
+    {
+      "id": "radius_ceres_graph",
+      "category": "HAS_RADIUS",
+      "query_kind": "structured",
+      "query": "谷神星半径是多少",
+      "expected_path": "graph",
+      "allowed_final_sources": [
+        "graph"
+      ],
+      "expected_top_k_hit": true,
+      "expected_result": {
+        "subject": "谷神星",
+        "relation": "HAS_RADIUS",
+        "object": "473 km"
+      },
+      "normalized_expected_value": "473km",
+      "source_filter": null,
+      "expected_failure_if_any": null
+    },
+    {
+      "id": "radius_sun_known_gap",
+      "category": "HAS_RADIUS",
+      "query_kind": "structured",
+      "query": "太阳半径是多少",
+      "expected_path": "graph",
+      "allowed_final_sources": [
+        "graph"
+      ],
+      "expected_top_k_hit": true,
+      "expected_result": {
+        "subject": "太阳",
+        "relation": "HAS_RADIUS",
+        "object": "695,000 km"
+      },
+      "normalized_expected_value": "695000km",
+      "source_filter": null,
+      "expected_failure_if_any": "path routing error"
+    },
+    {
+      "id": "atmosphere_mars_yes",
+      "category": "HAS_ATMOSPHERE",
+      "query_kind": "structured",
+      "query": "火星有大气吗",
+      "expected_path": "graph",
+      "allowed_final_sources": [
+        "graph"
+      ],
+      "expected_top_k_hit": true,
+      "expected_result": [
+        {
+          "subject": "火星",
+          "relation": "HAS_ATMOSPHERE",
+          "object": "CO2"
+        },
+        {
+          "subject": "火星",
+          "relation": "HAS_ATMOSPHERE",
+          "object": "N2"
+        },
+        {
+          "subject": "火星",
+          "relation": "HAS_ATMOSPHERE",
+          "object": "Ar"
+        },
+        {
+          "subject": "火星",
+          "relation": "HAS_ATMOSPHERE",
+          "object": "O2"
+        }
+      ],
+      "normalized_expected_value": null,
+      "source_filter": null,
+      "expected_failure_if_any": "path routing error"
+    },
+    {
+      "id": "atmosphere_mars_composition",
+      "category": "HAS_ATMOSPHERE",
+      "query_kind": "structured",
+      "query": "火星大气成分",
+      "expected_path": "graph",
+      "allowed_final_sources": [
+        "graph"
+      ],
+      "expected_top_k_hit": true,
+      "expected_result": [
+        {
+          "subject": "火星",
+          "relation": "HAS_ATMOSPHERE",
+          "object": "CO2"
+        },
+        {
+          "subject": "火星",
+          "relation": "HAS_ATMOSPHERE",
+          "object": "N2"
+        },
+        {
+          "subject": "火星",
+          "relation": "HAS_ATMOSPHERE",
+          "object": "Ar"
+        },
+        {
+          "subject": "火星",
+          "relation": "HAS_ATMOSPHERE",
+          "object": "O2"
+        }
+      ],
+      "normalized_expected_value": null,
+      "source_filter": null,
+      "expected_failure_if_any": "path routing error"
+    },
+    {
+      "id": "atmosphere_mars_what",
+      "category": "HAS_ATMOSPHERE",
+      "query_kind": "structured",
+      "query": "火星大气是什么",
+      "expected_path": "graph",
+      "allowed_final_sources": [
+        "graph"
+      ],
+      "expected_top_k_hit": true,
+      "expected_result": [
+        {
+          "subject": "火星",
+          "relation": "HAS_ATMOSPHERE",
+          "object": "CO2"
+        },
+        {
+          "subject": "火星",
+          "relation": "HAS_ATMOSPHERE",
+          "object": "N2"
+        },
+        {
+          "subject": "火星",
+          "relation": "HAS_ATMOSPHERE",
+          "object": "Ar"
+        },
+        {
+          "subject": "火星",
+          "relation": "HAS_ATMOSPHERE",
+          "object": "O2"
+        }
+      ],
+      "normalized_expected_value": null,
+      "source_filter": null,
+      "expected_failure_if_any": "path routing error"
+    },
+    {
+      "id": "atmosphere_earth_yes",
+      "category": "HAS_ATMOSPHERE",
+      "query_kind": "structured",
+      "query": "地球有大气吗",
+      "expected_path": "graph",
+      "allowed_final_sources": [
+        "graph"
+      ],
+      "expected_top_k_hit": true,
+      "expected_result": [
+        {
+          "subject": "地球",
+          "relation": "HAS_ATMOSPHERE",
+          "object": "N2"
+        },
+        {
+          "subject": "地球",
+          "relation": "HAS_ATMOSPHERE",
+          "object": "O2"
+        },
+        {
+          "subject": "地球",
+          "relation": "HAS_ATMOSPHERE",
+          "object": "Ar"
+        },
+        {
+          "subject": "地球",
+          "relation": "HAS_ATMOSPHERE",
+          "object": "H2O"
+        },
+        {
+          "subject": "地球",
+          "relation": "HAS_ATMOSPHERE",
+          "object": "CO2"
+        }
+      ],
+      "normalized_expected_value": null,
+      "source_filter": null,
+      "expected_failure_if_any": "path routing error"
+    },
+    {
+      "id": "atmosphere_earth_composition",
+      "category": "HAS_ATMOSPHERE",
+      "query_kind": "structured",
+      "query": "地球大气成分",
+      "expected_path": "graph",
+      "allowed_final_sources": [
+        "graph"
+      ],
+      "expected_top_k_hit": true,
+      "expected_result": [
+        {
+          "subject": "地球",
+          "relation": "HAS_ATMOSPHERE",
+          "object": "N2"
+        },
+        {
+          "subject": "地球",
+          "relation": "HAS_ATMOSPHERE",
+          "object": "O2"
+        },
+        {
+          "subject": "地球",
+          "relation": "HAS_ATMOSPHERE",
+          "object": "Ar"
+        },
+        {
+          "subject": "地球",
+          "relation": "HAS_ATMOSPHERE",
+          "object": "H2O"
+        },
+        {
+          "subject": "地球",
+          "relation": "HAS_ATMOSPHERE",
+          "object": "CO2"
+        }
+      ],
+      "normalized_expected_value": null,
+      "source_filter": null,
+      "expected_failure_if_any": "path routing error"
+    },
+    {
+      "id": "discover_titania_graph",
+      "category": "DISCOVERED_BY",
+      "query_kind": "structured",
+      "query": "谁发现了天卫四",
+      "expected_path": "graph",
+      "allowed_final_sources": [
+        "graph"
+      ],
+      "expected_top_k_hit": true,
+      "expected_result": {
+        "subject": "天卫四",
+        "relation": "DISCOVERED_BY",
+        "object": "威廉·赫歇尔"
+      },
+      "normalized_expected_value": null,
+      "source_filter": null,
+      "expected_failure_if_any": null
+    },
+    {
+      "id": "discover_oberon_graph",
+      "category": "DISCOVERED_BY",
+      "query_kind": "structured",
+      "query": "谁发现了天卫五",
+      "expected_path": "graph",
+      "allowed_final_sources": [
+        "graph"
+      ],
+      "expected_top_k_hit": true,
+      "expected_result": {
+        "subject": "天卫五",
+        "relation": "DISCOVERED_BY",
+        "object": "古柏"
+      },
+      "normalized_expected_value": null,
+      "source_filter": null,
+      "expected_failure_if_any": null
+    },
+    {
+      "id": "discover_ceres_graph",
+      "category": "DISCOVERED_BY",
+      "query_kind": "structured",
+      "query": "谁发现了谷神星",
+      "expected_path": "graph",
+      "allowed_final_sources": [
+        "graph"
+      ],
+      "expected_top_k_hit": true,
+      "expected_result": {
+        "subject": "谷神星",
+        "relation": "DISCOVERED_BY",
+        "object": "朱塞普·皮亚齐"
+      },
+      "normalized_expected_value": null,
+      "source_filter": null,
+      "expected_failure_if_any": null
+    },
+    {
+      "id": "discover_juno_graph",
+      "category": "DISCOVERED_BY",
+      "query_kind": "structured",
+      "query": "谁发现了婚神星",
+      "expected_path": "graph",
+      "allowed_final_sources": [
+        "graph"
+      ],
+      "expected_top_k_hit": true,
+      "expected_result": {
+        "subject": "婚神星",
+        "relation": "DISCOVERED_BY",
+        "object": "卡尔·路德维希·哈丁"
+      },
+      "normalized_expected_value": null,
+      "source_filter": null,
+      "expected_failure_if_any": null
+    },
+    {
+      "id": "discover_pluto_known_gap",
+      "category": "DISCOVERED_BY",
+      "query_kind": "structured",
+      "query": "谁发现了冥王星",
+      "expected_path": "graph",
+      "allowed_final_sources": [
+        "graph"
+      ],
+      "expected_top_k_hit": true,
+      "expected_result": {
+        "subject": "冥王星",
+        "relation": "DISCOVERED_BY",
+        "object": "克莱德·汤博"
+      },
+      "normalized_expected_value": null,
+      "source_filter": null,
+      "expected_failure_if_any": "path routing error"
+    },
+    {
+      "id": "narrative_mars_thin_atmosphere",
+      "category": "narrative explanation",
+      "query_kind": "narrative",
+      "query": "为什么火星大气稀薄",
+      "expected_path": "embedding",
+      "allowed_final_sources": [
+        "embedding"
+      ],
+      "expected_top_k_hit": true,
+      "expected_result": {
+        "page_title": "火星",
+        "section_any_of": [
+          "大气",
+          "天气和气候"
+        ]
+      },
+      "expected_page_title": "火星",
+      "expected_section_any_of": [
+        "大气",
+        "天气和气候"
+      ],
+      "normalized_expected_value": null,
+      "source_filter": null,
+      "expected_failure_if_any": null
+    },
+    {
+      "id": "narrative_sun_shines",
+      "category": "narrative explanation",
+      "query_kind": "narrative",
+      "query": "为什么太阳会发光",
+      "expected_path": "embedding",
+      "allowed_final_sources": [
+        "embedding"
+      ],
+      "expected_top_k_hit": true,
+      "expected_result": {
+        "page_title": "太阳",
+        "section_any_of": [
+          "概要",
+          "核心",
+          "核心 (2)"
+        ]
+      },
+      "expected_page_title": "太阳",
+      "expected_section_any_of": [
+        "概要",
+        "核心",
+        "核心 (2)"
+      ],
+      "normalized_expected_value": null,
+      "source_filter": null,
+      "expected_failure_if_any": null
+    },
+    {
+      "id": "source_filter_active_graph",
+      "category": "source isolation",
+      "query_kind": "structured",
+      "query": "火卫一绕谁公转",
+      "expected_path": "graph",
+      "allowed_final_sources": [
+        "graph"
+      ],
+      "expected_top_k_hit": true,
+      "expected_result": {
+        "subject": "火卫一",
+        "relation": "ORBITS",
+        "object": "火星"
+      },
+      "normalized_expected_value": null,
+      "source_filter": [
+        "zh_wikipedia"
+      ],
+      "expected_failure_if_any": null
+    },
+    {
+      "id": "source_filter_blocked_graph_nasa",
+      "category": "source isolation",
+      "query_kind": "structured",
+      "query": "火卫一绕谁公转",
+      "expected_path": "fallback",
+      "allowed_final_sources": [
+        "fallback"
+      ],
+      "expected_top_k_hit": false,
+      "expected_result": {
+        "empty": true
+      },
+      "normalized_expected_value": null,
+      "source_filter": [
+        "nasa"
+      ],
+      "expected_failure_if_any": "source leakage"
+    },
+    {
+      "id": "source_filter_blocked_graph_wikidata",
+      "category": "source isolation",
+      "query_kind": "structured",
+      "query": "海王星在哪里",
+      "expected_path": "fallback",
+      "allowed_final_sources": [
+        "fallback"
+      ],
+      "expected_top_k_hit": false,
+      "expected_result": {
+        "empty": true
+      },
+      "normalized_expected_value": null,
+      "source_filter": [
+        "wikidata"
+      ],
+      "expected_failure_if_any": "source leakage"
+    },
+    {
+      "id": "source_filter_blocked_graph_esa",
+      "category": "source isolation",
+      "query_kind": "structured",
+      "query": "木卫一属于什么系统",
+      "expected_path": "fallback",
+      "allowed_final_sources": [
+        "fallback"
+      ],
+      "expected_top_k_hit": false,
+      "expected_result": {
+        "empty": true
+      },
+      "normalized_expected_value": null,
+      "source_filter": [
+        "esa"
+      ],
+      "expected_failure_if_any": "source leakage"
+    },
+    {
+      "id": "source_filter_blocked_chroma_nasa",
+      "category": "source isolation",
+      "query_kind": "narrative",
+      "query": "火星大气成分",
+      "expected_path": "embedding",
+      "allowed_final_sources": [
+        "embedding"
+      ],
+      "expected_top_k_hit": false,
+      "expected_result": {
+        "empty": true
+      },
+      "expected_page_title": null,
+      "expected_section_any_of": [],
+      "normalized_expected_value": null,
+      "source_filter": [
+        "nasa"
+      ],
+      "expected_failure_if_any": "source leakage"
+    },
+    {
+      "id": "source_filter_blocked_chroma_wikidata",
+      "category": "source isolation",
+      "query_kind": "narrative",
+      "query": "为什么太阳会发光",
+      "expected_path": "embedding",
+      "allowed_final_sources": [
+        "embedding"
+      ],
+      "expected_top_k_hit": false,
+      "expected_result": {
+        "empty": true
+      },
+      "expected_page_title": null,
+      "expected_section_any_of": [],
+      "normalized_expected_value": null,
+      "source_filter": [
+        "wikidata"
+      ],
+      "expected_failure_if_any": "source leakage"
+    },
+    {
+      "id": "source_filter_blocked_chroma_esa",
+      "category": "source isolation",
+      "query_kind": "narrative",
+      "query": "为什么火星大气稀薄",
+      "expected_path": "embedding",
+      "allowed_final_sources": [
+        "embedding"
+      ],
+      "expected_top_k_hit": false,
+      "expected_result": {
+        "empty": true
+      },
+      "expected_page_title": null,
+      "expected_section_any_of": [],
+      "normalized_expected_value": null,
+      "source_filter": [
+        "esa"
+      ],
+      "expected_failure_if_any": "source leakage"
+    }
+  ]
+}

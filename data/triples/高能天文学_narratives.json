@@ -1,0 +1,47 @@
+[
+  {
+    "page_title": "高能天文学",
+    "section": "任务",
+    "chunk_index": 0,
+    "content": "一些研究过高能天文学的太空和地面望远镜包括如下 ： 伽玛射线轻型探测器 (AGILE satellite) 阿尔法磁谱仪 (AMS-02) 高能立体视野望远镜 (H.E.S.S.) 神奇望远镜 （ 英语 ： MAGIC (telescope) ） (Major Atmospheric Gamma-ray Imaging Cherenkov Telescope, MAGIC) 费米伽玛射线空间望远镜 (Fermi) 国际伽玛射线天体物理实验室 (INTEGRAL) XMM-牛顿卫星 钱德拉X射线天文台 朱雀卫星 (ASTRO-E) 罗西X射线计时探测器 (RXTE) 皮埃尔·奥杰天文台 （ 英语 ： Pierre Auger Observatory ） Telescope Array Project 冰立方微中子天文台 (IceCube) 天坛阵列 （Askaryan Radio Array, ARA） 尼尔·格雷尔斯雨燕天文台 (Swift) 核光谱望远镜阵列 (NuSTAR)",
+    "path": "任务",
+    "keywords": [
+      "英语",
+      "一些研究过高能天文学的太空和地面望远镜包括如下",
+      "伽玛射线轻型探测器",
+      "阿尔法磁谱仪",
+      "高能立体视野望远镜",
+      "神奇望远镜",
+      "费米伽玛射线空间望远镜",
+      "国际伽玛射线天体物理实验室"
+    ],
+    "chunk_id": "4c4e386fd10a",
+    "source": "zh_wikipedia",
+    "source_role": "primary",
+    "origin": "html_fallback",
+    "type": "embedding_chunk",
+    "source_title": "高能天文学",
+    "source_name": "zh_wikipedia",
+    "schema_version": "2.0"
+  },
+  {
+    "page_title": "高能天文学",
+    "section": "外部连结",
+    "chunk_index": 1,
+    "content": "NASA's High Energy Astrophysics Science Archive Research Center （ 页面存档备份 ，存于 互联网档案馆 ） http://www.cv.nrao.edu/fits/www/yp_high_energy.html （ 页面存档备份 ，存于 互联网档案馆 ） - great compendium of links",
+    "path": "外部连结",
+    "keywords": [
+      "页面存档备份",
+      "存于",
+      "互联网档案馆"
+    ],
+    "chunk_id": "e2a572ee4475",
+    "source": "zh_wikipedia",
+    "source_role": "primary",
+    "origin": "html_fallback",
+    "type": "embedding_chunk",
+    "source_title": "高能天文学",
+    "source_name": "zh_wikipedia",
+    "schema_version": "2.0"
+  }
+]

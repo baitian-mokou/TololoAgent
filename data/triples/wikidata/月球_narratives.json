@@ -1,0 +1,22 @@
+[
+  {
+    "section": "轨道",
+    "content": "月球在 fixture 中作为地球系统成员记录，结构化事实指出其绕地球运行。",
+    "keywords": [
+      "月球",
+      "地球",
+      "轨道"
+    ],
+    "page_title": "月球",
+    "chunk_index": 0,
+    "path": "轨道",
+    "chunk_id": "wikidata_月球_00",
+    "source": "wikidata",
+    "source_name": "wikidata",
+    "source_role": "primary",
+    "origin": "api",
+    "type": "embedding_chunk",
+    "schema_version": "wikidata_shadow_ready_v1",
+    "source_title": "月球"
+  }
+]

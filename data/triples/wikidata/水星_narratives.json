@@ -1,0 +1,22 @@
+[
+  {
+    "section": "轨道",
+    "content": "水星在 Wikidata fixture 中作为太阳系行星处理，轨道主星为太阳，并带有半径和质量数值。",
+    "keywords": [
+      "水星",
+      "轨道",
+      "太阳"
+    ],
+    "page_title": "水星",
+    "chunk_index": 0,
+    "path": "轨道",
+    "chunk_id": "wikidata_水星_00",
+    "source": "wikidata",
+    "source_name": "wikidata",
+    "source_role": "primary",
+    "origin": "api",
+    "type": "embedding_chunk",
+    "schema_version": "wikidata_shadow_ready_v1",
+    "source_title": "水星"
+  }
+]

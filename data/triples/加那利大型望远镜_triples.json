@@ -1,0 +1,16 @@
+[
+  {
+    "subject": "加那利大型望远镜",
+    "relation": "LOCATED_IN",
+    "object": "西班牙 拉帕尔玛岛 穆查丘斯罗克天文台",
+    "pattern": "infobox",
+    "raw": "位置: 西班牙 拉帕尔玛岛 穆查丘斯罗克天文台",
+    "source": "zh_wikipedia",
+    "source_role": "primary",
+    "origin": "html_fallback",
+    "type": "triple_candidate",
+    "source_title": "加那利大型望远镜",
+    "source_name": "zh_wikipedia",
+    "schema_version": "2.0"
+  }
+]

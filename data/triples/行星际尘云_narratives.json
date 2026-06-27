@@ -1,0 +1,27 @@
+[
+  {
+    "page_title": "行星际尘云",
+    "section": "概要",
+    "chunk_index": 0,
+    "content": "行星际尘云 （英语： Interplanetary dust cloud ）是弥漫在 太阳系 的行星空间与其它 行星系 空间的 宇宙尘 （漂浮在太空中的小颗粒）。\n它已经被研究了许多年，以了解其本质、起源和大天体之间的关系。\n在我们所在的太阳系， 行星际尘埃 粒子不仅散射阳光（称为\" 黄道光 \"，因为它们被局限在 黄道平面 ），也产生 热辐射 ，这是夜晚的天空中5至50微米波长的主要来源（Levasseur-Regourd, A.C. 1996）。\n这些在 地球 附近辐射出红外线特征的颗粒，典型的大小在50至100 微米 （Backman, D., 1997）。\n这些星际尘埃的总质量相当于一颗半径15公里的 小行星 （密度大约是2.5公克/公分 3 ）。",
+    "path": "概要",
+    "keywords": [
+      "行星际尘云",
+      "英语",
+      "是弥漫在",
+      "太阳系",
+      "的行星空间与其它",
+      "行星系",
+      "空间的",
+      "宇宙尘"
+    ],
+    "chunk_id": "91c729da7f08",
+    "source": "zh_wikipedia",
+    "source_role": "primary",
+    "origin": "html_fallback",
+    "type": "embedding_chunk",
+    "source_title": "行星际尘云",
+    "source_name": "zh_wikipedia",
+    "schema_version": "2.0"
+  }
+]

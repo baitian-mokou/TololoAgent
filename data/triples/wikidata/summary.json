@@ -1,0 +1,10 @@
+{
+  "total_triples": 93,
+  "total_narratives": 18,
+  "total_files": 18,
+  "pipeline": "wikidata_source_adapter_v1",
+  "source_schema_version": "wikidata_shadow_ready_v1",
+  "materialization_mode": "offline_wikidata_fixture_v1",
+  "cutover_ready": false,
+  "time": "2026-06-27T04:56:35.790382+00:00"
+}

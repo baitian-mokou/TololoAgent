@@ -1,0 +1,16 @@
+[
+  {
+    "subject": "土卫七",
+    "relation": "HAS_MASS",
+    "object": "0.0068 × 10 19 kg",
+    "pattern": "infobox",
+    "raw": "质量: 0.5584 ± 0.0068×10 19 kg",
+    "source": "zh_wikipedia",
+    "source_role": "primary",
+    "origin": "html_fallback",
+    "type": "triple_candidate",
+    "source_title": "土卫七",
+    "source_name": "zh_wikipedia",
+    "schema_version": "2.0"
+  }
+]

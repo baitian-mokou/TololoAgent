@@ -1,0 +1,94 @@
+[
+  {
+    "page_title": "次棕矮星",
+    "section": "概要",
+    "chunk_index": 0,
+    "content": "我们的 太阳 、年轻的次 棕矮星 和 木星 大小的比较。\n等到次棕矮星的晚期，它会逐渐冷却并收缩。\n不同等级的恒星比较，到了最右边即为 行星 。\n次棕矮星 （英语： sub-brown dwarf ）是一种与 恒星 及 棕矮星 形成方式相同（即透过 星云 塌缩而成），但拥有 行星 等级质量的天体。\n它们的质量甚至比 棕矮星 的质量下限（ 木星质量 的13倍）还要低，因此它们并非棕矮星，故名「次棕矮星」。\n不同于棕矮星的性质，它们的质量不足以进行 氘 的 融合 。",
+    "path": "概要",
+    "keywords": [
+      "棕矮星",
+      "行星",
+      "次棕矮星",
+      "我们的",
+      "太阳",
+      "年轻的次",
+      "木星",
+      "大小的比较"
+    ],
+    "chunk_id": "0f5ad83de90d",
+    "source": "zh_wikipedia",
+    "source_role": "primary",
+    "origin": "html_fallback",
+    "type": "embedding_chunk",
+    "source_title": "次棕矮星",
+    "source_name": "zh_wikipedia",
+    "schema_version": "2.0"
+  },
+  {
+    "page_title": "次棕矮星",
+    "section": "失败的棕矮星",
+    "chunk_index": 1,
+    "content": "一颗次棕矮星想像图 次棕矮星是以 恒星 形成的方式，经由 气体云 的坍缩形成，而不是经由 拱星盘 的核心坍缩或吸积，因此并非行星。\n但是，次棕矮星和行星之间的差异至今仍不清楚。\n因此，天文学家们便分为两个阵营，分别支持和反对以一颗行星的形成方式和过程，作为划分天体的分类方法。\n自由浮动的次棕矮星在外观上与一个被抛出行星系统的气体 星际行星 并无差异，因此很难被区分出来。\n同样，次棕矮星很容易被另一个 恒星 捕获，使之环绕该恒星公转。\n这便会令到被捕获的次棕矮星看似一个 气体巨行星 ，同样很难被区分出来。\n为此，国际天文学联合会太阳系外行星工作组（ International Astronomical Union Extra-Solar Planets Working Group ）为次棕矮星作出定义，即「一个在年轻星团中自由浮动，但质量少于棕矮星质量下限的天体。\n」",
+    "path": "失败的棕矮星",
+    "keywords": [
+      "恒星",
+      "一颗次棕矮星想像图",
+      "次棕矮星是以",
+      "形成的方式",
+      "经由",
+      "气体云",
+      "的坍缩形成",
+      "而不是经由"
+    ],
+    "chunk_id": "c4b4d63a0a0d",
+    "source": "zh_wikipedia",
+    "source_role": "primary",
+    "origin": "html_fallback",
+    "type": "embedding_chunk",
+    "source_title": "次棕矮星",
+    "source_name": "zh_wikipedia",
+    "schema_version": "2.0"
+  },
+  {
+    "page_title": "次棕矮星",
+    "section": "质量下限",
+    "chunk_index": 2,
+    "content": "一个能够透过气体云坍缩形成的次棕矮星的质量必须大于一木星质量。\n这是因为气体云透过 重力 收缩是需要以散热的方式释放能量，而这亦会被气体的不透明度所限制，故质量必须大于一木星质量才能有足够的重力进行坍缩。\n一个质量为三木星质量的天体现在被怀疑是一个次棕矮星。",
+    "path": "失败的棕矮星 > 质量下限",
+    "keywords": [
+      "一个能够透过气体云坍缩形成的次棕矮星的质量必须大于一木星质量",
+      "这是因为气体云透过",
+      "重力",
+      "收缩是需要以散热的方式释放能量",
+      "而这亦会被气体的不透明度所限制",
+      "故质量必须大于一木星质量才能有足够的重力进行坍缩",
+      "一个质量为三木星质量的天体现在被怀疑是一个次棕矮星"
+    ],
+    "chunk_id": "bb70800d540b",
+    "source": "zh_wikipedia",
+    "source_role": "primary",
+    "origin": "html_fallback",
+    "type": "embedding_chunk",
+    "source_title": "次棕矮星",
+    "source_name": "zh_wikipedia",
+    "schema_version": "2.0"
+  },
+  {
+    "page_title": "次棕矮星",
+    "section": "自由漂浮行星",
+    "chunk_index": 3,
+    "content": "S Ori 52 UGPS J072227.51-054031.2 蝘蜓座110913-773444 CFBDSIR2149-0403 2MASS J044144 2M1207b SCR 1845-6357 B OTS 44 UGPS J0722-05",
+    "path": "被怀疑是次棕矮星的天体 > 自由漂浮行星",
+    "keywords": [
+      "蝘蜓座"
+    ],
+    "chunk_id": "dcd9058b5e59",
+    "source": "zh_wikipedia",
+    "source_role": "primary",
+    "origin": "html_fallback",
+    "type": "embedding_chunk",
+    "source_title": "次棕矮星",
+    "source_name": "zh_wikipedia",
+    "schema_version": "2.0"
+  }
+]

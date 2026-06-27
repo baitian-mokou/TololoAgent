@@ -1,0 +1,30 @@
+[
+  {
+    "subject": "智神星",
+    "relation": "DISCOVERED_BY",
+    "object": "海因里希·欧伯斯",
+    "pattern": "infobox",
+    "raw": "发现者: 海因里希·欧伯斯",
+    "source": "zh_wikipedia",
+    "source_role": "primary",
+    "origin": "html_fallback",
+    "type": "triple_candidate",
+    "source_title": "智神星",
+    "source_name": "zh_wikipedia",
+    "schema_version": "2.0"
+  },
+  {
+    "subject": "智神星",
+    "relation": "HAS_MASS",
+    "object": "2.11 × 10 20 kg",
+    "pattern": "infobox",
+    "raw": "质量: (2.11±0.26)×10 20 kg",
+    "source": "zh_wikipedia",
+    "source_role": "primary",
+    "origin": "html_fallback",
+    "type": "triple_candidate",
+    "source_title": "智神星",
+    "source_name": "zh_wikipedia",
+    "schema_version": "2.0"
+  }
+]

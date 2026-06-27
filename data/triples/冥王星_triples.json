@@ -1,0 +1,44 @@
+[
+  {
+    "subject": "冥王星",
+    "relation": "HAS_RADIUS",
+    "object": "0.8 km",
+    "pattern": "infobox",
+    "raw": "平均半径: 7006118830000000000♠ 1,188.3 ± 0.8 km 6999190000000000000♠ 0.19 地球",
+    "source": "zh_wikipedia",
+    "source_role": "primary",
+    "origin": "html_fallback",
+    "type": "triple_candidate",
+    "source_title": "冥王星",
+    "source_name": "zh_wikipedia",
+    "schema_version": "2.0"
+  },
+  {
+    "subject": "冥王星",
+    "relation": "HAS_MASS",
+    "object": "1.303 × 10 22 kg",
+    "pattern": "infobox",
+    "raw": "质量: 7022130299999999999♠ (1.303 ± 0.003) × 10 22 kg 6997218000000000000♠ 0.002 18 地球 0.177 月球",
+    "source": "zh_wikipedia",
+    "source_role": "primary",
+    "origin": "html_fallback",
+    "type": "triple_candidate",
+    "source_title": "冥王星",
+    "source_name": "zh_wikipedia",
+    "schema_version": "2.0"
+  },
+  {
+    "subject": "冥王星",
+    "relation": "HAS_MASS",
+    "object": "1.31×10 22 千克",
+    "pattern": "rule",
+    "raw": "冥王星的质量为 1.31×10 22 千克",
+    "source": "zh_wikipedia",
+    "source_role": "primary",
+    "origin": "html_fallback",
+    "type": "triple_candidate",
+    "source_title": "冥王星",
+    "source_name": "zh_wikipedia",
+    "schema_version": "2.0"
+  }
+]

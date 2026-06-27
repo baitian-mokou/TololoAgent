@@ -1,0 +1,52 @@
+[
+  {
+    "page_title": "小行星612911",
+    "section": "概要",
+    "chunk_index": 0,
+    "content": "小行星612911 （临时编号： 2004 XR 190 ）是一颗位于 离散盘 的 外海王星天体 。\n它是由 不列颠哥伦比亚大学 的 天文学家 Lynne Jones领导的一个小组，在使用 加法夏望远镜 (CFHT) 进行传统的巡天工作时的部份发现。\n发现的团队给了个临时名称：\" 巴菲(Buffy) \"，出自于虚构影集 吸血鬼猎人巴菲 （ Buffy Summers （ 英语 ： Buffy Summers ） ），并且给了 国际天文联合会 一个正式的名字。",
+    "path": "概要",
+    "keywords": [
+      "小行星",
+      "临时编号",
+      "是一颗位于",
+      "离散盘",
+      "外海王星天体",
+      "它是由",
+      "不列颠哥伦比亚大学",
+      "天文学家"
+    ],
+    "chunk_id": "36eb1c94e1c8",
+    "source": "zh_wikipedia",
+    "source_role": "primary",
+    "origin": "html_fallback",
+    "type": "embedding_chunk",
+    "source_title": "小行星612911",
+    "source_name": "zh_wikipedia",
+    "schema_version": "2.0"
+  },
+  {
+    "page_title": "小行星612911",
+    "section": "轨道",
+    "chunk_index": 1,
+    "content": "考虑到是一个 孤立天体 ，有两个原因使2004 XR 190 特别异常：一是 轨道倾角 高达47度，是至今被发现倾斜最大的天体，当沿著 黄道 观测这个天体时，会在黄道的上下及左右环绕著太阳。\n其次，它的轨道是异于 离散盘天体 的圆轨道。\n由于理论上认为离散盘天体是受到 海王星 的摄动被抛射至离散盘的（一般都有高离心率和近日点小于38AU），它的低离心率和遥远的近日点很难透过天体力学来理解。\n这导致了当前外 太阳系 理论的一些不确定性。\n理论包括恒星的接近、 恶行星 、在古柏带早期的 行星胚胎 、 海王星迁徙 外移 的 共振 。\n古在机制 (Kozai mechanism)是能转移轨道离心率进入高倾角 。\n除了 长周期彗星 和 太空探测 器之外 ，巴菲是目前继 2012 VP113 和 塞迪纳 之后， 太阳系 内已知距离第三远的天体。\n巴菲（也称为2004 XR 190 ）的轨道。\n在中心的圆环是依比例绘制的 地球 轨道，单位是 AU 。\n2004 XR 190 轨道的侧视图，显示出轨道的高倾斜，单位是 AU 。",
+    "path": "轨道",
+    "keywords": [
+      "太阳系",
+      "单位是",
+      "考虑到是一个",
+      "孤立天体",
+      "有两个原因使",
+      "特别异常",
+      "一是",
+      "轨道倾角"
+    ],
+    "chunk_id": "9da34d877705",
+    "source": "zh_wikipedia",
+    "source_role": "primary",
+    "origin": "html_fallback",
+    "type": "embedding_chunk",
+    "source_title": "小行星612911",
+    "source_name": "zh_wikipedia",
+    "schema_version": "2.0"
+  }
+]

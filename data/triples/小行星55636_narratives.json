@@ -1,0 +1,77 @@
+[
+  {
+    "page_title": "小行星55636",
+    "section": "概要",
+    "chunk_index": 0,
+    "content": "小行星 (55636) 2002 TX 300 是 近地小行星追踪 计划在2002年10月15日发现的一个大 外海王星天体 (TNO)。\n2002 TX 300 是颗 绝对星等 介于 创神星 和 伐罗那 之间的 经典柯伊伯带天体 （QB1天体），并且是三颗中 离心率 最大的。\n视觉上的光度变化吻合7.9小时15.8小时的自转周期 (目前尚不能区分是双高峰还是单一高峰)，而光度的变化趋近于误差的极限，也可能归咎于表面形状的不规则 .",
+    "path": "概要",
+    "keywords": [
+      "小行星",
+      "近地小行星追踪",
+      "计划在",
+      "日发现的一个大",
+      "外海王星天体",
+      "是颗",
+      "绝对星等",
+      "介于"
+    ],
+    "chunk_id": "3fa9c90bf6b0",
+    "source": "zh_wikipedia",
+    "source_role": "primary",
+    "origin": "html_fallback",
+    "type": "embedding_chunk",
+    "source_title": "小行星55636",
+    "source_name": "zh_wikipedia",
+    "schema_version": "2.0"
+  },
+  {
+    "page_title": "小行星55636",
+    "section": "轨道",
+    "chunk_index": 1,
+    "content": "2002 TX 300 (蓝色)、2003 EL 61 (绿色)、和 海王星 (灰色) 的轨道。\n2002 TX 300 (蓝色)、2003 EL 61 (绿色)、和 海王星 (灰色) 的轨道。\n2002 TX 300 被分类为 经典柯伊伯带天体 ，并且轨道和 妊神星 非常相似：高 倾角 (26°) 和适度的离心率 (e ～ 0.12)，并且远离海王星的轨道 摄动 (近日点 ～ 37AU)，其他中等尺度的经典柯伊伯带天体都有著类似的轨道，特别是 2002 UX 25 和 2002 AW 197 。\n图形显示这两个QB1天体鸟瞰(轴方向)和从黄道上观察的轨道，并且标示出经过 近日点 (q)和 远日点 (Q)的日期。\n当时的位置 (2006年4月)以球型显示，并且显是相对的大小和反照率 (两者均以原本的可见光谱呈现)。",
+    "path": "轨道",
+    "keywords": [
+      "蓝色",
+      "绿色",
+      "海王星",
+      "灰色",
+      "的轨道",
+      "近日点",
+      "被分类为",
+      "经典柯伊伯带天体"
+    ],
+    "chunk_id": "d5b8f91a26f5",
+    "source": "zh_wikipedia",
+    "source_role": "primary",
+    "origin": "html_fallback",
+    "type": "embedding_chunk",
+    "source_title": "小行星55636",
+    "source_name": "zh_wikipedia",
+    "schema_version": "2.0"
+  },
+  {
+    "page_title": "小行星55636",
+    "section": "表面",
+    "chunk_index": 2,
+    "content": "小行星55636在可见光和 近红外 区的光谱和 冥卫一 相似， 光谱斜率 （ 英语 ： Spectral slope ） 略偏向蓝光，在1.5和2.0μm处有较大的吸收峰，这是有水存在的证据 。\n根据矿物学分析，推测水占到小行星55636质量的很大一部分 。",
+    "path": "表面",
+    "keywords": [
+      "小行星",
+      "在可见光和",
+      "近红外",
+      "区的光谱和",
+      "冥卫一",
+      "相似",
+      "光谱斜率",
+      "英语"
+    ],
+    "chunk_id": "a21dfea0f64d",
+    "source": "zh_wikipedia",
+    "source_role": "primary",
+    "origin": "html_fallback",
+    "type": "embedding_chunk",
+    "source_title": "小行星55636",
+    "source_name": "zh_wikipedia",
+    "schema_version": "2.0"
+  }
+]

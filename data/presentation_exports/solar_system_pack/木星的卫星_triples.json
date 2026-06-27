@@ -1,0 +1,44 @@
+[
+  {
+    "subject": "木星的卫星",
+    "relation": "IS_A",
+    "object": "天然卫星系统",
+    "source": "zh_wikipedia",
+    "source_name": "zh_wikipedia",
+    "source_title": "木星的卫星",
+    "source_role": "primary",
+    "origin": "internal_link",
+    "type": "triple_candidate",
+    "schema_version": "zh_wikipedia_single_source_v1",
+    "pattern": "rule",
+    "raw": "木星的卫星是天然卫星系统"
+  },
+  {
+    "subject": "木星的卫星",
+    "relation": "LOCATED_IN",
+    "object": "太阳系",
+    "source": "zh_wikipedia",
+    "source_name": "zh_wikipedia",
+    "source_title": "木星的卫星",
+    "source_role": "primary",
+    "origin": "internal_link",
+    "type": "triple_candidate",
+    "schema_version": "zh_wikipedia_single_source_v1",
+    "pattern": "rule",
+    "raw": "木星的卫星位于太阳系"
+  },
+  {
+    "subject": "木星的卫星",
+    "relation": "PART_OF",
+    "object": "木星系统",
+    "source": "zh_wikipedia",
+    "source_name": "zh_wikipedia",
+    "source_title": "木星的卫星",
+    "source_role": "primary",
+    "origin": "internal_link",
+    "type": "triple_candidate",
+    "schema_version": "zh_wikipedia_single_source_v1",
+    "pattern": "rule",
+    "raw": "木星的卫星属于木星系统"
+  }
+]

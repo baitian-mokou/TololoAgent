@@ -1,0 +1,16 @@
+[
+  {
+    "subject": "流星雨",
+    "relation": "IS_A",
+    "object": "行星和 彗星",
+    "pattern": "rule",
+    "raw": "流星雨是行星和 彗星",
+    "source": "zh_wikipedia",
+    "source_role": "primary",
+    "origin": "html_fallback",
+    "type": "triple_candidate",
+    "source_title": "流星雨",
+    "source_name": "zh_wikipedia",
+    "schema_version": "2.0"
+  }
+]

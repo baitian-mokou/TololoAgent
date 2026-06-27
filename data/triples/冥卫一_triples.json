@@ -1,0 +1,72 @@
+[
+  {
+    "subject": "冥卫一",
+    "relation": "DISCOVERED_BY",
+    "object": "詹姆斯·克里斯蒂",
+    "pattern": "infobox",
+    "raw": "发现者: 詹姆斯·克里斯蒂",
+    "source": "zh_wikipedia",
+    "source_role": "primary",
+    "origin": "html_fallback",
+    "type": "triple_candidate",
+    "source_title": "冥卫一",
+    "source_name": "zh_wikipedia",
+    "schema_version": "2.0"
+  },
+  {
+    "subject": "冥卫一",
+    "relation": "HAS_RADIUS",
+    "object": "0.5 km",
+    "pattern": "infobox",
+    "raw": "平均半径: 7005606000000000000♠ 606.0 ± 0.5 km （地球的0.095倍，冥王星的0.51倍）",
+    "source": "zh_wikipedia",
+    "source_role": "primary",
+    "origin": "html_fallback",
+    "type": "triple_candidate",
+    "source_title": "冥卫一",
+    "source_name": "zh_wikipedia",
+    "schema_version": "2.0"
+  },
+  {
+    "subject": "冥卫一",
+    "relation": "HAS_MASS",
+    "object": "1.586 × 10 21 kg",
+    "pattern": "infobox",
+    "raw": "质量: 7021158600000000000♠ (1.586 ± 0.015) × 10 21 kg （地球的0.000266倍） （冥王星的12.2%）",
+    "source": "zh_wikipedia",
+    "source_role": "primary",
+    "origin": "html_fallback",
+    "type": "triple_candidate",
+    "source_title": "冥卫一",
+    "source_name": "zh_wikipedia",
+    "schema_version": "2.0"
+  },
+  {
+    "subject": "冥卫一",
+    "relation": "IS_A",
+    "object": "矮行星",
+    "pattern": "rule",
+    "raw": "冥卫一是 矮行星",
+    "source": "zh_wikipedia",
+    "source_role": "primary",
+    "origin": "html_fallback",
+    "type": "triple_candidate",
+    "source_title": "冥卫一",
+    "source_name": "zh_wikipedia",
+    "schema_version": "2.0"
+  },
+  {
+    "subject": "冥卫一",
+    "relation": "ORBITS",
+    "object": "一颗非常大",
+    "pattern": "rule",
+    "raw": "冥卫一是一颗非常大的卫星",
+    "source": "zh_wikipedia",
+    "source_role": "primary",
+    "origin": "html_fallback",
+    "type": "triple_candidate",
+    "source_title": "冥卫一",
+    "source_name": "zh_wikipedia",
+    "schema_version": "2.0"
+  }
+]

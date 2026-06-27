@@ -1,0 +1,16 @@
+[
+  {
+    "subject": "星际边界探测器",
+    "relation": "HAS_MASS",
+    "object": "110kg",
+    "pattern": "infobox",
+    "raw": "质量: 110公斤（240磅）",
+    "source": "zh_wikipedia",
+    "source_role": "primary",
+    "origin": "html_fallback",
+    "type": "triple_candidate",
+    "source_title": "星际边界探测器",
+    "source_name": "zh_wikipedia",
+    "schema_version": "2.0"
+  }
+]

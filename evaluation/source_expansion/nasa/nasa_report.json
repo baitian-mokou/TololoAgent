@@ -1,0 +1,1705 @@
+{
+  "source": "nasa",
+  "descriptor": {
+    "source_name": "nasa",
+    "status": "disabled",
+    "source_role": "primary",
+    "schema_version": "nasa_shadow_ready_v1",
+    "expected_schema_version": "nasa_shadow_ready_v1",
+    "is_active": false,
+    "is_known": true
+  },
+  "manifest": {
+    "exists": true,
+    "path": "F:\\知识表示与处理结课作业\\第二次托洛洛测试 -重大进展\\evaluation\\source_expansion\\nasa\\nasa_queries.json",
+    "source_name": "nasa",
+    "source_schema_version": "nasa_shadow_ready_v1",
+    "query_count": 22,
+    "load_error": null,
+    "query_schema_versions_consistent": true
+  },
+  "summary": {
+    "total_queries": 22,
+    "exact_pass_count": 22,
+    "exact_accuracy": 1.0,
+    "top_k_hit_count": 12,
+    "top_k_hit_denominator": 12,
+    "top_k_hit_rate": 1.0,
+    "path_selection_correct_count": 22,
+    "path_selection_correctness": 1.0,
+    "graph_embedding_fallback_inconsistency_count": 0,
+    "source_filter_failure_count": 0,
+    "metadata_contract_break_count": 0,
+    "inferred_boundary_break_count": 0,
+    "query_explainability_degraded_count": 0,
+    "query_explainability_degraded_rate": 0.0,
+    "category_breakdown": {
+      "structured": {
+        "total": 3,
+        "exact_pass_count": 3,
+        "top_k_hit_count": 1,
+        "query_explainability_degraded_count": 0,
+        "failures": {}
+      },
+      "narrative": {
+        "total": 3,
+        "exact_pass_count": 3,
+        "top_k_hit_count": 2,
+        "query_explainability_degraded_count": 0,
+        "failures": {}
+      },
+      "negative": {
+        "total": 3,
+        "exact_pass_count": 3,
+        "top_k_hit_count": 0,
+        "query_explainability_degraded_count": 0,
+        "failures": {}
+      },
+      "fallback": {
+        "total": 2,
+        "exact_pass_count": 2,
+        "top_k_hit_count": 2,
+        "query_explainability_degraded_count": 0,
+        "failures": {}
+      },
+      "source_isolation": {
+        "total": 2,
+        "exact_pass_count": 2,
+        "top_k_hit_count": 0,
+        "query_explainability_degraded_count": 0,
+        "failures": {}
+      },
+      "metadata_completeness": {
+        "total": 2,
+        "exact_pass_count": 2,
+        "top_k_hit_count": 2,
+        "query_explainability_degraded_count": 0,
+        "failures": {}
+      },
+      "path_routing": {
+        "total": 2,
+        "exact_pass_count": 2,
+        "top_k_hit_count": 2,
+        "query_explainability_degraded_count": 0,
+        "failures": {}
+      },
+      "unit_normalization": {
+        "total": 2,
+        "exact_pass_count": 2,
+        "top_k_hit_count": 2,
+        "query_explainability_degraded_count": 0,
+        "failures": {}
+      },
+      "conflict_case": {
+        "total": 3,
+        "exact_pass_count": 3,
+        "top_k_hit_count": 1,
+        "query_explainability_degraded_count": 0,
+        "failures": {}
+      }
+    }
+  },
+  "probes": {
+    "graph_results_count": 0,
+    "narrative_results_count": 8,
+    "fallback_graph_count": 4,
+    "fallback_narrative_count": 8
+  },
+  "gates": {
+    "passed": true,
+    "checks": [
+      {
+        "name": "queryset_present",
+        "passed": true,
+        "actual": true
+      },
+      {
+        "name": "descriptor_matches_manifest_source",
+        "passed": true,
+        "actual": "nasa",
+        "expected": "nasa"
+      },
+      {
+        "name": "descriptor_matches_manifest_schema",
+        "passed": true,
+        "actual": "nasa_shadow_ready_v1",
+        "expected": "nasa_shadow_ready_v1"
+      },
+      {
+        "name": "query_schema_versions_consistent",
+        "passed": true,
+        "actual": true,
+        "expected": true
+      },
+      {
+        "name": "exact_accuracy_min",
+        "expected": 0.35,
+        "actual": 1.0,
+        "passed": true
+      },
+      {
+        "name": "source_filter_failure_max",
+        "expected": 0,
+        "actual": 0,
+        "passed": true
+      },
+      {
+        "name": "metadata_contract_break_max",
+        "expected": 0,
+        "actual": 0,
+        "passed": true
+      },
+      {
+        "name": "inferred_boundary_break_max",
+        "expected": 0,
+        "actual": 0,
+        "passed": true
+      },
+      {
+        "name": "query_explainability_degraded_max",
+        "expected": 0,
+        "actual": 0,
+        "passed": true
+      },
+      {
+        "name": "required_category_coverage",
+        "expected": [
+          "structured",
+          "narrative",
+          "negative",
+          "fallback",
+          "source_isolation",
+          "metadata_completeness",
+          "path_routing",
+          "unit_normalization",
+          "conflict_case"
+        ],
+        "actual": {
+          "structured": 3,
+          "narrative": 3,
+          "negative": 3,
+          "fallback": 2,
+          "source_isolation": 2,
+          "metadata_completeness": 2,
+          "path_routing": 2,
+          "unit_normalization": 2,
+          "conflict_case": 3
+        },
+        "passed": true
+      }
+    ],
+    "exit_code": 0
+  },
+  "results": [
+    {
+      "id": "nasa_structured_phobos_orbits",
+      "category": "structured",
+      "query_kind": "structured",
+      "query": "火卫一绕谁公转",
+      "source_schema_version": "nasa_shadow_ready_v1",
+      "expected_path": "fallback",
+      "actual_path": "fallback",
+      "allowed_final_sources": [
+        "fallback"
+      ],
+      "expected_result": {
+        "subject": "火卫一",
+        "relation": "ORBITS",
+        "object": "火星"
+      },
+      "normalized_expected_value": null,
+      "normalized_returned_value": "火星",
+      "returned_result": {
+        "subject": "火卫一",
+        "relation": "ORBITS",
+        "object": "火星",
+        "source": "nasa",
+        "source_name": "nasa",
+        "source_role": "primary",
+        "origin": "html_fallback",
+        "source_title": "火卫一",
+        "schema_version": "nasa_shadow_ready_v1"
+      },
+      "top_k_results": [
+        {
+          "subject": "火卫一",
+          "relation": "ORBITS",
+          "object": "火星",
+          "source": "nasa",
+          "source_name": "nasa",
+          "source_role": "primary",
+          "origin": "html_fallback",
+          "source_title": "火卫一",
+          "schema_version": "nasa_shadow_ready_v1"
+        }
+      ],
+      "graph_only_results": [],
+      "fallback_results": [
+        {
+          "subject": "火卫一",
+          "relation": "ORBITS",
+          "object": "火星",
+          "source": "nasa",
+          "source_name": "nasa",
+          "source_role": "primary",
+          "origin": "html_fallback",
+          "source_title": "火卫一",
+          "schema_version": "nasa_shadow_ready_v1"
+        }
+      ],
+      "exact_match": true,
+      "top_k_hit": true,
+      "expected_top_k_hit": true,
+      "top_k_expectation_met": true,
+      "path_correct": true,
+      "allowed_final_source_ok": true,
+      "pass": true,
+      "query_schema_ok": true,
+      "query_explainability_degraded": false,
+      "explainability_status": "ok",
+      "source_metadata": {
+        "subject": "火卫一",
+        "relation": "ORBITS",
+        "object": "火星",
+        "source": "nasa",
+        "source_name": "nasa",
+        "source_role": "primary",
+        "origin": "html_fallback",
+        "source_title": "火卫一",
+        "schema_version": "nasa_shadow_ready_v1"
+      },
+      "metadata_complete": true,
+      "source_filter_failed": false,
+      "inferred_boundary_break": false,
+      "fallback_exact_match": true,
+      "fallback_top_k_hit": true,
+      "consistency_match": true,
+      "failure_category": null,
+      "expected_failure_if_any": null
+    },
+    {
+      "id": "nasa_structured_mars_mass_expected_absent",
+      "category": "structured",
+      "query_kind": "structured",
+      "query": "火星质量是多少",
+      "source_schema_version": "nasa_shadow_ready_v1",
+      "expected_path": "fallback",
+      "actual_path": "fallback",
+      "allowed_final_sources": [
+        "fallback"
+      ],
+      "expected_result": {
+        "empty": true
+      },
+      "normalized_expected_value": null,
+      "normalized_returned_value": null,
+      "returned_result": null,
+      "top_k_results": [],
+      "graph_only_results": [],
+      "fallback_results": [],
+      "exact_match": true,
+      "top_k_hit": false,
+      "expected_top_k_hit": false,
+      "top_k_expectation_met": true,
+      "path_correct": true,
+      "allowed_final_source_ok": true,
+      "pass": true,
+      "query_schema_ok": true,
+      "query_explainability_degraded": false,
+      "explainability_status": "ok",
+      "source_metadata": null,
+      "metadata_complete": true,
+      "source_filter_failed": false,
+      "inferred_boundary_break": false,
+      "fallback_exact_match": true,
+      "fallback_top_k_hit": true,
+      "consistency_match": true,
+      "failure_category": null,
+      "expected_failure_if_any": null
+    },
+    {
+      "id": "nasa_structured_mars_radius_expected_absent",
+      "category": "structured",
+      "query_kind": "structured",
+      "query": "火星半径是多少",
+      "source_schema_version": "nasa_shadow_ready_v1",
+      "expected_path": "fallback",
+      "actual_path": "fallback",
+      "allowed_final_sources": [
+        "fallback"
+      ],
+      "expected_result": {
+        "empty": true
+      },
+      "normalized_expected_value": null,
+      "normalized_returned_value": null,
+      "returned_result": null,
+      "top_k_results": [],
+      "graph_only_results": [],
+      "fallback_results": [],
+      "exact_match": true,
+      "top_k_hit": false,
+      "expected_top_k_hit": false,
+      "top_k_expectation_met": true,
+      "path_correct": true,
+      "allowed_final_source_ok": true,
+      "pass": true,
+      "query_schema_ok": true,
+      "query_explainability_degraded": false,
+      "explainability_status": "ok",
+      "source_metadata": null,
+      "metadata_complete": true,
+      "source_filter_failed": false,
+      "inferred_boundary_break": false,
+      "fallback_exact_match": true,
+      "fallback_top_k_hit": true,
+      "consistency_match": true,
+      "failure_category": null,
+      "expected_failure_if_any": null
+    },
+    {
+      "id": "nasa_narrative_mars_atmosphere",
+      "category": "narrative",
+      "query_kind": "narrative",
+      "query": "火星大气成分",
+      "source_schema_version": "nasa_shadow_ready_v1",
+      "expected_path": "fallback",
+      "actual_path": "fallback",
+      "allowed_final_sources": [
+        "fallback"
+      ],
+      "expected_result": {
+        "page_title": "火星",
+        "section_any_of": [
+          "大气"
+        ]
+      },
+      "expected_page_title": "火星",
+      "expected_section_any_of": [
+        "大气"
+      ],
+      "returned_result": {
+        "page_title": "火星",
+        "section": "大气",
+        "content": "根据 NASA Mars Fact Sheet，火星大气非常稀薄，主要成分是二氧化碳，约占 95.32%，另含氮气约 2.7%、氩气约 1.6%，以及微量氧气、一氧化碳和水蒸气。\n稀薄的大气意味着火星表面气压远低于地球，保温能力较弱，也更容易受到太阳风和高能粒子的影响，因此常被描述为寒冷而干燥的环境。",
+        "score": 1.0,
+        "rank": 1,
+        "source": "nasa",
+        "source_name": "nasa",
+        "source_role": "primary",
+        "origin": "html_fallback",
+        "source_title": "火星",
+        "schema_version": "nasa_shadow_ready_v1"
+      },
+      "top_k_results": [
+        {
+          "page_title": "火星",
+          "section": "大气",
+          "content": "根据 NASA Mars Fact Sheet，火星大气非常稀薄，主要成分是二氧化碳，约占 95.32%，另含氮气约 2.7%、氩气约 1.6%，以及微量氧气、一氧化碳和水蒸气。\n稀薄的大气意味着火星表面气压远低于地球，保温能力较弱，也更容易受到太阳风和高能粒子的影响，因此常被描述为寒冷而干燥的环境。",
+          "score": 1.0,
+          "rank": 1,
+          "source": "nasa",
+          "source_name": "nasa",
+          "source_role": "primary",
+          "origin": "html_fallback",
+          "source_title": "火星",
+          "schema_version": "nasa_shadow_ready_v1"
+        }
+      ],
+      "fallback_results": [
+        {
+          "page_title": "火星",
+          "section": "大气",
+          "content": "根据 NASA Mars Fact Sheet，火星大气非常稀薄，主要成分是二氧化碳，约占 95.32%，另含氮气约 2.7%、氩气约 1.6%，以及微量氧气、一氧化碳和水蒸气。\n稀薄的大气意味着火星表面气压远低于地球，保温能力较弱，也更容易受到太阳风和高能粒子的影响，因此常被描述为寒冷而干燥的环境。",
+          "score": 1.0,
+          "rank": 1,
+          "source": "nasa",
+          "source_name": "nasa",
+          "source_role": "primary",
+          "origin": "html_fallback",
+          "source_title": "火星",
+          "schema_version": "nasa_shadow_ready_v1"
+        }
+      ],
+      "exact_match": true,
+      "top_k_hit": true,
+      "expected_top_k_hit": true,
+      "top_k_expectation_met": true,
+      "path_correct": true,
+      "allowed_final_source_ok": true,
+      "pass": true,
+      "query_schema_ok": true,
+      "query_explainability_degraded": false,
+      "explainability_status": "ok",
+      "source_metadata": {
+        "page_title": "火星",
+        "section": "大气",
+        "content": "根据 NASA Mars Fact Sheet，火星大气非常稀薄，主要成分是二氧化碳，约占 95.32%，另含氮气约 2.7%、氩气约 1.6%，以及微量氧气、一氧化碳和水蒸气。\n稀薄的大气意味着火星表面气压远低于地球，保温能力较弱，也更容易受到太阳风和高能粒子的影响，因此常被描述为寒冷而干燥的环境。",
+        "score": 1.0,
+        "rank": 1,
+        "source": "nasa",
+        "source_name": "nasa",
+        "source_role": "primary",
+        "origin": "html_fallback",
+        "source_title": "火星",
+        "schema_version": "nasa_shadow_ready_v1"
+      },
+      "metadata_complete": true,
+      "source_filter_failed": false,
+      "inferred_boundary_break": false,
+      "fallback_exact_match": true,
+      "fallback_top_k_hit": true,
+      "consistency_match": true,
+      "failure_category": null,
+      "expected_failure_if_any": null
+    },
+    {
+      "id": "nasa_narrative_mars_weather",
+      "category": "narrative",
+      "query_kind": "narrative",
+      "query": "火星为什么寒冷干燥",
+      "source_schema_version": "nasa_shadow_ready_v1",
+      "expected_path": "fallback",
+      "actual_path": "fallback",
+      "allowed_final_sources": [
+        "fallback"
+      ],
+      "expected_result": {
+        "page_title": "火星",
+        "section_any_of": [
+          "大气"
+        ]
+      },
+      "expected_page_title": "火星",
+      "expected_section_any_of": [
+        "大气"
+      ],
+      "returned_result": {
+        "page_title": "火星",
+        "section": "大气",
+        "content": "根据 NASA Mars Fact Sheet，火星大气非常稀薄，主要成分是二氧化碳，约占 95.32%，另含氮气约 2.7%、氩气约 1.6%，以及微量氧气、一氧化碳和水蒸气。\n稀薄的大气意味着火星表面气压远低于地球，保温能力较弱，也更容易受到太阳风和高能粒子的影响，因此常被描述为寒冷而干燥的环境。",
+        "score": 0.9444444444444444,
+        "rank": 1,
+        "source": "nasa",
+        "source_name": "nasa",
+        "source_role": "primary",
+        "origin": "html_fallback",
+        "source_title": "火星",
+        "schema_version": "nasa_shadow_ready_v1"
+      },
+      "top_k_results": [
+        {
+          "page_title": "火星",
+          "section": "大气",
+          "content": "根据 NASA Mars Fact Sheet，火星大气非常稀薄，主要成分是二氧化碳，约占 95.32%，另含氮气约 2.7%、氩气约 1.6%，以及微量氧气、一氧化碳和水蒸气。\n稀薄的大气意味着火星表面气压远低于地球，保温能力较弱，也更容易受到太阳风和高能粒子的影响，因此常被描述为寒冷而干燥的环境。",
+          "score": 0.9444444444444444,
+          "rank": 1,
+          "source": "nasa",
+          "source_name": "nasa",
+          "source_role": "primary",
+          "origin": "html_fallback",
+          "source_title": "火星",
+          "schema_version": "nasa_shadow_ready_v1"
+        }
+      ],
+      "fallback_results": [
+        {
+          "page_title": "火星",
+          "section": "大气",
+          "content": "根据 NASA Mars Fact Sheet，火星大气非常稀薄，主要成分是二氧化碳，约占 95.32%，另含氮气约 2.7%、氩气约 1.6%，以及微量氧气、一氧化碳和水蒸气。\n稀薄的大气意味着火星表面气压远低于地球，保温能力较弱，也更容易受到太阳风和高能粒子的影响，因此常被描述为寒冷而干燥的环境。",
+          "score": 0.9444444444444444,
+          "rank": 1,
+          "source": "nasa",
+          "source_name": "nasa",
+          "source_role": "primary",
+          "origin": "html_fallback",
+          "source_title": "火星",
+          "schema_version": "nasa_shadow_ready_v1"
+        }
+      ],
+      "exact_match": true,
+      "top_k_hit": true,
+      "expected_top_k_hit": true,
+      "top_k_expectation_met": true,
+      "path_correct": true,
+      "allowed_final_source_ok": true,
+      "pass": true,
+      "query_schema_ok": true,
+      "query_explainability_degraded": false,
+      "explainability_status": "ok",
+      "source_metadata": {
+        "page_title": "火星",
+        "section": "大气",
+        "content": "根据 NASA Mars Fact Sheet，火星大气非常稀薄，主要成分是二氧化碳，约占 95.32%，另含氮气约 2.7%、氩气约 1.6%，以及微量氧气、一氧化碳和水蒸气。\n稀薄的大气意味着火星表面气压远低于地球，保温能力较弱，也更容易受到太阳风和高能粒子的影响，因此常被描述为寒冷而干燥的环境。",
+        "score": 0.9444444444444444,
+        "rank": 1,
+        "source": "nasa",
+        "source_name": "nasa",
+        "source_role": "primary",
+        "origin": "html_fallback",
+        "source_title": "火星",
+        "schema_version": "nasa_shadow_ready_v1"
+      },
+      "metadata_complete": true,
+      "source_filter_failed": false,
+      "inferred_boundary_break": false,
+      "fallback_exact_match": true,
+      "fallback_top_k_hit": true,
+      "consistency_match": true,
+      "failure_category": null,
+      "expected_failure_if_any": null
+    },
+    {
+      "id": "nasa_narrative_phobos_context_absent",
+      "category": "narrative",
+      "query_kind": "narrative",
+      "query": "火卫一任务页面摘要",
+      "source_schema_version": "nasa_shadow_ready_v1",
+      "expected_path": "fallback",
+      "actual_path": "fallback",
+      "allowed_final_sources": [
+        "fallback"
+      ],
+      "expected_result": {
+        "empty": true
+      },
+      "expected_page_title": null,
+      "expected_section_any_of": [],
+      "returned_result": null,
+      "top_k_results": [],
+      "fallback_results": [],
+      "exact_match": true,
+      "top_k_hit": false,
+      "expected_top_k_hit": false,
+      "top_k_expectation_met": true,
+      "path_correct": true,
+      "allowed_final_source_ok": true,
+      "pass": true,
+      "query_schema_ok": true,
+      "query_explainability_degraded": false,
+      "explainability_status": "ok",
+      "source_metadata": null,
+      "metadata_complete": true,
+      "source_filter_failed": false,
+      "inferred_boundary_break": false,
+      "fallback_exact_match": true,
+      "fallback_top_k_hit": true,
+      "consistency_match": true,
+      "failure_category": null,
+      "expected_failure_if_any": null
+    },
+    {
+      "id": "nasa_negative_deimos_absent",
+      "category": "negative",
+      "query_kind": "structured",
+      "query": "火卫二绕谁公转",
+      "source_schema_version": "nasa_shadow_ready_v1",
+      "expected_path": "fallback",
+      "actual_path": "fallback",
+      "allowed_final_sources": [
+        "fallback"
+      ],
+      "expected_result": {
+        "empty": true
+      },
+      "normalized_expected_value": null,
+      "normalized_returned_value": null,
+      "returned_result": null,
+      "top_k_results": [],
+      "graph_only_results": [],
+      "fallback_results": [],
+      "exact_match": true,
+      "top_k_hit": false,
+      "expected_top_k_hit": false,
+      "top_k_expectation_met": true,
+      "path_correct": true,
+      "allowed_final_source_ok": true,
+      "pass": true,
+      "query_schema_ok": true,
+      "query_explainability_degraded": false,
+      "explainability_status": "ok",
+      "source_metadata": null,
+      "metadata_complete": true,
+      "source_filter_failed": false,
+      "inferred_boundary_break": false,
+      "fallback_exact_match": true,
+      "fallback_top_k_hit": true,
+      "consistency_match": true,
+      "failure_category": null,
+      "expected_failure_if_any": null
+    },
+    {
+      "id": "nasa_negative_jupiter_absent",
+      "category": "negative",
+      "query_kind": "structured",
+      "query": "木星大气成分",
+      "source_schema_version": "nasa_shadow_ready_v1",
+      "expected_path": "fallback",
+      "actual_path": "fallback",
+      "allowed_final_sources": [
+        "fallback"
+      ],
+      "expected_result": {
+        "empty": true
+      },
+      "normalized_expected_value": null,
+      "normalized_returned_value": null,
+      "returned_result": null,
+      "top_k_results": [],
+      "graph_only_results": [],
+      "fallback_results": [],
+      "exact_match": true,
+      "top_k_hit": false,
+      "expected_top_k_hit": false,
+      "top_k_expectation_met": true,
+      "path_correct": true,
+      "allowed_final_source_ok": true,
+      "pass": true,
+      "query_schema_ok": true,
+      "query_explainability_degraded": false,
+      "explainability_status": "ok",
+      "source_metadata": null,
+      "metadata_complete": true,
+      "source_filter_failed": false,
+      "inferred_boundary_break": false,
+      "fallback_exact_match": true,
+      "fallback_top_k_hit": true,
+      "consistency_match": true,
+      "failure_category": null,
+      "expected_failure_if_any": null
+    },
+    {
+      "id": "nasa_negative_wikidata_only_absent",
+      "category": "negative",
+      "query_kind": "structured",
+      "query": "谷神星是谁发现的",
+      "source_schema_version": "nasa_shadow_ready_v1",
+      "expected_path": "fallback",
+      "actual_path": "fallback",
+      "allowed_final_sources": [
+        "fallback"
+      ],
+      "expected_result": {
+        "empty": true
+      },
+      "normalized_expected_value": null,
+      "normalized_returned_value": null,
+      "returned_result": null,
+      "top_k_results": [],
+      "graph_only_results": [],
+      "fallback_results": [],
+      "exact_match": true,
+      "top_k_hit": false,
+      "expected_top_k_hit": false,
+      "top_k_expectation_met": true,
+      "path_correct": true,
+      "allowed_final_source_ok": true,
+      "pass": true,
+      "query_schema_ok": true,
+      "query_explainability_degraded": false,
+      "explainability_status": "ok",
+      "source_metadata": null,
+      "metadata_complete": true,
+      "source_filter_failed": false,
+      "inferred_boundary_break": false,
+      "fallback_exact_match": true,
+      "fallback_top_k_hit": true,
+      "consistency_match": true,
+      "failure_category": null,
+      "expected_failure_if_any": null
+    },
+    {
+      "id": "nasa_fallback_local_graph",
+      "category": "fallback",
+      "query_kind": "structured",
+      "query": "火卫一是火星的卫星吗",
+      "source_schema_version": "nasa_shadow_ready_v1",
+      "expected_path": "fallback",
+      "actual_path": "fallback",
+      "allowed_final_sources": [
+        "fallback"
+      ],
+      "expected_result": {
+        "subject": "火卫一",
+        "relation": "ORBITS",
+        "object": "火星"
+      },
+      "normalized_expected_value": null,
+      "normalized_returned_value": "火星",
+      "returned_result": {
+        "subject": "火卫一",
+        "relation": "ORBITS",
+        "object": "火星",
+        "source": "nasa",
+        "source_name": "nasa",
+        "source_role": "primary",
+        "origin": "html_fallback",
+        "source_title": "火卫一",
+        "schema_version": "nasa_shadow_ready_v1"
+      },
+      "top_k_results": [
+        {
+          "subject": "火卫一",
+          "relation": "ORBITS",
+          "object": "火星",
+          "source": "nasa",
+          "source_name": "nasa",
+          "source_role": "primary",
+          "origin": "html_fallback",
+          "source_title": "火卫一",
+          "schema_version": "nasa_shadow_ready_v1"
+        }
+      ],
+      "graph_only_results": [],
+      "fallback_results": [
+        {
+          "subject": "火卫一",
+          "relation": "ORBITS",
+          "object": "火星",
+          "source": "nasa",
+          "source_name": "nasa",
+          "source_role": "primary",
+          "origin": "html_fallback",
+          "source_title": "火卫一",
+          "schema_version": "nasa_shadow_ready_v1"
+        }
+      ],
+      "exact_match": true,
+      "top_k_hit": true,
+      "expected_top_k_hit": true,
+      "top_k_expectation_met": true,
+      "path_correct": true,
+      "allowed_final_source_ok": true,
+      "pass": true,
+      "query_schema_ok": true,
+      "query_explainability_degraded": false,
+      "explainability_status": "ok",
+      "source_metadata": {
+        "subject": "火卫一",
+        "relation": "ORBITS",
+        "object": "火星",
+        "source": "nasa",
+        "source_name": "nasa",
+        "source_role": "primary",
+        "origin": "html_fallback",
+        "source_title": "火卫一",
+        "schema_version": "nasa_shadow_ready_v1"
+      },
+      "metadata_complete": true,
+      "source_filter_failed": false,
+      "inferred_boundary_break": false,
+      "fallback_exact_match": true,
+      "fallback_top_k_hit": true,
+      "consistency_match": true,
+      "failure_category": null,
+      "expected_failure_if_any": null
+    },
+    {
+      "id": "nasa_fallback_local_narrative",
+      "category": "fallback",
+      "query_kind": "narrative",
+      "query": "NASA Mars Fact Sheet 火星大气",
+      "source_schema_version": "nasa_shadow_ready_v1",
+      "expected_path": "fallback",
+      "actual_path": "fallback",
+      "allowed_final_sources": [
+        "fallback"
+      ],
+      "expected_result": {
+        "page_title": "火星",
+        "section_any_of": [
+          "大气"
+        ]
+      },
+      "expected_page_title": "火星",
+      "expected_section_any_of": [
+        "大气"
+      ],
+      "returned_result": {
+        "page_title": "火星",
+        "section": "大气",
+        "content": "根据 NASA Mars Fact Sheet，火星大气非常稀薄，主要成分是二氧化碳，约占 95.32%，另含氮气约 2.7%、氩气约 1.6%，以及微量氧气、一氧化碳和水蒸气。\n稀薄的大气意味着火星表面气压远低于地球，保温能力较弱，也更容易受到太阳风和高能粒子的影响，因此常被描述为寒冷而干燥的环境。",
+        "score": 1.0,
+        "rank": 1,
+        "source": "nasa",
+        "source_name": "nasa",
+        "source_role": "primary",
+        "origin": "html_fallback",
+        "source_title": "火星",
+        "schema_version": "nasa_shadow_ready_v1"
+      },
+      "top_k_results": [
+        {
+          "page_title": "火星",
+          "section": "大气",
+          "content": "根据 NASA Mars Fact Sheet，火星大气非常稀薄，主要成分是二氧化碳，约占 95.32%，另含氮气约 2.7%、氩气约 1.6%，以及微量氧气、一氧化碳和水蒸气。\n稀薄的大气意味着火星表面气压远低于地球，保温能力较弱，也更容易受到太阳风和高能粒子的影响，因此常被描述为寒冷而干燥的环境。",
+          "score": 1.0,
+          "rank": 1,
+          "source": "nasa",
+          "source_name": "nasa",
+          "source_role": "primary",
+          "origin": "html_fallback",
+          "source_title": "火星",
+          "schema_version": "nasa_shadow_ready_v1"
+        }
+      ],
+      "fallback_results": [
+        {
+          "page_title": "火星",
+          "section": "大气",
+          "content": "根据 NASA Mars Fact Sheet，火星大气非常稀薄，主要成分是二氧化碳，约占 95.32%，另含氮气约 2.7%、氩气约 1.6%，以及微量氧气、一氧化碳和水蒸气。\n稀薄的大气意味着火星表面气压远低于地球，保温能力较弱，也更容易受到太阳风和高能粒子的影响，因此常被描述为寒冷而干燥的环境。",
+          "score": 1.0,
+          "rank": 1,
+          "source": "nasa",
+          "source_name": "nasa",
+          "source_role": "primary",
+          "origin": "html_fallback",
+          "source_title": "火星",
+          "schema_version": "nasa_shadow_ready_v1"
+        }
+      ],
+      "exact_match": true,
+      "top_k_hit": true,
+      "expected_top_k_hit": true,
+      "top_k_expectation_met": true,
+      "path_correct": true,
+      "allowed_final_source_ok": true,
+      "pass": true,
+      "query_schema_ok": true,
+      "query_explainability_degraded": false,
+      "explainability_status": "ok",
+      "source_metadata": {
+        "page_title": "火星",
+        "section": "大气",
+        "content": "根据 NASA Mars Fact Sheet，火星大气非常稀薄，主要成分是二氧化碳，约占 95.32%，另含氮气约 2.7%、氩气约 1.6%，以及微量氧气、一氧化碳和水蒸气。\n稀薄的大气意味着火星表面气压远低于地球，保温能力较弱，也更容易受到太阳风和高能粒子的影响，因此常被描述为寒冷而干燥的环境。",
+        "score": 1.0,
+        "rank": 1,
+        "source": "nasa",
+        "source_name": "nasa",
+        "source_role": "primary",
+        "origin": "html_fallback",
+        "source_title": "火星",
+        "schema_version": "nasa_shadow_ready_v1"
+      },
+      "metadata_complete": true,
+      "source_filter_failed": false,
+      "inferred_boundary_break": false,
+      "fallback_exact_match": true,
+      "fallback_top_k_hit": true,
+      "consistency_match": true,
+      "failure_category": null,
+      "expected_failure_if_any": null
+    },
+    {
+      "id": "nasa_source_isolation_no_wikidata",
+      "category": "source_isolation",
+      "query_kind": "structured",
+      "query": "冥王星是谁发现的",
+      "source_schema_version": "nasa_shadow_ready_v1",
+      "expected_path": "fallback",
+      "actual_path": "fallback",
+      "allowed_final_sources": [
+        "fallback"
+      ],
+      "expected_result": {
+        "empty": true
+      },
+      "normalized_expected_value": null,
+      "normalized_returned_value": null,
+      "returned_result": null,
+      "top_k_results": [],
+      "graph_only_results": [],
+      "fallback_results": [],
+      "exact_match": true,
+      "top_k_hit": false,
+      "expected_top_k_hit": false,
+      "top_k_expectation_met": true,
+      "path_correct": true,
+      "allowed_final_source_ok": true,
+      "pass": true,
+      "query_schema_ok": true,
+      "query_explainability_degraded": false,
+      "explainability_status": "ok",
+      "source_metadata": null,
+      "metadata_complete": true,
+      "source_filter_failed": false,
+      "inferred_boundary_break": false,
+      "fallback_exact_match": true,
+      "fallback_top_k_hit": true,
+      "consistency_match": true,
+      "failure_category": null,
+      "expected_failure_if_any": null
+    },
+    {
+      "id": "nasa_source_isolation_no_zhwiki",
+      "category": "source_isolation",
+      "query_kind": "narrative",
+      "query": "地球大气成分",
+      "source_schema_version": "nasa_shadow_ready_v1",
+      "expected_path": "fallback",
+      "actual_path": "fallback",
+      "allowed_final_sources": [
+        "fallback"
+      ],
+      "expected_result": {
+        "empty": true
+      },
+      "expected_page_title": null,
+      "expected_section_any_of": [],
+      "returned_result": null,
+      "top_k_results": [],
+      "fallback_results": [],
+      "exact_match": true,
+      "top_k_hit": false,
+      "expected_top_k_hit": false,
+      "top_k_expectation_met": true,
+      "path_correct": true,
+      "allowed_final_source_ok": true,
+      "pass": true,
+      "query_schema_ok": true,
+      "query_explainability_degraded": false,
+      "explainability_status": "ok",
+      "source_metadata": null,
+      "metadata_complete": true,
+      "source_filter_failed": false,
+      "inferred_boundary_break": false,
+      "fallback_exact_match": true,
+      "fallback_top_k_hit": true,
+      "consistency_match": true,
+      "failure_category": null,
+      "expected_failure_if_any": null
+    },
+    {
+      "id": "nasa_metadata_structured_schema",
+      "category": "metadata_completeness",
+      "query_kind": "structured",
+      "query": "火卫一绕谁运行 metadata",
+      "source_schema_version": "nasa_shadow_ready_v1",
+      "expected_path": "fallback",
+      "actual_path": "fallback",
+      "allowed_final_sources": [
+        "fallback"
+      ],
+      "expected_result": {
+        "subject": "火卫一",
+        "relation": "ORBITS",
+        "object": "火星"
+      },
+      "normalized_expected_value": null,
+      "normalized_returned_value": "火星",
+      "returned_result": {
+        "subject": "火卫一",
+        "relation": "ORBITS",
+        "object": "火星",
+        "source": "nasa",
+        "source_name": "nasa",
+        "source_role": "primary",
+        "origin": "html_fallback",
+        "source_title": "火卫一",
+        "schema_version": "nasa_shadow_ready_v1"
+      },
+      "top_k_results": [
+        {
+          "subject": "火卫一",
+          "relation": "ORBITS",
+          "object": "火星",
+          "source": "nasa",
+          "source_name": "nasa",
+          "source_role": "primary",
+          "origin": "html_fallback",
+          "source_title": "火卫一",
+          "schema_version": "nasa_shadow_ready_v1"
+        }
+      ],
+      "graph_only_results": [],
+      "fallback_results": [
+        {
+          "subject": "火卫一",
+          "relation": "ORBITS",
+          "object": "火星",
+          "source": "nasa",
+          "source_name": "nasa",
+          "source_role": "primary",
+          "origin": "html_fallback",
+          "source_title": "火卫一",
+          "schema_version": "nasa_shadow_ready_v1"
+        }
+      ],
+      "exact_match": true,
+      "top_k_hit": true,
+      "expected_top_k_hit": true,
+      "top_k_expectation_met": true,
+      "path_correct": true,
+      "allowed_final_source_ok": true,
+      "pass": true,
+      "query_schema_ok": true,
+      "query_explainability_degraded": false,
+      "explainability_status": "ok",
+      "source_metadata": {
+        "subject": "火卫一",
+        "relation": "ORBITS",
+        "object": "火星",
+        "source": "nasa",
+        "source_name": "nasa",
+        "source_role": "primary",
+        "origin": "html_fallback",
+        "source_title": "火卫一",
+        "schema_version": "nasa_shadow_ready_v1"
+      },
+      "metadata_complete": true,
+      "source_filter_failed": false,
+      "inferred_boundary_break": false,
+      "fallback_exact_match": true,
+      "fallback_top_k_hit": true,
+      "consistency_match": true,
+      "failure_category": null,
+      "expected_failure_if_any": null
+    },
+    {
+      "id": "nasa_metadata_narrative_schema",
+      "category": "metadata_completeness",
+      "query_kind": "narrative",
+      "query": "火星大气 schema version",
+      "source_schema_version": "nasa_shadow_ready_v1",
+      "expected_path": "fallback",
+      "actual_path": "fallback",
+      "allowed_final_sources": [
+        "fallback"
+      ],
+      "expected_result": {
+        "page_title": "火星",
+        "section_any_of": [
+          "大气"
+        ]
+      },
+      "expected_page_title": "火星",
+      "expected_section_any_of": [
+        "大气"
+      ],
+      "returned_result": {
+        "page_title": "火星",
+        "section": "大气",
+        "content": "根据 NASA Mars Fact Sheet，火星大气非常稀薄，主要成分是二氧化碳，约占 95.32%，另含氮气约 2.7%、氩气约 1.6%，以及微量氧气、一氧化碳和水蒸气。\n稀薄的大气意味着火星表面气压远低于地球，保温能力较弱，也更容易受到太阳风和高能粒子的影响，因此常被描述为寒冷而干燥的环境。",
+        "score": 1.0,
+        "rank": 1,
+        "source": "nasa",
+        "source_name": "nasa",
+        "source_role": "primary",
+        "origin": "html_fallback",
+        "source_title": "火星",
+        "schema_version": "nasa_shadow_ready_v1"
+      },
+      "top_k_results": [
+        {
+          "page_title": "火星",
+          "section": "大气",
+          "content": "根据 NASA Mars Fact Sheet，火星大气非常稀薄，主要成分是二氧化碳，约占 95.32%，另含氮气约 2.7%、氩气约 1.6%，以及微量氧气、一氧化碳和水蒸气。\n稀薄的大气意味着火星表面气压远低于地球，保温能力较弱，也更容易受到太阳风和高能粒子的影响，因此常被描述为寒冷而干燥的环境。",
+          "score": 1.0,
+          "rank": 1,
+          "source": "nasa",
+          "source_name": "nasa",
+          "source_role": "primary",
+          "origin": "html_fallback",
+          "source_title": "火星",
+          "schema_version": "nasa_shadow_ready_v1"
+        }
+      ],
+      "fallback_results": [
+        {
+          "page_title": "火星",
+          "section": "大气",
+          "content": "根据 NASA Mars Fact Sheet，火星大气非常稀薄，主要成分是二氧化碳，约占 95.32%，另含氮气约 2.7%、氩气约 1.6%，以及微量氧气、一氧化碳和水蒸气。\n稀薄的大气意味着火星表面气压远低于地球，保温能力较弱，也更容易受到太阳风和高能粒子的影响，因此常被描述为寒冷而干燥的环境。",
+          "score": 1.0,
+          "rank": 1,
+          "source": "nasa",
+          "source_name": "nasa",
+          "source_role": "primary",
+          "origin": "html_fallback",
+          "source_title": "火星",
+          "schema_version": "nasa_shadow_ready_v1"
+        }
+      ],
+      "exact_match": true,
+      "top_k_hit": true,
+      "expected_top_k_hit": true,
+      "top_k_expectation_met": true,
+      "path_correct": true,
+      "allowed_final_source_ok": true,
+      "pass": true,
+      "query_schema_ok": true,
+      "query_explainability_degraded": false,
+      "explainability_status": "ok",
+      "source_metadata": {
+        "page_title": "火星",
+        "section": "大气",
+        "content": "根据 NASA Mars Fact Sheet，火星大气非常稀薄，主要成分是二氧化碳，约占 95.32%，另含氮气约 2.7%、氩气约 1.6%，以及微量氧气、一氧化碳和水蒸气。\n稀薄的大气意味着火星表面气压远低于地球，保温能力较弱，也更容易受到太阳风和高能粒子的影响，因此常被描述为寒冷而干燥的环境。",
+        "score": 1.0,
+        "rank": 1,
+        "source": "nasa",
+        "source_name": "nasa",
+        "source_role": "primary",
+        "origin": "html_fallback",
+        "source_title": "火星",
+        "schema_version": "nasa_shadow_ready_v1"
+      },
+      "metadata_complete": true,
+      "source_filter_failed": false,
+      "inferred_boundary_break": false,
+      "fallback_exact_match": true,
+      "fallback_top_k_hit": true,
+      "consistency_match": true,
+      "failure_category": null,
+      "expected_failure_if_any": null
+    },
+    {
+      "id": "nasa_path_routing_structured",
+      "category": "path_routing",
+      "query_kind": "structured",
+      "query": "火卫一轨道主星",
+      "source_schema_version": "nasa_shadow_ready_v1",
+      "expected_path": "fallback",
+      "actual_path": "fallback",
+      "allowed_final_sources": [
+        "fallback"
+      ],
+      "expected_result": {
+        "subject": "火卫一",
+        "relation": "ORBITS",
+        "object": "火星"
+      },
+      "normalized_expected_value": null,
+      "normalized_returned_value": "火星",
+      "returned_result": {
+        "subject": "火卫一",
+        "relation": "ORBITS",
+        "object": "火星",
+        "source": "nasa",
+        "source_name": "nasa",
+        "source_role": "primary",
+        "origin": "html_fallback",
+        "source_title": "火卫一",
+        "schema_version": "nasa_shadow_ready_v1"
+      },
+      "top_k_results": [
+        {
+          "subject": "火卫一",
+          "relation": "ORBITS",
+          "object": "火星",
+          "source": "nasa",
+          "source_name": "nasa",
+          "source_role": "primary",
+          "origin": "html_fallback",
+          "source_title": "火卫一",
+          "schema_version": "nasa_shadow_ready_v1"
+        }
+      ],
+      "graph_only_results": [],
+      "fallback_results": [
+        {
+          "subject": "火卫一",
+          "relation": "ORBITS",
+          "object": "火星",
+          "source": "nasa",
+          "source_name": "nasa",
+          "source_role": "primary",
+          "origin": "html_fallback",
+          "source_title": "火卫一",
+          "schema_version": "nasa_shadow_ready_v1"
+        }
+      ],
+      "exact_match": true,
+      "top_k_hit": true,
+      "expected_top_k_hit": true,
+      "top_k_expectation_met": true,
+      "path_correct": true,
+      "allowed_final_source_ok": true,
+      "pass": true,
+      "query_schema_ok": true,
+      "query_explainability_degraded": false,
+      "explainability_status": "ok",
+      "source_metadata": {
+        "subject": "火卫一",
+        "relation": "ORBITS",
+        "object": "火星",
+        "source": "nasa",
+        "source_name": "nasa",
+        "source_role": "primary",
+        "origin": "html_fallback",
+        "source_title": "火卫一",
+        "schema_version": "nasa_shadow_ready_v1"
+      },
+      "metadata_complete": true,
+      "source_filter_failed": false,
+      "inferred_boundary_break": false,
+      "fallback_exact_match": true,
+      "fallback_top_k_hit": true,
+      "consistency_match": true,
+      "failure_category": null,
+      "expected_failure_if_any": null
+    },
+    {
+      "id": "nasa_path_routing_narrative",
+      "category": "path_routing",
+      "query_kind": "narrative",
+      "query": "火星表面气压为什么低",
+      "source_schema_version": "nasa_shadow_ready_v1",
+      "expected_path": "fallback",
+      "actual_path": "fallback",
+      "allowed_final_sources": [
+        "fallback"
+      ],
+      "expected_result": {
+        "page_title": "火星",
+        "section_any_of": [
+          "大气"
+        ]
+      },
+      "expected_page_title": "火星",
+      "expected_section_any_of": [
+        "大气"
+      ],
+      "returned_result": {
+        "page_title": "火星",
+        "section": "大气",
+        "content": "根据 NASA Mars Fact Sheet，火星大气非常稀薄，主要成分是二氧化碳，约占 95.32%，另含氮气约 2.7%、氩气约 1.6%，以及微量氧气、一氧化碳和水蒸气。\n稀薄的大气意味着火星表面气压远低于地球，保温能力较弱，也更容易受到太阳风和高能粒子的影响，因此常被描述为寒冷而干燥的环境。",
+        "score": 0.9444444444444444,
+        "rank": 1,
+        "source": "nasa",
+        "source_name": "nasa",
+        "source_role": "primary",
+        "origin": "html_fallback",
+        "source_title": "火星",
+        "schema_version": "nasa_shadow_ready_v1"
+      },
+      "top_k_results": [
+        {
+          "page_title": "火星",
+          "section": "大气",
+          "content": "根据 NASA Mars Fact Sheet，火星大气非常稀薄，主要成分是二氧化碳，约占 95.32%，另含氮气约 2.7%、氩气约 1.6%，以及微量氧气、一氧化碳和水蒸气。\n稀薄的大气意味着火星表面气压远低于地球，保温能力较弱，也更容易受到太阳风和高能粒子的影响，因此常被描述为寒冷而干燥的环境。",
+          "score": 0.9444444444444444,
+          "rank": 1,
+          "source": "nasa",
+          "source_name": "nasa",
+          "source_role": "primary",
+          "origin": "html_fallback",
+          "source_title": "火星",
+          "schema_version": "nasa_shadow_ready_v1"
+        }
+      ],
+      "fallback_results": [
+        {
+          "page_title": "火星",
+          "section": "大气",
+          "content": "根据 NASA Mars Fact Sheet，火星大气非常稀薄，主要成分是二氧化碳，约占 95.32%，另含氮气约 2.7%、氩气约 1.6%，以及微量氧气、一氧化碳和水蒸气。\n稀薄的大气意味着火星表面气压远低于地球，保温能力较弱，也更容易受到太阳风和高能粒子的影响，因此常被描述为寒冷而干燥的环境。",
+          "score": 0.9444444444444444,
+          "rank": 1,
+          "source": "nasa",
+          "source_name": "nasa",
+          "source_role": "primary",
+          "origin": "html_fallback",
+          "source_title": "火星",
+          "schema_version": "nasa_shadow_ready_v1"
+        }
+      ],
+      "exact_match": true,
+      "top_k_hit": true,
+      "expected_top_k_hit": true,
+      "top_k_expectation_met": true,
+      "path_correct": true,
+      "allowed_final_source_ok": true,
+      "pass": true,
+      "query_schema_ok": true,
+      "query_explainability_degraded": false,
+      "explainability_status": "ok",
+      "source_metadata": {
+        "page_title": "火星",
+        "section": "大气",
+        "content": "根据 NASA Mars Fact Sheet，火星大气非常稀薄，主要成分是二氧化碳，约占 95.32%，另含氮气约 2.7%、氩气约 1.6%，以及微量氧气、一氧化碳和水蒸气。\n稀薄的大气意味着火星表面气压远低于地球，保温能力较弱，也更容易受到太阳风和高能粒子的影响，因此常被描述为寒冷而干燥的环境。",
+        "score": 0.9444444444444444,
+        "rank": 1,
+        "source": "nasa",
+        "source_name": "nasa",
+        "source_role": "primary",
+        "origin": "html_fallback",
+        "source_title": "火星",
+        "schema_version": "nasa_shadow_ready_v1"
+      },
+      "metadata_complete": true,
+      "source_filter_failed": false,
+      "inferred_boundary_break": false,
+      "fallback_exact_match": true,
+      "fallback_top_k_hit": true,
+      "consistency_match": true,
+      "failure_category": null,
+      "expected_failure_if_any": null
+    },
+    {
+      "id": "nasa_unit_atmosphere_percent_co2",
+      "category": "unit_normalization",
+      "query_kind": "narrative",
+      "query": "火星二氧化碳约占多少百分比",
+      "source_schema_version": "nasa_shadow_ready_v1",
+      "expected_path": "fallback",
+      "actual_path": "fallback",
+      "allowed_final_sources": [
+        "fallback"
+      ],
+      "expected_result": {
+        "page_title": "火星",
+        "section_any_of": [
+          "大气"
+        ]
+      },
+      "expected_page_title": "火星",
+      "expected_section_any_of": [
+        "大气"
+      ],
+      "returned_result": {
+        "page_title": "火星",
+        "section": "大气",
+        "content": "根据 NASA Mars Fact Sheet，火星大气非常稀薄，主要成分是二氧化碳，约占 95.32%，另含氮气约 2.7%、氩气约 1.6%，以及微量氧气、一氧化碳和水蒸气。\n稀薄的大气意味着火星表面气压远低于地球，保温能力较弱，也更容易受到太阳风和高能粒子的影响，因此常被描述为寒冷而干燥的环境。",
+        "score": 0.9111111111111111,
+        "rank": 1,
+        "source": "nasa",
+        "source_name": "nasa",
+        "source_role": "primary",
+        "origin": "html_fallback",
+        "source_title": "火星",
+        "schema_version": "nasa_shadow_ready_v1"
+      },
+      "top_k_results": [
+        {
+          "page_title": "火星",
+          "section": "大气",
+          "content": "根据 NASA Mars Fact Sheet，火星大气非常稀薄，主要成分是二氧化碳，约占 95.32%，另含氮气约 2.7%、氩气约 1.6%，以及微量氧气、一氧化碳和水蒸气。\n稀薄的大气意味着火星表面气压远低于地球，保温能力较弱，也更容易受到太阳风和高能粒子的影响，因此常被描述为寒冷而干燥的环境。",
+          "score": 0.9111111111111111,
+          "rank": 1,
+          "source": "nasa",
+          "source_name": "nasa",
+          "source_role": "primary",
+          "origin": "html_fallback",
+          "source_title": "火星",
+          "schema_version": "nasa_shadow_ready_v1"
+        }
+      ],
+      "fallback_results": [
+        {
+          "page_title": "火星",
+          "section": "大气",
+          "content": "根据 NASA Mars Fact Sheet，火星大气非常稀薄，主要成分是二氧化碳，约占 95.32%，另含氮气约 2.7%、氩气约 1.6%，以及微量氧气、一氧化碳和水蒸气。\n稀薄的大气意味着火星表面气压远低于地球，保温能力较弱，也更容易受到太阳风和高能粒子的影响，因此常被描述为寒冷而干燥的环境。",
+          "score": 0.9111111111111111,
+          "rank": 1,
+          "source": "nasa",
+          "source_name": "nasa",
+          "source_role": "primary",
+          "origin": "html_fallback",
+          "source_title": "火星",
+          "schema_version": "nasa_shadow_ready_v1"
+        }
+      ],
+      "exact_match": true,
+      "top_k_hit": true,
+      "expected_top_k_hit": true,
+      "top_k_expectation_met": true,
+      "path_correct": true,
+      "allowed_final_source_ok": true,
+      "pass": true,
+      "query_schema_ok": true,
+      "query_explainability_degraded": false,
+      "explainability_status": "ok",
+      "source_metadata": {
+        "page_title": "火星",
+        "section": "大气",
+        "content": "根据 NASA Mars Fact Sheet，火星大气非常稀薄，主要成分是二氧化碳，约占 95.32%，另含氮气约 2.7%、氩气约 1.6%，以及微量氧气、一氧化碳和水蒸气。\n稀薄的大气意味着火星表面气压远低于地球，保温能力较弱，也更容易受到太阳风和高能粒子的影响，因此常被描述为寒冷而干燥的环境。",
+        "score": 0.9111111111111111,
+        "rank": 1,
+        "source": "nasa",
+        "source_name": "nasa",
+        "source_role": "primary",
+        "origin": "html_fallback",
+        "source_title": "火星",
+        "schema_version": "nasa_shadow_ready_v1"
+      },
+      "metadata_complete": true,
+      "source_filter_failed": false,
+      "inferred_boundary_break": false,
+      "fallback_exact_match": true,
+      "fallback_top_k_hit": true,
+      "consistency_match": true,
+      "failure_category": null,
+      "expected_failure_if_any": null
+    },
+    {
+      "id": "nasa_unit_atmosphere_percent_nitrogen",
+      "category": "unit_normalization",
+      "query_kind": "narrative",
+      "query": "火星氮气约 2.7%",
+      "source_schema_version": "nasa_shadow_ready_v1",
+      "expected_path": "fallback",
+      "actual_path": "fallback",
+      "allowed_final_sources": [
+        "fallback"
+      ],
+      "expected_result": {
+        "page_title": "火星",
+        "section_any_of": [
+          "大气"
+        ]
+      },
+      "expected_page_title": "火星",
+      "expected_section_any_of": [
+        "大气"
+      ],
+      "returned_result": {
+        "page_title": "火星",
+        "section": "大气",
+        "content": "根据 NASA Mars Fact Sheet，火星大气非常稀薄，主要成分是二氧化碳，约占 95.32%，另含氮气约 2.7%、氩气约 1.6%，以及微量氧气、一氧化碳和水蒸气。\n稀薄的大气意味着火星表面气压远低于地球，保温能力较弱，也更容易受到太阳风和高能粒子的影响，因此常被描述为寒冷而干燥的环境。",
+        "score": 0.9777777777777777,
+        "rank": 1,
+        "source": "nasa",
+        "source_name": "nasa",
+        "source_role": "primary",
+        "origin": "html_fallback",
+        "source_title": "火星",
+        "schema_version": "nasa_shadow_ready_v1"
+      },
+      "top_k_results": [
+        {
+          "page_title": "火星",
+          "section": "大气",
+          "content": "根据 NASA Mars Fact Sheet，火星大气非常稀薄，主要成分是二氧化碳，约占 95.32%，另含氮气约 2.7%、氩气约 1.6%，以及微量氧气、一氧化碳和水蒸气。\n稀薄的大气意味着火星表面气压远低于地球，保温能力较弱，也更容易受到太阳风和高能粒子的影响，因此常被描述为寒冷而干燥的环境。",
+          "score": 0.9777777777777777,
+          "rank": 1,
+          "source": "nasa",
+          "source_name": "nasa",
+          "source_role": "primary",
+          "origin": "html_fallback",
+          "source_title": "火星",
+          "schema_version": "nasa_shadow_ready_v1"
+        }
+      ],
+      "fallback_results": [
+        {
+          "page_title": "火星",
+          "section": "大气",
+          "content": "根据 NASA Mars Fact Sheet，火星大气非常稀薄，主要成分是二氧化碳，约占 95.32%，另含氮气约 2.7%、氩气约 1.6%，以及微量氧气、一氧化碳和水蒸气。\n稀薄的大气意味着火星表面气压远低于地球，保温能力较弱，也更容易受到太阳风和高能粒子的影响，因此常被描述为寒冷而干燥的环境。",
+          "score": 0.9777777777777777,
+          "rank": 1,
+          "source": "nasa",
+          "source_name": "nasa",
+          "source_role": "primary",
+          "origin": "html_fallback",
+          "source_title": "火星",
+          "schema_version": "nasa_shadow_ready_v1"
+        }
+      ],
+      "exact_match": true,
+      "top_k_hit": true,
+      "expected_top_k_hit": true,
+      "top_k_expectation_met": true,
+      "path_correct": true,
+      "allowed_final_source_ok": true,
+      "pass": true,
+      "query_schema_ok": true,
+      "query_explainability_degraded": false,
+      "explainability_status": "ok",
+      "source_metadata": {
+        "page_title": "火星",
+        "section": "大气",
+        "content": "根据 NASA Mars Fact Sheet，火星大气非常稀薄，主要成分是二氧化碳，约占 95.32%，另含氮气约 2.7%、氩气约 1.6%，以及微量氧气、一氧化碳和水蒸气。\n稀薄的大气意味着火星表面气压远低于地球，保温能力较弱，也更容易受到太阳风和高能粒子的影响，因此常被描述为寒冷而干燥的环境。",
+        "score": 0.9777777777777777,
+        "rank": 1,
+        "source": "nasa",
+        "source_name": "nasa",
+        "source_role": "primary",
+        "origin": "html_fallback",
+        "source_title": "火星",
+        "schema_version": "nasa_shadow_ready_v1"
+      },
+      "metadata_complete": true,
+      "source_filter_failed": false,
+      "inferred_boundary_break": false,
+      "fallback_exact_match": true,
+      "fallback_top_k_hit": true,
+      "consistency_match": true,
+      "failure_category": null,
+      "expected_failure_if_any": null
+    },
+    {
+      "id": "nasa_conflict_mars_co2",
+      "category": "conflict_case",
+      "query_kind": "narrative",
+      "query": "火星大气主要是氧气还是二氧化碳",
+      "source_schema_version": "nasa_shadow_ready_v1",
+      "expected_path": "fallback",
+      "actual_path": "fallback",
+      "allowed_final_sources": [
+        "fallback"
+      ],
+      "expected_result": {
+        "page_title": "火星",
+        "section_any_of": [
+          "大气"
+        ]
+      },
+      "expected_page_title": "火星",
+      "expected_section_any_of": [
+        "大气"
+      ],
+      "returned_result": {
+        "page_title": "火星",
+        "section": "大气",
+        "content": "根据 NASA Mars Fact Sheet，火星大气非常稀薄，主要成分是二氧化碳，约占 95.32%，另含氮气约 2.7%、氩气约 1.6%，以及微量氧气、一氧化碳和水蒸气。\n稀薄的大气意味着火星表面气压远低于地球，保温能力较弱，也更容易受到太阳风和高能粒子的影响，因此常被描述为寒冷而干燥的环境。",
+        "score": 1.0,
+        "rank": 1,
+        "source": "nasa",
+        "source_name": "nasa",
+        "source_role": "primary",
+        "origin": "html_fallback",
+        "source_title": "火星",
+        "schema_version": "nasa_shadow_ready_v1"
+      },
+      "top_k_results": [
+        {
+          "page_title": "火星",
+          "section": "大气",
+          "content": "根据 NASA Mars Fact Sheet，火星大气非常稀薄，主要成分是二氧化碳，约占 95.32%，另含氮气约 2.7%、氩气约 1.6%，以及微量氧气、一氧化碳和水蒸气。\n稀薄的大气意味着火星表面气压远低于地球，保温能力较弱，也更容易受到太阳风和高能粒子的影响，因此常被描述为寒冷而干燥的环境。",
+          "score": 1.0,
+          "rank": 1,
+          "source": "nasa",
+          "source_name": "nasa",
+          "source_role": "primary",
+          "origin": "html_fallback",
+          "source_title": "火星",
+          "schema_version": "nasa_shadow_ready_v1"
+        }
+      ],
+      "fallback_results": [
+        {
+          "page_title": "火星",
+          "section": "大气",
+          "content": "根据 NASA Mars Fact Sheet，火星大气非常稀薄，主要成分是二氧化碳，约占 95.32%，另含氮气约 2.7%、氩气约 1.6%，以及微量氧气、一氧化碳和水蒸气。\n稀薄的大气意味着火星表面气压远低于地球，保温能力较弱，也更容易受到太阳风和高能粒子的影响，因此常被描述为寒冷而干燥的环境。",
+          "score": 1.0,
+          "rank": 1,
+          "source": "nasa",
+          "source_name": "nasa",
+          "source_role": "primary",
+          "origin": "html_fallback",
+          "source_title": "火星",
+          "schema_version": "nasa_shadow_ready_v1"
+        }
+      ],
+      "exact_match": true,
+      "top_k_hit": true,
+      "expected_top_k_hit": true,
+      "top_k_expectation_met": true,
+      "path_correct": true,
+      "allowed_final_source_ok": true,
+      "pass": true,
+      "query_schema_ok": true,
+      "query_explainability_degraded": false,
+      "explainability_status": "ok",
+      "source_metadata": {
+        "page_title": "火星",
+        "section": "大气",
+        "content": "根据 NASA Mars Fact Sheet，火星大气非常稀薄，主要成分是二氧化碳，约占 95.32%，另含氮气约 2.7%、氩气约 1.6%，以及微量氧气、一氧化碳和水蒸气。\n稀薄的大气意味着火星表面气压远低于地球，保温能力较弱，也更容易受到太阳风和高能粒子的影响，因此常被描述为寒冷而干燥的环境。",
+        "score": 1.0,
+        "rank": 1,
+        "source": "nasa",
+        "source_name": "nasa",
+        "source_role": "primary",
+        "origin": "html_fallback",
+        "source_title": "火星",
+        "schema_version": "nasa_shadow_ready_v1"
+      },
+      "metadata_complete": true,
+      "source_filter_failed": false,
+      "inferred_boundary_break": false,
+      "fallback_exact_match": true,
+      "fallback_top_k_hit": true,
+      "consistency_match": true,
+      "failure_category": null,
+      "expected_failure_if_any": null
+    },
+    {
+      "id": "nasa_conflict_no_multisource_pluto",
+      "category": "conflict_case",
+      "query_kind": "structured",
+      "query": "NASA shadow 里冥王星属于柯伊伯带吗",
+      "source_schema_version": "nasa_shadow_ready_v1",
+      "expected_path": "fallback",
+      "actual_path": "fallback",
+      "allowed_final_sources": [
+        "fallback"
+      ],
+      "expected_result": {
+        "empty": true
+      },
+      "normalized_expected_value": null,
+      "normalized_returned_value": null,
+      "returned_result": null,
+      "top_k_results": [],
+      "graph_only_results": [],
+      "fallback_results": [],
+      "exact_match": true,
+      "top_k_hit": false,
+      "expected_top_k_hit": false,
+      "top_k_expectation_met": true,
+      "path_correct": true,
+      "allowed_final_source_ok": true,
+      "pass": true,
+      "query_schema_ok": true,
+      "query_explainability_degraded": false,
+      "explainability_status": "ok",
+      "source_metadata": null,
+      "metadata_complete": true,
+      "source_filter_failed": false,
+      "inferred_boundary_break": false,
+      "fallback_exact_match": true,
+      "fallback_top_k_hit": true,
+      "consistency_match": true,
+      "failure_category": null,
+      "expected_failure_if_any": null
+    },
+    {
+      "id": "nasa_conflict_no_wikidata_mass",
+      "category": "conflict_case",
+      "query_kind": "structured",
+      "query": "NASA shadow 用 Wikidata 火星质量回答吗",
+      "source_schema_version": "nasa_shadow_ready_v1",
+      "expected_path": "fallback",
+      "actual_path": "fallback",
+      "allowed_final_sources": [
+        "fallback"
+      ],
+      "expected_result": {
+        "empty": true
+      },
+      "normalized_expected_value": null,
+      "normalized_returned_value": null,
+      "returned_result": null,
+      "top_k_results": [],
+      "graph_only_results": [],
+      "fallback_results": [],
+      "exact_match": true,
+      "top_k_hit": false,
+      "expected_top_k_hit": false,
+      "top_k_expectation_met": true,
+      "path_correct": true,
+      "allowed_final_source_ok": true,
+      "pass": true,
+      "query_schema_ok": true,
+      "query_explainability_degraded": false,
+      "explainability_status": "ok",
+      "source_metadata": null,
+      "metadata_complete": true,
+      "source_filter_failed": false,
+      "inferred_boundary_break": false,
+      "fallback_exact_match": true,
+      "fallback_top_k_hit": true,
+      "consistency_match": true,
+      "failure_category": null,
+      "expected_failure_if_any": null
+    }
+  ]
+}

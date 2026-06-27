@@ -1,0 +1,32 @@
+{
+  "version": "esa_smoke_fixture_v1",
+  "source_name": "esa",
+  "note": "Small adapter smoke fixture; not a production ESA knowledge source.",
+  "records": [
+    {
+      "title": "火星快车号",
+      "triples": [
+        {
+          "subject": "火星快车号",
+          "relation": "ORBITS",
+          "object": "火星",
+          "pattern": "esa_smoke_fixture",
+          "raw": "ESA smoke fixture: Mars Express orbits Mars."
+        }
+      ],
+      "narratives": [
+        {
+          "page_title": "火星快车号",
+          "section": "任务",
+          "content": "ESA smoke fixture 仅用于验证新增来源可以复用 SourceAdapter 物化流程；火星快车号被记录为围绕火星运行的任务样例。",
+          "keywords": [
+            "ESA",
+            "火星快车号",
+            "火星",
+            "任务"
+          ]
+        }
+      ]
+    }
+  ]
+}

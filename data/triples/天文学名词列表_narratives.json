@@ -1,0 +1,49 @@
+[
+  {
+    "page_title": "天文学名词列表",
+    "section": "天文学著作",
+    "chunk_index": 0,
+    "content": "以下列举的是知名度较高的天文学或相关著作。\n大众天文学 天文学大成 自然哲学的数学原理 Burnham's Celestial Handbook Star names:Their lore and meaning NGC IC星表 亮星星表 HD星表 依巴谷星表 甘石星经",
+    "path": "天文学人物、事件和组织 > 天文学著作",
+    "keywords": [
+      "星表",
+      "以下列举的是知名度较高的天文学或相关著作",
+      "大众天文学",
+      "天文学大成",
+      "自然哲学的数学原理",
+      "亮星星表",
+      "依巴谷星表",
+      "甘石星经"
+    ],
+    "chunk_id": "884cfebb325d",
+    "source": "zh_wikipedia",
+    "source_role": "primary",
+    "origin": "html_fallback",
+    "type": "embedding_chunk",
+    "source_title": "天文学名词列表",
+    "source_name": "zh_wikipedia",
+    "schema_version": "2.0"
+  },
+  {
+    "page_title": "天文学名词列表",
+    "section": "机构",
+    "chunk_index": 1,
+    "content": "各国航天机构 其他著名的机构 NewPP limit report Parsed by mw‐web.eqiad.main‐6c46576695‐lmggn Cached time: 20260618135834 Cache expiry: 2592000 Reduced expiry: false Complications: [prevent‐selective‐update, show‐toc] CPU time usage: 1.108 seconds Real time usage: 1.424 seconds Preprocessor visited node count: 10340/1000000 Revision size: 4602/2097152 bytes Post‐expand include size: 1324638/2097152 bytes Template argument size: 20491/2097152 bytes Highest expansion depth: 16/100 Expensive parser function count: 3/500 Unstrip recursion depth: 0/20 Unstrip post‐expand size: 231468/5000000 bytes Lua time usage: 0.504/10.000 seconds Lua memory usage: 4502846/52428800 bytes Number of Wikibase entities loaded: 1/500 Transclusion expansion time report (%,ms,calls,template) 100.00% 937.956 1 -total 89.15% 836.146 55 Template:Navbox 22.84% 214.217 95 Template:Link-en 14.12% 132.421 1 Template:火星任务 12.90% 121.043 60 Template:Le 11.27% 105.669 16 Template:Navbox_subgroup 9.76% 91.534 46 Template:Tsl 9.42% 88.346 1 Template:美国航空航天局太空计划 8.82% 82.714 1 Template:月球任务 8.03% 75.319 1 Template:Multiple_issues Render ID cba4ea33-6b1d-11f1-a161-972a597ff640 Saved in parser cache with key zhwiki:pcache:1245639:|#|:idhash:canonical!zh and timestamp 20260618135834 and revision id 90422579. Rendering was triggered because: page_view",
+    "path": "天文学人物、事件和组织 > 机构",
+    "keywords": [
+      "各国航天机构",
+      "其他著名的机构",
+      "火星任务",
+      "美国航空航天局太空计划",
+      "月球任务"
+    ],
+    "chunk_id": "29756524476a",
+    "source": "zh_wikipedia",
+    "source_role": "primary",
+    "origin": "html_fallback",
+    "type": "embedding_chunk",
+    "source_title": "天文学名词列表",
+    "source_name": "zh_wikipedia",
+    "schema_version": "2.0"
+  }
+]

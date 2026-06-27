@@ -1,0 +1,98 @@
+[
+  {
+    "page_title": "金牛T星",
+    "section": "概要",
+    "chunk_index": 0,
+    "content": "金牛T星 （ T Tauri star, TTS ）是变星的一种，其年龄通常不超过约一千万年。\n该类恒星因其原型——位于 金牛座分子云 的年轻恒星 金牛座T 星（ T Tauri ）而得名。\n它们都在邻近 分子云 的地方被发现，例如 NGC 1555 ，并且根据光学上的观测被确认为一颗有著强烈的 色球谱线 的 变星 。\n金牛T星是一种 主序前星 ，正在沿着 林轨迹 （ Hayashi track ）收缩，向 主序星 演化。\n林轨迹是一条描述质量小于约3个 太阳质量 的年轻恒星在前主序阶段的光度-温度关系曲线。\n林轨迹阶段结束的标志，是当质量大于约0.5个太阳质量的恒星内部开始形成 辐射层 ，或更小质量的恒星开始在主序阶段发生 核聚变 。",
+    "path": "概要",
+    "keywords": [
+      "金牛",
+      "是变星的一种",
+      "其年龄通常不超过约一千万年",
+      "该类恒星因其原型",
+      "位于",
+      "金牛座分子云",
+      "的年轻恒星",
+      "金牛座"
+    ],
+    "chunk_id": "bb6189db05eb",
+    "source": "zh_wikipedia",
+    "source_role": "primary",
+    "origin": "html_fallback",
+    "type": "embedding_chunk",
+    "source_title": "金牛T星",
+    "source_name": "zh_wikipedia",
+    "schema_version": "2.0"
+  },
+  {
+    "page_title": "金牛T星",
+    "section": "特征",
+    "chunk_index": 1,
+    "content": "金牛T星是在 前主序带 ——F、G、K、M 光谱类型 ——能见到的最年轻恒星（质量小于2 太阳质量 ），表面温度非常接近质量相同的同类型 主序星 ，但是因为半径较大而显得较为明亮。它们的中心温度仍太低，以至于还不足以引发 氢融合 。相反以收缩释放的重力势能朝向主序带移动，大约在一亿年后可以成为主序星。它们典型的自转周期在1至12天之间，与太阳一个月的自转周期相比是非常活跃和多变的。有证据显示有巨大的 星斑 覆盖在其表面，并且有强烈和易变的 X射线 和 电波 辐射（强度约为太阳的1,000倍），其中许多还有强烈的 恒星风 。造成光度变化的另一个原因是环绕在金牛T星周围的团块（ 原行星 和 微行星 ）。它们的光谱显示有比太阳和其他主序星更高的 锂 丰度，而锂在2,500,000K的温度上就会被毁坏。从对53颗金牛T星的研究，发现锂的损耗与大小有强烈的关系，认为 锂燃烧 是由 PP链 完成的，当在 前主序带 的最后阶段会有强烈的对流和不稳定阶段，之后的 林收缩 可能是金牛T星主要的能量来源之一。快速的自转有助于将锂混合和输送至更深处，并且在那里被毁坏。因为 角动量的守恒 ，金牛T星通常随著年龄，经由收缩而加快自转速度。这导致锂的损耗也随著年龄增长而增加，锂的燃烧也会使温度和质量上升，持续大约一亿年上下。",
+    "path": "特征",
+    "keywords": [
+      "金牛",
+      "前主序带",
+      "星是在",
+      "光谱类型",
+      "能见到的最年轻恒星",
+      "质量小于",
+      "太阳质量",
+      "表面温度非常接近质量相同的同类型"
+    ],
+    "chunk_id": "c3d36d9572c6",
+    "source": "zh_wikipedia",
+    "source_role": "primary",
+    "origin": "html_fallback",
+    "type": "embedding_chunk",
+    "source_title": "金牛T星",
+    "source_name": "zh_wikipedia",
+    "schema_version": "2.0"
+  },
+  {
+    "page_title": "金牛T星",
+    "section": "特征 (2)",
+    "chunk_index": 2,
+    "content": "在P-P链中锂的燃烧如下式： p + + 6 L i → 7 B e {\\displaystyle p^{+}+{}^{6}Li\\ \\rightarrow \\ {}^{7}Be} 7 B e + e − → 7 L i {\\displaystyle {}^{7}Be+e^{-}\\ \\rightarrow \\ {}^{7}Li} + ν p + + 7 L i → 8 B e {\\displaystyle p^{+}+{}^{7}Li\\ \\rightarrow \\ {}^{8}Be} (unstable) 8 B e → 4 H e + 4 H e + energy {\\displaystyle {}^{8}Be\\ \\rightarrow \\ {}^{4}He+{}^{4}He+{\\mbox{energy}}} 这种反应在质量低于60个木星质量时不会发生。因此，锂的消耗程度可以用来计算恒星的年龄。",
+    "path": "特征",
+    "keywords": [
+      "链中锂的燃烧如下式",
+      "这种反应在质量低于",
+      "个木星质量时不会发生",
+      "锂的消耗程度可以用来计算恒星的年龄"
+    ],
+    "chunk_id": "61cff5d76dd3",
+    "source": "zh_wikipedia",
+    "source_role": "primary",
+    "origin": "html_fallback",
+    "type": "embedding_chunk",
+    "source_title": "金牛T星",
+    "source_name": "zh_wikipedia",
+    "schema_version": "2.0"
+  },
+  {
+    "page_title": "金牛T星",
+    "section": "类型",
+    "chunk_index": 3,
+    "content": "金牛T星分为有以下几个类型： 经典金牛T星（ Classical T Tauri star , CTTS） 弱线金牛T星（ Weak-line T Tauri star , WTTS） 裸金牛T星（ Naked T Tauri star , NTTS），是WTTS的一个子类型。\n在 猎户座大星云 的 原行星盘 。\n组略估计大约有一半的金牛T星有 星周盘 ，被称为 原行星盘 ，因为它们可能与太阳系的 行星系统 的祖先类似。\n估计经过一千万年星周盘就会消散。\n许多的金牛T星都是 联星 。\n在它们生命的不同阶段中，它们都可以称为 初期恒星体 （ Young Stellar Objects ，YSOs）。\n金牛T星的 阿尔文波 的活跃 磁场 和强烈 恒星风 被认为会是将 角动量 能从恒星传送到 原行星盘 的一种途径。\n在一个假设的 太阳系 的金牛T星阶段中，角动量由收缩中的 太阳 转移到原行星盘，如此最后才能产生行星。\n在2至8太阳质量、A和B 光谱类型 范围内类似金牛T星的 主序前星 称为 赫比格Ae/Be星 。\n质量更重的主序前星，因为发展的太快速了，还没有被观测到：当它们能被看见时（拱星盘周围的气体和云气消散），核心的 氢 已经在燃烧中，因此已经是一颗 主序星 了。",
+    "path": "类型",
+    "keywords": [
+      "原行星盘",
+      "金牛",
+      "星的",
+      "星分为有以下几个类型",
+      "经典金牛",
+      "弱线金牛",
+      "裸金牛",
+      "的一个子类型"
+    ],
+    "chunk_id": "3a7a8369c497",
+    "source": "zh_wikipedia",
+    "source_role": "primary",
+    "origin": "html_fallback",
+    "type": "embedding_chunk",
+    "source_title": "金牛T星",
+    "source_name": "zh_wikipedia",
+    "schema_version": "2.0"
+  }
+]

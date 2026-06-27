@@ -1,0 +1,102 @@
+[
+  {
+    "page_title": "最小质量恒星列表",
+    "section": "概要",
+    "chunk_index": 0,
+    "content": "这是一份有关 最小质量恒星的列表 ，依 木星 质量 与 太阳质量 的多寡来依序排列。\n恒星 质量是恒星最重要的一个要素。\n质量加上 化学 成分能确定一颗恒星的 光度 、实际上的大小和最后的命运。\n列在表上的 恒星 质量都小于1倍 太阳质量 ，包括 棕矮星 与 红矮星 。\n研究显示大于13倍木星质量的天体会发生 氘 核聚变 ，而大于65倍木星质量的天体会产生 锂 聚变 ，因此恒星的质量不会低于13倍木星质量 。\n棕矮星 是类恒星天体的一种，它们是所谓「失败的恒星」（Failed Star），由于质量不足，不能像正常恒星那样通过 氢 核聚变维持光度，无法成为 主序星 。\n但它们的内部及表面均呈对流状态，不同的化学物质并不会在内部分层存在。\n研究表明褐矮星为处于13倍木星质量与75－80倍木星质量之间的天体。",
+    "path": "概要",
+    "keywords": [
+      "太阳质量",
+      "恒星",
+      "棕矮星",
+      "这是一份有关",
+      "最小质量恒星的列表",
+      "木星",
+      "质量",
+      "的多寡来依序排列"
+    ],
+    "chunk_id": "c855cce36cea",
+    "source": "zh_wikipedia",
+    "source_role": "primary",
+    "origin": "html_fallback",
+    "type": "embedding_chunk",
+    "source_title": "最小质量恒星列表",
+    "source_name": "zh_wikipedia",
+    "schema_version": "2.0"
+  },
+  {
+    "page_title": "最小质量恒星列表",
+    "section": "棕矮星",
+    "chunk_index": 1,
+    "content": "棕矮星 （ Brown dwarf ）是一种小质量恒星。\n它们就是「失败的恒星」。\n由于质量不足，不能像其他恒星通过氢核聚变维持光度，因此无法成为主序星，并导致其质量较低。\n棕矮星的质量为13倍至80倍木星质量，即太阳质量的0.01至0.08倍。",
+    "path": "小质量恒星的种类 > 棕矮星",
+    "keywords": [
+      "棕矮星",
+      "是一种小质量恒星",
+      "它们就是",
+      "失败的恒星",
+      "由于质量不足",
+      "不能像其他恒星通过氢核聚变维持光度",
+      "因此无法成为主序星",
+      "并导致其质量较低"
+    ],
+    "chunk_id": "a8586acb01e4",
+    "source": "zh_wikipedia",
+    "source_role": "primary",
+    "origin": "html_fallback",
+    "type": "embedding_chunk",
+    "source_title": "最小质量恒星列表",
+    "source_name": "zh_wikipedia",
+    "schema_version": "2.0"
+  },
+  {
+    "page_title": "最小质量恒星列表",
+    "section": "列表",
+    "chunk_index": 2,
+    "content": "太阳（左上）、低质量的恒星（左中）、棕矮星（右中）、木星（右下） 棕矮星（左）与土星（右）的比较 OGLE-TR-122（中）与八大行星的比较 格利泽229 A与B的照片，该系统距离地球约19 光年 。\n2M1207 与2M1207b的照片，该系统距离地球约173 光年 。",
+    "path": "列表",
+    "keywords": [
+      "棕矮星",
+      "的照片",
+      "该系统距离地球约",
+      "光年",
+      "太阳",
+      "左上",
+      "低质量的恒星",
+      "左中"
+    ],
+    "chunk_id": "dd15ed4053c6",
+    "source": "zh_wikipedia",
+    "source_role": "primary",
+    "origin": "html_fallback",
+    "type": "embedding_chunk",
+    "source_title": "最小质量恒星列表",
+    "source_name": "zh_wikipedia",
+    "schema_version": "2.0"
+  },
+  {
+    "page_title": "最小质量恒星列表",
+    "section": "堰蜓座110913-773444",
+    "chunk_index": 3,
+    "content": "蝘蜓座110913-773444 比之前所知最小的棕矮星 OTS 44 还要小，质量祇有8倍木星质量，甚至比一些 太阳系外行星 还小。\n科学家对这个天体的分类还没有取得共识，所以堰蜓座110913-773444可能是一颗 次棕矮星 或是一颗 流浪行星 。",
+    "path": "堰蜓座110913-773444",
+    "keywords": [
+      "蝘蜓座",
+      "比之前所知最小的棕矮星",
+      "还要小",
+      "质量祇有",
+      "倍木星质量",
+      "甚至比一些",
+      "太阳系外行星",
+      "还小"
+    ],
+    "chunk_id": "22a3af3b6829",
+    "source": "zh_wikipedia",
+    "source_role": "primary",
+    "origin": "html_fallback",
+    "type": "embedding_chunk",
+    "source_title": "最小质量恒星列表",
+    "source_name": "zh_wikipedia",
+    "schema_version": "2.0"
+  }
+]

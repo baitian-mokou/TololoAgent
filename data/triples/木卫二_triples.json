@@ -1,0 +1,30 @@
+[
+  {
+    "subject": "木卫二",
+    "relation": "HAS_RADIUS",
+    "object": "0.5 km",
+    "pattern": "infobox",
+    "raw": "平均半径: 7006156080000000000♠ 1 560 .8 ± 0.5 km （0.245 地球 ）",
+    "source": "zh_wikipedia",
+    "source_role": "primary",
+    "origin": "html_fallback",
+    "type": "triple_candidate",
+    "source_title": "木卫二",
+    "source_name": "zh_wikipedia",
+    "schema_version": "2.0"
+  },
+  {
+    "subject": "木卫二",
+    "relation": "HAS_MASS",
+    "object": "0.000 013 × 10 22 kg",
+    "pattern": "infobox",
+    "raw": "质量: 7022479984400000000♠ (4.799 844 ± 0.000 013 ) × 10 22 kg （0.008地球）",
+    "source": "zh_wikipedia",
+    "source_role": "primary",
+    "origin": "html_fallback",
+    "type": "triple_candidate",
+    "source_title": "木卫二",
+    "source_name": "zh_wikipedia",
+    "schema_version": "2.0"
+  }
+]

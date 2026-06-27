@@ -1,0 +1,16 @@
+[
+  {
+    "subject": "火卫一",
+    "relation": "ORBITS",
+    "object": "火星",
+    "pattern": "rule",
+    "raw": "火卫一是火星的天然卫星",
+    "source": "nasa",
+    "source_name": "nasa",
+    "source_role": "primary",
+    "origin": "html_fallback",
+    "type": "triple_candidate",
+    "schema_version": "nasa_shadow_ready_v1",
+    "source_title": "火卫一"
+  }
+]

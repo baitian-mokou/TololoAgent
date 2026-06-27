@@ -1,0 +1,27 @@
+[
+  {
+    "page_title": "铅星",
+    "section": "概要",
+    "chunk_index": 0,
+    "content": "铅星 是一颗低 金属量 的 恒星 ，和其他 S-过程 产生的恒星相比，铅星的 铅 和 铋 丰度较高 。\n原本铅星的存在只是AGB星核合成过程中模型的预测。\nvan ECK等利用欧洲南方天文台发现有五颗星的铅丰度相对于其他重元素超丰，从而首次从观测上证实铅星的存在。",
+    "path": "概要",
+    "keywords": [
+      "铅星",
+      "是一颗低",
+      "金属量",
+      "恒星",
+      "和其他",
+      "过程",
+      "产生的恒星相比",
+      "铅星的"
+    ],
+    "chunk_id": "1f328da25dec",
+    "source": "zh_wikipedia",
+    "source_role": "primary",
+    "origin": "html_fallback",
+    "type": "embedding_chunk",
+    "source_title": "铅星",
+    "source_name": "zh_wikipedia",
+    "schema_version": "2.0"
+  }
+]

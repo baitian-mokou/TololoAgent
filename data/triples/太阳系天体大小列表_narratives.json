@@ -1,0 +1,27 @@
+[
+  {
+    "page_title": "太阳系天体大小列表",
+    "section": "概要",
+    "chunk_index": 0,
+    "content": "这是一张以半径由大到小排列的 太阳系天体半径列表 。\n太阳、木星、土星在这张表里使用平均 半径 测量容积。\n大部分的球形 天体 如大 行星 ，使用赤道半径。\n对于不规则天体，使用三个方向的轴进行测量。\n表格的顺序与 太阳系天体质量列表 是不同的因为有些 天体 密度较大。\n如 天王星 比 海王星 大但质量却比海王星小， 木卫三 和 土卫六 比起 水星 要大的多但质量却不及水星的一半。",
+    "path": "概要",
+    "keywords": [
+      "天体",
+      "这是一张以半径由大到小排列的",
+      "太阳系天体半径列表",
+      "太阳",
+      "木星",
+      "土星在这张表里使用平均",
+      "半径",
+      "测量容积"
+    ],
+    "chunk_id": "fb587640badc",
+    "source": "zh_wikipedia",
+    "source_role": "primary",
+    "origin": "html_fallback",
+    "type": "embedding_chunk",
+    "source_title": "太阳系天体大小列表",
+    "source_name": "zh_wikipedia",
+    "schema_version": "2.0"
+  }
+]

@@ -1,0 +1,40 @@
+settings.local.json
+error.log
+__pycache__/
+*.pyc
+
+# Python / test caches
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+*.pyo
+*.pyd
+
+# Local environments
+venv/
+.venv/
+env/
+
+# Local model and runtime artifacts
+models/
+*.pid
+*.log
+*.out.txt
+*.err.txt
+
+# Local databases and generated vector indexes
+data/chroma_db/
+data/chroma_db.broken.*/
+*.sqlite
+*.sqlite3
+*.db
+*.bin
+*.pickle
+
+# Temporary and backup files
+*.bak
+tmp_*.json
+evaluation/**/tmp_*.json
+
+# Local-only settings/secrets
+settings.local.json

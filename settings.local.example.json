@@ -1,0 +1,8 @@
+{
+  "connect": {
+    "neo4j_password": "${NEO4J_PASSWORD}"
+  },
+  "llm_source": {
+    "api_key": "${TOLOLO_REMOTE_API_KEY}"
+  }
+}

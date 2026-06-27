@@ -1,0 +1,52 @@
+[
+  {
+    "page_title": "棒旋星系",
+    "section": "概要",
+    "chunk_index": 0,
+    "content": "NGC 1300 ，几乎以正面朝向的星系。\n哈伯太空望远镜 的影像。\n美国NASA哈伯太空望远镜拍摄的棒状旋转星云 NGC 1672 。\n星系 UGC 12158 的照片。\n这是被认为是在外观上最类似于银河系的星系。\n棒旋星系 （英语： Barred spiral galaxy ），或称为 棒状旋星系 ，指的是中间具有由 恒星 聚集组成短棒形状的 螺旋星系 。\n大约三分之二的螺旋星系是棒旋星系。\n短棒通常会影响在棒旋星系里的恒星与星际气体的运动，它也会影响 旋臂 。\n棒旋星系的 旋臂 则看似由短棒的末端涌现。\n而在普通的螺旋星系，恒星都是由核心直接涌出的。",
+    "path": "概要",
+    "keywords": [
+      "旋臂",
+      "几乎以正面朝向的星系",
+      "哈伯太空望远镜",
+      "的影像",
+      "美国",
+      "哈伯太空望远镜拍摄的棒状旋转星云",
+      "星系",
+      "的照片"
+    ],
+    "chunk_id": "6c0e0911096a",
+    "source": "zh_wikipedia",
+    "source_role": "primary",
+    "origin": "html_fallback",
+    "type": "embedding_chunk",
+    "source_title": "棒旋星系",
+    "source_name": "zh_wikipedia",
+    "schema_version": "2.0"
+  },
+  {
+    "page_title": "棒旋星系",
+    "section": "分类",
+    "chunk_index": 1,
+    "content": "棒旋星系在星系分类法以符号SB（旋臂带状）表示。\n子分类是基于螺旋臂的开合程度，分类如下： SBa型态具有紧密绑定的螺旋臂 SBc型态则是另一个极端，其螺旋臂绑定较为松散 SBb星系位于两者之间 SBm描述了稍微不规则的带状螺旋星系 SB0是带状透镜状星系 SAB表示从较弱的棒状结构两端向外延伸，又称“ 中间螺旋星系 ”或者“半棒旋星系”",
+    "path": "分类",
+    "keywords": [
+      "棒旋星系在星系分类法以符号",
+      "旋臂带状",
+      "表示",
+      "子分类是基于螺旋臂的开合程度",
+      "分类如下",
+      "型态具有紧密绑定的螺旋臂",
+      "型态则是另一个极端",
+      "其螺旋臂绑定较为松散"
+    ],
+    "chunk_id": "6496195b9dac",
+    "source": "zh_wikipedia",
+    "source_role": "primary",
+    "origin": "html_fallback",
+    "type": "embedding_chunk",
+    "source_title": "棒旋星系",
+    "source_name": "zh_wikipedia",
+    "schema_version": "2.0"
+  }
+]

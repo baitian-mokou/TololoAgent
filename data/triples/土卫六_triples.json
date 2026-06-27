@@ -1,0 +1,58 @@
+[
+  {
+    "subject": "土卫六",
+    "relation": "DISCOVERED_BY",
+    "object": "克里斯蒂安·惠更斯",
+    "pattern": "infobox",
+    "raw": "发现者: 克里斯蒂安·惠更斯",
+    "source": "zh_wikipedia",
+    "source_role": "primary",
+    "origin": "html_fallback",
+    "type": "triple_candidate",
+    "source_title": "土卫六",
+    "source_name": "zh_wikipedia",
+    "schema_version": "2.0"
+  },
+  {
+    "subject": "土卫六",
+    "relation": "HAS_RADIUS",
+    "object": "2 km",
+    "pattern": "infobox",
+    "raw": "平均半径: 7006257600000000000♠ 2576 ± 2 km (0.404倍地球半径)",
+    "source": "zh_wikipedia",
+    "source_role": "primary",
+    "origin": "html_fallback",
+    "type": "triple_candidate",
+    "source_title": "土卫六",
+    "source_name": "zh_wikipedia",
+    "schema_version": "2.0"
+  },
+  {
+    "subject": "土卫六",
+    "relation": "HAS_MASS",
+    "object": "1.3452 × 10 23 kg",
+    "pattern": "infobox",
+    "raw": "质量: 7023134520000000000♠ (1.3452 ± 0.0002) × 10 23 kg (0.0225倍地球质量)",
+    "source": "zh_wikipedia",
+    "source_role": "primary",
+    "origin": "html_fallback",
+    "type": "triple_candidate",
+    "source_title": "土卫六",
+    "source_name": "zh_wikipedia",
+    "schema_version": "2.0"
+  },
+  {
+    "subject": "土卫六",
+    "relation": "ORBITS",
+    "object": "土星最大",
+    "pattern": "rule",
+    "raw": "土卫六是土星最大的卫星",
+    "source": "zh_wikipedia",
+    "source_role": "primary",
+    "origin": "html_fallback",
+    "type": "triple_candidate",
+    "source_title": "土卫六",
+    "source_name": "zh_wikipedia",
+    "schema_version": "2.0"
+  }
+]

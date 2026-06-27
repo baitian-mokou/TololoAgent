@@ -1,0 +1,273 @@
+{
+  "source_name": "wikidata",
+  "source_schema_version": "wikidata_shadow_ready_v1",
+  "source_role": "primary",
+  "namespace_status": "shadow_only",
+  "mode": "dry-run",
+  "materialization_mode": "offline_wikidata_fixture_v1",
+  "cutover_ready": false,
+  "raw_dir": "F:\\知识表示与处理结课作业\\第二次托洛洛测试 -重大进展\\data\\raw_json\\wikidata",
+  "triples_dir": "F:\\知识表示与处理结课作业\\第二次托洛洛测试 -重大进展\\data\\triples\\wikidata",
+  "raw_files": [
+    "F:\\知识表示与处理结课作业\\第二次托洛洛测试 -重大进展\\data\\raw_json\\wikidata\\solar_system_fixture.json"
+  ],
+  "triple_files": [
+    "F:\\知识表示与处理结课作业\\第二次托洛洛测试 -重大进展\\data\\triples\\wikidata\\冥王星_triples.json",
+    "F:\\知识表示与处理结课作业\\第二次托洛洛测试 -重大进展\\data\\triples\\wikidata\\土星_triples.json",
+    "F:\\知识表示与处理结课作业\\第二次托洛洛测试 -重大进展\\data\\triples\\wikidata\\地球_triples.json",
+    "F:\\知识表示与处理结课作业\\第二次托洛洛测试 -重大进展\\data\\triples\\wikidata\\天王星_triples.json",
+    "F:\\知识表示与处理结课作业\\第二次托洛洛测试 -重大进展\\data\\triples\\wikidata\\太阳_triples.json",
+    "F:\\知识表示与处理结课作业\\第二次托洛洛测试 -重大进展\\data\\triples\\wikidata\\月球_triples.json",
+    "F:\\知识表示与处理结课作业\\第二次托洛洛测试 -重大进展\\data\\triples\\wikidata\\木卫一_triples.json",
+    "F:\\知识表示与处理结课作业\\第二次托洛洛测试 -重大进展\\data\\triples\\wikidata\\木卫三_triples.json",
+    "F:\\知识表示与处理结课作业\\第二次托洛洛测试 -重大进展\\data\\triples\\wikidata\\木卫二_triples.json",
+    "F:\\知识表示与处理结课作业\\第二次托洛洛测试 -重大进展\\data\\triples\\wikidata\\木卫四_triples.json",
+    "F:\\知识表示与处理结课作业\\第二次托洛洛测试 -重大进展\\data\\triples\\wikidata\\木星_triples.json",
+    "F:\\知识表示与处理结课作业\\第二次托洛洛测试 -重大进展\\data\\triples\\wikidata\\水星_triples.json",
+    "F:\\知识表示与处理结课作业\\第二次托洛洛测试 -重大进展\\data\\triples\\wikidata\\海王星_triples.json",
+    "F:\\知识表示与处理结课作业\\第二次托洛洛测试 -重大进展\\data\\triples\\wikidata\\火卫一_triples.json",
+    "F:\\知识表示与处理结课作业\\第二次托洛洛测试 -重大进展\\data\\triples\\wikidata\\火卫二_triples.json",
+    "F:\\知识表示与处理结课作业\\第二次托洛洛测试 -重大进展\\data\\triples\\wikidata\\火星_triples.json",
+    "F:\\知识表示与处理结课作业\\第二次托洛洛测试 -重大进展\\data\\triples\\wikidata\\谷神星_triples.json",
+    "F:\\知识表示与处理结课作业\\第二次托洛洛测试 -重大进展\\data\\triples\\wikidata\\金星_triples.json"
+  ],
+  "narrative_files": [
+    "F:\\知识表示与处理结课作业\\第二次托洛洛测试 -重大进展\\data\\triples\\wikidata\\冥王星_narratives.json",
+    "F:\\知识表示与处理结课作业\\第二次托洛洛测试 -重大进展\\data\\triples\\wikidata\\土星_narratives.json",
+    "F:\\知识表示与处理结课作业\\第二次托洛洛测试 -重大进展\\data\\triples\\wikidata\\地球_narratives.json",
+    "F:\\知识表示与处理结课作业\\第二次托洛洛测试 -重大进展\\data\\triples\\wikidata\\天王星_narratives.json",
+    "F:\\知识表示与处理结课作业\\第二次托洛洛测试 -重大进展\\data\\triples\\wikidata\\太阳_narratives.json",
+    "F:\\知识表示与处理结课作业\\第二次托洛洛测试 -重大进展\\data\\triples\\wikidata\\月球_narratives.json",
+    "F:\\知识表示与处理结课作业\\第二次托洛洛测试 -重大进展\\data\\triples\\wikidata\\木卫一_narratives.json",
+    "F:\\知识表示与处理结课作业\\第二次托洛洛测试 -重大进展\\data\\triples\\wikidata\\木卫三_narratives.json",
+    "F:\\知识表示与处理结课作业\\第二次托洛洛测试 -重大进展\\data\\triples\\wikidata\\木卫二_narratives.json",
+    "F:\\知识表示与处理结课作业\\第二次托洛洛测试 -重大进展\\data\\triples\\wikidata\\木卫四_narratives.json",
+    "F:\\知识表示与处理结课作业\\第二次托洛洛测试 -重大进展\\data\\triples\\wikidata\\木星_narratives.json",
+    "F:\\知识表示与处理结课作业\\第二次托洛洛测试 -重大进展\\data\\triples\\wikidata\\水星_narratives.json",
+    "F:\\知识表示与处理结课作业\\第二次托洛洛测试 -重大进展\\data\\triples\\wikidata\\海王星_narratives.json",
+    "F:\\知识表示与处理结课作业\\第二次托洛洛测试 -重大进展\\data\\triples\\wikidata\\火卫一_narratives.json",
+    "F:\\知识表示与处理结课作业\\第二次托洛洛测试 -重大进展\\data\\triples\\wikidata\\火卫二_narratives.json",
+    "F:\\知识表示与处理结课作业\\第二次托洛洛测试 -重大进展\\data\\triples\\wikidata\\火星_narratives.json",
+    "F:\\知识表示与处理结课作业\\第二次托洛洛测试 -重大进展\\data\\triples\\wikidata\\谷神星_narratives.json",
+    "F:\\知识表示与处理结课作业\\第二次托洛洛测试 -重大进展\\data\\triples\\wikidata\\金星_narratives.json"
+  ],
+  "pipeline": {
+    "total_triples": 7,
+    "total_narratives": 1,
+    "total_files": 1,
+    "pipeline": "wikidata_source_adapter_v1",
+    "source_schema_version": "wikidata_shadow_ready_v1",
+    "materialization_mode": "offline_wikidata_fixture_v1",
+    "mode": "dry-run",
+    "official_namespace_written": false,
+    "cutover_ready": false,
+    "time": "2026-06-27T08:30:14.540976+00:00"
+  },
+  "metadata_contract": {
+    "passed": true,
+    "checked_records": 0,
+    "break_count": 0,
+    "breaks": [],
+    "skipped": true,
+    "reason": "preview mode does not write official triples"
+  },
+  "graph": {
+    "skipped": true,
+    "reason": "dry-run_mode_does_not_write_neo4j"
+  },
+  "chroma": {
+    "skipped": true,
+    "reason": "dry-run_mode_does_not_write_chroma"
+  },
+  "probes": {
+    "skipped": true,
+    "reason": "dry-run_mode_does_not_probe_materialized_namespace"
+  },
+  "fetch": {
+    "requested_mode": "dry-run",
+    "effective_mode": "live",
+    "status": "ok",
+    "error": ""
+  },
+  "preview": {
+    "record_count": 1,
+    "sample_records": [
+      {
+        "title": "火星",
+        "qid": "Q111",
+        "triples": [
+          {
+            "relation": "ORBITS",
+            "object": "Q525",
+            "property_id": "P397",
+            "source_record_id": "Q111:P397:q111$06E92393-7510-4CDC-ADCC-E584A734813A",
+            "source_url": "https://www.wikidata.org/wiki/Q111",
+            "source_license": "CC0-1.0",
+            "license_hint": "CC0-1.0",
+            "fetched_at": "2026-06-27T08:30:14.540564+00:00",
+            "raw_value": {
+              "entity-type": "item",
+              "numeric-id": 525,
+              "id": "Q525"
+            },
+            "normalized_value": "Q525",
+            "unit": "",
+            "confidence": 0.85
+          },
+          {
+            "relation": "HAS_MASS",
+            "object": "641.691 Q613726",
+            "property_id": "P2067",
+            "source_record_id": "Q111:P2067:Q111$73c2da31-40fe-1172-b65c-7804e371defb",
+            "source_url": "https://www.wikidata.org/wiki/Q111",
+            "source_license": "CC0-1.0",
+            "license_hint": "CC0-1.0",
+            "fetched_at": "2026-06-27T08:30:14.540564+00:00",
+            "raw_value": {
+              "amount": "+641.691",
+              "unit": "http://www.wikidata.org/entity/Q613726",
+              "upperBound": "+641.721",
+              "lowerBound": "+641.661"
+            },
+            "normalized_value": "641.691 Q613726",
+            "unit": "Q613726",
+            "confidence": 0.85
+          },
+          {
+            "relation": "HAS_RADIUS",
+            "object": "3389.50 Q828224",
+            "property_id": "P2120",
+            "source_record_id": "Q111:P2120:Q111$816b9d69-4403-aac5-b677-675af35406c8",
+            "source_url": "https://www.wikidata.org/wiki/Q111",
+            "source_license": "CC0-1.0",
+            "license_hint": "CC0-1.0",
+            "fetched_at": "2026-06-27T08:30:14.540564+00:00",
+            "raw_value": {
+              "amount": "+3389.50",
+              "unit": "http://www.wikidata.org/entity/Q828224",
+              "upperBound": "+3389.70",
+              "lowerBound": "+3389.30"
+            },
+            "normalized_value": "3389.50 Q828224",
+            "unit": "Q828224",
+            "confidence": 0.85
+          },
+          {
+            "relation": "HAS_RADIUS",
+            "object": "3396.19 Q828224",
+            "property_id": "P2120",
+            "source_record_id": "Q111:P2120:Q111$6234b7d2-44d9-f57b-a5ab-bd428b7e7348",
+            "source_url": "https://www.wikidata.org/wiki/Q111",
+            "source_license": "CC0-1.0",
+            "license_hint": "CC0-1.0",
+            "fetched_at": "2026-06-27T08:30:14.540564+00:00",
+            "raw_value": {
+              "amount": "+3396.19",
+              "unit": "http://www.wikidata.org/entity/Q828224",
+              "upperBound": "+3396.29",
+              "lowerBound": "+3396.09"
+            },
+            "normalized_value": "3396.19 Q828224",
+            "unit": "Q828224",
+            "confidence": 0.85
+          },
+          {
+            "relation": "HAS_RADIUS",
+            "object": "3379.2 Q828224",
+            "property_id": "P2120",
+            "source_record_id": "Q111:P2120:Q111$b2667fd1-4059-32ca-78ef-114f4004a907",
+            "source_url": "https://www.wikidata.org/wiki/Q111",
+            "source_license": "CC0-1.0",
+            "license_hint": "CC0-1.0",
+            "fetched_at": "2026-06-27T08:30:14.540564+00:00",
+            "raw_value": {
+              "amount": "+3379.2",
+              "unit": "http://www.wikidata.org/entity/Q828224"
+            },
+            "normalized_value": "3379.2 Q828224",
+            "unit": "Q828224",
+            "confidence": 0.85
+          },
+          {
+            "relation": "LOCATED_IN",
+            "object": "Q7879772",
+            "property_id": "P276",
+            "source_record_id": "Q111:P276:Q111$0ed159d7-402b-1751-1533-c7940eb27bcc",
+            "source_url": "https://www.wikidata.org/wiki/Q111",
+            "source_license": "CC0-1.0",
+            "license_hint": "CC0-1.0",
+            "fetched_at": "2026-06-27T08:30:14.540564+00:00",
+            "raw_value": {
+              "entity-type": "item",
+              "numeric-id": 7879772,
+              "id": "Q7879772"
+            },
+            "normalized_value": "Q7879772",
+            "unit": "",
+            "confidence": 0.85
+          },
+          {
+            "relation": "PART_OF",
+            "object": "Q7879772",
+            "property_id": "P361",
+            "source_record_id": "Q111:P361:Q111$caec64bd-43fb-81b8-9b07-a04ab58bb21d",
+            "source_url": "https://www.wikidata.org/wiki/Q111",
+            "source_license": "CC0-1.0",
+            "license_hint": "CC0-1.0",
+            "fetched_at": "2026-06-27T08:30:14.540564+00:00",
+            "raw_value": {
+              "entity-type": "item",
+              "numeric-id": 7879772,
+              "id": "Q7879772"
+            },
+            "normalized_value": "Q7879772",
+            "unit": "",
+            "confidence": 0.85
+          }
+        ],
+        "narratives": [
+          {
+            "section": "Wikidata live preview",
+            "content": "Wikidata live preview parsed 7 candidate facts for 火星.",
+            "keywords": [
+              "火星",
+              "Q111",
+              "Wikidata"
+            ]
+          }
+        ]
+      }
+    ],
+    "official_triples_written": false,
+    "official_chroma_written": false,
+    "official_neo4j_written": false
+  },
+  "readiness_gate": {
+    "passed": true,
+    "cutover_ready": false,
+    "reason": "shadow namespace is auditable; active-source cutover remains disabled"
+  },
+  "materialization": {
+    "timestamp_utc": "2026-06-27T08:30:14.541640+00:00",
+    "output_path": "F:\\知识表示与处理结课作业\\第二次托洛洛测试 -重大进展\\evaluation\\source_expansion\\wikidata\\wikidata_live_preview_report.json"
+  },
+  "raw_copy_status": {
+    "written": false,
+    "path": "",
+    "error": ""
+  },
+  "live_preview": {
+    "target_entity": "火星",
+    "supported_relations": [
+      "DISCOVERED_BY",
+      "HAS_ATMOSPHERE",
+      "HAS_MASS",
+      "HAS_RADIUS",
+      "LOCATED_IN",
+      "ORBITS",
+      "PART_OF"
+    ],
+    "api": "https://www.wikidata.org/w/api.php",
+    "license_hint": "CC0-1.0"
+  }
+}

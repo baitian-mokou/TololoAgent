@@ -1,0 +1,3730 @@
+{
+  "manifest": {
+    "version": "single_source_retrieval_gold_set_v1",
+    "active_source": "zh_wikipedia",
+    "source_schema_version": "zh_wikipedia_single_source_v1",
+    "query_count": 31
+  },
+  "regression_gate": {
+    "is_default_gate": true,
+    "required_command": "python scripts/run_single_source_retrieval_eval.py",
+    "required_before_merge_for": [
+      "src/agent/llm_agent.py",
+      "src/knowledge_graph/neo4j_loader.py",
+      "retrieval-related logic"
+    ],
+    "non_zero_exit_blocks_merge": true,
+    "passing_baseline_v2_path": "evaluation/baselines/single_source_retrieval_eval_passing_baseline_v2.json"
+  },
+  "known_issues": [
+    {
+      "id": "discover_ceres_graph",
+      "scope": "out_of_scope_for_path_routing_repair_v1",
+      "summary": "graph/fallback top-1 inconsistency remains on DISCOVERED_BY for Ceres",
+      "details": "If present, graph top-1 returns 朱塞普·皮亚齐 while fallback top-1 differs. This does not fail the current gate and should be handled only as a separate consistency repair task.",
+      "status": "resolved",
+      "blocking_gate": false,
+      "observed_in_current_run": true,
+      "consistency_match": true,
+      "graph_top1": {
+        "subject": "谷神星",
+        "relation": "DISCOVERED_BY",
+        "object": "朱塞普·皮亚齐",
+        "source": "zh_wikipedia",
+        "source_name": "zh_wikipedia",
+        "source_role": "primary",
+        "origin": "html_fallback",
+        "source_title": "谷神星",
+        "schema_version": "zh_wikipedia_single_source_v1"
+      },
+      "fallback_top1": {
+        "subject": "谷神星",
+        "relation": "DISCOVERED_BY",
+        "object": "朱塞普·皮亚齐",
+        "source": "zh_wikipedia",
+        "source_name": "zh_wikipedia",
+        "source_role": "primary",
+        "origin": "html_fallback",
+        "source_title": "谷神星",
+        "schema_version": "zh_wikipedia_single_source_v1"
+      }
+    }
+  ],
+  "summary": {
+    "total_queries": 31,
+    "exact_pass_count": 31,
+    "exact_accuracy": 1.0,
+    "top_k_hit_count": 25,
+    "top_k_hit_denominator": 25,
+    "top_k_hit_rate": 1.0,
+    "path_selection_correct_count": 31,
+    "path_selection_correctness": 1.0,
+    "graph_embedding_fallback_inconsistency_count": 2,
+    "source_filter_failure_count": 0,
+    "metadata_contract_break_count": 0,
+    "inferred_boundary_break_count": 0,
+    "category_breakdown": {
+      "ORBITS": {
+        "total": 2,
+        "exact_pass_count": 2,
+        "top_k_hit_count": 2,
+        "failures": {}
+      },
+      "PART_OF": {
+        "total": 1,
+        "exact_pass_count": 1,
+        "top_k_hit_count": 1,
+        "failures": {}
+      },
+      "LOCATED_IN": {
+        "total": 1,
+        "exact_pass_count": 1,
+        "top_k_hit_count": 1,
+        "failures": {}
+      },
+      "HAS_MASS": {
+        "total": 2,
+        "exact_pass_count": 2,
+        "top_k_hit_count": 2,
+        "failures": {}
+      },
+      "HAS_RADIUS": {
+        "total": 6,
+        "exact_pass_count": 6,
+        "top_k_hit_count": 6,
+        "failures": {}
+      },
+      "HAS_ATMOSPHERE": {
+        "total": 5,
+        "exact_pass_count": 5,
+        "top_k_hit_count": 5,
+        "failures": {}
+      },
+      "DISCOVERED_BY": {
+        "total": 5,
+        "exact_pass_count": 5,
+        "top_k_hit_count": 5,
+        "failures": {}
+      },
+      "narrative explanation": {
+        "total": 2,
+        "exact_pass_count": 2,
+        "top_k_hit_count": 2,
+        "failures": {}
+      },
+      "source isolation": {
+        "total": 7,
+        "exact_pass_count": 7,
+        "top_k_hit_count": 1,
+        "failures": {}
+      }
+    }
+  },
+  "gates": {
+    "passed": true,
+    "checks": [
+      {
+        "name": "exact_accuracy_min",
+        "expected": 0.85,
+        "actual": 1.0,
+        "passed": true
+      },
+      {
+        "name": "source_filter_failure_max",
+        "expected": 0,
+        "actual": 0,
+        "passed": true
+      },
+      {
+        "name": "metadata_contract_break_max",
+        "expected": 0,
+        "actual": 0,
+        "passed": true
+      },
+      {
+        "name": "inferred_boundary_break_max",
+        "expected": 0,
+        "actual": 0,
+        "passed": true
+      }
+    ],
+    "exit_code": 0
+  },
+  "results": [
+    {
+      "id": "orbit_moon_graph",
+      "category": "ORBITS",
+      "query_kind": "structured",
+      "query": "月球绕谁公转",
+      "expected_path": "graph",
+      "actual_path": "graph",
+      "allowed_final_sources": [
+        "graph"
+      ],
+      "expected_result": {
+        "subject": "月球",
+        "relation": "ORBITS",
+        "object": "地球"
+      },
+      "normalized_expected_value": null,
+      "normalized_returned_value": "地球",
+      "returned_result": {
+        "subject": "月球",
+        "relation": "ORBITS",
+        "object": "地球",
+        "source": "zh_wikipedia",
+        "source_name": "zh_wikipedia",
+        "source_role": "primary",
+        "origin": "internal_link",
+        "source_title": "月球",
+        "schema_version": "zh_wikipedia_single_source_v1"
+      },
+      "top_k_results": [
+        {
+          "subject": "月球",
+          "relation": "ORBITS",
+          "object": "地球",
+          "source": "zh_wikipedia",
+          "source_name": "zh_wikipedia",
+          "source_role": "primary",
+          "origin": "internal_link",
+          "source_title": "月球",
+          "schema_version": "zh_wikipedia_single_source_v1"
+        }
+      ],
+      "graph_only_results": [
+        {
+          "subject": "月球",
+          "relation": "ORBITS",
+          "object": "地球",
+          "source": "zh_wikipedia",
+          "source_name": "zh_wikipedia",
+          "source_role": "primary",
+          "origin": "internal_link",
+          "source_title": "月球",
+          "schema_version": "zh_wikipedia_single_source_v1"
+        }
+      ],
+      "fallback_results": [
+        {
+          "subject": "月球",
+          "relation": "ORBITS",
+          "object": "地球",
+          "source": "zh_wikipedia",
+          "source_name": "zh_wikipedia",
+          "source_role": "primary",
+          "origin": "html_fallback",
+          "source_title": "月球",
+          "schema_version": "zh_wikipedia_single_source_v1"
+        }
+      ],
+      "exact_match": true,
+      "top_k_hit": true,
+      "expected_top_k_hit": true,
+      "top_k_expectation_met": true,
+      "path_correct": true,
+      "allowed_final_source_ok": true,
+      "pass": true,
+      "source_metadata": {
+        "subject": "月球",
+        "relation": "ORBITS",
+        "object": "地球",
+        "source": "zh_wikipedia",
+        "source_name": "zh_wikipedia",
+        "source_role": "primary",
+        "origin": "internal_link",
+        "source_title": "月球",
+        "schema_version": "zh_wikipedia_single_source_v1"
+      },
+      "metadata_complete": true,
+      "source_filter_failed": false,
+      "inferred_boundary_break": false,
+      "fallback_exact_match": true,
+      "fallback_top_k_hit": true,
+      "consistency_match": true,
+      "failure_category": null,
+      "expected_failure_if_any": null
+    },
+    {
+      "id": "orbit_phobos_graph",
+      "category": "ORBITS",
+      "query_kind": "structured",
+      "query": "火卫一绕谁公转",
+      "expected_path": "graph",
+      "actual_path": "graph",
+      "allowed_final_sources": [
+        "graph"
+      ],
+      "expected_result": {
+        "subject": "火卫一",
+        "relation": "ORBITS",
+        "object": "火星"
+      },
+      "normalized_expected_value": null,
+      "normalized_returned_value": "火星",
+      "returned_result": {
+        "subject": "火卫一",
+        "relation": "ORBITS",
+        "object": "火星",
+        "source": "zh_wikipedia",
+        "source_name": "zh_wikipedia",
+        "source_role": "primary",
+        "origin": "internal_link",
+        "source_title": "火卫一",
+        "schema_version": "zh_wikipedia_single_source_v1"
+      },
+      "top_k_results": [
+        {
+          "subject": "火卫一",
+          "relation": "ORBITS",
+          "object": "火星",
+          "source": "zh_wikipedia",
+          "source_name": "zh_wikipedia",
+          "source_role": "primary",
+          "origin": "internal_link",
+          "source_title": "火卫一",
+          "schema_version": "zh_wikipedia_single_source_v1"
+        }
+      ],
+      "graph_only_results": [
+        {
+          "subject": "火卫一",
+          "relation": "ORBITS",
+          "object": "火星",
+          "source": "zh_wikipedia",
+          "source_name": "zh_wikipedia",
+          "source_role": "primary",
+          "origin": "internal_link",
+          "source_title": "火卫一",
+          "schema_version": "zh_wikipedia_single_source_v1"
+        }
+      ],
+      "fallback_results": [
+        {
+          "subject": "火卫一",
+          "relation": "ORBITS",
+          "object": "火星",
+          "source": "zh_wikipedia",
+          "source_name": "zh_wikipedia",
+          "source_role": "primary",
+          "origin": "html_fallback",
+          "source_title": "火卫一",
+          "schema_version": "zh_wikipedia_single_source_v1"
+        }
+      ],
+      "exact_match": true,
+      "top_k_hit": true,
+      "expected_top_k_hit": true,
+      "top_k_expectation_met": true,
+      "path_correct": true,
+      "allowed_final_source_ok": true,
+      "pass": true,
+      "source_metadata": {
+        "subject": "火卫一",
+        "relation": "ORBITS",
+        "object": "火星",
+        "source": "zh_wikipedia",
+        "source_name": "zh_wikipedia",
+        "source_role": "primary",
+        "origin": "internal_link",
+        "source_title": "火卫一",
+        "schema_version": "zh_wikipedia_single_source_v1"
+      },
+      "metadata_complete": true,
+      "source_filter_failed": false,
+      "inferred_boundary_break": false,
+      "fallback_exact_match": true,
+      "fallback_top_k_hit": true,
+      "consistency_match": true,
+      "failure_category": null,
+      "expected_failure_if_any": null
+    },
+    {
+      "id": "part_of_io_graph",
+      "category": "PART_OF",
+      "query_kind": "structured",
+      "query": "木卫一属于什么系统",
+      "expected_path": "graph",
+      "actual_path": "graph",
+      "allowed_final_sources": [
+        "graph"
+      ],
+      "expected_result": {
+        "subject": "木卫一",
+        "relation": "PART_OF",
+        "object": "木星系统"
+      },
+      "normalized_expected_value": null,
+      "normalized_returned_value": "木星系统",
+      "returned_result": {
+        "subject": "木卫一",
+        "relation": "PART_OF",
+        "object": "木星系统",
+        "source": "zh_wikipedia",
+        "source_name": "zh_wikipedia",
+        "source_role": "primary",
+        "origin": "internal_link",
+        "source_title": "木卫一",
+        "schema_version": "zh_wikipedia_single_source_v1"
+      },
+      "top_k_results": [
+        {
+          "subject": "木卫一",
+          "relation": "PART_OF",
+          "object": "木星系统",
+          "source": "zh_wikipedia",
+          "source_name": "zh_wikipedia",
+          "source_role": "primary",
+          "origin": "internal_link",
+          "source_title": "木卫一",
+          "schema_version": "zh_wikipedia_single_source_v1"
+        },
+        {
+          "subject": "木卫一",
+          "relation": "PART_OF",
+          "object": "伽利略卫星",
+          "source": "zh_wikipedia",
+          "source_name": "zh_wikipedia",
+          "source_role": "primary",
+          "origin": "internal_link",
+          "source_title": "伽利略卫星",
+          "schema_version": "zh_wikipedia_single_source_v1"
+        }
+      ],
+      "graph_only_results": [
+        {
+          "subject": "木卫一",
+          "relation": "PART_OF",
+          "object": "木星系统",
+          "source": "zh_wikipedia",
+          "source_name": "zh_wikipedia",
+          "source_role": "primary",
+          "origin": "internal_link",
+          "source_title": "木卫一",
+          "schema_version": "zh_wikipedia_single_source_v1"
+        },
+        {
+          "subject": "木卫一",
+          "relation": "PART_OF",
+          "object": "伽利略卫星",
+          "source": "zh_wikipedia",
+          "source_name": "zh_wikipedia",
+          "source_role": "primary",
+          "origin": "internal_link",
+          "source_title": "伽利略卫星",
+          "schema_version": "zh_wikipedia_single_source_v1"
+        }
+      ],
+      "fallback_results": [
+        {
+          "subject": "木卫一",
+          "relation": "PART_OF",
+          "object": "木星系统",
+          "source": "zh_wikipedia",
+          "source_name": "zh_wikipedia",
+          "source_role": "primary",
+          "origin": "html_fallback",
+          "source_title": "木卫一",
+          "schema_version": "zh_wikipedia_single_source_v1"
+        }
+      ],
+      "exact_match": true,
+      "top_k_hit": true,
+      "expected_top_k_hit": true,
+      "top_k_expectation_met": true,
+      "path_correct": true,
+      "allowed_final_source_ok": true,
+      "pass": true,
+      "source_metadata": {
+        "subject": "木卫一",
+        "relation": "PART_OF",
+        "object": "木星系统",
+        "source": "zh_wikipedia",
+        "source_name": "zh_wikipedia",
+        "source_role": "primary",
+        "origin": "internal_link",
+        "source_title": "木卫一",
+        "schema_version": "zh_wikipedia_single_source_v1"
+      },
+      "metadata_complete": true,
+      "source_filter_failed": false,
+      "inferred_boundary_break": false,
+      "fallback_exact_match": true,
+      "fallback_top_k_hit": true,
+      "consistency_match": true,
+      "failure_category": null,
+      "expected_failure_if_any": null
+    },
+    {
+      "id": "located_neptune_graph",
+      "category": "LOCATED_IN",
+      "query_kind": "structured",
+      "query": "海王星在哪里",
+      "expected_path": "graph",
+      "actual_path": "graph",
+      "allowed_final_sources": [
+        "graph"
+      ],
+      "expected_result": {
+        "subject": "海王星",
+        "relation": "LOCATED_IN",
+        "object": "太阳系"
+      },
+      "normalized_expected_value": null,
+      "normalized_returned_value": "太阳系",
+      "returned_result": {
+        "subject": "海王星",
+        "relation": "LOCATED_IN",
+        "object": "太阳系",
+        "source": "zh_wikipedia",
+        "source_name": "zh_wikipedia",
+        "source_role": "primary",
+        "origin": "html_fallback",
+        "source_title": "海王星",
+        "schema_version": "zh_wikipedia_single_source_v1"
+      },
+      "top_k_results": [
+        {
+          "subject": "海王星",
+          "relation": "LOCATED_IN",
+          "object": "太阳系",
+          "source": "zh_wikipedia",
+          "source_name": "zh_wikipedia",
+          "source_role": "primary",
+          "origin": "html_fallback",
+          "source_title": "海王星",
+          "schema_version": "zh_wikipedia_single_source_v1"
+        }
+      ],
+      "graph_only_results": [
+        {
+          "subject": "海王星",
+          "relation": "LOCATED_IN",
+          "object": "太阳系",
+          "source": "zh_wikipedia",
+          "source_name": "zh_wikipedia",
+          "source_role": "primary",
+          "origin": "html_fallback",
+          "source_title": "海王星",
+          "schema_version": "zh_wikipedia_single_source_v1"
+        }
+      ],
+      "fallback_results": [
+        {
+          "subject": "海王星",
+          "relation": "LOCATED_IN",
+          "object": "太阳系",
+          "source": "zh_wikipedia",
+          "source_name": "zh_wikipedia",
+          "source_role": "primary",
+          "origin": "html_fallback",
+          "source_title": "海王星",
+          "schema_version": "zh_wikipedia_single_source_v1"
+        }
+      ],
+      "exact_match": true,
+      "top_k_hit": true,
+      "expected_top_k_hit": true,
+      "top_k_expectation_met": true,
+      "path_correct": true,
+      "allowed_final_source_ok": true,
+      "pass": true,
+      "source_metadata": {
+        "subject": "海王星",
+        "relation": "LOCATED_IN",
+        "object": "太阳系",
+        "source": "zh_wikipedia",
+        "source_name": "zh_wikipedia",
+        "source_role": "primary",
+        "origin": "html_fallback",
+        "source_title": "海王星",
+        "schema_version": "zh_wikipedia_single_source_v1"
+      },
+      "metadata_complete": true,
+      "source_filter_failed": false,
+      "inferred_boundary_break": false,
+      "fallback_exact_match": true,
+      "fallback_top_k_hit": true,
+      "consistency_match": true,
+      "failure_category": null,
+      "expected_failure_if_any": null
+    },
+    {
+      "id": "mass_sun_graph",
+      "category": "HAS_MASS",
+      "query_kind": "structured",
+      "query": "太阳质量是多少",
+      "expected_path": "graph",
+      "actual_path": "graph",
+      "allowed_final_sources": [
+        "graph"
+      ],
+      "expected_result": {
+        "subject": "太阳",
+        "relation": "HAS_MASS",
+        "object": "1.9885 × 10 30 kg"
+      },
+      "normalized_expected_value": "1.9885×1030kg",
+      "normalized_returned_value": "1.9885x1030kg",
+      "returned_result": {
+        "subject": "太阳",
+        "relation": "HAS_MASS",
+        "object": "1.9885 × 10 30 kg",
+        "source": "zh_wikipedia",
+        "source_name": "zh_wikipedia",
+        "source_role": "primary",
+        "origin": "html_fallback",
+        "source_title": "太阳",
+        "schema_version": "zh_wikipedia_single_source_v1"
+      },
+      "top_k_results": [
+        {
+          "subject": "太阳",
+          "relation": "HAS_MASS",
+          "object": "1.9885 × 10 30 kg",
+          "source": "zh_wikipedia",
+          "source_name": "zh_wikipedia",
+          "source_role": "primary",
+          "origin": "html_fallback",
+          "source_title": "太阳",
+          "schema_version": "zh_wikipedia_single_source_v1"
+        }
+      ],
+      "graph_only_results": [
+        {
+          "subject": "太阳",
+          "relation": "HAS_MASS",
+          "object": "1.9885 × 10 30 kg",
+          "source": "zh_wikipedia",
+          "source_name": "zh_wikipedia",
+          "source_role": "primary",
+          "origin": "html_fallback",
+          "source_title": "太阳",
+          "schema_version": "zh_wikipedia_single_source_v1"
+        }
+      ],
+      "fallback_results": [
+        {
+          "subject": "太阳",
+          "relation": "HAS_MASS",
+          "object": "1.9885 × 10 30 kg",
+          "source": "zh_wikipedia",
+          "source_name": "zh_wikipedia",
+          "source_role": "primary",
+          "origin": "html_fallback",
+          "source_title": "太阳",
+          "schema_version": "zh_wikipedia_single_source_v1"
+        }
+      ],
+      "exact_match": true,
+      "top_k_hit": true,
+      "expected_top_k_hit": true,
+      "top_k_expectation_met": true,
+      "path_correct": true,
+      "allowed_final_source_ok": true,
+      "pass": true,
+      "source_metadata": {
+        "subject": "太阳",
+        "relation": "HAS_MASS",
+        "object": "1.9885 × 10 30 kg",
+        "source": "zh_wikipedia",
+        "source_name": "zh_wikipedia",
+        "source_role": "primary",
+        "origin": "html_fallback",
+        "source_title": "太阳",
+        "schema_version": "zh_wikipedia_single_source_v1"
+      },
+      "metadata_complete": true,
+      "source_filter_failed": false,
+      "inferred_boundary_break": false,
+      "fallback_exact_match": true,
+      "fallback_top_k_hit": true,
+      "consistency_match": true,
+      "failure_category": null,
+      "expected_failure_if_any": null
+    },
+    {
+      "id": "mass_jupiter_graph",
+      "category": "HAS_MASS",
+      "query_kind": "structured",
+      "query": "木星质量是多少",
+      "expected_path": "graph",
+      "actual_path": "graph",
+      "allowed_final_sources": [
+        "graph"
+      ],
+      "expected_result": {
+        "subject": "木星",
+        "relation": "HAS_MASS",
+        "object": "1.8981 × 10 27 kg"
+      },
+      "normalized_expected_value": "1.8981×1027kg",
+      "normalized_returned_value": "1.8981x1027kg",
+      "returned_result": {
+        "subject": "木星",
+        "relation": "HAS_MASS",
+        "object": "1.8981 × 10 27 kg",
+        "source": "zh_wikipedia",
+        "source_name": "zh_wikipedia",
+        "source_role": "primary",
+        "origin": "html_fallback",
+        "source_title": "木星",
+        "schema_version": "zh_wikipedia_single_source_v1"
+      },
+      "top_k_results": [
+        {
+          "subject": "木星",
+          "relation": "HAS_MASS",
+          "object": "1.8981 × 10 27 kg",
+          "source": "zh_wikipedia",
+          "source_name": "zh_wikipedia",
+          "source_role": "primary",
+          "origin": "html_fallback",
+          "source_title": "木星",
+          "schema_version": "zh_wikipedia_single_source_v1"
+        }
+      ],
+      "graph_only_results": [
+        {
+          "subject": "木星",
+          "relation": "HAS_MASS",
+          "object": "1.8981 × 10 27 kg",
+          "source": "zh_wikipedia",
+          "source_name": "zh_wikipedia",
+          "source_role": "primary",
+          "origin": "html_fallback",
+          "source_title": "木星",
+          "schema_version": "zh_wikipedia_single_source_v1"
+        }
+      ],
+      "fallback_results": [
+        {
+          "subject": "木星",
+          "relation": "HAS_MASS",
+          "object": "1.8981 × 10 27 kg",
+          "source": "zh_wikipedia",
+          "source_name": "zh_wikipedia",
+          "source_role": "primary",
+          "origin": "html_fallback",
+          "source_title": "木星",
+          "schema_version": "zh_wikipedia_single_source_v1"
+        }
+      ],
+      "exact_match": true,
+      "top_k_hit": true,
+      "expected_top_k_hit": true,
+      "top_k_expectation_met": true,
+      "path_correct": true,
+      "allowed_final_source_ok": true,
+      "pass": true,
+      "source_metadata": {
+        "subject": "木星",
+        "relation": "HAS_MASS",
+        "object": "1.8981 × 10 27 kg",
+        "source": "zh_wikipedia",
+        "source_name": "zh_wikipedia",
+        "source_role": "primary",
+        "origin": "html_fallback",
+        "source_title": "木星",
+        "schema_version": "zh_wikipedia_single_source_v1"
+      },
+      "metadata_complete": true,
+      "source_filter_failed": false,
+      "inferred_boundary_break": false,
+      "fallback_exact_match": true,
+      "fallback_top_k_hit": true,
+      "consistency_match": true,
+      "failure_category": null,
+      "expected_failure_if_any": null
+    },
+    {
+      "id": "radius_earth_graph",
+      "category": "HAS_RADIUS",
+      "query_kind": "structured",
+      "query": "地球半径是多少",
+      "expected_path": "graph",
+      "actual_path": "graph",
+      "allowed_final_sources": [
+        "graph"
+      ],
+      "expected_result": {
+        "subject": "地球",
+        "relation": "HAS_RADIUS",
+        "object": "6,371.0 km"
+      },
+      "normalized_expected_value": "6371.0km",
+      "normalized_returned_value": "6371.0km",
+      "returned_result": {
+        "subject": "地球",
+        "relation": "HAS_RADIUS",
+        "object": "6,371.0 km",
+        "source": "zh_wikipedia",
+        "source_name": "zh_wikipedia",
+        "source_role": "primary",
+        "origin": "html_fallback",
+        "source_title": "地球",
+        "schema_version": "zh_wikipedia_single_source_v1"
+      },
+      "top_k_results": [
+        {
+          "subject": "地球",
+          "relation": "HAS_RADIUS",
+          "object": "6,371.0 km",
+          "source": "zh_wikipedia",
+          "source_name": "zh_wikipedia",
+          "source_role": "primary",
+          "origin": "html_fallback",
+          "source_title": "地球",
+          "schema_version": "zh_wikipedia_single_source_v1"
+        }
+      ],
+      "graph_only_results": [
+        {
+          "subject": "地球",
+          "relation": "HAS_RADIUS",
+          "object": "6,371.0 km",
+          "source": "zh_wikipedia",
+          "source_name": "zh_wikipedia",
+          "source_role": "primary",
+          "origin": "html_fallback",
+          "source_title": "地球",
+          "schema_version": "zh_wikipedia_single_source_v1"
+        }
+      ],
+      "fallback_results": [
+        {
+          "subject": "地球",
+          "relation": "HAS_RADIUS",
+          "object": "6,371.0 km",
+          "source": "zh_wikipedia",
+          "source_name": "zh_wikipedia",
+          "source_role": "primary",
+          "origin": "html_fallback",
+          "source_title": "地球",
+          "schema_version": "zh_wikipedia_single_source_v1"
+        },
+        {
+          "subject": "地球",
+          "relation": "HAS_RADIUS",
+          "object": "6,378.137 km",
+          "source": "zh_wikipedia",
+          "source_name": "zh_wikipedia",
+          "source_role": "primary",
+          "origin": "html_fallback",
+          "source_title": "地球",
+          "schema_version": "zh_wikipedia_single_source_v1"
+        },
+        {
+          "subject": "地球",
+          "relation": "HAS_RADIUS",
+          "object": "6,356.752 km",
+          "source": "zh_wikipedia",
+          "source_name": "zh_wikipedia",
+          "source_role": "primary",
+          "origin": "html_fallback",
+          "source_title": "地球",
+          "schema_version": "zh_wikipedia_single_source_v1"
+        }
+      ],
+      "exact_match": true,
+      "top_k_hit": true,
+      "expected_top_k_hit": true,
+      "top_k_expectation_met": true,
+      "path_correct": true,
+      "allowed_final_source_ok": true,
+      "pass": true,
+      "source_metadata": {
+        "subject": "地球",
+        "relation": "HAS_RADIUS",
+        "object": "6,371.0 km",
+        "source": "zh_wikipedia",
+        "source_name": "zh_wikipedia",
+        "source_role": "primary",
+        "origin": "html_fallback",
+        "source_title": "地球",
+        "schema_version": "zh_wikipedia_single_source_v1"
+      },
+      "metadata_complete": true,
+      "source_filter_failed": false,
+      "inferred_boundary_break": false,
+      "fallback_exact_match": true,
+      "fallback_top_k_hit": true,
+      "consistency_match": true,
+      "failure_category": null,
+      "expected_failure_if_any": null
+    },
+    {
+      "id": "radius_mars_graph",
+      "category": "HAS_RADIUS",
+      "query_kind": "structured",
+      "query": "火星半径是多少",
+      "expected_path": "graph",
+      "actual_path": "graph",
+      "allowed_final_sources": [
+        "graph"
+      ],
+      "expected_result": {
+        "subject": "火星",
+        "relation": "HAS_RADIUS",
+        "object": "3389.5 km"
+      },
+      "normalized_expected_value": "3389.5km",
+      "normalized_returned_value": "3389.5km",
+      "returned_result": {
+        "subject": "火星",
+        "relation": "HAS_RADIUS",
+        "object": "3389.5 km",
+        "source": "zh_wikipedia",
+        "source_name": "zh_wikipedia",
+        "source_role": "primary",
+        "origin": "html_fallback",
+        "source_title": "火星",
+        "schema_version": "zh_wikipedia_single_source_v1"
+      },
+      "top_k_results": [
+        {
+          "subject": "火星",
+          "relation": "HAS_RADIUS",
+          "object": "3389.5 km",
+          "source": "zh_wikipedia",
+          "source_name": "zh_wikipedia",
+          "source_role": "primary",
+          "origin": "html_fallback",
+          "source_title": "火星",
+          "schema_version": "zh_wikipedia_single_source_v1"
+        }
+      ],
+      "graph_only_results": [
+        {
+          "subject": "火星",
+          "relation": "HAS_RADIUS",
+          "object": "3389.5 km",
+          "source": "zh_wikipedia",
+          "source_name": "zh_wikipedia",
+          "source_role": "primary",
+          "origin": "html_fallback",
+          "source_title": "火星",
+          "schema_version": "zh_wikipedia_single_source_v1"
+        }
+      ],
+      "fallback_results": [
+        {
+          "subject": "火星",
+          "relation": "HAS_RADIUS",
+          "object": "3389.5 km",
+          "source": "zh_wikipedia",
+          "source_name": "zh_wikipedia",
+          "source_role": "primary",
+          "origin": "html_fallback",
+          "source_title": "火星",
+          "schema_version": "zh_wikipedia_single_source_v1"
+        },
+        {
+          "subject": "火星",
+          "relation": "HAS_RADIUS",
+          "object": "3396.2 km",
+          "source": "zh_wikipedia",
+          "source_name": "zh_wikipedia",
+          "source_role": "primary",
+          "origin": "html_fallback",
+          "source_title": "火星",
+          "schema_version": "zh_wikipedia_single_source_v1"
+        },
+        {
+          "subject": "火星",
+          "relation": "HAS_RADIUS",
+          "object": "3376.2 km",
+          "source": "zh_wikipedia",
+          "source_name": "zh_wikipedia",
+          "source_role": "primary",
+          "origin": "html_fallback",
+          "source_title": "火星",
+          "schema_version": "zh_wikipedia_single_source_v1"
+        }
+      ],
+      "exact_match": true,
+      "top_k_hit": true,
+      "expected_top_k_hit": true,
+      "top_k_expectation_met": true,
+      "path_correct": true,
+      "allowed_final_source_ok": true,
+      "pass": true,
+      "source_metadata": {
+        "subject": "火星",
+        "relation": "HAS_RADIUS",
+        "object": "3389.5 km",
+        "source": "zh_wikipedia",
+        "source_name": "zh_wikipedia",
+        "source_role": "primary",
+        "origin": "html_fallback",
+        "source_title": "火星",
+        "schema_version": "zh_wikipedia_single_source_v1"
+      },
+      "metadata_complete": true,
+      "source_filter_failed": false,
+      "inferred_boundary_break": false,
+      "fallback_exact_match": true,
+      "fallback_top_k_hit": true,
+      "consistency_match": true,
+      "failure_category": null,
+      "expected_failure_if_any": null
+    },
+    {
+      "id": "radius_moon_graph",
+      "category": "HAS_RADIUS",
+      "query_kind": "structured",
+      "query": "月球半径是多少",
+      "expected_path": "graph",
+      "actual_path": "graph",
+      "allowed_final_sources": [
+        "graph"
+      ],
+      "expected_result": {
+        "subject": "月球",
+        "relation": "HAS_RADIUS",
+        "object": "1,737.10 km"
+      },
+      "normalized_expected_value": "1737.10km",
+      "normalized_returned_value": "1737.10km",
+      "returned_result": {
+        "subject": "月球",
+        "relation": "HAS_RADIUS",
+        "object": "1,737.10 km",
+        "source": "zh_wikipedia",
+        "source_name": "zh_wikipedia",
+        "source_role": "primary",
+        "origin": "html_fallback",
+        "source_title": "月球",
+        "schema_version": "zh_wikipedia_single_source_v1"
+      },
+      "top_k_results": [
+        {
+          "subject": "月球",
+          "relation": "HAS_RADIUS",
+          "object": "1,737.10 km",
+          "source": "zh_wikipedia",
+          "source_name": "zh_wikipedia",
+          "source_role": "primary",
+          "origin": "html_fallback",
+          "source_title": "月球",
+          "schema_version": "zh_wikipedia_single_source_v1"
+        }
+      ],
+      "graph_only_results": [
+        {
+          "subject": "月球",
+          "relation": "HAS_RADIUS",
+          "object": "1,737.10 km",
+          "source": "zh_wikipedia",
+          "source_name": "zh_wikipedia",
+          "source_role": "primary",
+          "origin": "html_fallback",
+          "source_title": "月球",
+          "schema_version": "zh_wikipedia_single_source_v1"
+        }
+      ],
+      "fallback_results": [
+        {
+          "subject": "月球",
+          "relation": "HAS_RADIUS",
+          "object": "1,737.10 km",
+          "source": "zh_wikipedia",
+          "source_name": "zh_wikipedia",
+          "source_role": "primary",
+          "origin": "html_fallback",
+          "source_title": "月球",
+          "schema_version": "zh_wikipedia_single_source_v1"
+        },
+        {
+          "subject": "月球",
+          "relation": "HAS_RADIUS",
+          "object": "1,735.97 km",
+          "source": "zh_wikipedia",
+          "source_name": "zh_wikipedia",
+          "source_role": "primary",
+          "origin": "html_fallback",
+          "source_title": "月球",
+          "schema_version": "zh_wikipedia_single_source_v1"
+        }
+      ],
+      "exact_match": true,
+      "top_k_hit": true,
+      "expected_top_k_hit": true,
+      "top_k_expectation_met": true,
+      "path_correct": true,
+      "allowed_final_source_ok": true,
+      "pass": true,
+      "source_metadata": {
+        "subject": "月球",
+        "relation": "HAS_RADIUS",
+        "object": "1,737.10 km",
+        "source": "zh_wikipedia",
+        "source_name": "zh_wikipedia",
+        "source_role": "primary",
+        "origin": "html_fallback",
+        "source_title": "月球",
+        "schema_version": "zh_wikipedia_single_source_v1"
+      },
+      "metadata_complete": true,
+      "source_filter_failed": false,
+      "inferred_boundary_break": false,
+      "fallback_exact_match": true,
+      "fallback_top_k_hit": true,
+      "consistency_match": true,
+      "failure_category": null,
+      "expected_failure_if_any": null
+    },
+    {
+      "id": "radius_io_graph",
+      "category": "HAS_RADIUS",
+      "query_kind": "structured",
+      "query": "木卫一半径是多少",
+      "expected_path": "graph",
+      "actual_path": "graph",
+      "allowed_final_sources": [
+        "graph"
+      ],
+      "expected_result": {
+        "subject": "木卫一",
+        "relation": "HAS_RADIUS",
+        "object": "1,821.3 km"
+      },
+      "normalized_expected_value": "1821.3km",
+      "normalized_returned_value": "1821.3km",
+      "returned_result": {
+        "subject": "木卫一",
+        "relation": "HAS_RADIUS",
+        "object": "1,821.3 km",
+        "source": "zh_wikipedia",
+        "source_name": "zh_wikipedia",
+        "source_role": "primary",
+        "origin": "html_fallback",
+        "source_title": "木卫一",
+        "schema_version": "zh_wikipedia_single_source_v1"
+      },
+      "top_k_results": [
+        {
+          "subject": "木卫一",
+          "relation": "HAS_RADIUS",
+          "object": "1,821.3 km",
+          "source": "zh_wikipedia",
+          "source_name": "zh_wikipedia",
+          "source_role": "primary",
+          "origin": "html_fallback",
+          "source_title": "木卫一",
+          "schema_version": "zh_wikipedia_single_source_v1"
+        }
+      ],
+      "graph_only_results": [
+        {
+          "subject": "木卫一",
+          "relation": "HAS_RADIUS",
+          "object": "1,821.3 km",
+          "source": "zh_wikipedia",
+          "source_name": "zh_wikipedia",
+          "source_role": "primary",
+          "origin": "html_fallback",
+          "source_title": "木卫一",
+          "schema_version": "zh_wikipedia_single_source_v1"
+        }
+      ],
+      "fallback_results": [
+        {
+          "subject": "木卫一",
+          "relation": "HAS_RADIUS",
+          "object": "1,821.3 km",
+          "source": "zh_wikipedia",
+          "source_name": "zh_wikipedia",
+          "source_role": "primary",
+          "origin": "html_fallback",
+          "source_title": "木卫一",
+          "schema_version": "zh_wikipedia_single_source_v1"
+        }
+      ],
+      "exact_match": true,
+      "top_k_hit": true,
+      "expected_top_k_hit": true,
+      "top_k_expectation_met": true,
+      "path_correct": true,
+      "allowed_final_source_ok": true,
+      "pass": true,
+      "source_metadata": {
+        "subject": "木卫一",
+        "relation": "HAS_RADIUS",
+        "object": "1,821.3 km",
+        "source": "zh_wikipedia",
+        "source_name": "zh_wikipedia",
+        "source_role": "primary",
+        "origin": "html_fallback",
+        "source_title": "木卫一",
+        "schema_version": "zh_wikipedia_single_source_v1"
+      },
+      "metadata_complete": true,
+      "source_filter_failed": false,
+      "inferred_boundary_break": false,
+      "fallback_exact_match": true,
+      "fallback_top_k_hit": true,
+      "consistency_match": true,
+      "failure_category": null,
+      "expected_failure_if_any": null
+    },
+    {
+      "id": "radius_ceres_graph",
+      "category": "HAS_RADIUS",
+      "query_kind": "structured",
+      "query": "谷神星半径是多少",
+      "expected_path": "graph",
+      "actual_path": "graph",
+      "allowed_final_sources": [
+        "graph"
+      ],
+      "expected_result": {
+        "subject": "谷神星",
+        "relation": "HAS_RADIUS",
+        "object": "473 km"
+      },
+      "normalized_expected_value": "473km",
+      "normalized_returned_value": "473km",
+      "returned_result": {
+        "subject": "谷神星",
+        "relation": "HAS_RADIUS",
+        "object": "473 km",
+        "source": "zh_wikipedia",
+        "source_name": "zh_wikipedia",
+        "source_role": "primary",
+        "origin": "html_fallback",
+        "source_title": "谷神星",
+        "schema_version": "zh_wikipedia_single_source_v1"
+      },
+      "top_k_results": [
+        {
+          "subject": "谷神星",
+          "relation": "HAS_RADIUS",
+          "object": "473 km",
+          "source": "zh_wikipedia",
+          "source_name": "zh_wikipedia",
+          "source_role": "primary",
+          "origin": "html_fallback",
+          "source_title": "谷神星",
+          "schema_version": "zh_wikipedia_single_source_v1"
+        }
+      ],
+      "graph_only_results": [
+        {
+          "subject": "谷神星",
+          "relation": "HAS_RADIUS",
+          "object": "473 km",
+          "source": "zh_wikipedia",
+          "source_name": "zh_wikipedia",
+          "source_role": "primary",
+          "origin": "html_fallback",
+          "source_title": "谷神星",
+          "schema_version": "zh_wikipedia_single_source_v1"
+        }
+      ],
+      "fallback_results": [
+        {
+          "subject": "谷神星",
+          "relation": "HAS_RADIUS",
+          "object": "473 km",
+          "source": "zh_wikipedia",
+          "source_name": "zh_wikipedia",
+          "source_role": "primary",
+          "origin": "html_fallback",
+          "source_title": "谷神星",
+          "schema_version": "zh_wikipedia_single_source_v1"
+        }
+      ],
+      "exact_match": true,
+      "top_k_hit": true,
+      "expected_top_k_hit": true,
+      "top_k_expectation_met": true,
+      "path_correct": true,
+      "allowed_final_source_ok": true,
+      "pass": true,
+      "source_metadata": {
+        "subject": "谷神星",
+        "relation": "HAS_RADIUS",
+        "object": "473 km",
+        "source": "zh_wikipedia",
+        "source_name": "zh_wikipedia",
+        "source_role": "primary",
+        "origin": "html_fallback",
+        "source_title": "谷神星",
+        "schema_version": "zh_wikipedia_single_source_v1"
+      },
+      "metadata_complete": true,
+      "source_filter_failed": false,
+      "inferred_boundary_break": false,
+      "fallback_exact_match": true,
+      "fallback_top_k_hit": true,
+      "consistency_match": true,
+      "failure_category": null,
+      "expected_failure_if_any": null
+    },
+    {
+      "id": "radius_sun_known_gap",
+      "category": "HAS_RADIUS",
+      "query_kind": "structured",
+      "query": "太阳半径是多少",
+      "expected_path": "graph",
+      "actual_path": "graph",
+      "allowed_final_sources": [
+        "graph"
+      ],
+      "expected_result": {
+        "subject": "太阳",
+        "relation": "HAS_RADIUS",
+        "object": "695,000 km"
+      },
+      "normalized_expected_value": "695000km",
+      "normalized_returned_value": "695000km",
+      "returned_result": {
+        "subject": "太阳",
+        "relation": "HAS_RADIUS",
+        "object": "695,000 km",
+        "source": "zh_wikipedia",
+        "source_name": "zh_wikipedia",
+        "source_role": "primary",
+        "origin": "html_fallback",
+        "source_title": "太阳",
+        "schema_version": "zh_wikipedia_single_source_v1"
+      },
+      "top_k_results": [
+        {
+          "subject": "太阳",
+          "relation": "HAS_RADIUS",
+          "object": "695,000 km",
+          "source": "zh_wikipedia",
+          "source_name": "zh_wikipedia",
+          "source_role": "primary",
+          "origin": "html_fallback",
+          "source_title": "太阳",
+          "schema_version": "zh_wikipedia_single_source_v1"
+        }
+      ],
+      "graph_only_results": [
+        {
+          "subject": "太阳",
+          "relation": "HAS_RADIUS",
+          "object": "695,000 km",
+          "source": "zh_wikipedia",
+          "source_name": "zh_wikipedia",
+          "source_role": "primary",
+          "origin": "html_fallback",
+          "source_title": "太阳",
+          "schema_version": "zh_wikipedia_single_source_v1"
+        }
+      ],
+      "fallback_results": [
+        {
+          "subject": "太阳",
+          "relation": "HAS_RADIUS",
+          "object": "695,000 km",
+          "source": "zh_wikipedia",
+          "source_name": "zh_wikipedia",
+          "source_role": "primary",
+          "origin": "html_fallback",
+          "source_title": "太阳",
+          "schema_version": "zh_wikipedia_single_source_v1"
+        }
+      ],
+      "exact_match": true,
+      "top_k_hit": true,
+      "expected_top_k_hit": true,
+      "top_k_expectation_met": true,
+      "path_correct": true,
+      "allowed_final_source_ok": true,
+      "pass": true,
+      "source_metadata": {
+        "subject": "太阳",
+        "relation": "HAS_RADIUS",
+        "object": "695,000 km",
+        "source": "zh_wikipedia",
+        "source_name": "zh_wikipedia",
+        "source_role": "primary",
+        "origin": "html_fallback",
+        "source_title": "太阳",
+        "schema_version": "zh_wikipedia_single_source_v1"
+      },
+      "metadata_complete": true,
+      "source_filter_failed": false,
+      "inferred_boundary_break": false,
+      "fallback_exact_match": true,
+      "fallback_top_k_hit": true,
+      "consistency_match": true,
+      "failure_category": null,
+      "expected_failure_if_any": "path routing error"
+    },
+    {
+      "id": "atmosphere_mars_yes",
+      "category": "HAS_ATMOSPHERE",
+      "query_kind": "structured",
+      "query": "火星有大气吗",
+      "expected_path": "graph",
+      "actual_path": "graph",
+      "allowed_final_sources": [
+        "graph"
+      ],
+      "expected_result": [
+        {
+          "subject": "火星",
+          "relation": "HAS_ATMOSPHERE",
+          "object": "CO2"
+        },
+        {
+          "subject": "火星",
+          "relation": "HAS_ATMOSPHERE",
+          "object": "N2"
+        },
+        {
+          "subject": "火星",
+          "relation": "HAS_ATMOSPHERE",
+          "object": "Ar"
+        },
+        {
+          "subject": "火星",
+          "relation": "HAS_ATMOSPHERE",
+          "object": "O2"
+        }
+      ],
+      "normalized_expected_value": null,
+      "normalized_returned_value": "n2",
+      "returned_result": {
+        "subject": "火星",
+        "relation": "HAS_ATMOSPHERE",
+        "object": "N2",
+        "source": "zh_wikipedia",
+        "source_name": "zh_wikipedia",
+        "source_role": "primary",
+        "origin": "html_fallback",
+        "source_title": "火星",
+        "schema_version": "zh_wikipedia_single_source_v1"
+      },
+      "top_k_results": [
+        {
+          "subject": "火星",
+          "relation": "HAS_ATMOSPHERE",
+          "object": "N2",
+          "source": "zh_wikipedia",
+          "source_name": "zh_wikipedia",
+          "source_role": "primary",
+          "origin": "html_fallback",
+          "source_title": "火星",
+          "schema_version": "zh_wikipedia_single_source_v1"
+        },
+        {
+          "subject": "火星",
+          "relation": "HAS_ATMOSPHERE",
+          "object": "O2",
+          "source": "zh_wikipedia",
+          "source_name": "zh_wikipedia",
+          "source_role": "primary",
+          "origin": "html_fallback",
+          "source_title": "火星",
+          "schema_version": "zh_wikipedia_single_source_v1"
+        },
+        {
+          "subject": "火星",
+          "relation": "HAS_ATMOSPHERE",
+          "object": "Ar",
+          "source": "zh_wikipedia",
+          "source_name": "zh_wikipedia",
+          "source_role": "primary",
+          "origin": "html_fallback",
+          "source_title": "火星",
+          "schema_version": "zh_wikipedia_single_source_v1"
+        },
+        {
+          "subject": "火星",
+          "relation": "HAS_ATMOSPHERE",
+          "object": "CO2",
+          "source": "zh_wikipedia",
+          "source_name": "zh_wikipedia",
+          "source_role": "primary",
+          "origin": "html_fallback",
+          "source_title": "火星",
+          "schema_version": "zh_wikipedia_single_source_v1"
+        },
+        {
+          "subject": "火星",
+          "relation": "HAS_ATMOSPHERE",
+          "object": "二氧化碳",
+          "source": "zh_wikipedia",
+          "source_name": "zh_wikipedia",
+          "source_role": "primary",
+          "origin": "internal_link",
+          "source_title": "火星",
+          "schema_version": "zh_wikipedia_single_source_v1"
+        }
+      ],
+      "graph_only_results": [
+        {
+          "subject": "火星",
+          "relation": "HAS_ATMOSPHERE",
+          "object": "N2",
+          "source": "zh_wikipedia",
+          "source_name": "zh_wikipedia",
+          "source_role": "primary",
+          "origin": "html_fallback",
+          "source_title": "火星",
+          "schema_version": "zh_wikipedia_single_source_v1"
+        },
+        {
+          "subject": "火星",
+          "relation": "HAS_ATMOSPHERE",
+          "object": "O2",
+          "source": "zh_wikipedia",
+          "source_name": "zh_wikipedia",
+          "source_role": "primary",
+          "origin": "html_fallback",
+          "source_title": "火星",
+          "schema_version": "zh_wikipedia_single_source_v1"
+        },
+        {
+          "subject": "火星",
+          "relation": "HAS_ATMOSPHERE",
+          "object": "Ar",
+          "source": "zh_wikipedia",
+          "source_name": "zh_wikipedia",
+          "source_role": "primary",
+          "origin": "html_fallback",
+          "source_title": "火星",
+          "schema_version": "zh_wikipedia_single_source_v1"
+        },
+        {
+          "subject": "火星",
+          "relation": "HAS_ATMOSPHERE",
+          "object": "CO2",
+          "source": "zh_wikipedia",
+          "source_name": "zh_wikipedia",
+          "source_role": "primary",
+          "origin": "html_fallback",
+          "source_title": "火星",
+          "schema_version": "zh_wikipedia_single_source_v1"
+        },
+        {
+          "subject": "火星",
+          "relation": "HAS_ATMOSPHERE",
+          "object": "二氧化碳",
+          "source": "zh_wikipedia",
+          "source_name": "zh_wikipedia",
+          "source_role": "primary",
+          "origin": "internal_link",
+          "source_title": "火星",
+          "schema_version": "zh_wikipedia_single_source_v1"
+        }
+      ],
+      "fallback_results": [
+        {
+          "subject": "火星",
+          "relation": "HAS_ATMOSPHERE",
+          "object": "CO2",
+          "source": "zh_wikipedia",
+          "source_name": "zh_wikipedia",
+          "source_role": "primary",
+          "origin": "html_fallback",
+          "source_title": "火星",
+          "schema_version": "zh_wikipedia_single_source_v1"
+        },
+        {
+          "subject": "火星",
+          "relation": "HAS_ATMOSPHERE",
+          "object": "N2",
+          "source": "zh_wikipedia",
+          "source_name": "zh_wikipedia",
+          "source_role": "primary",
+          "origin": "html_fallback",
+          "source_title": "火星",
+          "schema_version": "zh_wikipedia_single_source_v1"
+        },
+        {
+          "subject": "火星",
+          "relation": "HAS_ATMOSPHERE",
+          "object": "Ar",
+          "source": "zh_wikipedia",
+          "source_name": "zh_wikipedia",
+          "source_role": "primary",
+          "origin": "html_fallback",
+          "source_title": "火星",
+          "schema_version": "zh_wikipedia_single_source_v1"
+        },
+        {
+          "subject": "火星",
+          "relation": "HAS_ATMOSPHERE",
+          "object": "O2",
+          "source": "zh_wikipedia",
+          "source_name": "zh_wikipedia",
+          "source_role": "primary",
+          "origin": "html_fallback",
+          "source_title": "火星",
+          "schema_version": "zh_wikipedia_single_source_v1"
+        }
+      ],
+      "exact_match": true,
+      "top_k_hit": true,
+      "expected_top_k_hit": true,
+      "top_k_expectation_met": true,
+      "path_correct": true,
+      "allowed_final_source_ok": true,
+      "pass": true,
+      "source_metadata": {
+        "subject": "火星",
+        "relation": "HAS_ATMOSPHERE",
+        "object": "N2",
+        "source": "zh_wikipedia",
+        "source_name": "zh_wikipedia",
+        "source_role": "primary",
+        "origin": "html_fallback",
+        "source_title": "火星",
+        "schema_version": "zh_wikipedia_single_source_v1"
+      },
+      "metadata_complete": true,
+      "source_filter_failed": false,
+      "inferred_boundary_break": false,
+      "fallback_exact_match": true,
+      "fallback_top_k_hit": true,
+      "consistency_match": false,
+      "failure_category": null,
+      "expected_failure_if_any": "path routing error"
+    },
+    {
+      "id": "atmosphere_mars_composition",
+      "category": "HAS_ATMOSPHERE",
+      "query_kind": "structured",
+      "query": "火星大气成分",
+      "expected_path": "graph",
+      "actual_path": "graph",
+      "allowed_final_sources": [
+        "graph"
+      ],
+      "expected_result": [
+        {
+          "subject": "火星",
+          "relation": "HAS_ATMOSPHERE",
+          "object": "CO2"
+        },
+        {
+          "subject": "火星",
+          "relation": "HAS_ATMOSPHERE",
+          "object": "N2"
+        },
+        {
+          "subject": "火星",
+          "relation": "HAS_ATMOSPHERE",
+          "object": "Ar"
+        },
+        {
+          "subject": "火星",
+          "relation": "HAS_ATMOSPHERE",
+          "object": "O2"
+        }
+      ],
+      "normalized_expected_value": null,
+      "normalized_returned_value": "n2",
+      "returned_result": {
+        "subject": "火星",
+        "relation": "HAS_ATMOSPHERE",
+        "object": "N2",
+        "source": "zh_wikipedia",
+        "source_name": "zh_wikipedia",
+        "source_role": "primary",
+        "origin": "html_fallback",
+        "source_title": "火星",
+        "schema_version": "zh_wikipedia_single_source_v1"
+      },
+      "top_k_results": [
+        {
+          "subject": "火星",
+          "relation": "HAS_ATMOSPHERE",
+          "object": "N2",
+          "source": "zh_wikipedia",
+          "source_name": "zh_wikipedia",
+          "source_role": "primary",
+          "origin": "html_fallback",
+          "source_title": "火星",
+          "schema_version": "zh_wikipedia_single_source_v1"
+        },
+        {
+          "subject": "火星",
+          "relation": "HAS_ATMOSPHERE",
+          "object": "O2",
+          "source": "zh_wikipedia",
+          "source_name": "zh_wikipedia",
+          "source_role": "primary",
+          "origin": "html_fallback",
+          "source_title": "火星",
+          "schema_version": "zh_wikipedia_single_source_v1"
+        },
+        {
+          "subject": "火星",
+          "relation": "HAS_ATMOSPHERE",
+          "object": "Ar",
+          "source": "zh_wikipedia",
+          "source_name": "zh_wikipedia",
+          "source_role": "primary",
+          "origin": "html_fallback",
+          "source_title": "火星",
+          "schema_version": "zh_wikipedia_single_source_v1"
+        },
+        {
+          "subject": "火星",
+          "relation": "HAS_ATMOSPHERE",
+          "object": "CO2",
+          "source": "zh_wikipedia",
+          "source_name": "zh_wikipedia",
+          "source_role": "primary",
+          "origin": "html_fallback",
+          "source_title": "火星",
+          "schema_version": "zh_wikipedia_single_source_v1"
+        },
+        {
+          "subject": "火星",
+          "relation": "HAS_ATMOSPHERE",
+          "object": "二氧化碳",
+          "source": "zh_wikipedia",
+          "source_name": "zh_wikipedia",
+          "source_role": "primary",
+          "origin": "internal_link",
+          "source_title": "火星",
+          "schema_version": "zh_wikipedia_single_source_v1"
+        }
+      ],
+      "graph_only_results": [
+        {
+          "subject": "火星",
+          "relation": "HAS_ATMOSPHERE",
+          "object": "N2",
+          "source": "zh_wikipedia",
+          "source_name": "zh_wikipedia",
+          "source_role": "primary",
+          "origin": "html_fallback",
+          "source_title": "火星",
+          "schema_version": "zh_wikipedia_single_source_v1"
+        },
+        {
+          "subject": "火星",
+          "relation": "HAS_ATMOSPHERE",
+          "object": "O2",
+          "source": "zh_wikipedia",
+          "source_name": "zh_wikipedia",
+          "source_role": "primary",
+          "origin": "html_fallback",
+          "source_title": "火星",
+          "schema_version": "zh_wikipedia_single_source_v1"
+        },
+        {
+          "subject": "火星",
+          "relation": "HAS_ATMOSPHERE",
+          "object": "Ar",
+          "source": "zh_wikipedia",
+          "source_name": "zh_wikipedia",
+          "source_role": "primary",
+          "origin": "html_fallback",
+          "source_title": "火星",
+          "schema_version": "zh_wikipedia_single_source_v1"
+        },
+        {
+          "subject": "火星",
+          "relation": "HAS_ATMOSPHERE",
+          "object": "CO2",
+          "source": "zh_wikipedia",
+          "source_name": "zh_wikipedia",
+          "source_role": "primary",
+          "origin": "html_fallback",
+          "source_title": "火星",
+          "schema_version": "zh_wikipedia_single_source_v1"
+        },
+        {
+          "subject": "火星",
+          "relation": "HAS_ATMOSPHERE",
+          "object": "二氧化碳",
+          "source": "zh_wikipedia",
+          "source_name": "zh_wikipedia",
+          "source_role": "primary",
+          "origin": "internal_link",
+          "source_title": "火星",
+          "schema_version": "zh_wikipedia_single_source_v1"
+        }
+      ],
+      "fallback_results": [
+        {
+          "subject": "火星",
+          "relation": "HAS_ATMOSPHERE",
+          "object": "N2",
+          "source": "zh_wikipedia",
+          "source_name": "zh_wikipedia",
+          "source_role": "primary",
+          "origin": "html_fallback",
+          "source_title": "火星",
+          "schema_version": "zh_wikipedia_single_source_v1"
+        },
+        {
+          "subject": "火星",
+          "relation": "HAS_ATMOSPHERE",
+          "object": "Ar",
+          "source": "zh_wikipedia",
+          "source_name": "zh_wikipedia",
+          "source_role": "primary",
+          "origin": "html_fallback",
+          "source_title": "火星",
+          "schema_version": "zh_wikipedia_single_source_v1"
+        },
+        {
+          "subject": "火星",
+          "relation": "HAS_ATMOSPHERE",
+          "object": "O2",
+          "source": "zh_wikipedia",
+          "source_name": "zh_wikipedia",
+          "source_role": "primary",
+          "origin": "html_fallback",
+          "source_title": "火星",
+          "schema_version": "zh_wikipedia_single_source_v1"
+        },
+        {
+          "subject": "火星",
+          "relation": "HAS_ATMOSPHERE",
+          "object": "CO2",
+          "source": "zh_wikipedia",
+          "source_name": "zh_wikipedia",
+          "source_role": "primary",
+          "origin": "html_fallback",
+          "source_title": "火星",
+          "schema_version": "zh_wikipedia_single_source_v1"
+        }
+      ],
+      "exact_match": true,
+      "top_k_hit": true,
+      "expected_top_k_hit": true,
+      "top_k_expectation_met": true,
+      "path_correct": true,
+      "allowed_final_source_ok": true,
+      "pass": true,
+      "source_metadata": {
+        "subject": "火星",
+        "relation": "HAS_ATMOSPHERE",
+        "object": "N2",
+        "source": "zh_wikipedia",
+        "source_name": "zh_wikipedia",
+        "source_role": "primary",
+        "origin": "html_fallback",
+        "source_title": "火星",
+        "schema_version": "zh_wikipedia_single_source_v1"
+      },
+      "metadata_complete": true,
+      "source_filter_failed": false,
+      "inferred_boundary_break": false,
+      "fallback_exact_match": true,
+      "fallback_top_k_hit": true,
+      "consistency_match": true,
+      "failure_category": null,
+      "expected_failure_if_any": "path routing error"
+    },
+    {
+      "id": "atmosphere_mars_what",
+      "category": "HAS_ATMOSPHERE",
+      "query_kind": "structured",
+      "query": "火星大气是什么",
+      "expected_path": "graph",
+      "actual_path": "graph",
+      "allowed_final_sources": [
+        "graph"
+      ],
+      "expected_result": [
+        {
+          "subject": "火星",
+          "relation": "HAS_ATMOSPHERE",
+          "object": "CO2"
+        },
+        {
+          "subject": "火星",
+          "relation": "HAS_ATMOSPHERE",
+          "object": "N2"
+        },
+        {
+          "subject": "火星",
+          "relation": "HAS_ATMOSPHERE",
+          "object": "Ar"
+        },
+        {
+          "subject": "火星",
+          "relation": "HAS_ATMOSPHERE",
+          "object": "O2"
+        }
+      ],
+      "normalized_expected_value": null,
+      "normalized_returned_value": "n2",
+      "returned_result": {
+        "subject": "火星",
+        "relation": "HAS_ATMOSPHERE",
+        "object": "N2",
+        "source": "zh_wikipedia",
+        "source_name": "zh_wikipedia",
+        "source_role": "primary",
+        "origin": "html_fallback",
+        "source_title": "火星",
+        "schema_version": "zh_wikipedia_single_source_v1"
+      },
+      "top_k_results": [
+        {
+          "subject": "火星",
+          "relation": "HAS_ATMOSPHERE",
+          "object": "N2",
+          "source": "zh_wikipedia",
+          "source_name": "zh_wikipedia",
+          "source_role": "primary",
+          "origin": "html_fallback",
+          "source_title": "火星",
+          "schema_version": "zh_wikipedia_single_source_v1"
+        },
+        {
+          "subject": "火星",
+          "relation": "HAS_ATMOSPHERE",
+          "object": "O2",
+          "source": "zh_wikipedia",
+          "source_name": "zh_wikipedia",
+          "source_role": "primary",
+          "origin": "html_fallback",
+          "source_title": "火星",
+          "schema_version": "zh_wikipedia_single_source_v1"
+        },
+        {
+          "subject": "火星",
+          "relation": "HAS_ATMOSPHERE",
+          "object": "Ar",
+          "source": "zh_wikipedia",
+          "source_name": "zh_wikipedia",
+          "source_role": "primary",
+          "origin": "html_fallback",
+          "source_title": "火星",
+          "schema_version": "zh_wikipedia_single_source_v1"
+        },
+        {
+          "subject": "火星",
+          "relation": "HAS_ATMOSPHERE",
+          "object": "CO2",
+          "source": "zh_wikipedia",
+          "source_name": "zh_wikipedia",
+          "source_role": "primary",
+          "origin": "html_fallback",
+          "source_title": "火星",
+          "schema_version": "zh_wikipedia_single_source_v1"
+        },
+        {
+          "subject": "火星",
+          "relation": "HAS_ATMOSPHERE",
+          "object": "二氧化碳",
+          "source": "zh_wikipedia",
+          "source_name": "zh_wikipedia",
+          "source_role": "primary",
+          "origin": "internal_link",
+          "source_title": "火星",
+          "schema_version": "zh_wikipedia_single_source_v1"
+        }
+      ],
+      "graph_only_results": [
+        {
+          "subject": "火星",
+          "relation": "HAS_ATMOSPHERE",
+          "object": "N2",
+          "source": "zh_wikipedia",
+          "source_name": "zh_wikipedia",
+          "source_role": "primary",
+          "origin": "html_fallback",
+          "source_title": "火星",
+          "schema_version": "zh_wikipedia_single_source_v1"
+        },
+        {
+          "subject": "火星",
+          "relation": "HAS_ATMOSPHERE",
+          "object": "O2",
+          "source": "zh_wikipedia",
+          "source_name": "zh_wikipedia",
+          "source_role": "primary",
+          "origin": "html_fallback",
+          "source_title": "火星",
+          "schema_version": "zh_wikipedia_single_source_v1"
+        },
+        {
+          "subject": "火星",
+          "relation": "HAS_ATMOSPHERE",
+          "object": "Ar",
+          "source": "zh_wikipedia",
+          "source_name": "zh_wikipedia",
+          "source_role": "primary",
+          "origin": "html_fallback",
+          "source_title": "火星",
+          "schema_version": "zh_wikipedia_single_source_v1"
+        },
+        {
+          "subject": "火星",
+          "relation": "HAS_ATMOSPHERE",
+          "object": "CO2",
+          "source": "zh_wikipedia",
+          "source_name": "zh_wikipedia",
+          "source_role": "primary",
+          "origin": "html_fallback",
+          "source_title": "火星",
+          "schema_version": "zh_wikipedia_single_source_v1"
+        },
+        {
+          "subject": "火星",
+          "relation": "HAS_ATMOSPHERE",
+          "object": "二氧化碳",
+          "source": "zh_wikipedia",
+          "source_name": "zh_wikipedia",
+          "source_role": "primary",
+          "origin": "internal_link",
+          "source_title": "火星",
+          "schema_version": "zh_wikipedia_single_source_v1"
+        }
+      ],
+      "fallback_results": [
+        {
+          "subject": "火星",
+          "relation": "HAS_ATMOSPHERE",
+          "object": "CO2",
+          "source": "zh_wikipedia",
+          "source_name": "zh_wikipedia",
+          "source_role": "primary",
+          "origin": "html_fallback",
+          "source_title": "火星",
+          "schema_version": "zh_wikipedia_single_source_v1"
+        },
+        {
+          "subject": "火星",
+          "relation": "HAS_ATMOSPHERE",
+          "object": "N2",
+          "source": "zh_wikipedia",
+          "source_name": "zh_wikipedia",
+          "source_role": "primary",
+          "origin": "html_fallback",
+          "source_title": "火星",
+          "schema_version": "zh_wikipedia_single_source_v1"
+        },
+        {
+          "subject": "火星",
+          "relation": "HAS_ATMOSPHERE",
+          "object": "Ar",
+          "source": "zh_wikipedia",
+          "source_name": "zh_wikipedia",
+          "source_role": "primary",
+          "origin": "html_fallback",
+          "source_title": "火星",
+          "schema_version": "zh_wikipedia_single_source_v1"
+        },
+        {
+          "subject": "火星",
+          "relation": "HAS_ATMOSPHERE",
+          "object": "O2",
+          "source": "zh_wikipedia",
+          "source_name": "zh_wikipedia",
+          "source_role": "primary",
+          "origin": "html_fallback",
+          "source_title": "火星",
+          "schema_version": "zh_wikipedia_single_source_v1"
+        }
+      ],
+      "exact_match": true,
+      "top_k_hit": true,
+      "expected_top_k_hit": true,
+      "top_k_expectation_met": true,
+      "path_correct": true,
+      "allowed_final_source_ok": true,
+      "pass": true,
+      "source_metadata": {
+        "subject": "火星",
+        "relation": "HAS_ATMOSPHERE",
+        "object": "N2",
+        "source": "zh_wikipedia",
+        "source_name": "zh_wikipedia",
+        "source_role": "primary",
+        "origin": "html_fallback",
+        "source_title": "火星",
+        "schema_version": "zh_wikipedia_single_source_v1"
+      },
+      "metadata_complete": true,
+      "source_filter_failed": false,
+      "inferred_boundary_break": false,
+      "fallback_exact_match": true,
+      "fallback_top_k_hit": true,
+      "consistency_match": false,
+      "failure_category": null,
+      "expected_failure_if_any": "path routing error"
+    },
+    {
+      "id": "atmosphere_earth_yes",
+      "category": "HAS_ATMOSPHERE",
+      "query_kind": "structured",
+      "query": "地球有大气吗",
+      "expected_path": "graph",
+      "actual_path": "graph",
+      "allowed_final_sources": [
+        "graph"
+      ],
+      "expected_result": [
+        {
+          "subject": "地球",
+          "relation": "HAS_ATMOSPHERE",
+          "object": "N2"
+        },
+        {
+          "subject": "地球",
+          "relation": "HAS_ATMOSPHERE",
+          "object": "O2"
+        },
+        {
+          "subject": "地球",
+          "relation": "HAS_ATMOSPHERE",
+          "object": "Ar"
+        },
+        {
+          "subject": "地球",
+          "relation": "HAS_ATMOSPHERE",
+          "object": "H2O"
+        },
+        {
+          "subject": "地球",
+          "relation": "HAS_ATMOSPHERE",
+          "object": "CO2"
+        }
+      ],
+      "normalized_expected_value": null,
+      "normalized_returned_value": "n2",
+      "returned_result": {
+        "subject": "地球",
+        "relation": "HAS_ATMOSPHERE",
+        "object": "N2",
+        "source": "zh_wikipedia",
+        "source_name": "zh_wikipedia",
+        "source_role": "primary",
+        "origin": "html_fallback",
+        "source_title": "地球",
+        "schema_version": "zh_wikipedia_single_source_v1"
+      },
+      "top_k_results": [
+        {
+          "subject": "地球",
+          "relation": "HAS_ATMOSPHERE",
+          "object": "N2",
+          "source": "zh_wikipedia",
+          "source_name": "zh_wikipedia",
+          "source_role": "primary",
+          "origin": "html_fallback",
+          "source_title": "地球",
+          "schema_version": "zh_wikipedia_single_source_v1"
+        },
+        {
+          "subject": "地球",
+          "relation": "HAS_ATMOSPHERE",
+          "object": "O2",
+          "source": "zh_wikipedia",
+          "source_name": "zh_wikipedia",
+          "source_role": "primary",
+          "origin": "html_fallback",
+          "source_title": "地球",
+          "schema_version": "zh_wikipedia_single_source_v1"
+        },
+        {
+          "subject": "地球",
+          "relation": "HAS_ATMOSPHERE",
+          "object": "Ar",
+          "source": "zh_wikipedia",
+          "source_name": "zh_wikipedia",
+          "source_role": "primary",
+          "origin": "html_fallback",
+          "source_title": "地球",
+          "schema_version": "zh_wikipedia_single_source_v1"
+        },
+        {
+          "subject": "地球",
+          "relation": "HAS_ATMOSPHERE",
+          "object": "H2O",
+          "source": "zh_wikipedia",
+          "source_name": "zh_wikipedia",
+          "source_role": "primary",
+          "origin": "html_fallback",
+          "source_title": "地球",
+          "schema_version": "zh_wikipedia_single_source_v1"
+        },
+        {
+          "subject": "地球",
+          "relation": "HAS_ATMOSPHERE",
+          "object": "CO2",
+          "source": "zh_wikipedia",
+          "source_name": "zh_wikipedia",
+          "source_role": "primary",
+          "origin": "html_fallback",
+          "source_title": "地球",
+          "schema_version": "zh_wikipedia_single_source_v1"
+        }
+      ],
+      "graph_only_results": [
+        {
+          "subject": "地球",
+          "relation": "HAS_ATMOSPHERE",
+          "object": "N2",
+          "source": "zh_wikipedia",
+          "source_name": "zh_wikipedia",
+          "source_role": "primary",
+          "origin": "html_fallback",
+          "source_title": "地球",
+          "schema_version": "zh_wikipedia_single_source_v1"
+        },
+        {
+          "subject": "地球",
+          "relation": "HAS_ATMOSPHERE",
+          "object": "O2",
+          "source": "zh_wikipedia",
+          "source_name": "zh_wikipedia",
+          "source_role": "primary",
+          "origin": "html_fallback",
+          "source_title": "地球",
+          "schema_version": "zh_wikipedia_single_source_v1"
+        },
+        {
+          "subject": "地球",
+          "relation": "HAS_ATMOSPHERE",
+          "object": "Ar",
+          "source": "zh_wikipedia",
+          "source_name": "zh_wikipedia",
+          "source_role": "primary",
+          "origin": "html_fallback",
+          "source_title": "地球",
+          "schema_version": "zh_wikipedia_single_source_v1"
+        },
+        {
+          "subject": "地球",
+          "relation": "HAS_ATMOSPHERE",
+          "object": "H2O",
+          "source": "zh_wikipedia",
+          "source_name": "zh_wikipedia",
+          "source_role": "primary",
+          "origin": "html_fallback",
+          "source_title": "地球",
+          "schema_version": "zh_wikipedia_single_source_v1"
+        },
+        {
+          "subject": "地球",
+          "relation": "HAS_ATMOSPHERE",
+          "object": "CO2",
+          "source": "zh_wikipedia",
+          "source_name": "zh_wikipedia",
+          "source_role": "primary",
+          "origin": "html_fallback",
+          "source_title": "地球",
+          "schema_version": "zh_wikipedia_single_source_v1"
+        }
+      ],
+      "fallback_results": [
+        {
+          "subject": "地球",
+          "relation": "HAS_ATMOSPHERE",
+          "object": "N2",
+          "source": "zh_wikipedia",
+          "source_name": "zh_wikipedia",
+          "source_role": "primary",
+          "origin": "html_fallback",
+          "source_title": "地球",
+          "schema_version": "zh_wikipedia_single_source_v1"
+        },
+        {
+          "subject": "地球",
+          "relation": "HAS_ATMOSPHERE",
+          "object": "O2",
+          "source": "zh_wikipedia",
+          "source_name": "zh_wikipedia",
+          "source_role": "primary",
+          "origin": "html_fallback",
+          "source_title": "地球",
+          "schema_version": "zh_wikipedia_single_source_v1"
+        },
+        {
+          "subject": "地球",
+          "relation": "HAS_ATMOSPHERE",
+          "object": "Ar",
+          "source": "zh_wikipedia",
+          "source_name": "zh_wikipedia",
+          "source_role": "primary",
+          "origin": "html_fallback",
+          "source_title": "地球",
+          "schema_version": "zh_wikipedia_single_source_v1"
+        },
+        {
+          "subject": "地球",
+          "relation": "HAS_ATMOSPHERE",
+          "object": "H2O",
+          "source": "zh_wikipedia",
+          "source_name": "zh_wikipedia",
+          "source_role": "primary",
+          "origin": "html_fallback",
+          "source_title": "地球",
+          "schema_version": "zh_wikipedia_single_source_v1"
+        },
+        {
+          "subject": "地球",
+          "relation": "HAS_ATMOSPHERE",
+          "object": "CO2",
+          "source": "zh_wikipedia",
+          "source_name": "zh_wikipedia",
+          "source_role": "primary",
+          "origin": "html_fallback",
+          "source_title": "地球",
+          "schema_version": "zh_wikipedia_single_source_v1"
+        }
+      ],
+      "exact_match": true,
+      "top_k_hit": true,
+      "expected_top_k_hit": true,
+      "top_k_expectation_met": true,
+      "path_correct": true,
+      "allowed_final_source_ok": true,
+      "pass": true,
+      "source_metadata": {
+        "subject": "地球",
+        "relation": "HAS_ATMOSPHERE",
+        "object": "N2",
+        "source": "zh_wikipedia",
+        "source_name": "zh_wikipedia",
+        "source_role": "primary",
+        "origin": "html_fallback",
+        "source_title": "地球",
+        "schema_version": "zh_wikipedia_single_source_v1"
+      },
+      "metadata_complete": true,
+      "source_filter_failed": false,
+      "inferred_boundary_break": false,
+      "fallback_exact_match": true,
+      "fallback_top_k_hit": true,
+      "consistency_match": true,
+      "failure_category": null,
+      "expected_failure_if_any": "path routing error"
+    },
+    {
+      "id": "atmosphere_earth_composition",
+      "category": "HAS_ATMOSPHERE",
+      "query_kind": "structured",
+      "query": "地球大气成分",
+      "expected_path": "graph",
+      "actual_path": "graph",
+      "allowed_final_sources": [
+        "graph"
+      ],
+      "expected_result": [
+        {
+          "subject": "地球",
+          "relation": "HAS_ATMOSPHERE",
+          "object": "N2"
+        },
+        {
+          "subject": "地球",
+          "relation": "HAS_ATMOSPHERE",
+          "object": "O2"
+        },
+        {
+          "subject": "地球",
+          "relation": "HAS_ATMOSPHERE",
+          "object": "Ar"
+        },
+        {
+          "subject": "地球",
+          "relation": "HAS_ATMOSPHERE",
+          "object": "H2O"
+        },
+        {
+          "subject": "地球",
+          "relation": "HAS_ATMOSPHERE",
+          "object": "CO2"
+        }
+      ],
+      "normalized_expected_value": null,
+      "normalized_returned_value": "n2",
+      "returned_result": {
+        "subject": "地球",
+        "relation": "HAS_ATMOSPHERE",
+        "object": "N2",
+        "source": "zh_wikipedia",
+        "source_name": "zh_wikipedia",
+        "source_role": "primary",
+        "origin": "html_fallback",
+        "source_title": "地球",
+        "schema_version": "zh_wikipedia_single_source_v1"
+      },
+      "top_k_results": [
+        {
+          "subject": "地球",
+          "relation": "HAS_ATMOSPHERE",
+          "object": "N2",
+          "source": "zh_wikipedia",
+          "source_name": "zh_wikipedia",
+          "source_role": "primary",
+          "origin": "html_fallback",
+          "source_title": "地球",
+          "schema_version": "zh_wikipedia_single_source_v1"
+        },
+        {
+          "subject": "地球",
+          "relation": "HAS_ATMOSPHERE",
+          "object": "O2",
+          "source": "zh_wikipedia",
+          "source_name": "zh_wikipedia",
+          "source_role": "primary",
+          "origin": "html_fallback",
+          "source_title": "地球",
+          "schema_version": "zh_wikipedia_single_source_v1"
+        },
+        {
+          "subject": "地球",
+          "relation": "HAS_ATMOSPHERE",
+          "object": "Ar",
+          "source": "zh_wikipedia",
+          "source_name": "zh_wikipedia",
+          "source_role": "primary",
+          "origin": "html_fallback",
+          "source_title": "地球",
+          "schema_version": "zh_wikipedia_single_source_v1"
+        },
+        {
+          "subject": "地球",
+          "relation": "HAS_ATMOSPHERE",
+          "object": "H2O",
+          "source": "zh_wikipedia",
+          "source_name": "zh_wikipedia",
+          "source_role": "primary",
+          "origin": "html_fallback",
+          "source_title": "地球",
+          "schema_version": "zh_wikipedia_single_source_v1"
+        },
+        {
+          "subject": "地球",
+          "relation": "HAS_ATMOSPHERE",
+          "object": "CO2",
+          "source": "zh_wikipedia",
+          "source_name": "zh_wikipedia",
+          "source_role": "primary",
+          "origin": "html_fallback",
+          "source_title": "地球",
+          "schema_version": "zh_wikipedia_single_source_v1"
+        }
+      ],
+      "graph_only_results": [
+        {
+          "subject": "地球",
+          "relation": "HAS_ATMOSPHERE",
+          "object": "N2",
+          "source": "zh_wikipedia",
+          "source_name": "zh_wikipedia",
+          "source_role": "primary",
+          "origin": "html_fallback",
+          "source_title": "地球",
+          "schema_version": "zh_wikipedia_single_source_v1"
+        },
+        {
+          "subject": "地球",
+          "relation": "HAS_ATMOSPHERE",
+          "object": "O2",
+          "source": "zh_wikipedia",
+          "source_name": "zh_wikipedia",
+          "source_role": "primary",
+          "origin": "html_fallback",
+          "source_title": "地球",
+          "schema_version": "zh_wikipedia_single_source_v1"
+        },
+        {
+          "subject": "地球",
+          "relation": "HAS_ATMOSPHERE",
+          "object": "Ar",
+          "source": "zh_wikipedia",
+          "source_name": "zh_wikipedia",
+          "source_role": "primary",
+          "origin": "html_fallback",
+          "source_title": "地球",
+          "schema_version": "zh_wikipedia_single_source_v1"
+        },
+        {
+          "subject": "地球",
+          "relation": "HAS_ATMOSPHERE",
+          "object": "H2O",
+          "source": "zh_wikipedia",
+          "source_name": "zh_wikipedia",
+          "source_role": "primary",
+          "origin": "html_fallback",
+          "source_title": "地球",
+          "schema_version": "zh_wikipedia_single_source_v1"
+        },
+        {
+          "subject": "地球",
+          "relation": "HAS_ATMOSPHERE",
+          "object": "CO2",
+          "source": "zh_wikipedia",
+          "source_name": "zh_wikipedia",
+          "source_role": "primary",
+          "origin": "html_fallback",
+          "source_title": "地球",
+          "schema_version": "zh_wikipedia_single_source_v1"
+        }
+      ],
+      "fallback_results": [
+        {
+          "subject": "地球",
+          "relation": "HAS_ATMOSPHERE",
+          "object": "N2",
+          "source": "zh_wikipedia",
+          "source_name": "zh_wikipedia",
+          "source_role": "primary",
+          "origin": "html_fallback",
+          "source_title": "地球",
+          "schema_version": "zh_wikipedia_single_source_v1"
+        },
+        {
+          "subject": "地球",
+          "relation": "HAS_ATMOSPHERE",
+          "object": "O2",
+          "source": "zh_wikipedia",
+          "source_name": "zh_wikipedia",
+          "source_role": "primary",
+          "origin": "html_fallback",
+          "source_title": "地球",
+          "schema_version": "zh_wikipedia_single_source_v1"
+        },
+        {
+          "subject": "地球",
+          "relation": "HAS_ATMOSPHERE",
+          "object": "Ar",
+          "source": "zh_wikipedia",
+          "source_name": "zh_wikipedia",
+          "source_role": "primary",
+          "origin": "html_fallback",
+          "source_title": "地球",
+          "schema_version": "zh_wikipedia_single_source_v1"
+        },
+        {
+          "subject": "地球",
+          "relation": "HAS_ATMOSPHERE",
+          "object": "H2O",
+          "source": "zh_wikipedia",
+          "source_name": "zh_wikipedia",
+          "source_role": "primary",
+          "origin": "html_fallback",
+          "source_title": "地球",
+          "schema_version": "zh_wikipedia_single_source_v1"
+        },
+        {
+          "subject": "地球",
+          "relation": "HAS_ATMOSPHERE",
+          "object": "CO2",
+          "source": "zh_wikipedia",
+          "source_name": "zh_wikipedia",
+          "source_role": "primary",
+          "origin": "html_fallback",
+          "source_title": "地球",
+          "schema_version": "zh_wikipedia_single_source_v1"
+        }
+      ],
+      "exact_match": true,
+      "top_k_hit": true,
+      "expected_top_k_hit": true,
+      "top_k_expectation_met": true,
+      "path_correct": true,
+      "allowed_final_source_ok": true,
+      "pass": true,
+      "source_metadata": {
+        "subject": "地球",
+        "relation": "HAS_ATMOSPHERE",
+        "object": "N2",
+        "source": "zh_wikipedia",
+        "source_name": "zh_wikipedia",
+        "source_role": "primary",
+        "origin": "html_fallback",
+        "source_title": "地球",
+        "schema_version": "zh_wikipedia_single_source_v1"
+      },
+      "metadata_complete": true,
+      "source_filter_failed": false,
+      "inferred_boundary_break": false,
+      "fallback_exact_match": true,
+      "fallback_top_k_hit": true,
+      "consistency_match": true,
+      "failure_category": null,
+      "expected_failure_if_any": "path routing error"
+    },
+    {
+      "id": "discover_titania_graph",
+      "category": "DISCOVERED_BY",
+      "query_kind": "structured",
+      "query": "谁发现了天卫四",
+      "expected_path": "graph",
+      "actual_path": "graph",
+      "allowed_final_sources": [
+        "graph"
+      ],
+      "expected_result": {
+        "subject": "天卫四",
+        "relation": "DISCOVERED_BY",
+        "object": "威廉·赫歇尔"
+      },
+      "normalized_expected_value": null,
+      "normalized_returned_value": "威廉·赫歇尔",
+      "returned_result": {
+        "subject": "天卫四",
+        "relation": "DISCOVERED_BY",
+        "object": "威廉·赫歇尔",
+        "source": "zh_wikipedia",
+        "source_name": "zh_wikipedia",
+        "source_role": "primary",
+        "origin": "html_fallback",
+        "source_title": "天卫四",
+        "schema_version": "zh_wikipedia_single_source_v1"
+      },
+      "top_k_results": [
+        {
+          "subject": "天卫四",
+          "relation": "DISCOVERED_BY",
+          "object": "威廉·赫歇尔",
+          "source": "zh_wikipedia",
+          "source_name": "zh_wikipedia",
+          "source_role": "primary",
+          "origin": "html_fallback",
+          "source_title": "天卫四",
+          "schema_version": "zh_wikipedia_single_source_v1"
+        }
+      ],
+      "graph_only_results": [
+        {
+          "subject": "天卫四",
+          "relation": "DISCOVERED_BY",
+          "object": "威廉·赫歇尔",
+          "source": "zh_wikipedia",
+          "source_name": "zh_wikipedia",
+          "source_role": "primary",
+          "origin": "html_fallback",
+          "source_title": "天卫四",
+          "schema_version": "zh_wikipedia_single_source_v1"
+        }
+      ],
+      "fallback_results": [
+        {
+          "subject": "天卫四",
+          "relation": "DISCOVERED_BY",
+          "object": "威廉·赫歇尔",
+          "source": "zh_wikipedia",
+          "source_name": "zh_wikipedia",
+          "source_role": "primary",
+          "origin": "html_fallback",
+          "source_title": "天卫四",
+          "schema_version": "zh_wikipedia_single_source_v1"
+        }
+      ],
+      "exact_match": true,
+      "top_k_hit": true,
+      "expected_top_k_hit": true,
+      "top_k_expectation_met": true,
+      "path_correct": true,
+      "allowed_final_source_ok": true,
+      "pass": true,
+      "source_metadata": {
+        "subject": "天卫四",
+        "relation": "DISCOVERED_BY",
+        "object": "威廉·赫歇尔",
+        "source": "zh_wikipedia",
+        "source_name": "zh_wikipedia",
+        "source_role": "primary",
+        "origin": "html_fallback",
+        "source_title": "天卫四",
+        "schema_version": "zh_wikipedia_single_source_v1"
+      },
+      "metadata_complete": true,
+      "source_filter_failed": false,
+      "inferred_boundary_break": false,
+      "fallback_exact_match": true,
+      "fallback_top_k_hit": true,
+      "consistency_match": true,
+      "failure_category": null,
+      "expected_failure_if_any": null
+    },
+    {
+      "id": "discover_oberon_graph",
+      "category": "DISCOVERED_BY",
+      "query_kind": "structured",
+      "query": "谁发现了天卫五",
+      "expected_path": "graph",
+      "actual_path": "graph",
+      "allowed_final_sources": [
+        "graph"
+      ],
+      "expected_result": {
+        "subject": "天卫五",
+        "relation": "DISCOVERED_BY",
+        "object": "古柏"
+      },
+      "normalized_expected_value": null,
+      "normalized_returned_value": "古柏",
+      "returned_result": {
+        "subject": "天卫五",
+        "relation": "DISCOVERED_BY",
+        "object": "古柏",
+        "source": "zh_wikipedia",
+        "source_name": "zh_wikipedia",
+        "source_role": "primary",
+        "origin": "html_fallback",
+        "source_title": "天卫五",
+        "schema_version": "zh_wikipedia_single_source_v1"
+      },
+      "top_k_results": [
+        {
+          "subject": "天卫五",
+          "relation": "DISCOVERED_BY",
+          "object": "古柏",
+          "source": "zh_wikipedia",
+          "source_name": "zh_wikipedia",
+          "source_role": "primary",
+          "origin": "html_fallback",
+          "source_title": "天卫五",
+          "schema_version": "zh_wikipedia_single_source_v1"
+        }
+      ],
+      "graph_only_results": [
+        {
+          "subject": "天卫五",
+          "relation": "DISCOVERED_BY",
+          "object": "古柏",
+          "source": "zh_wikipedia",
+          "source_name": "zh_wikipedia",
+          "source_role": "primary",
+          "origin": "html_fallback",
+          "source_title": "天卫五",
+          "schema_version": "zh_wikipedia_single_source_v1"
+        }
+      ],
+      "fallback_results": [
+        {
+          "subject": "天卫五",
+          "relation": "DISCOVERED_BY",
+          "object": "古柏",
+          "source": "zh_wikipedia",
+          "source_name": "zh_wikipedia",
+          "source_role": "primary",
+          "origin": "html_fallback",
+          "source_title": "天卫五",
+          "schema_version": "zh_wikipedia_single_source_v1"
+        }
+      ],
+      "exact_match": true,
+      "top_k_hit": true,
+      "expected_top_k_hit": true,
+      "top_k_expectation_met": true,
+      "path_correct": true,
+      "allowed_final_source_ok": true,
+      "pass": true,
+      "source_metadata": {
+        "subject": "天卫五",
+        "relation": "DISCOVERED_BY",
+        "object": "古柏",
+        "source": "zh_wikipedia",
+        "source_name": "zh_wikipedia",
+        "source_role": "primary",
+        "origin": "html_fallback",
+        "source_title": "天卫五",
+        "schema_version": "zh_wikipedia_single_source_v1"
+      },
+      "metadata_complete": true,
+      "source_filter_failed": false,
+      "inferred_boundary_break": false,
+      "fallback_exact_match": true,
+      "fallback_top_k_hit": true,
+      "consistency_match": true,
+      "failure_category": null,
+      "expected_failure_if_any": null
+    },
+    {
+      "id": "discover_ceres_graph",
+      "category": "DISCOVERED_BY",
+      "query_kind": "structured",
+      "query": "谁发现了谷神星",
+      "expected_path": "graph",
+      "actual_path": "graph",
+      "allowed_final_sources": [
+        "graph"
+      ],
+      "expected_result": {
+        "subject": "谷神星",
+        "relation": "DISCOVERED_BY",
+        "object": "朱塞普·皮亚齐"
+      },
+      "normalized_expected_value": null,
+      "normalized_returned_value": "朱塞普·皮亚齐",
+      "returned_result": {
+        "subject": "谷神星",
+        "relation": "DISCOVERED_BY",
+        "object": "朱塞普·皮亚齐",
+        "source": "zh_wikipedia",
+        "source_name": "zh_wikipedia",
+        "source_role": "primary",
+        "origin": "html_fallback",
+        "source_title": "谷神星",
+        "schema_version": "zh_wikipedia_single_source_v1"
+      },
+      "top_k_results": [
+        {
+          "subject": "谷神星",
+          "relation": "DISCOVERED_BY",
+          "object": "朱塞普·皮亚齐",
+          "source": "zh_wikipedia",
+          "source_name": "zh_wikipedia",
+          "source_role": "primary",
+          "origin": "html_fallback",
+          "source_title": "谷神星",
+          "schema_version": "zh_wikipedia_single_source_v1"
+        }
+      ],
+      "graph_only_results": [
+        {
+          "subject": "谷神星",
+          "relation": "DISCOVERED_BY",
+          "object": "朱塞普·皮亚齐",
+          "source": "zh_wikipedia",
+          "source_name": "zh_wikipedia",
+          "source_role": "primary",
+          "origin": "html_fallback",
+          "source_title": "谷神星",
+          "schema_version": "zh_wikipedia_single_source_v1"
+        }
+      ],
+      "fallback_results": [
+        {
+          "subject": "谷神星",
+          "relation": "DISCOVERED_BY",
+          "object": "朱塞普·皮亚齐",
+          "source": "zh_wikipedia",
+          "source_name": "zh_wikipedia",
+          "source_role": "primary",
+          "origin": "html_fallback",
+          "source_title": "谷神星",
+          "schema_version": "zh_wikipedia_single_source_v1"
+        }
+      ],
+      "exact_match": true,
+      "top_k_hit": true,
+      "expected_top_k_hit": true,
+      "top_k_expectation_met": true,
+      "path_correct": true,
+      "allowed_final_source_ok": true,
+      "pass": true,
+      "source_metadata": {
+        "subject": "谷神星",
+        "relation": "DISCOVERED_BY",
+        "object": "朱塞普·皮亚齐",
+        "source": "zh_wikipedia",
+        "source_name": "zh_wikipedia",
+        "source_role": "primary",
+        "origin": "html_fallback",
+        "source_title": "谷神星",
+        "schema_version": "zh_wikipedia_single_source_v1"
+      },
+      "metadata_complete": true,
+      "source_filter_failed": false,
+      "inferred_boundary_break": false,
+      "fallback_exact_match": true,
+      "fallback_top_k_hit": true,
+      "consistency_match": true,
+      "failure_category": null,
+      "expected_failure_if_any": null
+    },
+    {
+      "id": "discover_juno_graph",
+      "category": "DISCOVERED_BY",
+      "query_kind": "structured",
+      "query": "谁发现了婚神星",
+      "expected_path": "graph",
+      "actual_path": "graph",
+      "allowed_final_sources": [
+        "graph"
+      ],
+      "expected_result": {
+        "subject": "婚神星",
+        "relation": "DISCOVERED_BY",
+        "object": "卡尔·路德维希·哈丁"
+      },
+      "normalized_expected_value": null,
+      "normalized_returned_value": "卡尔·路德维希·哈丁",
+      "returned_result": {
+        "subject": "婚神星",
+        "relation": "DISCOVERED_BY",
+        "object": "卡尔·路德维希·哈丁",
+        "source": "zh_wikipedia",
+        "source_name": "zh_wikipedia",
+        "source_role": "primary",
+        "origin": "html_fallback",
+        "source_title": "婚神星",
+        "schema_version": "zh_wikipedia_single_source_v1"
+      },
+      "top_k_results": [
+        {
+          "subject": "婚神星",
+          "relation": "DISCOVERED_BY",
+          "object": "卡尔·路德维希·哈丁",
+          "source": "zh_wikipedia",
+          "source_name": "zh_wikipedia",
+          "source_role": "primary",
+          "origin": "html_fallback",
+          "source_title": "婚神星",
+          "schema_version": "zh_wikipedia_single_source_v1"
+        }
+      ],
+      "graph_only_results": [
+        {
+          "subject": "婚神星",
+          "relation": "DISCOVERED_BY",
+          "object": "卡尔·路德维希·哈丁",
+          "source": "zh_wikipedia",
+          "source_name": "zh_wikipedia",
+          "source_role": "primary",
+          "origin": "html_fallback",
+          "source_title": "婚神星",
+          "schema_version": "zh_wikipedia_single_source_v1"
+        }
+      ],
+      "fallback_results": [
+        {
+          "subject": "婚神星",
+          "relation": "DISCOVERED_BY",
+          "object": "卡尔·路德维希·哈丁",
+          "source": "zh_wikipedia",
+          "source_name": "zh_wikipedia",
+          "source_role": "primary",
+          "origin": "html_fallback",
+          "source_title": "婚神星",
+          "schema_version": "zh_wikipedia_single_source_v1"
+        }
+      ],
+      "exact_match": true,
+      "top_k_hit": true,
+      "expected_top_k_hit": true,
+      "top_k_expectation_met": true,
+      "path_correct": true,
+      "allowed_final_source_ok": true,
+      "pass": true,
+      "source_metadata": {
+        "subject": "婚神星",
+        "relation": "DISCOVERED_BY",
+        "object": "卡尔·路德维希·哈丁",
+        "source": "zh_wikipedia",
+        "source_name": "zh_wikipedia",
+        "source_role": "primary",
+        "origin": "html_fallback",
+        "source_title": "婚神星",
+        "schema_version": "zh_wikipedia_single_source_v1"
+      },
+      "metadata_complete": true,
+      "source_filter_failed": false,
+      "inferred_boundary_break": false,
+      "fallback_exact_match": true,
+      "fallback_top_k_hit": true,
+      "consistency_match": true,
+      "failure_category": null,
+      "expected_failure_if_any": null
+    },
+    {
+      "id": "discover_pluto_known_gap",
+      "category": "DISCOVERED_BY",
+      "query_kind": "structured",
+      "query": "谁发现了冥王星",
+      "expected_path": "graph",
+      "actual_path": "graph",
+      "allowed_final_sources": [
+        "graph"
+      ],
+      "expected_result": {
+        "subject": "冥王星",
+        "relation": "DISCOVERED_BY",
+        "object": "克莱德·汤博"
+      },
+      "normalized_expected_value": null,
+      "normalized_returned_value": "克莱德·汤博",
+      "returned_result": {
+        "subject": "冥王星",
+        "relation": "DISCOVERED_BY",
+        "object": "克莱德·汤博",
+        "source": "zh_wikipedia",
+        "source_name": "zh_wikipedia",
+        "source_role": "primary",
+        "origin": "html_fallback",
+        "source_title": "冥王星",
+        "schema_version": "zh_wikipedia_single_source_v1"
+      },
+      "top_k_results": [
+        {
+          "subject": "冥王星",
+          "relation": "DISCOVERED_BY",
+          "object": "克莱德·汤博",
+          "source": "zh_wikipedia",
+          "source_name": "zh_wikipedia",
+          "source_role": "primary",
+          "origin": "html_fallback",
+          "source_title": "冥王星",
+          "schema_version": "zh_wikipedia_single_source_v1"
+        }
+      ],
+      "graph_only_results": [
+        {
+          "subject": "冥王星",
+          "relation": "DISCOVERED_BY",
+          "object": "克莱德·汤博",
+          "source": "zh_wikipedia",
+          "source_name": "zh_wikipedia",
+          "source_role": "primary",
+          "origin": "html_fallback",
+          "source_title": "冥王星",
+          "schema_version": "zh_wikipedia_single_source_v1"
+        }
+      ],
+      "fallback_results": [
+        {
+          "subject": "冥王星",
+          "relation": "DISCOVERED_BY",
+          "object": "克莱德·汤博",
+          "source": "zh_wikipedia",
+          "source_name": "zh_wikipedia",
+          "source_role": "primary",
+          "origin": "html_fallback",
+          "source_title": "冥王星",
+          "schema_version": "zh_wikipedia_single_source_v1"
+        }
+      ],
+      "exact_match": true,
+      "top_k_hit": true,
+      "expected_top_k_hit": true,
+      "top_k_expectation_met": true,
+      "path_correct": true,
+      "allowed_final_source_ok": true,
+      "pass": true,
+      "source_metadata": {
+        "subject": "冥王星",
+        "relation": "DISCOVERED_BY",
+        "object": "克莱德·汤博",
+        "source": "zh_wikipedia",
+        "source_name": "zh_wikipedia",
+        "source_role": "primary",
+        "origin": "html_fallback",
+        "source_title": "冥王星",
+        "schema_version": "zh_wikipedia_single_source_v1"
+      },
+      "metadata_complete": true,
+      "source_filter_failed": false,
+      "inferred_boundary_break": false,
+      "fallback_exact_match": true,
+      "fallback_top_k_hit": true,
+      "consistency_match": true,
+      "failure_category": null,
+      "expected_failure_if_any": "path routing error"
+    },
+    {
+      "id": "narrative_mars_thin_atmosphere",
+      "category": "narrative explanation",
+      "query_kind": "narrative",
+      "query": "为什么火星大气稀薄",
+      "expected_path": "embedding",
+      "actual_path": "embedding",
+      "allowed_final_sources": [
+        "embedding"
+      ],
+      "expected_result": {
+        "page_title": "火星",
+        "section_any_of": [
+          "大气",
+          "天气和气候"
+        ]
+      },
+      "expected_page_title": "火星",
+      "expected_section_any_of": [
+        "大气",
+        "天气和气候"
+      ],
+      "returned_result": {
+        "page_title": "火星",
+        "section": "大气",
+        "content": "沙尘暴 发生前（左）和正发生沙尘暴（右）的火星 火星大气层 相对较薄，平均地表 气压 只有6 百帕 ，约为 地球表面气压 的0.6%，相当于地球表面算起35公里高的气压 ，如此低的气压使 声音 传播的距离只有在地球上的1.5%。\n随著季节的变化，火星气压变化可达20%。\n火星大气层按高度可分为低层大气、中层大气、上层大气和外气层。\n其中低层大气由于气悬微尘与地表的热，这部份相对温暖；中层大气存在 ...",
+        "score": 1.0,
+        "rank": 1,
+        "source": "zh_wikipedia",
+        "source_name": "zh_wikipedia",
+        "source_role": "primary",
+        "origin": "html_fallback",
+        "source_title": "火星",
+        "schema_version": "zh_wikipedia_single_source_v1"
+      },
+      "top_k_results": [
+        {
+          "page_title": "火星",
+          "section": "大气",
+          "content": "沙尘暴 发生前（左）和正发生沙尘暴（右）的火星 火星大气层 相对较薄，平均地表 气压 只有6 百帕 ，约为 地球表面气压 的0.6%，相当于地球表面算起35公里高的气压 ，如此低的气压使 声音 传播的距离只有在地球上的1.5%。\n随著季节的变化，火星气压变化可达20%。\n火星大气层按高度可分为低层大气、中层大气、上层大气和外气层。\n其中低层大气由于气悬微尘与地表的热，这部份相对温暖；中层大气存在 ...",
+          "score": 1.0,
+          "rank": 1,
+          "source": "zh_wikipedia",
+          "source_name": "zh_wikipedia",
+          "source_role": "primary",
+          "origin": "html_fallback",
+          "source_title": "火星",
+          "schema_version": "zh_wikipedia_single_source_v1"
+        },
+        {
+          "page_title": "火星",
+          "section": "天气和气候",
+          "content": "由于火星的自转轴倾角与地球的相当，火星在太阳系中与地球气候最相似，但一个季节的时间比地球的要长。\n火星离太阳较远，表面接收到的阳光仅有地球的43%， 且大气层较薄，无法存储过多热量，因此火星表面的温差较大（-110 °C～35 °C） 。\n2008年9月29日，凤凰号拍下了降雪事件，是在接近凤凰号 登陆地点 附近 海姆达尔撞击坑 之上，为高4.5公里的 幡状云 降雪。\n这次降雪在到达火星表面时就已...",
+          "score": 1.0,
+          "rank": 2,
+          "source": "zh_wikipedia",
+          "source_name": "zh_wikipedia",
+          "source_role": "primary",
+          "origin": "html_fallback",
+          "source_title": "火星",
+          "schema_version": "zh_wikipedia_single_source_v1"
+        },
+        {
+          "page_title": "火星",
+          "section": "概要",
+          "content": "火星 （英语： Mars ； 天文符号 ：♂），古名 荧惑 ，是离 太阳 第四近的 行星 ，也是 太阳系 中仅次于 水星 的第二小的行星，为 太阳系 里四颗 类地行星 之一。\n由于火星地表广泛的分布著 氧化铁 ，其主要呈现为 橘红色 ，因此亦被称为“ 红色星球 ” 。\n火星的地质年代主要分为三个部分： 诺亚纪 、 赫斯珀里亚纪 及 亚马逊纪 。\n在过往，火星可能被大面积的海洋、湖泊及河流覆盖 。\n...",
+          "score": 1.0,
+          "rank": 3,
+          "source": "zh_wikipedia",
+          "source_name": "zh_wikipedia",
+          "source_role": "primary",
+          "origin": "html_fallback",
+          "source_title": "火星",
+          "schema_version": "zh_wikipedia_single_source_v1"
+        },
+        {
+          "page_title": "火星探测",
+          "section": "美国 火星大气与挥发物演化任务",
+          "content": "美国 “火星大气与挥发演化任务”探测器于 美国东部时间 2013年11月18日13时28分（ 北京时间 19日02时28分）发射升空，它的使命是以前所未有的精度对火星的上层大气进行研究，以帮助科学家揭开火星大气层变得稀薄之谜。\n“ 火星大气与挥发演化任务 ”探测器搭乘“ 宇宙神Ｖ型 ”火箭，从 佛罗里达州 卡纳维拉尔角空军基地 冲天而起，踏上10个月的飞往火星之旅。\n“ 火星大气与挥发演化任务 ”...",
+          "score": 1.0,
+          "rank": 4,
+          "source": "zh_wikipedia",
+          "source_name": "zh_wikipedia",
+          "source_role": "primary",
+          "origin": "html_fallback",
+          "source_title": "火星探测",
+          "schema_version": "zh_wikipedia_single_source_v1"
+        },
+        {
+          "page_title": "火星",
+          "section": "物理性质",
+          "content": "火星的直径约为地球的一半 以直径、质量、表面重力来说，火星约介于 地球 和 月球 中间：火星直径约为地球的一半、月球的两倍，质量约为地球的九分之一、月球的九倍，表面重力约为地球的38%、月球的2.4倍。\n火星体积约为地球的15%，质量约为地球的11%， 表面积 略小于地球陆地面积，密度则比其他三颗 类地行星 小很多 。\n2012年8月， 加利福尼亚大学洛杉矶分校 的教授尹安在分析了100张来自火星...",
+          "score": 0.9555555555555556,
+          "rank": 5,
+          "source": "zh_wikipedia",
+          "source_name": "zh_wikipedia",
+          "source_role": "primary",
+          "origin": "html_fallback",
+          "source_title": "火星",
+          "schema_version": "zh_wikipedia_single_source_v1"
+        }
+      ],
+      "fallback_results": [
+        {
+          "page_title": "火星",
+          "section": "大气",
+          "content": "沙尘暴 发生前（左）和正发生沙尘暴（右）的火星 火星大气层 相对较薄，平均地表 气压 只有6 百帕 ，约为 地球表面气压 的0.6%，相当于地球表面算起35公里高的气压 ，如此低的气压使 声音 传播的距离只有在地球上的1.5%。\n随著季节的变化，火星气压变化可达20%。\n火星大气层按高度可分为低层大气、中层大气、上层大气和外气层。\n其中低层大气由于气悬微尘与地表的热，这部份相对温暖；中层大气存在 ...",
+          "score": 1.0,
+          "rank": 1,
+          "source": "zh_wikipedia",
+          "source_name": "zh_wikipedia",
+          "source_role": "primary",
+          "origin": "html_fallback",
+          "source_title": "火星",
+          "schema_version": "zh_wikipedia_single_source_v1"
+        },
+        {
+          "page_title": "火星",
+          "section": "天气和气候",
+          "content": "由于火星的自转轴倾角与地球的相当，火星在太阳系中与地球气候最相似，但一个季节的时间比地球的要长。\n火星离太阳较远，表面接收到的阳光仅有地球的43%， 且大气层较薄，无法存储过多热量，因此火星表面的温差较大（-110 °C～35 °C） 。\n2008年9月29日，凤凰号拍下了降雪事件，是在接近凤凰号 登陆地点 附近 海姆达尔撞击坑 之上，为高4.5公里的 幡状云 降雪。\n这次降雪在到达火星表面时就已...",
+          "score": 1.0,
+          "rank": 2,
+          "source": "zh_wikipedia",
+          "source_name": "zh_wikipedia",
+          "source_role": "primary",
+          "origin": "html_fallback",
+          "source_title": "火星",
+          "schema_version": "zh_wikipedia_single_source_v1"
+        },
+        {
+          "page_title": "火星",
+          "section": "概要",
+          "content": "火星 （英语： Mars ； 天文符号 ：♂），古名 荧惑 ，是离 太阳 第四近的 行星 ，也是 太阳系 中仅次于 水星 的第二小的行星，为 太阳系 里四颗 类地行星 之一。\n由于火星地表广泛的分布著 氧化铁 ，其主要呈现为 橘红色 ，因此亦被称为“ 红色星球 ” 。\n火星的地质年代主要分为三个部分： 诺亚纪 、 赫斯珀里亚纪 及 亚马逊纪 。\n在过往，火星可能被大面积的海洋、湖泊及河流覆盖 。\n...",
+          "score": 1.0,
+          "rank": 3,
+          "source": "zh_wikipedia",
+          "source_name": "zh_wikipedia",
+          "source_role": "primary",
+          "origin": "html_fallback",
+          "source_title": "火星",
+          "schema_version": "zh_wikipedia_single_source_v1"
+        },
+        {
+          "page_title": "火星探测",
+          "section": "美国 火星大气与挥发物演化任务",
+          "content": "美国 “火星大气与挥发演化任务”探测器于 美国东部时间 2013年11月18日13时28分（ 北京时间 19日02时28分）发射升空，它的使命是以前所未有的精度对火星的上层大气进行研究，以帮助科学家揭开火星大气层变得稀薄之谜。\n“ 火星大气与挥发演化任务 ”探测器搭乘“ 宇宙神Ｖ型 ”火箭，从 佛罗里达州 卡纳维拉尔角空军基地 冲天而起，踏上10个月的飞往火星之旅。\n“ 火星大气与挥发演化任务 ”...",
+          "score": 1.0,
+          "rank": 4,
+          "source": "zh_wikipedia",
+          "source_name": "zh_wikipedia",
+          "source_role": "primary",
+          "origin": "html_fallback",
+          "source_title": "火星探测",
+          "schema_version": "zh_wikipedia_single_source_v1"
+        },
+        {
+          "page_title": "火星",
+          "section": "物理性质",
+          "content": "火星的直径约为地球的一半 以直径、质量、表面重力来说，火星约介于 地球 和 月球 中间：火星直径约为地球的一半、月球的两倍，质量约为地球的九分之一、月球的九倍，表面重力约为地球的38%、月球的2.4倍。\n火星体积约为地球的15%，质量约为地球的11%， 表面积 略小于地球陆地面积，密度则比其他三颗 类地行星 小很多 。\n2012年8月， 加利福尼亚大学洛杉矶分校 的教授尹安在分析了100张来自火星...",
+          "score": 0.9555555555555556,
+          "rank": 5,
+          "source": "zh_wikipedia",
+          "source_name": "zh_wikipedia",
+          "source_role": "primary",
+          "origin": "html_fallback",
+          "source_title": "火星",
+          "schema_version": "zh_wikipedia_single_source_v1"
+        }
+      ],
+      "exact_match": true,
+      "top_k_hit": true,
+      "expected_top_k_hit": true,
+      "top_k_expectation_met": true,
+      "path_correct": true,
+      "allowed_final_source_ok": true,
+      "pass": true,
+      "source_metadata": {
+        "page_title": "火星",
+        "section": "大气",
+        "content": "沙尘暴 发生前（左）和正发生沙尘暴（右）的火星 火星大气层 相对较薄，平均地表 气压 只有6 百帕 ，约为 地球表面气压 的0.6%，相当于地球表面算起35公里高的气压 ，如此低的气压使 声音 传播的距离只有在地球上的1.5%。\n随著季节的变化，火星气压变化可达20%。\n火星大气层按高度可分为低层大气、中层大气、上层大气和外气层。\n其中低层大气由于气悬微尘与地表的热，这部份相对温暖；中层大气存在 ...",
+        "score": 1.0,
+        "rank": 1,
+        "source": "zh_wikipedia",
+        "source_name": "zh_wikipedia",
+        "source_role": "primary",
+        "origin": "html_fallback",
+        "source_title": "火星",
+        "schema_version": "zh_wikipedia_single_source_v1"
+      },
+      "metadata_complete": true,
+      "source_filter_failed": false,
+      "inferred_boundary_break": false,
+      "fallback_exact_match": true,
+      "fallback_top_k_hit": true,
+      "consistency_match": true,
+      "failure_category": null,
+      "expected_failure_if_any": null
+    },
+    {
+      "id": "narrative_sun_shines",
+      "category": "narrative explanation",
+      "query_kind": "narrative",
+      "query": "为什么太阳会发光",
+      "expected_path": "embedding",
+      "actual_path": "embedding",
+      "allowed_final_sources": [
+        "embedding"
+      ],
+      "expected_result": {
+        "page_title": "太阳",
+        "section_any_of": [
+          "概要",
+          "核心",
+          "核心 (2)"
+        ]
+      },
+      "expected_page_title": "太阳",
+      "expected_section_any_of": [
+        "概要",
+        "核心",
+        "核心 (2)"
+      ],
+      "returned_result": {
+        "page_title": "太阳",
+        "section": "核心 (2)",
+        "content": "将四个自由的 质子 （氢原子核）融合成单个α粒子（氦原子核）释放约0.71185%的融合质量转换为能量 ，因此，太阳以每秒426万公吨的质量-能量转换率释放能量（这需要6亿公吨的氢 ），即384.6 佑瓦特 （ 7026384600000000000♠ 3.846 × 10 26 W ） ，或每秒9.192×10 10 百万吨的TNT 。太阳的大功率输出主要是由于其核心的巨大尺寸和密度（与地球和地...",
+        "score": 1.0,
+        "rank": 1,
+        "source": "zh_wikipedia",
+        "source_name": "zh_wikipedia",
+        "source_role": "primary",
+        "origin": "html_fallback",
+        "source_title": "太阳",
+        "schema_version": "zh_wikipedia_single_source_v1"
+      },
+      "top_k_results": [
+        {
+          "page_title": "太阳",
+          "section": "核心 (2)",
+          "content": "将四个自由的 质子 （氢原子核）融合成单个α粒子（氦原子核）释放约0.71185%的融合质量转换为能量 ，因此，太阳以每秒426万公吨的质量-能量转换率释放能量（这需要6亿公吨的氢 ），即384.6 佑瓦特 （ 7026384600000000000♠ 3.846 × 10 26 W ） ，或每秒9.192×10 10 百万吨的TNT 。太阳的大功率输出主要是由于其核心的巨大尺寸和密度（与地球和地...",
+          "score": 1.0,
+          "rank": 1,
+          "source": "zh_wikipedia",
+          "source_name": "zh_wikipedia",
+          "source_role": "primary",
+          "origin": "html_fallback",
+          "source_title": "太阳",
+          "schema_version": "zh_wikipedia_single_source_v1"
+        },
+        {
+          "page_title": "太阳",
+          "section": "概要",
+          "content": "太阳 是位于太阳系中心的恒星，它是一个近乎完美的热 电浆 理想球体 ，通过其核心的 核融合 反应加热到 白炽 。太阳主要以 可见光 、 紫外线 和 红外线 的形式辐射 能量 ，是 地球 上 生命 最重要的能量来源。太阳的 半径 大约是 695,000公里（432,000英里），或地球半径的109倍。它的 质量 大约是地球的330,000倍，约占太阳系总质量的99.86% 。太阳的 质量 大约四分之...",
+          "score": 1.0,
+          "rank": 2,
+          "source": "zh_wikipedia",
+          "source_name": "zh_wikipedia",
+          "source_role": "primary",
+          "origin": "html_fallback",
+          "source_title": "太阳",
+          "schema_version": "zh_wikipedia_single_source_v1"
+        },
+        {
+          "page_title": "太阳",
+          "section": "核心",
+          "content": "太阳的 太阳核心 从中心延伸到太阳半径的20-25%左右 ，其密度最高为 7005150000000000000♠ 150 g/cm 3 （约为水密度的150倍）和接近1,570万 K 的温度 。相比之下，太阳表面的温度大约为 7003580000000000000♠ 5800 K 。最近对 SOHO 任务数据的分析表明，核心的自转速度比上面的辐射层更快 。在太阳生命的大部分时间里，能量都是通过 ...",
+          "score": 1.0,
+          "rank": 3,
+          "source": "zh_wikipedia",
+          "source_name": "zh_wikipedia",
+          "source_role": "primary",
+          "origin": "html_fallback",
+          "source_title": "太阳",
+          "schema_version": "zh_wikipedia_single_source_v1"
+        },
+        {
+          "page_title": "太阳",
+          "section": "阳光和微中子 (2)",
+          "content": "核心的核融合反应最初释放的高能 伽马射线 光子 ，通常只传播几毫米，几乎立即被辐射区的太阳电浆吸收。再发射发生在一个随机的方向上，且通常能量略低。通过这种发射和吸收序列，辐射到达太阳表面需要很长时间。据估计，光子旅行的时间在10,000到170,000年之间 。相比之下， 微中子 只需2.3秒就可以到达表面，它约占太阳总能量的2%。由于太阳中的能量传输是一个涉及光子与 物质 处于 热力学 平衡的过...",
+          "score": 1.0,
+          "rank": 4,
+          "source": "zh_wikipedia",
+          "source_name": "zh_wikipedia",
+          "source_role": "primary",
+          "origin": "html_fallback",
+          "source_title": "太阳",
+          "schema_version": "zh_wikipedia_single_source_v1"
+        },
+        {
+          "page_title": "太阳",
+          "section": "科学认识的发展 (3)",
+          "content": "很不幸的，由此产生的年龄估计只有2,000万岁，远短于当时以地质上的发现所估计出至少3亿年的时间跨度 。在1890年， 约瑟夫·洛克尔 在太阳光谱中发现 氦 ，提出太阳形成和演化的陨石说 。直到1904年解决的方案才被提出， 拉塞福 提出太阳的输出可以由内部的热源提供，并提出 放射性衰变 是这个来源 。不过， 阿尔伯特·爱因斯坦 提出的 质能等价 关系 E = mc 2 为太阳的能量来源提供了线索...",
+          "score": 1.0,
+          "rank": 5,
+          "source": "zh_wikipedia",
+          "source_name": "zh_wikipedia",
+          "source_role": "primary",
+          "origin": "html_fallback",
+          "source_title": "太阳",
+          "schema_version": "zh_wikipedia_single_source_v1"
+        }
+      ],
+      "fallback_results": [
+        {
+          "page_title": "太阳",
+          "section": "核心 (2)",
+          "content": "将四个自由的 质子 （氢原子核）融合成单个α粒子（氦原子核）释放约0.71185%的融合质量转换为能量 ，因此，太阳以每秒426万公吨的质量-能量转换率释放能量（这需要6亿公吨的氢 ），即384.6 佑瓦特 （ 7026384600000000000♠ 3.846 × 10 26 W ） ，或每秒9.192×10 10 百万吨的TNT 。太阳的大功率输出主要是由于其核心的巨大尺寸和密度（与地球和地...",
+          "score": 1.0,
+          "rank": 1,
+          "source": "zh_wikipedia",
+          "source_name": "zh_wikipedia",
+          "source_role": "primary",
+          "origin": "html_fallback",
+          "source_title": "太阳",
+          "schema_version": "zh_wikipedia_single_source_v1"
+        },
+        {
+          "page_title": "太阳",
+          "section": "概要",
+          "content": "太阳 是位于太阳系中心的恒星，它是一个近乎完美的热 电浆 理想球体 ，通过其核心的 核融合 反应加热到 白炽 。太阳主要以 可见光 、 紫外线 和 红外线 的形式辐射 能量 ，是 地球 上 生命 最重要的能量来源。太阳的 半径 大约是 695,000公里（432,000英里），或地球半径的109倍。它的 质量 大约是地球的330,000倍，约占太阳系总质量的99.86% 。太阳的 质量 大约四分之...",
+          "score": 1.0,
+          "rank": 2,
+          "source": "zh_wikipedia",
+          "source_name": "zh_wikipedia",
+          "source_role": "primary",
+          "origin": "html_fallback",
+          "source_title": "太阳",
+          "schema_version": "zh_wikipedia_single_source_v1"
+        },
+        {
+          "page_title": "太阳",
+          "section": "核心",
+          "content": "太阳的 太阳核心 从中心延伸到太阳半径的20-25%左右 ，其密度最高为 7005150000000000000♠ 150 g/cm 3 （约为水密度的150倍）和接近1,570万 K 的温度 。相比之下，太阳表面的温度大约为 7003580000000000000♠ 5800 K 。最近对 SOHO 任务数据的分析表明，核心的自转速度比上面的辐射层更快 。在太阳生命的大部分时间里，能量都是通过 ...",
+          "score": 1.0,
+          "rank": 3,
+          "source": "zh_wikipedia",
+          "source_name": "zh_wikipedia",
+          "source_role": "primary",
+          "origin": "html_fallback",
+          "source_title": "太阳",
+          "schema_version": "zh_wikipedia_single_source_v1"
+        },
+        {
+          "page_title": "太阳",
+          "section": "阳光和微中子 (2)",
+          "content": "核心的核融合反应最初释放的高能 伽马射线 光子 ，通常只传播几毫米，几乎立即被辐射区的太阳电浆吸收。再发射发生在一个随机的方向上，且通常能量略低。通过这种发射和吸收序列，辐射到达太阳表面需要很长时间。据估计，光子旅行的时间在10,000到170,000年之间 。相比之下， 微中子 只需2.3秒就可以到达表面，它约占太阳总能量的2%。由于太阳中的能量传输是一个涉及光子与 物质 处于 热力学 平衡的过...",
+          "score": 1.0,
+          "rank": 4,
+          "source": "zh_wikipedia",
+          "source_name": "zh_wikipedia",
+          "source_role": "primary",
+          "origin": "html_fallback",
+          "source_title": "太阳",
+          "schema_version": "zh_wikipedia_single_source_v1"
+        },
+        {
+          "page_title": "太阳",
+          "section": "科学认识的发展 (3)",
+          "content": "很不幸的，由此产生的年龄估计只有2,000万岁，远短于当时以地质上的发现所估计出至少3亿年的时间跨度 。在1890年， 约瑟夫·洛克尔 在太阳光谱中发现 氦 ，提出太阳形成和演化的陨石说 。直到1904年解决的方案才被提出， 拉塞福 提出太阳的输出可以由内部的热源提供，并提出 放射性衰变 是这个来源 。不过， 阿尔伯特·爱因斯坦 提出的 质能等价 关系 E = mc 2 为太阳的能量来源提供了线索...",
+          "score": 1.0,
+          "rank": 5,
+          "source": "zh_wikipedia",
+          "source_name": "zh_wikipedia",
+          "source_role": "primary",
+          "origin": "html_fallback",
+          "source_title": "太阳",
+          "schema_version": "zh_wikipedia_single_source_v1"
+        }
+      ],
+      "exact_match": true,
+      "top_k_hit": true,
+      "expected_top_k_hit": true,
+      "top_k_expectation_met": true,
+      "path_correct": true,
+      "allowed_final_source_ok": true,
+      "pass": true,
+      "source_metadata": {
+        "page_title": "太阳",
+        "section": "核心 (2)",
+        "content": "将四个自由的 质子 （氢原子核）融合成单个α粒子（氦原子核）释放约0.71185%的融合质量转换为能量 ，因此，太阳以每秒426万公吨的质量-能量转换率释放能量（这需要6亿公吨的氢 ），即384.6 佑瓦特 （ 7026384600000000000♠ 3.846 × 10 26 W ） ，或每秒9.192×10 10 百万吨的TNT 。太阳的大功率输出主要是由于其核心的巨大尺寸和密度（与地球和地...",
+        "score": 1.0,
+        "rank": 1,
+        "source": "zh_wikipedia",
+        "source_name": "zh_wikipedia",
+        "source_role": "primary",
+        "origin": "html_fallback",
+        "source_title": "太阳",
+        "schema_version": "zh_wikipedia_single_source_v1"
+      },
+      "metadata_complete": true,
+      "source_filter_failed": false,
+      "inferred_boundary_break": false,
+      "fallback_exact_match": true,
+      "fallback_top_k_hit": true,
+      "consistency_match": true,
+      "failure_category": null,
+      "expected_failure_if_any": null
+    },
+    {
+      "id": "source_filter_active_graph",
+      "category": "source isolation",
+      "query_kind": "structured",
+      "query": "火卫一绕谁公转",
+      "expected_path": "graph",
+      "actual_path": "graph",
+      "allowed_final_sources": [
+        "graph"
+      ],
+      "expected_result": {
+        "subject": "火卫一",
+        "relation": "ORBITS",
+        "object": "火星"
+      },
+      "normalized_expected_value": null,
+      "normalized_returned_value": "火星",
+      "returned_result": {
+        "subject": "火卫一",
+        "relation": "ORBITS",
+        "object": "火星",
+        "source": "zh_wikipedia",
+        "source_name": "zh_wikipedia",
+        "source_role": "primary",
+        "origin": "internal_link",
+        "source_title": "火卫一",
+        "schema_version": "zh_wikipedia_single_source_v1"
+      },
+      "top_k_results": [
+        {
+          "subject": "火卫一",
+          "relation": "ORBITS",
+          "object": "火星",
+          "source": "zh_wikipedia",
+          "source_name": "zh_wikipedia",
+          "source_role": "primary",
+          "origin": "internal_link",
+          "source_title": "火卫一",
+          "schema_version": "zh_wikipedia_single_source_v1"
+        }
+      ],
+      "graph_only_results": [
+        {
+          "subject": "火卫一",
+          "relation": "ORBITS",
+          "object": "火星",
+          "source": "zh_wikipedia",
+          "source_name": "zh_wikipedia",
+          "source_role": "primary",
+          "origin": "internal_link",
+          "source_title": "火卫一",
+          "schema_version": "zh_wikipedia_single_source_v1"
+        }
+      ],
+      "fallback_results": [
+        {
+          "subject": "火卫一",
+          "relation": "ORBITS",
+          "object": "火星",
+          "source": "zh_wikipedia",
+          "source_name": "zh_wikipedia",
+          "source_role": "primary",
+          "origin": "html_fallback",
+          "source_title": "火卫一",
+          "schema_version": "zh_wikipedia_single_source_v1"
+        }
+      ],
+      "exact_match": true,
+      "top_k_hit": true,
+      "expected_top_k_hit": true,
+      "top_k_expectation_met": true,
+      "path_correct": true,
+      "allowed_final_source_ok": true,
+      "pass": true,
+      "source_metadata": {
+        "subject": "火卫一",
+        "relation": "ORBITS",
+        "object": "火星",
+        "source": "zh_wikipedia",
+        "source_name": "zh_wikipedia",
+        "source_role": "primary",
+        "origin": "internal_link",
+        "source_title": "火卫一",
+        "schema_version": "zh_wikipedia_single_source_v1"
+      },
+      "metadata_complete": true,
+      "source_filter_failed": false,
+      "inferred_boundary_break": false,
+      "fallback_exact_match": true,
+      "fallback_top_k_hit": true,
+      "consistency_match": true,
+      "failure_category": null,
+      "expected_failure_if_any": null
+    },
+    {
+      "id": "source_filter_blocked_graph_nasa",
+      "category": "source isolation",
+      "query_kind": "structured",
+      "query": "火卫一绕谁公转",
+      "expected_path": "fallback",
+      "actual_path": "fallback",
+      "allowed_final_sources": [
+        "fallback"
+      ],
+      "expected_result": {
+        "empty": true
+      },
+      "normalized_expected_value": null,
+      "normalized_returned_value": null,
+      "returned_result": null,
+      "top_k_results": [],
+      "graph_only_results": [],
+      "fallback_results": [],
+      "exact_match": true,
+      "top_k_hit": false,
+      "expected_top_k_hit": false,
+      "top_k_expectation_met": true,
+      "path_correct": true,
+      "allowed_final_source_ok": true,
+      "pass": true,
+      "source_metadata": null,
+      "metadata_complete": true,
+      "source_filter_failed": false,
+      "inferred_boundary_break": false,
+      "fallback_exact_match": true,
+      "fallback_top_k_hit": true,
+      "consistency_match": true,
+      "failure_category": null,
+      "expected_failure_if_any": "source leakage"
+    },
+    {
+      "id": "source_filter_blocked_graph_wikidata",
+      "category": "source isolation",
+      "query_kind": "structured",
+      "query": "海王星在哪里",
+      "expected_path": "fallback",
+      "actual_path": "fallback",
+      "allowed_final_sources": [
+        "fallback"
+      ],
+      "expected_result": {
+        "empty": true
+      },
+      "normalized_expected_value": null,
+      "normalized_returned_value": null,
+      "returned_result": null,
+      "top_k_results": [],
+      "graph_only_results": [],
+      "fallback_results": [],
+      "exact_match": true,
+      "top_k_hit": false,
+      "expected_top_k_hit": false,
+      "top_k_expectation_met": true,
+      "path_correct": true,
+      "allowed_final_source_ok": true,
+      "pass": true,
+      "source_metadata": null,
+      "metadata_complete": true,
+      "source_filter_failed": false,
+      "inferred_boundary_break": false,
+      "fallback_exact_match": true,
+      "fallback_top_k_hit": true,
+      "consistency_match": true,
+      "failure_category": null,
+      "expected_failure_if_any": "source leakage"
+    },
+    {
+      "id": "source_filter_blocked_graph_esa",
+      "category": "source isolation",
+      "query_kind": "structured",
+      "query": "木卫一属于什么系统",
+      "expected_path": "fallback",
+      "actual_path": "fallback",
+      "allowed_final_sources": [
+        "fallback"
+      ],
+      "expected_result": {
+        "empty": true
+      },
+      "normalized_expected_value": null,
+      "normalized_returned_value": null,
+      "returned_result": null,
+      "top_k_results": [],
+      "graph_only_results": [],
+      "fallback_results": [],
+      "exact_match": true,
+      "top_k_hit": false,
+      "expected_top_k_hit": false,
+      "top_k_expectation_met": true,
+      "path_correct": true,
+      "allowed_final_source_ok": true,
+      "pass": true,
+      "source_metadata": null,
+      "metadata_complete": true,
+      "source_filter_failed": false,
+      "inferred_boundary_break": false,
+      "fallback_exact_match": true,
+      "fallback_top_k_hit": true,
+      "consistency_match": true,
+      "failure_category": null,
+      "expected_failure_if_any": "source leakage"
+    },
+    {
+      "id": "source_filter_blocked_chroma_nasa",
+      "category": "source isolation",
+      "query_kind": "narrative",
+      "query": "火星大气成分",
+      "expected_path": "embedding",
+      "actual_path": "embedding",
+      "allowed_final_sources": [
+        "embedding"
+      ],
+      "expected_result": {
+        "empty": true,
+        "section_any_of": []
+      },
+      "expected_page_title": null,
+      "expected_section_any_of": [],
+      "returned_result": null,
+      "top_k_results": [],
+      "fallback_results": [],
+      "exact_match": true,
+      "top_k_hit": false,
+      "expected_top_k_hit": false,
+      "top_k_expectation_met": true,
+      "path_correct": true,
+      "allowed_final_source_ok": true,
+      "pass": true,
+      "source_metadata": null,
+      "metadata_complete": true,
+      "source_filter_failed": false,
+      "inferred_boundary_break": false,
+      "fallback_exact_match": true,
+      "fallback_top_k_hit": true,
+      "consistency_match": true,
+      "failure_category": null,
+      "expected_failure_if_any": "source leakage"
+    },
+    {
+      "id": "source_filter_blocked_chroma_wikidata",
+      "category": "source isolation",
+      "query_kind": "narrative",
+      "query": "为什么太阳会发光",
+      "expected_path": "embedding",
+      "actual_path": "embedding",
+      "allowed_final_sources": [
+        "embedding"
+      ],
+      "expected_result": {
+        "empty": true,
+        "section_any_of": []
+      },
+      "expected_page_title": null,
+      "expected_section_any_of": [],
+      "returned_result": null,
+      "top_k_results": [],
+      "fallback_results": [],
+      "exact_match": true,
+      "top_k_hit": false,
+      "expected_top_k_hit": false,
+      "top_k_expectation_met": true,
+      "path_correct": true,
+      "allowed_final_source_ok": true,
+      "pass": true,
+      "source_metadata": null,
+      "metadata_complete": true,
+      "source_filter_failed": false,
+      "inferred_boundary_break": false,
+      "fallback_exact_match": true,
+      "fallback_top_k_hit": true,
+      "consistency_match": true,
+      "failure_category": null,
+      "expected_failure_if_any": "source leakage"
+    },
+    {
+      "id": "source_filter_blocked_chroma_esa",
+      "category": "source isolation",
+      "query_kind": "narrative",
+      "query": "为什么火星大气稀薄",
+      "expected_path": "embedding",
+      "actual_path": "embedding",
+      "allowed_final_sources": [
+        "embedding"
+      ],
+      "expected_result": {
+        "empty": true,
+        "section_any_of": []
+      },
+      "expected_page_title": null,
+      "expected_section_any_of": [],
+      "returned_result": null,
+      "top_k_results": [],
+      "fallback_results": [],
+      "exact_match": true,
+      "top_k_hit": false,
+      "expected_top_k_hit": false,
+      "top_k_expectation_met": true,
+      "path_correct": true,
+      "allowed_final_source_ok": true,
+      "pass": true,
+      "source_metadata": null,
+      "metadata_complete": true,
+      "source_filter_failed": false,
+      "inferred_boundary_break": false,
+      "fallback_exact_match": true,
+      "fallback_top_k_hit": true,
+      "consistency_match": true,
+      "failure_category": null,
+      "expected_failure_if_any": "source leakage"
+    }
+  ]
+}

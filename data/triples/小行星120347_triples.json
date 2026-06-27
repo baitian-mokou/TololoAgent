@@ -1,0 +1,16 @@
+[
+  {
+    "subject": "小行星120347",
+    "relation": "HAS_MASS",
+    "object": "4.5 × 10 20 kg",
+    "pattern": "infobox",
+    "raw": "质量: 4.5×10 20 kg 4.66×10 20 kg (system mass)",
+    "source": "zh_wikipedia",
+    "source_role": "primary",
+    "origin": "html_fallback",
+    "type": "triple_candidate",
+    "source_title": "小行星120347",
+    "source_name": "zh_wikipedia",
+    "schema_version": "2.0"
+  }
+]

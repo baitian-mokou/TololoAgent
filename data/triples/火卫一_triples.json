@@ -1,0 +1,44 @@
+[
+  {
+    "subject": "火卫一",
+    "relation": "DISCOVERED_BY",
+    "object": "阿萨夫·霍尔",
+    "pattern": "infobox",
+    "raw": "发现者: 阿萨夫·霍尔",
+    "source": "zh_wikipedia",
+    "source_role": "primary",
+    "origin": "html_fallback",
+    "type": "triple_candidate",
+    "source_title": "火卫一",
+    "source_name": "zh_wikipedia",
+    "schema_version": "2.0"
+  },
+  {
+    "subject": "火卫一",
+    "relation": "HAS_RADIUS",
+    "object": "11.1km",
+    "pattern": "infobox",
+    "raw": "平均半径: 11.1公里 ( 地球 的 0.002 1 )",
+    "source": "zh_wikipedia",
+    "source_role": "primary",
+    "origin": "html_fallback",
+    "type": "triple_candidate",
+    "source_title": "火卫一",
+    "source_name": "zh_wikipedia",
+    "schema_version": "2.0"
+  },
+  {
+    "subject": "火卫一",
+    "relation": "HAS_MASS",
+    "object": "1.072 × 10 16 kg",
+    "pattern": "infobox",
+    "raw": "质量: 1.072×10 16 kg （地球的1.8×10 -9 倍）",
+    "source": "zh_wikipedia",
+    "source_role": "primary",
+    "origin": "html_fallback",
+    "type": "triple_candidate",
+    "source_title": "火卫一",
+    "source_name": "zh_wikipedia",
+    "schema_version": "2.0"
+  }
+]

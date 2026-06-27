@@ -1,0 +1,44 @@
+[
+  {
+    "subject": "木星",
+    "relation": "HAS_RADIUS",
+    "object": "0.4 km",
+    "pattern": "infobox",
+    "raw": "平均半径: 7007698860000000000♠ 69 886 .0 ± 0.4 km",
+    "source": "zh_wikipedia",
+    "source_role": "primary",
+    "origin": "html_fallback",
+    "type": "triple_candidate",
+    "source_title": "木星",
+    "source_name": "zh_wikipedia",
+    "schema_version": "2.0"
+  },
+  {
+    "subject": "木星",
+    "relation": "HAS_MASS",
+    "object": "1.8981 × 10 27 kg",
+    "pattern": "infobox",
+    "raw": "质量: 7027189810000000000♠ 1.8981 × 10 27 kg 317.8 地球 1/1047 太阳",
+    "source": "zh_wikipedia",
+    "source_role": "primary",
+    "origin": "html_fallback",
+    "type": "triple_candidate",
+    "source_title": "木星",
+    "source_name": "zh_wikipedia",
+    "schema_version": "2.0"
+  },
+  {
+    "subject": "木星",
+    "relation": "IS_A",
+    "object": "颗 巨行星",
+    "pattern": "rule",
+    "raw": "木星是颗 巨行星",
+    "source": "zh_wikipedia",
+    "source_role": "primary",
+    "origin": "html_fallback",
+    "type": "triple_candidate",
+    "source_title": "木星",
+    "source_name": "zh_wikipedia",
+    "schema_version": "2.0"
+  }
+]

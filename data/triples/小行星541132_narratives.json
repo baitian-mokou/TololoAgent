@@ -1,0 +1,77 @@
+[
+  {
+    "page_title": "小行星541132",
+    "section": "概要",
+    "chunk_index": 0,
+    "content": "小行星541132 （Leleākūhonua，临时编号：2015 TG387）是一颗 海王星外天体 ，暱称为「哥布林」 ，于2015年10月13日经由夏威夷 毛纳基山天文台 发现。\n小行星541132是继 塞德娜 和 2012 VP113 之后发现的第三颗 类塞德娜天体 ，其直径约为350公里（220英里）。",
+    "path": "概要",
+    "keywords": [
+      "小行星",
+      "临时编号",
+      "是一颗",
+      "海王星外天体",
+      "暱称为",
+      "哥布林",
+      "日经由夏威夷",
+      "毛纳基山天文台"
+    ],
+    "chunk_id": "18932aab3835",
+    "source": "zh_wikipedia",
+    "source_role": "primary",
+    "origin": "html_fallback",
+    "type": "embedding_chunk",
+    "source_title": "小行星541132",
+    "source_name": "zh_wikipedia",
+    "schema_version": "2.0"
+  },
+  {
+    "page_title": "小行星541132",
+    "section": "发现史",
+    "chunk_index": 1,
+    "content": "2015年10月13日， 毛纳基山天文台 （T09）首次观测到2015 TG387， 美国 天文学家 大卫·J·托伦 、 斯科特·谢泼德 和 乍德·特鲁希略 在调查古柏断崖外天体中首次观测到该天体 。\n非正式发现于2018年10月1日公开宣布 。\n该调查使用两个望远镜：北半球 昴星团望远镜 及夏威夷毛纳基山天文台超级望远镜、南半球 托洛洛山美洲际天文台 布兰科望远镜 及 暗能量巡天 。\n天文学家正在使用 麦哲伦望远镜 和 探索频道望远镜 确认该天体的轨道。\n该次巡天也发现 2012 VP113 、 2014 SR349 和 2013 FT28 。",
+    "path": "发现史",
+    "keywords": [
+      "毛纳基山天文台",
+      "首次观测到",
+      "美国",
+      "天文学家",
+      "大卫",
+      "托伦",
+      "斯科特",
+      "谢泼德"
+    ],
+    "chunk_id": "889902277150",
+    "source": "zh_wikipedia",
+    "source_role": "primary",
+    "origin": "html_fallback",
+    "type": "embedding_chunk",
+    "source_title": "小行星541132",
+    "source_name": "zh_wikipedia",
+    "schema_version": "2.0"
+  },
+  {
+    "page_title": "小行星541132",
+    "section": "编号和命名",
+    "chunk_index": 2,
+    "content": "这颗 小行星 于2019年10月10日由 小行星中心 编号为「541132」（ M.P.C. 117077 ） 。\n2020年6月，正式命名为「Leleākūhonua」，'它一直飞到陆地出现' 。\n这个名字是夏威夷语课程的学生 A Hua He Inoa （ 英语 ： A Hua He Inoa ） 建议的。\n这个物体让学生们想起了「古莱阿」（英语： kolea ）或 太平洋金斑鸻 的迁徙，它从阿拉斯加迁徙到夏威夷 。\n英文对这个名字的描述称「将轨道比作候鸟的飞行，唤起人们对接近陆地的渴望或向往」（夏威夷语：「me he manu i ke ala pō ʻ aiapuni lā, he pa ʻ a mau nō ia i ka hui me kona pūnana i kumu mai ai 」；它就像一只盘旋在太阳轨道上的鸟，它永远在寻找回家的背风。\n） 。",
+    "path": "编号和命名",
+    "keywords": [
+      "英语",
+      "这颗",
+      "小行星",
+      "日由",
+      "小行星中心",
+      "编号为",
+      "正式命名为",
+      "它一直飞到陆地出现"
+    ],
+    "chunk_id": "7913cea3c5d5",
+    "source": "zh_wikipedia",
+    "source_role": "primary",
+    "origin": "html_fallback",
+    "type": "embedding_chunk",
+    "source_title": "小行星541132",
+    "source_name": "zh_wikipedia",
+    "schema_version": "2.0"
+  }
+]

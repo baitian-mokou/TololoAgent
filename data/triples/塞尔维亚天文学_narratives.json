@@ -1,0 +1,52 @@
+[
+  {
+    "page_title": "塞尔维亚天文学",
+    "section": "概要",
+    "chunk_index": 0,
+    "content": "塞尔维亚天文学 的发展水平主要取决于该国的 经济水平 。\n兹韦兹达拉 的 贝尔格莱德天文台 （ 英语 ： Astronomical Observatory Belgrade ） 修建于1887年，是塞尔维亚最古老的科研机构之一 。\n塞尔维亚亦在1935年加入了 国际天文联会 。",
+    "path": "概要",
+    "keywords": [
+      "塞尔维亚天文学",
+      "的发展水平主要取决于该国的",
+      "经济水平",
+      "兹韦兹达拉",
+      "贝尔格莱德天文台",
+      "英语",
+      "修建于",
+      "是塞尔维亚最古老的科研机构之一"
+    ],
+    "chunk_id": "236402a3db4a",
+    "source": "zh_wikipedia",
+    "source_role": "primary",
+    "origin": "html_fallback",
+    "type": "embedding_chunk",
+    "source_title": "塞尔维亚天文学",
+    "source_name": "zh_wikipedia",
+    "schema_version": "2.0"
+  },
+  {
+    "page_title": "塞尔维亚天文学",
+    "section": "特点",
+    "chunk_index": 1,
+    "content": "迄今为止，贝尔格莱德天文台仍然是塞尔维亚唯一的专业观测站 。\n该天文台有八台专门的天文望远镜，并正在 普罗库普列 附近建立分台 。\n除贝尔格莱德天文台外，还有几个位于公共设施和大学中的，规模较小的观测站：比如 贝尔格莱德 的 帝国之门 （ 英语 ： Despot Stefan Tower ） 、诺维萨德天文台 及 克拉古耶瓦茨 的柏勒洛丰天文台 。\n塞尔维亚有两座天文博物馆，一所位于贝尔格莱德，另一所位于诺维萨德。\n塞尔维亚的中小学将天文学夹杂在其他课程中教授 ， 派特尼萨科学中心 （ 英语 ： Petnica Science Center ） 在天文学的教学中起到了重要作用 。\n目前，有五所塞尔维亚大学（ 贝尔格莱德大学 、 诺维萨德大学 、 克拉古耶瓦茨大学 （ 英语 ： University of Kragujevac ） 、 尼什大学 （ 英语 ： University of Niš ） 及 普里什蒂纳大学 （ 英语 ： University of Priština (North Mitrovica) ） ）有天文学这一专业 。\n目前有242位天文学家毕业于贝尔格莱德大学，6位毕业于诺维萨德大学，以及4位留学回国者 。\n塞尔维亚国内出版了数本专门研究天文学的期刊：如《Astronomija》（已停刊） 及《 Vasiona （ 英语 ： Vasiona ） 》 。\n著名的《 塞尔维亚天文期刊 （ 英语 ： Serbian Astronomical Journal ） 》创刊于1936年。\n目前，塞尔维亚有17个 业余天文学 协会 ，其中最古老的是 鲁杰尔·博斯科维奇天文协会 （ 英语 ： Astronomical Society Ruđer Bošković ） 。",
+    "path": "特点",
+    "keywords": [
+      "英语",
+      "目前",
+      "迄今为止",
+      "贝尔格莱德天文台仍然是塞尔维亚唯一的专业观测站",
+      "该天文台有八台专门的天文望远镜",
+      "并正在",
+      "普罗库普列",
+      "附近建立分台"
+    ],
+    "chunk_id": "d453a7a3ce6a",
+    "source": "zh_wikipedia",
+    "source_role": "primary",
+    "origin": "html_fallback",
+    "type": "embedding_chunk",
+    "source_title": "塞尔维亚天文学",
+    "source_name": "zh_wikipedia",
+    "schema_version": "2.0"
+  }
+]

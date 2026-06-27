@@ -1,0 +1,52 @@
+[
+  {
+    "page_title": "灶神星族",
+    "section": "特征",
+    "chunk_index": 0,
+    "content": "灶神星族的位置和结构。\n这个家族的成员有 灶神星 ，第二大的 小行星 （平均值径530公里），和许多直径在10公里以下的小行星。\n其中最亮的是 1929 Kollaa 和 2045 北京 ， 绝对星等 12.2等。\n如果它们有和 灶神星 一样高的 反照率 或是稍暗些，则估计直半径约为7.5公里。\n家族的成员来自灶神星被撞击出的碎片，在南极附近的大坑穴可能就是撞击点。\n灶神星族也是 HED陨石 的来源。\n这个家族也有一些 J-型 小行星 （V型的亲戚），它们被认为是来自比灶神星外壳更深的内部几层，并且对应于 HED陨石 的 古铜无球陨石 。\nHCM的数值分析（Zappala 1995）确认了许多家族'核心'的数量，它们 固有轨道要素 的概略值列于下表： 这给出了家族大约的边界。\n以目前的 历元 ，核心成员 密切 轨道要素 的范围是： Zappala 1995 的分析发现235个核心成员。\n在2005年，对一个拥有96944颗小行星轨道元素的资料库（ AstDys ）进行适当的搜寻之后，有6051颗（大约是6%）位在第一个表中的灶神星族区域内。",
+    "path": "特征",
+    "keywords": [
+      "灶神星",
+      "小行星",
+      "公里",
+      "陨石",
+      "灶神星族的位置和结构",
+      "这个家族的成员有",
+      "第二大的",
+      "平均值径"
+    ],
+    "chunk_id": "230b13125271",
+    "source": "zh_wikipedia",
+    "source_role": "primary",
+    "origin": "html_fallback",
+    "type": "embedding_chunk",
+    "source_title": "灶神星族",
+    "source_name": "zh_wikipedia",
+    "schema_version": "2.0"
+  },
+  {
+    "page_title": "灶神星族",
+    "section": "入侵者",
+    "chunk_index": 1,
+    "content": "经由光谱分析显示，有些较大的成员并不属于灶神星族，实际上是闯入的入侵者。\n它们的光谱不是 V-型 或 J-型 ，但是它们的轨道是符合的。\n这些入侵者有 306 Unitas 、 442 Eichsfeldia , 1697 Koskenniemi , 178 Van Biesbroeck , 2024 McLaughlin , 2029 Binomi , 2086 Newell , 2346 Lilio ，还有一些其他的。\n（要确认请参考 PDS asteroid taxonomy data set Archive.today 的 存档 ，存档日期2003-11-19）。",
+    "path": "入侵者",
+    "keywords": [
+      "经由光谱分析显示",
+      "有些较大的成员并不属于灶神星族",
+      "实际上是闯入的入侵者",
+      "它们的光谱不是",
+      "但是它们的轨道是符合的",
+      "这些入侵者有",
+      "还有一些其他的",
+      "要确认请参考"
+    ],
+    "chunk_id": "29b6277cb16f",
+    "source": "zh_wikipedia",
+    "source_role": "primary",
+    "origin": "html_fallback",
+    "type": "embedding_chunk",
+    "source_title": "灶神星族",
+    "source_name": "zh_wikipedia",
+    "schema_version": "2.0"
+  }
+]

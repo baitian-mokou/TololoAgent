@@ -1,0 +1,68 @@
+[
+  {
+    "page_title": "双鱼-鲸鱼座超星系团复合体",
+    "section": "概要",
+    "chunk_index": 0,
+    "content": "双鱼-鲸鱼座超星系团复合体 （ Pisces–Cetus Supercluster Complex ），或称 本超结构体 （ Local Superstructure ，简称 LSS ），是一个容纳 本超星系团 即 室女超星系团 （包含 本星系团 里面的 本星系群 （ 银河系 所在的 星系群 ）的本超星系团 ）的 超星系团 或 大尺度纤维状结构 。",
+    "path": "概要",
+    "keywords": [
+      "双鱼",
+      "鲸鱼座超星系团复合体",
+      "或称",
+      "本超结构体",
+      "简称",
+      "是一个容纳",
+      "本超星系团",
+      "室女超星系团"
+    ],
+    "chunk_id": "7d5ac00c400c",
+    "source": "zh_wikipedia",
+    "source_role": "primary",
+    "origin": "html_fallback",
+    "type": "embedding_chunk",
+    "source_title": "双鱼-鲸鱼座超星系团复合体",
+    "source_name": "zh_wikipedia",
+    "schema_version": "2.0"
+  },
+  {
+    "page_title": "双鱼-鲸鱼座超星系团复合体",
+    "section": "范围",
+    "chunk_index": 1,
+    "content": "双鱼-鲸鱼座超星系团复合体的尺度是10亿 光年 长，1亿5千万光年宽。\n它是到目前为止在 宇宙 中发现的最大结构之一 ，但不及个别的 史隆长城 （13亿7千万光年）、 克劳斯-坎普萨诺超大类星体群 （20亿光年）、 U1.11 LQG （25亿光年）、 巨型超大类星体群 （40亿光年）和 武仙－北冕座长城 （100亿光年）长。\n这个复合体有60个群集，并且估计总质量为 ×10 18 M ☉ 。\n据发现者描述，这个复合体由5个部分组成： 双鱼-鲸鱼超星系团 包括 英仙-双鱼超星系团 的英仙-飞马链， 飞马-双鱼链 包括玉夫座超星系团和 武仙座超星系团 的 玉夫座长城 ， 拉尼亚凯亚超星系团 ，其包括我们所在的 室女座超星系团 ( 本超星系团 )以及 长蛇-半人马超星系团 。\n这个复合体是依据最富足的双鱼-鲸鱼座超星系团命名。\n相较之下，我们所属的 室女座超星系团 的质量只有10 15 M ☉ ，只是复合体总质量的0.1%。",
+    "path": "范围",
+    "keywords": [
+      "亿光年",
+      "双鱼",
+      "室女座超星系团",
+      "鲸鱼座超星系团复合体的尺度是",
+      "光年",
+      "千万光年宽",
+      "它是到目前为止在",
+      "宇宙"
+    ],
+    "chunk_id": "188c326ce475",
+    "source": "zh_wikipedia",
+    "source_role": "primary",
+    "origin": "html_fallback",
+    "type": "embedding_chunk",
+    "source_title": "双鱼-鲸鱼座超星系团复合体",
+    "source_name": "zh_wikipedia",
+    "schema_version": "2.0"
+  },
+  {
+    "page_title": "双鱼-鲸鱼座超星系团复合体",
+    "section": "图片",
+    "chunk_index": 2,
+    "content": "The Pisces-Cetus Supercluster Complex is the very long chain of galaxies from the Pisces-Cetus Superclusters, Sculptor Superclusters, the Perseus-Pisces Supercluster and the Virgo-Hydra-Centaurus Superclusters.",
+    "path": "图片",
+    "keywords": [],
+    "chunk_id": "a1972b1261de",
+    "source": "zh_wikipedia",
+    "source_role": "primary",
+    "origin": "html_fallback",
+    "type": "embedding_chunk",
+    "source_title": "双鱼-鲸鱼座超星系团复合体",
+    "source_name": "zh_wikipedia",
+    "schema_version": "2.0"
+  }
+]

@@ -1,0 +1,27 @@
+[
+  {
+    "page_title": "火星",
+    "section": "大气",
+    "chunk_index": 0,
+    "content": "根据 NASA Mars Fact Sheet，火星大气非常稀薄，主要成分是二氧化碳，约占 95.32%，另含氮气约 2.7%、氩气约 1.6%，以及微量氧气、一氧化碳和水蒸气。\n稀薄的大气意味着火星表面气压远低于地球，保温能力较弱，也更容易受到太阳风和高能粒子的影响，因此常被描述为寒冷而干燥的环境。",
+    "path": "大气",
+    "keywords": [
+      "根据",
+      "火星大气非常稀薄",
+      "主要成分是二氧化碳",
+      "约占",
+      "另含氮气约",
+      "氩气约",
+      "以及微量氧气",
+      "一氧化碳和水蒸气"
+    ],
+    "chunk_id": "0d6b36e19d8d",
+    "source": "nasa",
+    "source_name": "nasa",
+    "source_role": "primary",
+    "origin": "html_fallback",
+    "type": "embedding_chunk",
+    "schema_version": "nasa_shadow_ready_v1",
+    "source_title": "火星"
+  }
+]

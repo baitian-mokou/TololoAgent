@@ -1,0 +1,18 @@
+{
+  "title": "火卫一",
+  "category": "Satellite",
+  "url": "https://science.nasa.gov/mars/moons/phobos/",
+  "html": "<div id=\"mw-content-text\" class=\"mw-body-content\"><div class=\"mw-parser-output\"><p>火卫一是火星的天然卫星，也是距离火星最近的一颗卫星。</p><h2>概要</h2><p>NASA 对火卫一的介绍将其描述为一颗形状不规则、表面布满陨石坑的小天体。火卫一绕火星公转，并且轨道高度较低，公转周期短，因此在火星天空中会快速移动。</p><h2>轨道</h2><p>火卫一是火星的天然卫星。火卫一绕火星公转，这一关系也是 NASA 火星卫星资料中的基础描述。由于它绕火星运行得非常靠近，所以它的轨道演化和潮汐作用经常被单独讨论。</p></div></div>",
+  "text": "火卫一是火星的天然卫星。火卫一绕火星公转，并且轨道高度较低。",
+  "raw_text": "火卫一是火星的天然卫星。火卫一绕火星公转，并且轨道高度较低。",
+  "content_length": 38,
+  "char_count": 38,
+  "word_count_cn": 38,
+  "source": "nasa",
+  "source_name": "nasa",
+  "source_role": "primary",
+  "schema_version": "nasa_shadow_ready_v1",
+  "origin": "html_fallback",
+  "fetch_source": "html_dom",
+  "crawl_time": "2026-06-24 12:00:00"
+}

@@ -1,0 +1,27 @@
+[
+  {
+    "page_title": "土卫七",
+    "section": "概要",
+    "chunk_index": 0,
+    "content": "土卫七 又称为 海柏利昂 ，是环绕 土星 运行的一颗 卫星 。\n1848年美国 天文学家 乔治·邦德 和英国的 威廉·拉塞尔 各自独立发现土卫七，距土星1482000 公里 ，像大星体的碎片，表面有如海绵，直径大约270公里，它是太阳系中， 自转 不规则的 星体 之一，每21.3天绕 土星 旋转一周。",
+    "path": "概要",
+    "keywords": [
+      "土星",
+      "公里",
+      "土卫七",
+      "又称为",
+      "海柏利昂",
+      "是环绕",
+      "运行的一颗",
+      "卫星"
+    ],
+    "chunk_id": "783e756c9644",
+    "source": "zh_wikipedia",
+    "source_role": "primary",
+    "origin": "html_fallback",
+    "type": "embedding_chunk",
+    "source_title": "土卫七",
+    "source_name": "zh_wikipedia",
+    "schema_version": "2.0"
+  }
+]

@@ -1,0 +1,72 @@
+[
+  {
+    "subject": "土卫七",
+    "relation": "HAS_MASS",
+    "object": "0.5584 × 10 19 kg",
+    "source": "zh_wikipedia",
+    "source_name": "zh_wikipedia",
+    "source_title": "土卫七",
+    "source_role": "primary",
+    "origin": "html_fallback",
+    "type": "triple_candidate",
+    "schema_version": "2.0",
+    "pattern": "infobox",
+    "raw": "质量: 0.5584 ± 0.0068×10 19 kg"
+  },
+  {
+    "subject": "土卫七",
+    "relation": "LOCATED_IN",
+    "object": "太阳系",
+    "source": "zh_wikipedia",
+    "source_name": "zh_wikipedia",
+    "source_title": "土卫七",
+    "source_role": "primary",
+    "origin": "internal_link",
+    "type": "triple_candidate",
+    "schema_version": "zh_wikipedia_single_source_v1",
+    "pattern": "rule",
+    "raw": "土卫七位于太阳系"
+  },
+  {
+    "subject": "土卫七",
+    "relation": "IS_A",
+    "object": "天然卫星",
+    "source": "zh_wikipedia",
+    "source_name": "zh_wikipedia",
+    "source_title": "土卫七",
+    "source_role": "primary",
+    "origin": "internal_link",
+    "type": "triple_candidate",
+    "schema_version": "zh_wikipedia_single_source_v1",
+    "pattern": "rule",
+    "raw": "土卫七是天然卫星"
+  },
+  {
+    "subject": "土卫七",
+    "relation": "ORBITS",
+    "object": "土星",
+    "source": "zh_wikipedia",
+    "source_name": "zh_wikipedia",
+    "source_title": "土卫七",
+    "source_role": "primary",
+    "origin": "internal_link",
+    "type": "triple_candidate",
+    "schema_version": "zh_wikipedia_single_source_v1",
+    "pattern": "rule",
+    "raw": "土卫七绕土星公转"
+  },
+  {
+    "subject": "土卫七",
+    "relation": "PART_OF",
+    "object": "土星系统",
+    "source": "zh_wikipedia",
+    "source_name": "zh_wikipedia",
+    "source_title": "土卫七",
+    "source_role": "primary",
+    "origin": "internal_link",
+    "type": "triple_candidate",
+    "schema_version": "zh_wikipedia_single_source_v1",
+    "pattern": "rule",
+    "raw": "土卫七属于土星系统"
+  }
+]

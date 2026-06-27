@@ -1,0 +1,27 @@
+[
+  {
+    "page_title": "CN星",
+    "section": "概要",
+    "chunk_index": 0,
+    "content": "CN星 是在 恒星 的 光谱分类 中，与其它的恒星相较之下，光谱中有异常强 氰 带的恒星 。\n氰是由一个 碳 原子和一个 氮 分子组成的简单分子，在波长388.9和 7002421600000000000♠ 421.6 奈米 附近有 吸收带 。\n1949年， Jason John Nassau （ 英语 ： Jason John Nassau ） 和 威廉·威尔逊·摩根 首次在某些G型和K型巨星发现这一类恒星 ，1952年 南希·罗曼 又发现了4,150颗 。\n它们与 钡星 的区别在缺乏 S-过程 的元素，而与其它类型亮星的区别在于其它谱线的特征普遍比CN线微弱 。\nCN波段的过剩强度以正指数0.5微增量来分类。\n值为0表示是正常的恒星，不会在恒星类型中显，而峰值为4则基本上与 碳星 相似。\n在 MK系统 的分类中，带有CN尾码的恒星被认为是强CN星。\n因此， 房宿增三 （ 英语 ： 天秤座42 ） 是一颗拥有 K3-III CN2 类的情CN星。\n0.5的值也被视为临界的CN星，它对应于 毕宿星团 中典型的巨星 。",
+    "path": "概要",
+    "keywords": [
+      "英语",
+      "是在",
+      "恒星",
+      "光谱分类",
+      "与其它的恒星相较之下",
+      "光谱中有异常强",
+      "带的恒星",
+      "氰是由一个"
+    ],
+    "chunk_id": "c332aeffede0",
+    "source": "zh_wikipedia",
+    "source_role": "primary",
+    "origin": "html_fallback",
+    "type": "embedding_chunk",
+    "source_title": "CN星",
+    "source_name": "zh_wikipedia",
+    "schema_version": "2.0"
+  }
+]

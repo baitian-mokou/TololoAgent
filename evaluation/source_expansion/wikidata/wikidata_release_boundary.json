@@ -1,0 +1,21 @@
+{
+  "date": "2026-06-24",
+  "release_phase": "formal_second_source",
+  "active_source": "zh_wikipedia",
+  "active_source_test": "nasa",
+  "formal_second_sources": [
+    {
+      "source_name": "wikidata",
+      "registry_status": "disabled",
+      "formal_status": "formally_integrated_shadow",
+      "materialization_status": "graph_embedding_materialized",
+      "approval_mode": "owner-approved exception",
+      "cutover_ready": false
+    }
+  ],
+  "cutover_ready_sources": [],
+  "notes": [
+    "Wikidata is formally integrated as a second source but is not the active source.",
+    "Active-source cutover requires a separate regression review."
+  ]
+}

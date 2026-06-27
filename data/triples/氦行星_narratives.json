@@ -1,0 +1,27 @@
+[
+  {
+    "page_title": "氦行星",
+    "section": "概要",
+    "chunk_index": 0,
+    "content": "氦行星 是通过低质量 白矮星 的质量损失，可能形成的一种理论上假设的行星类型。\n普通 气体巨星 （如 木星 、 土星 ）组成的主要成分是 氢 ，而 氦 则是次要成分。\n但氦行星可能在氢已经通过 核融合 完全形成氦或其它更重元素的环境中生成。",
+    "path": "概要",
+    "keywords": [
+      "氦行星",
+      "是通过低质量",
+      "白矮星",
+      "的质量损失",
+      "可能形成的一种理论上假设的行星类型",
+      "普通",
+      "气体巨星",
+      "木星"
+    ],
+    "chunk_id": "e94daaa50489",
+    "source": "zh_wikipedia",
+    "source_role": "primary",
+    "origin": "html_fallback",
+    "type": "embedding_chunk",
+    "source_title": "氦行星",
+    "source_name": "zh_wikipedia",
+    "schema_version": "2.0"
+  }
+]

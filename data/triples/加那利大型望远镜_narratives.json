@@ -1,0 +1,77 @@
+[
+  {
+    "page_title": "加那利大型望远镜",
+    "section": "概要",
+    "chunk_index": 0,
+    "content": "加那利大型望远镜 （西班牙语： Gran Telescopio Canarias ，缩写：GranTeCan 或 GTC）是位于 西班牙 所属 加那利群岛 中 拉帕尔玛岛 上 穆查丘斯罗克天文台 里的10.4米（410英寸）一架 反射望远镜 。\n这架望远镜的建造花了7年的时间，耗资1.3亿欧元（1.12亿英镑） 。\n由于天气状况加上地区的偏远，将设备运送到这儿和后勤的支援都相当困难，安装的进展受到了阻碍。\n在2007年开光取得第一幅影像，至2009年才开始科学的观测。\n加那利大型望远镜项目是一个由几个来自 西班牙 和 墨西哥 的机构、 佛罗里达大学 、 墨西哥国立自治大学 及 加那利天体物理研究所 （ 英语 ： Instituto de Astrofísica de Canarias ） （IAC）等机构组成的合作项目 。\n望远镜的建设计划始于1987年，有来自100家公司超过1,000人参与建造 。\n它是 世界上最大的光学单一口径反射望远镜 。\n望远镜的使用时间划分是依照出资的比例：西班牙90%，墨西哥5%，佛罗里达大学5%。",
+    "path": "概要",
+    "keywords": [
+      "西班牙",
+      "墨西哥",
+      "佛罗里达大学",
+      "加那利大型望远镜",
+      "西班牙语",
+      "缩写",
+      "是位于",
+      "所属"
+    ],
+    "chunk_id": "bcc0c2a3228e",
+    "source": "zh_wikipedia",
+    "source_role": "primary",
+    "origin": "html_fallback",
+    "type": "embedding_chunk",
+    "source_title": "加那利大型望远镜",
+    "source_name": "zh_wikipedia",
+    "schema_version": "2.0"
+  },
+  {
+    "page_title": "加那利大型望远镜",
+    "section": "开光",
+    "chunk_index": 1,
+    "content": "加那利大型望远镜于2007年7月13日开始初步的观测，当时使用的 主镜 由12片镜片拼接，是 德国 肖特玻璃厂 以 陶瓷 铸造而成的 微晶玻璃 （ 英语 ： Zerodur ） 。\n后来，增加到36片 六边形 的镜片。\n这些作为协同工作的反射单元镜片，全部由 主动光学 控制系统控制 。\n它每天都会使用的仪器是 OSIRIS （ 英语 ： Optical System for Imaging and low Resolution Integrated Spectroscopy ） 。\n于2009年5月开始正常进行科学观测 。",
+    "path": "历史 > 开光",
+    "keywords": [
+      "英语",
+      "加那利大型望远镜于",
+      "日开始初步的观测",
+      "当时使用的",
+      "主镜",
+      "片镜片拼接",
+      "德国",
+      "肖特玻璃厂"
+    ],
+    "chunk_id": "37a7aebc7f58",
+    "source": "zh_wikipedia",
+    "source_role": "primary",
+    "origin": "html_fallback",
+    "type": "embedding_chunk",
+    "source_title": "加那利大型望远镜",
+    "source_name": "zh_wikipedia",
+    "schema_version": "2.0"
+  },
+  {
+    "page_title": "加那利大型望远镜",
+    "section": "梅格拉",
+    "chunk_index": 2,
+    "content": "加那利大型望远镜和其他著名光学望远镜主镜面积比较，点选影像可看大图。\n梅格拉（MEGARA，Multi-Espectrografo en GTC de Alta Resolucion para Astronomia）是光学涵盖在0.365至1μm之间的可见光和红外线波长的 集成视场 和多天体 光学光谱仪 （ 英语 ： Spectrograph ） ， 光谱解析度 为R=6000-20000。",
+    "path": "梅格拉",
+    "keywords": [
+      "加那利大型望远镜和其他著名光学望远镜主镜面积比较",
+      "点选影像可看大图",
+      "梅格拉",
+      "是光学涵盖在",
+      "之间的可见光和红外线波长的",
+      "集成视场",
+      "和多天体",
+      "光学光谱仪"
+    ],
+    "chunk_id": "a356d7d862bb",
+    "source": "zh_wikipedia",
+    "source_role": "primary",
+    "origin": "html_fallback",
+    "type": "embedding_chunk",
+    "source_title": "加那利大型望远镜",
+    "source_name": "zh_wikipedia",
+    "schema_version": "2.0"
+  }
+]

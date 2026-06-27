@@ -1,0 +1,48 @@
+[
+  {
+    "page_title": "雨神星",
+    "section": "概要",
+    "chunk_index": 0,
+    "content": "雨神星 （38628 Huya）是一个 外海王星天体 ，2000年3月10日由 伊格纳西奥·费瑞恩 （Ignacio Ferrin）发现，2003年8月 国际天文联会 正式命名为Huya， 胡雅 （ 英语 ： Huya (mythology) ） 为南美洲印第安神话中的雨神。\n该天体与海王星的轨道共振为3:2，因此被分类为 冥族小天体 。",
+    "path": "概要",
+    "keywords": [
+      "雨神星",
+      "是一个",
+      "外海王星天体",
+      "日由",
+      "伊格纳西奥",
+      "费瑞恩",
+      "发现",
+      "国际天文联会"
+    ],
+    "chunk_id": "cc9fa28bf632",
+    "source": "zh_wikipedia",
+    "source_role": "primary",
+    "origin": "html_fallback",
+    "type": "embedding_chunk",
+    "source_title": "雨神星",
+    "source_name": "zh_wikipedia",
+    "schema_version": "2.0"
+  },
+  {
+    "page_title": "雨神星",
+    "section": "外部连结",
+    "chunk_index": 1,
+    "content": "Orbital simulation （ 页面存档备份 ，存于 互联网档案馆 ） from JPL (Java) / Ephemeris （ 页面存档备份 ，存于 互联网档案馆 ） 37th DPS: Albedos, Diameters (and a Density) of Kuiper Belt and Centaur Objects Planet 10? Tiny 'Plutino' Almost Qualifies Discovery of a bright Trans-Neptunian Object (Yale) From the Rain Forest to Planet Huya NewPP limit report Parsed by mw‐web.codfw.main‐f6459cd79‐xkjns Cached time: 20260603174115 Cache expiry: 2592000 Reduced expiry: false Complications: [prevent‐selective‐update] CPU time usage: 0.207 seconds Real time usage: 0.240 seconds Preprocessor visited node count: 1581/1000000 Revision size: 2600/2097152 bytes Post‐expand include size: 51729/2097152 bytes Template argument size: 4653/2097152 bytes Highest expansion depth: 9/100 Expensive parser function count: 0/500 Unstrip recursion depth: 0/20 Unstrip post‐expand size: 10355/5000000 bytes Lua time usage: 0.106/10.000 seconds Lua memory usage: 1305198/52428800 bytes Number of Wikibase entities loaded: 0/500 Transclusion expansion time report (%,ms,calls,template) 100.00% 175.586 1 -total 44.65% 78.399 1 Template:外海王星天体 42.82% 75.193 1 Template:Navbox 37.10% 65.146 1 Template:Infobox_Planet 34.88% 61.243 1 Template:Infobox 14.16% 24.868 1 Template:Le 3.64% 6.395 45 Template:Mpl- 2.61% 4.581 1 Template:Minor_Planet_Number 1.92% 3.363 1 Template:Serial 1.84% 3.232 54 Template:Nowrap Render ID 6b39764a-5f73-11f1-a3c9-59febc548c17 Saved in parser cache with key zhwiki:pcache:605318:|#|:idhash:canonical!zh and timestamp 20260603174115 and revision id 86820761. Rendering was triggered because: page_view",
+    "path": "外部连结",
+    "keywords": [
+      "页面存档备份",
+      "存于",
+      "互联网档案馆",
+      "外海王星天体"
+    ],
+    "chunk_id": "d32c8a06fd12",
+    "source": "zh_wikipedia",
+    "source_role": "primary",
+    "origin": "html_fallback",
+    "type": "embedding_chunk",
+    "source_title": "雨神星",
+    "source_name": "zh_wikipedia",
+    "schema_version": "2.0"
+  }
+]

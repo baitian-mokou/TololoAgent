@@ -1,0 +1,52 @@
+[
+  {
+    "page_title": "星座恒星列表",
+    "section": "概要",
+    "chunk_index": 0,
+    "content": "除了 太阳 之外，所有的恒星都属于 国际天文联合会 （IAU）划分的某一个星座。\n虽然IAU只划分了88个星座，但实际上整个天空被划分为89个不规则的形状，因为 巨蛇座 被划分为两部分：西边的 巨蛇头 （Serpens Caput）和东边的 巨蛇尾 （Serpens Cauda）。\n唯一不属于任何星座的恒星是 太阳 。\n太阳在一年内沿着 黄道 穿过13个星座：12个 黄道星座 和 蛇夫座 。",
+    "path": "概要",
+    "keywords": [
+      "太阳",
+      "个星座",
+      "除了",
+      "之外",
+      "所有的恒星都属于",
+      "国际天文联合会",
+      "划分的某一个星座",
+      "虽然"
+    ],
+    "chunk_id": "30ae48481c8c",
+    "source": "zh_wikipedia",
+    "source_role": "primary",
+    "origin": "html_fallback",
+    "type": "embedding_chunk",
+    "source_title": "星座恒星列表",
+    "source_name": "zh_wikipedia",
+    "schema_version": "2.0"
+  },
+  {
+    "page_title": "星座恒星列表",
+    "section": "入选标准",
+    "chunk_index": 1,
+    "content": "星座里的恒星只有满足以下条件才会包括在列表里： 六等或更亮（ V < 6.50）的恒星 具有 拜耳命名法 或 佛兰斯蒂德命名法 命名的名称的恒星 值得注意的 变星 （变星原型、罕见或者很重要的变星） 距地球距离较近的恒星 含有 行星系统 的恒星 值得注意的 中子星 、 黑洞 和其他奇特的天体",
+    "path": "入选标准",
+    "keywords": [
+      "的恒星",
+      "值得注意的",
+      "星座里的恒星只有满足以下条件才会包括在列表里",
+      "六等或更亮",
+      "具有",
+      "拜耳命名法",
+      "佛兰斯蒂德命名法",
+      "命名的名称的恒星"
+    ],
+    "chunk_id": "08e363de05cb",
+    "source": "zh_wikipedia",
+    "source_role": "primary",
+    "origin": "html_fallback",
+    "type": "embedding_chunk",
+    "source_title": "星座恒星列表",
+    "source_name": "zh_wikipedia",
+    "schema_version": "2.0"
+  }
+]

@@ -1,0 +1,16 @@
+[
+  {
+    "subject": "柯伊伯带",
+    "relation": "IS_A",
+    "object": "短周期 彗星",
+    "pattern": "rule",
+    "raw": "柯伊伯带是短周期 彗星",
+    "source": "zh_wikipedia",
+    "source_role": "primary",
+    "origin": "html_fallback",
+    "type": "triple_candidate",
+    "source_title": "柯伊伯带",
+    "source_name": "zh_wikipedia",
+    "schema_version": "2.0"
+  }
+]

@@ -1,0 +1,16 @@
+[
+  {
+    "subject": "小行星2060",
+    "relation": "DISCOVERED_BY",
+    "object": "查尔斯·科瓦尔",
+    "pattern": "infobox",
+    "raw": "发现者: 查尔斯·科瓦尔",
+    "source": "zh_wikipedia",
+    "source_role": "primary",
+    "origin": "html_fallback",
+    "type": "triple_candidate",
+    "source_title": "小行星2060",
+    "source_name": "zh_wikipedia",
+    "schema_version": "2.0"
+  }
+]

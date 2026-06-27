@@ -1,0 +1,16 @@
+[
+  {
+    "subject": "变星",
+    "relation": "DISCOVERED_BY",
+    "object": "用于后续",
+    "pattern": "rule",
+    "raw": "，用于后续发现的变星",
+    "source": "zh_wikipedia",
+    "source_role": "primary",
+    "origin": "html_fallback",
+    "type": "triple_candidate",
+    "source_title": "变星",
+    "source_name": "zh_wikipedia",
+    "schema_version": "2.0"
+  }
+]

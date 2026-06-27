@@ -1,0 +1,27 @@
+[
+  {
+    "page_title": "普朗克恒星",
+    "section": "概要",
+    "chunk_index": 0,
+    "content": "普朗克恒星 （Planck star）是一种假想的天体，理论上是一种 奇特星 。\n根据 回圈量子重力 理论，它存在于 黑洞 的 事件视界 内，当坍缩恒星的能量密度达到普朗克能量密度时产生。\n普朗克星在黑洞内部形成的理论可以作为 黑洞火墙 和 黑洞信息悖论 的解决方案。\n物理学家 卡洛·罗威利 和 弗朗西斯卡·维多托 （ 英语 ： Francesca Vidotto ） 于2014年首次提出普朗克星的存在。",
+    "path": "概要",
+    "keywords": [
+      "普朗克恒星",
+      "是一种假想的天体",
+      "理论上是一种",
+      "奇特星",
+      "根据",
+      "回圈量子重力",
+      "理论",
+      "它存在于"
+    ],
+    "chunk_id": "82221d96e1a5",
+    "source": "zh_wikipedia",
+    "source_role": "primary",
+    "origin": "html_fallback",
+    "type": "embedding_chunk",
+    "source_title": "普朗克恒星",
+    "source_name": "zh_wikipedia",
+    "schema_version": "2.0"
+  }
+]

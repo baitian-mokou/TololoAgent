@@ -1,0 +1,30 @@
+[
+  {
+    "subject": "婚神星",
+    "relation": "DISCOVERED_BY",
+    "object": "卡尔·路德维希·哈丁",
+    "pattern": "infobox",
+    "raw": "发现者: 卡尔·路德维希·哈丁",
+    "source": "zh_wikipedia",
+    "source_role": "primary",
+    "origin": "html_fallback",
+    "type": "triple_candidate",
+    "source_title": "婚神星",
+    "source_name": "zh_wikipedia",
+    "schema_version": "2.0"
+  },
+  {
+    "subject": "婚神星",
+    "relation": "HAS_MASS",
+    "object": "2.67 × 10 19 kg",
+    "pattern": "infobox",
+    "raw": "质量: 2.67 ×10 19 kg",
+    "source": "zh_wikipedia",
+    "source_role": "primary",
+    "origin": "html_fallback",
+    "type": "triple_candidate",
+    "source_title": "婚神星",
+    "source_name": "zh_wikipedia",
+    "schema_version": "2.0"
+  }
+]

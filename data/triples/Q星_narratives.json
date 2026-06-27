@@ -1,0 +1,52 @@
+[
+  {
+    "page_title": "Q星",
+    "section": "概要",
+    "chunk_index": 0,
+    "content": "Q星 （英语： Q-Star ）亦称为 灰洞 （英语： grey hole ），是一个假设存在的天体，由既稠密又重的中子星组成。\n这个概念，由著名物理学家 霍金 在1975年所提出，用以为 爱因斯坦 广义相对论 中 重力场方程式 中的一个解 。\n根据霍金的论据：爱因斯坦的重力方程式的两种奇点的解，分别是 黑洞 跟 白洞 。\n不过理论上黑洞应该是一种「有进没出」的天体，而白洞则只能出而不能进。\n然而黑洞却有粒子的辐射，所以黑洞不再适合被称为黑洞，改名为「灰洞」。\n目前「灰洞」这个名称已不再使用，而是改称为「Q星」。\nQ星与 恒星黑洞 在性质上亦有相似的地方，但目前只发现过 恒星黑洞 ，而未发现真正的Q星。\nQ星并不是 夸克星 ，Q星的名称源自于超对称 Q-Ball及B-Ball（重子数）。",
+    "path": "概要",
+    "keywords": [
+      "灰洞",
+      "英语",
+      "恒星黑洞",
+      "亦称为",
+      "是一个假设存在的天体",
+      "由既稠密又重的中子星组成",
+      "这个概念",
+      "由著名物理学家"
+    ],
+    "chunk_id": "934e82a8dc95",
+    "source": "zh_wikipedia",
+    "source_role": "primary",
+    "origin": "html_fallback",
+    "type": "embedding_chunk",
+    "source_title": "Q星",
+    "source_name": "zh_wikipedia",
+    "schema_version": "2.0"
+  },
+  {
+    "page_title": "Q星",
+    "section": "Q 星",
+    "chunk_index": 1,
+    "content": "它比 中子星 重，外在的物质还保持著粒子数。\n建议或已发现的恒星质量天体(白矮星、中子星和夸克和先子星)全都以质点粒子的简并压力支撑著，所有这些都被称为 简并恒星 。\nQ星不能被误认为是夸克星，这个Q并不是代表夸克(quark)，而是对应于一个量子数。\nQ星可能被错认为 恒星黑洞 ，一个此种天体的候选者是致密天体的 天鹅座V404 。",
+    "path": "Q 星",
+    "keywords": [
+      "它比",
+      "中子星",
+      "外在的物质还保持著粒子数",
+      "建议或已发现的恒星质量天体",
+      "白矮星",
+      "中子星和夸克和先子星",
+      "全都以质点粒子的简并压力支撑著",
+      "所有这些都被称为"
+    ],
+    "chunk_id": "45b669a24a10",
+    "source": "zh_wikipedia",
+    "source_role": "primary",
+    "origin": "html_fallback",
+    "type": "embedding_chunk",
+    "source_title": "Q星",
+    "source_name": "zh_wikipedia",
+    "schema_version": "2.0"
+  }
+]

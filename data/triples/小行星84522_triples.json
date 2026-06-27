@@ -1,0 +1,16 @@
+[
+  {
+    "subject": "小行星84522",
+    "relation": "DISCOVERED_BY",
+    "object": "NEAT",
+    "pattern": "infobox",
+    "raw": "发现者: NEAT",
+    "source": "zh_wikipedia",
+    "source_role": "primary",
+    "origin": "html_fallback",
+    "type": "triple_candidate",
+    "source_title": "小行星84522",
+    "source_name": "zh_wikipedia",
+    "schema_version": "2.0"
+  }
+]

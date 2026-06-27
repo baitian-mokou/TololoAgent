@@ -1,0 +1,77 @@
+[
+  {
+    "page_title": "次矮星",
+    "section": "概要",
+    "chunk_index": 0,
+    "content": "赫罗图 光谱型态 褐矮星 白矮星 红矮星 次矮星 主序星 次巨星 巨星 亮巨星 超巨星 特超巨星 绝对 星等 (M V ) 次矮星 ，有时标示为 sd ，是 淤积斯光谱分类 系统中 光度 属于VI的恒星，它们是 绝对星等 的 光度 比 主序星 低1.5至2等，但 光谱型态 相同的 恒星 。\n在 赫罗图 上，次矮星的位置在 主序带 的下方。\n次矮星 这个名词是 古柏 在1939年创造的，是用来标示之前被称为“中继 白矮星 ”，却有著异常光谱的恒星 。",
+    "path": "概要",
+    "keywords": [
+      "次矮星",
+      "赫罗图",
+      "光谱型态",
+      "白矮星",
+      "主序星",
+      "光度",
+      "褐矮星",
+      "红矮星"
+    ],
+    "chunk_id": "cfe942e9b6f1",
+    "source": "zh_wikipedia",
+    "source_role": "primary",
+    "origin": "html_fallback",
+    "type": "embedding_chunk",
+    "source_title": "次矮星",
+    "source_name": "zh_wikipedia",
+    "schema_version": "2.0"
+  },
+  {
+    "page_title": "次矮星",
+    "section": "冷的次矮星",
+    "chunk_index": 1,
+    "content": "像正常的 主序 恒星一样，冷的次矮星（光谱类型从G至M）以 氢 的 融合 产生能量，它们的低光度是以它们的低 金属量 来解释：这些恒星缺乏比氦重的元素，较低的金属量降低了外层的 不透明度 ，和使 辐射压 减低，结果是质量相同的恒星变得较小和较热 。\n这种较低的不透明度也使得相同 光谱类型 的恒星辐射出 紫外线 的百分比较 第一星族星 高，成为 紫外线超出 的恒星 。\n通常银河系 晕 的成员，它们相对于 太阳 经常有较高的空间相对速度。\n冷的次矮星还有次分类如下 ： 冷次矮星：例如SSSPM J1930-4311 (sdM7) 极端次矮星：例如APMPM J0559-2903 (esdM7)",
+    "path": "冷的次矮星",
+    "keywords": [
+      "例如",
+      "像正常的",
+      "主序",
+      "恒星一样",
+      "冷的次矮星",
+      "光谱类型从",
+      "融合",
+      "产生能量"
+    ],
+    "chunk_id": "9fa4554fc279",
+    "source": "zh_wikipedia",
+    "source_role": "primary",
+    "origin": "html_fallback",
+    "type": "embedding_chunk",
+    "source_title": "次矮星",
+    "source_name": "zh_wikipedia",
+    "schema_version": "2.0"
+  },
+  {
+    "page_title": "次矮星",
+    "section": "热的次矮星",
+    "chunk_index": 2,
+    "content": "热的次矮星，光谱类型为O和B，也称为 极端 水平分支 星 ，即中文语境下“ 氦白矮星 （主要由 氦-4 组成的 白矮星 ，为热次矮星冷却后的状态） ”的前身之一，是和冷的次矮星完全不同的类别的天体。\n这些恒星代表一些恒星发展的晚期阶段，起因于在核心开始融合 氦 之前， 红巨星 已经失去它外面的 氢 层。\n虽然还不清楚这些过早失去的质量发生的原因，但是在 联星 系统内的交互作用被认为是主要的机制之一。\n单独的次矮星被认为是两颗 白矮星 合并的结果。\n比白矮星明亮许多的 B型次矮星 ，分布在老的恒星系统中，像是 球状星团 和 椭圆星系 ，是主要成员的元素 。",
+    "path": "热的次矮星",
+    "keywords": [
+      "白矮星",
+      "热的次矮星",
+      "光谱类型为",
+      "也称为",
+      "极端",
+      "水平分支",
+      "即中文语境下",
+      "氦白矮星"
+    ],
+    "chunk_id": "62292b720abb",
+    "source": "zh_wikipedia",
+    "source_role": "primary",
+    "origin": "html_fallback",
+    "type": "embedding_chunk",
+    "source_title": "次矮星",
+    "source_name": "zh_wikipedia",
+    "schema_version": "2.0"
+  }
+]

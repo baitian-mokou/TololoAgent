@@ -1,0 +1,52 @@
+[
+  {
+    "page_title": "初期恒星体",
+    "section": "概要",
+    "chunk_index": 0,
+    "content": "初期恒星体 （英语： Young stellar object ，缩写： YSO ）表示是一颗进入恒星演化早期阶段的天体。这个分类中包含两个小组： 原恒星 和 主序前星 。有时，也会以质量区分为：大质量初期恒星体(MYSO)、中质量初期恒星体和 棕矮星 。初期恒星体经常会依据以 光谱能量分布 的斜率做标准来分类，这是Lada C.J. 和 Wilking B.A.在1984年提出的，他们以 谱指数 α {\\displaystyle \\alpha \\,} 的间隔和数值为依据，将YSO分为三种(I、II和III)： α = d log ⁡ ( ν F ν ) d log ⁡ ( ν ) {\\displaystyle \\alpha ={\\frac {d\\log(\\nu F_{\\nu })}{d\\log(\\nu )}}} . 此处 ν {\\displaystyle \\nu \\,} 是频率， F ν {\\displaystyle F_{\\nu }} 是 通量 密度。α {\\displaystyle \\alpha \\,} 是依据波长2.2–10 μ m {\\displaystyle {\\mu }m} (近红外区)计算的数值。稍后，格林等人在1994年加入了第四类\"平波谱\"做为分类的来源。而在1993年，安德烈等人发现在次微米波段有著强烈辐射，但在 λ < 10 μ m {\\displaystyle {\\lambda }<10{\\mu }m} 非常微弱的第0类。",
+    "path": "概要",
+    "keywords": [
+      "初期恒星体",
+      "英语",
+      "缩写",
+      "表示是一颗进入恒星演化早期阶段的天体",
+      "这个分类中包含两个小组",
+      "原恒星",
+      "主序前星",
+      "有时"
+    ],
+    "chunk_id": "727f5b0e978f",
+    "source": "zh_wikipedia",
+    "source_role": "primary",
+    "origin": "html_fallback",
+    "type": "embedding_chunk",
+    "source_title": "初期恒星体",
+    "source_name": "zh_wikipedia",
+    "schema_version": "2.0"
+  },
+  {
+    "page_title": "初期恒星体",
+    "section": "概要 (2)",
+    "chunk_index": 1,
+    "content": "分类 0 源 － 在 λ < 10 μ m {\\displaystyle {\\lambda }<10{\\mu }m} 无法检测 分类I 源 － α > 0.3 {\\displaystyle {\\alpha }>0.3} 平波谱 源 － 0.3 > α > − 0.3 {\\displaystyle 0.3>{\\alpha }>-0.3} 分类II 源 － − 0.3 > α > − 1.6 {\\displaystyle -0.3>{\\alpha }>-1.6} 分类III 源 － α < − 1.6 {\\displaystyle {\\alpha }<-1.6} 这种分类架构大致反映了演进化的序列。人们认为最深埋在0类的来源朝著I类发展的过程， 星周包层 便会开始消退。最后，当它们成为 主序前星 时，在光学上就能够在 恒星诞生线 上被看见。YSO也和早期的恒星演化联系在一起： 拱星喷流 和 偶极外向流 、 迈射 (微波)、 赫比格-哈罗天体 、 原行星盘 (拱星盘)。",
+    "path": "概要",
+    "keywords": [
+      "分类",
+      "无法检测",
+      "平波谱",
+      "这种分类架构大致反映了演进化的序列",
+      "人们认为最深埋在",
+      "类的来源朝著",
+      "类发展的过程",
+      "星周包层"
+    ],
+    "chunk_id": "fbcef870b46b",
+    "source": "zh_wikipedia",
+    "source_role": "primary",
+    "origin": "html_fallback",
+    "type": "embedding_chunk",
+    "source_title": "初期恒星体",
+    "source_name": "zh_wikipedia",
+    "schema_version": "2.0"
+  }
+]

@@ -1,0 +1,1022 @@
+{
+  "manifest_path": "F:\\第二次托洛洛测试 -重大进展\\evaluation\\source_expansion\\nasa\\nasa_boundary_audit_manifest.json",
+  "active_source": "zh_wikipedia",
+  "active_source_test": "nasa",
+  "controlled_activation": {
+    "total_queries": 4,
+    "source_filter_failure_count": 0,
+    "cross_source_pollution_count": 0,
+    "query_explainability_degraded_count": 0,
+    "results": [
+      {
+        "id": "ca_mars_atmosphere",
+        "query": "火星大气",
+        "nasa": {
+          "query": "火星大气",
+          "expected_source": "nasa",
+          "graph": {
+            "final_source": "fallback",
+            "source_filter_ok": true,
+            "metadata_ok": true,
+            "explainability_degraded": false,
+            "results": []
+          },
+          "narrative": {
+            "source_filter_ok": true,
+            "metadata_ok": true,
+            "explainability_degraded": false,
+            "results": [
+              {
+                "content": "根据 NASA Mars Fact Sheet，火星大气非常稀薄，主要成分是二氧化碳，约占 95.32%，另含氮气约 2.7%、氩气约 1.6%，以及微量氧气、一氧化碳和水蒸气。\n稀薄的大气意味着火星表面气压远低于地球，保温能力较弱，也更容易受到太阳风和高能粒子的影响，因此常被描述为寒冷而干燥的环境。",
+                "score": 1.0,
+                "page_title": "火星",
+                "section": "大气",
+                "keywords": "根据,火星大气非常稀薄,主要成分是二氧化碳,约占,另含氮气约,氩气约,以及微量氧气,一氧化碳和水蒸气",
+                "chunk_id": "0d6b36e19d8d",
+                "source": "nasa",
+                "source_name": "nasa",
+                "source_title": "火星",
+                "source_role": "primary",
+                "origin": "html_fallback",
+                "schema_version": "nasa_shadow_ready_v1",
+                "rank": 1
+              }
+            ]
+          },
+          "pass": true
+        },
+        "active": {
+          "query": "火星大气",
+          "expected_source": "zh_wikipedia",
+          "graph": {
+            "final_source": "graph",
+            "source_filter_ok": true,
+            "metadata_ok": true,
+            "explainability_degraded": false,
+            "results": [
+              {
+                "subject": "火星",
+                "relation": "HAS_ATMOSPHERE",
+                "object": "CO2",
+                "source": "zh_wikipedia",
+                "source_name": "zh_wikipedia",
+                "source_title": "火星",
+                "source_role": "primary",
+                "origin": "html_fallback",
+                "schema_version": "zh_wikipedia_single_source_v1"
+              },
+              {
+                "subject": "火星",
+                "relation": "HAS_ATMOSPHERE",
+                "object": "N2",
+                "source": "zh_wikipedia",
+                "source_name": "zh_wikipedia",
+                "source_title": "火星",
+                "source_role": "primary",
+                "origin": "html_fallback",
+                "schema_version": "zh_wikipedia_single_source_v1"
+              },
+              {
+                "subject": "火星",
+                "relation": "HAS_ATMOSPHERE",
+                "object": "Ar",
+                "source": "zh_wikipedia",
+                "source_name": "zh_wikipedia",
+                "source_title": "火星",
+                "source_role": "primary",
+                "origin": "html_fallback",
+                "schema_version": "zh_wikipedia_single_source_v1"
+              },
+              {
+                "subject": "火星",
+                "relation": "HAS_ATMOSPHERE",
+                "object": "O2",
+                "source": "zh_wikipedia",
+                "source_name": "zh_wikipedia",
+                "source_title": "火星",
+                "source_role": "primary",
+                "origin": "html_fallback",
+                "schema_version": "zh_wikipedia_single_source_v1"
+              }
+            ]
+          },
+          "narrative": {
+            "source_filter_ok": true,
+            "metadata_ok": true,
+            "explainability_degraded": false,
+            "results": [
+              {
+                "content": "沙尘暴 发生前（左）和正发生沙尘暴（右）的火星 火星大气层 相对较薄，平均地表 气压 只有6 百帕 ，约为 地球表面气压 的0.6%，相当于地球表面算起35公里高的气压 ，如此低的气压使 声音 传播的距离只有在地球上的1.5%。\n随著季节的变化，火星气压变化可达20%。\n火星大气层按高度可分为低层大气、中层大气、上层大气和外气层。\n其中低层大气由于气悬微尘与地表的热，这部份相对温暖；中层大气存在 ...",
+                "score": 1.0,
+                "page_title": "火星",
+                "section": "大气",
+                "keywords": "沙尘暴,发生前,和正发生沙尘暴,的火星,火星大气层,相对较薄,平均地表,气压",
+                "chunk_id": "5c12deadb55c",
+                "source": "zh_wikipedia",
+                "source_name": "zh_wikipedia",
+                "source_title": "火星",
+                "source_role": "primary",
+                "origin": "html_fallback",
+                "schema_version": "zh_wikipedia_single_source_v1",
+                "rank": 1
+              },
+              {
+                "content": "由于火星的自转轴倾角与地球的相当，火星在太阳系中与地球气候最相似，但一个季节的时间比地球的要长。\n火星离太阳较远，表面接收到的阳光仅有地球的43%， 且大气层较薄，无法存储过多热量，因此火星表面的温差较大（-110 °C～35 °C） 。\n2008年9月29日，凤凰号拍下了降雪事件，是在接近凤凰号 登陆地点 附近 海姆达尔撞击坑 之上，为高4.5公里的 幡状云 降雪。\n这次降雪在到达火星表面时就已...",
+                "score": 0.9111111111111111,
+                "page_title": "火星",
+                "section": "天气和气候",
+                "keywords": "由于火星的自转轴倾角与地球的相当,火星在太阳系中与地球气候最相似,但一个季节的时间比地球的要长,火星离太阳较远,表面接收到的阳光仅有地球的,且大气层较薄,无法存储过多热量,因此火星表面的温差较大",
+                "chunk_id": "9870800ab1ef",
+                "source": "zh_wikipedia",
+                "source_name": "zh_wikipedia",
+                "source_title": "火星",
+                "source_role": "primary",
+                "origin": "html_fallback",
+                "schema_version": "zh_wikipedia_single_source_v1",
+                "rank": 2
+              },
+              {
+                "content": "火星 （英语： Mars ； 天文符号 ：♂），古名 荧惑 ，是离 太阳 第四近的 行星 ，也是 太阳系 中仅次于 水星 的第二小的行星，为 太阳系 里四颗 类地行星 之一。\n由于火星地表广泛的分布著 氧化铁 ，其主要呈现为 橘红色 ，因此亦被称为“ 红色星球 ” 。\n火星的地质年代主要分为三个部分： 诺亚纪 、 赫斯珀里亚纪 及 亚马逊纪 。\n在过往，火星可能被大面积的海洋、湖泊及河流覆盖 。\n...",
+                "score": 0.8111111111111111,
+                "page_title": "火星",
+                "section": "概要",
+                "keywords": "太阳系,火星,英语,天文符号,古名,荧惑,是离,太阳",
+                "chunk_id": "c0f9a735fce1",
+                "source": "zh_wikipedia",
+                "source_name": "zh_wikipedia",
+                "source_title": "火星",
+                "source_role": "primary",
+                "origin": "html_fallback",
+                "schema_version": "zh_wikipedia_single_source_v1",
+                "rank": 3
+              },
+              {
+                "content": "火星的直径约为地球的一半 以直径、质量、表面重力来说，火星约介于 地球 和 月球 中间：火星直径约为地球的一半、月球的两倍，质量约为地球的九分之一、月球的九倍，表面重力约为地球的38%、月球的2.4倍。\n火星体积约为地球的15%，质量约为地球的11%， 表面积 略小于地球陆地面积，密度则比其他三颗 类地行星 小很多 。\n2012年8月， 加利福尼亚大学洛杉矶分校 的教授尹安在分析了100张来自火星...",
+                "score": 0.8111111111111111,
+                "page_title": "火星",
+                "section": "物理性质",
+                "keywords": "火星的直径约为地球的一半,以直径,质量,表面重力来说,火星约介于,地球,月球,中间",
+                "chunk_id": "c6b5afbe1639",
+                "source": "zh_wikipedia",
+                "source_name": "zh_wikipedia",
+                "source_title": "火星",
+                "source_role": "primary",
+                "origin": "html_fallback",
+                "schema_version": "zh_wikipedia_single_source_v1",
+                "rank": 4
+              },
+              {
+                "content": "古瑟夫撞击坑充满沙石的地表 坚忍撞击坑 中的沙丘 火星基本上是 沙漠行星 ，地表沙丘、砾石遍布，没有稳定的 液态水体 。\n火星的 大气 以 二氧化碳 为主，既稀薄又 寒冷 ， 沙尘 悬浮其中，每年常有 尘暴 发生。\n与 地球 相比，火星的地质活动不活跃。\n火星地表地貌大部份于远古较活跃的时期形成，充满 撞击坑 ， 陨石坑 、 火山 与 峡谷 密布。\n奥林帕斯山 是 太阳系 中最高的 山 ， 水手号...",
+                "score": 0.8111111111111111,
+                "page_title": "火星",
+                "section": "地质",
+                "keywords": "峡谷,赫斯珀利亚纪,古瑟夫撞击坑充满沙石的地表,坚忍撞击坑,中的沙丘,火星基本上是,沙漠行星,地表沙丘",
+                "chunk_id": "e9c77bb6659b",
+                "source": "zh_wikipedia",
+                "source_name": "zh_wikipedia",
+                "source_title": "火星",
+                "source_role": "primary",
+                "origin": "html_fallback",
+                "schema_version": "zh_wikipedia_single_source_v1",
+                "rank": 5
+              }
+            ]
+          },
+          "pass": true
+        },
+        "cross_source_pollution": false,
+        "source_filter_failure": false,
+        "query_explainability_degraded": false
+      },
+      {
+        "id": "ca_mars_composition",
+        "query": "火星成分",
+        "nasa": {
+          "query": "火星成分",
+          "expected_source": "nasa",
+          "graph": {
+            "final_source": "fallback",
+            "source_filter_ok": true,
+            "metadata_ok": true,
+            "explainability_degraded": false,
+            "results": []
+          },
+          "narrative": {
+            "source_filter_ok": true,
+            "metadata_ok": true,
+            "explainability_degraded": false,
+            "results": [
+              {
+                "content": "根据 NASA Mars Fact Sheet，火星大气非常稀薄，主要成分是二氧化碳，约占 95.32%，另含氮气约 2.7%、氩气约 1.6%，以及微量氧气、一氧化碳和水蒸气。\n稀薄的大气意味着火星表面气压远低于地球，保温能力较弱，也更容易受到太阳风和高能粒子的影响，因此常被描述为寒冷而干燥的环境。",
+                "score": 1.0,
+                "page_title": "火星",
+                "section": "大气",
+                "keywords": "根据,火星大气非常稀薄,主要成分是二氧化碳,约占,另含氮气约,氩气约,以及微量氧气,一氧化碳和水蒸气",
+                "chunk_id": "0d6b36e19d8d",
+                "source": "nasa",
+                "source_name": "nasa",
+                "source_title": "火星",
+                "source_role": "primary",
+                "origin": "html_fallback",
+                "schema_version": "nasa_shadow_ready_v1",
+                "rank": 1
+              }
+            ]
+          },
+          "pass": true
+        },
+        "active": {
+          "query": "火星成分",
+          "expected_source": "zh_wikipedia",
+          "graph": {
+            "final_source": "graph",
+            "source_filter_ok": true,
+            "metadata_ok": true,
+            "explainability_degraded": false,
+            "results": [
+              {
+                "subject": "火星",
+                "relation": "IS_A",
+                "object": "沙漠行星",
+                "source": "zh_wikipedia",
+                "source_name": "zh_wikipedia",
+                "source_title": "火星",
+                "source_role": "primary",
+                "origin": "html_fallback",
+                "schema_version": "zh_wikipedia_single_source_v1"
+              },
+              {
+                "subject": "火星",
+                "relation": "LOCATED_IN",
+                "object": "太阳系",
+                "source": "zh_wikipedia",
+                "source_name": "zh_wikipedia",
+                "source_title": "火星",
+                "source_role": "primary",
+                "origin": "html_fallback",
+                "schema_version": "zh_wikipedia_single_source_v1"
+              },
+              {
+                "subject": "火星",
+                "relation": "HAS_RADIUS",
+                "object": "3389.5 km",
+                "source": "zh_wikipedia",
+                "source_name": "zh_wikipedia",
+                "source_title": "火星",
+                "source_role": "primary",
+                "origin": "html_fallback",
+                "schema_version": "zh_wikipedia_single_source_v1"
+              },
+              {
+                "subject": "火星",
+                "relation": "HAS_MASS",
+                "object": "6.4169 × 10 23 kg",
+                "source": "zh_wikipedia",
+                "source_name": "zh_wikipedia",
+                "source_title": "火星",
+                "source_role": "primary",
+                "origin": "html_fallback",
+                "schema_version": "zh_wikipedia_single_source_v1"
+              }
+            ]
+          },
+          "narrative": {
+            "source_filter_ok": true,
+            "metadata_ok": true,
+            "explainability_degraded": false,
+            "results": [
+              {
+                "content": "沙尘暴 发生前（左）和正发生沙尘暴（右）的火星 火星大气层 相对较薄，平均地表 气压 只有6 百帕 ，约为 地球表面气压 的0.6%，相当于地球表面算起35公里高的气压 ，如此低的气压使 声音 传播的距离只有在地球上的1.5%。\n随著季节的变化，火星气压变化可达20%。\n火星大气层按高度可分为低层大气、中层大气、上层大气和外气层。\n其中低层大气由于气悬微尘与地表的热，这部份相对温暖；中层大气存在 ...",
+                "score": 0.8888888888888888,
+                "page_title": "火星",
+                "section": "大气",
+                "keywords": "沙尘暴,发生前,和正发生沙尘暴,的火星,火星大气层,相对较薄,平均地表,气压",
+                "chunk_id": "5c12deadb55c",
+                "source": "zh_wikipedia",
+                "source_name": "zh_wikipedia",
+                "source_title": "火星",
+                "source_role": "primary",
+                "origin": "html_fallback",
+                "schema_version": "zh_wikipedia_single_source_v1",
+                "rank": 1
+              },
+              {
+                "content": "火星 （英语： Mars ； 天文符号 ：♂），古名 荧惑 ，是离 太阳 第四近的 行星 ，也是 太阳系 中仅次于 水星 的第二小的行星，为 太阳系 里四颗 类地行星 之一。\n由于火星地表广泛的分布著 氧化铁 ，其主要呈现为 橘红色 ，因此亦被称为“ 红色星球 ” 。\n火星的地质年代主要分为三个部分： 诺亚纪 、 赫斯珀里亚纪 及 亚马逊纪 。\n在过往，火星可能被大面积的海洋、湖泊及河流覆盖 。\n...",
+                "score": 0.8222222222222222,
+                "page_title": "火星",
+                "section": "概要",
+                "keywords": "太阳系,火星,英语,天文符号,古名,荧惑,是离,太阳",
+                "chunk_id": "c0f9a735fce1",
+                "source": "zh_wikipedia",
+                "source_name": "zh_wikipedia",
+                "source_title": "火星",
+                "source_role": "primary",
+                "origin": "html_fallback",
+                "schema_version": "zh_wikipedia_single_source_v1",
+                "rank": 2
+              },
+              {
+                "content": "火星的直径约为地球的一半 以直径、质量、表面重力来说，火星约介于 地球 和 月球 中间：火星直径约为地球的一半、月球的两倍，质量约为地球的九分之一、月球的九倍，表面重力约为地球的38%、月球的2.4倍。\n火星体积约为地球的15%，质量约为地球的11%， 表面积 略小于地球陆地面积，密度则比其他三颗 类地行星 小很多 。\n2012年8月， 加利福尼亚大学洛杉矶分校 的教授尹安在分析了100张来自火星...",
+                "score": 0.8222222222222222,
+                "page_title": "火星",
+                "section": "物理性质",
+                "keywords": "火星的直径约为地球的一半,以直径,质量,表面重力来说,火星约介于,地球,月球,中间",
+                "chunk_id": "c6b5afbe1639",
+                "source": "zh_wikipedia",
+                "source_name": "zh_wikipedia",
+                "source_title": "火星",
+                "source_role": "primary",
+                "origin": "html_fallback",
+                "schema_version": "zh_wikipedia_single_source_v1",
+                "rank": 3
+              },
+              {
+                "content": "古瑟夫撞击坑充满沙石的地表 坚忍撞击坑 中的沙丘 火星基本上是 沙漠行星 ，地表沙丘、砾石遍布，没有稳定的 液态水体 。\n火星的 大气 以 二氧化碳 为主，既稀薄又 寒冷 ， 沙尘 悬浮其中，每年常有 尘暴 发生。\n与 地球 相比，火星的地质活动不活跃。\n火星地表地貌大部份于远古较活跃的时期形成，充满 撞击坑 ， 陨石坑 、 火山 与 峡谷 密布。\n奥林帕斯山 是 太阳系 中最高的 山 ， 水手号...",
+                "score": 0.8222222222222222,
+                "page_title": "火星",
+                "section": "地质",
+                "keywords": "峡谷,赫斯珀利亚纪,古瑟夫撞击坑充满沙石的地表,坚忍撞击坑,中的沙丘,火星基本上是,沙漠行星,地表沙丘",
+                "chunk_id": "e9c77bb6659b",
+                "source": "zh_wikipedia",
+                "source_name": "zh_wikipedia",
+                "source_title": "火星",
+                "source_role": "primary",
+                "origin": "html_fallback",
+                "schema_version": "zh_wikipedia_single_source_v1",
+                "rank": 4
+              },
+              {
+                "content": "由于火星的自转轴倾角与地球的相当，火星在太阳系中与地球气候最相似，但一个季节的时间比地球的要长。\n火星离太阳较远，表面接收到的阳光仅有地球的43%， 且大气层较薄，无法存储过多热量，因此火星表面的温差较大（-110 °C～35 °C） 。\n2008年9月29日，凤凰号拍下了降雪事件，是在接近凤凰号 登陆地点 附近 海姆达尔撞击坑 之上，为高4.5公里的 幡状云 降雪。\n这次降雪在到达火星表面时就已...",
+                "score": 0.8222222222222222,
+                "page_title": "火星",
+                "section": "天气和气候",
+                "keywords": "由于火星的自转轴倾角与地球的相当,火星在太阳系中与地球气候最相似,但一个季节的时间比地球的要长,火星离太阳较远,表面接收到的阳光仅有地球的,且大气层较薄,无法存储过多热量,因此火星表面的温差较大",
+                "chunk_id": "9870800ab1ef",
+                "source": "zh_wikipedia",
+                "source_name": "zh_wikipedia",
+                "source_title": "火星",
+                "source_role": "primary",
+                "origin": "html_fallback",
+                "schema_version": "zh_wikipedia_single_source_v1",
+                "rank": 5
+              }
+            ]
+          },
+          "pass": true
+        },
+        "cross_source_pollution": false,
+        "source_filter_failure": false,
+        "query_explainability_degraded": false
+      },
+      {
+        "id": "ca_titan_atmosphere",
+        "query": "土卫六大气层",
+        "nasa": {
+          "query": "土卫六大气层",
+          "expected_source": "nasa",
+          "graph": {
+            "final_source": "fallback",
+            "source_filter_ok": true,
+            "metadata_ok": true,
+            "explainability_degraded": false,
+            "results": []
+          },
+          "narrative": {
+            "source_filter_ok": true,
+            "metadata_ok": true,
+            "explainability_degraded": false,
+            "results": [
+              {
+                "content": "根据 NASA Mars Fact Sheet，火星大气非常稀薄，主要成分是二氧化碳，约占 95.32%，另含氮气约 2.7%、氩气约 1.6%，以及微量氧气、一氧化碳和水蒸气。\n稀薄的大气意味着火星表面气压远低于地球，保温能力较弱，也更容易受到太阳风和高能粒子的影响，因此常被描述为寒冷而干燥的环境。",
+                "score": 0.4706682284673055,
+                "page_title": "火星",
+                "section": "大气",
+                "keywords": "根据,火星大气非常稀薄,主要成分是二氧化碳,约占,另含氮气约,氩气约,以及微量氧气,一氧化碳和水蒸气",
+                "chunk_id": "0d6b36e19d8d",
+                "source": "nasa",
+                "source_name": "nasa",
+                "source_title": "火星",
+                "source_role": "primary",
+                "origin": "html_fallback",
+                "schema_version": "nasa_shadow_ready_v1",
+                "rank": 1
+              }
+            ]
+          },
+          "pass": true
+        },
+        "active": {
+          "query": "土卫六大气层",
+          "expected_source": "zh_wikipedia",
+          "graph": {
+            "final_source": "fallback",
+            "source_filter_ok": true,
+            "metadata_ok": true,
+            "explainability_degraded": false,
+            "results": []
+          },
+          "narrative": {
+            "source_filter_ok": true,
+            "metadata_ok": true,
+            "explainability_degraded": false,
+            "results": [
+              {
+                "content": "土卫六大气薄雾层真彩照片 土卫六是已知唯一拥有突出 大气层 的卫星 ，也是 太阳系 中除 地球 外唯一富含 氮气 的稠密大气层。卡西尼号在2004年对其进行的观测表明，土卫六是一个“ 超级旋转体 ”，就像 金星 一样，其大气层旋转速度远快于表面 。旅行者号 太空探测器的观测表明，土卫六大气层比地球的密度大，表面约为1.45个 标准大气压 ，其质量大约是地球大气总质量的1.19倍，或者说是每表面面积...",
+                "score": 1.0,
+                "page_title": "土卫六",
+                "section": "大气层",
+                "keywords": "甲烷,氰基乙炔,土卫六大气薄雾层真彩照片,土卫六是已知唯一拥有突出,大气层,的卫星,也是,太阳系",
+                "chunk_id": "c77cd3defaf6",
+                "source": "zh_wikipedia",
+                "source_name": "zh_wikipedia",
+                "source_title": "土卫六",
+                "source_role": "primary",
+                "origin": "html_fallback",
+                "schema_version": "zh_wikipedia_single_source_v1",
+                "rank": 1
+              },
+              {
+                "content": "2013年4月3日， 美国宇航局 根据对 土卫六大气层 的模拟研究，报告称土卫六上可能会出现复杂的 有机化学物质 ，统称为 托林 。2013年6月6日，安达卢西亚天体物理研究所（IAA-CSIC）的科学家报告在土卫六高层大气中检测到 多环芳香烃 。2013年9月30日， 美国宇航局 的卡西尼号探测器使用复合红外光谱仪（CIRS）在土卫六大气层中检测到了 丙烯 ，这是首次在地球以外的卫星或行星上发现...",
+                "score": 1.0,
+                "page_title": "土卫六",
+                "section": "大气层 (2)",
+                "keywords": "美国宇航局,根据对,土卫六大气层,的模拟研究,报告称土卫六上可能会出现复杂的,有机化学物质,统称为,托林",
+                "chunk_id": "2a46b2f9e7cb",
+                "source": "zh_wikipedia",
+                "source_name": "zh_wikipedia",
+                "source_title": "土卫六",
+                "source_role": "primary",
+                "origin": "html_fallback",
+                "schema_version": "zh_wikipedia_single_source_v1",
+                "rank": 2
+              },
+              {
+                "content": "土卫六南极上空大气层 极地涡旋 土卫六表面温度约为 94 K（-179.2 °C），在这种气温下，水冰的 蒸气压 极低，因此所存在的少量 水蒸气 似乎仅限于 平流层 中 。\n土卫六接收到的太阳光大约只有地球的1% ，并且在抵达地表之前，大约有90%的阳光被厚厚的大气层吸收，最后只剩0.1%的阳光到达了地表 。\n大气中的 甲烷 会在土卫六表面产生 温室效应 ，否则土卫六会更寒冷 。\n另一种相反的情况...",
+                "score": 1.0,
+                "page_title": "土卫六",
+                "section": "气候",
+                "keywords": "甲烷,土卫六南极上空大气层,极地涡旋,土卫六表面温度约为,在这种气温下,水冰的,蒸气压,极低",
+                "chunk_id": "8e7f89e82ada",
+                "source": "zh_wikipedia",
+                "source_name": "zh_wikipedia",
+                "source_title": "土卫六",
+                "source_role": "primary",
+                "origin": "html_fallback",
+                "schema_version": "zh_wikipedia_single_source_v1",
+                "rank": 3
+              },
+              {
+                "content": "土卫六的现代地质只在地壳增厚到50公里后才形成，因此阻碍了冰火山持续的地表重塑作用，此后发生的任何冰火山活动都会产生更粘稠的水岩浆，且所含氨和甲醇的比例更大，这也意味着土卫六的甲烷不再被主动添加到大气层中，可能会在数千万年内完全耗尽 。土卫六上许多较著名的山脉和丘陵已被 国际天文学联合会 正式命名。根据 喷气推进实验室 的说法，“按照惯例，土卫六上的山脉以 中土大陆 的山名命名是 约翰·罗纳德·鲁...",
+                "score": 1.0,
+                "page_title": "土卫六",
+                "section": "冰火山和山脉 (4)",
+                "keywords": "土卫六的现代地质只在地壳增厚到,公里后才形成,因此阻碍了冰火山持续的地表重塑作用,此后发生的任何冰火山活动都会产生更粘稠的水岩浆,且所含氨和甲醇的比例更大,这也意味着土卫六的甲烷不再被主动添加到大气层中,可能会在数千万年内完全耗尽,土卫六上许多较著名的山脉和丘陵已被",
+                "chunk_id": "9594a93f7a32",
+                "source": "zh_wikipedia",
+                "source_name": "zh_wikipedia",
+                "source_title": "土卫六",
+                "source_role": "primary",
+                "origin": "html_fallback",
+                "schema_version": "zh_wikipedia_single_source_v1",
+                "rank": 4
+              },
+              {
+                "content": "尽管有这些生物学上的可能，土卫六上的生命仍然面临着巨大的障碍，任何与地球的类比都是不准确的。\n土卫六位于离太阳很远的地方，表面极度寒冷，它的大气层缺乏 二氧化碳 。\n在土卫六表面，水只能以固态的形式存在。\n由于这些困难，乔纳森·鲁宁（Jonathan Lunine）等科学家认为，与其说土卫六是一个生命可能的栖息地，不如说是一处检验地球上生命出现前所假设环境的实验地 。\n虽然生命本身可能并不存在，但...",
+                "score": 1.0,
+                "page_title": "土卫六",
+                "section": "障碍",
+                "keywords": "尽管有这些生物学上的可能,土卫六上的生命仍然面临着巨大的障碍,任何与地球的类比都是不准确的,土卫六位于离太阳很远的地方,表面极度寒冷,它的大气层缺乏,二氧化碳,在土卫六表面",
+                "chunk_id": "ee16bf50554c",
+                "source": "zh_wikipedia",
+                "source_name": "zh_wikipedia",
+                "source_title": "土卫六",
+                "source_role": "primary",
+                "origin": "html_fallback",
+                "schema_version": "zh_wikipedia_single_source_v1",
+                "rank": 5
+              }
+            ]
+          },
+          "pass": true
+        },
+        "cross_source_pollution": false,
+        "source_filter_failure": false,
+        "query_explainability_degraded": false
+      },
+      {
+        "id": "ca_jupiter_magnetic_field",
+        "query": "木星磁场",
+        "nasa": {
+          "query": "木星磁场",
+          "expected_source": "nasa",
+          "graph": {
+            "final_source": "fallback",
+            "source_filter_ok": true,
+            "metadata_ok": true,
+            "explainability_degraded": false,
+            "results": []
+          },
+          "narrative": {
+            "source_filter_ok": true,
+            "metadata_ok": true,
+            "explainability_degraded": false,
+            "results": []
+          },
+          "pass": true
+        },
+        "active": {
+          "query": "木星磁场",
+          "expected_source": "zh_wikipedia",
+          "graph": {
+            "final_source": "graph",
+            "source_filter_ok": true,
+            "metadata_ok": true,
+            "explainability_degraded": false,
+            "results": [
+              {
+                "subject": "木星",
+                "relation": "IS_A",
+                "object": "颗 巨行星",
+                "source": "zh_wikipedia",
+                "source_name": "zh_wikipedia",
+                "source_title": "木星",
+                "source_role": "primary",
+                "origin": "html_fallback",
+                "schema_version": "zh_wikipedia_single_source_v1"
+              },
+              {
+                "subject": "木星",
+                "relation": "LOCATED_IN",
+                "object": "太阳系",
+                "source": "zh_wikipedia",
+                "source_name": "zh_wikipedia",
+                "source_title": "木星",
+                "source_role": "primary",
+                "origin": "html_fallback",
+                "schema_version": "zh_wikipedia_single_source_v1"
+              },
+              {
+                "subject": "木星",
+                "relation": "HAS_RADIUS",
+                "object": "69886.0 km",
+                "source": "zh_wikipedia",
+                "source_name": "zh_wikipedia",
+                "source_title": "木星",
+                "source_role": "primary",
+                "origin": "html_fallback",
+                "schema_version": "zh_wikipedia_single_source_v1"
+              },
+              {
+                "subject": "木星",
+                "relation": "HAS_MASS",
+                "object": "1.8981 × 10 27 kg",
+                "source": "zh_wikipedia",
+                "source_name": "zh_wikipedia",
+                "source_title": "木星",
+                "source_role": "primary",
+                "origin": "html_fallback",
+                "schema_version": "zh_wikipedia_single_source_v1"
+              }
+            ]
+          },
+          "narrative": {
+            "source_filter_ok": true,
+            "metadata_ok": true,
+            "explainability_degraded": false,
+            "results": [
+              {
+                "content": "木星上的 极光 。三个亮点是由连接到木星卫星 埃欧 （在左边）、 佳里美德 （在底部）和 欧罗巴 （在最底部）的磁 流量管 创造的。此外，可以看见非常明亮，几乎是圆型的区域，称为主要的鹅蛋形，可以看见和弱极区极光。木星的 磁场 强度是地球的14倍，范围从赤道的4.2 高斯 （0.42 mT ）到极区的10至14高斯（1.0-1.4mT），是 太阳系 除太阳黑子以外最强的磁场源 。这个场被认为是由 ...",
+                "score": 0.8111111111111111,
+                "page_title": "木星",
+                "section": "磁层",
+                "keywords": "高斯,离子,木星上的,极光,三个亮点是由连接到木星卫星,埃欧,在左边,佳里美德",
+                "chunk_id": "45c2f0076ca9",
+                "source": "zh_wikipedia",
+                "source_name": "zh_wikipedia",
+                "source_title": "木星",
+                "source_role": "primary",
+                "origin": "html_fallback",
+                "schema_version": "zh_wikipedia_single_source_v1",
+                "rank": 1
+              },
+              {
+                "content": "在1955年，巴纳德柏克和 肯尼斯·佛兰克林 侦测到来自木星的22.2MHz的无线电信号爆发 。\n这些爆发与木星的自转周期匹配，也能够用这些资讯来改进自转速率。\n发现来自木星的无线电爆发有两种形式：长达数秒的长爆发（L爆发），和持续时间短于百分之一秒的短爆发（S爆发） 。\n科学家发现来自木星的无线电讯号有三种传输的形式： 随著木星旋转的十米无线电爆发（波长10米的无线电波），并且受到埃欧与木星磁场...",
+                "score": 0.8111111111111111,
+                "page_title": "木星",
+                "section": "电波望远镜的研究",
+                "keywords": "爆发,巴纳德柏克和,肯尼斯,佛兰克林,侦测到来自木星的,的无线电信号爆发,这些爆发与木星的自转周期匹配,也能够用这些资讯来改进自转速率",
+                "chunk_id": "cac20d98ed4f",
+                "source": "zh_wikipedia",
+                "source_name": "zh_wikipedia",
+                "source_title": "木星",
+                "source_role": "primary",
+                "origin": "html_fallback",
+                "schema_version": "zh_wikipedia_single_source_v1",
+                "rank": 2
+              },
+              {
+                "content": "巨大的木星磁场，像 地球 一样，是由内部的 发电机 引发的，由外核循环流动的导电体支援。\n不同的是，地球的核心是由熔融的 铁 和 镍 构成，木星核心的成分是 金属氢 。\n如同地球一样，木星的磁场大部分是 偶极 ，单一的磁南极和磁北极在磁轴的两端 。\n然而，木星偶极的北极在木星的北半球，而偶极的南极位于南半球；相较于地球，它的北极在南半球，而南极在北半球 。\n木星的场还有 四极 （quadrupol...",
+                "score": 0.7777777777777778,
+                "page_title": "木星的磁层",
+                "section": "内部的磁场",
+                "keywords": "大约是,巨大的木星磁场,地球,一样,是由内部的,发电机,引发的,由外核循环流动的导电体支援",
+                "chunk_id": "86fdc5005c83",
+                "source": "zh_wikipedia",
+                "source_name": "zh_wikipedia",
+                "source_title": "木星的磁层",
+                "source_role": "primary",
+                "origin": "html_fallback",
+                "schema_version": "zh_wikipedia_single_source_v1",
+                "rank": 3
+              },
+              {
+                "content": "木星 （英语： Jupiter ）是距离 太阳 第五近的 行星 ，也是 太阳系 中体积最大的行星，目前已知有95颗 卫星 。天文学家 很早就发现了这颗行星 ， 罗马人 以他们的 神 称这颗行星为「 朱庇特 」。古代 中国 则称木星为 「岁星」 ，取其绕行 天球 一周约为12年，与 地支 相同之故，且产生了 岁星纪年 法。据说，古人观察岁星呈青色，青色于「 五行 」属木，而命名为 木星 。木星是颗 ...",
+                "score": 0.7444444444444445,
+                "page_title": "木星",
+                "section": "概要",
+                "keywords": "木星,质量,英语,是距离,太阳,第五近的,行星,也是",
+                "chunk_id": "6a44a3bdac7a",
+                "source": "zh_wikipedia",
+                "source_name": "zh_wikipedia",
+                "source_title": "木星",
+                "source_role": "primary",
+                "origin": "html_fallback",
+                "schema_version": "zh_wikipedia_single_source_v1",
+                "rank": 4
+              },
+              {
+                "content": "一组新的 超级地球 可能起初聚集在内 太阳系 。\n地球和它邻近的行星可能是在木星碰撞与摧毁这些在太阳附近的超级地球之后，从碎片中形成的。\n当木星迁徙至内太阳系，在理论家所谓的 大迁徙假说 ，突然的引力推与拉，导致这些超级地球的轨道开始重叠，引发彼此间一系列的碰撞 。\n天文学家已经发现500多个多行星系统，这些系统通常包括几颗质量数倍于地球（超级地球）的行星，进到比水星更靠近太阳的距离，并且类似木星...",
+                "score": 0.7444444444444445,
+                "page_title": "木星",
+                "section": "形成和迁徙",
+                "keywords": "超级地球,一组新的,可能起初聚集在内,太阳系,地球和它邻近的行星可能是在木星碰撞与摧毁这些在太阳附近的超级地球之后,从碎片中形成的,当木星迁徙至内太阳系,在理论家所谓的",
+                "chunk_id": "ac2f8e6ef7dd",
+                "source": "zh_wikipedia",
+                "source_name": "zh_wikipedia",
+                "source_title": "木星",
+                "source_role": "primary",
+                "origin": "html_fallback",
+                "schema_version": "zh_wikipedia_single_source_v1",
+                "rank": 5
+              }
+            ]
+          },
+          "pass": true
+        },
+        "cross_source_pollution": false,
+        "source_filter_failure": false,
+        "query_explainability_degraded": false
+      }
+    ]
+  },
+  "cross_source_conflicts": {
+    "total_probes": 5,
+    "conflict_observed_count": 5,
+    "source_boundary_failure_count": 0,
+    "results": [
+      {
+        "id": "conflict_mars",
+        "entity": "火星",
+        "query": "火星大气成分",
+        "mode": "narrative",
+        "graph": {
+          "nasa": {
+            "final_source": "fallback",
+            "top1": null
+          },
+          "active": {
+            "final_source": "graph",
+            "top1": {
+              "subject": "火星",
+              "relation": "HAS_ATMOSPHERE",
+              "object": "N2",
+              "source": "zh_wikipedia",
+              "source_name": "zh_wikipedia",
+              "source_title": "火星",
+              "source_role": "primary",
+              "origin": "html_fallback",
+              "schema_version": "zh_wikipedia_single_source_v1"
+            }
+          },
+          "comparison": {
+            "same": false,
+            "conflict_type": "missing_on_one_side"
+          }
+        },
+        "narrative": {
+          "nasa": {
+            "top1": {
+              "content": "根据 NASA Mars Fact Sheet，火星大气非常稀薄，主要成分是二氧化碳，约占 95.32%，另含氮气约 2.7%、氩气约 1.6%，以及微量氧气、一氧化碳和水蒸气。\n稀薄的大气意味着火星表面气压远低于地球，保温能力较弱，也更容易受到太阳风和高能粒子的影响，因此常被描述为寒冷而干燥的环境。",
+              "score": 1.0,
+              "page_title": "火星",
+              "section": "大气",
+              "keywords": "根据,火星大气非常稀薄,主要成分是二氧化碳,约占,另含氮气约,氩气约,以及微量氧气,一氧化碳和水蒸气",
+              "chunk_id": "0d6b36e19d8d",
+              "source": "nasa",
+              "source_name": "nasa",
+              "source_title": "火星",
+              "source_role": "primary",
+              "origin": "html_fallback",
+              "schema_version": "nasa_shadow_ready_v1",
+              "rank": 1
+            }
+          },
+          "active": {
+            "top1": {
+              "content": "沙尘暴 发生前（左）和正发生沙尘暴（右）的火星 火星大气层 相对较薄，平均地表 气压 只有6 百帕 ，约为 地球表面气压 的0.6%，相当于地球表面算起35公里高的气压 ，如此低的气压使 声音 传播的距离只有在地球上的1.5%。\n随著季节的变化，火星气压变化可达20%。\n火星大气层按高度可分为低层大气、中层大气、上层大气和外气层。\n其中低层大气由于气悬微尘与地表的热，这部份相对温暖；中层大气存在 ...",
+              "score": 1.0,
+              "page_title": "火星",
+              "section": "大气",
+              "keywords": "沙尘暴,发生前,和正发生沙尘暴,的火星,火星大气层,相对较薄,平均地表,气压",
+              "chunk_id": "5c12deadb55c",
+              "source": "zh_wikipedia",
+              "source_name": "zh_wikipedia",
+              "source_title": "火星",
+              "source_role": "primary",
+              "origin": "html_fallback",
+              "schema_version": "zh_wikipedia_single_source_v1",
+              "rank": 1
+            }
+          },
+          "comparison": {
+            "same": false,
+            "conflict_type": "numeric_claim_divergence"
+          }
+        },
+        "source_boundary_ok": true,
+        "conflict_observed": true
+      },
+      {
+        "id": "conflict_jupiter",
+        "entity": "木星",
+        "query": "木星磁场",
+        "mode": "narrative",
+        "graph": {
+          "nasa": {
+            "final_source": "fallback",
+            "top1": null
+          },
+          "active": {
+            "final_source": "graph",
+            "top1": {
+              "subject": "木星",
+              "relation": "IS_A",
+              "object": "颗 巨行星",
+              "source": "zh_wikipedia",
+              "source_name": "zh_wikipedia",
+              "source_title": "木星",
+              "source_role": "primary",
+              "origin": "html_fallback",
+              "schema_version": "zh_wikipedia_single_source_v1"
+            }
+          },
+          "comparison": {
+            "same": false,
+            "conflict_type": "missing_on_one_side"
+          }
+        },
+        "narrative": {
+          "nasa": {
+            "top1": null
+          },
+          "active": {
+            "top1": {
+              "content": "木星上的 极光 。三个亮点是由连接到木星卫星 埃欧 （在左边）、 佳里美德 （在底部）和 欧罗巴 （在最底部）的磁 流量管 创造的。此外，可以看见非常明亮，几乎是圆型的区域，称为主要的鹅蛋形，可以看见和弱极区极光。木星的 磁场 强度是地球的14倍，范围从赤道的4.2 高斯 （0.42 mT ）到极区的10至14高斯（1.0-1.4mT），是 太阳系 除太阳黑子以外最强的磁场源 。这个场被认为是由 ...",
+              "score": 0.8111111111111111,
+              "page_title": "木星",
+              "section": "磁层",
+              "keywords": "高斯,离子,木星上的,极光,三个亮点是由连接到木星卫星,埃欧,在左边,佳里美德",
+              "chunk_id": "45c2f0076ca9",
+              "source": "zh_wikipedia",
+              "source_name": "zh_wikipedia",
+              "source_title": "木星",
+              "source_role": "primary",
+              "origin": "html_fallback",
+              "schema_version": "zh_wikipedia_single_source_v1",
+              "rank": 1
+            }
+          },
+          "comparison": {
+            "same": false,
+            "conflict_type": "missing_on_one_side"
+          }
+        },
+        "source_boundary_ok": true,
+        "conflict_observed": true
+      },
+      {
+        "id": "conflict_neptune",
+        "entity": "海王星",
+        "query": "海王星在哪里",
+        "mode": "graph",
+        "graph": {
+          "nasa": {
+            "final_source": "fallback",
+            "top1": null
+          },
+          "active": {
+            "final_source": "graph",
+            "top1": {
+              "subject": "海王星",
+              "relation": "LOCATED_IN",
+              "object": "太阳系",
+              "source": "zh_wikipedia",
+              "source_name": "zh_wikipedia",
+              "source_title": "海王星",
+              "source_role": "primary",
+              "origin": "html_fallback",
+              "schema_version": "zh_wikipedia_single_source_v1"
+            }
+          },
+          "comparison": {
+            "same": false,
+            "conflict_type": "missing_on_one_side"
+          }
+        },
+        "narrative": {
+          "nasa": {
+            "top1": null
+          },
+          "active": {
+            "top1": {
+              "content": "海王星 （法语： Neptune ）， 太阳系 八大行星之一，也是太阳系中距离太阳最远的行星。\n它是太阳系中体积第四大、质量第三大的行星，其质量约为 地球 质量的17.1倍，体积约为地球的57.7倍。\n海王星以 罗马神话 中的海神 尼普顿 （Neptunus）命名，其 天文学的符号 （♆， Unicode 编码U+2646）是 希腊神话 的海神 波塞顿 使用的 三叉戟 。\n海王星于17世纪时已有观...",
+              "score": 0.7444444444444445,
+              "page_title": "海王星",
+              "section": "概要",
+              "keywords": "太阳系,天王星,海王星,法语,八大行星之一,也是太阳系中距离太阳最远的行星,它是太阳系中体积第四大,质量第三大的行星",
+              "chunk_id": "46fd12055274",
+              "source": "zh_wikipedia",
+              "source_name": "zh_wikipedia",
+              "source_title": "海王星",
+              "source_role": "primary",
+              "origin": "html_fallback",
+              "schema_version": "zh_wikipedia_single_source_v1",
+              "rank": 1
+            }
+          },
+          "comparison": {
+            "same": false,
+            "conflict_type": "missing_on_one_side"
+          }
+        },
+        "source_boundary_ok": true,
+        "conflict_observed": true
+      },
+      {
+        "id": "conflict_titan",
+        "entity": "土卫六",
+        "query": "土卫六大气层",
+        "mode": "narrative",
+        "graph": {
+          "nasa": {
+            "final_source": "fallback",
+            "top1": null
+          },
+          "active": {
+            "final_source": "fallback",
+            "top1": null
+          },
+          "comparison": {
+            "same": true,
+            "conflict_type": "none"
+          }
+        },
+        "narrative": {
+          "nasa": {
+            "top1": {
+              "content": "根据 NASA Mars Fact Sheet，火星大气非常稀薄，主要成分是二氧化碳，约占 95.32%，另含氮气约 2.7%、氩气约 1.6%，以及微量氧气、一氧化碳和水蒸气。\n稀薄的大气意味着火星表面气压远低于地球，保温能力较弱，也更容易受到太阳风和高能粒子的影响，因此常被描述为寒冷而干燥的环境。",
+              "score": 0.4706682284673055,
+              "page_title": "火星",
+              "section": "大气",
+              "keywords": "根据,火星大气非常稀薄,主要成分是二氧化碳,约占,另含氮气约,氩气约,以及微量氧气,一氧化碳和水蒸气",
+              "chunk_id": "0d6b36e19d8d",
+              "source": "nasa",
+              "source_name": "nasa",
+              "source_title": "火星",
+              "source_role": "primary",
+              "origin": "html_fallback",
+              "schema_version": "nasa_shadow_ready_v1",
+              "rank": 1
+            }
+          },
+          "active": {
+            "top1": {
+              "content": "土卫六大气薄雾层真彩照片 土卫六是已知唯一拥有突出 大气层 的卫星 ，也是 太阳系 中除 地球 外唯一富含 氮气 的稠密大气层。卡西尼号在2004年对其进行的观测表明，土卫六是一个“ 超级旋转体 ”，就像 金星 一样，其大气层旋转速度远快于表面 。旅行者号 太空探测器的观测表明，土卫六大气层比地球的密度大，表面约为1.45个 标准大气压 ，其质量大约是地球大气总质量的1.19倍，或者说是每表面面积...",
+              "score": 1.0,
+              "page_title": "土卫六",
+              "section": "大气层",
+              "keywords": "甲烷,氰基乙炔,土卫六大气薄雾层真彩照片,土卫六是已知唯一拥有突出,大气层,的卫星,也是,太阳系",
+              "chunk_id": "c77cd3defaf6",
+              "source": "zh_wikipedia",
+              "source_name": "zh_wikipedia",
+              "source_title": "土卫六",
+              "source_role": "primary",
+              "origin": "html_fallback",
+              "schema_version": "zh_wikipedia_single_source_v1",
+              "rank": 1
+            }
+          },
+          "comparison": {
+            "same": false,
+            "conflict_type": "topic_mismatch"
+          }
+        },
+        "source_boundary_ok": true,
+        "conflict_observed": true
+      },
+      {
+        "id": "conflict_europa",
+        "entity": "欧罗巴卫星",
+        "query": "欧罗巴卫星绕谁公转",
+        "mode": "graph",
+        "graph": {
+          "nasa": {
+            "final_source": "fallback",
+            "top1": {
+              "subject": "火卫一",
+              "relation": "ORBITS",
+              "object": "火星",
+              "source": "nasa",
+              "source_name": "nasa",
+              "source_title": "火卫一",
+              "source_role": "primary",
+              "origin": "html_fallback"
+            }
+          },
+          "active": {
+            "final_source": "fallback",
+            "top1": {
+              "subject": "准卫星",
+              "relation": "ORBITS",
+              "object": "太阳",
+              "source": "zh_wikipedia",
+              "source_name": "zh_wikipedia",
+              "source_title": "准卫星",
+              "source_role": "primary",
+              "origin": "html_fallback"
+            }
+          },
+          "comparison": {
+            "same": false,
+            "conflict_type": "topic_mismatch"
+          }
+        },
+        "narrative": {
+          "nasa": {
+            "top1": null
+          },
+          "active": {
+            "top1": {
+              "content": "艺术家想象的妊神星及其两个卫星。卫星的实际距离比图中描绘的要远得多。妊神星已经被发现的 卫星 有两颗： 妊卫一 和 妊卫二 。两颗卫星均由布朗团队在2005年使用 凯克天文台 观测妊神星时发现。妊卫一发现于2005年1月26日， ，加州理工学院团队曾将其昵称为“ 鲁道夫 ” （传说中为圣诞老人拉 雪橇 的 驯鹿 之一）。妊卫一较靠外侧，直径约为310千米，是两颗卫星中较大较亮的一颗，以近圆形的轨道...",
+              "score": 0.4777777777777778,
+              "page_title": "妊神星",
+              "section": "卫星",
+              "keywords": "公转周期为,艺术家想象的妊神星及其两个卫星,卫星的实际距离比图中描绘的要远得多,妊神星已经被发现的,卫星,有两颗,妊卫一,妊卫二",
+              "chunk_id": "9d3c279e5f4a",
+              "source": "zh_wikipedia",
+              "source_name": "zh_wikipedia",
+              "source_title": "妊神星",
+              "source_role": "primary",
+              "origin": "html_fallback",
+              "schema_version": "zh_wikipedia_single_source_v1",
+              "rank": 1
+            }
+          },
+          "comparison": {
+            "same": false,
+            "conflict_type": "missing_on_one_side"
+          }
+        },
+        "source_boundary_ok": true,
+        "conflict_observed": true
+      }
+    ]
+  },
+  "boundary_pass": true,
+  "gates": {
+    "passed": true,
+    "checks": [
+      {
+        "name": "source_filter_failure_count",
+        "actual": 0,
+        "passed": true
+      },
+      {
+        "name": "cross_source_pollution_count",
+        "actual": 0,
+        "passed": true
+      },
+      {
+        "name": "query_explainability_degraded_count",
+        "actual": 0,
+        "passed": true
+      },
+      {
+        "name": "conflict_source_boundary_failure_count",
+        "actual": 0,
+        "passed": true
+      }
+    ],
+    "exit_code": 0
+  }
+}

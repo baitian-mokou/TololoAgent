@@ -1,0 +1,2435 @@
+{
+  "schema_version": "2.0",
+  "source": "zh_wikipedia",
+  "apply": true,
+  "local_files": {
+    "base_dir": "F:\\第二次托洛洛测试 -重大进展\\data\\triples",
+    "apply_changes": true,
+    "changed_files": 479,
+    "changed_records": 3347,
+    "files": [
+      {
+        "path": "F:\\第二次托洛洛测试 -重大进展\\data\\triples\\A型主序星_narratives.json",
+        "changed": true,
+        "updated_records": 8
+      },
+      {
+        "path": "F:\\第二次托洛洛测试 -重大进展\\data\\triples\\Be星_narratives.json",
+        "changed": true,
+        "updated_records": 3
+      },
+      {
+        "path": "F:\\第二次托洛洛测试 -重大进展\\data\\triples\\B型主序星_narratives.json",
+        "changed": true,
+        "updated_records": 4
+      },
+      {
+        "path": "F:\\第二次托洛洛测试 -重大进展\\data\\triples\\B型次矮星_narratives.json",
+        "changed": true,
+        "updated_records": 5
+      },
+      {
+        "path": "F:\\第二次托洛洛测试 -重大进展\\data\\triples\\CH星_narratives.json",
+        "changed": true,
+        "updated_records": 2
+      },
+      {
+        "path": "F:\\第二次托洛洛测试 -重大进展\\data\\triples\\CN星_narratives.json",
+        "changed": true,
+        "updated_records": 1
+      },
+      {
+        "path": "F:\\第二次托洛洛测试 -重大进展\\data\\triples\\D-型小行星_narratives.json",
+        "changed": true,
+        "updated_records": 1
+      },
+      {
+        "path": "F:\\第二次托洛洛测试 -重大进展\\data\\triples\\F型主序星_narratives.json",
+        "changed": true,
+        "updated_records": 6
+      },
+      {
+        "path": "F:\\第二次托洛洛测试 -重大进展\\data\\triples\\Google地球_narratives.json",
+        "changed": true,
+        "updated_records": 21
+      },
+      {
+        "path": "F:\\第二次托洛洛测试 -重大进展\\data\\triples\\Google地球_triples.json",
+        "changed": true,
+        "updated_records": 1
+      },
+      {
+        "path": "F:\\第二次托洛洛测试 -重大进展\\data\\triples\\G型主序星_narratives.json",
+        "changed": true,
+        "updated_records": 3
+      },
+      {
+        "path": "F:\\第二次托洛洛测试 -重大进展\\data\\triples\\K型主序星_narratives.json",
+        "changed": true,
+        "updated_records": 4
+      },
+      {
+        "path": "F:\\第二次托洛洛测试 -重大进展\\data\\triples\\OB星_narratives.json",
+        "changed": true,
+        "updated_records": 1
+      },
+      {
+        "path": "F:\\第二次托洛洛测试 -重大进展\\data\\triples\\O型主序星_narratives.json",
+        "changed": true,
+        "updated_records": 6
+      },
+      {
+        "path": "F:\\第二次托洛洛测试 -重大进展\\data\\triples\\PG_1159星_narratives.json",
+        "changed": true,
+        "updated_records": 1
+      },
+      {
+        "path": "F:\\第二次托洛洛测试 -重大进展\\data\\triples\\QB1天体_narratives.json",
+        "changed": true,
+        "updated_records": 7
+      },
+      {
+        "path": "F:\\第二次托洛洛测试 -重大进展\\data\\triples\\Q星_narratives.json",
+        "changed": true,
+        "updated_records": 2
+      },
+      {
+        "path": "F:\\第二次托洛洛测试 -重大进展\\data\\triples\\summary.json",
+        "changed": false,
+        "updated_records": 0
+      },
+      {
+        "path": "F:\\第二次托洛洛测试 -重大进展\\data\\triples\\S型星_narratives.json",
+        "changed": true,
+        "updated_records": 1
+      },
+      {
+        "path": "F:\\第二次托洛洛测试 -重大进展\\data\\triples\\X射线天文学_narratives.json",
+        "changed": true,
+        "updated_records": 9
+      },
+      {
+        "path": "F:\\第二次托洛洛测试 -重大进展\\data\\triples\\X射线联星_narratives.json",
+        "changed": true,
+        "updated_records": 5
+      },
+      {
+        "path": "F:\\第二次托洛洛测试 -重大进展\\data\\triples\\X射线脉冲星_narratives.json",
+        "changed": true,
+        "updated_records": 2
+      },
+      {
+        "path": "F:\\第二次托洛洛测试 -重大进展\\data\\triples\\万有引力定律_narratives.json",
+        "changed": true,
+        "updated_records": 12
+      },
+      {
+        "path": "F:\\第二次托洛洛测试 -重大进展\\data\\triples\\世界地球日_narratives.json",
+        "changed": true,
+        "updated_records": 2
+      },
+      {
+        "path": "F:\\第二次托洛洛测试 -重大进展\\data\\triples\\业余天文学_narratives.json",
+        "changed": true,
+        "updated_records": 14
+      },
+      {
+        "path": "F:\\第二次托洛洛测试 -重大进展\\data\\triples\\中古伊斯兰天文学_narratives.json",
+        "changed": true,
+        "updated_records": 8
+      },
+      {
+        "path": "F:\\第二次托洛洛测试 -重大进展\\data\\triples\\中国天文学史_narratives.json",
+        "changed": true,
+        "updated_records": 6
+      },
+      {
+        "path": "F:\\第二次托洛洛测试 -重大进展\\data\\triples\\中子星_narratives.json",
+        "changed": true,
+        "updated_records": 9
+      },
+      {
+        "path": "F:\\第二次托洛洛测试 -重大进展\\data\\triples\\中西星名对照表_narratives.json",
+        "changed": true,
+        "updated_records": 2
+      },
+      {
+        "path": "F:\\第二次托洛洛测试 -重大进展\\data\\triples\\主小行星带_narratives.json",
+        "changed": true,
+        "updated_records": 13
+      },
+      {
+        "path": "F:\\第二次托洛洛测试 -重大进展\\data\\triples\\主序前星_narratives.json",
+        "changed": true,
+        "updated_records": 1
+      },
+      {
+        "path": "F:\\第二次托洛洛测试 -重大进展\\data\\triples\\主序星_narratives.json",
+        "changed": true,
+        "updated_records": 16
+      },
+      {
+        "path": "F:\\第二次托洛洛测试 -重大进展\\data\\triples\\亚恒星_narratives.json",
+        "changed": true,
+        "updated_records": 1
+      },
+      {
+        "path": "F:\\第二次托洛洛测试 -重大进展\\data\\triples\\亡神星#卫星_narratives.json",
+        "changed": true,
+        "updated_records": 5
+      },
+      {
+        "path": "F:\\第二次托洛洛测试 -重大进展\\data\\triples\\亡神星_triples.json",
+        "changed": true,
+        "updated_records": 1
+      },
+      {
+        "path": "F:\\第二次托洛洛测试 -重大进展\\data\\triples\\亮巨星_narratives.json",
+        "changed": true,
+        "updated_records": 1
+      },
+      {
+        "path": "F:\\第二次托洛洛测试 -重大进展\\data\\triples\\亮红新星_narratives.json",
+        "changed": true,
+        "updated_records": 4
+      },
+      {
+        "path": "F:\\第二次托洛洛测试 -重大进展\\data\\triples\\人造卫星_narratives.json",
+        "changed": true,
+        "updated_records": 9
+      },
+      {
+        "path": "F:\\第二次托洛洛测试 -重大进展\\data\\triples\\伽利略卫星_narratives.json",
+        "changed": true,
+        "updated_records": 5
+      },
+      {
+        "path": "F:\\第二次托洛洛测试 -重大进展\\data\\triples\\伽马射线天文学_narratives.json",
+        "changed": true,
+        "updated_records": 8
+      },
+      {
+        "path": "F:\\第二次托洛洛测试 -重大进展\\data\\triples\\值得关注的小行星列表_narratives.json",
+        "changed": true,
+        "updated_records": 9
+      },
+      {
+        "path": "F:\\第二次托洛洛测试 -重大进展\\data\\triples\\假设的海王星外行星_narratives.json",
+        "changed": true,
+        "updated_records": 12
+      },
+      {
+        "path": "F:\\第二次托洛洛测试 -重大进展\\data\\triples\\假超新星_narratives.json",
+        "changed": true,
+        "updated_records": 2
+      },
+      {
+        "path": "F:\\第二次托洛洛测试 -重大进展\\data\\triples\\健神星_narratives.json",
+        "changed": true,
+        "updated_records": 8
+      },
+      {
+        "path": "F:\\第二次托洛洛测试 -重大进展\\data\\triples\\健神星_triples.json",
+        "changed": true,
+        "updated_records": 3
+      },
+      {
+        "path": "F:\\第二次托洛洛测试 -重大进展\\data\\triples\\先子星_narratives.json",
+        "changed": true,
+        "updated_records": 1
+      },
+      {
+        "path": "F:\\第二次托洛洛测试 -重大进展\\data\\triples\\光年_narratives.json",
+        "changed": true,
+        "updated_records": 4
+      },
+      {
+        "path": "F:\\第二次托洛洛测试 -重大进展\\data\\triples\\光度测定_(天文学)_narratives.json",
+        "changed": true,
+        "updated_records": 10
+      },
+      {
+        "path": "F:\\第二次托洛洛测试 -重大进展\\data\\triples\\克卜勒定律_narratives.json",
+        "changed": true,
+        "updated_records": 20
+      },
+      {
+        "path": "F:\\第二次托洛洛测试 -重大进展\\data\\triples\\克鲁兹族彗星_narratives.json",
+        "changed": true,
+        "updated_records": 8
+      },
+      {
+        "path": "F:\\第二次托洛洛测试 -重大进展\\data\\triples\\共工星_narratives.json",
+        "changed": true,
+        "updated_records": 8
+      },
+      {
+        "path": "F:\\第二次托洛洛测试 -重大进展\\data\\triples\\共振海王星外天体_narratives.json",
+        "changed": true,
+        "updated_records": 6
+      },
+      {
+        "path": "F:\\第二次托洛洛测试 -重大进展\\data\\triples\\内行星_narratives.json",
+        "changed": true,
+        "updated_records": 6
+      },
+      {
+        "path": "F:\\第二次托洛洛测试 -重大进展\\data\\triples\\冥卫一_narratives.json",
+        "changed": true,
+        "updated_records": 7
+      },
+      {
+        "path": "F:\\第二次托洛洛测试 -重大进展\\data\\triples\\冥卫一_triples.json",
+        "changed": true,
+        "updated_records": 5
+      },
+      {
+        "path": "F:\\第二次托洛洛测试 -重大进展\\data\\triples\\冥族小天体_narratives.json",
+        "changed": true,
+        "updated_records": 5
+      },
+      {
+        "path": "F:\\第二次托洛洛测试 -重大进展\\data\\triples\\冥王星_narratives.json",
+        "changed": true,
+        "updated_records": 22
+      },
+      {
+        "path": "F:\\第二次托洛洛测试 -重大进展\\data\\triples\\冥王星_triples.json",
+        "changed": true,
+        "updated_records": 3
+      },
+      {
+        "path": "F:\\第二次托洛洛测试 -重大进展\\data\\triples\\冥王星的卫星_narratives.json",
+        "changed": true,
+        "updated_records": 3
+      },
+      {
+        "path": "F:\\第二次托洛洛测试 -重大进展\\data\\triples\\冰巨星_narratives.json",
+        "changed": true,
+        "updated_records": 5
+      },
+      {
+        "path": "F:\\第二次托洛洛测试 -重大进展\\data\\triples\\冻结线_(天文学)_narratives.json",
+        "changed": true,
+        "updated_records": 3
+      },
+      {
+        "path": "F:\\第二次托洛洛测试 -重大进展\\data\\triples\\准卫星_narratives.json",
+        "changed": true,
+        "updated_records": 2
+      },
+      {
+        "path": "F:\\第二次托洛洛测试 -重大进展\\data\\triples\\准卫星_triples.json",
+        "changed": true,
+        "updated_records": 1
+      },
+      {
+        "path": "F:\\第二次托洛洛测试 -重大进展\\data\\triples\\凯克天文台_narratives.json",
+        "changed": true,
+        "updated_records": 3
+      },
+      {
+        "path": "F:\\第二次托洛洛测试 -重大进展\\data\\triples\\创神星_narratives.json",
+        "changed": true,
+        "updated_records": 9
+      },
+      {
+        "path": "F:\\第二次托洛洛测试 -重大进展\\data\\triples\\创神星_triples.json",
+        "changed": true,
+        "updated_records": 1
+      },
+      {
+        "path": "F:\\第二次托洛洛测试 -重大进展\\data\\triples\\初期恒星体_narratives.json",
+        "changed": true,
+        "updated_records": 2
+      },
+      {
+        "path": "F:\\第二次托洛洛测试 -重大进展\\data\\triples\\加那利大型望远镜_narratives.json",
+        "changed": true,
+        "updated_records": 3
+      },
+      {
+        "path": "F:\\第二次托洛洛测试 -重大进展\\data\\triples\\加那利大型望远镜_triples.json",
+        "changed": true,
+        "updated_records": 1
+      },
+      {
+        "path": "F:\\第二次托洛洛测试 -重大进展\\data\\triples\\北极星_narratives.json",
+        "changed": true,
+        "updated_records": 3
+      },
+      {
+        "path": "F:\\第二次托洛洛测试 -重大进展\\data\\triples\\半人马小行星_narratives.json",
+        "changed": true,
+        "updated_records": 8
+      },
+      {
+        "path": "F:\\第二次托洛洛测试 -重大进展\\data\\triples\\占星术和天文学_narratives.json",
+        "changed": true,
+        "updated_records": 5
+      },
+      {
+        "path": "F:\\第二次托洛洛测试 -重大进展\\data\\triples\\卡耳墨卫星群_narratives.json",
+        "changed": true,
+        "updated_records": 1
+      },
+      {
+        "path": "F:\\第二次托洛洛测试 -重大进展\\data\\triples\\卡西尼-惠更斯号_narratives.json",
+        "changed": true,
+        "updated_records": 24
+      },
+      {
+        "path": "F:\\第二次托洛洛测试 -重大进展\\data\\triples\\卡西尼-惠更斯号_triples.json",
+        "changed": true,
+        "updated_records": 1
+      },
+      {
+        "path": "F:\\第二次托洛洛测试 -重大进展\\data\\triples\\双星_narratives.json",
+        "changed": true,
+        "updated_records": 7
+      },
+      {
+        "path": "F:\\第二次托洛洛测试 -重大进展\\data\\triples\\双鱼-鲸鱼座超星系团复合体_narratives.json",
+        "changed": true,
+        "updated_records": 3
+      },
+      {
+        "path": "F:\\第二次托洛洛测试 -重大进展\\data\\triples\\变星_narratives.json",
+        "changed": true,
+        "updated_records": 23
+      },
+      {
+        "path": "F:\\第二次托洛洛测试 -重大进展\\data\\triples\\变星_triples.json",
+        "changed": true,
+        "updated_records": 1
+      },
+      {
+        "path": "F:\\第二次托洛洛测试 -重大进展\\data\\triples\\后渐近巨星支星_narratives.json",
+        "changed": true,
+        "updated_records": 2
+      },
+      {
+        "path": "F:\\第二次托洛洛测试 -重大进展\\data\\triples\\哈勃空间望远镜_narratives.json",
+        "changed": true,
+        "updated_records": 24
+      },
+      {
+        "path": "F:\\第二次托洛洛测试 -重大进展\\data\\triples\\哈勃空间望远镜_triples.json",
+        "changed": true,
+        "updated_records": 2
+      },
+      {
+        "path": "F:\\第二次托洛洛测试 -重大进展\\data\\triples\\哈雷彗星_narratives.json",
+        "changed": true,
+        "updated_records": 15
+      },
+      {
+        "path": "F:\\第二次托洛洛测试 -重大进展\\data\\triples\\哈雷彗星_triples.json",
+        "changed": true,
+        "updated_records": 1
+      },
+      {
+        "path": "F:\\第二次托洛洛测试 -重大进展\\data\\triples\\土卫一_narratives.json",
+        "changed": true,
+        "updated_records": 7
+      },
+      {
+        "path": "F:\\第二次托洛洛测试 -重大进展\\data\\triples\\土卫一_triples.json",
+        "changed": true,
+        "updated_records": 3
+      },
+      {
+        "path": "F:\\第二次托洛洛测试 -重大进展\\data\\triples\\土卫七_narratives.json",
+        "changed": true,
+        "updated_records": 1
+      },
+      {
+        "path": "F:\\第二次托洛洛测试 -重大进展\\data\\triples\\土卫七_triples.json",
+        "changed": true,
+        "updated_records": 1
+      },
+      {
+        "path": "F:\\第二次托洛洛测试 -重大进展\\data\\triples\\土卫五_narratives.json",
+        "changed": true,
+        "updated_records": 6
+      },
+      {
+        "path": "F:\\第二次托洛洛测试 -重大进展\\data\\triples\\土卫五_triples.json",
+        "changed": true,
+        "updated_records": 3
+      },
+      {
+        "path": "F:\\第二次托洛洛测试 -重大进展\\data\\triples\\土卫八_narratives.json",
+        "changed": true,
+        "updated_records": 11
+      },
+      {
+        "path": "F:\\第二次托洛洛测试 -重大进展\\data\\triples\\土卫八_triples.json",
+        "changed": true,
+        "updated_records": 3
+      },
+      {
+        "path": "F:\\第二次托洛洛测试 -重大进展\\data\\triples\\土卫六_narratives.json",
+        "changed": true,
+        "updated_records": 34
+      },
+      {
+        "path": "F:\\第二次托洛洛测试 -重大进展\\data\\triples\\土卫六_triples.json",
+        "changed": true,
+        "updated_records": 4
+      },
+      {
+        "path": "F:\\第二次托洛洛测试 -重大进展\\data\\triples\\土卫四_narratives.json",
+        "changed": true,
+        "updated_records": 6
+      },
+      {
+        "path": "F:\\第二次托洛洛测试 -重大进展\\data\\triples\\土卫四_triples.json",
+        "changed": true,
+        "updated_records": 3
+      },
+      {
+        "path": "F:\\第二次托洛洛测试 -重大进展\\data\\triples\\土星_narratives.json",
+        "changed": true,
+        "updated_records": 21
+      },
+      {
+        "path": "F:\\第二次托洛洛测试 -重大进展\\data\\triples\\土星_triples.json",
+        "changed": true,
+        "updated_records": 5
+      },
+      {
+        "path": "F:\\第二次托洛洛测试 -重大进展\\data\\triples\\地球#卫星_narratives.json",
+        "changed": true,
+        "updated_records": 37
+      },
+      {
+        "path": "F:\\第二次托洛洛测试 -重大进展\\data\\triples\\地球_triples.json",
+        "changed": true,
+        "updated_records": 10
+      },
+      {
+        "path": "F:\\第二次托洛洛测试 -重大进展\\data\\triples\\地球上水分布_narratives.json",
+        "changed": true,
+        "updated_records": 9
+      },
+      {
+        "path": "F:\\第二次托洛洛测试 -重大进展\\data\\triples\\地球之旗_narratives.json",
+        "changed": true,
+        "updated_records": 1
+      },
+      {
+        "path": "F:\\第二次托洛洛测试 -重大进展\\data\\triples\\地球公转_narratives.json",
+        "changed": true,
+        "updated_records": 9
+      },
+      {
+        "path": "F:\\第二次托洛洛测试 -重大进展\\data\\triples\\地球历史_narratives.json",
+        "changed": true,
+        "updated_records": 23
+      },
+      {
+        "path": "F:\\第二次托洛洛测试 -重大进展\\data\\triples\\地球在宇宙中的位置_narratives.json",
+        "changed": true,
+        "updated_records": 2
+      },
+      {
+        "path": "F:\\第二次托洛洛测试 -重大进展\\data\\triples\\地球地壳_narratives.json",
+        "changed": true,
+        "updated_records": 2
+      },
+      {
+        "path": "F:\\第二次托洛洛测试 -重大进展\\data\\triples\\地球构造_narratives.json",
+        "changed": true,
+        "updated_records": 5
+      },
+      {
+        "path": "F:\\第二次托洛洛测试 -重大进展\\data\\triples\\地球物理学_narratives.json",
+        "changed": true,
+        "updated_records": 7
+      },
+      {
+        "path": "F:\\第二次托洛洛测试 -重大进展\\data\\triples\\地球特洛伊_narratives.json",
+        "changed": true,
+        "updated_records": 3
+      },
+      {
+        "path": "F:\\第二次托洛洛测试 -重大进展\\data\\triples\\地球的其他卫星_narratives.json",
+        "changed": true,
+        "updated_records": 7
+      },
+      {
+        "path": "F:\\第二次托洛洛测试 -重大进展\\data\\triples\\地球的年龄_narratives.json",
+        "changed": true,
+        "updated_records": 1
+      },
+      {
+        "path": "F:\\第二次托洛洛测试 -重大进展\\data\\triples\\地球的未来_narratives.json",
+        "changed": true,
+        "updated_records": 3
+      },
+      {
+        "path": "F:\\第二次托洛洛测试 -重大进展\\data\\triples\\地球自转_narratives.json",
+        "changed": true,
+        "updated_records": 15
+      },
+      {
+        "path": "F:\\第二次托洛洛测试 -重大进展\\data\\triples\\地球质量_narratives.json",
+        "changed": true,
+        "updated_records": 1
+      },
+      {
+        "path": "F:\\第二次托洛洛测试 -重大进展\\data\\triples\\地球轨道_narratives.json",
+        "changed": true,
+        "updated_records": 5
+      },
+      {
+        "path": "F:\\第二次托洛洛测试 -重大进展\\data\\triples\\地球轨道穿越小行星_narratives.json",
+        "changed": true,
+        "updated_records": 2
+      },
+      {
+        "path": "F:\\第二次托洛洛测试 -重大进展\\data\\triples\\地磁场_narratives.json",
+        "changed": true,
+        "updated_records": 11
+      },
+      {
+        "path": "F:\\第二次托洛洛测试 -重大进展\\data\\triples\\地质学_narratives.json",
+        "changed": true,
+        "updated_records": 6
+      },
+      {
+        "path": "F:\\第二次托洛洛测试 -重大进展\\data\\triples\\地质年代_narratives.json",
+        "changed": true,
+        "updated_records": 5
+      },
+      {
+        "path": "F:\\第二次托洛洛测试 -重大进展\\data\\triples\\地质构造_narratives.json",
+        "changed": true,
+        "updated_records": 2
+      },
+      {
+        "path": "F:\\第二次托洛洛测试 -重大进展\\data\\triples\\埃及天文学_narratives.json",
+        "changed": true,
+        "updated_records": 6
+      },
+      {
+        "path": "F:\\第二次托洛洛测试 -重大进展\\data\\triples\\塞尔维亚天文学_narratives.json",
+        "changed": true,
+        "updated_records": 2
+      },
+      {
+        "path": "F:\\第二次托洛洛测试 -重大进展\\data\\triples\\壳层星_narratives.json",
+        "changed": true,
+        "updated_records": 5
+      },
+      {
+        "path": "F:\\第二次托洛洛测试 -重大进展\\data\\triples\\天体演化学_narratives.json",
+        "changed": true,
+        "updated_records": 1
+      },
+      {
+        "path": "F:\\第二次托洛洛测试 -重大进展\\data\\triples\\天体物理学_narratives.json",
+        "changed": true,
+        "updated_records": 16
+      },
+      {
+        "path": "F:\\第二次托洛洛测试 -重大进展\\data\\triples\\天体磁场_narratives.json",
+        "changed": true,
+        "updated_records": 53
+      },
+      {
+        "path": "F:\\第二次托洛洛测试 -重大进展\\data\\triples\\天体粒子物理学_narratives.json",
+        "changed": true,
+        "updated_records": 4
+      },
+      {
+        "path": "F:\\第二次托洛洛测试 -重大进展\\data\\triples\\天卫一_narratives.json",
+        "changed": true,
+        "updated_records": 3
+      },
+      {
+        "path": "F:\\第二次托洛洛测试 -重大进展\\data\\triples\\天卫一_triples.json",
+        "changed": true,
+        "updated_records": 2
+      },
+      {
+        "path": "F:\\第二次托洛洛测试 -重大进展\\data\\triples\\天卫二_narratives.json",
+        "changed": true,
+        "updated_records": 8
+      },
+      {
+        "path": "F:\\第二次托洛洛测试 -重大进展\\data\\triples\\天卫二_triples.json",
+        "changed": true,
+        "updated_records": 6
+      },
+      {
+        "path": "F:\\第二次托洛洛测试 -重大进展\\data\\triples\\天卫五_narratives.json",
+        "changed": true,
+        "updated_records": 2
+      },
+      {
+        "path": "F:\\第二次托洛洛测试 -重大进展\\data\\triples\\天卫五_triples.json",
+        "changed": true,
+        "updated_records": 3
+      },
+      {
+        "path": "F:\\第二次托洛洛测试 -重大进展\\data\\triples\\天卫四_narratives.json",
+        "changed": true,
+        "updated_records": 8
+      },
+      {
+        "path": "F:\\第二次托洛洛测试 -重大进展\\data\\triples\\天卫四_triples.json",
+        "changed": true,
+        "updated_records": 3
+      },
+      {
+        "path": "F:\\第二次托洛洛测试 -重大进展\\data\\triples\\天文单位_narratives.json",
+        "changed": true,
+        "updated_records": 12
+      },
+      {
+        "path": "F:\\第二次托洛洛测试 -重大进展\\data\\triples\\天文学_narratives.json",
+        "changed": true,
+        "updated_records": 27
+      },
+      {
+        "path": "F:\\第二次托洛洛测试 -重大进展\\data\\triples\\天文学史_narratives.json",
+        "changed": true,
+        "updated_records": 10
+      },
+      {
+        "path": "F:\\第二次托洛洛测试 -重大进展\\data\\triples\\天文学名词列表_narratives.json",
+        "changed": true,
+        "updated_records": 2
+      },
+      {
+        "path": "F:\\第二次托洛洛测试 -重大进展\\data\\triples\\天文学大事年表_narratives.json",
+        "changed": true,
+        "updated_records": 5
+      },
+      {
+        "path": "F:\\第二次托洛洛测试 -重大进展\\data\\triples\\天文学家_narratives.json",
+        "changed": true,
+        "updated_records": 2
+      },
+      {
+        "path": "F:\\第二次托洛洛测试 -重大进展\\data\\triples\\天文学家列表_narratives.json",
+        "changed": true,
+        "updated_records": 27
+      },
+      {
+        "path": "F:\\第二次托洛洛测试 -重大进展\\data\\triples\\天文学纲要_narratives.json",
+        "changed": true,
+        "updated_records": 5
+      },
+      {
+        "path": "F:\\第二次托洛洛测试 -重大进展\\data\\triples\\天文学辞汇_narratives.json",
+        "changed": true,
+        "updated_records": 27
+      },
+      {
+        "path": "F:\\第二次托洛洛测试 -重大进展\\data\\triples\\天文符号_narratives.json",
+        "changed": true,
+        "updated_records": 9
+      },
+      {
+        "path": "F:\\第二次托洛洛测试 -重大进展\\data\\triples\\天文统计学_narratives.json",
+        "changed": true,
+        "updated_records": 2
+      },
+      {
+        "path": "F:\\第二次托洛洛测试 -重大进展\\data\\triples\\天然卫星_narratives.json",
+        "changed": true,
+        "updated_records": 3
+      },
+      {
+        "path": "F:\\第二次托洛洛测试 -重大进展\\data\\triples\\天王星_narratives.json",
+        "changed": true,
+        "updated_records": 26
+      },
+      {
+        "path": "F:\\第二次托洛洛测试 -重大进展\\data\\triples\\天王星_triples.json",
+        "changed": true,
+        "updated_records": 3
+      },
+      {
+        "path": "F:\\第二次托洛洛测试 -重大进展\\data\\triples\\天王星气候_narratives.json",
+        "changed": true,
+        "updated_records": 5
+      },
+      {
+        "path": "F:\\第二次托洛洛测试 -重大进展\\data\\triples\\天王星环_narratives.json",
+        "changed": true,
+        "updated_records": 6
+      },
+      {
+        "path": "F:\\第二次托洛洛测试 -重大进展\\data\\triples\\天王星的卫星_narratives.json",
+        "changed": true,
+        "updated_records": 12
+      },
+      {
+        "path": "F:\\第二次托洛洛测试 -重大进展\\data\\triples\\太阳_narratives.json",
+        "changed": true,
+        "updated_records": 49
+      },
+      {
+        "path": "F:\\第二次托洛洛测试 -重大进展\\data\\triples\\太阳_triples.json",
+        "changed": true,
+        "updated_records": 1
+      },
+      {
+        "path": "F:\\第二次托洛洛测试 -重大进展\\data\\triples\\太阳伴星_narratives.json",
+        "changed": true,
+        "updated_records": 7
+      },
+      {
+        "path": "F:\\第二次托洛洛测试 -重大进展\\data\\triples\\太阳天文学_narratives.json",
+        "changed": true,
+        "updated_records": 1
+      },
+      {
+        "path": "F:\\第二次托洛洛测试 -重大进展\\data\\triples\\太阳星云_narratives.json",
+        "changed": true,
+        "updated_records": 10
+      },
+      {
+        "path": "F:\\第二次托洛洛测试 -重大进展\\data\\triples\\太阳系_narratives.json",
+        "changed": true,
+        "updated_records": 43
+      },
+      {
+        "path": "F:\\第二次托洛洛测试 -重大进展\\data\\triples\\太阳系仪_narratives.json",
+        "changed": true,
+        "updated_records": 3
+      },
+      {
+        "path": "F:\\第二次托洛洛测试 -重大进展\\data\\triples\\太阳系天体列表_narratives.json",
+        "changed": true,
+        "updated_records": 5
+      },
+      {
+        "path": "F:\\第二次托洛洛测试 -重大进展\\data\\triples\\太阳系天体大小列表_narratives.json",
+        "changed": true,
+        "updated_records": 1
+      },
+      {
+        "path": "F:\\第二次托洛洛测试 -重大进展\\data\\triples\\太阳系天体质量列表_narratives.json",
+        "changed": true,
+        "updated_records": 1
+      },
+      {
+        "path": "F:\\第二次托洛洛测试 -重大进展\\data\\triples\\太阳系模型_narratives.json",
+        "changed": true,
+        "updated_records": 2
+      },
+      {
+        "path": "F:\\第二次托洛洛测试 -重大进展\\data\\triples\\太阳系流体静力平衡天体列表_narratives.json",
+        "changed": true,
+        "updated_records": 4
+      },
+      {
+        "path": "F:\\第二次托洛洛测试 -重大进展\\data\\triples\\太阳系的发现和探索_narratives.json",
+        "changed": true,
+        "updated_records": 8
+      },
+      {
+        "path": "F:\\第二次托洛洛测试 -重大进展\\data\\triples\\太阳系的形成与演化#行星迁移_narratives.json",
+        "changed": true,
+        "updated_records": 22
+      },
+      {
+        "path": "F:\\第二次托洛洛测试 -重大进展\\data\\triples\\太阳系稳定性问题_narratives.json",
+        "changed": true,
+        "updated_records": 3
+      },
+      {
+        "path": "F:\\第二次托洛洛测试 -重大进展\\data\\triples\\太阳风_narratives.json",
+        "changed": true,
+        "updated_records": 18
+      },
+      {
+        "path": "F:\\第二次托洛洛测试 -重大进展\\data\\triples\\夸克星_narratives.json",
+        "changed": true,
+        "updated_records": 24
+      },
+      {
+        "path": "F:\\第二次托洛洛测试 -重大进展\\data\\triples\\奇特星_narratives.json",
+        "changed": true,
+        "updated_records": 7
+      },
+      {
+        "path": "F:\\第二次托洛洛测试 -重大进展\\data\\triples\\奥尔特云_narratives.json",
+        "changed": true,
+        "updated_records": 9
+      },
+      {
+        "path": "F:\\第二次托洛洛测试 -重大进展\\data\\triples\\女凯龙星_narratives.json",
+        "changed": true,
+        "updated_records": 6
+      },
+      {
+        "path": "F:\\第二次托洛洛测试 -重大进展\\data\\triples\\妊神星_narratives.json",
+        "changed": true,
+        "updated_records": 14
+      },
+      {
+        "path": "F:\\第二次托洛洛测试 -重大进展\\data\\triples\\妊神星_triples.json",
+        "changed": true,
+        "updated_records": 3
+      },
+      {
+        "path": "F:\\第二次托洛洛测试 -重大进展\\data\\triples\\威斯特彗星_narratives.json",
+        "changed": true,
+        "updated_records": 4
+      },
+      {
+        "path": "F:\\第二次托洛洛测试 -重大进展\\data\\triples\\婚神星_narratives.json",
+        "changed": true,
+        "updated_records": 3
+      },
+      {
+        "path": "F:\\第二次托洛洛测试 -重大进展\\data\\triples\\婚神星_triples.json",
+        "changed": true,
+        "updated_records": 2
+      },
+      {
+        "path": "F:\\第二次托洛洛测试 -重大进展\\data\\triples\\嫦娥工程_narratives.json",
+        "changed": true,
+        "updated_records": 8
+      },
+      {
+        "path": "F:\\第二次托洛洛测试 -重大进展\\data\\triples\\宇宙_narratives.json",
+        "changed": true,
+        "updated_records": 35
+      },
+      {
+        "path": "F:\\第二次托洛洛测试 -重大进展\\data\\triples\\宇宙射线_narratives.json",
+        "changed": true,
+        "updated_records": 8
+      },
+      {
+        "path": "F:\\第二次托洛洛测试 -重大进展\\data\\triples\\宇宙尘埃_narratives.json",
+        "changed": true,
+        "updated_records": 1
+      },
+      {
+        "path": "F:\\第二次托洛洛测试 -重大进展\\data\\triples\\宇宙速度_narratives.json",
+        "changed": true,
+        "updated_records": 9
+      },
+      {
+        "path": "F:\\第二次托洛洛测试 -重大进展\\data\\triples\\客星_narratives.json",
+        "changed": true,
+        "updated_records": 2
+      },
+      {
+        "path": "F:\\第二次托洛洛测试 -重大进展\\data\\triples\\室女超星系团_narratives.json",
+        "changed": true,
+        "updated_records": 5
+      },
+      {
+        "path": "F:\\第二次托洛洛测试 -重大进展\\data\\triples\\射电天文学_narratives.json",
+        "changed": true,
+        "updated_records": 7
+      },
+      {
+        "path": "F:\\第二次托洛洛测试 -重大进展\\data\\triples\\小行星120347_narratives.json",
+        "changed": true,
+        "updated_records": 2
+      },
+      {
+        "path": "F:\\第二次托洛洛测试 -重大进展\\data\\triples\\小行星120347_triples.json",
+        "changed": true,
+        "updated_records": 1
+      },
+      {
+        "path": "F:\\第二次托洛洛测试 -重大进展\\data\\triples\\小行星15760_narratives.json",
+        "changed": true,
+        "updated_records": 2
+      },
+      {
+        "path": "F:\\第二次托洛洛测试 -重大进展\\data\\triples\\小行星15760_triples.json",
+        "changed": true,
+        "updated_records": 1
+      },
+      {
+        "path": "F:\\第二次托洛洛测试 -重大进展\\data\\triples\\小行星164207_narratives.json",
+        "changed": true,
+        "updated_records": 2
+      },
+      {
+        "path": "F:\\第二次托洛洛测试 -重大进展\\data\\triples\\小行星164207_triples.json",
+        "changed": true,
+        "updated_records": 1
+      },
+      {
+        "path": "F:\\第二次托洛洛测试 -重大进展\\data\\triples\\小行星20000_narratives.json",
+        "changed": true,
+        "updated_records": 2
+      },
+      {
+        "path": "F:\\第二次托洛洛测试 -重大进展\\data\\triples\\小行星2060_narratives.json",
+        "changed": true,
+        "updated_records": 4
+      },
+      {
+        "path": "F:\\第二次托洛洛测试 -重大进展\\data\\triples\\小行星2060_triples.json",
+        "changed": true,
+        "updated_records": 1
+      },
+      {
+        "path": "F:\\第二次托洛洛测试 -重大进展\\data\\triples\\小行星28978_narratives.json",
+        "changed": true,
+        "updated_records": 2
+      },
+      {
+        "path": "F:\\第二次托洛洛测试 -重大进展\\data\\triples\\小行星541132_narratives.json",
+        "changed": true,
+        "updated_records": 3
+      },
+      {
+        "path": "F:\\第二次托洛洛测试 -重大进展\\data\\triples\\小行星55565_narratives.json",
+        "changed": true,
+        "updated_records": 1
+      },
+      {
+        "path": "F:\\第二次托洛洛测试 -重大进展\\data\\triples\\小行星55636_narratives.json",
+        "changed": true,
+        "updated_records": 3
+      },
+      {
+        "path": "F:\\第二次托洛洛测试 -重大进展\\data\\triples\\小行星55636_triples.json",
+        "changed": true,
+        "updated_records": 1
+      },
+      {
+        "path": "F:\\第二次托洛洛测试 -重大进展\\data\\triples\\小行星55637_narratives.json",
+        "changed": true,
+        "updated_records": 5
+      },
+      {
+        "path": "F:\\第二次托洛洛测试 -重大进展\\data\\triples\\小行星55637_triples.json",
+        "changed": true,
+        "updated_records": 2
+      },
+      {
+        "path": "F:\\第二次托洛洛测试 -重大进展\\data\\triples\\小行星594913_narratives.json",
+        "changed": true,
+        "updated_records": 7
+      },
+      {
+        "path": "F:\\第二次托洛洛测试 -重大进展\\data\\triples\\小行星612911_narratives.json",
+        "changed": true,
+        "updated_records": 2
+      },
+      {
+        "path": "F:\\第二次托洛洛测试 -重大进展\\data\\triples\\小行星612911_triples.json",
+        "changed": true,
+        "updated_records": 1
+      },
+      {
+        "path": "F:\\第二次托洛洛测试 -重大进展\\data\\triples\\小行星84522_triples.json",
+        "changed": true,
+        "updated_records": 1
+      },
+      {
+        "path": "F:\\第二次托洛洛测试 -重大进展\\data\\triples\\小行星_narratives.json",
+        "changed": true,
+        "updated_records": 6
+      },
+      {
+        "path": "F:\\第二次托洛洛测试 -重大进展\\data\\triples\\小行星_triples.json",
+        "changed": true,
+        "updated_records": 1
+      },
+      {
+        "path": "F:\\第二次托洛洛测试 -重大进展\\data\\triples\\小行星群列表_narratives.json",
+        "changed": true,
+        "updated_records": 8
+      },
+      {
+        "path": "F:\\第二次托洛洛测试 -重大进展\\data\\triples\\巨大质量恒星列表_narratives.json",
+        "changed": true,
+        "updated_records": 5
+      },
+      {
+        "path": "F:\\第二次托洛洛测试 -重大进展\\data\\triples\\巨星_narratives.json",
+        "changed": true,
+        "updated_records": 10
+      },
+      {
+        "path": "F:\\第二次托洛洛测试 -重大进展\\data\\triples\\巨行星_narratives.json",
+        "changed": true,
+        "updated_records": 8
+      },
+      {
+        "path": "F:\\第二次托洛洛测试 -重大进展\\data\\triples\\巴比伦天文学_narratives.json",
+        "changed": true,
+        "updated_records": 1
+      },
+      {
+        "path": "F:\\第二次托洛洛测试 -重大进展\\data\\triples\\带电粒子_narratives.json",
+        "changed": true,
+        "updated_records": 1
+      },
+      {
+        "path": "F:\\第二次托洛洛测试 -重大进展\\data\\triples\\引力_narratives.json",
+        "changed": true,
+        "updated_records": 10
+      },
+      {
+        "path": "F:\\第二次托洛洛测试 -重大进展\\data\\triples\\引力波天文学_narratives.json",
+        "changed": true,
+        "updated_records": 17
+      },
+      {
+        "path": "F:\\第二次托洛洛测试 -重大进展\\data\\triples\\引力结合能_narratives.json",
+        "changed": true,
+        "updated_records": 2
+      },
+      {
+        "path": "F:\\第二次托洛洛测试 -重大进展\\data\\triples\\彗星#分类_narratives.json",
+        "changed": true,
+        "updated_records": 36
+      },
+      {
+        "path": "F:\\第二次托洛洛测试 -重大进展\\data\\triples\\径向速度_narratives.json",
+        "changed": true,
+        "updated_records": 2
+      },
+      {
+        "path": "F:\\第二次托洛洛测试 -重大进展\\data\\triples\\微中子天文学_narratives.json",
+        "changed": true,
+        "updated_records": 4
+      },
+      {
+        "path": "F:\\第二次托洛洛测试 -重大进展\\data\\triples\\微型行星_narratives.json",
+        "changed": true,
+        "updated_records": 6
+      },
+      {
+        "path": "F:\\第二次托洛洛测试 -重大进展\\data\\triples\\忒伊亚_(行星)_narratives.json",
+        "changed": true,
+        "updated_records": 3
+      },
+      {
+        "path": "F:\\第二次托洛洛测试 -重大进展\\data\\triples\\快速振荡Ap星_narratives.json",
+        "changed": true,
+        "updated_records": 3
+      },
+      {
+        "path": "F:\\第二次托洛洛测试 -重大进展\\data\\triples\\恒星_narratives.json",
+        "changed": true,
+        "updated_records": 33
+      },
+      {
+        "path": "F:\\第二次托洛洛测试 -重大进展\\data\\triples\\恒星亮度列表_narratives.json",
+        "changed": true,
+        "updated_records": 1
+      },
+      {
+        "path": "F:\\第二次托洛洛测试 -重大进展\\data\\triples\\恒星光度列表_narratives.json",
+        "changed": true,
+        "updated_records": 2
+      },
+      {
+        "path": "F:\\第二次托洛洛测试 -重大进展\\data\\triples\\恒星光谱_narratives.json",
+        "changed": true,
+        "updated_records": 30
+      },
+      {
+        "path": "F:\\第二次托洛洛测试 -重大进展\\data\\triples\\恒星动力学_narratives.json",
+        "changed": true,
+        "updated_records": 2
+      },
+      {
+        "path": "F:\\第二次托洛洛测试 -重大进展\\data\\triples\\恒星命名_narratives.json",
+        "changed": true,
+        "updated_records": 4
+      },
+      {
+        "path": "F:\\第二次托洛洛测试 -重大进展\\data\\triples\\恒星天文学_narratives.json",
+        "changed": true,
+        "updated_records": 1
+      },
+      {
+        "path": "F:\\第二次托洛洛测试 -重大进展\\data\\triples\\恒星天文学年表_narratives.json",
+        "changed": true,
+        "updated_records": 4
+      },
+      {
+        "path": "F:\\第二次托洛洛测试 -重大进展\\data\\triples\\恒星形成_narratives.json",
+        "changed": true,
+        "updated_records": 5
+      },
+      {
+        "path": "F:\\第二次托洛洛测试 -重大进展\\data\\triples\\恒星核合成_narratives.json",
+        "changed": true,
+        "updated_records": 12
+      },
+      {
+        "path": "F:\\第二次托洛洛测试 -重大进展\\data\\triples\\恒星演化_narratives.json",
+        "changed": true,
+        "updated_records": 19
+      },
+      {
+        "path": "F:\\第二次托洛洛测试 -重大进展\\data\\triples\\恒星磁场_narratives.json",
+        "changed": true,
+        "updated_records": 7
+      },
+      {
+        "path": "F:\\第二次托洛洛测试 -重大进展\\data\\triples\\恒星系统_narratives.json",
+        "changed": true,
+        "updated_records": 7
+      },
+      {
+        "path": "F:\\第二次托洛洛测试 -重大进展\\data\\triples\\恒星结构_narratives.json",
+        "changed": true,
+        "updated_records": 5
+      },
+      {
+        "path": "F:\\第二次托洛洛测试 -重大进展\\data\\triples\\恒星自转_narratives.json",
+        "changed": true,
+        "updated_records": 9
+      },
+      {
+        "path": "F:\\第二次托洛洛测试 -重大进展\\data\\triples\\恒星视差_narratives.json",
+        "changed": true,
+        "updated_records": 5
+      },
+      {
+        "path": "F:\\第二次托洛洛测试 -重大进展\\data\\triples\\恒星质量_narratives.json",
+        "changed": true,
+        "updated_records": 4
+      },
+      {
+        "path": "F:\\第二次托洛洛测试 -重大进展\\data\\triples\\恒星运动学_narratives.json",
+        "changed": true,
+        "updated_records": 12
+      },
+      {
+        "path": "F:\\第二次托洛洛测试 -重大进展\\data\\triples\\恒星黑洞_narratives.json",
+        "changed": true,
+        "updated_records": 2
+      },
+      {
+        "path": "F:\\第二次托洛洛测试 -重大进展\\data\\triples\\恒行星_narratives.json",
+        "changed": true,
+        "updated_records": 1
+      },
+      {
+        "path": "F:\\第二次托洛洛测试 -重大进展\\data\\triples\\扩展海王星外天体_narratives.json",
+        "changed": true,
+        "updated_records": 5
+      },
+      {
+        "path": "F:\\第二次托洛洛测试 -重大进展\\data\\triples\\拉尼亚凯亚超星系团_narratives.json",
+        "changed": true,
+        "updated_records": 4
+      },
+      {
+        "path": "F:\\第二次托洛洛测试 -重大进展\\data\\triples\\拱极星_narratives.json",
+        "changed": true,
+        "updated_records": 5
+      },
+      {
+        "path": "F:\\第二次托洛洛测试 -重大进展\\data\\triples\\振荡天星_narratives.json",
+        "changed": true,
+        "updated_records": 2
+      },
+      {
+        "path": "F:\\第二次托洛洛测试 -重大进展\\data\\triples\\提丢斯-波德定律_narratives.json",
+        "changed": true,
+        "updated_records": 2
+      },
+      {
+        "path": "F:\\第二次托洛洛测试 -重大进展\\data\\triples\\新星_narratives.json",
+        "changed": true,
+        "updated_records": 5
+      },
+      {
+        "path": "F:\\第二次托洛洛测试 -重大进展\\data\\triples\\新星遗迹_narratives.json",
+        "changed": true,
+        "updated_records": 1
+      },
+      {
+        "path": "F:\\第二次托洛洛测试 -重大进展\\data\\triples\\新视野号_narratives.json",
+        "changed": true,
+        "updated_records": 27
+      },
+      {
+        "path": "F:\\第二次托洛洛测试 -重大进展\\data\\triples\\日球层_narratives.json",
+        "changed": true,
+        "updated_records": 8
+      },
+      {
+        "path": "F:\\第二次托洛洛测试 -重大进展\\data\\triples\\星冕_narratives.json",
+        "changed": true,
+        "updated_records": 24
+      },
+      {
+        "path": "F:\\第二次托洛洛测试 -重大进展\\data\\triples\\星团_narratives.json",
+        "changed": true,
+        "updated_records": 7
+      },
+      {
+        "path": "F:\\第二次托洛洛测试 -重大进展\\data\\triples\\星座_narratives.json",
+        "changed": true,
+        "updated_records": 21
+      },
+      {
+        "path": "F:\\第二次托洛洛测试 -重大进展\\data\\triples\\星座恒星列表_narratives.json",
+        "changed": true,
+        "updated_records": 2
+      },
+      {
+        "path": "F:\\第二次托洛洛测试 -重大进展\\data\\triples\\星斑_narratives.json",
+        "changed": true,
+        "updated_records": 4
+      },
+      {
+        "path": "F:\\第二次托洛洛测试 -重大进展\\data\\triples\\星族#第一星族星_narratives.json",
+        "changed": true,
+        "updated_records": 7
+      },
+      {
+        "path": "F:\\第二次托洛洛测试 -重大进展\\data\\triples\\星等_narratives.json",
+        "changed": true,
+        "updated_records": 6
+      },
+      {
+        "path": "F:\\第二次托洛洛测试 -重大进展\\data\\triples\\星系_narratives.json",
+        "changed": true,
+        "updated_records": 27
+      },
+      {
+        "path": "F:\\第二次托洛洛测试 -重大进展\\data\\triples\\星系天文学_narratives.json",
+        "changed": true,
+        "updated_records": 1
+      },
+      {
+        "path": "F:\\第二次托洛洛测试 -重大进展\\data\\triples\\星系晕_narratives.json",
+        "changed": true,
+        "updated_records": 5
+      },
+      {
+        "path": "F:\\第二次托洛洛测试 -重大进展\\data\\triples\\星系潮汐_narratives.json",
+        "changed": true,
+        "updated_records": 5
+      },
+      {
+        "path": "F:\\第二次托洛洛测试 -重大进展\\data\\triples\\星群_narratives.json",
+        "changed": true,
+        "updated_records": 10
+      },
+      {
+        "path": "F:\\第二次托洛洛测试 -重大进展\\data\\triples\\星际云_narratives.json",
+        "changed": true,
+        "updated_records": 4
+      },
+      {
+        "path": "F:\\第二次托洛洛测试 -重大进展\\data\\triples\\星际介质_narratives.json",
+        "changed": true,
+        "updated_records": 16
+      },
+      {
+        "path": "F:\\第二次托洛洛测试 -重大进展\\data\\triples\\星际分子列表_narratives.json",
+        "changed": true,
+        "updated_records": 6
+      },
+      {
+        "path": "F:\\第二次托洛洛测试 -重大进展\\data\\triples\\星际空间_narratives.json",
+        "changed": true,
+        "updated_records": 6
+      },
+      {
+        "path": "F:\\第二次托洛洛测试 -重大进展\\data\\triples\\星际边界探测器_narratives.json",
+        "changed": true,
+        "updated_records": 7
+      },
+      {
+        "path": "F:\\第二次托洛洛测试 -重大进展\\data\\triples\\星际边界探测器_triples.json",
+        "changed": true,
+        "updated_records": 1
+      },
+      {
+        "path": "F:\\第二次托洛洛测试 -重大进展\\data\\triples\\星震学_narratives.json",
+        "changed": true,
+        "updated_records": 5
+      },
+      {
+        "path": "F:\\第二次托洛洛测试 -重大进展\\data\\triples\\星震学_triples.json",
+        "changed": true,
+        "updated_records": 1
+      },
+      {
+        "path": "F:\\第二次托洛洛测试 -重大进展\\data\\triples\\星风_narratives.json",
+        "changed": true,
+        "updated_records": 2
+      },
+      {
+        "path": "F:\\第二次托洛洛测试 -重大进展\\data\\triples\\星风泡_narratives.json",
+        "changed": true,
+        "updated_records": 1
+      },
+      {
+        "path": "F:\\第二次托洛洛测试 -重大进展\\data\\triples\\普朗克恒星_narratives.json",
+        "changed": true,
+        "updated_records": 1
+      },
+      {
+        "path": "F:\\第二次托洛洛测试 -重大进展\\data\\triples\\智神星_narratives.json",
+        "changed": true,
+        "updated_records": 8
+      },
+      {
+        "path": "F:\\第二次托洛洛测试 -重大进展\\data\\triples\\智神星_triples.json",
+        "changed": true,
+        "updated_records": 2
+      },
+      {
+        "path": "F:\\第二次托洛洛测试 -重大进展\\data\\triples\\智神星族_narratives.json",
+        "changed": true,
+        "updated_records": 1
+      },
+      {
+        "path": "F:\\第二次托洛洛测试 -重大进展\\data\\triples\\暗星_narratives.json",
+        "changed": true,
+        "updated_records": 1
+      },
+      {
+        "path": "F:\\第二次托洛洛测试 -重大进展\\data\\triples\\最小质量恒星列表_narratives.json",
+        "changed": true,
+        "updated_records": 4
+      },
+      {
+        "path": "F:\\第二次托洛洛测试 -重大进展\\data\\triples\\月球_narratives.json",
+        "changed": true,
+        "updated_records": 33
+      },
+      {
+        "path": "F:\\第二次托洛洛测试 -重大进展\\data\\triples\\月球_triples.json",
+        "changed": true,
+        "updated_records": 4
+      },
+      {
+        "path": "F:\\第二次托洛洛测试 -重大进展\\data\\triples\\月球上的日食_narratives.json",
+        "changed": true,
+        "updated_records": 1
+      },
+      {
+        "path": "F:\\第二次托洛洛测试 -重大进展\\data\\triples\\月球土壤_narratives.json",
+        "changed": true,
+        "updated_records": 9
+      },
+      {
+        "path": "F:\\第二次托洛洛测试 -重大进展\\data\\triples\\月球轨道_narratives.json",
+        "changed": true,
+        "updated_records": 13
+      },
+      {
+        "path": "F:\\第二次托洛洛测试 -重大进展\\data\\triples\\木卫一_narratives.json",
+        "changed": true,
+        "updated_records": 21
+      },
+      {
+        "path": "F:\\第二次托洛洛测试 -重大进展\\data\\triples\\木卫一_triples.json",
+        "changed": true,
+        "updated_records": 2
+      },
+      {
+        "path": "F:\\第二次托洛洛测试 -重大进展\\data\\triples\\木卫二_narratives.json",
+        "changed": true,
+        "updated_records": 13
+      },
+      {
+        "path": "F:\\第二次托洛洛测试 -重大进展\\data\\triples\\木卫二_triples.json",
+        "changed": true,
+        "updated_records": 2
+      },
+      {
+        "path": "F:\\第二次托洛洛测试 -重大进展\\data\\triples\\木卫四_narratives.json",
+        "changed": true,
+        "updated_records": 15
+      },
+      {
+        "path": "F:\\第二次托洛洛测试 -重大进展\\data\\triples\\木卫四_triples.json",
+        "changed": true,
+        "updated_records": 5
+      },
+      {
+        "path": "F:\\第二次托洛洛测试 -重大进展\\data\\triples\\木星_narratives.json",
+        "changed": true,
+        "updated_records": 28
+      },
+      {
+        "path": "F:\\第二次托洛洛测试 -重大进展\\data\\triples\\木星_triples.json",
+        "changed": true,
+        "updated_records": 3
+      },
+      {
+        "path": "F:\\第二次托洛洛测试 -重大进展\\data\\triples\\木星大气层#椭圆形BA_narratives.json",
+        "changed": true,
+        "updated_records": 25
+      },
+      {
+        "path": "F:\\第二次托洛洛测试 -重大进展\\data\\triples\\木星特洛伊_narratives.json",
+        "changed": true,
+        "updated_records": 6
+      },
+      {
+        "path": "F:\\第二次托洛洛测试 -重大进展\\data\\triples\\木星环_narratives.json",
+        "changed": true,
+        "updated_records": 13
+      },
+      {
+        "path": "F:\\第二次托洛洛测试 -重大进展\\data\\triples\\木星的卫星_narratives.json",
+        "changed": true,
+        "updated_records": 7
+      },
+      {
+        "path": "F:\\第二次托洛洛测试 -重大进展\\data\\triples\\木星的磁层_narratives.json",
+        "changed": true,
+        "updated_records": 20
+      },
+      {
+        "path": "F:\\第二次托洛洛测试 -重大进展\\data\\triples\\本动速度_narratives.json",
+        "changed": true,
+        "updated_records": 2
+      },
+      {
+        "path": "F:\\第二次托洛洛测试 -重大进展\\data\\triples\\本地星际云_narratives.json",
+        "changed": true,
+        "updated_records": 3
+      },
+      {
+        "path": "F:\\第二次托洛洛测试 -重大进展\\data\\triples\\本星系域_narratives.json",
+        "changed": true,
+        "updated_records": 1
+      },
+      {
+        "path": "F:\\第二次托洛洛测试 -重大进展\\data\\triples\\本星系板_narratives.json",
+        "changed": true,
+        "updated_records": 1
+      },
+      {
+        "path": "F:\\第二次托洛洛测试 -重大进展\\data\\triples\\本星系群_narratives.json",
+        "changed": true,
+        "updated_records": 3
+      },
+      {
+        "path": "F:\\第二次托洛洛测试 -重大进展\\data\\triples\\极端氦星_narratives.json",
+        "changed": true,
+        "updated_records": 3
+      },
+      {
+        "path": "F:\\第二次托洛洛测试 -重大进展\\data\\triples\\极超新星_narratives.json",
+        "changed": true,
+        "updated_records": 5
+      },
+      {
+        "path": "F:\\第二次托洛洛测试 -重大进展\\data\\triples\\柯伊伯带_narratives.json",
+        "changed": true,
+        "updated_records": 16
+      },
+      {
+        "path": "F:\\第二次托洛洛测试 -重大进展\\data\\triples\\柯伊伯带_triples.json",
+        "changed": true,
+        "updated_records": 1
+      },
+      {
+        "path": "F:\\第二次托洛洛测试 -重大进展\\data\\triples\\梅西尔德星_narratives.json",
+        "changed": true,
+        "updated_records": 3
+      },
+      {
+        "path": "F:\\第二次托洛洛测试 -重大进展\\data\\triples\\梅西尔德星_triples.json",
+        "changed": true,
+        "updated_records": 3
+      },
+      {
+        "path": "F:\\第二次托洛洛测试 -重大进展\\data\\triples\\棒旋星系_narratives.json",
+        "changed": true,
+        "updated_records": 2
+      },
+      {
+        "path": "F:\\第二次托洛洛测试 -重大进展\\data\\triples\\棕矮星_narratives.json",
+        "changed": true,
+        "updated_records": 23
+      },
+      {
+        "path": "F:\\第二次托洛洛测试 -重大进展\\data\\triples\\棕矮星_triples.json",
+        "changed": true,
+        "updated_records": 1
+      },
+      {
+        "path": "F:\\第二次托洛洛测试 -重大进展\\data\\triples\\棕矮星列表_narratives.json",
+        "changed": true,
+        "updated_records": 1
+      },
+      {
+        "path": "F:\\第二次托洛洛测试 -重大进展\\data\\triples\\次巨星_narratives.json",
+        "changed": true,
+        "updated_records": 10
+      },
+      {
+        "path": "F:\\第二次托洛洛测试 -重大进展\\data\\triples\\次棕矮星_narratives.json",
+        "changed": true,
+        "updated_records": 4
+      },
+      {
+        "path": "F:\\第二次托洛洛测试 -重大进展\\data\\triples\\次棕矮星_triples.json",
+        "changed": true,
+        "updated_records": 1
+      },
+      {
+        "path": "F:\\第二次托洛洛测试 -重大进展\\data\\triples\\次毫米波天文学_narratives.json",
+        "changed": true,
+        "updated_records": 1
+      },
+      {
+        "path": "F:\\第二次托洛洛测试 -重大进展\\data\\triples\\次矮星_narratives.json",
+        "changed": true,
+        "updated_records": 3
+      },
+      {
+        "path": "F:\\第二次托洛洛测试 -重大进展\\data\\triples\\比邻星b_narratives.json",
+        "changed": true,
+        "updated_records": 6
+      },
+      {
+        "path": "F:\\第二次托洛洛测试 -重大进展\\data\\triples\\毕宿星团_narratives.json",
+        "changed": true,
+        "updated_records": 3
+      },
+      {
+        "path": "F:\\第二次托洛洛测试 -重大进展\\data\\triples\\毗邻星_narratives.json",
+        "changed": true,
+        "updated_records": 16
+      },
+      {
+        "path": "F:\\第二次托洛洛测试 -重大进展\\data\\triples\\气态巨行星_narratives.json",
+        "changed": true,
+        "updated_records": 4
+      },
+      {
+        "path": "F:\\第二次托洛洛测试 -重大进展\\data\\triples\\氦行星_narratives.json",
+        "changed": true,
+        "updated_records": 1
+      },
+      {
+        "path": "F:\\第二次托洛洛测试 -重大进展\\data\\triples\\水星_narratives.json",
+        "changed": true,
+        "updated_records": 23
+      },
+      {
+        "path": "F:\\第二次托洛洛测试 -重大进展\\data\\triples\\水星_triples.json",
+        "changed": true,
+        "updated_records": 2
+      },
+      {
+        "path": "F:\\第二次托洛洛测试 -重大进展\\data\\triples\\水星凌日_narratives.json",
+        "changed": true,
+        "updated_records": 1
+      },
+      {
+        "path": "F:\\第二次托洛洛测试 -重大进展\\data\\triples\\水星轨道穿越小行星_narratives.json",
+        "changed": true,
+        "updated_records": 2
+      },
+      {
+        "path": "F:\\第二次托洛洛测试 -重大进展\\data\\triples\\汞锰星_narratives.json",
+        "changed": true,
+        "updated_records": 1
+      },
+      {
+        "path": "F:\\第二次托洛洛测试 -重大进展\\data\\triples\\沃尔夫-拉叶星_narratives.json",
+        "changed": true,
+        "updated_records": 13
+      },
+      {
+        "path": "F:\\第二次托洛洛测试 -重大进展\\data\\triples\\流星_narratives.json",
+        "changed": true,
+        "updated_records": 1
+      },
+      {
+        "path": "F:\\第二次托洛洛测试 -重大进展\\data\\triples\\流星体_narratives.json",
+        "changed": true,
+        "updated_records": 10
+      },
+      {
+        "path": "F:\\第二次托洛洛测试 -重大进展\\data\\triples\\流星雨_narratives.json",
+        "changed": true,
+        "updated_records": 9
+      },
+      {
+        "path": "F:\\第二次托洛洛测试 -重大进展\\data\\triples\\流星雨_triples.json",
+        "changed": true,
+        "updated_records": 1
+      },
+      {
+        "path": "F:\\第二次托洛洛测试 -重大进展\\data\\triples\\测光标准星_narratives.json",
+        "changed": true,
+        "updated_records": 1
+      },
+      {
+        "path": "F:\\第二次托洛洛测试 -重大进展\\data\\triples\\海尔-波普彗星_narratives.json",
+        "changed": true,
+        "updated_records": 8
+      },
+      {
+        "path": "F:\\第二次托洛洛测试 -重大进展\\data\\triples\\海王星_narratives.json",
+        "changed": true,
+        "updated_records": 18
+      },
+      {
+        "path": "F:\\第二次托洛洛测试 -重大进展\\data\\triples\\海王星_triples.json",
+        "changed": true,
+        "updated_records": 4
+      },
+      {
+        "path": "F:\\第二次托洛洛测试 -重大进展\\data\\triples\\海王星外天体_narratives.json",
+        "changed": true,
+        "updated_records": 12
+      },
+      {
+        "path": "F:\\第二次托洛洛测试 -重大进展\\data\\triples\\海王星特洛伊_narratives.json",
+        "changed": true,
+        "updated_records": 2
+      },
+      {
+        "path": "F:\\第二次托洛洛测试 -重大进展\\data\\triples\\海王星环_narratives.json",
+        "changed": true,
+        "updated_records": 5
+      },
+      {
+        "path": "F:\\第二次托洛洛测试 -重大进展\\data\\triples\\海王星的卫星_narratives.json",
+        "changed": true,
+        "updated_records": 9
+      },
+      {
+        "path": "F:\\第二次托洛洛测试 -重大进展\\data\\triples\\渐近巨星支_narratives.json",
+        "changed": true,
+        "updated_records": 7
+      },
+      {
+        "path": "F:\\第二次托洛洛测试 -重大进展\\data\\triples\\澳洲原住民天文学_narratives.json",
+        "changed": true,
+        "updated_records": 1
+      },
+      {
+        "path": "F:\\第二次托洛洛测试 -重大进展\\data\\triples\\火卫一_narratives.json",
+        "changed": true,
+        "updated_records": 10
+      },
+      {
+        "path": "F:\\第二次托洛洛测试 -重大进展\\data\\triples\\火卫一_triples.json",
+        "changed": true,
+        "updated_records": 3
+      },
+      {
+        "path": "F:\\第二次托洛洛测试 -重大进展\\data\\triples\\火星_narratives.json",
+        "changed": true,
+        "updated_records": 27
+      },
+      {
+        "path": "F:\\第二次托洛洛测试 -重大进展\\data\\triples\\火星_triples.json",
+        "changed": true,
+        "updated_records": 9
+      },
+      {
+        "path": "F:\\第二次托洛洛测试 -重大进展\\data\\triples\\火星探测_narratives.json",
+        "changed": true,
+        "updated_records": 23
+      },
+      {
+        "path": "F:\\第二次托洛洛测试 -重大进展\\data\\triples\\火星极冠_narratives.json",
+        "changed": true,
+        "updated_records": 7
+      },
+      {
+        "path": "F:\\第二次托洛洛测试 -重大进展\\data\\triples\\火星特洛伊_narratives.json",
+        "changed": true,
+        "updated_records": 1
+      },
+      {
+        "path": "F:\\第二次托洛洛测试 -重大进展\\data\\triples\\火星的卫星_narratives.json",
+        "changed": true,
+        "updated_records": 6
+      },
+      {
+        "path": "F:\\第二次托洛洛测试 -重大进展\\data\\triples\\火星车_narratives.json",
+        "changed": true,
+        "updated_records": 1
+      },
+      {
+        "path": "F:\\第二次托洛洛测试 -重大进展\\data\\triples\\火星轨道穿越小行星_narratives.json",
+        "changed": true,
+        "updated_records": 6
+      },
+      {
+        "path": "F:\\第二次托洛洛测试 -重大进展\\data\\triples\\灶神星_narratives.json",
+        "changed": true,
+        "updated_records": 16
+      },
+      {
+        "path": "F:\\第二次托洛洛测试 -重大进展\\data\\triples\\灶神星_triples.json",
+        "changed": true,
+        "updated_records": 4
+      },
+      {
+        "path": "F:\\第二次托洛洛测试 -重大进展\\data\\triples\\灶神星族_narratives.json",
+        "changed": true,
+        "updated_records": 2
+      },
+      {
+        "path": "F:\\第二次托洛洛测试 -重大进展\\data\\triples\\牛顿运动定律_narratives.json",
+        "changed": true,
+        "updated_records": 8
+      },
+      {
+        "path": "F:\\第二次托洛洛测试 -重大进展\\data\\triples\\牧羊犬卫星_narratives.json",
+        "changed": true,
+        "updated_records": 2
+      },
+      {
+        "path": "F:\\第二次托洛洛测试 -重大进展\\data\\triples\\物理宇宙学_narratives.json",
+        "changed": true,
+        "updated_records": 8
+      },
+      {
+        "path": "F:\\第二次托洛洛测试 -重大进展\\data\\triples\\特殊恒星_narratives.json",
+        "changed": true,
+        "updated_records": 4
+      },
+      {
+        "path": "F:\\第二次托洛洛测试 -重大进展\\data\\triples\\特洛伊天体_narratives.json",
+        "changed": true,
+        "updated_records": 5
+      },
+      {
+        "path": "F:\\第二次托洛洛测试 -重大进展\\data\\triples\\特超巨星_narratives.json",
+        "changed": true,
+        "updated_records": 6
+      },
+      {
+        "path": "F:\\第二次托洛洛测试 -重大进展\\data\\triples\\猎户FU型变星_narratives.json",
+        "changed": true,
+        "updated_records": 2
+      },
+      {
+        "path": "F:\\第二次托洛洛测试 -重大进展\\data\\triples\\猎户型变星_narratives.json",
+        "changed": true,
+        "updated_records": 1
+      },
+      {
+        "path": "F:\\第二次托洛洛测试 -重大进展\\data\\triples\\玛尼_(小行星)_narratives.json",
+        "changed": true,
+        "updated_records": 13
+      },
+      {
+        "path": "F:\\第二次托洛洛测试 -重大进展\\data\\triples\\球状星团_narratives.json",
+        "changed": true,
+        "updated_records": 19
+      },
+      {
+        "path": "F:\\第二次托洛洛测试 -重大进展\\data\\triples\\球面天文学_narratives.json",
+        "changed": true,
+        "updated_records": 3
+      },
+      {
+        "path": "F:\\第二次托洛洛测试 -重大进展\\data\\triples\\甚大望远镜_narratives.json",
+        "changed": true,
+        "updated_records": 4
+      },
+      {
+        "path": "F:\\第二次托洛洛测试 -重大进展\\data\\triples\\疏散星团_narratives.json",
+        "changed": true,
+        "updated_records": 13
+      },
+      {
+        "path": "F:\\第二次托洛洛测试 -重大进展\\data\\triples\\疏散星团_triples.json",
+        "changed": true,
+        "updated_records": 1
+      },
+      {
+        "path": "F:\\第二次托洛洛测试 -重大进展\\data\\triples\\白矮星_narratives.json",
+        "changed": true,
+        "updated_records": 14
+      },
+      {
+        "path": "F:\\第二次托洛洛测试 -重大进展\\data\\triples\\矮行星_narratives.json",
+        "changed": true,
+        "updated_records": 16
+      },
+      {
+        "path": "F:\\第二次托洛洛测试 -重大进展\\data\\triples\\矮行星候选者列表_narratives.json",
+        "changed": true,
+        "updated_records": 2
+      },
+      {
+        "path": "F:\\第二次托洛洛测试 -重大进展\\data\\triples\\碳星_narratives.json",
+        "changed": true,
+        "updated_records": 4
+      },
+      {
+        "path": "F:\\第二次托洛洛测试 -重大进展\\data\\triples\\磁星_narratives.json",
+        "changed": true,
+        "updated_records": 9
+      },
+      {
+        "path": "F:\\第二次托洛洛测试 -重大进展\\data\\triples\\祝融型小行星_narratives.json",
+        "changed": true,
+        "updated_records": 7
+      },
+      {
+        "path": "F:\\第二次托洛洛测试 -重大进展\\data\\triples\\祝融星_narratives.json",
+        "changed": true,
+        "updated_records": 2
+      },
+      {
+        "path": "F:\\第二次托洛洛测试 -重大进展\\data\\triples\\空间望远镜列表_narratives.json",
+        "changed": true,
+        "updated_records": 8
+      },
+      {
+        "path": "F:\\第二次托洛洛测试 -重大进展\\data\\triples\\第九行星_narratives.json",
+        "changed": true,
+        "updated_records": 25
+      },
+      {
+        "path": "F:\\第二次托洛洛测试 -重大进展\\data\\triples\\类太阳恒星_narratives.json",
+        "changed": true,
+        "updated_records": 6
+      },
+      {
+        "path": "F:\\第二次托洛洛测试 -重大进展\\data\\triples\\类星_narratives.json",
+        "changed": true,
+        "updated_records": 1
+      },
+      {
+        "path": "F:\\第二次托洛洛测试 -重大进展\\data\\triples\\系外行星_narratives.json",
+        "changed": true,
+        "updated_records": 27
+      },
+      {
+        "path": "F:\\第二次托洛洛测试 -重大进展\\data\\triples\\索恩-祖特阔夫天体_narratives.json",
+        "changed": true,
+        "updated_records": 5
+      },
+      {
+        "path": "F:\\第二次托洛洛测试 -重大进展\\data\\triples\\紫外线天文学_narratives.json",
+        "changed": true,
+        "updated_records": 4
+      },
+      {
+        "path": "F:\\第二次托洛洛测试 -重大进展\\data\\triples\\红外天文学_narratives.json",
+        "changed": true,
+        "updated_records": 5
+      },
+      {
+        "path": "F:\\第二次托洛洛测试 -重大进展\\data\\triples\\红巨星_narratives.json",
+        "changed": true,
+        "updated_records": 4
+      },
+      {
+        "path": "F:\\第二次托洛洛测试 -重大进展\\data\\triples\\红巨星分支_narratives.json",
+        "changed": true,
+        "updated_records": 10
+      },
+      {
+        "path": "F:\\第二次托洛洛测试 -重大进展\\data\\triples\\红矮星_narratives.json",
+        "changed": true,
+        "updated_records": 4
+      },
+      {
+        "path": "F:\\第二次托洛洛测试 -重大进展\\data\\triples\\红超巨星_narratives.json",
+        "changed": true,
+        "updated_records": 2
+      },
+      {
+        "path": "F:\\第二次托洛洛测试 -重大进展\\data\\triples\\绝对星等_narratives.json",
+        "changed": true,
+        "updated_records": 8
+      },
+      {
+        "path": "F:\\第二次托洛洛测试 -重大进展\\data\\triples\\绿色星_narratives.json",
+        "changed": true,
+        "updated_records": 6
+      },
+      {
+        "path": "F:\\第二次托洛洛测试 -重大进展\\data\\triples\\美国国家航空航天局_narratives.json",
+        "changed": true,
+        "updated_records": 13
+      },
+      {
+        "path": "F:\\第二次托洛洛测试 -重大进展\\data\\triples\\考古天文学_narratives.json",
+        "changed": true,
+        "updated_records": 7
+      },
+      {
+        "path": "F:\\第二次托洛洛测试 -重大进展\\data\\triples\\联星系统_narratives.json",
+        "changed": true,
+        "updated_records": 3
+      },
+      {
+        "path": "F:\\第二次托洛洛测试 -重大进展\\data\\triples\\聚星_narratives.json",
+        "changed": true,
+        "updated_records": 2
+      },
+      {
+        "path": "F:\\第二次托洛洛测试 -重大进展\\data\\triples\\脉冲星_narratives.json",
+        "changed": true,
+        "updated_records": 10
+      },
+      {
+        "path": "F:\\第二次托洛洛测试 -重大进展\\data\\triples\\致密星_narratives.json",
+        "changed": true,
+        "updated_records": 4
+      },
+      {
+        "path": "F:\\第二次托洛洛测试 -重大进展\\data\\triples\\舒尔茨星_narratives.json",
+        "changed": true,
+        "updated_records": 2
+      },
+      {
+        "path": "F:\\第二次托洛洛测试 -重大进展\\data\\triples\\艾女星_narratives.json",
+        "changed": true,
+        "updated_records": 11
+      },
+      {
+        "path": "F:\\第二次托洛洛测试 -重大进展\\data\\triples\\艾女星_triples.json",
+        "changed": true,
+        "updated_records": 5
+      },
+      {
+        "path": "F:\\第二次托洛洛测试 -重大进展\\data\\triples\\蓝巨星_narratives.json",
+        "changed": true,
+        "updated_records": 1
+      },
+      {
+        "path": "F:\\第二次托洛洛测试 -重大进展\\data\\triples\\蓝掉队星_narratives.json",
+        "changed": true,
+        "updated_records": 4
+      },
+      {
+        "path": "F:\\第二次托洛洛测试 -重大进展\\data\\triples\\蓝矮星_(红矮星阶段)_narratives.json",
+        "changed": true,
+        "updated_records": 4
+      },
+      {
+        "path": "F:\\第二次托洛洛测试 -重大进展\\data\\triples\\蓝超巨星_narratives.json",
+        "changed": true,
+        "updated_records": 1
+      },
+      {
+        "path": "F:\\第二次托洛洛测试 -重大进展\\data\\triples\\虚拟地球_narratives.json",
+        "changed": true,
+        "updated_records": 2
+      },
+      {
+        "path": "F:\\第二次托洛洛测试 -重大进展\\data\\triples\\蛇夫座ρ星云复合体_narratives.json",
+        "changed": true,
+        "updated_records": 1
+      },
+      {
+        "path": "F:\\第二次托洛洛测试 -重大进展\\data\\triples\\行星_narratives.json",
+        "changed": true,
+        "updated_records": 11
+      },
+      {
+        "path": "F:\\第二次托洛洛测试 -重大进展\\data\\triples\\行星分异_narratives.json",
+        "changed": true,
+        "updated_records": 5
+      },
+      {
+        "path": "F:\\第二次托洛洛测试 -重大进展\\data\\triples\\行星定义_narratives.json",
+        "changed": true,
+        "updated_records": 23
+      },
+      {
+        "path": "F:\\第二次托洛洛测试 -重大进展\\data\\triples\\行星核心_narratives.json",
+        "changed": true,
+        "updated_records": 1
+      },
+      {
+        "path": "F:\\第二次托洛洛测试 -重大进展\\data\\triples\\行星状星云_narratives.json",
+        "changed": true,
+        "updated_records": 10
+      },
+      {
+        "path": "F:\\第二次托洛洛测试 -重大进展\\data\\triples\\行星环_narratives.json",
+        "changed": true,
+        "updated_records": 2
+      },
+      {
+        "path": "F:\\第二次托洛洛测试 -重大进展\\data\\triples\\行星系_narratives.json",
+        "changed": true,
+        "updated_records": 18
+      },
+      {
+        "path": "F:\\第二次托洛洛测试 -重大进展\\data\\triples\\行星质量天体_narratives.json",
+        "changed": true,
+        "updated_records": 8
+      },
+      {
+        "path": "F:\\第二次托洛洛测试 -重大进展\\data\\triples\\行星轨道_narratives.json",
+        "changed": true,
+        "updated_records": 13
+      },
+      {
+        "path": "F:\\第二次托洛洛测试 -重大进展\\data\\triples\\行星迁移#重力散射_narratives.json",
+        "changed": true,
+        "updated_records": 5
+      },
+      {
+        "path": "F:\\第二次托洛洛测试 -重大进展\\data\\triples\\行星迁移_triples.json",
+        "changed": true,
+        "updated_records": 1
+      },
+      {
+        "path": "F:\\第二次托洛洛测试 -重大进展\\data\\triples\\行星适居性_narratives.json",
+        "changed": true,
+        "updated_records": 17
+      },
+      {
+        "path": "F:\\第二次托洛洛测试 -重大进展\\data\\triples\\行星际尘云_narratives.json",
+        "changed": true,
+        "updated_records": 1
+      },
+      {
+        "path": "F:\\第二次托洛洛测试 -重大进展\\data\\triples\\行星际物质_narratives.json",
+        "changed": true,
+        "updated_records": 5
+      },
+      {
+        "path": "F:\\第二次托洛洛测试 -重大进展\\data\\triples\\行星际航行_narratives.json",
+        "changed": true,
+        "updated_records": 7
+      },
+      {
+        "path": "F:\\第二次托洛洛测试 -重大进展\\data\\triples\\西藏天文学_narratives.json",
+        "changed": true,
+        "updated_records": 1
+      },
+      {
+        "path": "F:\\第二次托洛洛测试 -重大进展\\data\\triples\\观测天文学_narratives.json",
+        "changed": true,
+        "updated_records": 4
+      },
+      {
+        "path": "F:\\第二次托洛洛测试 -重大进展\\data\\triples\\视差在天文学的应用#太阳视差_narratives.json",
+        "changed": true,
+        "updated_records": 13
+      },
+      {
+        "path": "F:\\第二次托洛洛测试 -重大进展\\data\\triples\\视星等_narratives.json",
+        "changed": true,
+        "updated_records": 6
+      },
+      {
+        "path": "F:\\第二次托洛洛测试 -重大进展\\data\\triples\\谷神星_narratives.json",
+        "changed": true,
+        "updated_records": 17
+      },
+      {
+        "path": "F:\\第二次托洛洛测试 -重大进展\\data\\triples\\谷神星_triples.json",
+        "changed": true,
+        "updated_records": 4
+      },
+      {
+        "path": "F:\\第二次托洛洛测试 -重大进展\\data\\triples\\谷神星的亮点_narratives.json",
+        "changed": true,
+        "updated_records": 4
+      },
+      {
+        "path": "F:\\第二次托洛洛测试 -重大进展\\data\\triples\\赛德娜_(小行星)_narratives.json",
+        "changed": true,
+        "updated_records": 11
+      },
+      {
+        "path": "F:\\第二次托洛洛测试 -重大进展\\data\\triples\\赫比格Ae_Be星_narratives.json",
+        "changed": true,
+        "updated_records": 1
+      },
+      {
+        "path": "F:\\第二次托洛洛测试 -重大进展\\data\\triples\\超低温矮星_narratives.json",
+        "changed": true,
+        "updated_records": 2
+      },
+      {
+        "path": "F:\\第二次托洛洛测试 -重大进展\\data\\triples\\超巨星_narratives.json",
+        "changed": true,
+        "updated_records": 17
+      },
+      {
+        "path": "F:\\第二次托洛洛测试 -重大进展\\data\\triples\\超新星_narratives.json",
+        "changed": true,
+        "updated_records": 26
+      },
+      {
+        "path": "F:\\第二次托洛洛测试 -重大进展\\data\\triples\\超新星候选列表_narratives.json",
+        "changed": true,
+        "updated_records": 1
+      },
+      {
+        "path": "F:\\第二次托洛洛测试 -重大进展\\data\\triples\\超新星列表_narratives.json",
+        "changed": true,
+        "updated_records": 1
+      },
+      {
+        "path": "F:\\第二次托洛洛测试 -重大进展\\data\\triples\\超星系团_narratives.json",
+        "changed": true,
+        "updated_records": 1
+      },
+      {
+        "path": "F:\\第二次托洛洛测试 -重大进展\\data\\triples\\超级地球_narratives.json",
+        "changed": true,
+        "updated_records": 13
+      },
+      {
+        "path": "F:\\第二次托洛洛测试 -重大进展\\data\\triples\\路边天文_narratives.json",
+        "changed": true,
+        "updated_records": 3
+      },
+      {
+        "path": "F:\\第二次托洛洛测试 -重大进展\\data\\triples\\轨道_narratives.json",
+        "changed": true,
+        "updated_records": 1
+      },
+      {
+        "path": "F:\\第二次托洛洛测试 -重大进展\\data\\triples\\轨道共振_narratives.json",
+        "changed": true,
+        "updated_records": 12
+      },
+      {
+        "path": "F:\\第二次托洛洛测试 -重大进展\\data\\triples\\轨道离心率_narratives.json",
+        "changed": true,
+        "updated_records": 4
+      },
+      {
+        "path": "F:\\第二次托洛洛测试 -重大进展\\data\\triples\\辐射压_narratives.json",
+        "changed": true,
+        "updated_records": 5
+      },
+      {
+        "path": "F:\\第二次托洛洛测试 -重大进展\\data\\triples\\辐射能_narratives.json",
+        "changed": true,
+        "updated_records": 5
+      },
+      {
+        "path": "F:\\第二次托洛洛测试 -重大进展\\data\\triples\\达摩克型小行星_narratives.json",
+        "changed": true,
+        "updated_records": 2
+      },
+      {
+        "path": "F:\\第二次托洛洛测试 -重大进展\\data\\triples\\近地天体_narratives.json",
+        "changed": true,
+        "updated_records": 14
+      },
+      {
+        "path": "F:\\第二次托洛洛测试 -重大进展\\data\\triples\\近地小行星_narratives.json",
+        "changed": true,
+        "updated_records": 4
+      },
+      {
+        "path": "F:\\第二次托洛洛测试 -重大进展\\data\\triples\\近地系外行星_narratives.json",
+        "changed": true,
+        "updated_records": 2
+      },
+      {
+        "path": "F:\\第二次托洛洛测试 -重大进展\\data\\triples\\远红外线天文学_narratives.json",
+        "changed": true,
+        "updated_records": 3
+      },
+      {
+        "path": "F:\\第二次托洛洛测试 -重大进展\\data\\triples\\邻近恒星列表_narratives.json",
+        "changed": true,
+        "updated_records": 1
+      },
+      {
+        "path": "F:\\第二次托洛洛测试 -重大进展\\data\\triples\\金属线星_narratives.json",
+        "changed": true,
+        "updated_records": 1
+      },
+      {
+        "path": "F:\\第二次托洛洛测试 -重大进展\\data\\triples\\金星_narratives.json",
+        "changed": true,
+        "updated_records": 19
+      },
+      {
+        "path": "F:\\第二次托洛洛测试 -重大进展\\data\\triples\\金星_triples.json",
+        "changed": true,
+        "updated_records": 3
+      },
+      {
+        "path": "F:\\第二次托洛洛测试 -重大进展\\data\\triples\\金星凌日_(地球)_narratives.json",
+        "changed": true,
+        "updated_records": 17
+      },
+      {
+        "path": "F:\\第二次托洛洛测试 -重大进展\\data\\triples\\金星轨道穿越小行星_narratives.json",
+        "changed": true,
+        "updated_records": 2
+      },
+      {
+        "path": "F:\\第二次托洛洛测试 -重大进展\\data\\triples\\金牛T星_narratives.json",
+        "changed": true,
+        "updated_records": 4
+      },
+      {
+        "path": "F:\\第二次托洛洛测试 -重大进展\\data\\triples\\钡星_narratives.json",
+        "changed": true,
+        "updated_records": 2
+      },
+      {
+        "path": "F:\\第二次托洛洛测试 -重大进展\\data\\triples\\铁星_narratives.json",
+        "changed": true,
+        "updated_records": 1
+      },
+      {
+        "path": "F:\\第二次托洛洛测试 -重大进展\\data\\triples\\铅星_narratives.json",
+        "changed": true,
+        "updated_records": 1
+      },
+      {
+        "path": "F:\\第二次托洛洛测试 -重大进展\\data\\triples\\银河系_narratives.json",
+        "changed": true,
+        "updated_records": 20
+      },
+      {
+        "path": "F:\\第二次托洛洛测试 -重大进展\\data\\triples\\银河系天文学_narratives.json",
+        "changed": true,
+        "updated_records": 2
+      },
+      {
+        "path": "F:\\第二次托洛洛测试 -重大进展\\data\\triples\\银河系的卫星星系_narratives.json",
+        "changed": true,
+        "updated_records": 3
+      },
+      {
+        "path": "F:\\第二次托洛洛测试 -重大进展\\data\\triples\\锝星_narratives.json",
+        "changed": true,
+        "updated_records": 1
+      },
+      {
+        "path": "F:\\第二次托洛洛测试 -重大进展\\data\\triples\\阋神星_narratives.json",
+        "changed": true,
+        "updated_records": 8
+      },
+      {
+        "path": "F:\\第二次托洛洛测试 -重大进展\\data\\triples\\阋神星_triples.json",
+        "changed": true,
+        "updated_records": 2
+      },
+      {
+        "path": "F:\\第二次托洛洛测试 -重大进展\\data\\triples\\阿波希利型小行星_narratives.json",
+        "changed": true,
+        "updated_records": 7
+      },
+      {
+        "path": "F:\\第二次托洛洛测试 -重大进展\\data\\triples\\阿波罗型小行星_narratives.json",
+        "changed": true,
+        "updated_records": 1
+      },
+      {
+        "path": "F:\\第二次托洛洛测试 -重大进展\\data\\triples\\阿波罗计划_narratives.json",
+        "changed": true,
+        "updated_records": 11
+      },
+      {
+        "path": "F:\\第二次托洛洛测试 -重大进展\\data\\triples\\阿登型小行星_narratives.json",
+        "changed": true,
+        "updated_records": 1
+      },
+      {
+        "path": "F:\\第二次托洛洛测试 -重大进展\\data\\triples\\阿莫尔型小行星_narratives.json",
+        "changed": true,
+        "updated_records": 4
+      },
+      {
+        "path": "F:\\第二次托洛洛测试 -重大进展\\data\\triples\\雨神星_narratives.json",
+        "changed": true,
+        "updated_records": 2
+      },
+      {
+        "path": "F:\\第二次托洛洛测试 -重大进展\\data\\triples\\雨神星_triples.json",
+        "changed": true,
+        "updated_records": 1
+      },
+      {
+        "path": "F:\\第二次托洛洛测试 -重大进展\\data\\triples\\非周期彗星列表_narratives.json",
+        "changed": true,
+        "updated_records": 1
+      },
+      {
+        "path": "F:\\第二次托洛洛测试 -重大进展\\data\\triples\\高光度蓝变星_narratives.json",
+        "changed": true,
+        "updated_records": 9
+      },
+      {
+        "path": "F:\\第二次托洛洛测试 -重大进展\\data\\triples\\高能天文学_narratives.json",
+        "changed": true,
+        "updated_records": 2
+      },
+      {
+        "path": "F:\\第二次托洛洛测试 -重大进展\\data\\triples\\鲁道夫星历表_narratives.json",
+        "changed": true,
+        "updated_records": 5
+      },
+      {
+        "path": "F:\\第二次托洛洛测试 -重大进展\\data\\triples\\鸟神星_narratives.json",
+        "changed": true,
+        "updated_records": 9
+      },
+      {
+        "path": "F:\\第二次托洛洛测试 -重大进展\\data\\triples\\鸟神星_triples.json",
+        "changed": true,
+        "updated_records": 2
+      },
+      {
+        "path": "F:\\第二次托洛洛测试 -重大进展\\data\\triples\\黄特超巨星_narratives.json",
+        "changed": true,
+        "updated_records": 3
+      },
+      {
+        "path": "F:\\第二次托洛洛测试 -重大进展\\data\\triples\\黄超巨星_narratives.json",
+        "changed": true,
+        "updated_records": 1
+      },
+      {
+        "path": "F:\\第二次托洛洛测试 -重大进展\\data\\triples\\黑矮星_narratives.json",
+        "changed": true,
+        "updated_records": 2
+      },
+      {
+        "path": "F:\\第二次托洛洛测试 -重大进展\\data\\triples\\𫇴藁变星_narratives.json",
+        "changed": true,
+        "updated_records": 3
+      },
+      {
+        "path": "F:\\第二次托洛洛测试 -重大进展\\data\\triples\\nasa\\summary.json",
+        "changed": false,
+        "updated_records": 0
+      },
+      {
+        "path": "F:\\第二次托洛洛测试 -重大进展\\data\\triples\\nasa\\火卫一_triples.json",
+        "changed": false,
+        "updated_records": 0
+      },
+      {
+        "path": "F:\\第二次托洛洛测试 -重大进展\\data\\triples\\nasa\\火星_narratives.json",
+        "changed": false,
+        "updated_records": 0
+      }
+    ]
+  },
+  "neo4j": {
+    "available": true,
+    "apply_changes": true,
+    "node_updates": 763,
+    "relationship_updates": 161
+  },
+  "overall_pass": true
+}

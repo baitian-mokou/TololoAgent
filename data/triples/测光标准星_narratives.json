@@ -1,0 +1,27 @@
+[
+  {
+    "page_title": "测光标准星",
+    "section": "概要",
+    "chunk_index": 0,
+    "content": "测光标准星 是一系列在不同 测光系统 的光通带，经过十分谨慎测量了其 光度 的 恒星 。\n其他天体可以使用连接到 望远镜 的 CCD 相机或光电光度计，和 通量 或收到的光量，与测光标准星比较，以确定该天体确实的 亮度 或 星等 。\n目前，最常被天文学家用到的光度标准星集是 Arlo U. Landolt （ 英语 ： Arlo U. Landolt ） 在1992年发表在 天文期刊 104卷第一册340-371页的UBVRI系统 [原创研究？\n] 。",
+    "path": "概要",
+    "keywords": [
+      "测光标准星",
+      "是一系列在不同",
+      "测光系统",
+      "的光通带",
+      "经过十分谨慎测量了其",
+      "光度",
+      "恒星",
+      "其他天体可以使用连接到"
+    ],
+    "chunk_id": "ab2f26187c26",
+    "source": "zh_wikipedia",
+    "source_role": "primary",
+    "origin": "html_fallback",
+    "type": "embedding_chunk",
+    "source_title": "测光标准星",
+    "source_name": "zh_wikipedia",
+    "schema_version": "2.0"
+  }
+]

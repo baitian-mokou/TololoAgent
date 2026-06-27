@@ -1,0 +1,58 @@
+[
+  {
+    "subject": "谷神星",
+    "relation": "DISCOVERED_BY",
+    "object": "朱塞普·皮亚齐",
+    "pattern": "infobox",
+    "raw": "发现者: 朱塞普·皮亚齐",
+    "source": "zh_wikipedia",
+    "source_role": "primary",
+    "origin": "html_fallback",
+    "type": "triple_candidate",
+    "source_title": "谷神星",
+    "source_name": "zh_wikipedia",
+    "schema_version": "2.0"
+  },
+  {
+    "subject": "谷神星",
+    "relation": "HAS_RADIUS",
+    "object": "473 km",
+    "pattern": "infobox",
+    "raw": "平均半径: 7005473000000000000♠ 473 km",
+    "source": "zh_wikipedia",
+    "source_role": "primary",
+    "origin": "html_fallback",
+    "type": "triple_candidate",
+    "source_title": "谷神星",
+    "source_name": "zh_wikipedia",
+    "schema_version": "2.0"
+  },
+  {
+    "subject": "谷神星",
+    "relation": "HAS_MASS",
+    "object": "9.3839 × 10 20 kg",
+    "pattern": "infobox",
+    "raw": "质量: 7020938390000000000♠ (9.3839 ± 0.005) × 10 20 kg 6996150000000000000♠ 0.000 15 地球 0.0128 月球",
+    "source": "zh_wikipedia",
+    "source_role": "primary",
+    "origin": "html_fallback",
+    "type": "triple_candidate",
+    "source_title": "谷神星",
+    "source_name": "zh_wikipedia",
+    "schema_version": "2.0"
+  },
+  {
+    "subject": "谷神星",
+    "relation": "IS_A",
+    "object": "主小行星",
+    "pattern": "rule",
+    "raw": "谷神星是主小行星",
+    "source": "zh_wikipedia",
+    "source_role": "primary",
+    "origin": "html_fallback",
+    "type": "triple_candidate",
+    "source_title": "谷神星",
+    "source_name": "zh_wikipedia",
+    "schema_version": "2.0"
+  }
+]

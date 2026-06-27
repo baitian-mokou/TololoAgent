@@ -1,0 +1,52 @@
+[
+  {
+    "page_title": "猎户FU型变星",
+    "section": "概要",
+    "chunk_index": 0,
+    "content": "关于原恒星 猎户座V1647 在2004年释放 X射线 辐射的影片。\n在 恒星演化 中， 猎户FU型变星 （ FU Orionis star ，或 FU Orionis object 、 FUor ）是一种在光度和光谱形式上会出现极大变化的 主序前星 。\n典型例子 天鹅座V1057 会出现亮度增加6个星等，和光谱形式从 dKe 变成 F 型超巨星的变化。\n这类恒星是以它的原型恒星 猎户座FU 命名。",
+    "path": "概要",
+    "keywords": [
+      "猎户座",
+      "关于原恒星",
+      "年释放",
+      "射线",
+      "辐射的影片",
+      "恒星演化",
+      "猎户",
+      "型变星"
+    ],
+    "chunk_id": "b4839f4d2ce7",
+    "source": "zh_wikipedia",
+    "source_role": "primary",
+    "origin": "html_fallback",
+    "type": "embedding_chunk",
+    "source_title": "猎户FU型变星",
+    "source_name": "zh_wikipedia",
+    "schema_version": "2.0"
+  },
+  {
+    "page_title": "猎户FU型变星",
+    "section": "特性",
+    "chunk_index": 1,
+    "content": "目前与猎户FU型变星有关的闪焰模型是物质从 吸积盘 快速转移至一颗年轻而低质量的 金牛T星 。\n这种天体的质量吸积率大约是每年10 −4 个太阳质量。\n这些喷发的 上升时间 通常是一年甚至更久。\n而高吸积率的吸积和高光度的状态通常可以达到数十年。\n但即使是在相对较短的时间中，仍然有观测到变化中止进入下一个周期的状况。\n根据在太阳附近猎户FU型变星喷发数量和恒星形成率的比较，估计年轻恒星一生中会有10到20次猎户FU型变星形式的喷发。\n这种变星的典型恒星有 猎户座FU 、 天鹅座V1057 、 天鹅座V1515 ，以及在2004年1月爆发，新近被编入此分类的 原恒星 猎户座V1647 。",
+    "path": "特性",
+    "keywords": [
+      "猎户座",
+      "天鹅座",
+      "目前与猎户",
+      "型变星有关的闪焰模型是物质从",
+      "吸积盘",
+      "快速转移至一颗年轻而低质量的",
+      "金牛",
+      "这种天体的质量吸积率大约是每年"
+    ],
+    "chunk_id": "60e2de98b1a1",
+    "source": "zh_wikipedia",
+    "source_role": "primary",
+    "origin": "html_fallback",
+    "type": "embedding_chunk",
+    "source_title": "猎户FU型变星",
+    "source_name": "zh_wikipedia",
+    "schema_version": "2.0"
+  }
+]

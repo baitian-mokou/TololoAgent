@@ -1,0 +1,46 @@
+[
+  {
+    "page_title": "恒星动力学",
+    "section": "概要",
+    "chunk_index": 0,
+    "content": "恒星动力学 是 天文物理 的一个分支，以 统计学 的方法介绍 恒星 在它们共同 重力 下的集体运动。但重力的长距离效应和恒星系统缓慢的 弛豫 ，阻碍了 统计物理 方法的使用。一颗恒星在 星系 或 球状星团 内的运动，主要受到其它恒星的平均分布和恒星距离的影响，和最邻近的恒星少量的影响。如果物质的分布是理想化的平滑，恒星的 弛豫 过程是倾向于每颗恒星有著各别的运动轨迹的。2-体弛豫 被限制在一颗恒星和另一颗恒星之间的交互作用下，而\"剧变弛豫\"是大型恒星集团系统集体变异所造成的。",
+    "path": "概要",
+    "keywords": [
+      "弛豫",
+      "恒星动力学",
+      "天文物理",
+      "的一个分支",
+      "统计学",
+      "的方法介绍",
+      "恒星",
+      "在它们共同"
+    ],
+    "chunk_id": "bf156fd40feb",
+    "source": "zh_wikipedia",
+    "source_role": "primary",
+    "origin": "html_fallback",
+    "type": "embedding_chunk",
+    "source_title": "恒星动力学",
+    "source_name": "zh_wikipedia",
+    "schema_version": "2.0"
+  },
+  {
+    "page_title": "恒星动力学",
+    "section": "概要 (2)",
+    "chunk_index": 1,
+    "content": "NewPP limit report Parsed by mw‐web.eqiad.main‐7fd65866‐jkbdv Cached time: 20260524120225 Cache expiry: 2592000 Reduced expiry: false Complications: [prevent‐selective‐update] CPU time usage: 0.151 seconds Real time usage: 0.208 seconds Preprocessor visited node count: 246/1000000 Revision size: 874/2097152 bytes Post‐expand include size: 38302/2097152 bytes Template argument size: 189/2097152 bytes Highest expansion depth: 13/100 Expensive parser function count: 2/500 Unstrip recursion depth: 0/20 Unstrip post‐expand size: 11711/5000000 bytes Lua time usage: 0.099/10.000 seconds Lua memory usage: 1989790/52428800 bytes Number of Wikibase entities loaded: 1/500 Transclusion expansion time report (%,ms,calls,template) 100.00% 157.925 1 -total 60.73% 95.908 1 Template:恒星 59.34% 93.709 1 Template:Navbox 39.06% 61.680 1 Template:Unreferenced 36.49% 57.629 1 Template:Ambox 21.41% 33.812 1 Template:维基数据链接 4.53% 7.162 5 Template:Icon 3.12% 4.926 2 Template:Link-en 1.55% 2.453 1 Template:Template_error 0.80% 1.256 1 Template:Template_error/core Render ID 6d7825e2-5768-11f1-be79-29f2b70abd10 Saved in parser cache with key zhwiki:pcache:1259626:|#|:idhash:canonical!zh and timestamp 20260524120225 and revision id 92132968. Rendering was triggered because: page_view",
+    "path": "概要",
+    "keywords": [
+      "恒星",
+      "维基数据链接"
+    ],
+    "chunk_id": "342ea993cb96",
+    "source": "zh_wikipedia",
+    "source_role": "primary",
+    "origin": "html_fallback",
+    "type": "embedding_chunk",
+    "source_title": "恒星动力学",
+    "source_name": "zh_wikipedia",
+    "schema_version": "2.0"
+  }
+]

@@ -1,0 +1,102 @@
+[
+  {
+    "page_title": "亮红新星",
+    "section": "概要",
+    "chunk_index": 0,
+    "content": "亮红新星 （缩写为 LRNe ）被认为是两颗恒星合并所造成的爆炸现象。\n它们的特征是有明显的红色，和 光度曲线 在 红外线 区反复的回到原来的光度逗留和徘徊。\n不要将高光度红新星与标准的 新星 ——以 白矮星 为主角，在表面发生爆炸——混淆了。",
+    "path": "概要",
+    "keywords": [
+      "亮红新星",
+      "缩写为",
+      "被认为是两颗恒星合并所造成的爆炸现象",
+      "它们的特征是有明显的红色",
+      "光度曲线",
+      "红外线",
+      "区反复的回到原来的光度逗留和徘徊",
+      "不要将高光度红新星与标准的"
+    ],
+    "chunk_id": "89a9c4242e45",
+    "source": "zh_wikipedia",
+    "source_role": "primary",
+    "origin": "html_fallback",
+    "type": "embedding_chunk",
+    "source_title": "亮红新星",
+    "source_name": "zh_wikipedia",
+    "schema_version": "2.0"
+  },
+  {
+    "page_title": "亮红新星",
+    "section": "发现",
+    "chunk_index": 1,
+    "content": "在过去的30年，只有很少数量的天体被观察到有亮红新星的特征。\n在 仙女座大星系 M31，于1988年闪烁的 M31 RV （ 英语 ： M31-RV ） 可能是一颗亮红新星；在 银河系 ， 1994年的 人马座V4332 有著相同的闪烁，接著还有2002年的 麒麟座V838 ，曾被严谨的观察。\n第一颗被确认的亮红新星是在 M85 星系的 M85 OT2006-1 。\n它是在 立克天文台 进行 超新星 搜寻时首度被发现，然后由 加州理工 和 柏克莱 的一群 天文学家 继续研究。\n这个由 什里尼瓦斯·库尔卡尼 领导的小组证实了他和已知的由 热脉冲 造成爆炸的 新星 不同，并且在2007年5月23日发表在 自然 的论文中宣称亮红新星是一种恒星爆炸新星的新类型。\n天蝎座V1309 （ 英语 ： V1309 Scorpii ） 是在2008年发现由一对联星合并的亮红新星 。\n2015年1月，天文学家在 仙女座星系 中观察到一颗亮红新星 。\n2015年2月10日，来自罗马尼亚的瓦希里帕尔万天象和天文台的度米特鲁·西普里安（Dumitru Ciprian Vîntdevară）在 风车星系 发现了一颗亮红新星 M101 OT2015-1 。",
+    "path": "发现",
+    "keywords": [
+      "英语",
+      "年的",
+      "在过去的",
+      "只有很少数量的天体被观察到有亮红新星的特征",
+      "仙女座大星系",
+      "年闪烁的",
+      "可能是一颗亮红新星",
+      "银河系"
+    ],
+    "chunk_id": "80ee5a9a8611",
+    "source": "zh_wikipedia",
+    "source_role": "primary",
+    "origin": "html_fallback",
+    "type": "embedding_chunk",
+    "source_title": "亮红新星",
+    "source_name": "zh_wikipedia",
+    "schema_version": "2.0"
+  },
+  {
+    "page_title": "亮红新星",
+    "section": "特征",
+    "chunk_index": 2,
+    "content": "亮红新星在观测上有下列的特征： 爆炸时的 亮度 在 超新星 （较亮）和 新星 （较暗）之间。\n可见光持续数星期或数月，有著独特的红色，光度随著时间变暗而显得更红。\n随著可见光的暗淡，红外线会增强并且持续反复一段时间，通常会变暗和再增亮数次。\n对M85 OT2006-1的红外线观测显示是温度非常低（略低于1,000 K ）的恒星。\n这可能是也可能不是其它亮红新星的特征。",
+    "path": "特征",
+    "keywords": [
+      "亮红新星在观测上有下列的特征",
+      "爆炸时的",
+      "亮度",
+      "超新星",
+      "较亮",
+      "新星",
+      "较暗",
+      "之间"
+    ],
+    "chunk_id": "11787042b3d0",
+    "source": "zh_wikipedia",
+    "source_role": "primary",
+    "origin": "html_fallback",
+    "type": "embedding_chunk",
+    "source_title": "亮红新星",
+    "source_name": "zh_wikipedia",
+    "schema_version": "2.0"
+  },
+  {
+    "page_title": "亮红新星",
+    "section": "演化",
+    "chunk_index": 3,
+    "content": "研究M85 OT2006-1的团队相信它是两颗 主序星 合并时发生的现象。\n想知道更多的讯息和详情可以参考维基媒体的 麒麟座V838 和 合并爆发 。\n当 合并爆发 发生之际，LNRe的膨胀看似极端的迅速，在几个月内半径就达到 太阳 的数千倍甚至上万倍。\n因此温度能降至如此的低，同时也解释了令人迷惑的亮度闪烁与低温并存的天体。",
+    "path": "演化",
+    "keywords": [
+      "合并爆发",
+      "研究",
+      "的团队相信它是两颗",
+      "主序星",
+      "合并时发生的现象",
+      "想知道更多的讯息和详情可以参考维基媒体的",
+      "麒麟座",
+      "发生之际"
+    ],
+    "chunk_id": "a6bbf4d84f92",
+    "source": "zh_wikipedia",
+    "source_role": "primary",
+    "origin": "html_fallback",
+    "type": "embedding_chunk",
+    "source_title": "亮红新星",
+    "source_name": "zh_wikipedia",
+    "schema_version": "2.0"
+  }
+]

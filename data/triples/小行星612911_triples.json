@@ -1,0 +1,16 @@
+[
+  {
+    "subject": "小行星612911",
+    "relation": "HAS_MASS",
+    "object": "4.8 × 10 20 kg",
+    "pattern": "infobox",
+    "raw": "质量: 0.6–4.8×10 20 kg",
+    "source": "zh_wikipedia",
+    "source_role": "primary",
+    "origin": "html_fallback",
+    "type": "triple_candidate",
+    "source_title": "小行星612911",
+    "source_name": "zh_wikipedia",
+    "schema_version": "2.0"
+  }
+]

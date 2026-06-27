@@ -1,0 +1,782 @@
+{
+  "version": "wikidata_solar_system_fixture_v1",
+  "source_name": "wikidata",
+  "note": "Offline auditable fixture. Live Wikidata fetch is a future enhancement.",
+  "records": [
+    {
+      "title": "太阳",
+      "qid": "Q525",
+      "triples": [
+        {
+          "relation": "LOCATED_IN",
+          "object": "太阳系",
+          "property_id": "P361"
+        },
+        {
+          "relation": "PART_OF",
+          "object": "太阳系",
+          "property_id": "P361"
+        },
+        {
+          "relation": "HAS_MASS",
+          "object": "1.9885e30 kg",
+          "property_id": "P2067"
+        },
+        {
+          "relation": "HAS_RADIUS",
+          "object": "695700 km",
+          "property_id": "P2120"
+        },
+        {
+          "relation": "HAS_ATMOSPHERE",
+          "object": "氢;氦",
+          "property_id": "P2067"
+        }
+      ],
+      "narratives": [
+        {
+          "section": "Wikidata 摘要",
+          "content": "Wikidata fixture 将太阳登记为太阳系的中心恒星，并保留质量、半径和主要成分等结构化事实。",
+          "keywords": [
+            "太阳",
+            "太阳系",
+            "质量",
+            "半径"
+          ]
+        }
+      ]
+    },
+    {
+      "title": "水星",
+      "qid": "Q308",
+      "triples": [
+        {
+          "relation": "ORBITS",
+          "object": "太阳",
+          "property_id": "P397"
+        },
+        {
+          "relation": "PART_OF",
+          "object": "太阳系",
+          "property_id": "P361"
+        },
+        {
+          "relation": "HAS_MASS",
+          "object": "3.3011e23 kg",
+          "property_id": "P2067"
+        },
+        {
+          "relation": "HAS_RADIUS",
+          "object": "2439.7 km",
+          "property_id": "P2120"
+        },
+        {
+          "relation": "HAS_ATMOSPHERE",
+          "object": "稀薄外逸层",
+          "property_id": "P2067"
+        }
+      ],
+      "narratives": [
+        {
+          "section": "轨道",
+          "content": "水星在 Wikidata fixture 中作为太阳系行星处理，轨道主星为太阳，并带有半径和质量数值。",
+          "keywords": [
+            "水星",
+            "轨道",
+            "太阳"
+          ]
+        }
+      ]
+    },
+    {
+      "title": "金星",
+      "qid": "Q313",
+      "triples": [
+        {
+          "relation": "ORBITS",
+          "object": "太阳",
+          "property_id": "P397"
+        },
+        {
+          "relation": "PART_OF",
+          "object": "太阳系",
+          "property_id": "P361"
+        },
+        {
+          "relation": "HAS_MASS",
+          "object": "4.8675e24 kg",
+          "property_id": "P2067"
+        },
+        {
+          "relation": "HAS_RADIUS",
+          "object": "6051.8 km",
+          "property_id": "P2120"
+        },
+        {
+          "relation": "HAS_ATMOSPHERE",
+          "object": "二氧化碳;氮气",
+          "property_id": "P2067"
+        }
+      ],
+      "narratives": [
+        {
+          "section": "大气",
+          "content": "金星的 fixture 记录突出其以二氧化碳为主的大气，并保留与太阳系成员关系相关的事实。",
+          "keywords": [
+            "金星",
+            "大气",
+            "二氧化碳"
+          ]
+        }
+      ]
+    },
+    {
+      "title": "地球",
+      "qid": "Q2",
+      "triples": [
+        {
+          "relation": "ORBITS",
+          "object": "太阳",
+          "property_id": "P397"
+        },
+        {
+          "relation": "PART_OF",
+          "object": "太阳系",
+          "property_id": "P361"
+        },
+        {
+          "relation": "HAS_MASS",
+          "object": "5.97237e24 kg",
+          "property_id": "P2067"
+        },
+        {
+          "relation": "HAS_RADIUS",
+          "object": "6371 km",
+          "property_id": "P2120"
+        },
+        {
+          "relation": "HAS_ATMOSPHERE",
+          "object": "氮气;氧气;氩气",
+          "property_id": "P2067"
+        }
+      ],
+      "narratives": [
+        {
+          "section": "大气",
+          "content": "地球 fixture 记录包括氮气、氧气和氩气等大气成分，也声明地球绕太阳运行。",
+          "keywords": [
+            "地球",
+            "大气",
+            "太阳"
+          ]
+        }
+      ]
+    },
+    {
+      "title": "月球",
+      "qid": "Q405",
+      "triples": [
+        {
+          "relation": "ORBITS",
+          "object": "地球",
+          "property_id": "P397"
+        },
+        {
+          "relation": "PART_OF",
+          "object": "地球系统",
+          "property_id": "P361"
+        },
+        {
+          "relation": "HAS_MASS",
+          "object": "7.342e22 kg",
+          "property_id": "P2067"
+        },
+        {
+          "relation": "HAS_RADIUS",
+          "object": "1737.4 km",
+          "property_id": "P2120"
+        },
+        {
+          "relation": "HAS_ATMOSPHERE",
+          "object": "极稀薄外逸层",
+          "property_id": "P2067"
+        }
+      ],
+      "narratives": [
+        {
+          "section": "轨道",
+          "content": "月球在 fixture 中作为地球系统成员记录，结构化事实指出其绕地球运行。",
+          "keywords": [
+            "月球",
+            "地球",
+            "轨道"
+          ]
+        }
+      ]
+    },
+    {
+      "title": "火星",
+      "qid": "Q111",
+      "triples": [
+        {
+          "relation": "ORBITS",
+          "object": "太阳",
+          "property_id": "P397"
+        },
+        {
+          "relation": "PART_OF",
+          "object": "太阳系",
+          "property_id": "P361"
+        },
+        {
+          "relation": "HAS_MASS",
+          "object": "6.4171e23 kg",
+          "property_id": "P2067"
+        },
+        {
+          "relation": "HAS_RADIUS",
+          "object": "3389.5 km",
+          "property_id": "P2120"
+        },
+        {
+          "relation": "HAS_ATMOSPHERE",
+          "object": "二氧化碳;氮气;氩气",
+          "property_id": "P2067"
+        }
+      ],
+      "narratives": [
+        {
+          "section": "大气",
+          "content": "根据 Wikidata fixture，火星大气以二氧化碳为主，并含有氮气、氩气以及微量氧气和水蒸气。",
+          "keywords": [
+            "火星",
+            "大气",
+            "二氧化碳",
+            "氮气",
+            "氩气"
+          ]
+        }
+      ]
+    },
+    {
+      "title": "火卫一",
+      "qid": "Q7547",
+      "triples": [
+        {
+          "relation": "ORBITS",
+          "object": "火星",
+          "property_id": "P397"
+        },
+        {
+          "relation": "PART_OF",
+          "object": "火星系统",
+          "property_id": "P361"
+        },
+        {
+          "relation": "DISCOVERED_BY",
+          "object": "阿萨夫·霍尔",
+          "property_id": "P61"
+        },
+        {
+          "relation": "HAS_MASS",
+          "object": "1.0659e16 kg",
+          "property_id": "P2067"
+        },
+        {
+          "relation": "HAS_RADIUS",
+          "object": "11.2667 km",
+          "property_id": "P2120"
+        }
+      ],
+      "narratives": [
+        {
+          "section": "发现",
+          "content": "火卫一 fixture 记录其绕火星运行，并将发现者登记为阿萨夫·霍尔。",
+          "keywords": [
+            "火卫一",
+            "火星",
+            "发现者"
+          ]
+        }
+      ]
+    },
+    {
+      "title": "火卫二",
+      "qid": "Q7548",
+      "triples": [
+        {
+          "relation": "ORBITS",
+          "object": "火星",
+          "property_id": "P397"
+        },
+        {
+          "relation": "PART_OF",
+          "object": "火星系统",
+          "property_id": "P361"
+        },
+        {
+          "relation": "DISCOVERED_BY",
+          "object": "阿萨夫·霍尔",
+          "property_id": "P61"
+        },
+        {
+          "relation": "HAS_MASS",
+          "object": "1.4762e15 kg",
+          "property_id": "P2067"
+        },
+        {
+          "relation": "HAS_RADIUS",
+          "object": "6.2 km",
+          "property_id": "P2120"
+        }
+      ],
+      "narratives": [
+        {
+          "section": "发现",
+          "content": "火卫二 fixture 记录其属于火星系统，发现者同样为阿萨夫·霍尔。",
+          "keywords": [
+            "火卫二",
+            "火星",
+            "发现者"
+          ]
+        }
+      ]
+    },
+    {
+      "title": "木星",
+      "qid": "Q319",
+      "triples": [
+        {
+          "relation": "ORBITS",
+          "object": "太阳",
+          "property_id": "P397"
+        },
+        {
+          "relation": "PART_OF",
+          "object": "太阳系",
+          "property_id": "P361"
+        },
+        {
+          "relation": "HAS_MASS",
+          "object": "1.8982e27 kg",
+          "property_id": "P2067"
+        },
+        {
+          "relation": "HAS_RADIUS",
+          "object": "69911 km",
+          "property_id": "P2120"
+        },
+        {
+          "relation": "HAS_ATMOSPHERE",
+          "object": "氢;氦;甲烷;氨",
+          "property_id": "P2067"
+        }
+      ],
+      "narratives": [
+        {
+          "section": "大气",
+          "content": "木星 fixture 将氢和氦列为主要大气成分，并保留质量、半径与绕太阳运行事实。",
+          "keywords": [
+            "木星",
+            "大气",
+            "氢",
+            "氦"
+          ]
+        }
+      ]
+    },
+    {
+      "title": "木卫一",
+      "qid": "Q3123",
+      "triples": [
+        {
+          "relation": "ORBITS",
+          "object": "木星",
+          "property_id": "P397"
+        },
+        {
+          "relation": "PART_OF",
+          "object": "木星系统",
+          "property_id": "P361"
+        },
+        {
+          "relation": "DISCOVERED_BY",
+          "object": "伽利略·伽利莱",
+          "property_id": "P61"
+        },
+        {
+          "relation": "HAS_MASS",
+          "object": "8.9319e22 kg",
+          "property_id": "P2067"
+        },
+        {
+          "relation": "HAS_RADIUS",
+          "object": "1821.6 km",
+          "property_id": "P2120"
+        }
+      ],
+      "narratives": [
+        {
+          "section": "伽利略卫星",
+          "content": "木卫一 fixture 将其归入木星系统，并作为伽利略卫星样例保存发现者信息。",
+          "keywords": [
+            "木卫一",
+            "木星",
+            "伽利略卫星"
+          ]
+        }
+      ]
+    },
+    {
+      "title": "木卫二",
+      "qid": "Q3143",
+      "triples": [
+        {
+          "relation": "ORBITS",
+          "object": "木星",
+          "property_id": "P397"
+        },
+        {
+          "relation": "PART_OF",
+          "object": "木星系统",
+          "property_id": "P361"
+        },
+        {
+          "relation": "DISCOVERED_BY",
+          "object": "伽利略·伽利莱",
+          "property_id": "P61"
+        },
+        {
+          "relation": "HAS_MASS",
+          "object": "4.7998e22 kg",
+          "property_id": "P2067"
+        },
+        {
+          "relation": "HAS_RADIUS",
+          "object": "1560.8 km",
+          "property_id": "P2120"
+        }
+      ],
+      "narratives": [
+        {
+          "section": "伽利略卫星",
+          "content": "木卫二 fixture 记录其绕木星运行，属于木星系统，并保留半径与质量数值。",
+          "keywords": [
+            "木卫二",
+            "木星",
+            "半径"
+          ]
+        }
+      ]
+    },
+    {
+      "title": "木卫三",
+      "qid": "Q3169",
+      "triples": [
+        {
+          "relation": "ORBITS",
+          "object": "木星",
+          "property_id": "P397"
+        },
+        {
+          "relation": "PART_OF",
+          "object": "木星系统",
+          "property_id": "P361"
+        },
+        {
+          "relation": "DISCOVERED_BY",
+          "object": "伽利略·伽利莱",
+          "property_id": "P61"
+        },
+        {
+          "relation": "HAS_MASS",
+          "object": "1.4819e23 kg",
+          "property_id": "P2067"
+        },
+        {
+          "relation": "HAS_RADIUS",
+          "object": "2634.1 km",
+          "property_id": "P2120"
+        }
+      ],
+      "narratives": [
+        {
+          "section": "伽利略卫星",
+          "content": "木卫三 fixture 是伽利略卫星审计样例之一，记录其发现者、质量、半径和轨道主星。",
+          "keywords": [
+            "木卫三",
+            "伽利略",
+            "木星"
+          ]
+        }
+      ]
+    },
+    {
+      "title": "木卫四",
+      "qid": "Q3134",
+      "triples": [
+        {
+          "relation": "ORBITS",
+          "object": "木星",
+          "property_id": "P397"
+        },
+        {
+          "relation": "PART_OF",
+          "object": "木星系统",
+          "property_id": "P361"
+        },
+        {
+          "relation": "DISCOVERED_BY",
+          "object": "伽利略·伽利莱",
+          "property_id": "P61"
+        },
+        {
+          "relation": "HAS_MASS",
+          "object": "1.0759e23 kg",
+          "property_id": "P2067"
+        },
+        {
+          "relation": "HAS_RADIUS",
+          "object": "2410.3 km",
+          "property_id": "P2120"
+        }
+      ],
+      "narratives": [
+        {
+          "section": "伽利略卫星",
+          "content": "木卫四 fixture 保留其作为木星系统成员的结构化事实，并可用于 source isolation 查询。",
+          "keywords": [
+            "木卫四",
+            "木星系统",
+            "source isolation"
+          ]
+        }
+      ]
+    },
+    {
+      "title": "土星",
+      "qid": "Q193",
+      "triples": [
+        {
+          "relation": "ORBITS",
+          "object": "太阳",
+          "property_id": "P397"
+        },
+        {
+          "relation": "PART_OF",
+          "object": "太阳系",
+          "property_id": "P361"
+        },
+        {
+          "relation": "HAS_MASS",
+          "object": "5.6834e26 kg",
+          "property_id": "P2067"
+        },
+        {
+          "relation": "HAS_RADIUS",
+          "object": "58232 km",
+          "property_id": "P2120"
+        },
+        {
+          "relation": "HAS_ATMOSPHERE",
+          "object": "氢;氦;甲烷",
+          "property_id": "P2067"
+        }
+      ],
+      "narratives": [
+        {
+          "section": "大气",
+          "content": "土星 fixture 中的大气成分以氢和氦为主，也保留质量和半径数值。",
+          "keywords": [
+            "土星",
+            "大气",
+            "质量"
+          ]
+        }
+      ]
+    },
+    {
+      "title": "天王星",
+      "qid": "Q324",
+      "triples": [
+        {
+          "relation": "ORBITS",
+          "object": "太阳",
+          "property_id": "P397"
+        },
+        {
+          "relation": "PART_OF",
+          "object": "太阳系",
+          "property_id": "P361"
+        },
+        {
+          "relation": "DISCOVERED_BY",
+          "object": "威廉·赫歇尔",
+          "property_id": "P61"
+        },
+        {
+          "relation": "HAS_MASS",
+          "object": "8.6810e25 kg",
+          "property_id": "P2067"
+        },
+        {
+          "relation": "HAS_RADIUS",
+          "object": "25362 km",
+          "property_id": "P2120"
+        },
+        {
+          "relation": "HAS_ATMOSPHERE",
+          "object": "氢;氦;甲烷",
+          "property_id": "P2067"
+        }
+      ],
+      "narratives": [
+        {
+          "section": "发现",
+          "content": "天王星 fixture 记录发现者威廉·赫歇尔，并将甲烷列为大气成分之一。",
+          "keywords": [
+            "天王星",
+            "发现者",
+            "甲烷"
+          ]
+        }
+      ]
+    },
+    {
+      "title": "海王星",
+      "qid": "Q332",
+      "triples": [
+        {
+          "relation": "ORBITS",
+          "object": "太阳",
+          "property_id": "P397"
+        },
+        {
+          "relation": "PART_OF",
+          "object": "太阳系",
+          "property_id": "P361"
+        },
+        {
+          "relation": "DISCOVERED_BY",
+          "object": "约翰·伽勒",
+          "property_id": "P61"
+        },
+        {
+          "relation": "HAS_MASS",
+          "object": "1.02413e26 kg",
+          "property_id": "P2067"
+        },
+        {
+          "relation": "HAS_RADIUS",
+          "object": "24622 km",
+          "property_id": "P2120"
+        },
+        {
+          "relation": "HAS_ATMOSPHERE",
+          "object": "氢;氦;甲烷",
+          "property_id": "P2067"
+        }
+      ],
+      "narratives": [
+        {
+          "section": "发现",
+          "content": "海王星 fixture 保留发现者、甲烷大气以及太阳系成员关系，适合冲突和路由评测。",
+          "keywords": [
+            "海王星",
+            "发现者",
+            "太阳系"
+          ]
+        }
+      ]
+    },
+    {
+      "title": "冥王星",
+      "qid": "Q339",
+      "triples": [
+        {
+          "relation": "ORBITS",
+          "object": "太阳",
+          "property_id": "P397"
+        },
+        {
+          "relation": "PART_OF",
+          "object": "柯伊伯带",
+          "property_id": "P361"
+        },
+        {
+          "relation": "DISCOVERED_BY",
+          "object": "克莱德·汤博",
+          "property_id": "P61"
+        },
+        {
+          "relation": "HAS_MASS",
+          "object": "1.303e22 kg",
+          "property_id": "P2067"
+        },
+        {
+          "relation": "HAS_RADIUS",
+          "object": "1188.3 km",
+          "property_id": "P2120"
+        },
+        {
+          "relation": "HAS_ATMOSPHERE",
+          "object": "氮气;甲烷;一氧化碳",
+          "property_id": "P2067"
+        }
+      ],
+      "narratives": [
+        {
+          "section": "分类",
+          "content": "冥王星 fixture 记录其属于柯伊伯带，并保留克莱德·汤博作为发现者。",
+          "keywords": [
+            "冥王星",
+            "柯伊伯带",
+            "发现者"
+          ]
+        }
+      ]
+    },
+    {
+      "title": "谷神星",
+      "qid": "Q596",
+      "triples": [
+        {
+          "relation": "ORBITS",
+          "object": "太阳",
+          "property_id": "P397"
+        },
+        {
+          "relation": "PART_OF",
+          "object": "小行星带",
+          "property_id": "P361"
+        },
+        {
+          "relation": "DISCOVERED_BY",
+          "object": "朱塞普·皮亚齐",
+          "property_id": "P61"
+        },
+        {
+          "relation": "HAS_MASS",
+          "object": "9.3835e20 kg",
+          "property_id": "P2067"
+        },
+        {
+          "relation": "HAS_RADIUS",
+          "object": "469.7 km",
+          "property_id": "P2120"
+        }
+      ],
+      "narratives": [
+        {
+          "section": "发现",
+          "content": "谷神星 fixture 记录其位于小行星带，发现者为朱塞普·皮亚齐。",
+          "keywords": [
+            "谷神星",
+            "小行星带",
+            "发现者"
+          ]
+        }
+      ]
+    }
+  ]
+}

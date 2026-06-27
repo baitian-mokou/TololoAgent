@@ -1,0 +1,77 @@
+[
+  {
+    "page_title": "Be星",
+    "section": "定义和分类",
+    "chunk_index": 0,
+    "content": "许多B型光谱的恒星，都显示出氢的发射线，包括许多 超巨星 、 赫比格Ae/Be星 、质量转移的 联星系统 和 B[e]星 。\n最好将Be星一词的使用限制在发射线中显示一条或多条 巴耳末系 线的非超巨星；这些有时被称为经典的Be星 。\n尽管Be型光谱在B类恒星中产生得最强烈，但在O和A 壳层星 中也能检测到，这些恒星有时被归入「Be星」旗下。\nBe星主要被认为是 主序星 ，但也包括一些 次巨星 和 巨星 。",
+    "path": "定义和分类",
+    "keywords": [
+      "许多",
+      "型光谱的恒星",
+      "都显示出氢的发射线",
+      "包括许多",
+      "超巨星",
+      "赫比格",
+      "质量转移的",
+      "联星系统"
+    ],
+    "chunk_id": "d36a18df00f1",
+    "source": "zh_wikipedia",
+    "source_role": "primary",
+    "origin": "html_fallback",
+    "type": "embedding_chunk",
+    "source_title": "Be星",
+    "source_name": "zh_wikipedia",
+    "schema_version": "2.0"
+  },
+  {
+    "page_title": "Be星",
+    "section": "发现",
+    "chunk_index": 1,
+    "content": "第一颗被确认的Be星是策（仙后座γ），在1866年就被 安吉洛·西奇 观测到，也是第一颗被发现有发射谱线的恒星 。\n许多其它明亮的恒星也显示出类似的光谱，然而其中许多已经不再被认为是经典的be星 。\n最亮的Be星 水委一 （波江座α星），但直到1976年它才被认为是Be星 。",
+    "path": "发现",
+    "keywords": [
+      "第一颗被确认的",
+      "星是策",
+      "仙后座",
+      "年就被",
+      "安吉洛",
+      "西奇",
+      "观测到",
+      "也是第一颗被发现有发射谱线的恒星"
+    ],
+    "chunk_id": "5e2e2d741639",
+    "source": "zh_wikipedia",
+    "source_role": "primary",
+    "origin": "html_fallback",
+    "type": "embedding_chunk",
+    "source_title": "Be星",
+    "source_name": "zh_wikipedia",
+    "schema_version": "2.0"
+  },
+  {
+    "page_title": "Be星",
+    "section": "模型",
+    "chunk_index": 2,
+    "content": "随著20世纪初对发射线形成过程的了解，很明显，Be星中的这些发射线一定来自恒星快速旋转的作用下从恒星喷出的星周物质 。\nBe星的所有观测特征现在都可以用一个由恒星喷出物质形成的气态盘来解释。\n红外过量和偏振是星光在圆盘中散射的结果，而发射线是恒星的紫外线通过气态圆盘吸收后，再重新辐射产生的 。",
+    "path": "模型",
+    "keywords": [
+      "随著",
+      "世纪初对发射线形成过程的了解",
+      "很明显",
+      "星中的这些发射线一定来自恒星快速旋转的作用下从恒星喷出的星周物质",
+      "星的所有观测特征现在都可以用一个由恒星喷出物质形成的气态盘来解释",
+      "红外过量和偏振是星光在圆盘中散射的结果",
+      "而发射线是恒星的紫外线通过气态圆盘吸收后",
+      "再重新辐射产生的"
+    ],
+    "chunk_id": "ddc0455d0629",
+    "source": "zh_wikipedia",
+    "source_role": "primary",
+    "origin": "html_fallback",
+    "type": "embedding_chunk",
+    "source_title": "Be星",
+    "source_name": "zh_wikipedia",
+    "schema_version": "2.0"
+  }
+]

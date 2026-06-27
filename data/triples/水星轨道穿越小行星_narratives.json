@@ -1,0 +1,52 @@
+[
+  {
+    "page_title": "水星轨道穿越小行星",
+    "section": "概要",
+    "chunk_index": 0,
+    "content": "水星轨道穿越小行星 是 轨道 穿越过 水星 的 小行星 。\n水星穿越者的特性是 远日点 在水星的远日点 (0.4667 AU) 之外，而近日点在水星的近日点(0.3075 AU)之内，此处同时也列出近日点在水星的远日点内侧，但未到达水星近日点，而从外侧掠过的小行星。\n所有这些小行星的半长轴皆大于水星，因此它们不会从水星的内侧掠过。",
+    "path": "概要",
+    "keywords": [
+      "水星轨道穿越小行星",
+      "轨道",
+      "穿越过",
+      "水星",
+      "小行星",
+      "水星穿越者的特性是",
+      "远日点",
+      "在水星的远日点"
+    ],
+    "chunk_id": "d4ea160c8cc4",
+    "source": "zh_wikipedia",
+    "source_role": "primary",
+    "origin": "html_fallback",
+    "type": "embedding_chunk",
+    "source_title": "水星轨道穿越小行星",
+    "source_name": "zh_wikipedia",
+    "schema_version": "2.0"
+  },
+  {
+    "page_title": "水星轨道穿越小行星",
+    "section": "水星掠过者",
+    "chunk_index": 1,
+    "content": "所有的水星掠过者的半长轴皆大于水星的半长轴 (0.3871 AU)，因此它们不会从水星的内侧掠过。\n(外侧) 水星掠过者的近日点在水星远日点 (0.4667 AU) 的内侧，但是不会进入水星近日点的内侧 (0.3075 AU)。\n目前已知的水星掠过者已经有383颗 ，轨道元素的值只取到小数点下第三位。",
+    "path": "水星掠过者",
+    "keywords": [
+      "所有的水星掠过者的半长轴皆大于水星的半长轴",
+      "因此它们不会从水星的内侧掠过",
+      "外侧",
+      "水星掠过者的近日点在水星远日点",
+      "的内侧",
+      "但是不会进入水星近日点的内侧",
+      "目前已知的水星掠过者已经有",
+      "轨道元素的值只取到小数点下第三位"
+    ],
+    "chunk_id": "3143b4dea186",
+    "source": "zh_wikipedia",
+    "source_role": "primary",
+    "origin": "html_fallback",
+    "type": "embedding_chunk",
+    "source_title": "水星轨道穿越小行星",
+    "source_name": "zh_wikipedia",
+    "schema_version": "2.0"
+  }
+]

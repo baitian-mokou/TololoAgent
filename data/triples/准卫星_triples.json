@@ -1,0 +1,16 @@
+[
+  {
+    "subject": "准卫星",
+    "relation": "ORBITS",
+    "object": "太阳",
+    "pattern": "rule",
+    "raw": "准卫星绕太阳公转",
+    "source": "zh_wikipedia",
+    "source_role": "primary",
+    "origin": "html_fallback",
+    "type": "triple_candidate",
+    "source_title": "准卫星",
+    "source_name": "zh_wikipedia",
+    "schema_version": "2.0"
+  }
+]

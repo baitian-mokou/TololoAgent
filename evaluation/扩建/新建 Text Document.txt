@@ -1,0 +1,825 @@
+# Project Structure
+
+项目扫描范围是整个仓库内的项目自有源码，排除了 `venv` 和 `__pycache__`。当前项目内共有 `33` 个 Python 文件、`1498` 个 JSON 文件、`1` 个 Chroma SQLite 文件。
+
+```text
+Tololo Agent
+├─ main.py                         GUI 启动入口
+├─ config.py                       全局常量配置
+├─ settings.json                   运行时设置
+├─ astronomy_terms.json            天文术语词库
+├─ __init__.py                     根级脚本，当前有语法错误，未进入主流程
+├─ data/
+│  ├─ raw_json/                    维基页面抓取结果，当前 482 个 *_html.json
+│  ├─ triples/                     三元组与叙事块，当前 444 个 triples / 569 个 narratives
+│  ├─ chroma_db/                   Chroma 持久化目录
+│  └─ astronomy_dict.txt           jieba 词典
+├─ models/
+│  └─ ollama/                      本地 Ollama 模型目录占位
+├─ src/
+│  ├─ agent/
+│  │  └─ llm_agent.py              Agent/RAG/LLM 调用
+│  ├─ crawler/
+│  │  └─ spider.py                 维基 HTML 抓取
+│  ├─ gui/
+│  │  ├─ main_window.py            主界面与所有标签页流程编排
+│  │  ├─ settings_manager.py       设置读写
+│  │  ├─ i18n.py                   中英文文案
+│  │  ├─ theme_manager.py          主题
+│  │  ├─ console_manager.py        Windows 控制台/托盘
+│  │  ├─ window_customization.py   Windows 标题栏/图标
+│  │  └─ components/widget_settings.py  设置对话框
+│  ├─ knowledge_graph/
+│  │  └─ neo4j_loader.py           Neo4j 导入与统计
+│  ├─ nlp/
+│  │  ├─ nlp_pipeline.py           当前 NLP 主入口
+│  │  ├─ preprocess.py             当前 HTML→三元组/叙事主处理链
+│  │  ├─ ontology.py               固定 ontology
+│  │  ├─ triple_builder.py         去重与 JSON 输出
+│  │  ├─ text_normalizer.py        简繁归一化
+│  │  ├─ entity_extractor.py       旧/旁路实体抽取模块
+│  │  ├─ relation_extractor.py     旧/旁路关系抽取模块
+│  │  ├─ segmenter.py              旧/旁路分词模块
+│  │  ├─ html_parser.py            旧 text 流程解析器
+│  │  ├─ infobox_extractor.py      旧信息框抽取器
+│  │  └─ narrative_processor.py    旧叙事分块器
+│  ├─ vector_store/
+│  │  └─ chroma_store.py           Chroma 导入与检索
+│  └─ visualization/
+│     └─ app.py                    Flask + D3 图谱可视化
+└─ tools/
+   └─ normalize_triples_to_simplified.py   已有数据归一化工具
+```
+
+项目内 Python 文件用途如下。
+
+- `main.py`：启动 GUI，并在缺依赖时自动 `pip install`。
+- `config.py`：定义目录、Neo4j、Ollama、Flask、爬虫、词典等默认常量。
+- `__init__.py`：不是包初始化文件，而是一个独立脚本；第 12 行有语法错误，当前不参与应用运行。
+- `src/gui/main_window.py`：系统主编排器。把爬虫、NLP、数据库导入、可视化、Agent 对话全部串到 GUI 标签页中。
+- `src/crawler/spider.py`：当前唯一数据摄取入口，从中文维基百科抓取页面 HTML 与兼容文本。
+- `src/nlp/nlp_pipeline.py`：当前唯一 NLP 批处理入口，处理 `data/raw_json/*.json`。
+- `src/nlp/preprocess.py`：当前主抽取引擎，负责 HTML 清洗、infobox 抽取、章节切分、规则三元组抽取、embedding chunk 生成。
+- `src/nlp/ontology.py`：限定关系只能落在 `IS_A/PART_OF/ORBITS/HAS_MASS/HAS_RADIUS/HAS_ATMOSPHERE/DISCOVERED_BY/LOCATED_IN`。
+- `src/nlp/triple_builder.py`：三元组与叙事块去重、合并、落盘。
+- `src/nlp/text_normalizer.py`：用 OpenCC 做简繁统一。
+- `src/knowledge_graph/neo4j_loader.py`：把 `*_triples.json` 导入 Neo4j。
+- `src/vector_store/chroma_store.py`：把 `*_narratives.json` 导入 Chroma，并执行语义检索。
+- `src/agent/llm_agent.py`：执行 Neo4j 检索、Chroma 检索、构造提示词、调用 Ollama 或 OpenAI 兼容接口。
+- `src/visualization/app.py`：从 Neo4j 读图，暴露 `/api/graph`，前端用 D3 渲染。
+- `src/gui/settings_manager.py`：单例设置中心，读写 `settings.json`。
+- `src/gui/components/widget_settings.py`：设置面板，支持 Neo4j/Ollama/API 参数修改和测试。
+- `src/gui/i18n.py`：中英文本资源。
+- `src/gui/theme_manager.py`、`window_customization.py`、`console_manager.py`：纯 GUI/Windows 支撑模块。
+- `src/nlp/entity_extractor.py`、`relation_extractor.py`、`segmenter.py`、`html_parser.py`、`infobox_extractor.py`、`narrative_processor.py`：都存在于仓库中，但从当前主流程调用关系看，没有进入现在的 `preprocess_v2` 主链。
+- `tools/normalize_triples_to_simplified.py`：离线清洗已有 `triples/narratives` 数据。
+- 其余 `src/__init__.py`、`src/gui/__init__.py`、`src/crawler/__init__.py`、`src/nlp/__init__.py`、`src/gui/components/__init__.py`、`src/visualization/__init__.py`：包导出或说明文件。
+
+# Architecture Overview
+
+这是一个典型的“本地知识库 + 本地/远程 LLM + GUI”项目，主架构是五段式：
+
+1. 数据摄取：[`src/crawler/spider.py`](</F:/第二次托洛洛测试 -重大进展/src/crawler/spider.py>)
+2. 知识抽取：[`src/nlp/preprocess.py`](</F:/第二次托洛洛测试 -重大进展/src/nlp/preprocess.py>) + [`src/nlp/nlp_pipeline.py`](</F:/第二次托洛洛测试 -重大进展/src/nlp/nlp_pipeline.py>)
+3. 存储落地：Neo4j + Chroma
+4. 检索增强：[`src/agent/llm_agent.py`](</F:/第二次托洛洛测试 -重大进展/src/agent/llm_agent.py>)
+5. 交互层：[`src/gui/main_window.py`](</F:/第二次托洛洛测试 -重大进展/src/gui/main_window.py>) + [`src/visualization/app.py`](</F:/第二次托洛洛测试 -重大进展/src/visualization/app.py>)
+
+当前主流程是 GUI 驱动的，而不是 CLI 驱动的。`main.py` 启动后直接进入 GUI，所有核心操作都通过标签页触发：
+
+- 爬虫标签页调用 `TololoCrawler.crawl_all()`
+- NLP 标签页调用 `NlpPipeline.process_all()`
+- 数据库标签页分别调用 `Neo4jLoader.load_all_triples()` 和 `ChromaStore.load_all_narratives()`
+- Agent 标签页调用 `LLMAgent.search_*()` 与 `LLMAgent.chat()`
+- 可视化标签页在同一进程内启动 Flask 图服务
+
+当前实际在跑的知识抽取链是 `preprocess_v2`，`data/triples/summary.json` 也明确记录了 `pipeline: "preprocess_v2"`。
+
+# Data Pipeline
+
+当前数据处理流程完全可以从代码里串起来：
+
+`zh.wikipedia.org/wiki/{title}` 页面  
+→ `TololoCrawler.get_html_content()` 抓取正文 DOM  
+→ 保存到 `data/raw_json/*_html.json`  
+→ `NlpPipeline.process_all()` 批处理这些 JSON  
+→ `WikiPreprocessor.process_json_data()` 做 HTML 清洗和结构抽取  
+→ 生成 `all_triples` 与 `embedding_chunks`  
+→ `TripleBuilder` 去重并落盘  
+→ 输出 `data/triples/*_triples.json` 和 `data/triples/*_narratives.json`
+
+当前摄取 pipeline 的关键事实：
+
+- 数据源是中文维基百科 HTML 页面，不是 MediaWiki API。
+- 入口页面是“太阳系”，再从其中自动发现更多天文相关链接。
+- 抓取结果同时保存 `html` 和 `raw_text/text`，但当前结构化抽取主输入是 `html`，不是 `text`。
+- 抽取时会移除 `navbox/references/toc/hatnote/metadata` 等噪音 DOM。
+- 章节切分依据真实 HTML 标题层级 `h1/h2/h3`，不是纯文本启发式。
+- 三元组抽取完全基于规则与固定 ontology，不调用 LLM。
+- 向量入库的原料不是整页，而是按 section 切成 120 到 800 字左右的 chunk。
+- 当前仓库数据规模是：
+  - `482` 个 `raw_json` 页面文件
+  - `444` 个三元组文件
+  - `569` 个叙事文件
+  - `summary.json` 记录最近一次主流程处理了 `474` 个文件，产出 `587` 个三元组、`3193` 个叙事块
+
+当前知识抽取方法判断如下。
+
+- `Regex`：是，且是主方法。`preprocess.py` 的 `TEXT_RULES` 是当前正文关系抽取核心。
+- `NER`：否。没有 spaCy/stanza/transformers 这类 NER 组件进入主流程。
+- `LLM extraction`：否。`preprocess.py` 文件头也明确写了“不调用 LLM”。
+- `Rule-based extraction`：是，主方法就是 rule-based + ontology 约束。
+
+# Retrieval Pipeline
+
+当前检索是“双检索 + 组装提示词”的 RAG 结构：
+
+用户问题  
+→ `LLMAgent.search_neo4j()`  
+→ `LLMAgent.search_chroma()`  
+→ 结果拼成 system prompt  
+→ `LLMAgent.chat()` 调模型生成回答
+
+图检索链路：
+
+- Neo4j 数据来自 `data/triples/*_triples.json`
+- `Neo4jLoader` 导入时：
+  - 非数值 object：建节点 + 建关系
+  - 数值 object：不建 object 节点，而是写成 subject 节点属性
+- 在线查询时执行的是单条 Cypher：
+  - `MATCH (n)-[r]->(m) WHERE n.name CONTAINS $kw OR m.name CONTAINS $kw RETURN ...`
+- 这是单跳边检索，不是多跳图遍历
+
+向量检索链路：
+
+- Chroma 数据来自 `data/triples/*_narratives.json`
+- `ChromaStore` 当前使用 `LocalHashEmbedder`
+- 向量不是外部 embedding API，也不是 sentence-transformers；是本地 `HashingVectorizer` 的字符 2-4 gram 哈希向量，维度 `2048`
+- 检索时用 `collection.query(query_embeddings=..., n_results=top_k)`
+
+数据库不可用时的兜底检索：
+
+- Neo4j 不可用时，回退到遍历本地 `*_triples.json` 做关键词打分
+- Chroma 不可用时，回退到遍历本地 `*_narratives.json` 做关键词打分
+
+当前检索方式判断如下。
+
+- `Neo4j query`：是
+- `SQLite`：间接是。Chroma 持久化底层就是 SQLite，但业务代码不直接用 SQL 做问答检索
+- `Chroma similarity search`：是
+- `FAISS`：否
+- `BM25`：否。Chroma schema 里有 sparse/bm25 配置位，但当前业务代码没有启用
+- `Reranker`：否
+- `Graph traversal`：严格说不是完整图遍历，只是单跳关系匹配
+
+当前数据库结构如下。
+
+- Neo4j 节点标签由 `Neo4jLoader._infer_label()` 推断，候选包括 `Planet/Star/Nebula/Galaxy/Asteroid/Comet/Satellite/DwarfPlanet/Mission/CelestialBody/Entity/Concept/PlanetType/OrbitParameter/EnvironmentalFeature`
+- 节点核心属性是 `name`
+- 关系类型直接使用三元组里的 `relation`
+- 数值型事实不会形成关系边，而会写成节点属性
+
+当前向量数据库结构如下。
+
+- Chroma collection 名称：`astronomy_narratives`
+- 维度：`2048`
+- 当前 SQLite 里有 `4173` 条 embeddings
+- collection 有两个 segment：
+  - `VECTOR`：`hnsw-local-persisted`
+  - `METADATA`：`sqlite`
+- 元数据字段已实际落库的有：
+  - `page_title`
+  - `section`
+  - `source`
+  - `keywords`
+  - `chroma:document`
+- `schema_str` 显示：
+  - `#document` 开启了 FTS
+  - `#embedding` 开启了 HNSW 向量索引
+  - `page_title/section/source/keywords` 开启了字符串倒排索引
+
+# LLM Pipeline
+
+当前模型调用有两条分支：
+
+- 本地分支：Ollama
+- 远程分支：OpenAI 兼容 API
+
+本地分支事实：
+
+- 健康检查：`GET /api/tags`
+- 模型存在检查：`GET /api/tags`
+- 对话生成：`POST /api/chat`
+- 流式协议：Ollama NDJSON
+- 默认模型：`qwen3:4b`
+- 默认模型目录环境变量：`OLLAMA_MODELS=models/ollama`
+
+远程分支事实：
+
+- 由 `settings.json -> llm_source.use_remote_api` 控制
+- 接口地址格式：`{api_base}/chat/completions`
+- 鉴权：`Authorization: Bearer {api_key}`
+- 流式协议：OpenAI SSE
+- 代码兼容 OpenAI 风格 `choices[0].message.content` / `delta.content`
+
+当前 Agent 工作流程如下。
+
+1. GUI AgentTab 接收用户输入
+2. 创建 `LLMAgent`
+3. 先做状态检测
+4. 调 `search_neo4j(query)`
+5. 调 `search_chroma(query)`
+6. 把两类结果显示到检索详情面板
+7. 用检索结果拼接 system prompt
+8. 调 `chat()`
+9. 流式回显 token
+10. 把问答历史保存在内存 `chat_history` 中，默认只保留最近 10 轮
+
+当前使用的大模型接口判断如下。
+
+- `Ollama`：是，当前默认主接口
+- `OpenAI official SDK`：否，没有 `openai` 包调用
+- `OpenAI-compatible HTTP API`：是，自己用 `urllib` 直连
+- `Transformers / local HF model`：否
+
+当前对你点名的技术使用情况如下。
+
+- `BeautifulSoup`：仍在使用，`src/crawler/spider.py`、`src/nlp/preprocess.py`
+- `Scrapy`：未使用
+- `Requests`：仍在使用，`src/crawler/spider.py`
+- `Playwright`：未使用
+- `Selenium`：未使用
+- `MediaWiki API`：未使用
+- `Wikidata API`：未使用
+- `JSON API`：用于 LLM 服务接口，Ollama 和 OpenAI-compatible；不用于百科内容抓取
+
+# Dependency Graph
+
+当前真实主依赖图可以压缩成下面这条主链：
+
+- `main.py` → `src.gui.main_window.run_gui`
+- `src.gui.main_window`
+  - `CrawlTab` → `src.crawler.spider.TololoCrawler`
+  - `NlpTab` → `src.nlp.nlp_pipeline.NlpPipeline`
+  - `DatabaseTab` → `src.knowledge_graph.neo4j_loader.Neo4jLoader`
+  - `DatabaseTab` → `src.vector_store.chroma_store.ChromaStore`
+  - `VisualizeTab` → `src.visualization.app`
+  - `AgentTab` → `src.agent.llm_agent.LLMAgent`
+- `NlpPipeline`
+  - → `WikiPreprocessor`
+  - → `TripleBuilder`
+- `WikiPreprocessor`
+  - → `ontology`
+  - → `text_normalizer`
+  - → `BeautifulSoup`
+- `LLMAgent`
+  - → `SettingsManager`
+  - → `Neo4jLoader`
+  - → `ChromaStore`
+- `Neo4jLoader`
+  - → `data/triples/*_triples.json`
+  - → Neo4j
+- `ChromaStore`
+  - → `data/triples/*_narratives.json`
+  - → Chroma/SQLite
+
+从仓库调用关系看，以下模块目前更像“保留/兼容模块”，不在当前主流水线上：
+
+- `src/nlp/entity_extractor.py`
+- `src/nlp/relation_extractor.py`
+- `src/nlp/segmenter.py`
+- `src/nlp/html_parser.py`
+- `src/nlp/infobox_extractor.py`
+- `src/nlp/narrative_processor.py`
+
+# Current Tech Stack
+
+按当前代码实际使用情况，技术栈如下。
+
+- GUI：`tkinter` + `ttkbootstrap`
+- 爬虫：`requests` + `BeautifulSoup(lxml)`
+- 文本规范化：`opencc`
+- 中文处理：`jieba`
+- 三元组抽取：`regex + rule-based ontology`
+- 图数据库：`Neo4j`
+- 向量库：`Chroma`
+- 向量化：`scikit-learn HashingVectorizer` + `numpy`
+- Web 可视化：`Flask` + `D3.js`
+- LLM 本地接口：`Ollama`
+- LLM 远程接口：`OpenAI-compatible HTTP API`
+- 持久化文件格式：`JSON`
+- 操作系统适配：Windows 专用标题栏/托盘/控制台处理
+
+# Possible Architecture Problems
+
+当前最大的架构问题，是“存在两套并行但不一致的系统真相”：主流程已经切到 `preprocess_v2`，但仓库里仍保留一整套旧 NLP 组件、另一套配置入口，以及一些不会进入当前热路径的逻辑，导致配置、数据模型和实际执行路径分裂。
+
+更具体地说，当前最值得注意的问题有这些：
+
+- `settings.json` 和 `config.py` 存在配置漂移。LLMAgent 会读 `settings.json`，但 `Neo4jLoader`、`ChromaStore`、`visualization.app`、爬虫与多数数据模块仍直接读 `config.py`。这意味着 GUI 设置里改了连接参数，不一定会真正影响所有运行模块。
+- Agent 远程 API 分支与 GUI 状态检查不一致。`LLMAgent.chat()` 支持远程 OpenAI-compatible API，但 `AgentTab._ask_llm()` 在发问前仍强制检查本地 Ollama 是否运行、模型是否已下载，所以“启用远程 API”在 GUI 层并不真正独立。
+- Neo4j 的数值事实被写成节点属性而不是关系边，但在线检索只查 `MATCH (n)-[r]->(m)`。结果是大量 `HAS_MASS/HAS_RADIUS` 之类数值知识即使已入 Neo4j，也不会被 `search_neo4j()` 命中。
+- 向量检索与命名预期不一致。`ChromaStore` 里有 `model_name='paraphrase-multilingual-MiniLM-L12-v2'`，但实际完全没用这个模型，而是用了离线 `HashingVectorizer`。这能离线运行，但语义检索能力会明显弱于真实 embedding 模型。
+- 图 schema 比较松散。Neo4j 节点标签由 `_infer_label()` 通过名字关键词临时推断，不是从抽取阶段稳定传递；很多实体最终会落到 `CelestialBody` 这类粗粒度标签。
+- 仓库中有一批未进入主流程的 NLP 模块，说明系统还处在“旧链路未清理、新链路已上线”的过渡态。长期看会提高维护成本，也会让后续分析和调试更难。
+- 根目录 `__init__.py` 当前有语法错误，虽然不影响主 GUI 路径，但说明仓库里存在未收敛的非主线脚本状态。
+
+如果你愿意，我下一步可以把这份报告继续整理成更正式的“架构审计版”，再补一张纯文字的数据流/模块关系图。
+
+
+1.
+
+`src/nlp/preprocess.py`
+
+作用：
+
+当前项目最核心的知识抽取引擎。负责把抓取到的 Wikipedia HTML 转成结构化章节、规则三元组和 embedding chunks，是整个知识构建链的中心。
+
+主要函数：
+
+`process_json_data()`
+
+`clean_html()`
+
+`extract_infobox()`
+
+`extract_sections()`
+
+`segment_sentences()`
+
+`extract_triples()`
+
+`chunk_for_embedding()`
+
+`chunks_to_narratives()`
+
+被哪些模块调用：
+
+`src/nlp/nlp_pipeline.py`
+
+`src/nlp/__init__.py`
+
+
+2.
+
+`src/nlp/nlp_pipeline.py`
+
+作用：
+
+当前 NLP 主入口与总协调器。负责批量扫描 `data/raw_json`，调用预处理器生成 triples/narratives，并写入 `data/triples`。
+
+主要函数：
+
+`process_json_file()`
+
+`process_all()`
+
+`_save_summary()`
+
+主要类：
+
+`NlpPipeline`
+
+被哪些模块调用：
+
+`src/gui/main_window.py`
+
+`src/nlp/__init__.py`
+
+
+3.
+
+`src/agent/llm_agent.py`
+
+作用：
+
+当前 Agent/RAG 主入口。负责执行 Neo4j 检索、Chroma 检索、构造提示词，并调用 Ollama 或 OpenAI 兼容 API 生成回答。
+
+主要函数：
+
+`search_neo4j()`
+
+`search_chroma()`
+
+`chat()`
+
+`_build_system_prompt()`
+
+`_call_ollama()`
+
+`_call_remote_api()`
+
+`ask()`
+
+主要类：
+
+`LLMAgent`
+
+被哪些模块调用：
+
+`src/gui/main_window.py`
+
+
+4.
+
+`src/crawler/spider.py`
+
+作用：
+
+当前数据摄取入口。负责从中文维基百科抓取页面 HTML、保存 `_html.json`，并从“太阳系”页面发现更多天文链接。
+
+主要函数：
+
+`get_html_content()`
+
+`crawl_html_page()`
+
+`extract_links_from_entry()`
+
+`crawl_seed_pages()`
+
+`crawl_discovered_links()`
+
+`crawl_all()`
+
+主要类：
+
+`TololoCrawler`
+
+被哪些模块调用：
+
+`src/gui/main_window.py`
+
+`src/crawler/__init__.py`
+
+
+5.
+
+`src/vector_store/chroma_store.py`
+
+作用：
+
+当前向量库核心实现。负责把 narrative chunks 导入 Chroma，使用本地哈希 embedding 生成 2048 维向量，并执行语义检索。
+
+主要函数：
+
+`load_all_narratives()`
+
+`search()`
+
+`clear_database()`
+
+`get_stats()`
+
+`_encode_texts()`
+
+主要类：
+
+`LocalHashEmbedder`
+
+`ChromaStore`
+
+被哪些模块调用：
+
+`src/agent/llm_agent.py`
+
+`src/gui/main_window.py`
+
+
+6.
+
+`src/knowledge_graph/neo4j_loader.py`
+
+作用：
+
+当前图数据库核心实现。负责把 `*_triples.json` 导入 Neo4j，创建节点、关系和部分数值属性，并提供图数据库统计信息。
+
+主要函数：
+
+`load_all_triples()`
+
+`clear_database()`
+
+`get_stats()`
+
+`_infer_label()`
+
+主要类：
+
+`Neo4jLoader`
+
+被哪些模块调用：
+
+`src/agent/llm_agent.py`
+
+`src/gui/main_window.py`
+
+
+7.
+
+`src/nlp/triple_builder.py`
+
+作用：
+
+当前结构化数据落盘核心。负责 triples 和 narratives 的去重、合并、标准化后保存，是抽取结果进入持久化文件的最后一道关口。
+
+主要函数：
+
+`add_triple()`
+
+`add_narrative()`
+
+`save_triples()`
+
+`save_narratives()`
+
+`_merge_triples()`
+
+`_merge_narratives()`
+
+主要类：
+
+`TripleBuilder`
+
+被哪些模块调用：
+
+`src/nlp/nlp_pipeline.py`
+
+
+8.
+
+`src/nlp/ontology.py`
+
+作用：
+
+当前知识图谱关系约束核心。负责限制允许的关系类型，并把 infobox 键映射到固定 ontology，防止抽取过程生成失控关系名。
+
+主要函数：
+
+`normalize_infobox_key()`
+
+`validate_relation()`
+
+`make_triple()`
+
+被哪些模块调用：
+
+`src/nlp/preprocess.py`
+
+
+9.
+
+`src/nlp/text_normalizer.py`
+
+作用：
+
+当前文本归一化基础设施。负责简繁统一，并标准化 triple/narrative 字段，影响爬取后处理、图数据库导入、向量检索和 Agent 查询一致性。
+
+主要函数：
+
+`normalize_to_simplified()`
+
+`normalize_triple_record()`
+
+`normalize_narrative_record()`
+
+被哪些模块调用：
+
+`src/agent/llm_agent.py`
+
+`src/knowledge_graph/neo4j_loader.py`
+
+`src/vector_store/chroma_store.py`
+
+`src/nlp/preprocess.py`
+
+`src/nlp/triple_builder.py`
+
+`src/nlp/ontology.py`
+
+`tools/normalize_triples_to_simplified.py`
+
+
+10.
+
+`src/nlp/entity_extractor.py`
+
+作用：
+
+实体抽取候选模块。虽然不在当前 `preprocess_v2` 主流程里，但它是仓库内最接近“实体识别/知识抽取扩展点”的核心文件，负责词典匹配、数值识别、参数名识别。
+
+主要函数：
+
+`extract_entities()`
+
+`_is_valid_entity()`
+
+`_load_terms()`
+
+主要类：
+
+`EntityExtractor`
+
+被哪些模块调用：
+
+当前项目主流程中暂无实际调用
+
+如果你愿意，下一步我可以继续给你做“第三阶段”，把这 10 个文件之间的调用链画成一张纯文本依赖图。
+
+
+
+
+
+
+
+
+
+**Online Query Flow**
+
+```text
+User Query
+    │
+    ▼
+Agent Controller
+(LLMAgent / AgentTab)
+    │
+    ├───────────────┐
+    │               │
+    ▼               ▼
+Retriever       Retriever
+(Neo4j path)    (Chroma path)
+    │               │
+    ▼               ▼
+Knowledge Search   Vector Search
+    │               │
+    └───────┬───────┘
+            │
+            ▼
+Context Builder
+(system prompt + retrieval results)
+            │
+            ▼
+LLM
+(Ollama / OpenAI-compatible API)
+            │
+            ▼
+Response
+```
+
+**Online Query Flow With Fallbacks**
+
+```text
+User Query
+    │
+    ▼
+LLMAgent
+    │
+    ├──────────────────────────────┐
+    │                              │
+    ▼                              ▼
+search_neo4j()                 search_chroma()
+    │                              │
+    ▼                              ▼
+Neo4j Query                    Chroma Similarity Search
+    │                              │
+    ├──── if unavailable ────┐     ├──── if unavailable ────┐
+    ▼                        │     ▼                        │
+Local Triple Search          │     Local Narrative Search   │
+(data/triples/*_triples)     │     (data/triples/*_narratives)
+    │                        │     │                        │
+    └───────────────┬────────┘     └───────────────┬────────┘
+                    │                              │
+                    └──────────────┬───────────────┘
+                                   │
+                                   ▼
+Prompt / Context Builder
+                                   │
+                                   ▼
+LLM Call
+                                   │
+                                   ▼
+Final Response
+```
+
+**Offline Pipeline**
+
+```text
+Wikipedia Web Pages
+(zh.wikipedia.org)
+        │
+        ▼
+Crawler
+(TololoCrawler)
+        │
+        ▼
+Raw Page Storage
+(data/raw_json/*_html.json)
+        │
+        ▼
+Preprocessing
+(WikiPreprocessor)
+        │
+        ├───────────────┬───────────────────┬───────────────────┐
+        │               │                   │                   │
+        ▼               ▼                   ▼                   ▼
+HTML Cleaning      Section Split       Infobox Parse      Sentence Split
+        │               │                   │                   │
+        └───────────────┴──────────────┬────┴───────────────────┘
+                                       │
+                                       ▼
+Knowledge Extraction
+(rule-based triples + narrative chunks)
+                                       │
+                      ┌────────────────┴────────────────┐
+                      │                                 │
+                      ▼                                 ▼
+Triple Builder                    Chunk/Narrative Builder
+                      │                                 │
+                      ▼                                 ▼
+data/triples/*_triples.json     data/triples/*_narratives.json
+                      │                                 │
+                      ├───────────────┐     ┌───────────┤
+                      ▼               │     │           ▼
+                  Neo4j Loader        │     │      Chroma Store
+                      │               │     │           │
+                      ▼               │     │           ▼
+                    Neo4j             │     │        Chroma
+                                      │     │
+                                      └─────┴─────► Local SQLite Persist
+                                                    (chroma.sqlite3)
+```
+
+**Storage Map**
+
+```text
+Wikipedia
+   │
+   ▼
+Crawler
+   │
+   ▼
+data/raw_json
+   │
+   ▼
+Preprocess + Extraction
+   │
+   ├───────────────┐
+   ▼               ▼
+Triples JSON    Narratives JSON
+   │               │
+   ▼               ▼
+Neo4j Loader    Chroma Store
+   │               │
+   ▼               ▼
+Neo4j          Chroma / SQLite
+```
+
+**End-to-End Architecture Map**
+
+```text
+                ONLINE
+User Query
+    │
+    ▼
+LLMAgent
+    │
+    ├───────────────┐
+    ▼               ▼
+Neo4j Search    Chroma Search
+    │               │
+    ▼               ▼
+Knowledge        Vector
+Results          Results
+    └───────┬───────┘
+            ▼
+     Context Builder
+            │
+            ▼
+      Ollama / Remote LLM
+            │
+            ▼
+         Response
+
+
+                OFFLINE
+Wikipedia Pages
+      │
+      ▼
+   Crawler
+      │
+      ▼
+ raw_json
+      │
+      ▼
+Preprocessing
+      │
+      ▼
+Knowledge Extraction
+      │
+  ┌───┴────┐
+  ▼        ▼
+Triples  Narratives
+  │        │
+  ▼        ▼
+Neo4j    Chroma
+```

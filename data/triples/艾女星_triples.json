@@ -1,0 +1,72 @@
+[
+  {
+    "subject": "艾女星",
+    "relation": "DISCOVERED_BY",
+    "object": "约翰·帕利扎",
+    "pattern": "infobox",
+    "raw": "发现者: 约翰·帕利扎",
+    "source": "zh_wikipedia",
+    "source_role": "primary",
+    "origin": "html_fallback",
+    "type": "triple_candidate",
+    "source_title": "艾女星",
+    "source_name": "zh_wikipedia",
+    "schema_version": "2.0"
+  },
+  {
+    "subject": "艾女星",
+    "relation": "HAS_RADIUS",
+    "object": "15.7 km",
+    "pattern": "infobox",
+    "raw": "平均半径: 15.7 km",
+    "source": "zh_wikipedia",
+    "source_role": "primary",
+    "origin": "html_fallback",
+    "type": "triple_candidate",
+    "source_title": "艾女星",
+    "source_name": "zh_wikipedia",
+    "schema_version": "2.0"
+  },
+  {
+    "subject": "艾女星",
+    "relation": "HAS_MASS",
+    "object": "0.6 × 10 16 kg",
+    "pattern": "infobox",
+    "raw": "质量: 4.2 ± 0.6 ×10 16 kg",
+    "source": "zh_wikipedia",
+    "source_role": "primary",
+    "origin": "html_fallback",
+    "type": "triple_candidate",
+    "source_title": "艾女星",
+    "source_name": "zh_wikipedia",
+    "schema_version": "2.0"
+  },
+  {
+    "subject": "艾女星",
+    "relation": "IS_A",
+    "object": "继小行星",
+    "pattern": "rule",
+    "raw": "艾女星是继小行星",
+    "source": "zh_wikipedia",
+    "source_role": "primary",
+    "origin": "html_fallback",
+    "type": "triple_candidate",
+    "source_title": "艾女星",
+    "source_name": "zh_wikipedia",
+    "schema_version": "2.0"
+  },
+  {
+    "subject": "艾女星",
+    "relation": "IS_A",
+    "object": "主 小行星",
+    "pattern": "rule",
+    "raw": "艾女星是主 小行星",
+    "source": "zh_wikipedia",
+    "source_role": "primary",
+    "origin": "html_fallback",
+    "type": "triple_candidate",
+    "source_title": "艾女星",
+    "source_name": "zh_wikipedia",
+    "schema_version": "2.0"
+  }
+]

@@ -1,0 +1,52 @@
+[
+  {
+    "page_title": "祝融星",
+    "section": "概要",
+    "chunk_index": 0,
+    "content": "祝融星 （又称 火神星 ；法语： Vulcain ；英语： Vulcan ）是一个假设在 太阳 与 水星 之间运行的 行星 ，这个19世纪的假设被 爱因斯坦 的 广义相对论 排除。\n祝融星的中文名称来源于中国上古神话人物火神 祝融 ，西方名称则源自 罗马神话 的锻冶之神 武尔坎努斯 （Vulcanus）。",
+    "path": "概要",
+    "keywords": [
+      "祝融星",
+      "又称",
+      "火神星",
+      "法语",
+      "英语",
+      "是一个假设在",
+      "太阳",
+      "水星"
+    ],
+    "chunk_id": "b487365861c6",
+    "source": "zh_wikipedia",
+    "source_role": "primary",
+    "origin": "html_fallback",
+    "type": "embedding_chunk",
+    "source_title": "祝融星",
+    "source_name": "zh_wikipedia",
+    "schema_version": "2.0"
+  },
+  {
+    "page_title": "祝融星",
+    "section": "假设起源",
+    "chunk_index": 1,
+    "content": "祝融星是早期为了解释 水星 实际的近日点进动与计算出的数值上的差异而被假设存在的一颗行星。\n按古典力学的方法计算，水星在受到太阳和其他行星的引力 摄动 下，其近日点在每世纪会进动约531.63 角秒 ，但实际观测的数字是约574角秒 ，与预期的相差43角秒，于是人们便假设水星轨道以内，尚有一颗未被发现的 行星 。\n祝融星最初由法国数学家 勒威耶 （Urbain Le Verrier）于1859年提出，他曾以计算 天王星 受到的外力摄动而成功地预测和发现 海王星 ，于是试图以同样的方法去解决水星 近日点 的 进动 ，并寻找祝融星。\n20世纪初， 爱因斯坦 提出 广义相对论 以后，人们发现根据广义相对论计算出的水星进动与观测值吻合，因而不再寻找祝融星。\n对水星的进动有合理解释，也成为广义相对论最早的证据之一。",
+    "path": "假设起源",
+    "keywords": [
+      "角秒",
+      "祝融星是早期为了解释",
+      "水星",
+      "实际的近日点进动与计算出的数值上的差异而被假设存在的一颗行星",
+      "按古典力学的方法计算",
+      "水星在受到太阳和其他行星的引力",
+      "摄动",
+      "其近日点在每世纪会进动约"
+    ],
+    "chunk_id": "765dd0ed536b",
+    "source": "zh_wikipedia",
+    "source_role": "primary",
+    "origin": "html_fallback",
+    "type": "embedding_chunk",
+    "source_title": "祝融星",
+    "source_name": "zh_wikipedia",
+    "schema_version": "2.0"
+  }
+]

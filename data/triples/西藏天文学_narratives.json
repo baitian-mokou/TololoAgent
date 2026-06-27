@@ -1,0 +1,27 @@
+[
+  {
+    "page_title": "西藏天文学",
+    "section": "概要",
+    "chunk_index": 0,
+    "content": "西藏天文学 的基础是时轮金刚的 密宗 。\n它以与现代 天文学 相似的方式解释了一些 天文现象 。\n例如其解释 日食 产生的原因为 月球 在 地球 和 太阳 之间穿过。\n1318年， 第三世噶玛巴·让炯多杰 接受介绍名为“楚布传统天文学”的经修正天文及 占星 系统的时轮金刚视角。\n这套体系还在噶玛噶举学校用于 藏历 的计算。",
+    "path": "概要",
+    "keywords": [
+      "西藏天文学",
+      "的基础是时轮金刚的",
+      "密宗",
+      "它以与现代",
+      "天文学",
+      "相似的方式解释了一些",
+      "天文现象",
+      "例如其解释"
+    ],
+    "chunk_id": "04f4f0c2e0c8",
+    "source": "zh_wikipedia",
+    "source_role": "primary",
+    "origin": "html_fallback",
+    "type": "embedding_chunk",
+    "source_title": "西藏天文学",
+    "source_name": "zh_wikipedia",
+    "schema_version": "2.0"
+  }
+]

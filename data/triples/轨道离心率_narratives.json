@@ -1,0 +1,102 @@
+[
+  {
+    "page_title": "轨道离心率",
+    "section": "概要",
+    "chunk_index": 0,
+    "content": "各种不同离心率的轨道范例，中间黑点为焦点（之一），为中心天体所在的位置 在 天文动力学 ，架构在 标准假说 下的任何 轨道 都必须是 圆锥曲线 的形状。\n圆锥曲线的 离心率 ， 轨道离心率 是定义轨道形状的重要参数，而且定义了绝对的形状。\n离心率可以解释为形状从圆形偏离了多少的程度。\n架构在 标准假说 下， 离心率 （偏心率， e {\\displaystyle e\\,\\!} ）是严格的定义了 圆 、 椭圆 、 抛物线 和 双曲线 ，并且有如下的数值： 圆轨道 ： e = 0 {\\displaystyle e=0\\,\\!} , 椭圆轨道 ： 0 < e < 1 {\\displaystyle 0<e<1\\,\\!} , 抛物线轨道 ： e = 1 {\\displaystyle e=1\\,\\!} , 双曲线轨道 ： e > 1 {\\displaystyle e>1\\,\\!} , 椭圆的离心率 e {\\displaystyle e} 是圆的角度投映。\n例如说，水星的离心率是（0.2056），简单的计算正弦的反函数可以得到投映的角度是11.86度，然后以那个数值的倾斜角度观察任何的圆形物体（例如从上面观看的咖啡杯），投射到你的眼中所看见的 椭圆 就会有相同的离心率。",
+    "path": "概要",
+    "keywords": [
+      "架构在",
+      "标准假说",
+      "离心率",
+      "椭圆",
+      "各种不同离心率的轨道范例",
+      "中间黑点为焦点",
+      "之一",
+      "为中心天体所在的位置"
+    ],
+    "chunk_id": "5bf0a662c090",
+    "source": "zh_wikipedia",
+    "source_role": "primary",
+    "origin": "html_fallback",
+    "type": "embedding_chunk",
+    "source_title": "轨道离心率",
+    "source_name": "zh_wikipedia",
+    "schema_version": "2.0"
+  },
+  {
+    "page_title": "轨道离心率",
+    "section": "计算",
+    "chunk_index": 1,
+    "content": "轨道离心率能够从 轨道状态向量 计算得知 离心率向量 的大小： e = | e | {\\displaystyle e=\\left|\\mathbf {e} \\right|} e {\\displaystyle \\mathbf {e} \\,\\!} 是 离心率向量 。\n对 椭圆轨道 也能从距离的 近拱点 和 远拱点 计算得知： e = d a − − d p d a + d p = 1 − − 2 d a d p + 1 = 2 d p d a + 1 − − 1 {\\displaystyle e={{d_{a}-d_{p}} \\over {d_{a}+d_{p}}}=1-{\\frac {2}{{\\frac {d_{a}}{d_{p}}}+1}}={\\frac {2}{{\\frac {d_{p}}{d_{a}}}+1}}-1} d p {\\displaystyle d_{p}\\,\\!} 是近拱点的距离。\nd a {\\displaystyle d_{a}\\,\\!} 是远拱点的距离。",
+    "path": "计算",
+    "keywords": [
+      "计算得知",
+      "离心率向量",
+      "轨道离心率能够从",
+      "轨道状态向量",
+      "的大小",
+      "椭圆轨道",
+      "也能从距离的",
+      "近拱点"
+    ],
+    "chunk_id": "bb19ba18100d",
+    "source": "zh_wikipedia",
+    "source_role": "primary",
+    "origin": "html_fallback",
+    "type": "embedding_chunk",
+    "source_title": "轨道离心率",
+    "source_name": "zh_wikipedia",
+    "schema_version": "2.0"
+  },
+  {
+    "page_title": "轨道离心率",
+    "section": "举例",
+    "chunk_index": 2,
+    "content": "例如， 地球 现在的轨道离心率是0.0167，而由于行星间的重力吸引，经过一段时间会慢慢变成接近0，而最大值约为0.05。\n（图请参考 （ 页面存档备份 ，存于 互联网档案馆 ））。\n在其他的数值上， 水星 的离心率（0.2056）是在太阳系内行星中最大的。\n在 2006年行星重定义 ，矮行星的冥王星有更大的离心率大约0.248， 月球 有值得注意的离心率0.0554。\n其他行星的离心率，可以参考 太阳系的行星表 。",
+    "path": "举例",
+    "keywords": [
+      "例如",
+      "地球",
+      "现在的轨道离心率是",
+      "而由于行星间的重力吸引",
+      "经过一段时间会慢慢变成接近",
+      "而最大值约为",
+      "图请参考",
+      "页面存档备份"
+    ],
+    "chunk_id": "198adb2b2c75",
+    "source": "zh_wikipedia",
+    "source_role": "primary",
+    "origin": "html_fallback",
+    "type": "embedding_chunk",
+    "source_title": "轨道离心率",
+    "source_name": "zh_wikipedia",
+    "schema_version": "2.0"
+  },
+  {
+    "page_title": "轨道离心率",
+    "section": "对气候的影响",
+    "chunk_index": 3,
+    "content": "季节的长度对应于地球在轨道上经过分点与至点间所扫掠过的面积。\n轨道力学要求季节长度需要与对应季节的象限被扫掠过的面积成比率，所以在轨道离心率的极值，在远心点上的时间（日期）会比在近心点上要长。\n今天，在北半球，在秋季与冬季位于近日点附近，地球以最快的速度运动著，因此冬季和秋季比春季和夏季为短。\n在2006年，北半球的夏天比冬天长4.66天，春天比秋天长2.9天。\n(source) 轴向进动缓缓的改变地球的分点与至点在轨道上的位置，参考 回归年 有更详细的说明与数值。\n在未来的10,000年，北半球的冬季会逐渐变长，而夏季会变得短些，最后，创造出来的环境将顺理成章的引发下一次的 冰河期 。",
+    "path": "对气候的影响",
+    "keywords": [
+      "季节的长度对应于地球在轨道上经过分点与至点间所扫掠过的面积",
+      "轨道力学要求季节长度需要与对应季节的象限被扫掠过的面积成比率",
+      "所以在轨道离心率的极值",
+      "在远心点上的时间",
+      "日期",
+      "会比在近心点上要长",
+      "今天",
+      "在北半球"
+    ],
+    "chunk_id": "1d42fe455a04",
+    "source": "zh_wikipedia",
+    "source_role": "primary",
+    "origin": "html_fallback",
+    "type": "embedding_chunk",
+    "source_title": "轨道离心率",
+    "source_name": "zh_wikipedia",
+    "schema_version": "2.0"
+  }
+]

@@ -1,0 +1,16 @@
+[
+  {
+    "subject": "疏散星团",
+    "relation": "IS_A",
+    "object": "研究 恒星",
+    "pattern": "rule",
+    "raw": "疏散星团是研究 恒星",
+    "source": "zh_wikipedia",
+    "source_role": "primary",
+    "origin": "html_fallback",
+    "type": "triple_candidate",
+    "source_title": "疏散星团",
+    "source_name": "zh_wikipedia",
+    "schema_version": "2.0"
+  }
+]

@@ -1,0 +1,172 @@
+{
+  "source_name": "nasa",
+  "source_schema_version": "nasa_shadow_ready_v1",
+  "source_role": "primary",
+  "namespace_status": "shadow_only",
+  "mode": "dry-run",
+  "materialization_mode": "offline_nasa_raw_pipeline_v1",
+  "cutover_ready": false,
+  "raw_dir": "F:\\知识表示与处理结课作业\\第二次托洛洛测试 -重大进展\\data\\raw_json\\nasa",
+  "triples_dir": "F:\\知识表示与处理结课作业\\第二次托洛洛测试 -重大进展\\data\\triples\\nasa",
+  "raw_files": [
+    "F:\\知识表示与处理结课作业\\第二次托洛洛测试 -重大进展\\data\\raw_json\\nasa\\火卫一_html.json",
+    "F:\\知识表示与处理结课作业\\第二次托洛洛测试 -重大进展\\data\\raw_json\\nasa\\火星_html.json"
+  ],
+  "triple_files": [
+    "F:\\知识表示与处理结课作业\\第二次托洛洛测试 -重大进展\\data\\triples\\nasa\\火卫一_triples.json"
+  ],
+  "narrative_files": [
+    "F:\\知识表示与处理结课作业\\第二次托洛洛测试 -重大进展\\data\\triples\\nasa\\火星_narratives.json"
+  ],
+  "pipeline": {
+    "total_triples": 4,
+    "total_narratives": 1,
+    "total_files": 1,
+    "pipeline": "nasa_source_adapter_v1",
+    "source_schema_version": "nasa_shadow_ready_v1",
+    "materialization_mode": "offline_nasa_raw_pipeline_v1",
+    "mode": "dry-run",
+    "official_namespace_written": false,
+    "cutover_ready": false,
+    "time": "2026-06-27T08:29:46.884950+00:00"
+  },
+  "metadata_contract": {
+    "passed": true,
+    "checked_records": 0,
+    "break_count": 0,
+    "breaks": [],
+    "skipped": true,
+    "reason": "preview mode does not write official triples"
+  },
+  "graph": {
+    "skipped": true,
+    "reason": "dry-run_mode_does_not_write_neo4j"
+  },
+  "chroma": {
+    "skipped": true,
+    "reason": "dry-run_mode_does_not_write_chroma"
+  },
+  "probes": {
+    "skipped": true,
+    "reason": "dry-run_mode_does_not_probe_materialized_namespace"
+  },
+  "fetch": {
+    "requested_mode": "dry-run",
+    "effective_mode": "live",
+    "status": "ok",
+    "error": ""
+  },
+  "preview": {
+    "record_count": 1,
+    "sample_records": [
+      {
+        "title": "火星",
+        "triples": [
+          {
+            "relation": "HAS_MASS",
+            "object": "6.4171e+23",
+            "source_record_id": "nasa-nssdc-mars-fact-sheet:mass_10_24_kg",
+            "table_field": "Mass (10^24 kg)",
+            "source_url": "https://nssdc.gsfc.nasa.gov/planetary/factsheet/marsfact.html",
+            "source_license": "Public domain / NASA content usage guidelines",
+            "license_hint": "Public domain / NASA content usage guidelines",
+            "fetched_at": "2026-06-27T08:29:46.877688+00:00",
+            "raw_value": "0.64171e24 kg",
+            "normalized_value": "6.4171e+23",
+            "unit": "kg",
+            "confidence": 0.95,
+            "parse_status": "parsed",
+            "schema_version": "nasa_shadow_ready_v1",
+            "source_name": "nasa"
+          },
+          {
+            "relation": "HAS_RADIUS",
+            "object": "3389.5",
+            "source_record_id": "nasa-nssdc-mars-fact-sheet:mean_radius_km",
+            "table_field": "Mean radius (km)",
+            "source_url": "https://nssdc.gsfc.nasa.gov/planetary/factsheet/marsfact.html",
+            "source_license": "Public domain / NASA content usage guidelines",
+            "license_hint": "Public domain / NASA content usage guidelines",
+            "fetched_at": "2026-06-27T08:29:46.877688+00:00",
+            "raw_value": "3389.5 km",
+            "normalized_value": "3389.5",
+            "unit": "km",
+            "confidence": 0.95,
+            "parse_status": "parsed",
+            "schema_version": "nasa_shadow_ready_v1",
+            "source_name": "nasa"
+          },
+          {
+            "relation": "HAS_ATMOSPHERE",
+            "object": "CO2;N2;Ar",
+            "source_record_id": "nasa-nssdc-mars-fact-sheet:atmospheric_composition",
+            "table_field": "Atmospheric composition",
+            "source_url": "https://nssdc.gsfc.nasa.gov/planetary/factsheet/marsfact.html",
+            "source_license": "Public domain / NASA content usage guidelines",
+            "license_hint": "Public domain / NASA content usage guidelines",
+            "fetched_at": "2026-06-27T08:29:46.877688+00:00",
+            "raw_value": "Carbon dioxide; Nitrogen; Argon",
+            "normalized_value": "CO2;N2;Ar",
+            "unit": "component_set",
+            "confidence": 0.9,
+            "parse_status": "synonym_normalized",
+            "schema_version": "nasa_shadow_ready_v1",
+            "source_name": "nasa"
+          },
+          {
+            "relation": "ORBITS",
+            "object": "Sun",
+            "source_record_id": "nasa-nssdc-mars-fact-sheet:distance_from_sun_10_6_km",
+            "table_field": "Distance from Sun (10^6 km)",
+            "source_url": "https://nssdc.gsfc.nasa.gov/planetary/factsheet/marsfact.html",
+            "source_license": "Public domain / NASA content usage guidelines",
+            "license_hint": "Public domain / NASA content usage guidelines",
+            "fetched_at": "2026-06-27T08:29:46.877688+00:00",
+            "raw_value": "Sun",
+            "normalized_value": "Sun",
+            "unit": "",
+            "confidence": 0.5,
+            "parse_status": "text_normalized",
+            "schema_version": "nasa_shadow_ready_v1",
+            "source_name": "nasa",
+            "derived": true,
+            "derived_from": "Distance from Sun (10^6 km)",
+            "relation_semantics_warning": true,
+            "warning_reason": "Distance from Sun is an orbital-distance field, not a direct ORBITS ontology assertion."
+          }
+        ],
+        "narratives": [
+          {
+            "section": "NASA live preview",
+            "content": "NASA live preview parsed 4 candidate facts from a public fact sheet for 火星.",
+            "keywords": [
+              "火星",
+              "NASA",
+              "fact sheet"
+            ]
+          }
+        ]
+      }
+    ],
+    "official_triples_written": false,
+    "official_chroma_written": false,
+    "official_neo4j_written": false
+  },
+  "readiness_gate": {
+    "passed": true,
+    "cutover_ready": false,
+    "reason": "shadow namespace is auditable; active-source cutover remains disabled"
+  },
+  "materialization": {
+    "timestamp_utc": "2026-06-27T08:29:46.885425+00:00",
+    "output_path": "F:\\知识表示与处理结课作业\\第二次托洛洛测试 -重大进展\\evaluation\\source_expansion\\nasa\\nasa_live_preview_report.json"
+  },
+  "live_preview": {
+    "target_entity": "火星",
+    "source_candidates": [
+      "Mars",
+      "火星"
+    ],
+    "license_hint": "Public domain / NASA content usage guidelines"
+  }
+}

@@ -1,0 +1,52 @@
+[
+  {
+    "page_title": "天文学家",
+    "section": "亚里士多德 Aristotle",
+    "chunk_index": 0,
+    "content": "亚里士多德 ，前384年至前322年 古希腊 哲学家 、 科学家 、 教育家 天文 ：运行的天体是物质实体。\n天体沿着五十五个球体旋转。\n物理 ：各物体只有在一个不断作用着的推动者直接接触下，才能够保持运动。\n被列为希腊三贤之一。\n苏格拉底 的徒孙， 柏拉图 的徒弟。",
+    "path": "著名天文学家（按出生年排列） > 亚里士多德 Aristotle",
+    "keywords": [
+      "亚里士多德",
+      "年至前",
+      "古希腊",
+      "哲学家",
+      "科学家",
+      "教育家",
+      "天文",
+      "运行的天体是物质实体"
+    ],
+    "chunk_id": "bed0af472103",
+    "source": "zh_wikipedia",
+    "source_role": "primary",
+    "origin": "html_fallback",
+    "type": "embedding_chunk",
+    "source_title": "天文学家",
+    "source_name": "zh_wikipedia",
+    "schema_version": "2.0"
+  },
+  {
+    "page_title": "天文学家",
+    "section": "伽利略 Galileo",
+    "chunk_index": 1,
+    "content": "伽利略·伽利莱 ，1564年至1642年 意大利 比萨 城人。\n物理学家 、 天文学家 ，近代实验科学的奠基者之一。\n天文 ：他最早使用望远镜观测天体来支持 哥白尼 的 日心说 天文 ：发现 木星 的 卫星 ，sunspots，phases of Venus",
+    "path": "著名天文学家（按出生年排列） > 伽利略 Galileo",
+    "keywords": [
+      "天文",
+      "伽利略",
+      "伽利莱",
+      "年至",
+      "意大利",
+      "比萨",
+      "城人",
+      "物理学家"
+    ],
+    "chunk_id": "0d9b0051cd06",
+    "source": "zh_wikipedia",
+    "source_role": "primary",
+    "origin": "html_fallback",
+    "type": "embedding_chunk",
+    "source_title": "天文学家",
+    "source_name": "zh_wikipedia",
+    "schema_version": "2.0"
+  }
+]

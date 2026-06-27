@@ -1,0 +1,52 @@
+[
+  {
+    "page_title": "小行星164207",
+    "section": "概要",
+    "chunk_index": 0,
+    "content": "164207 Cardea （ 天文学临时编号 2004 GU 9 ）是一颗被归类为 阿波罗型 的次公里 小行星 。\n直到2600年左右，它都是 地球 的 准卫星 。\n2004年4月14日（不到1天的 观测弧 ）， 哨兵风险表 显示了180个虚拟撞击器 。\n2天后，即2004年4月16日，它就从哨兵风险表中删除了 。\nCardea现在有一个确定的轨道，观测弧为12年。",
+    "path": "概要",
+    "keywords": [
+      "天文学临时编号",
+      "是一颗被归类为",
+      "阿波罗型",
+      "的次公里",
+      "小行星",
+      "直到",
+      "年左右",
+      "它都是"
+    ],
+    "chunk_id": "0c9b8cbe14a6",
+    "source": "zh_wikipedia",
+    "source_role": "primary",
+    "origin": "html_fallback",
+    "type": "embedding_chunk",
+    "source_title": "小行星164207",
+    "source_name": "zh_wikipedia",
+    "schema_version": "2.0"
+  },
+  {
+    "page_title": "小行星164207",
+    "section": "发现和命名",
+    "chunk_index": 1,
+    "content": "这颗小行星于2004年4月13日由在 新墨西哥州 索科罗 附近的 林肯近地小行星研究 项目发现，并被赋予 临时名称 2004 GU 9 。\n继金星的一颗准卫星 524522 Zoozve 命名后， 电波实验室 （ 英语 ： Radiolab ） 和 国际天文学联合会 于2024年6月至9月为这颗准卫星举行了公开命名活动 。\n2024年12月公布了七名入选决赛的名字，分别是 巴库纳瓦 （ 英语 ： Bakunawa ） 、 Cardea 、 埃哈玛 （Ehaema）、 Ankidu 、 Otr 、 Tariaksuq （ 英语 ： Tariaksuq ） 和 特契特 （ 英语 ： Tēcciztēcatl ） 。\n获胜的名字是罗马铰链女神：Cardea。\n国际天文学联合会于2025年1月13日宣布这个名字 。\nAnimation of (164207) 2004 GU9's orbit from 1600 to 2500 相对于太阳和地球 环绕地球 围绕太阳 太阳 · 地球 · 164207 Cardea",
+    "path": "发现和命名",
+    "keywords": [
+      "英语",
+      "这颗小行星于",
+      "日由在",
+      "新墨西哥州",
+      "索科罗",
+      "附近的",
+      "林肯近地小行星研究",
+      "项目发现"
+    ],
+    "chunk_id": "1480b160ef87",
+    "source": "zh_wikipedia",
+    "source_role": "primary",
+    "origin": "html_fallback",
+    "type": "embedding_chunk",
+    "source_title": "小行星164207",
+    "source_name": "zh_wikipedia",
+    "schema_version": "2.0"
+  }
+]

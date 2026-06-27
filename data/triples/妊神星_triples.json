@@ -1,0 +1,44 @@
+[
+  {
+    "subject": "妊神星",
+    "relation": "HAS_RADIUS",
+    "object": "718 km",
+    "pattern": "infobox",
+    "raw": "平均半径: ≈718 km 575 +125 −50 km ( 史匹哲 ） 762 ± 83 km （ 赫歇尔 ）",
+    "source": "zh_wikipedia",
+    "source_role": "primary",
+    "origin": "html_fallback",
+    "type": "triple_candidate",
+    "source_title": "妊神星",
+    "source_name": "zh_wikipedia",
+    "schema_version": "2.0"
+  },
+  {
+    "subject": "妊神星",
+    "relation": "HAS_MASS",
+    "object": "4.006 × 10 21 kg",
+    "pattern": "infobox",
+    "raw": "质量: (4.006 ± 0.040)×10 21 kg 0.00066 地球",
+    "source": "zh_wikipedia",
+    "source_role": "primary",
+    "origin": "html_fallback",
+    "type": "triple_candidate",
+    "source_title": "妊神星",
+    "source_name": "zh_wikipedia",
+    "schema_version": "2.0"
+  },
+  {
+    "subject": "妊神星",
+    "relation": "IS_A",
+    "object": "类冥天体",
+    "pattern": "rule",
+    "raw": "妊神星是一颗 类冥天体",
+    "source": "zh_wikipedia",
+    "source_role": "primary",
+    "origin": "html_fallback",
+    "type": "triple_candidate",
+    "source_title": "妊神星",
+    "source_name": "zh_wikipedia",
+    "schema_version": "2.0"
+  }
+]

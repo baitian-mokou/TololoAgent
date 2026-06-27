@@ -1,0 +1,16 @@
+[
+  {
+    "subject": "小行星15760",
+    "relation": "HAS_RADIUS",
+    "object": "54 km",
+    "pattern": "infobox",
+    "raw": "平均半径: 54 km 83.5 km",
+    "source": "zh_wikipedia",
+    "source_role": "primary",
+    "origin": "html_fallback",
+    "type": "triple_candidate",
+    "source_title": "小行星15760",
+    "source_name": "zh_wikipedia",
+    "schema_version": "2.0"
+  }
+]

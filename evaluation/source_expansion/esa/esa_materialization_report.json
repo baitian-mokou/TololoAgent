@@ -1,0 +1,61 @@
+{
+  "source_name": "esa",
+  "source_schema_version": "esa_shadow_ready_v1",
+  "source_role": "primary",
+  "namespace_status": "shadow_only",
+  "materialization_mode": "offline_esa_smoke_fixture_v1",
+  "cutover_ready": false,
+  "raw_dir": "F:\\知识表示与处理结课作业\\第二次托洛洛测试 -重大进展\\data\\raw_json\\esa",
+  "triples_dir": "F:\\知识表示与处理结课作业\\第二次托洛洛测试 -重大进展\\data\\triples\\esa",
+  "raw_files": [
+    "F:\\知识表示与处理结课作业\\第二次托洛洛测试 -重大进展\\data\\raw_json\\esa\\smoke_fixture.json"
+  ],
+  "triple_files": [
+    "F:\\知识表示与处理结课作业\\第二次托洛洛测试 -重大进展\\data\\triples\\esa\\火星快车号_triples.json"
+  ],
+  "narrative_files": [
+    "F:\\知识表示与处理结课作业\\第二次托洛洛测试 -重大进展\\data\\triples\\esa\\火星快车号_narratives.json"
+  ],
+  "pipeline": {
+    "total_triples": 1,
+    "total_narratives": 1,
+    "total_files": 1,
+    "pipeline": "esa_source_adapter_v1",
+    "source_schema_version": "esa_shadow_ready_v1",
+    "materialization_mode": "offline_esa_smoke_fixture_v1",
+    "cutover_ready": false,
+    "time": "2026-06-27T04:58:49.026605+00:00"
+  },
+  "metadata_contract": {
+    "passed": true,
+    "checked_records": 2,
+    "break_count": 0,
+    "breaks": []
+  },
+  "graph": {
+    "skipped": true,
+    "reason": "graph_loader_not_configured"
+  },
+  "chroma": {
+    "skipped": true,
+    "reason": "chroma_store_not_configured"
+  },
+  "probes": {
+    "skipped": true,
+    "reason": "agent_not_configured"
+  },
+  "readiness_gate": {
+    "passed": true,
+    "cutover_ready": false,
+    "reason": "shadow namespace is auditable; active-source cutover remains disabled"
+  },
+  "materialization": {
+    "timestamp_utc": "2026-06-27T04:58:49.029044+00:00",
+    "output_path": "F:\\知识表示与处理结课作业\\第二次托洛洛测试 -重大进展\\evaluation\\source_expansion\\esa\\esa_materialization_report.json"
+  },
+  "raw_copy_status": {
+    "written": true,
+    "path": "F:\\知识表示与处理结课作业\\第二次托洛洛测试 -重大进展\\data\\raw_json\\esa\\smoke_fixture.json",
+    "error": ""
+  }
+}

@@ -1,0 +1,52 @@
+[
+  {
+    "page_title": "天文统计学",
+    "section": "概要",
+    "chunk_index": 0,
+    "content": "天文统计学 （英语： Astrostatistics ）是一门涉及了 天体物理学 ， 统计分析 和 数据挖掘 的交叉学科。\n它用于处理自动化巡天扫描生成的海量数据，刻画复杂的数据集，并利用天文学数据限制天体物理理论。\n天文统计学涉及了统计学的许多分支，包括 非参数统计 、 多元回归 和多元分类， 时间序列分析 ，特别是 贝叶斯推断 。",
+    "path": "概要",
+    "keywords": [
+      "天文统计学",
+      "英语",
+      "是一门涉及了",
+      "天体物理学",
+      "统计分析",
+      "数据挖掘",
+      "的交叉学科",
+      "它用于处理自动化巡天扫描生成的海量数据"
+    ],
+    "chunk_id": "d7cf546d9dd1",
+    "source": "zh_wikipedia",
+    "source_role": "primary",
+    "origin": "html_fallback",
+    "type": "embedding_chunk",
+    "source_title": "天文统计学",
+    "source_name": "zh_wikipedia",
+    "schema_version": "2.0"
+  },
+  {
+    "page_title": "天文统计学",
+    "section": "专业协会",
+    "chunk_index": 1,
+    "content": "天文统计学的从业人员分属于 国际天文统计学协会 （附属于 国际统计学会 ）、 国际天文学联盟 天文统计学和天文信息学工作组， 美国天文学会 天文信息学和天文统计学工作组、 美国统计协会 天文统计学兴趣小组。\n所有这些组织都加入了 天文统计学和天文信息学门户 （ 页面存档备份 ，存于 互联网档案馆 ）网站。",
+    "path": "专业协会",
+    "keywords": [
+      "天文统计学的从业人员分属于",
+      "国际天文统计学协会",
+      "附属于",
+      "国际统计学会",
+      "国际天文学联盟",
+      "天文统计学和天文信息学工作组",
+      "美国天文学会",
+      "天文信息学和天文统计学工作组"
+    ],
+    "chunk_id": "7d0d0ace61b3",
+    "source": "zh_wikipedia",
+    "source_role": "primary",
+    "origin": "html_fallback",
+    "type": "embedding_chunk",
+    "source_title": "天文统计学",
+    "source_name": "zh_wikipedia",
+    "schema_version": "2.0"
+  }
+]

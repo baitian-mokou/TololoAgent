@@ -1,0 +1,72 @@
+[
+  {
+    "subject": "土星",
+    "relation": "HAS_RADIUS",
+    "object": "232 km",
+    "pattern": "infobox",
+    "raw": "平均半径: 7007582320000000000♠ 58 232 km 7000914020000000000♠ 9.1402 Earths",
+    "source": "zh_wikipedia",
+    "source_role": "primary",
+    "origin": "html_fallback",
+    "type": "triple_candidate",
+    "source_title": "土星",
+    "source_name": "zh_wikipedia",
+    "schema_version": "2.0"
+  },
+  {
+    "subject": "土星",
+    "relation": "HAS_RADIUS",
+    "object": "268 km",
+    "pattern": "infobox",
+    "raw": "赤道半径: 7007602680000000000♠ 60 268 km 9.4492地球半径",
+    "source": "zh_wikipedia",
+    "source_role": "primary",
+    "origin": "html_fallback",
+    "type": "triple_candidate",
+    "source_title": "土星",
+    "source_name": "zh_wikipedia",
+    "schema_version": "2.0"
+  },
+  {
+    "subject": "土星",
+    "relation": "HAS_RADIUS",
+    "object": "10 km",
+    "pattern": "infobox",
+    "raw": "极半径: 54 364 ± 10 公里 8.5521地球半径",
+    "source": "zh_wikipedia",
+    "source_role": "primary",
+    "origin": "html_fallback",
+    "type": "triple_candidate",
+    "source_title": "土星",
+    "source_name": "zh_wikipedia",
+    "schema_version": "2.0"
+  },
+  {
+    "subject": "土星",
+    "relation": "HAS_MASS",
+    "object": "5.6846 × 10 26 kg",
+    "pattern": "infobox",
+    "raw": "质量: 5.6846×10 26 公斤 95.152地球",
+    "source": "zh_wikipedia",
+    "source_role": "primary",
+    "origin": "html_fallback",
+    "type": "triple_candidate",
+    "source_title": "土星",
+    "source_name": "zh_wikipedia",
+    "schema_version": "2.0"
+  },
+  {
+    "subject": "土星",
+    "relation": "IS_A",
+    "object": "外行星",
+    "pattern": "rule",
+    "raw": "土星是 外行星",
+    "source": "zh_wikipedia",
+    "source_role": "primary",
+    "origin": "html_fallback",
+    "type": "triple_candidate",
+    "source_title": "土星",
+    "source_name": "zh_wikipedia",
+    "schema_version": "2.0"
+  }
+]

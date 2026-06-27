@@ -1,0 +1,16 @@
+[
+  {
+    "subject": "Google地球",
+    "relation": "IS_A",
+    "object": "虚拟地球仪",
+    "pattern": "infobox",
+    "raw": "类型: 虚拟地球仪",
+    "source": "zh_wikipedia",
+    "source_role": "primary",
+    "origin": "html_fallback",
+    "type": "triple_candidate",
+    "source_title": "Google地球",
+    "source_name": "zh_wikipedia",
+    "schema_version": "2.0"
+  }
+]

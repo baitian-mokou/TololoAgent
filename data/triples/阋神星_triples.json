@@ -1,0 +1,30 @@
+[
+  {
+    "subject": "阋神星",
+    "relation": "HAS_RADIUS",
+    "object": "6 km",
+    "pattern": "infobox",
+    "raw": "平均半径: 7006116300000000000♠ 1163 ± 6 km",
+    "source": "zh_wikipedia",
+    "source_role": "primary",
+    "origin": "html_fallback",
+    "type": "triple_candidate",
+    "source_title": "阋神星",
+    "source_name": "zh_wikipedia",
+    "schema_version": "2.0"
+  },
+  {
+    "subject": "阋神星",
+    "relation": "HAS_MASS",
+    "object": "1.67 × 10 22 kg",
+    "pattern": "infobox",
+    "raw": "质量: (1.67±0.02)×10 22 kg 0.002 地球质量",
+    "source": "zh_wikipedia",
+    "source_role": "primary",
+    "origin": "html_fallback",
+    "type": "triple_candidate",
+    "source_title": "阋神星",
+    "source_name": "zh_wikipedia",
+    "schema_version": "2.0"
+  }
+]

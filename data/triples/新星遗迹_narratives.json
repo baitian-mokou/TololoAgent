@@ -1,0 +1,27 @@
+[
+  {
+    "page_title": "新星遗迹",
+    "section": "概要",
+    "chunk_index": 0,
+    "content": "围绕在反复新星 罗盘座T 周围的新星残骸。\n新星残骸 是恒星在经历 新星 的巨大爆炸之后残留下的物质，物质喷发的速度大约是1,000公里/秒。\n因为质量低于行星状星云和超新星残骸，所以生命期仅约数个世纪，因此新星残骸远比行星状星云和超新星残骸更为罕见。",
+    "path": "概要",
+    "keywords": [
+      "围绕在反复新星",
+      "罗盘座",
+      "周围的新星残骸",
+      "新星残骸",
+      "是恒星在经历",
+      "新星",
+      "的巨大爆炸之后残留下的物质",
+      "物质喷发的速度大约是"
+    ],
+    "chunk_id": "1b8460539faf",
+    "source": "zh_wikipedia",
+    "source_role": "primary",
+    "origin": "html_fallback",
+    "type": "embedding_chunk",
+    "source_title": "新星遗迹",
+    "source_name": "zh_wikipedia",
+    "schema_version": "2.0"
+  }
+]

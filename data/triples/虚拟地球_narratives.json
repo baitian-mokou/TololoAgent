@@ -1,0 +1,52 @@
+[
+  {
+    "page_title": "虚拟地球",
+    "section": "概要",
+    "chunk_index": 0,
+    "content": "NASA WorldWind , 一个开源的虚拟地球软件，还有星星、大气层及太阳光效果 虚拟地球 是一个关于 地球 或 世界 的 三维空间 （3D）的 电脑软件 模型。\n虚拟地球让用户可自由在虚拟环境中移动，转换角度和位置。\n与传统的地球仪比较，虚拟地球可提供更多的互动功能，更多不同的视觉效果，不同的视角，不同层面的 地球 ，除能提供地球的 卫星图片 、航空照片、 地图 、街道外，还能提供 街景 、大厦模型等，此外，有些虚拟地球还包括其他资讯如人口特征等。",
+    "path": "概要",
+    "keywords": [
+      "地球",
+      "一个开源的虚拟地球软件",
+      "还有星星",
+      "大气层及太阳光效果",
+      "虚拟地球",
+      "是一个关于",
+      "世界",
+      "三维空间"
+    ],
+    "chunk_id": "ba622f006a9d",
+    "source": "zh_wikipedia",
+    "source_role": "primary",
+    "origin": "html_fallback",
+    "type": "embedding_chunk",
+    "source_title": "虚拟地球",
+    "source_name": "zh_wikipedia",
+    "schema_version": "2.0"
+  },
+  {
+    "page_title": "虚拟地球",
+    "section": "历史",
+    "chunk_index": 1,
+    "content": "在1997年10月20日，微软推出首个离线版的虚拟地球，名为 Encarta Virtual Globe 98 。\n后来另一间软件公司， Cosmi公司，也在1999年推出 3D World Atlas。\n全球首个公开免费开源的上线的虚拟地球，是 NASA World Wind ，于2004年中推出。\n首个著名的虚拟地球软件 Google Earth ，则于2005年年中推出。",
+    "path": "历史",
+    "keywords": [
+      "微软推出首个离线版的虚拟地球",
+      "名为",
+      "后来另一间软件公司",
+      "公司",
+      "也在",
+      "年推出",
+      "全球首个公开免费开源的上线的虚拟地球",
+      "年中推出"
+    ],
+    "chunk_id": "6e4b5a63a456",
+    "source": "zh_wikipedia",
+    "source_role": "primary",
+    "origin": "html_fallback",
+    "type": "embedding_chunk",
+    "source_title": "虚拟地球",
+    "source_name": "zh_wikipedia",
+    "schema_version": "2.0"
+  }
+]

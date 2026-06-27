@@ -1,0 +1,58 @@
+{
+  "ui": {
+    "theme": "dark",
+    "font_scale": 1.0,
+    "chat_bg": "#0d1117",
+    "chat_fg": "#e6edf3",
+    "user_color": "#58a6ff",
+    "ai_color": "#3fb950",
+    "always_on_top": false,
+    "minimize_to_tray": false,
+    "language": "zh_CN"
+  },
+  "tololo_theme": {
+    "primary": "#6c5ce7",
+    "bg": "#1a1a2e",
+    "fg": "#e0e0e0",
+    "accent": "#00b894",
+    "secondary_bg": "#16213e"
+  },
+  "connect": {
+    "neo4j_uri": "bolt://127.0.0.1:7687",
+    "neo4j_user": "neo4j",
+    "neo4j_password": "${NEO4J_PASSWORD}",
+    "ollama_url": "http://localhost:11434",
+    "ollama_model": "qwen3:4b",
+    "ollama_timeout": 60,
+    "chroma_path": ""
+  },
+  "llm_source": {
+    "use_remote_api": false,
+    "api_base": "https://api.deepseek.com/",
+    "remote_model": "deepseek-v4-flash",
+    "api_key": "${TOLOLO_REMOTE_API_KEY}"
+  },
+  "agent": {
+    "system_role": "你叫托洛洛，是一个专业但是爱说脏话的太阳系天文学知识助手，基于托洛洛太阳系知识图谱系统为用户解答问题。",
+    "retrieval_instruction": "请根据以下知识图谱检索结果，用中文回答用户的问题。如果检索结果不足以回答问题，请如实说明，不要编造信息。回答应简洁准确，可适当补充天文学常识。",
+    "fallback_response": "请基于以上知识检索结果回答问题。如果知识库中没有相关信息，请说'知识库中暂无相关信息'，然后你可以基于你的常识补充说明。",
+    "temperature": 1.0055248618784531,
+    "top_p": 0.9,
+    "style_preset": "default",
+    "max_tokens": 2560,
+    "history_limit": 10
+  },
+  "advanced": {
+    "crawler_delay": 2.5,
+    "crawler_timeout": 30,
+    "crawler_concurrency": 1,
+    "flask_port": 5001,
+    "auto_open_browser": true,
+    "auto_check_services": true,
+    "save_chat_log": false,
+    "chat_log_dir": "",
+    "log_level": "INFO",
+    "neo4j_search_limit": 20,
+    "chroma_search_limit": 5
+  }
+}

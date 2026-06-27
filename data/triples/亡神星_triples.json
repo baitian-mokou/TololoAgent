@@ -1,0 +1,16 @@
+[
+  {
+    "subject": "亡神星",
+    "relation": "HAS_MASS",
+    "object": "7.5 × 10 20 kg",
+    "pattern": "infobox",
+    "raw": "质量: ~7.5×10 20 公斤",
+    "source": "zh_wikipedia",
+    "source_role": "primary",
+    "origin": "html_fallback",
+    "type": "triple_candidate",
+    "source_title": "亡神星",
+    "source_name": "zh_wikipedia",
+    "schema_version": "2.0"
+  }
+]

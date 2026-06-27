@@ -1,0 +1,30 @@
+[
+  {
+    "subject": "小行星55637",
+    "relation": "DISCOVERED_BY",
+    "object": "Spacewatch",
+    "pattern": "infobox",
+    "raw": "发现者: Spacewatch",
+    "source": "zh_wikipedia",
+    "source_role": "primary",
+    "origin": "html_fallback",
+    "type": "triple_candidate",
+    "source_title": "小行星55637",
+    "source_name": "zh_wikipedia",
+    "schema_version": "2.0"
+  },
+  {
+    "subject": "小行星55637",
+    "relation": "HAS_MASS",
+    "object": "1.25 × 10 20 kg",
+    "pattern": "infobox",
+    "raw": "质量: 7020125000000000000♠ (1.25 ± 0.03) × 10 20 公斤",
+    "source": "zh_wikipedia",
+    "source_role": "primary",
+    "origin": "html_fallback",
+    "type": "triple_candidate",
+    "source_title": "小行星55637",
+    "source_name": "zh_wikipedia",
+    "schema_version": "2.0"
+  }
+]

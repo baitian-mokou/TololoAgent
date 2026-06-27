@@ -1,0 +1,30 @@
+[
+  {
+    "subject": "水星",
+    "relation": "HAS_RADIUS",
+    "object": "1.0 km",
+    "pattern": "infobox",
+    "raw": "平均半径: 2,440.7 ± 1.0 km 0.387370494907902 地球半径",
+    "source": "zh_wikipedia",
+    "source_role": "primary",
+    "origin": "html_fallback",
+    "type": "triple_candidate",
+    "source_title": "水星",
+    "source_name": "zh_wikipedia",
+    "schema_version": "2.0"
+  },
+  {
+    "subject": "水星",
+    "relation": "HAS_MASS",
+    "object": "3.3022 × 10 23 kg",
+    "pattern": "infobox",
+    "raw": "质量: 3.3022×10 23 kg 0.055 地球质量",
+    "source": "zh_wikipedia",
+    "source_role": "primary",
+    "origin": "html_fallback",
+    "type": "triple_candidate",
+    "source_title": "水星",
+    "source_name": "zh_wikipedia",
+    "schema_version": "2.0"
+  }
+]

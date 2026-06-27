@@ -1,0 +1,27 @@
+[
+  {
+    "page_title": "智神星族",
+    "section": "概要",
+    "chunk_index": 0,
+    "content": "智神星族 是以 智神星 为首的 小行星家族 ，特征是位于 主带 中间，有高倾角的 B-型 小行星 （Cellino et al (2002)）. 为首的智神星是平均直径530公里的巨大小行星，其他的成员则都非常小（最大的是5222 Ioffe，估计直径只有22公里。\n），这暗示了其他成员可能都是经由所谓的 陨石坑化 ，由撞击才从智神星分离出来的。\n由图可见她们的 固有轨道元素 都在相近的范围内。\n目前 暦元 的 轨道元素 震荡 范围可以参考MPCORB的资料库 （ 页面存档备份 ，存于 互联网档案馆 ）)，大约在 看起来这个家族真的是经由对智神星的撞击形成的，因为家族成员的光谱都是罕见的 B-型 。\n这个家族最早是在1928年被 平山清次 注意到，稍后也被布劳艾（Brouwer，1951年）、Kozai（1979年）和勒麦特与莫比德利（Lemaitre & Morbidelli，1994年）注意到。",
+    "path": "概要",
+    "keywords": [
+      "注意到",
+      "智神星族",
+      "是以",
+      "智神星",
+      "为首的",
+      "小行星家族",
+      "特征是位于",
+      "主带"
+    ],
+    "chunk_id": "ac16e063170f",
+    "source": "zh_wikipedia",
+    "source_role": "primary",
+    "origin": "html_fallback",
+    "type": "embedding_chunk",
+    "source_title": "智神星族",
+    "source_name": "zh_wikipedia",
+    "schema_version": "2.0"
+  }
+]

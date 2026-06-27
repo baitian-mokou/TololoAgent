@@ -1,0 +1,16 @@
+[
+  {
+    "subject": "小行星",
+    "relation": "IS_A",
+    "object": "太阳系小天体",
+    "pattern": "rule",
+    "raw": "小行星属于 太阳系小天体",
+    "source": "zh_wikipedia",
+    "source_role": "primary",
+    "origin": "html_fallback",
+    "type": "triple_candidate",
+    "source_title": "小行星",
+    "source_name": "zh_wikipedia",
+    "schema_version": "2.0"
+  }
+]

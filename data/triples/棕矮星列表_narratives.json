@@ -1,0 +1,21 @@
+[
+  {
+    "page_title": "棕矮星列表",
+    "section": "相关项目",
+    "chunk_index": 0,
+    "content": "不确定存在的太阳系外行星列表 确定存在的太阳系外行星列表 NewPP limit report Parsed by mw‐web.codfw.main‐b76fc9c4b‐xvckz Cached time: 20260613081726 Cache expiry: 2592000 Reduced expiry: false Complications: [show‐toc] CPU time usage: 0.091 seconds Real time usage: 0.101 seconds Preprocessor visited node count: 2083/1000000 Revision size: 10134/2097152 bytes Post‐expand include size: 8437/2097152 bytes Template argument size: 1315/2097152 bytes Highest expansion depth: 4/100 Expensive parser function count: 0/500 Unstrip recursion depth: 0/20 Unstrip post‐expand size: 0/5000000 bytes Number of Wikibase entities loaded: 0/500 Transclusion expansion time report (%,ms,calls,template) 100.00% 17.577 1 -total 33.64% 5.912 52 Template:DEC 29.79% 5.237 52 Template:RA Render ID 4fb33d61-6700-11f1-accf-0fba60914011 Saved in parser cache with key zhwiki:pcache:713086:|#|:idhash:canonical!zh and timestamp 20260613081726 and revision id 68651122. Rendering was triggered because: page_view",
+    "path": "相关项目",
+    "keywords": [
+      "不确定存在的太阳系外行星列表",
+      "确定存在的太阳系外行星列表"
+    ],
+    "chunk_id": "33868b25c6dd",
+    "source": "zh_wikipedia",
+    "source_role": "primary",
+    "origin": "html_fallback",
+    "type": "embedding_chunk",
+    "source_title": "棕矮星列表",
+    "source_name": "zh_wikipedia",
+    "schema_version": "2.0"
+  }
+]

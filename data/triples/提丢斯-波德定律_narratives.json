@@ -1,0 +1,52 @@
+[
+  {
+    "page_title": "提丢斯-波德定律",
+    "section": "概要",
+    "chunk_index": 0,
+    "content": "提丢斯-波得定则 （ Titius-Bode law ）是关于 太阳系 中 行星 轨道半径的一个简单的几何学规则。\n它是在1766年时，由 德国 的一位大学教授 约翰·丹尼尔·提丢斯 所提出，后来被 柏林天文台 的台长 约翰·波得 （Johann Elert Bode）归纳成了一个 经验公式 来表示。\n现在的天文学界，多认为波得定则只是一个巧合。",
+    "path": "概要",
+    "keywords": [
+      "提丢斯",
+      "约翰",
+      "波得定则",
+      "是关于",
+      "太阳系",
+      "行星",
+      "轨道半径的一个简单的几何学规则",
+      "它是在"
+    ],
+    "chunk_id": "db9fd3b8e9e3",
+    "source": "zh_wikipedia",
+    "source_role": "primary",
+    "origin": "html_fallback",
+    "type": "embedding_chunk",
+    "source_title": "提丢斯-波德定律",
+    "source_name": "zh_wikipedia",
+    "schema_version": "2.0"
+  },
+  {
+    "page_title": "提丢斯-波德定律",
+    "section": "公式",
+    "chunk_index": 1,
+    "content": "这个公式可以表述为： a = n + 4 10 {\\displaystyle a={\\frac {n+4}{10}}} n = 0, 3, 6, 12, 24, 48...（n≥3时，后一个数字为前一个数字的2倍） 现代的公式把 a 作为 行星 到 太阳 的平均距离（一个 天文单位 ，AU，＝1亿4960万 km）： a = 0.4 + 0.3 ⋅ ⋅ 2 n {\\displaystyle \\textstyle a=0.4+0.3\\cdot 2^{n}} （ n = − ∞ , 0 , 1 , 2 … {\\displaystyle \\scriptstyle n=-\\infty ,0,1,2\\ldots } ） 提丢斯-波得定则和实际差异图 2 在提丢斯-波得定则发现之时的1801年到1860年期间，谷神星被认为是一颗行星，而冥王星从1930年到2006年被认为是一颗行星。\n两者现在都被归类为 矮行星 。\n3 关于冥王星，根据提丢斯-波得定则的距离与实际距离相差很大，但当冥王星被视为海王星以外的第7 颗行星时，实际距离39.46与理论距离38.80仅相差1.62%。\n如果提丢斯-波得定则和太阳系演化理论相关，这可能是一个要点。",
+    "path": "公式",
+    "keywords": [
+      "年到",
+      "这个公式可以表述为",
+      "后一个数字为前一个数字的",
+      "现代的公式把",
+      "作为",
+      "行星",
+      "太阳",
+      "的平均距离"
+    ],
+    "chunk_id": "cfe21c632b1d",
+    "source": "zh_wikipedia",
+    "source_role": "primary",
+    "origin": "html_fallback",
+    "type": "embedding_chunk",
+    "source_title": "提丢斯-波德定律",
+    "source_name": "zh_wikipedia",
+    "schema_version": "2.0"
+  }
+]

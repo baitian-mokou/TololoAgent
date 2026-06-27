@@ -1,0 +1,22 @@
+[
+  {
+    "section": "大气",
+    "content": "土星 fixture 中的大气成分以氢和氦为主，也保留质量和半径数值。",
+    "keywords": [
+      "土星",
+      "大气",
+      "质量"
+    ],
+    "page_title": "土星",
+    "chunk_index": 0,
+    "path": "大气",
+    "chunk_id": "wikidata_土星_00",
+    "source": "wikidata",
+    "source_name": "wikidata",
+    "source_role": "primary",
+    "origin": "api",
+    "type": "embedding_chunk",
+    "schema_version": "wikidata_shadow_ready_v1",
+    "source_title": "土星"
+  }
+]

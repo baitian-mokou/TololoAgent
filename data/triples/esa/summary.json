@@ -1,0 +1,10 @@
+{
+  "total_triples": 1,
+  "total_narratives": 1,
+  "total_files": 1,
+  "pipeline": "esa_source_adapter_v1",
+  "source_schema_version": "esa_shadow_ready_v1",
+  "materialization_mode": "offline_esa_smoke_fixture_v1",
+  "cutover_ready": false,
+  "time": "2026-06-27T04:58:49.026605+00:00"
+}

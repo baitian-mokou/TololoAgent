@@ -1,0 +1,49 @@
+import unittest
+
+from src.source_adapters.nasa import parse_nasa_fact_sheet_candidates
+
+
+NASA_TABLE_FIXTURE = """
+<html><body>
+<table>
+  <tr><th>Field</th><th>Mars</th></tr>
+  <tr><td>Mass (10^24 kg)</td><td>0.64171</td></tr>
+  <tr><td>Mean radius (km)</td><td>3389.5</td></tr>
+  <tr><td>Atmospheric composition</td><td>Carbon dioxide; Nitrogen; Argon</td></tr>
+  <tr><td>Distance from Sun (10^6 km)</td><td>227.9</td></tr>
+</table>
+</body></html>
+"""
+
+
+class NasaFactSheetParserTests(unittest.TestCase):
+    def test_strict_table_parser_extracts_required_fields(self):
+        facts = parse_nasa_fact_sheet_candidates(
+            NASA_TABLE_FIXTURE,
+            payload={
+                "source_record_id": "nasa-mars-test",
+                "source_url": "https://nssdc.gsfc.nasa.gov/planetary/factsheet/marsfact.html",
+            },
+            fetched_at="2026-01-01T00:00:00+00:00",
+            schema_version="nasa_shadow_ready_v1",
+        )
+
+        by_relation = {fact["relation"]: fact for fact in facts}
+        self.assertEqual(set(by_relation), {"HAS_MASS", "HAS_RADIUS", "HAS_ATMOSPHERE", "ORBITS"})
+        self.assertTrue(by_relation["HAS_MASS"]["normalized_value"].startswith("6.4171"))
+        self.assertEqual(by_relation["HAS_MASS"]["unit"], "kg")
+        self.assertEqual(by_relation["HAS_RADIUS"]["normalized_value"], "3389.5")
+        self.assertEqual(by_relation["HAS_RADIUS"]["unit"], "km")
+        self.assertEqual(by_relation["HAS_ATMOSPHERE"]["normalized_value"], "CO2;N2;Ar")
+        self.assertTrue(by_relation["ORBITS"]["derived"])
+        self.assertEqual(by_relation["ORBITS"]["derived_from"], "Distance from Sun (10^6 km)")
+        self.assertTrue(by_relation["ORBITS"]["relation_semantics_warning"])
+        for fact in facts:
+            self.assertEqual(fact["source_name"], "nasa")
+            self.assertEqual(fact["schema_version"], "nasa_shadow_ready_v1")
+            self.assertIn("table_field", fact)
+            self.assertIn("source_url", fact)
+
+
+if __name__ == "__main__":
+    unittest.main()

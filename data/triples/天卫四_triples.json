@@ -1,0 +1,44 @@
+[
+  {
+    "subject": "天卫四",
+    "relation": "DISCOVERED_BY",
+    "object": "威廉·赫歇尔",
+    "pattern": "infobox",
+    "raw": "发现者: 威廉·赫歇尔",
+    "source": "zh_wikipedia",
+    "source_role": "primary",
+    "origin": "html_fallback",
+    "type": "triple_candidate",
+    "source_title": "天卫四",
+    "source_name": "zh_wikipedia",
+    "schema_version": "2.0"
+  },
+  {
+    "subject": "天卫四",
+    "relation": "HAS_RADIUS",
+    "object": "2.6 km",
+    "pattern": "infobox",
+    "raw": "平均半径: 761.4 ± 2.6 公里（地球的0.1194倍）",
+    "source": "zh_wikipedia",
+    "source_role": "primary",
+    "origin": "html_fallback",
+    "type": "triple_candidate",
+    "source_title": "天卫四",
+    "source_name": "zh_wikipedia",
+    "schema_version": "2.0"
+  },
+  {
+    "subject": "天卫四",
+    "relation": "HAS_MASS",
+    "object": "0.075 × 10 21 kg",
+    "pattern": "infobox",
+    "raw": "质量: 3.014 ± 0.075 × 10 21 kg (5.046 × 10 −4 Earths)",
+    "source": "zh_wikipedia",
+    "source_role": "primary",
+    "origin": "html_fallback",
+    "type": "triple_candidate",
+    "source_title": "天卫四",
+    "source_name": "zh_wikipedia",
+    "schema_version": "2.0"
+  }
+]

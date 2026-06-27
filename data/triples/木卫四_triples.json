@@ -1,0 +1,72 @@
+[
+  {
+    "subject": "木卫四",
+    "relation": "DISCOVERED_BY",
+    "object": "伽利略·伽利莱",
+    "pattern": "infobox",
+    "raw": "发现者: 伽利略·伽利莱",
+    "source": "zh_wikipedia",
+    "source_role": "primary",
+    "origin": "html_fallback",
+    "type": "triple_candidate",
+    "source_title": "木卫四",
+    "source_name": "zh_wikipedia",
+    "schema_version": "2.0"
+  },
+  {
+    "subject": "木卫四",
+    "relation": "HAS_RADIUS",
+    "object": "1.5 km",
+    "pattern": "infobox",
+    "raw": "平均半径: 2410.3 ± 1.5 公里（地球的0.378倍）",
+    "source": "zh_wikipedia",
+    "source_role": "primary",
+    "origin": "html_fallback",
+    "type": "triple_candidate",
+    "source_title": "木卫四",
+    "source_name": "zh_wikipedia",
+    "schema_version": "2.0"
+  },
+  {
+    "subject": "木卫四",
+    "relation": "HAS_MASS",
+    "object": "0.000 137 × 10 23 kg",
+    "pattern": "infobox",
+    "raw": "质量: 1.075 938 ± 0.000 137 × 10 23 公斤 （地球的0.018倍）",
+    "source": "zh_wikipedia",
+    "source_role": "primary",
+    "origin": "html_fallback",
+    "type": "triple_candidate",
+    "source_title": "木卫四",
+    "source_name": "zh_wikipedia",
+    "schema_version": "2.0"
+  },
+  {
+    "subject": "木卫四",
+    "relation": "IS_A",
+    "object": "太阳系 第三大卫星",
+    "pattern": "rule",
+    "raw": "木卫四是 太阳系 第三大卫星",
+    "source": "zh_wikipedia",
+    "source_role": "primary",
+    "origin": "html_fallback",
+    "type": "triple_candidate",
+    "source_title": "木卫四",
+    "source_name": "zh_wikipedia",
+    "schema_version": "2.0"
+  },
+  {
+    "subject": "木卫四",
+    "relation": "IS_A",
+    "object": "同步自转 卫星",
+    "pattern": "rule",
+    "raw": "木卫四属于 同步自转 卫星",
+    "source": "zh_wikipedia",
+    "source_role": "primary",
+    "origin": "html_fallback",
+    "type": "triple_candidate",
+    "source_title": "木卫四",
+    "source_name": "zh_wikipedia",
+    "schema_version": "2.0"
+  }
+]

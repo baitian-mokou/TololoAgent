@@ -1,0 +1,52 @@
+[
+  {
+    "page_title": "客星",
+    "section": "概要",
+    "chunk_index": 0,
+    "content": "客星 ，中国古代 钦天监 对 彗星 、 新星 或 超新星 的称呼。\n太史 亦会使用。\n唐人 李淳风 在《 观象玩占 》提到：“客星，非常之星。\n其出也，无恒时；其居也，无定所。\n忽见忽没，或行或止，不可推算，寓于星辰之间如客，故谓之客星。\n” 《 汉书 · 天文志 》：「 元光 元年六月（前134年），客星见于 房 」 ，是历史上最早的客星记录。",
+    "path": "概要",
+    "keywords": [
+      "客星",
+      "中国古代",
+      "钦天监",
+      "彗星",
+      "新星",
+      "超新星",
+      "的称呼",
+      "太史"
+    ],
+    "chunk_id": "774ce56d7308",
+    "source": "zh_wikipedia",
+    "source_role": "primary",
+    "origin": "html_fallback",
+    "type": "embedding_chunk",
+    "source_title": "客星",
+    "source_name": "zh_wikipedia",
+    "schema_version": "2.0"
+  },
+  {
+    "page_title": "客星",
+    "section": "其他客星记载",
+    "chunk_index": 1,
+    "content": "天关客星 ，公元1054年的一颗 超新星 。\n其 残骸 形成今天的 蟹状星云 。\n《 宋会要 》：「 至和 元年五月，晨出东方，守天关。\n昼如太白，芒角四出，色赤白，凡见二十三日。\n」 《 宋史 ·仁宗本纪》：「 嘉祐 元年三月辛未（1056年4月5日），司天监言：自至和元年五月（1054年7月4日），客星晨出东方，守天关，至是没。\n」",
+    "path": "其他客星记载",
+    "keywords": [
+      "守天关",
+      "天关客星",
+      "公元",
+      "年的一颗",
+      "超新星",
+      "残骸",
+      "形成今天的",
+      "蟹状星云"
+    ],
+    "chunk_id": "f0186d6d77d9",
+    "source": "zh_wikipedia",
+    "source_role": "primary",
+    "origin": "html_fallback",
+    "type": "embedding_chunk",
+    "source_title": "客星",
+    "source_name": "zh_wikipedia",
+    "schema_version": "2.0"
+  }
+]

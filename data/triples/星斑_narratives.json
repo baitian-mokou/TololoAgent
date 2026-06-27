@@ -1,0 +1,102 @@
+[
+  {
+    "page_title": "星斑",
+    "section": "概要",
+    "chunk_index": 0,
+    "content": "以都卜勒成像法呈现的 显微镜座BO 表面的星斑。\n星斑 相当于出现在其他恒星上的 太阳黑子 。\n太阳黑子因为很小而难以测量其对光度变化的影响，但观测到的星斑远比在 太阳 上的巨大，可以占据30%观测到的恒星表面，这相当于太阳黑子的100倍以上。",
+    "path": "概要",
+    "keywords": [
+      "以都卜勒成像法呈现的",
+      "显微镜座",
+      "表面的星斑",
+      "星斑",
+      "相当于出现在其他恒星上的",
+      "太阳黑子",
+      "太阳黑子因为很小而难以测量其对光度变化的影响",
+      "但观测到的星斑远比在"
+    ],
+    "chunk_id": "b2e2abc56b11",
+    "source": "zh_wikipedia",
+    "source_role": "primary",
+    "origin": "html_fallback",
+    "type": "embedding_chunk",
+    "source_title": "星斑",
+    "source_name": "zh_wikipedia",
+    "schema_version": "2.0"
+  },
+  {
+    "page_title": "星斑",
+    "section": "发现和测量",
+    "chunk_index": 1,
+    "content": "要检测和测量星斑的尺度有几种方法可以使用。\n对快速转动的恒星 － 都卜勒成像 和 塞曼-都卜勒成像 因为谱线的分裂是 塞曼效应 造成的，使用塞曼-都卜勒影像技术可以直接检测和测量恒星的 磁场 ，并且显示出磁场的大小和方向。\n对转动缓慢的恒星 － 线深比率（Line Depth Ratio，LDR）。\n此法必须测量两条不同的谱线，其中一条对温度敏感而另一条则不是。\n因为星斑的温度比周围要低，因此对温度敏感的谱线会改变它的吸收率（深度）。\n从这两条谱线的差异就可以测量出星斑的温度和大小，而温度的误差可以精准至10K。\n对 食双星 － 可以制作两颗星的星斑和影像的食像图",
+    "path": "发现和测量",
+    "keywords": [
+      "都卜勒成像",
+      "要检测和测量星斑的尺度有几种方法可以使用",
+      "对快速转动的恒星",
+      "塞曼",
+      "因为谱线的分裂是",
+      "塞曼效应",
+      "造成的",
+      "使用塞曼"
+    ],
+    "chunk_id": "4b2feebf160f",
+    "source": "zh_wikipedia",
+    "source_role": "primary",
+    "origin": "html_fallback",
+    "type": "embedding_chunk",
+    "source_title": "星斑",
+    "source_name": "zh_wikipedia",
+    "schema_version": "2.0"
+  },
+  {
+    "page_title": "星斑",
+    "section": "活动周期",
+    "chunk_index": 2,
+    "content": "星斑在恒星表面的分布和横越，与太阳的情形类似，但仍会因为恒星的不同而有所不同，像是与恒星是不是 联星 有关。\n在其他的恒星上也观察到与太阳相同形式的活动周期，相当于太阳的11年周期（两倍）。\n有些恒星有更长的周期，可能类似于太阳的 蒙德极小期 。",
+    "path": "活动周期",
+    "keywords": [
+      "星斑在恒星表面的分布和横越",
+      "与太阳的情形类似",
+      "但仍会因为恒星的不同而有所不同",
+      "像是与恒星是不是",
+      "联星",
+      "有关",
+      "在其他的恒星上也观察到与太阳相同形式的活动周期",
+      "相当于太阳的"
+    ],
+    "chunk_id": "bfac69786b78",
+    "source": "zh_wikipedia",
+    "source_role": "primary",
+    "origin": "html_fallback",
+    "type": "embedding_chunk",
+    "source_title": "星斑",
+    "source_name": "zh_wikipedia",
+    "schema_version": "2.0"
+  },
+  {
+    "page_title": "星斑",
+    "section": "失控-突变的周期(Flip-flop cycles)",
+    "chunk_index": 3,
+    "content": "有些活动周期是失控-突变的周期，似乎暗示著星斑可以从一个半球移动至另一个半球。\n在太阳上也能看见相同的现象，在南半球和北半球有著3.8年和2.65年的周期。\n失控-突变现象可以在是联星或是单星的 猎犬座 RS变星 上被观测到，因而在联星和单星之间延伸出各种不同的周期。",
+    "path": "活动周期 > 失控-突变的周期(Flip-flop cycles)",
+    "keywords": [
+      "有些活动周期是失控",
+      "突变的周期",
+      "似乎暗示著星斑可以从一个半球移动至另一个半球",
+      "在太阳上也能看见相同的现象",
+      "在南半球和北半球有著",
+      "年和",
+      "年的周期",
+      "失控"
+    ],
+    "chunk_id": "d7a07f69a3b8",
+    "source": "zh_wikipedia",
+    "source_role": "primary",
+    "origin": "html_fallback",
+    "type": "embedding_chunk",
+    "source_title": "星斑",
+    "source_name": "zh_wikipedia",
+    "schema_version": "2.0"
+  }
+]

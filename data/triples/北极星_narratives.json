@@ -1,0 +1,77 @@
+[
+  {
+    "page_title": "北极星",
+    "section": "概要",
+    "chunk_index": 0,
+    "content": "北极星 是指最靠近北天极的 恒星 ，距离地球约433光年，质量太阳的4.5倍，是 北半球 能见到的 极星 。\n现在的北极星是 小熊座α 星（勾陈一）。\n由于 岁差 的关系，不同时期的北极星是不同的。\n4800年前，当时的北极星是 天龙座α 星（右枢）。\n先秦两汉 时代的北极星是 小熊座β 星（北极二，帝星）。\n唐宋时的北极星是 北极五（天枢） 。\n到2100年左右，目前的 小熊座α （勾陈一）和北极的夹角才会变成最小（只有27'38\"）。\n到31世纪后， 少卫增八 （仙王座γ）将会成为北极星。",
+    "path": "概要",
+    "keywords": [
+      "小熊座",
+      "勾陈一",
+      "北极星",
+      "是指最靠近北天极的",
+      "恒星",
+      "距离地球约",
+      "光年",
+      "质量太阳的"
+    ],
+    "chunk_id": "05c454e7e0b5",
+    "source": "zh_wikipedia",
+    "source_role": "primary",
+    "origin": "html_fallback",
+    "type": "embedding_chunk",
+    "source_title": "北极星",
+    "source_name": "zh_wikipedia",
+    "schema_version": "2.0"
+  },
+  {
+    "page_title": "北极星",
+    "section": "北极星的重要性",
+    "chunk_index": 1,
+    "content": "北极星是天际导航（即透过观察天体来辨别方向）的重要指标，可应用于野外活动和航海活动中。\n在未有指南针之前，尤其是地中海附近的航海民族常透过观察北极星来导航。\n在 儒教 、 道教 及 华人民间信仰 中，北极星又称帝星、 紫微 、 太一 ，是最重要的 神祇 之一。",
+    "path": "北极星的重要性",
+    "keywords": [
+      "北极星是天际导航",
+      "即透过观察天体来辨别方向",
+      "的重要指标",
+      "可应用于野外活动和航海活动中",
+      "在未有指南针之前",
+      "尤其是地中海附近的航海民族常透过观察北极星来导航",
+      "儒教",
+      "道教"
+    ],
+    "chunk_id": "7e28a75d678d",
+    "source": "zh_wikipedia",
+    "source_role": "primary",
+    "origin": "html_fallback",
+    "type": "embedding_chunk",
+    "source_title": "北极星",
+    "source_name": "zh_wikipedia",
+    "schema_version": "2.0"
+  },
+  {
+    "page_title": "北极星",
+    "section": "东亚地区的计时",
+    "chunk_index": 2,
+    "content": "位于 故宫博物院 的赤道式日晷 在东亚地区，尚未出现机械钟表以前，人们主要是以太阳影子作为计时工具。\n例如在 春秋战国 时期出现了 圭表 ，其主要是根据太阳在一年四季的影子落在圭条为准。\n“圭“指地面上的铜条。\n由于不准确性而经过再一次的改良而成为“ 赤道日晷 ”。\n其中赤道日晷的指向依据北极星的位置以及当地的 维度 为准。\n冬季时，由于太阳仰角较低，因此则是看日晷的反面。",
+    "path": "北极星的重要性 > 东亚地区的计时",
+    "keywords": [
+      "位于",
+      "故宫博物院",
+      "的赤道式日晷",
+      "在东亚地区",
+      "尚未出现机械钟表以前",
+      "人们主要是以太阳影子作为计时工具",
+      "例如在",
+      "春秋战国"
+    ],
+    "chunk_id": "a4c3079c0144",
+    "source": "zh_wikipedia",
+    "source_role": "primary",
+    "origin": "html_fallback",
+    "type": "embedding_chunk",
+    "source_title": "北极星",
+    "source_name": "zh_wikipedia",
+    "schema_version": "2.0"
+  }
+]

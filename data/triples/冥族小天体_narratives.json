@@ -1,0 +1,122 @@
+[
+  {
+    "page_title": "冥族小天体",
+    "section": "概要",
+    "chunk_index": 0,
+    "content": "在 天文学 中， 冥族小天体 或 类冥小天体 （ plutino ）是与 海王星 有2：3的 平均运动共振 的 海王星外天体 ， Plutinos 这个名称是在 冥王星 之后才有的，使用了 义大利文 表示 小 的附加语词 -ino ，指像冥王星一样被困在共振轨道中的小天体。\n名称只提到轨道共振，并不涉及其他的物理性质，且原本仅用于描述比冥王星小的共振天体，但现在已将冥王星本身也包含在内。",
+    "path": "概要",
+    "keywords": [
+      "天文学",
+      "冥族小天体",
+      "类冥小天体",
+      "是与",
+      "海王星",
+      "平均运动共振",
+      "海王星外天体",
+      "这个名称是在"
+    ],
+    "chunk_id": "71f850c6b272",
+    "source": "zh_wikipedia",
+    "source_role": "primary",
+    "origin": "html_fallback",
+    "type": "embedding_chunk",
+    "source_title": "冥族小天体",
+    "source_name": "zh_wikipedia",
+    "schema_version": "2.0"
+  },
+  {
+    "page_title": "冥族小天体",
+    "section": "成员",
+    "chunk_index": 1,
+    "content": "'冥族小天体分布在 古柏带 的内层部分，现时已知的古柏带天体中，有近四分一是冥族小天体。\n除了冥王星之外，第一颗冥族小天体是在1993年9月16日发现的1993 RO。\n最大的几颗冥族小天体，包括 冥王星 、 亡神星 （90482，Orcus）、 霭神星 、 伊克西翁 （28978，Ixion）、 拉达曼迪斯 （38083，Rhadamanthus）和 雨神星 （38628，Huya）等。\n以尺寸、 反照率 、和 色指数 比较下最大的冥族小天体。",
+    "path": "成员",
+    "keywords": [
+      "冥族小天体分布在",
+      "古柏带",
+      "的内层部分",
+      "现时已知的古柏带天体中",
+      "有近四分一是冥族小天体",
+      "除了冥王星之外",
+      "第一颗冥族小天体是在",
+      "日发现的"
+    ],
+    "chunk_id": "b9cdc391b696",
+    "source": "zh_wikipedia",
+    "source_role": "primary",
+    "origin": "html_fallback",
+    "type": "embedding_chunk",
+    "source_title": "冥族小天体",
+    "source_name": "zh_wikipedia",
+    "schema_version": "2.0"
+  },
+  {
+    "page_title": "冥族小天体",
+    "section": "轨道特性",
+    "chunk_index": 2,
+    "content": "这张图比较了较大的冥族小天体尺寸和轨道。\n1 最大的 冥王星 、 亡神星 和 伊克西翁 ，以白色的圆圈表示，轨道的 离心率 以红色的线段表示(由 近日点 延展至 远日点 )， 轨道倾角 显示在垂直的轴上。\n查龙 的大小与厄耳枯斯近似，但在图中省略了。\n为了说明轨道的极端范围，三个较小的冥族小天体轨道被以黄色显示， 1 一些尺寸已经精密测定的较大冥族小天体，也显示在图中。\n其他冥族小天体的大小则是假设反射率的比率，并根据绝对亮度来推估的。\n这个图示依据所有已知的冥族小天体绘制的（2006年2月，153个冥族小天体），插入的小直方图显示轨道倾角（'i'，每间隔5 o ）和离心率（'e' ，每间隔0.05）。\n当大多数的冥族小天体有低 轨道倾角 时，一个确实与冥王星相似的轨道特征就呈现出来了：轨道倾角在10-25 o 的范围内，离心率在0.2-0.25之间，而结果是 近日点 在 海王星 轨道的内侧（或接近）， 远日点 则接近 古柏带 的外缘（该处的轨道周期与海王星轨道有1：2的共振）。\n冥族小天体的轨道周期都在247.3年的附近（海王星公转周期的1.5倍），上下的变动只有几年的差异。\n比较特别的冥族小天体有： 2005 EK 298 ，它有极大的 轨道倾角 （40 o ）。\n2003 QV 91 ，他有较大的 离心率 （e = 0.35），使 近日点 在 天王星 与 海王星 的中间，而 远日点 进入了 散射盘面 的范围内。\n2002 KX 14 ，他有接近圆形的轨道（e= 0.04），而且几乎躺在黄道平面上（轨道倾角小于0.5 o ）。\n也可以参考和 QB1天体 的比较。",
+    "path": "轨道 > 轨道特性",
+    "keywords": [
+      "近日点",
+      "远日点",
+      "轨道倾角",
+      "离心率",
+      "每间隔",
+      "的范围内",
+      "海王星",
+      "这张图比较了较大的冥族小天体尺寸和轨道"
+    ],
+    "chunk_id": "5b41839b1c08",
+    "source": "zh_wikipedia",
+    "source_role": "primary",
+    "origin": "html_fallback",
+    "type": "embedding_chunk",
+    "source_title": "冥族小天体",
+    "source_name": "zh_wikipedia",
+    "schema_version": "2.0"
+  },
+  {
+    "page_title": "冥族小天体",
+    "section": "长期稳定项",
+    "chunk_index": 3,
+    "content": "因为冥王星的质量很小，重力影响通常都忽略不计。\n然而，共振的宽度（能产生共振的半轴的范围）非常狭窄，只有几个冥王星的 希尔球 （重力影响）大小。\n当然，与原本的离心率有关，有些冥族小天体会因为与冥王星的交互作用而离开共振的区域。\n数值模拟认为冥族小天体的离心率与冥王星相差在10%-30%的范围内时会在 兆 年的时间尺度上出现不稳定 。",
+    "path": "轨道 > 长期稳定项",
+    "keywords": [
+      "因为冥王星的质量很小",
+      "重力影响通常都忽略不计",
+      "然而",
+      "共振的宽度",
+      "能产生共振的半轴的范围",
+      "非常狭窄",
+      "只有几个冥王星的",
+      "希尔球"
+    ],
+    "chunk_id": "6a707aeea475",
+    "source": "zh_wikipedia",
+    "source_role": "primary",
+    "origin": "html_fallback",
+    "type": "embedding_chunk",
+    "source_title": "冥族小天体",
+    "source_name": "zh_wikipedia",
+    "schema_version": "2.0"
+  },
+  {
+    "page_title": "冥族小天体",
+    "section": "外部连结",
+    "chunk_index": 4,
+    "content": "David Jewitt (Univ. of Hawaii) on Plutinos Minor Planet Center, List of TNOs MPC List of Distant Minor Planets （ 页面存档备份 ，存于 互联网档案馆 ）",
+    "path": "外部连结",
+    "keywords": [
+      "页面存档备份",
+      "存于",
+      "互联网档案馆"
+    ],
+    "chunk_id": "ed650da2927e",
+    "source": "zh_wikipedia",
+    "source_role": "primary",
+    "origin": "html_fallback",
+    "type": "embedding_chunk",
+    "source_title": "冥族小天体",
+    "source_name": "zh_wikipedia",
+    "schema_version": "2.0"
+  }
+]

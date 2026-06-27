@@ -1,0 +1,44 @@
+[
+  {
+    "subject": "金星",
+    "relation": "HAS_RADIUS",
+    "object": "1.0km",
+    "pattern": "infobox",
+    "raw": "平均半径: 6,051.8 ± 1.0km 0.9499个 地球",
+    "source": "zh_wikipedia",
+    "source_role": "primary",
+    "origin": "html_fallback",
+    "type": "triple_candidate",
+    "source_title": "金星",
+    "source_name": "zh_wikipedia",
+    "schema_version": "2.0"
+  },
+  {
+    "subject": "金星",
+    "relation": "HAS_MASS",
+    "object": "4.8676 × 10 24 kg",
+    "pattern": "infobox",
+    "raw": "质量: 4.8676×10 24 kg 0.815个地球",
+    "source": "zh_wikipedia",
+    "source_role": "primary",
+    "origin": "html_fallback",
+    "type": "triple_candidate",
+    "source_title": "金星",
+    "source_name": "zh_wikipedia",
+    "schema_version": "2.0"
+  },
+  {
+    "subject": "金星",
+    "relation": "IS_A",
+    "object": "类地行星",
+    "pattern": "rule",
+    "raw": "金星是一颗 类地行星",
+    "source": "zh_wikipedia",
+    "source_role": "primary",
+    "origin": "html_fallback",
+    "type": "triple_candidate",
+    "source_title": "金星",
+    "source_name": "zh_wikipedia",
+    "schema_version": "2.0"
+  }
+]

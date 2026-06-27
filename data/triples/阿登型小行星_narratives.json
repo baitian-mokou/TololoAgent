@@ -1,0 +1,27 @@
+[
+  {
+    "page_title": "阿登型小行星",
+    "section": "概要",
+    "chunk_index": 0,
+    "content": "阿登型小行星（以绿色区域显示）。\n图中中央为太阳，以及绕其选择的金星（黑色）、水星（灰色）、地球（蓝色）和火星（红色） 阿登型小行星 （Aten asteroid），是 近地天体 （NEO）的子分类之一，其分类标准为：轨道 半长轴 小于1 天文单位 （意即比地球更靠近太阳），且 远日点 大于0.983天文单位（地球的近日点）。\n此轨道特性意味著阿登型小行星皆属于 越地小行星 （另一种越地小行星为 阿波罗型小行星 ）。\n名称来自于第一颗被发现的成员，小行星「 2062 阿登 」。\n对地球威胁最高的阿登型成员，是于2004年发现的 小行星99942 ，该天体有机会于2036年撞地球，酿成灾难。\n截至2025年，已发现超过2,000颗阿登型小行星 ；其中仅有14颗获得正式名称： 2062 Aten 2340 Hathor 2100 Ra-Shalom 3362 Khufu 3554 Amun 3753 Cruithne 5381 Sekhmet 136818 Selqet 326290 Akhenaten 66391 Moshup 524522 Zoozve 99942 Apophis 398188 Agni 367943 Duende",
+    "path": "概要",
+    "keywords": [
+      "阿登型小行星",
+      "天文单位",
+      "小行星",
+      "以绿色区域显示",
+      "图中中央为太阳",
+      "以及绕其选择的金星",
+      "黑色",
+      "水星"
+    ],
+    "chunk_id": "1d8889494898",
+    "source": "zh_wikipedia",
+    "source_role": "primary",
+    "origin": "html_fallback",
+    "type": "embedding_chunk",
+    "source_title": "阿登型小行星",
+    "source_name": "zh_wikipedia",
+    "schema_version": "2.0"
+  }
+]

@@ -1,0 +1,27 @@
+[
+  {
+    "page_title": "汞锰星",
+    "section": "概要",
+    "chunk_index": 0,
+    "content": "汞锰星 是 光谱 中因为游离 汞 的吸收而明显的有波长为398.4 奈米 吸收线的 化学异常星 ，这些恒星的 光谱类型 为B8或B9，并有下列二种特征： 大气层中有过量的 磷 、 锰 、 镓 、 锶 、 钇 、 锆 、 铂 和 汞 等元素。\n缺乏强 磁场 。\n它们的自转是相对缓慢的，结果是它们的大气层也是相对的宁静。\n有些 原子 会因为 重力 的力量而沉降，而其他的则因为 辐射压力 而被抬升至恒星的表面，造成大气层的不均匀。",
+    "path": "概要",
+    "keywords": [
+      "汞锰星",
+      "光谱",
+      "中因为游离",
+      "的吸收而明显的有波长为",
+      "奈米",
+      "吸收线的",
+      "化学异常星",
+      "这些恒星的"
+    ],
+    "chunk_id": "b39aab6f7866",
+    "source": "zh_wikipedia",
+    "source_role": "primary",
+    "origin": "html_fallback",
+    "type": "embedding_chunk",
+    "source_title": "汞锰星",
+    "source_name": "zh_wikipedia",
+    "schema_version": "2.0"
+  }
+]

@@ -1,0 +1,58 @@
+[
+  {
+    "subject": "海王星",
+    "relation": "HAS_RADIUS",
+    "object": "15 km",
+    "pattern": "infobox",
+    "raw": "赤道半径: 24,764±15 km 地球的3.883倍",
+    "source": "zh_wikipedia",
+    "source_role": "primary",
+    "origin": "html_fallback",
+    "type": "triple_candidate",
+    "source_title": "海王星",
+    "source_name": "zh_wikipedia",
+    "schema_version": "2.0"
+  },
+  {
+    "subject": "海王星",
+    "relation": "HAS_RADIUS",
+    "object": "30 km",
+    "pattern": "infobox",
+    "raw": "极半径: 24,341±30 km 地球的3.829倍",
+    "source": "zh_wikipedia",
+    "source_role": "primary",
+    "origin": "html_fallback",
+    "type": "triple_candidate",
+    "source_title": "海王星",
+    "source_name": "zh_wikipedia",
+    "schema_version": "2.0"
+  },
+  {
+    "subject": "海王星",
+    "relation": "HAS_MASS",
+    "object": "1.0243 × 10 26 kg",
+    "pattern": "infobox",
+    "raw": "质量: 1.0243×10 26 kg 地球的17.147倍",
+    "source": "zh_wikipedia",
+    "source_role": "primary",
+    "origin": "html_fallback",
+    "type": "triple_candidate",
+    "source_title": "海王星",
+    "source_name": "zh_wikipedia",
+    "schema_version": "2.0"
+  },
+  {
+    "subject": "海王星",
+    "relation": "IS_A",
+    "object": "气体行星",
+    "pattern": "rule",
+    "raw": "由于海王星是气体行星",
+    "source": "zh_wikipedia",
+    "source_role": "primary",
+    "origin": "html_fallback",
+    "type": "triple_candidate",
+    "source_title": "海王星",
+    "source_name": "zh_wikipedia",
+    "schema_version": "2.0"
+  }
+]

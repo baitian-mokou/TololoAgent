@@ -1,0 +1,43 @@
+[
+  {
+    "page_title": "地质构造",
+    "section": "尺度",
+    "chunk_index": 0,
+    "content": "形成构造的构造运动也常称为地壳运动，地壳运动通常很缓慢，以 地质年代 作为时间的尺度，但也有快速突变的运动，如 火山 喷发和 地震 。\n构造的空间尺度有大有小，大的构造带纵横几千千米，小的如岩石片理甚至 矿物 晶格 位错，但通常所说的地质构造是较大尺度上的。",
+    "path": "尺度",
+    "keywords": [
+      "形成构造的构造运动也常称为地壳运动",
+      "地壳运动通常很缓慢",
+      "地质年代",
+      "作为时间的尺度",
+      "但也有快速突变的运动",
+      "火山",
+      "喷发和",
+      "地震"
+    ],
+    "chunk_id": "b715313fca48",
+    "source": "zh_wikipedia",
+    "source_role": "primary",
+    "origin": "html_fallback",
+    "type": "embedding_chunk",
+    "source_title": "地质构造",
+    "source_name": "zh_wikipedia",
+    "schema_version": "2.0"
+  },
+  {
+    "page_title": "地质构造",
+    "section": "类型",
+    "chunk_index": 1,
+    "content": "NewPP limit report Parsed by mw‐web.codfw.main‐78689cdc77‐cxcn6 Cached time: 20260522143314 Cache expiry: 2592000 Reduced expiry: false Complications: [vary‐revision‐sha1, prevent‐selective‐update] CPU time usage: 0.072 seconds Real time usage: 0.116 seconds Preprocessor visited node count: 136/1000000 Revision size: 1056/2097152 bytes Post‐expand include size: 7387/2097152 bytes Template argument size: 102/2097152 bytes Highest expansion depth: 13/100 Expensive parser function count: 1/500 Unstrip recursion depth: 0/20 Unstrip post‐expand size: 7080/5000000 bytes Lua time usage: 0.045/10.000 seconds Lua memory usage: 1129573/52428800 bytes Number of Wikibase entities loaded: 0/500 Transclusion expansion time report (%,ms,calls,template) 100.00% 91.529 1 -total 64.48% 59.022 1 Template:Unreferenced 61.13% 55.953 1 Template:Ambox 33.47% 30.633 1 Template:Tectonics-stub 32.15% 29.431 1 Template:Asbox 2.06% 1.888 1 Template:Template_error 1.02% 0.933 1 Template:Template_error/core Render ID 2a447ba4-55eb-11f1-8479-0309166c1800 Saved in parser cache with key zhwiki:pcache:745146:|#|:idhash:canonical!zh and timestamp 20260522143314 and revision id 89295306. Rendering was triggered because: page_view",
+    "path": "类型",
+    "keywords": [],
+    "chunk_id": "e2cc30608ec1",
+    "source": "zh_wikipedia",
+    "source_role": "primary",
+    "origin": "html_fallback",
+    "type": "embedding_chunk",
+    "source_title": "地质构造",
+    "source_name": "zh_wikipedia",
+    "schema_version": "2.0"
+  }
+]

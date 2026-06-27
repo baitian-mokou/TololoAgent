@@ -1,0 +1,27 @@
+[
+  {
+    "page_title": "D-型小行星",
+    "section": "概要",
+    "chunk_index": 0,
+    "content": "D-型小行星 有非常低的 反照率 和无特征的浅红色 电磁频谱 [来源请求] 。\n它被认为成分中富含有机 矽酸盐 、 碳 、和 无水 矽酸盐，在其内部可能还有水 冰 [来源请求] 。\n发现的D-型小行星主要分布在 小行星带 的外侧和更外面的区域；例如 阿达拉 (Atala ) 、 阿基里斯 (Achilles) 、 霍克得 (Hektor) 和 希达高 (Hidalgo) 。\n尼斯模型 认为D-型小行星是被捕获的 古柏带天体 。\n在1992年，Larry A. Lebofsky和同事发表一篇文章，他们发现主带的D-型小行星 Irmintraud 的光谱在3 微米 的特征 。\n此一特征被认为是表面有水存在的暗示，并表明D-型小行星更有可能是经过改变的状态，而不是不变的，原始的或原始的状态 。",
+    "path": "概要",
+    "keywords": [
+      "型小行星",
+      "来源请求",
+      "矽酸盐",
+      "有非常低的",
+      "反照率",
+      "和无特征的浅红色",
+      "电磁频谱",
+      "它被认为成分中富含有机"
+    ],
+    "chunk_id": "8acb601c867d",
+    "source": "zh_wikipedia",
+    "source_role": "primary",
+    "origin": "html_fallback",
+    "type": "embedding_chunk",
+    "source_title": "D-型小行星",
+    "source_name": "zh_wikipedia",
+    "schema_version": "2.0"
+  }
+]

@@ -1,0 +1,534 @@
+{
+  "version": "source_expansion_gold_set_v2",
+  "source_name": "wikidata",
+  "source_schema_version": "wikidata_shadow_ready_v1",
+  "approval_mode": "owner-approved exception",
+  "owner_override": true,
+  "top_k_default": 5,
+  "force_local_graph_fallback": true,
+  "force_local_narrative_fallback": true,
+  "gates": {
+    "exact_accuracy_min": 0.65,
+    "source_filter_failure_max": 0,
+    "metadata_contract_break_max": 0,
+    "inferred_boundary_break_max": 0,
+    "query_explainability_degraded_max": 0
+  },
+  "queries": [
+    {
+      "id": "wikidata_structured_phobos_orbits",
+      "category": "structured",
+      "query_kind": "structured",
+      "query": "火卫一绕谁公转",
+      "expected_path": "fallback",
+      "allowed_final_sources": [
+        "fallback"
+      ],
+      "expected_top_k_hit": true,
+      "expected_result": {
+        "subject": "火卫一",
+        "relation": "ORBITS",
+        "object": "火星"
+      },
+      "source_filter": [
+        "wikidata"
+      ],
+      "source_schema_version": "wikidata_shadow_ready_v1"
+    },
+    {
+      "id": "wikidata_structured_deimos_discoverer",
+      "category": "structured",
+      "query_kind": "structured",
+      "query": "火卫二是谁发现的",
+      "expected_path": "fallback",
+      "allowed_final_sources": [
+        "fallback"
+      ],
+      "expected_top_k_hit": true,
+      "expected_result": {
+        "subject": "火卫二",
+        "relation": "DISCOVERED_BY",
+        "object": "阿萨夫·霍尔"
+      },
+      "source_filter": [
+        "wikidata"
+      ],
+      "source_schema_version": "wikidata_shadow_ready_v1"
+    },
+    {
+      "id": "wikidata_structured_moon_orbits",
+      "category": "structured",
+      "query_kind": "structured",
+      "query": "月球绕谁运行",
+      "expected_path": "fallback",
+      "allowed_final_sources": [
+        "fallback"
+      ],
+      "expected_top_k_hit": true,
+      "expected_result": {
+        "subject": "月球",
+        "relation": "ORBITS",
+        "object": "地球"
+      },
+      "source_filter": [
+        "wikidata"
+      ],
+      "source_schema_version": "wikidata_shadow_ready_v1"
+    },
+    {
+      "id": "wikidata_structured_pluto_part_of",
+      "category": "structured",
+      "query_kind": "structured",
+      "query": "冥王星属于哪里",
+      "expected_path": "fallback",
+      "allowed_final_sources": [
+        "fallback"
+      ],
+      "expected_top_k_hit": true,
+      "expected_result": {
+        "subject": "冥王星",
+        "relation": "PART_OF",
+        "object": "柯伊伯带"
+      },
+      "source_filter": [
+        "wikidata"
+      ],
+      "source_schema_version": "wikidata_shadow_ready_v1"
+    },
+    {
+      "id": "wikidata_structured_ceres_discoverer",
+      "category": "structured",
+      "query_kind": "structured",
+      "query": "谷神星是谁发现的",
+      "expected_path": "fallback",
+      "allowed_final_sources": [
+        "fallback"
+      ],
+      "expected_top_k_hit": true,
+      "expected_result": {
+        "subject": "谷神星",
+        "relation": "DISCOVERED_BY",
+        "object": "朱塞普·皮亚齐"
+      },
+      "source_filter": [
+        "wikidata"
+      ],
+      "source_schema_version": "wikidata_shadow_ready_v1"
+    },
+    {
+      "id": "wikidata_narrative_mars_atmosphere",
+      "category": "narrative",
+      "query_kind": "narrative",
+      "query": "火星大气成分",
+      "expected_path": "fallback",
+      "allowed_final_sources": [
+        "fallback"
+      ],
+      "expected_top_k_hit": true,
+      "expected_result": {
+        "page_title": "火星",
+        "section_any_of": [
+          "大气"
+        ]
+      },
+      "source_filter": [
+        "wikidata"
+      ],
+      "source_schema_version": "wikidata_shadow_ready_v1",
+      "expected_page_title": "火星",
+      "expected_section_any_of": [
+        "大气"
+      ]
+    },
+    {
+      "id": "wikidata_narrative_jupiter_atmosphere",
+      "category": "narrative",
+      "query_kind": "narrative",
+      "query": "木星大气有什么成分",
+      "expected_path": "fallback",
+      "allowed_final_sources": [
+        "fallback"
+      ],
+      "expected_top_k_hit": true,
+      "expected_result": {
+        "page_title": "木星",
+        "section_any_of": [
+          "大气"
+        ]
+      },
+      "source_filter": [
+        "wikidata"
+      ],
+      "source_schema_version": "wikidata_shadow_ready_v1",
+      "expected_page_title": "木星",
+      "expected_section_any_of": [
+        "大气"
+      ]
+    },
+    {
+      "id": "wikidata_narrative_galilean_moon",
+      "category": "narrative",
+      "query_kind": "narrative",
+      "query": "木卫三是伽利略卫星吗",
+      "expected_path": "fallback",
+      "allowed_final_sources": [
+        "fallback"
+      ],
+      "expected_top_k_hit": true,
+      "expected_result": {
+        "page_title": "木卫三",
+        "section_any_of": [
+          "伽利略卫星"
+        ]
+      },
+      "source_filter": [
+        "wikidata"
+      ],
+      "source_schema_version": "wikidata_shadow_ready_v1",
+      "expected_page_title": "木卫三",
+      "expected_section_any_of": [
+        "伽利略卫星"
+      ]
+    },
+    {
+      "id": "wikidata_negative_unknown_satellite",
+      "category": "negative",
+      "query_kind": "structured",
+      "query": "Wikidata 不存在的火星第三颗卫星绕谁运行",
+      "expected_path": "fallback",
+      "allowed_final_sources": [
+        "fallback"
+      ],
+      "expected_top_k_hit": false,
+      "expected_result": {
+        "empty": true
+      },
+      "source_filter": [
+        "wikidata"
+      ],
+      "source_schema_version": "wikidata_shadow_ready_v1"
+    },
+    {
+      "id": "wikidata_negative_wrong_source_term",
+      "category": "negative",
+      "query_kind": "narrative",
+      "query": "完全不存在的 ESA 测试条目叙事",
+      "expected_path": "fallback",
+      "allowed_final_sources": [
+        "fallback"
+      ],
+      "expected_top_k_hit": false,
+      "expected_result": {
+        "empty": true
+      },
+      "source_filter": [
+        "wikidata"
+      ],
+      "source_schema_version": "wikidata_shadow_ready_v1"
+    },
+    {
+      "id": "wikidata_fallback_local_graph",
+      "category": "fallback",
+      "query_kind": "structured",
+      "query": "木卫一绕谁运行",
+      "expected_path": "fallback",
+      "allowed_final_sources": [
+        "fallback"
+      ],
+      "expected_top_k_hit": true,
+      "expected_result": {
+        "subject": "木卫一",
+        "relation": "ORBITS",
+        "object": "木星"
+      },
+      "source_filter": [
+        "wikidata"
+      ],
+      "source_schema_version": "wikidata_shadow_ready_v1"
+    },
+    {
+      "id": "wikidata_fallback_local_narrative",
+      "category": "fallback",
+      "query_kind": "narrative",
+      "query": "冥王星的分类信息",
+      "expected_path": "fallback",
+      "allowed_final_sources": [
+        "fallback"
+      ],
+      "expected_top_k_hit": true,
+      "expected_result": {
+        "page_title": "冥王星",
+        "section_any_of": [
+          "分类"
+        ]
+      },
+      "source_filter": [
+        "wikidata"
+      ],
+      "source_schema_version": "wikidata_shadow_ready_v1",
+      "expected_page_title": "冥王星",
+      "expected_section_any_of": [
+        "分类"
+      ]
+    },
+    {
+      "id": "wikidata_source_isolation_no_zhwiki",
+      "category": "source_isolation",
+      "query_kind": "structured",
+      "query": "海王星是谁发现的",
+      "expected_path": "fallback",
+      "allowed_final_sources": [
+        "fallback"
+      ],
+      "expected_top_k_hit": true,
+      "expected_result": {
+        "subject": "海王星",
+        "relation": "DISCOVERED_BY",
+        "object": "约翰·伽勒"
+      },
+      "source_filter": [
+        "wikidata"
+      ],
+      "source_schema_version": "wikidata_shadow_ready_v1"
+    },
+    {
+      "id": "wikidata_source_isolation_no_nasa",
+      "category": "source_isolation",
+      "query_kind": "narrative",
+      "query": "金星大气二氧化碳",
+      "expected_path": "fallback",
+      "allowed_final_sources": [
+        "fallback"
+      ],
+      "expected_top_k_hit": true,
+      "expected_result": {
+        "page_title": "金星",
+        "section_any_of": [
+          "大气"
+        ]
+      },
+      "source_filter": [
+        "wikidata"
+      ],
+      "source_schema_version": "wikidata_shadow_ready_v1",
+      "expected_page_title": "金星",
+      "expected_section_any_of": [
+        "大气"
+      ]
+    },
+    {
+      "id": "wikidata_metadata_structured_schema",
+      "category": "metadata_completeness",
+      "query_kind": "structured",
+      "query": "天王星是谁发现的",
+      "expected_path": "fallback",
+      "allowed_final_sources": [
+        "fallback"
+      ],
+      "expected_top_k_hit": true,
+      "expected_result": {
+        "subject": "天王星",
+        "relation": "DISCOVERED_BY",
+        "object": "威廉·赫歇尔"
+      },
+      "source_filter": [
+        "wikidata"
+      ],
+      "source_schema_version": "wikidata_shadow_ready_v1"
+    },
+    {
+      "id": "wikidata_metadata_narrative_schema",
+      "category": "metadata_completeness",
+      "query_kind": "narrative",
+      "query": "谷神星发现者叙事",
+      "expected_path": "fallback",
+      "allowed_final_sources": [
+        "fallback"
+      ],
+      "expected_top_k_hit": true,
+      "expected_result": {
+        "page_title": "谷神星",
+        "section_any_of": [
+          "发现"
+        ]
+      },
+      "source_filter": [
+        "wikidata"
+      ],
+      "source_schema_version": "wikidata_shadow_ready_v1",
+      "expected_page_title": "谷神星",
+      "expected_section_any_of": [
+        "发现"
+      ]
+    },
+    {
+      "id": "wikidata_path_routing_structured",
+      "category": "path_routing",
+      "query_kind": "structured",
+      "query": "火星质量是多少",
+      "expected_path": "fallback",
+      "allowed_final_sources": [
+        "fallback"
+      ],
+      "expected_top_k_hit": true,
+      "expected_result": {
+        "subject": "火星",
+        "relation": "HAS_MASS",
+        "object": "6.4171e23 kg"
+      },
+      "source_filter": [
+        "wikidata"
+      ],
+      "source_schema_version": "wikidata_shadow_ready_v1",
+      "normalized_expected_value": "6.4171e23kg"
+    },
+    {
+      "id": "wikidata_path_routing_narrative",
+      "category": "path_routing",
+      "query_kind": "narrative",
+      "query": "土星大气成分说明",
+      "expected_path": "fallback",
+      "allowed_final_sources": [
+        "fallback"
+      ],
+      "expected_top_k_hit": true,
+      "expected_result": {
+        "page_title": "土星",
+        "section_any_of": [
+          "大气"
+        ]
+      },
+      "source_filter": [
+        "wikidata"
+      ],
+      "source_schema_version": "wikidata_shadow_ready_v1",
+      "expected_page_title": "土星",
+      "expected_section_any_of": [
+        "大气"
+      ]
+    },
+    {
+      "id": "wikidata_unit_mars_mass",
+      "category": "unit_normalization",
+      "query_kind": "structured",
+      "query": "火星的质量",
+      "expected_path": "fallback",
+      "allowed_final_sources": [
+        "fallback"
+      ],
+      "expected_top_k_hit": true,
+      "expected_result": {
+        "subject": "火星",
+        "relation": "HAS_MASS",
+        "object": "6.4171e23 kg"
+      },
+      "source_filter": [
+        "wikidata"
+      ],
+      "source_schema_version": "wikidata_shadow_ready_v1",
+      "normalized_expected_value": "6.4171e23kg"
+    },
+    {
+      "id": "wikidata_unit_jupiter_radius",
+      "category": "unit_normalization",
+      "query_kind": "structured",
+      "query": "木星半径是多少",
+      "expected_path": "fallback",
+      "allowed_final_sources": [
+        "fallback"
+      ],
+      "expected_top_k_hit": true,
+      "expected_result": {
+        "subject": "木星",
+        "relation": "HAS_RADIUS",
+        "object": "69911 km"
+      },
+      "source_filter": [
+        "wikidata"
+      ],
+      "source_schema_version": "wikidata_shadow_ready_v1",
+      "normalized_expected_value": "69911km"
+    },
+    {
+      "id": "wikidata_unit_moon_radius",
+      "category": "unit_normalization",
+      "query_kind": "structured",
+      "query": "月球半径是多少",
+      "expected_path": "fallback",
+      "allowed_final_sources": [
+        "fallback"
+      ],
+      "expected_top_k_hit": true,
+      "expected_result": {
+        "subject": "月球",
+        "relation": "HAS_RADIUS",
+        "object": "1737.4 km"
+      },
+      "source_filter": [
+        "wikidata"
+      ],
+      "source_schema_version": "wikidata_shadow_ready_v1",
+      "normalized_expected_value": "1737.4km"
+    },
+    {
+      "id": "wikidata_conflict_pluto_region",
+      "category": "conflict_case",
+      "query_kind": "structured",
+      "query": "冥王星属于柯伊伯带还是八大行星",
+      "expected_path": "fallback",
+      "allowed_final_sources": [
+        "fallback"
+      ],
+      "expected_top_k_hit": true,
+      "expected_result": {
+        "subject": "冥王星",
+        "relation": "PART_OF",
+        "object": "柯伊伯带"
+      },
+      "source_filter": [
+        "wikidata"
+      ],
+      "source_schema_version": "wikidata_shadow_ready_v1"
+    },
+    {
+      "id": "wikidata_conflict_mars_atmosphere",
+      "category": "conflict_case",
+      "query_kind": "structured",
+      "query": "火星大气是氧气还是二氧化碳为主",
+      "expected_path": "fallback",
+      "allowed_final_sources": [
+        "fallback"
+      ],
+      "expected_top_k_hit": true,
+      "expected_result": {
+        "subject": "火星",
+        "relation": "HAS_ATMOSPHERE",
+        "object": "二氧化碳;氮气;氩气"
+      },
+      "source_filter": [
+        "wikidata"
+      ],
+      "source_schema_version": "wikidata_shadow_ready_v1"
+    },
+    {
+      "id": "wikidata_conflict_ceres_region",
+      "category": "conflict_case",
+      "query_kind": "structured",
+      "query": "谷神星属于小行星带还是柯伊伯带",
+      "expected_path": "fallback",
+      "allowed_final_sources": [
+        "fallback"
+      ],
+      "expected_top_k_hit": true,
+      "expected_result": {
+        "subject": "谷神星",
+        "relation": "PART_OF",
+        "object": "小行星带"
+      },
+      "source_filter": [
+        "wikidata"
+      ],
+      "source_schema_version": "wikidata_shadow_ready_v1"
+    }
+  ]
+}

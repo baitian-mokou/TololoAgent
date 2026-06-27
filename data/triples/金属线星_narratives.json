@@ -1,0 +1,27 @@
+[
+  {
+    "page_title": "金属线星",
+    "section": "概要",
+    "chunk_index": 0,
+    "content": "金属线星 或 Am星 （英语： Am star 或 metallic-line star ）是一种在 光谱类型 上呈现 化学性质特别 的 恒星 ，它们的 光谱 有著强烈和经常改变的金属吸收谱线，像是 锌 、 锶 、 锆 和 钡 ，但是缺乏其它的像是 钙 和 钪 。\n这些异常是由于一些 元素 被推向表面并异常的吸收了部分的光，而其它的则因为 重力 而下沉。\n这种效果是因为恒星具有低转速的情况下才发生的 。\n通常，A-型恒星旋转快速。\n许多金属线星都是 联星 的伴星，它们的转速都是受到 潮汐组尼 而减缓的 。\n最著名的金属线星是 天狼星 （大犬座α星），下面的表依照 视星等 的降幕列出了一些金属线星。",
+    "path": "概要",
+    "keywords": [
+      "金属线星",
+      "英语",
+      "是一种在",
+      "光谱类型",
+      "上呈现",
+      "化学性质特别",
+      "恒星",
+      "它们的"
+    ],
+    "chunk_id": "ad6afe3eb7d9",
+    "source": "zh_wikipedia",
+    "source_role": "primary",
+    "origin": "html_fallback",
+    "type": "embedding_chunk",
+    "source_title": "金属线星",
+    "source_name": "zh_wikipedia",
+    "schema_version": "2.0"
+  }
+]

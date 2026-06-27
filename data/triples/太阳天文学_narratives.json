@@ -1,0 +1,27 @@
+[
+  {
+    "page_title": "太阳天文学",
+    "section": "相较于半人马座比邻星的距离与尺度",
+    "chunk_index": 0,
+    "content": "太阳的直径大约是1,390,000公里，与最靠近它的邻居，半人马座的比邻星，相距4.22光年（3.99 x 10 13 公里）。\n因此，距离与直径的比率是28,700,000 : 1，所以，如果太阳的直径是一公分，比邻星会在287公里的距离上 。",
+    "path": "相较于半人马座比邻星的距离与尺度",
+    "keywords": [
+      "公里",
+      "太阳的直径大约是",
+      "与最靠近它的邻居",
+      "半人马座的比邻星",
+      "相距",
+      "光年",
+      "距离与直径的比率是",
+      "所以"
+    ],
+    "chunk_id": "c954d99249e1",
+    "source": "zh_wikipedia",
+    "source_role": "primary",
+    "origin": "html_fallback",
+    "type": "embedding_chunk",
+    "source_title": "太阳天文学",
+    "source_name": "zh_wikipedia",
+    "schema_version": "2.0"
+  }
+]

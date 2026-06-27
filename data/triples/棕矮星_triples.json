@@ -1,0 +1,16 @@
+[
+  {
+    "subject": "棕矮星",
+    "relation": "DISCOVERED_BY",
+    "object": "经常会",
+    "pattern": "rule",
+    "raw": "，经常会发现棕矮星",
+    "source": "zh_wikipedia",
+    "source_role": "primary",
+    "origin": "html_fallback",
+    "type": "triple_candidate",
+    "source_title": "棕矮星",
+    "source_name": "zh_wikipedia",
+    "schema_version": "2.0"
+  }
+]

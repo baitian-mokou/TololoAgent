@@ -1,0 +1,27 @@
+[
+  {
+    "page_title": "先子星",
+    "section": "概要",
+    "chunk_index": 0,
+    "content": "先子星 （Preon stars）在理论上是由 先子 构成的 致密星 ，这是在理论上组成 夸克 和 轻子 的一种 次原子粒子 。\n先子星的 密度 预测是介于 中子星 和 黑洞 之间－超过10 20 克 / 立方公分 ，是极为惊人的。\n一颗 质量 与 地球 相似的先子星， 直径 只有网球直径大小。\n这种天体原则上可以借由经过 重力透镜 观测到的 γ射线 侦测出来。\n先子星的存在，或许可以解释 暗物质 假说所造成的迷惑。\n虽然很难解释如此轻的物质如何形成如此致密的天体，但先子星可能诞生于 超新星爆发 或 大爆炸 。",
+    "path": "概要",
+    "keywords": [
+      "先子星",
+      "在理论上是由",
+      "先子",
+      "构成的",
+      "致密星",
+      "这是在理论上组成",
+      "夸克",
+      "轻子"
+    ],
+    "chunk_id": "a1346f91ed6b",
+    "source": "zh_wikipedia",
+    "source_role": "primary",
+    "origin": "html_fallback",
+    "type": "embedding_chunk",
+    "source_title": "先子星",
+    "source_name": "zh_wikipedia",
+    "schema_version": "2.0"
+  }
+]

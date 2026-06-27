@@ -1,0 +1,30 @@
+[
+  {
+    "subject": "鸟神星",
+    "relation": "HAS_RADIUS",
+    "object": "7 km",
+    "pattern": "infobox",
+    "raw": "平均半径: 7002715000000000000♠ 715 ± 7 公里",
+    "source": "zh_wikipedia",
+    "source_role": "primary",
+    "origin": "html_fallback",
+    "type": "triple_candidate",
+    "source_title": "鸟神星",
+    "source_name": "zh_wikipedia",
+    "schema_version": "2.0"
+  },
+  {
+    "subject": "鸟神星",
+    "relation": "HAS_MASS",
+    "object": "2.69 × 10 21 kg",
+    "pattern": "infobox",
+    "raw": "质量: 7021269000000000000♠ (2.69 ± 0.20) × 10 21 kg",
+    "source": "zh_wikipedia",
+    "source_role": "primary",
+    "origin": "html_fallback",
+    "type": "triple_candidate",
+    "source_title": "鸟神星",
+    "source_name": "zh_wikipedia",
+    "schema_version": "2.0"
+  }
+]

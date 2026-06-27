@@ -1,0 +1,58 @@
+[
+  {
+    "subject": "月球",
+    "relation": "HAS_RADIUS",
+    "object": "1737.10 km",
+    "pattern": "infobox",
+    "raw": "平均半径: 1,737.10 km （地球半径的0.273倍）",
+    "source": "zh_wikipedia",
+    "source_role": "primary",
+    "origin": "html_fallback",
+    "type": "triple_candidate",
+    "source_title": "月球",
+    "source_name": "zh_wikipedia",
+    "schema_version": "2.0"
+  },
+  {
+    "subject": "月球",
+    "relation": "HAS_RADIUS",
+    "object": "1735.97 km",
+    "pattern": "infobox",
+    "raw": "极半径: 1,735.97 km （地球半径的0.273倍）",
+    "source": "zh_wikipedia",
+    "source_role": "primary",
+    "origin": "html_fallback",
+    "type": "triple_candidate",
+    "source_title": "月球",
+    "source_name": "zh_wikipedia",
+    "schema_version": "2.0"
+  },
+  {
+    "subject": "月球",
+    "relation": "HAS_MASS",
+    "object": "7.3477 × 10 22 kg",
+    "pattern": "infobox",
+    "raw": "质量: 7.3477 × 10 22 kg （地球质量的0.0123倍）",
+    "source": "zh_wikipedia",
+    "source_role": "primary",
+    "origin": "html_fallback",
+    "type": "triple_candidate",
+    "source_title": "月球",
+    "source_name": "zh_wikipedia",
+    "schema_version": "2.0"
+  },
+  {
+    "subject": "月球",
+    "relation": "ORBITS",
+    "object": "太阳系内密度第二高",
+    "pattern": "rule",
+    "raw": "月球是太阳系内密度第二高的卫星",
+    "source": "zh_wikipedia",
+    "source_role": "primary",
+    "origin": "html_fallback",
+    "type": "triple_candidate",
+    "source_title": "月球",
+    "source_name": "zh_wikipedia",
+    "schema_version": "2.0"
+  }
+]

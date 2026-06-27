@@ -1,0 +1,52 @@
+[
+  {
+    "page_title": "小行星15760",
+    "section": "概要",
+    "chunk_index": 0,
+    "content": "15760 阿尔比恩 （临时编号1992 QB 1 ）是继 冥王星 与 冥卫一 之后，发现的第一颗 海王星外天体 ，现已成为 柯伊伯带 中 经典柯伊伯带天体 的代表。\n该天体是由 大卫·朱维特 和 刘丽姮 于1992年共同在 夏威夷 毛纳基山天文台 发现的。\n最初提议命名为欢笑（Smiley），但因为 小行星1613 已有同样的名字，直到2018年1月它才具有正式的名称，以 威廉·布莱克 神话中的原始巨人 阿尔比恩 （ 英语 ： Albion (Blake) ） 命名，在此之前通常简称为 QB1 。",
+    "path": "概要",
+    "keywords": [
+      "阿尔比恩",
+      "临时编号",
+      "是继",
+      "冥王星",
+      "冥卫一",
+      "之后",
+      "发现的第一颗",
+      "海王星外天体"
+    ],
+    "chunk_id": "417d8ed91b66",
+    "source": "zh_wikipedia",
+    "source_role": "primary",
+    "origin": "html_fallback",
+    "type": "embedding_chunk",
+    "source_title": "小行星15760",
+    "source_name": "zh_wikipedia",
+    "schema_version": "2.0"
+  },
+  {
+    "page_title": "小行星15760",
+    "section": "命名",
+    "chunk_index": 1,
+    "content": "这个小行星以英国诗人和画家 威廉·布莱克 所著神话中的 阿尔比恩 （ 英语 ： Albion (Blake) ） 命名。\n阿尔比恩是居于海岛的原始巨人，他的分裂产生了 四位天神 （ 英语 ： Vala, or The Four Zoas ） ：理性之神Urizen、力量之神Tharmas、感性之神Luvah以及心灵之神Urthona，分别象征人类性格的四极。\n阿尔比恩这个名字源于 大不列颠岛 的 古称 ，也是该岛已知最古老的名称。\n2018年1月31日， 小行星中心 公布了阿尔比恩的命名引据（ M.P.C. 108697 ）。",
+    "path": "命名",
+    "keywords": [
+      "英语",
+      "这个小行星以英国诗人和画家",
+      "威廉",
+      "布莱克",
+      "所著神话中的",
+      "阿尔比恩",
+      "命名",
+      "阿尔比恩是居于海岛的原始巨人"
+    ],
+    "chunk_id": "8959cf242045",
+    "source": "zh_wikipedia",
+    "source_role": "primary",
+    "origin": "html_fallback",
+    "type": "embedding_chunk",
+    "source_title": "小行星15760",
+    "source_name": "zh_wikipedia",
+    "schema_version": "2.0"
+  }
+]

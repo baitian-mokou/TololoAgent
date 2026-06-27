@@ -1,0 +1,18 @@
+{
+  "title": "火星",
+  "category": "Planet",
+  "url": "https://science.nasa.gov/mars/facts/",
+  "html": "<div id=\"mw-content-text\" class=\"mw-body-content\"><div class=\"mw-parser-output\"><p>火星是太阳系中的第四颗行星，也是 NASA 持续重点探测的岩石行星之一。</p><h2>概要</h2><p>火星表面寒冷干燥，现代观测显示它拥有稀薄大气和明显的季节变化。NASA 的公开火星资料长期把火星描述为一颗具有极冠、尘暴和古代水活动证据的类地行星，因此经常被用作研究行星气候演化与宜居性的关键目标。</p><h2>大气</h2><p>根据 NASA Mars Fact Sheet，火星大气非常稀薄，主要成分是二氧化碳，约占 95.32%，另含氮气约 2.7%、氩气约 1.6%，以及微量氧气、一氧化碳和水蒸气。稀薄的大气意味着火星表面气压远低于地球，保温能力较弱，也更容易受到太阳风和高能粒子的影响，因此常被描述为寒冷而干燥的环境。</p></div></div>",
+  "text": "火星是太阳系中的第四颗行星。根据 NASA Mars Fact Sheet，火星大气非常稀薄，主要成分是二氧化碳，另含氮气、氩气以及微量氧气和水蒸气。",
+  "raw_text": "火星是太阳系中的第四颗行星。根据 NASA Mars Fact Sheet，火星大气非常稀薄，主要成分是二氧化碳，另含氮气、氩气以及微量氧气和水蒸气。",
+  "content_length": 108,
+  "char_count": 108,
+  "word_count_cn": 108,
+  "source": "nasa",
+  "source_name": "nasa",
+  "source_role": "primary",
+  "schema_version": "nasa_shadow_ready_v1",
+  "origin": "html_fallback",
+  "fetch_source": "html_dom",
+  "crawl_time": "2026-06-24 12:00:00"
+}

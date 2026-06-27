@@ -1,0 +1,44 @@
+[
+  {
+    "subject": "天王星",
+    "relation": "HAS_RADIUS",
+    "object": "4km",
+    "pattern": "infobox",
+    "raw": "赤道半径: 25,559 ± 4km 4.007地球",
+    "source": "zh_wikipedia",
+    "source_role": "primary",
+    "origin": "html_fallback",
+    "type": "triple_candidate",
+    "source_title": "天王星",
+    "source_name": "zh_wikipedia",
+    "schema_version": "2.0"
+  },
+  {
+    "subject": "天王星",
+    "relation": "HAS_RADIUS",
+    "object": "20km",
+    "pattern": "infobox",
+    "raw": "极半径: 24,973 ± 20km 3.929地球",
+    "source": "zh_wikipedia",
+    "source_role": "primary",
+    "origin": "html_fallback",
+    "type": "triple_candidate",
+    "source_title": "天王星",
+    "source_name": "zh_wikipedia",
+    "schema_version": "2.0"
+  },
+  {
+    "subject": "天王星",
+    "relation": "HAS_MASS",
+    "object": "0.0013 × 10 25 kg",
+    "pattern": "infobox",
+    "raw": "质量: 8.6810±0.0013×10 25 公斤 GM =5,793,939±13公里³/秒² 14.536个地球",
+    "source": "zh_wikipedia",
+    "source_role": "primary",
+    "origin": "html_fallback",
+    "type": "triple_candidate",
+    "source_title": "天王星",
+    "source_name": "zh_wikipedia",
+    "schema_version": "2.0"
+  }
+]

@@ -1,0 +1,77 @@
+[
+  {
+    "page_title": "黄特超巨星",
+    "section": "概要",
+    "chunk_index": 0,
+    "content": "艺术家的动画显示黄特超巨星恒星 半人马座V766 。\n黄超巨星 (英语： Yellow hypergiant star )，一般而言是 大气层 向外扩展的大质量 恒星 ，在恒星光谱的分类上属于晚期A型至早期K型，初始质量通常介于20-60倍的 太阳质量 ，但也有文章认为，金属度很少的情况下，原初质量60—90倍的恒星，也有可能出现一个很短暂的黄特超巨星阶段。\n黄特超巨星往往损失了很多质量，有的文章甚至认为失去了多达一半的质量。\n黄特超巨星，像是在 仙后座 的 仙后座ρ ，曾经被观测到周期性的爆发，造成相对性的周期性和连续性的光度变暗。\n在宇宙中，黄特超巨星似乎极为罕见，由于它们消耗核燃料的速率非常的快速，黄特超巨星在摧毁自己成为大质量 超新星 或 极超新星 之前，存活在 主序带 上的时间通常只有数百万年。\n也有的文章认为，少数质量和光度很大的黄特超巨星，很有可能属于被抛出的气体壳层遮掩的高光度蓝变星。",
+    "path": "概要",
+    "keywords": [
+      "仙后座",
+      "艺术家的动画显示黄特超巨星恒星",
+      "半人马座",
+      "黄超巨星",
+      "英语",
+      "一般而言是",
+      "大气层",
+      "向外扩展的大质量"
+    ],
+    "chunk_id": "af21f973e4d4",
+    "source": "zh_wikipedia",
+    "source_role": "primary",
+    "origin": "html_fallback",
+    "type": "embedding_chunk",
+    "source_title": "黄特超巨星",
+    "source_name": "zh_wikipedia",
+    "schema_version": "2.0"
+  },
+  {
+    "page_title": "黄特超巨星",
+    "section": "内部结构",
+    "chunk_index": 1,
+    "content": "依据目前物理学的恒星模型，黄特超巨星的核心是被 辐射层 包围著的 对流层 ；相对的，大小与 太阳 相似的恒星，核心是被对流层包围著的辐射层（Seeds 2005）。\n由于黄特超巨星的核心存在著极高的压力，可能部份的核心甚至整个核心都是 简并态物质 组成的。",
+    "path": "内部结构",
+    "keywords": [
+      "依据目前物理学的恒星模型",
+      "黄特超巨星的核心是被",
+      "辐射层",
+      "包围著的",
+      "对流层",
+      "相对的",
+      "大小与",
+      "太阳"
+    ],
+    "chunk_id": "47baeb8b93a4",
+    "source": "zh_wikipedia",
+    "source_role": "primary",
+    "origin": "html_fallback",
+    "type": "embedding_chunk",
+    "source_title": "黄特超巨星",
+    "source_name": "zh_wikipedia",
+    "schema_version": "2.0"
+  },
+  {
+    "page_title": "黄特超巨星",
+    "section": "已知的黄特超巨星",
+    "chunk_index": 2,
+    "content": "IRAS 17163-3907 是一个黄特超巨星，清楚地显示了围绕全黄特超巨星排出的物质。\n仙后座ρ 船底座V382 HR 8752 ：位于 仙后座 的 仙后座 V509 。\nIRC+10420 IRAS 17163-3907 半人马座V766 （yellow hypergiant star, 代号 HR 5171A）是已知的十颗最大恒星之一，其体积比太阳大1300倍 在 维斯特卢1(Westerlund 1) 中: W4 W8a W12a W16a W32 W265 在其他星系中： HD 33579",
+    "path": "已知的黄特超巨星",
+    "keywords": [
+      "仙后座",
+      "是一个黄特超巨星",
+      "清楚地显示了围绕全黄特超巨星排出的物质",
+      "船底座",
+      "位于",
+      "半人马座",
+      "代号",
+      "是已知的十颗最大恒星之一"
+    ],
+    "chunk_id": "5836175cc85f",
+    "source": "zh_wikipedia",
+    "source_role": "primary",
+    "origin": "html_fallback",
+    "type": "embedding_chunk",
+    "source_title": "黄特超巨星",
+    "source_name": "zh_wikipedia",
+    "schema_version": "2.0"
+  }
+]

@@ -1,0 +1,44 @@
+[
+  {
+    "subject": "土卫八",
+    "relation": "DISCOVERED_BY",
+    "object": "乔瓦尼·多梅尼科·卡西尼",
+    "pattern": "infobox",
+    "raw": "发现者: 乔瓦尼·多梅尼科·卡西尼",
+    "source": "zh_wikipedia",
+    "source_role": "primary",
+    "origin": "html_fallback",
+    "type": "triple_candidate",
+    "source_title": "土卫八",
+    "source_name": "zh_wikipedia",
+    "schema_version": "2.0"
+  },
+  {
+    "subject": "土卫八",
+    "relation": "HAS_RADIUS",
+    "object": "2.8 km",
+    "pattern": "infobox",
+    "raw": "平均半径: 734.5 ± 2.8 km",
+    "source": "zh_wikipedia",
+    "source_role": "primary",
+    "origin": "html_fallback",
+    "type": "triple_candidate",
+    "source_title": "土卫八",
+    "source_name": "zh_wikipedia",
+    "schema_version": "2.0"
+  },
+  {
+    "subject": "土卫八",
+    "relation": "HAS_MASS",
+    "object": "0.000 375 × 10 21 kg",
+    "pattern": "infobox",
+    "raw": "质量: (1.805 635 ± 0.000 375)×10 21 kg",
+    "source": "zh_wikipedia",
+    "source_role": "primary",
+    "origin": "html_fallback",
+    "type": "triple_candidate",
+    "source_title": "土卫八",
+    "source_name": "zh_wikipedia",
+    "schema_version": "2.0"
+  }
+]

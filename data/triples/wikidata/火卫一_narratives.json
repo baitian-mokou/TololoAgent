@@ -1,0 +1,22 @@
+[
+  {
+    "section": "发现",
+    "content": "火卫一 fixture 记录其绕火星运行，并将发现者登记为阿萨夫·霍尔。",
+    "keywords": [
+      "火卫一",
+      "火星",
+      "发现者"
+    ],
+    "page_title": "火卫一",
+    "chunk_index": 0,
+    "path": "发现",
+    "chunk_id": "wikidata_火卫一_00",
+    "source": "wikidata",
+    "source_name": "wikidata",
+    "source_role": "primary",
+    "origin": "api",
+    "type": "embedding_chunk",
+    "schema_version": "wikidata_shadow_ready_v1",
+    "source_title": "火卫一"
+  }
+]

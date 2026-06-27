@@ -1,0 +1,107 @@
+{
+  "generated_at": "2026-06-27T20:03:52",
+  "passed": true,
+  "steps": [
+    {
+      "command": "python -m unittest discover tests",
+      "exit_code": 0,
+      "passed": true,
+      "duration_seconds": 9.815
+    },
+    {
+      "command": "python scripts/run_single_source_retrieval_eval.py",
+      "exit_code": 0,
+      "passed": true,
+      "duration_seconds": 98.222
+    },
+    {
+      "command": "python scripts/run_source_expansion_eval.py --source wikidata",
+      "exit_code": 0,
+      "passed": true,
+      "duration_seconds": 1.643
+    },
+    {
+      "command": "python scripts/run_source_expansion_eval.py --source nasa",
+      "exit_code": 0,
+      "passed": true,
+      "duration_seconds": 0.745
+    },
+    {
+      "command": "python scripts/collect_eval_failures.py",
+      "exit_code": 0,
+      "passed": true,
+      "duration_seconds": 0.073
+    },
+    {
+      "command": "python scripts/smoke_default_source_boundary.py",
+      "exit_code": 0,
+      "passed": true,
+      "duration_seconds": 32.787
+    }
+  ],
+  "reports": {
+    "single_source_retrieval": {
+      "path": "evaluation\\single_source_retrieval_report.json",
+      "total_queries": 31,
+      "exact_pass_count": 31,
+      "exact_accuracy": 1.0,
+      "source_filter_failure_count": 0,
+      "metadata_contract_break_count": 0,
+      "inferred_boundary_break_count": 0,
+      "query_explainability_degraded_count": 0,
+      "gates_passed": true
+    },
+    "wikidata_source_expansion": {
+      "path": "evaluation\\source_expansion\\wikidata\\wikidata_report.json",
+      "total_queries": 24,
+      "exact_pass_count": 24,
+      "exact_accuracy": 1.0,
+      "source_filter_failure_count": 0,
+      "metadata_contract_break_count": 0,
+      "inferred_boundary_break_count": 0,
+      "query_explainability_degraded_count": 0,
+      "gates_passed": true
+    },
+    "nasa_source_expansion": {
+      "path": "evaluation\\source_expansion\\nasa\\nasa_report.json",
+      "total_queries": 22,
+      "exact_pass_count": 22,
+      "exact_accuracy": 1.0,
+      "source_filter_failure_count": 0,
+      "metadata_contract_break_count": 0,
+      "inferred_boundary_break_count": 0,
+      "query_explainability_degraded_count": 0,
+      "gates_passed": true
+    }
+  },
+  "failure_count": 0,
+  "aggregate_break_counts": {
+    "source_filter_failure_count": 0,
+    "metadata_contract_break_count": 0,
+    "inferred_boundary_break_count": 0,
+    "query_explainability_degraded_count": 0
+  },
+  "default_source": {
+    "active_source": "zh_wikipedia",
+    "registry": {
+      "zh_wikipedia": "active",
+      "wikidata": "disabled",
+      "nasa": "disabled",
+      "esa": "disabled"
+    },
+    "zh_wikipedia_only_active": true
+  },
+  "smoke_report": {
+    "path": "evaluation/default_source_smoke_report.json",
+    "passed": true,
+    "errors": []
+  },
+  "settings_key_hygiene": {
+    "name": "settings_key_hygiene",
+    "settings_json": "settings.json",
+    "settings_local_json_exists": false,
+    "allowed_placeholder": "${TOLOLO_REMOTE_API_KEY}",
+    "passed": true,
+    "errors": []
+  }
+}

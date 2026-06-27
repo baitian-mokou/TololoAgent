@@ -1,0 +1,16 @@
+[
+  {
+    "subject": "卡西尼-惠更斯号",
+    "relation": "IS_A",
+    "object": "前往外太阳系行星",
+    "pattern": "rule",
+    "raw": "卡西尼-惠更斯号是前往外太阳系行星",
+    "source": "zh_wikipedia",
+    "source_role": "primary",
+    "origin": "html_fallback",
+    "type": "triple_candidate",
+    "source_title": "卡西尼-惠更斯号",
+    "source_name": "zh_wikipedia",
+    "schema_version": "2.0"
+  }
+]

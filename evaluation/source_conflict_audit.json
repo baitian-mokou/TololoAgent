@@ -1,0 +1,3784 @@
+{
+  "generated_at": "2026-06-27T10:03:32.860295+00:00",
+  "sources": [
+    "zh_wikipedia",
+    "wikidata",
+    "nasa"
+  ],
+  "summary": {
+    "total_records": 248,
+    "total_subject_relation_keys": 188,
+    "metadata_incomplete_count": 0,
+    "value_conflict_count": 19,
+    "exact_match_count": 5,
+    "unit_equivalent_count": 15,
+    "source_missing_count": 188
+  },
+  "status_counts": {
+    "source_missing": 188,
+    "unit_equivalent": 15,
+    "value_conflict": 19,
+    "exact_match": 5
+  },
+  "findings": [
+    {
+      "subject": "Google地球",
+      "relation": "IS_A",
+      "status": [
+        "source_missing"
+      ],
+      "present_sources": [
+        "zh_wikipedia"
+      ],
+      "missing_sources": [
+        "wikidata",
+        "nasa"
+      ],
+      "values_by_source": {
+        "zh_wikipedia": [
+          "虚拟地球仪"
+        ]
+      }
+    },
+    {
+      "subject": "亡神星",
+      "relation": "HAS_MASS",
+      "status": [
+        "source_missing"
+      ],
+      "present_sources": [
+        "zh_wikipedia"
+      ],
+      "missing_sources": [
+        "wikidata",
+        "nasa"
+      ],
+      "values_by_source": {
+        "zh_wikipedia": [
+          "7.5 × 10 20 kg"
+        ]
+      }
+    },
+    {
+      "subject": "健神星",
+      "relation": "DISCOVERED_BY",
+      "status": [
+        "source_missing"
+      ],
+      "present_sources": [
+        "zh_wikipedia"
+      ],
+      "missing_sources": [
+        "wikidata",
+        "nasa"
+      ],
+      "values_by_source": {
+        "zh_wikipedia": [
+          "安尼巴莱·德·加斯帕里斯"
+        ]
+      }
+    },
+    {
+      "subject": "健神星",
+      "relation": "HAS_MASS",
+      "status": [
+        "source_missing"
+      ],
+      "present_sources": [
+        "zh_wikipedia"
+      ],
+      "missing_sources": [
+        "wikidata",
+        "nasa"
+      ],
+      "values_by_source": {
+        "zh_wikipedia": [
+          "8.32 × 10 19 kg"
+        ]
+      }
+    },
+    {
+      "subject": "健神星",
+      "relation": "IS_A",
+      "status": [
+        "source_missing"
+      ],
+      "present_sources": [
+        "zh_wikipedia"
+      ],
+      "missing_sources": [
+        "wikidata",
+        "nasa"
+      ],
+      "values_by_source": {
+        "zh_wikipedia": [
+          "小行星"
+        ]
+      }
+    },
+    {
+      "subject": "冥卫一",
+      "relation": "DISCOVERED_BY",
+      "status": [
+        "source_missing"
+      ],
+      "present_sources": [
+        "zh_wikipedia"
+      ],
+      "missing_sources": [
+        "wikidata",
+        "nasa"
+      ],
+      "values_by_source": {
+        "zh_wikipedia": [
+          "詹姆斯·克里斯蒂"
+        ]
+      }
+    },
+    {
+      "subject": "冥卫一",
+      "relation": "HAS_MASS",
+      "status": [
+        "source_missing"
+      ],
+      "present_sources": [
+        "zh_wikipedia"
+      ],
+      "missing_sources": [
+        "wikidata",
+        "nasa"
+      ],
+      "values_by_source": {
+        "zh_wikipedia": [
+          "1.586 × 10 21 kg"
+        ]
+      }
+    },
+    {
+      "subject": "冥卫一",
+      "relation": "HAS_RADIUS",
+      "status": [
+        "source_missing"
+      ],
+      "present_sources": [
+        "zh_wikipedia"
+      ],
+      "missing_sources": [
+        "wikidata",
+        "nasa"
+      ],
+      "values_by_source": {
+        "zh_wikipedia": [
+          "0.5 km"
+        ]
+      }
+    },
+    {
+      "subject": "冥卫一",
+      "relation": "IS_A",
+      "status": [
+        "source_missing"
+      ],
+      "present_sources": [
+        "zh_wikipedia"
+      ],
+      "missing_sources": [
+        "wikidata",
+        "nasa"
+      ],
+      "values_by_source": {
+        "zh_wikipedia": [
+          "矮行星"
+        ]
+      }
+    },
+    {
+      "subject": "冥卫一",
+      "relation": "ORBITS",
+      "status": [
+        "source_missing"
+      ],
+      "present_sources": [
+        "zh_wikipedia"
+      ],
+      "missing_sources": [
+        "wikidata",
+        "nasa"
+      ],
+      "values_by_source": {
+        "zh_wikipedia": [
+          "一颗非常大"
+        ]
+      }
+    },
+    {
+      "subject": "冥王星",
+      "relation": "DISCOVERED_BY",
+      "status": [
+        "source_missing"
+      ],
+      "present_sources": [
+        "wikidata"
+      ],
+      "missing_sources": [
+        "zh_wikipedia",
+        "nasa"
+      ],
+      "values_by_source": {
+        "wikidata": [
+          "克莱德·汤博"
+        ]
+      }
+    },
+    {
+      "subject": "冥王星",
+      "relation": "HAS_ATMOSPHERE",
+      "status": [
+        "source_missing"
+      ],
+      "present_sources": [
+        "wikidata"
+      ],
+      "missing_sources": [
+        "zh_wikipedia",
+        "nasa"
+      ],
+      "values_by_source": {
+        "wikidata": [
+          "氮气;甲烷;一氧化碳"
+        ]
+      }
+    },
+    {
+      "subject": "冥王星",
+      "relation": "HAS_MASS",
+      "status": [
+        "source_missing",
+        "unit_equivalent"
+      ],
+      "present_sources": [
+        "wikidata",
+        "zh_wikipedia"
+      ],
+      "missing_sources": [
+        "nasa"
+      ],
+      "values_by_source": {
+        "zh_wikipedia": [
+          "1.303 × 10 22 kg",
+          "1.31×10 22 千克"
+        ],
+        "wikidata": [
+          "1.303e22 kg"
+        ]
+      }
+    },
+    {
+      "subject": "冥王星",
+      "relation": "HAS_RADIUS",
+      "status": [
+        "source_missing",
+        "value_conflict"
+      ],
+      "present_sources": [
+        "wikidata",
+        "zh_wikipedia"
+      ],
+      "missing_sources": [
+        "nasa"
+      ],
+      "values_by_source": {
+        "zh_wikipedia": [
+          "0.8 km"
+        ],
+        "wikidata": [
+          "1188.3 km"
+        ]
+      }
+    },
+    {
+      "subject": "冥王星",
+      "relation": "ORBITS",
+      "status": [
+        "source_missing"
+      ],
+      "present_sources": [
+        "wikidata"
+      ],
+      "missing_sources": [
+        "zh_wikipedia",
+        "nasa"
+      ],
+      "values_by_source": {
+        "wikidata": [
+          "太阳"
+        ]
+      }
+    },
+    {
+      "subject": "冥王星",
+      "relation": "PART_OF",
+      "status": [
+        "source_missing"
+      ],
+      "present_sources": [
+        "wikidata"
+      ],
+      "missing_sources": [
+        "zh_wikipedia",
+        "nasa"
+      ],
+      "values_by_source": {
+        "wikidata": [
+          "柯伊伯带"
+        ]
+      }
+    },
+    {
+      "subject": "准卫星",
+      "relation": "ORBITS",
+      "status": [
+        "source_missing"
+      ],
+      "present_sources": [
+        "zh_wikipedia"
+      ],
+      "missing_sources": [
+        "wikidata",
+        "nasa"
+      ],
+      "values_by_source": {
+        "zh_wikipedia": [
+          "太阳"
+        ]
+      }
+    },
+    {
+      "subject": "创神星",
+      "relation": "HAS_MASS",
+      "status": [
+        "source_missing"
+      ],
+      "present_sources": [
+        "zh_wikipedia"
+      ],
+      "missing_sources": [
+        "wikidata",
+        "nasa"
+      ],
+      "values_by_source": {
+        "zh_wikipedia": [
+          "1.212 × 10 21 kg"
+        ]
+      }
+    },
+    {
+      "subject": "加那利大型望远镜",
+      "relation": "LOCATED_IN",
+      "status": [
+        "source_missing"
+      ],
+      "present_sources": [
+        "zh_wikipedia"
+      ],
+      "missing_sources": [
+        "wikidata",
+        "nasa"
+      ],
+      "values_by_source": {
+        "zh_wikipedia": [
+          "西班牙 拉帕尔玛岛 穆查丘斯罗克天文台"
+        ]
+      }
+    },
+    {
+      "subject": "卡西尼-惠更斯号",
+      "relation": "IS_A",
+      "status": [
+        "source_missing"
+      ],
+      "present_sources": [
+        "zh_wikipedia"
+      ],
+      "missing_sources": [
+        "wikidata",
+        "nasa"
+      ],
+      "values_by_source": {
+        "zh_wikipedia": [
+          "前往外太阳系行星"
+        ]
+      }
+    },
+    {
+      "subject": "变星",
+      "relation": "DISCOVERED_BY",
+      "status": [
+        "source_missing"
+      ],
+      "present_sources": [
+        "zh_wikipedia"
+      ],
+      "missing_sources": [
+        "wikidata",
+        "nasa"
+      ],
+      "values_by_source": {
+        "zh_wikipedia": [
+          "用于后续"
+        ]
+      }
+    },
+    {
+      "subject": "哈勃空间望远镜",
+      "relation": "HAS_MASS",
+      "status": [
+        "source_missing"
+      ],
+      "present_sources": [
+        "zh_wikipedia"
+      ],
+      "missing_sources": [
+        "wikidata",
+        "nasa"
+      ],
+      "values_by_source": {
+        "zh_wikipedia": [
+          "11000kg"
+        ]
+      }
+    },
+    {
+      "subject": "哈勃空间望远镜",
+      "relation": "LOCATED_IN",
+      "status": [
+        "source_missing"
+      ],
+      "present_sources": [
+        "zh_wikipedia"
+      ],
+      "missing_sources": [
+        "wikidata",
+        "nasa"
+      ],
+      "values_by_source": {
+        "zh_wikipedia": [
+          "低地球轨道"
+        ]
+      }
+    },
+    {
+      "subject": "哈雷彗星",
+      "relation": "IS_A",
+      "status": [
+        "source_missing"
+      ],
+      "present_sources": [
+        "zh_wikipedia"
+      ],
+      "missing_sources": [
+        "wikidata",
+        "nasa"
+      ],
+      "values_by_source": {
+        "zh_wikipedia": [
+          "第一颗被认定为周期彗星"
+        ]
+      }
+    },
+    {
+      "subject": "土卫一",
+      "relation": "DISCOVERED_BY",
+      "status": [
+        "source_missing"
+      ],
+      "present_sources": [
+        "zh_wikipedia"
+      ],
+      "missing_sources": [
+        "wikidata",
+        "nasa"
+      ],
+      "values_by_source": {
+        "zh_wikipedia": [
+          "威廉·赫歇尔"
+        ]
+      }
+    },
+    {
+      "subject": "土卫一",
+      "relation": "HAS_MASS",
+      "status": [
+        "source_missing"
+      ],
+      "present_sources": [
+        "zh_wikipedia"
+      ],
+      "missing_sources": [
+        "wikidata",
+        "nasa"
+      ],
+      "values_by_source": {
+        "zh_wikipedia": [
+          "3.7493 × 10 19 kg"
+        ]
+      }
+    },
+    {
+      "subject": "土卫一",
+      "relation": "HAS_RADIUS",
+      "status": [
+        "source_missing"
+      ],
+      "present_sources": [
+        "zh_wikipedia"
+      ],
+      "missing_sources": [
+        "wikidata",
+        "nasa"
+      ],
+      "values_by_source": {
+        "zh_wikipedia": [
+          "0.4 km"
+        ]
+      }
+    },
+    {
+      "subject": "土卫七",
+      "relation": "HAS_MASS",
+      "status": [
+        "source_missing"
+      ],
+      "present_sources": [
+        "zh_wikipedia"
+      ],
+      "missing_sources": [
+        "wikidata",
+        "nasa"
+      ],
+      "values_by_source": {
+        "zh_wikipedia": [
+          "0.0068 × 10 19 kg"
+        ]
+      }
+    },
+    {
+      "subject": "土卫五",
+      "relation": "DISCOVERED_BY",
+      "status": [
+        "source_missing"
+      ],
+      "present_sources": [
+        "zh_wikipedia"
+      ],
+      "missing_sources": [
+        "wikidata",
+        "nasa"
+      ],
+      "values_by_source": {
+        "zh_wikipedia": [
+          "乔瓦尼·多梅尼科·卡西尼"
+        ]
+      }
+    },
+    {
+      "subject": "土卫五",
+      "relation": "HAS_MASS",
+      "status": [
+        "source_missing"
+      ],
+      "present_sources": [
+        "zh_wikipedia"
+      ],
+      "missing_sources": [
+        "wikidata",
+        "nasa"
+      ],
+      "values_by_source": {
+        "zh_wikipedia": [
+          "0.000 353 × 10 21 kg"
+        ]
+      }
+    },
+    {
+      "subject": "土卫五",
+      "relation": "HAS_RADIUS",
+      "status": [
+        "source_missing"
+      ],
+      "present_sources": [
+        "zh_wikipedia"
+      ],
+      "missing_sources": [
+        "wikidata",
+        "nasa"
+      ],
+      "values_by_source": {
+        "zh_wikipedia": [
+          "1.10 km"
+        ]
+      }
+    },
+    {
+      "subject": "土卫八",
+      "relation": "DISCOVERED_BY",
+      "status": [
+        "source_missing"
+      ],
+      "present_sources": [
+        "zh_wikipedia"
+      ],
+      "missing_sources": [
+        "wikidata",
+        "nasa"
+      ],
+      "values_by_source": {
+        "zh_wikipedia": [
+          "乔瓦尼·多梅尼科·卡西尼"
+        ]
+      }
+    },
+    {
+      "subject": "土卫八",
+      "relation": "HAS_MASS",
+      "status": [
+        "source_missing"
+      ],
+      "present_sources": [
+        "zh_wikipedia"
+      ],
+      "missing_sources": [
+        "wikidata",
+        "nasa"
+      ],
+      "values_by_source": {
+        "zh_wikipedia": [
+          "0.000 375 × 10 21 kg"
+        ]
+      }
+    },
+    {
+      "subject": "土卫八",
+      "relation": "HAS_RADIUS",
+      "status": [
+        "source_missing"
+      ],
+      "present_sources": [
+        "zh_wikipedia"
+      ],
+      "missing_sources": [
+        "wikidata",
+        "nasa"
+      ],
+      "values_by_source": {
+        "zh_wikipedia": [
+          "2.8 km"
+        ]
+      }
+    },
+    {
+      "subject": "土卫六",
+      "relation": "DISCOVERED_BY",
+      "status": [
+        "source_missing"
+      ],
+      "present_sources": [
+        "zh_wikipedia"
+      ],
+      "missing_sources": [
+        "wikidata",
+        "nasa"
+      ],
+      "values_by_source": {
+        "zh_wikipedia": [
+          "克里斯蒂安·惠更斯"
+        ]
+      }
+    },
+    {
+      "subject": "土卫六",
+      "relation": "HAS_MASS",
+      "status": [
+        "source_missing"
+      ],
+      "present_sources": [
+        "zh_wikipedia"
+      ],
+      "missing_sources": [
+        "wikidata",
+        "nasa"
+      ],
+      "values_by_source": {
+        "zh_wikipedia": [
+          "1.3452 × 10 23 kg"
+        ]
+      }
+    },
+    {
+      "subject": "土卫六",
+      "relation": "HAS_RADIUS",
+      "status": [
+        "source_missing"
+      ],
+      "present_sources": [
+        "zh_wikipedia"
+      ],
+      "missing_sources": [
+        "wikidata",
+        "nasa"
+      ],
+      "values_by_source": {
+        "zh_wikipedia": [
+          "2 km"
+        ]
+      }
+    },
+    {
+      "subject": "土卫六",
+      "relation": "ORBITS",
+      "status": [
+        "source_missing"
+      ],
+      "present_sources": [
+        "zh_wikipedia"
+      ],
+      "missing_sources": [
+        "wikidata",
+        "nasa"
+      ],
+      "values_by_source": {
+        "zh_wikipedia": [
+          "土星最大"
+        ]
+      }
+    },
+    {
+      "subject": "土卫四",
+      "relation": "DISCOVERED_BY",
+      "status": [
+        "source_missing"
+      ],
+      "present_sources": [
+        "zh_wikipedia"
+      ],
+      "missing_sources": [
+        "wikidata",
+        "nasa"
+      ],
+      "values_by_source": {
+        "zh_wikipedia": [
+          "乔瓦尼·多梅尼科·卡西尼"
+        ]
+      }
+    },
+    {
+      "subject": "土卫四",
+      "relation": "HAS_MASS",
+      "status": [
+        "source_missing"
+      ],
+      "present_sources": [
+        "zh_wikipedia"
+      ],
+      "missing_sources": [
+        "wikidata",
+        "nasa"
+      ],
+      "values_by_source": {
+        "zh_wikipedia": [
+          "0.000 168 × 10 21 kg"
+        ]
+      }
+    },
+    {
+      "subject": "土卫四",
+      "relation": "HAS_RADIUS",
+      "status": [
+        "source_missing"
+      ],
+      "present_sources": [
+        "zh_wikipedia"
+      ],
+      "missing_sources": [
+        "wikidata",
+        "nasa"
+      ],
+      "values_by_source": {
+        "zh_wikipedia": [
+          "0.4 km"
+        ]
+      }
+    },
+    {
+      "subject": "土星",
+      "relation": "HAS_ATMOSPHERE",
+      "status": [
+        "source_missing"
+      ],
+      "present_sources": [
+        "wikidata"
+      ],
+      "missing_sources": [
+        "zh_wikipedia",
+        "nasa"
+      ],
+      "values_by_source": {
+        "wikidata": [
+          "氢;氦;甲烷"
+        ]
+      }
+    },
+    {
+      "subject": "土星",
+      "relation": "HAS_MASS",
+      "status": [
+        "source_missing",
+        "unit_equivalent"
+      ],
+      "present_sources": [
+        "wikidata",
+        "zh_wikipedia"
+      ],
+      "missing_sources": [
+        "nasa"
+      ],
+      "values_by_source": {
+        "zh_wikipedia": [
+          "5.6846 × 10 26 kg"
+        ],
+        "wikidata": [
+          "5.6834e26 kg"
+        ]
+      }
+    },
+    {
+      "subject": "土星",
+      "relation": "HAS_RADIUS",
+      "status": [
+        "source_missing",
+        "value_conflict"
+      ],
+      "present_sources": [
+        "wikidata",
+        "zh_wikipedia"
+      ],
+      "missing_sources": [
+        "nasa"
+      ],
+      "values_by_source": {
+        "zh_wikipedia": [
+          "232 km",
+          "268 km",
+          "10 km"
+        ],
+        "wikidata": [
+          "58232 km"
+        ]
+      }
+    },
+    {
+      "subject": "土星",
+      "relation": "IS_A",
+      "status": [
+        "source_missing"
+      ],
+      "present_sources": [
+        "zh_wikipedia"
+      ],
+      "missing_sources": [
+        "wikidata",
+        "nasa"
+      ],
+      "values_by_source": {
+        "zh_wikipedia": [
+          "外行星"
+        ]
+      }
+    },
+    {
+      "subject": "土星",
+      "relation": "ORBITS",
+      "status": [
+        "source_missing"
+      ],
+      "present_sources": [
+        "wikidata"
+      ],
+      "missing_sources": [
+        "zh_wikipedia",
+        "nasa"
+      ],
+      "values_by_source": {
+        "wikidata": [
+          "太阳"
+        ]
+      }
+    },
+    {
+      "subject": "土星",
+      "relation": "PART_OF",
+      "status": [
+        "source_missing"
+      ],
+      "present_sources": [
+        "wikidata"
+      ],
+      "missing_sources": [
+        "zh_wikipedia",
+        "nasa"
+      ],
+      "values_by_source": {
+        "wikidata": [
+          "太阳系"
+        ]
+      }
+    },
+    {
+      "subject": "地球",
+      "relation": "HAS_ATMOSPHERE",
+      "status": [
+        "source_missing",
+        "value_conflict"
+      ],
+      "present_sources": [
+        "wikidata",
+        "zh_wikipedia"
+      ],
+      "missing_sources": [
+        "nasa"
+      ],
+      "values_by_source": {
+        "zh_wikipedia": [
+          "N2",
+          "O2",
+          "Ar",
+          "H2O",
+          "CO2"
+        ],
+        "wikidata": [
+          "氮气;氧气;氩气"
+        ]
+      }
+    },
+    {
+      "subject": "地球",
+      "relation": "HAS_MASS",
+      "status": [
+        "source_missing",
+        "value_conflict"
+      ],
+      "present_sources": [
+        "wikidata",
+        "zh_wikipedia"
+      ],
+      "missing_sources": [
+        "nasa"
+      ],
+      "values_by_source": {
+        "zh_wikipedia": [
+          "5.972 37 × 10 24 kg"
+        ],
+        "wikidata": [
+          "5.97237e24 kg"
+        ]
+      }
+    },
+    {
+      "subject": "地球",
+      "relation": "HAS_RADIUS",
+      "status": [
+        "source_missing",
+        "unit_equivalent"
+      ],
+      "present_sources": [
+        "wikidata",
+        "zh_wikipedia"
+      ],
+      "missing_sources": [
+        "nasa"
+      ],
+      "values_by_source": {
+        "zh_wikipedia": [
+          "6371.0 km",
+          "6378.137 km",
+          "6356.752 km"
+        ],
+        "wikidata": [
+          "6371 km"
+        ]
+      }
+    },
+    {
+      "subject": "地球",
+      "relation": "ORBITS",
+      "status": [
+        "source_missing",
+        "exact_match"
+      ],
+      "present_sources": [
+        "wikidata",
+        "zh_wikipedia"
+      ],
+      "missing_sources": [
+        "nasa"
+      ],
+      "values_by_source": {
+        "zh_wikipedia": [
+          "太阳"
+        ],
+        "wikidata": [
+          "太阳"
+        ]
+      }
+    },
+    {
+      "subject": "地球",
+      "relation": "PART_OF",
+      "status": [
+        "source_missing"
+      ],
+      "present_sources": [
+        "wikidata"
+      ],
+      "missing_sources": [
+        "zh_wikipedia",
+        "nasa"
+      ],
+      "values_by_source": {
+        "wikidata": [
+          "太阳系"
+        ]
+      }
+    },
+    {
+      "subject": "天卫一",
+      "relation": "HAS_MASS",
+      "status": [
+        "source_missing"
+      ],
+      "present_sources": [
+        "zh_wikipedia"
+      ],
+      "missing_sources": [
+        "wikidata",
+        "nasa"
+      ],
+      "values_by_source": {
+        "zh_wikipedia": [
+          "1.35 × 10 21 kg"
+        ]
+      }
+    },
+    {
+      "subject": "天卫一",
+      "relation": "HAS_RADIUS",
+      "status": [
+        "source_missing"
+      ],
+      "present_sources": [
+        "zh_wikipedia"
+      ],
+      "missing_sources": [
+        "wikidata",
+        "nasa"
+      ],
+      "values_by_source": {
+        "zh_wikipedia": [
+          "578.9 km"
+        ]
+      }
+    },
+    {
+      "subject": "天卫二",
+      "relation": "DISCOVERED_BY",
+      "status": [
+        "source_missing"
+      ],
+      "present_sources": [
+        "zh_wikipedia"
+      ],
+      "missing_sources": [
+        "wikidata",
+        "nasa"
+      ],
+      "values_by_source": {
+        "zh_wikipedia": [
+          "威廉·拉塞尔"
+        ]
+      }
+    },
+    {
+      "subject": "天卫二",
+      "relation": "HAS_MASS",
+      "status": [
+        "source_missing"
+      ],
+      "present_sources": [
+        "zh_wikipedia"
+      ],
+      "missing_sources": [
+        "wikidata",
+        "nasa"
+      ],
+      "values_by_source": {
+        "zh_wikipedia": [
+          "1.275 × 10 21 kg"
+        ]
+      }
+    },
+    {
+      "subject": "天卫二",
+      "relation": "HAS_RADIUS",
+      "status": [
+        "source_missing"
+      ],
+      "present_sources": [
+        "zh_wikipedia"
+      ],
+      "missing_sources": [
+        "wikidata",
+        "nasa"
+      ],
+      "values_by_source": {
+        "zh_wikipedia": [
+          "2.8 km"
+        ]
+      }
+    },
+    {
+      "subject": "天卫二",
+      "relation": "IS_A",
+      "status": [
+        "source_missing"
+      ],
+      "present_sources": [
+        "zh_wikipedia"
+      ],
+      "missing_sources": [
+        "wikidata",
+        "nasa"
+      ],
+      "values_by_source": {
+        "zh_wikipedia": [
+          "天王星所有卫星",
+          "所有天王星卫星"
+        ]
+      }
+    },
+    {
+      "subject": "天卫二",
+      "relation": "ORBITS",
+      "status": [
+        "source_missing"
+      ],
+      "present_sources": [
+        "zh_wikipedia"
+      ],
+      "missing_sources": [
+        "wikidata",
+        "nasa"
+      ],
+      "values_by_source": {
+        "zh_wikipedia": [
+          "天王星所有"
+        ]
+      }
+    },
+    {
+      "subject": "天卫五",
+      "relation": "DISCOVERED_BY",
+      "status": [
+        "source_missing"
+      ],
+      "present_sources": [
+        "zh_wikipedia"
+      ],
+      "missing_sources": [
+        "wikidata",
+        "nasa"
+      ],
+      "values_by_source": {
+        "zh_wikipedia": [
+          "古柏"
+        ]
+      }
+    },
+    {
+      "subject": "天卫五",
+      "relation": "HAS_MASS",
+      "status": [
+        "source_missing"
+      ],
+      "present_sources": [
+        "zh_wikipedia"
+      ],
+      "missing_sources": [
+        "wikidata",
+        "nasa"
+      ],
+      "values_by_source": {
+        "zh_wikipedia": [
+          "0.75 × 10 19 kg"
+        ]
+      }
+    },
+    {
+      "subject": "天卫五",
+      "relation": "HAS_RADIUS",
+      "status": [
+        "source_missing"
+      ],
+      "present_sources": [
+        "zh_wikipedia"
+      ],
+      "missing_sources": [
+        "wikidata",
+        "nasa"
+      ],
+      "values_by_source": {
+        "zh_wikipedia": [
+          "0.7 km"
+        ]
+      }
+    },
+    {
+      "subject": "天卫四",
+      "relation": "DISCOVERED_BY",
+      "status": [
+        "source_missing"
+      ],
+      "present_sources": [
+        "zh_wikipedia"
+      ],
+      "missing_sources": [
+        "wikidata",
+        "nasa"
+      ],
+      "values_by_source": {
+        "zh_wikipedia": [
+          "威廉·赫歇尔"
+        ]
+      }
+    },
+    {
+      "subject": "天卫四",
+      "relation": "HAS_MASS",
+      "status": [
+        "source_missing"
+      ],
+      "present_sources": [
+        "zh_wikipedia"
+      ],
+      "missing_sources": [
+        "wikidata",
+        "nasa"
+      ],
+      "values_by_source": {
+        "zh_wikipedia": [
+          "0.075 × 10 21 kg"
+        ]
+      }
+    },
+    {
+      "subject": "天卫四",
+      "relation": "HAS_RADIUS",
+      "status": [
+        "source_missing"
+      ],
+      "present_sources": [
+        "zh_wikipedia"
+      ],
+      "missing_sources": [
+        "wikidata",
+        "nasa"
+      ],
+      "values_by_source": {
+        "zh_wikipedia": [
+          "2.6 km"
+        ]
+      }
+    },
+    {
+      "subject": "天王星",
+      "relation": "DISCOVERED_BY",
+      "status": [
+        "source_missing"
+      ],
+      "present_sources": [
+        "wikidata"
+      ],
+      "missing_sources": [
+        "zh_wikipedia",
+        "nasa"
+      ],
+      "values_by_source": {
+        "wikidata": [
+          "威廉·赫歇尔"
+        ]
+      }
+    },
+    {
+      "subject": "天王星",
+      "relation": "HAS_ATMOSPHERE",
+      "status": [
+        "source_missing"
+      ],
+      "present_sources": [
+        "wikidata"
+      ],
+      "missing_sources": [
+        "zh_wikipedia",
+        "nasa"
+      ],
+      "values_by_source": {
+        "wikidata": [
+          "氢;氦;甲烷"
+        ]
+      }
+    },
+    {
+      "subject": "天王星",
+      "relation": "HAS_MASS",
+      "status": [
+        "source_missing",
+        "value_conflict"
+      ],
+      "present_sources": [
+        "wikidata",
+        "zh_wikipedia"
+      ],
+      "missing_sources": [
+        "nasa"
+      ],
+      "values_by_source": {
+        "zh_wikipedia": [
+          "0.0013 × 10 25 kg"
+        ],
+        "wikidata": [
+          "8.6810e25 kg"
+        ]
+      }
+    },
+    {
+      "subject": "天王星",
+      "relation": "HAS_RADIUS",
+      "status": [
+        "source_missing",
+        "value_conflict"
+      ],
+      "present_sources": [
+        "wikidata",
+        "zh_wikipedia"
+      ],
+      "missing_sources": [
+        "nasa"
+      ],
+      "values_by_source": {
+        "zh_wikipedia": [
+          "4km",
+          "20km"
+        ],
+        "wikidata": [
+          "25362 km"
+        ]
+      }
+    },
+    {
+      "subject": "天王星",
+      "relation": "ORBITS",
+      "status": [
+        "source_missing"
+      ],
+      "present_sources": [
+        "wikidata"
+      ],
+      "missing_sources": [
+        "zh_wikipedia",
+        "nasa"
+      ],
+      "values_by_source": {
+        "wikidata": [
+          "太阳"
+        ]
+      }
+    },
+    {
+      "subject": "天王星",
+      "relation": "PART_OF",
+      "status": [
+        "source_missing"
+      ],
+      "present_sources": [
+        "wikidata"
+      ],
+      "missing_sources": [
+        "zh_wikipedia",
+        "nasa"
+      ],
+      "values_by_source": {
+        "wikidata": [
+          "太阳系"
+        ]
+      }
+    },
+    {
+      "subject": "太阳",
+      "relation": "HAS_ATMOSPHERE",
+      "status": [
+        "source_missing"
+      ],
+      "present_sources": [
+        "wikidata"
+      ],
+      "missing_sources": [
+        "zh_wikipedia",
+        "nasa"
+      ],
+      "values_by_source": {
+        "wikidata": [
+          "氢;氦"
+        ]
+      }
+    },
+    {
+      "subject": "太阳",
+      "relation": "HAS_MASS",
+      "status": [
+        "source_missing",
+        "unit_equivalent"
+      ],
+      "present_sources": [
+        "wikidata",
+        "zh_wikipedia"
+      ],
+      "missing_sources": [
+        "nasa"
+      ],
+      "values_by_source": {
+        "zh_wikipedia": [
+          "1.9885 × 10 30 kg"
+        ],
+        "wikidata": [
+          "1.9885e30 kg"
+        ]
+      }
+    },
+    {
+      "subject": "太阳",
+      "relation": "HAS_RADIUS",
+      "status": [
+        "source_missing"
+      ],
+      "present_sources": [
+        "wikidata"
+      ],
+      "missing_sources": [
+        "zh_wikipedia",
+        "nasa"
+      ],
+      "values_by_source": {
+        "wikidata": [
+          "695700 km"
+        ]
+      }
+    },
+    {
+      "subject": "太阳",
+      "relation": "LOCATED_IN",
+      "status": [
+        "source_missing"
+      ],
+      "present_sources": [
+        "wikidata"
+      ],
+      "missing_sources": [
+        "zh_wikipedia",
+        "nasa"
+      ],
+      "values_by_source": {
+        "wikidata": [
+          "太阳系"
+        ]
+      }
+    },
+    {
+      "subject": "太阳",
+      "relation": "PART_OF",
+      "status": [
+        "source_missing"
+      ],
+      "present_sources": [
+        "wikidata"
+      ],
+      "missing_sources": [
+        "zh_wikipedia",
+        "nasa"
+      ],
+      "values_by_source": {
+        "wikidata": [
+          "太阳系"
+        ]
+      }
+    },
+    {
+      "subject": "妊神星",
+      "relation": "HAS_MASS",
+      "status": [
+        "source_missing"
+      ],
+      "present_sources": [
+        "zh_wikipedia"
+      ],
+      "missing_sources": [
+        "wikidata",
+        "nasa"
+      ],
+      "values_by_source": {
+        "zh_wikipedia": [
+          "4.006 × 10 21 kg"
+        ]
+      }
+    },
+    {
+      "subject": "妊神星",
+      "relation": "HAS_RADIUS",
+      "status": [
+        "source_missing"
+      ],
+      "present_sources": [
+        "zh_wikipedia"
+      ],
+      "missing_sources": [
+        "wikidata",
+        "nasa"
+      ],
+      "values_by_source": {
+        "zh_wikipedia": [
+          "718 km"
+        ]
+      }
+    },
+    {
+      "subject": "妊神星",
+      "relation": "IS_A",
+      "status": [
+        "source_missing"
+      ],
+      "present_sources": [
+        "zh_wikipedia"
+      ],
+      "missing_sources": [
+        "wikidata",
+        "nasa"
+      ],
+      "values_by_source": {
+        "zh_wikipedia": [
+          "类冥天体"
+        ]
+      }
+    },
+    {
+      "subject": "婚神星",
+      "relation": "DISCOVERED_BY",
+      "status": [
+        "source_missing"
+      ],
+      "present_sources": [
+        "zh_wikipedia"
+      ],
+      "missing_sources": [
+        "wikidata",
+        "nasa"
+      ],
+      "values_by_source": {
+        "zh_wikipedia": [
+          "卡尔·路德维希·哈丁"
+        ]
+      }
+    },
+    {
+      "subject": "婚神星",
+      "relation": "HAS_MASS",
+      "status": [
+        "source_missing"
+      ],
+      "present_sources": [
+        "zh_wikipedia"
+      ],
+      "missing_sources": [
+        "wikidata",
+        "nasa"
+      ],
+      "values_by_source": {
+        "zh_wikipedia": [
+          "2.67 × 10 19 kg"
+        ]
+      }
+    },
+    {
+      "subject": "小行星",
+      "relation": "IS_A",
+      "status": [
+        "source_missing"
+      ],
+      "present_sources": [
+        "zh_wikipedia"
+      ],
+      "missing_sources": [
+        "wikidata",
+        "nasa"
+      ],
+      "values_by_source": {
+        "zh_wikipedia": [
+          "太阳系小天体"
+        ]
+      }
+    },
+    {
+      "subject": "小行星120347",
+      "relation": "HAS_MASS",
+      "status": [
+        "source_missing"
+      ],
+      "present_sources": [
+        "zh_wikipedia"
+      ],
+      "missing_sources": [
+        "wikidata",
+        "nasa"
+      ],
+      "values_by_source": {
+        "zh_wikipedia": [
+          "4.5 × 10 20 kg"
+        ]
+      }
+    },
+    {
+      "subject": "小行星15760",
+      "relation": "HAS_RADIUS",
+      "status": [
+        "source_missing"
+      ],
+      "present_sources": [
+        "zh_wikipedia"
+      ],
+      "missing_sources": [
+        "wikidata",
+        "nasa"
+      ],
+      "values_by_source": {
+        "zh_wikipedia": [
+          "54 km"
+        ]
+      }
+    },
+    {
+      "subject": "小行星164207",
+      "relation": "DISCOVERED_BY",
+      "status": [
+        "source_missing"
+      ],
+      "present_sources": [
+        "zh_wikipedia"
+      ],
+      "missing_sources": [
+        "wikidata",
+        "nasa"
+      ],
+      "values_by_source": {
+        "zh_wikipedia": [
+          "LINEAR"
+        ]
+      }
+    },
+    {
+      "subject": "小行星2060",
+      "relation": "DISCOVERED_BY",
+      "status": [
+        "source_missing"
+      ],
+      "present_sources": [
+        "zh_wikipedia"
+      ],
+      "missing_sources": [
+        "wikidata",
+        "nasa"
+      ],
+      "values_by_source": {
+        "zh_wikipedia": [
+          "查尔斯·科瓦尔"
+        ]
+      }
+    },
+    {
+      "subject": "小行星55636",
+      "relation": "DISCOVERED_BY",
+      "status": [
+        "source_missing"
+      ],
+      "present_sources": [
+        "zh_wikipedia"
+      ],
+      "missing_sources": [
+        "wikidata",
+        "nasa"
+      ],
+      "values_by_source": {
+        "zh_wikipedia": [
+          "NEAT"
+        ]
+      }
+    },
+    {
+      "subject": "小行星55637",
+      "relation": "DISCOVERED_BY",
+      "status": [
+        "source_missing"
+      ],
+      "present_sources": [
+        "zh_wikipedia"
+      ],
+      "missing_sources": [
+        "wikidata",
+        "nasa"
+      ],
+      "values_by_source": {
+        "zh_wikipedia": [
+          "Spacewatch"
+        ]
+      }
+    },
+    {
+      "subject": "小行星55637",
+      "relation": "HAS_MASS",
+      "status": [
+        "source_missing"
+      ],
+      "present_sources": [
+        "zh_wikipedia"
+      ],
+      "missing_sources": [
+        "wikidata",
+        "nasa"
+      ],
+      "values_by_source": {
+        "zh_wikipedia": [
+          "1.25 × 10 20 kg"
+        ]
+      }
+    },
+    {
+      "subject": "小行星612911",
+      "relation": "HAS_MASS",
+      "status": [
+        "source_missing"
+      ],
+      "present_sources": [
+        "zh_wikipedia"
+      ],
+      "missing_sources": [
+        "wikidata",
+        "nasa"
+      ],
+      "values_by_source": {
+        "zh_wikipedia": [
+          "4.8 × 10 20 kg"
+        ]
+      }
+    },
+    {
+      "subject": "小行星84522",
+      "relation": "DISCOVERED_BY",
+      "status": [
+        "source_missing"
+      ],
+      "present_sources": [
+        "zh_wikipedia"
+      ],
+      "missing_sources": [
+        "wikidata",
+        "nasa"
+      ],
+      "values_by_source": {
+        "zh_wikipedia": [
+          "NEAT"
+        ]
+      }
+    },
+    {
+      "subject": "星际边界探测器",
+      "relation": "HAS_MASS",
+      "status": [
+        "source_missing"
+      ],
+      "present_sources": [
+        "zh_wikipedia"
+      ],
+      "missing_sources": [
+        "wikidata",
+        "nasa"
+      ],
+      "values_by_source": {
+        "zh_wikipedia": [
+          "110kg"
+        ]
+      }
+    },
+    {
+      "subject": "星震学",
+      "relation": "IS_A",
+      "status": [
+        "source_missing"
+      ],
+      "present_sources": [
+        "zh_wikipedia"
+      ],
+      "missing_sources": [
+        "wikidata",
+        "nasa"
+      ],
+      "values_by_source": {
+        "zh_wikipedia": [
+          "用来研究恒星"
+        ]
+      }
+    },
+    {
+      "subject": "智神星",
+      "relation": "DISCOVERED_BY",
+      "status": [
+        "source_missing"
+      ],
+      "present_sources": [
+        "zh_wikipedia"
+      ],
+      "missing_sources": [
+        "wikidata",
+        "nasa"
+      ],
+      "values_by_source": {
+        "zh_wikipedia": [
+          "海因里希·欧伯斯"
+        ]
+      }
+    },
+    {
+      "subject": "智神星",
+      "relation": "HAS_MASS",
+      "status": [
+        "source_missing"
+      ],
+      "present_sources": [
+        "zh_wikipedia"
+      ],
+      "missing_sources": [
+        "wikidata",
+        "nasa"
+      ],
+      "values_by_source": {
+        "zh_wikipedia": [
+          "2.11 × 10 20 kg"
+        ]
+      }
+    },
+    {
+      "subject": "月球",
+      "relation": "HAS_ATMOSPHERE",
+      "status": [
+        "source_missing"
+      ],
+      "present_sources": [
+        "wikidata"
+      ],
+      "missing_sources": [
+        "zh_wikipedia",
+        "nasa"
+      ],
+      "values_by_source": {
+        "wikidata": [
+          "极稀薄外逸层"
+        ]
+      }
+    },
+    {
+      "subject": "月球",
+      "relation": "HAS_MASS",
+      "status": [
+        "source_missing",
+        "unit_equivalent"
+      ],
+      "present_sources": [
+        "wikidata",
+        "zh_wikipedia"
+      ],
+      "missing_sources": [
+        "nasa"
+      ],
+      "values_by_source": {
+        "zh_wikipedia": [
+          "7.3477 × 10 22 kg"
+        ],
+        "wikidata": [
+          "7.342e22 kg"
+        ]
+      }
+    },
+    {
+      "subject": "月球",
+      "relation": "HAS_RADIUS",
+      "status": [
+        "source_missing",
+        "unit_equivalent"
+      ],
+      "present_sources": [
+        "wikidata",
+        "zh_wikipedia"
+      ],
+      "missing_sources": [
+        "nasa"
+      ],
+      "values_by_source": {
+        "zh_wikipedia": [
+          "1737.10 km",
+          "1735.97 km"
+        ],
+        "wikidata": [
+          "1737.4 km"
+        ]
+      }
+    },
+    {
+      "subject": "月球",
+      "relation": "ORBITS",
+      "status": [
+        "source_missing",
+        "value_conflict"
+      ],
+      "present_sources": [
+        "wikidata",
+        "zh_wikipedia"
+      ],
+      "missing_sources": [
+        "nasa"
+      ],
+      "values_by_source": {
+        "zh_wikipedia": [
+          "太阳系内密度第二高"
+        ],
+        "wikidata": [
+          "地球"
+        ]
+      }
+    },
+    {
+      "subject": "月球",
+      "relation": "PART_OF",
+      "status": [
+        "source_missing"
+      ],
+      "present_sources": [
+        "wikidata"
+      ],
+      "missing_sources": [
+        "zh_wikipedia",
+        "nasa"
+      ],
+      "values_by_source": {
+        "wikidata": [
+          "地球系统"
+        ]
+      }
+    },
+    {
+      "subject": "木卫一",
+      "relation": "DISCOVERED_BY",
+      "status": [
+        "source_missing"
+      ],
+      "present_sources": [
+        "wikidata"
+      ],
+      "missing_sources": [
+        "zh_wikipedia",
+        "nasa"
+      ],
+      "values_by_source": {
+        "wikidata": [
+          "伽利略·伽利莱"
+        ]
+      }
+    },
+    {
+      "subject": "木卫一",
+      "relation": "HAS_MASS",
+      "status": [
+        "source_missing",
+        "unit_equivalent"
+      ],
+      "present_sources": [
+        "wikidata",
+        "zh_wikipedia"
+      ],
+      "missing_sources": [
+        "nasa"
+      ],
+      "values_by_source": {
+        "zh_wikipedia": [
+          "8.9319 × 10 22 kg"
+        ],
+        "wikidata": [
+          "8.9319e22 kg"
+        ]
+      }
+    },
+    {
+      "subject": "木卫一",
+      "relation": "HAS_RADIUS",
+      "status": [
+        "source_missing",
+        "unit_equivalent"
+      ],
+      "present_sources": [
+        "wikidata",
+        "zh_wikipedia"
+      ],
+      "missing_sources": [
+        "nasa"
+      ],
+      "values_by_source": {
+        "zh_wikipedia": [
+          "1821.3 km"
+        ],
+        "wikidata": [
+          "1821.6 km"
+        ]
+      }
+    },
+    {
+      "subject": "木卫一",
+      "relation": "ORBITS",
+      "status": [
+        "source_missing"
+      ],
+      "present_sources": [
+        "wikidata"
+      ],
+      "missing_sources": [
+        "zh_wikipedia",
+        "nasa"
+      ],
+      "values_by_source": {
+        "wikidata": [
+          "木星"
+        ]
+      }
+    },
+    {
+      "subject": "木卫一",
+      "relation": "PART_OF",
+      "status": [
+        "source_missing"
+      ],
+      "present_sources": [
+        "wikidata"
+      ],
+      "missing_sources": [
+        "zh_wikipedia",
+        "nasa"
+      ],
+      "values_by_source": {
+        "wikidata": [
+          "木星系统"
+        ]
+      }
+    },
+    {
+      "subject": "木卫三",
+      "relation": "DISCOVERED_BY",
+      "status": [
+        "source_missing"
+      ],
+      "present_sources": [
+        "wikidata"
+      ],
+      "missing_sources": [
+        "zh_wikipedia",
+        "nasa"
+      ],
+      "values_by_source": {
+        "wikidata": [
+          "伽利略·伽利莱"
+        ]
+      }
+    },
+    {
+      "subject": "木卫三",
+      "relation": "HAS_MASS",
+      "status": [
+        "source_missing"
+      ],
+      "present_sources": [
+        "wikidata"
+      ],
+      "missing_sources": [
+        "zh_wikipedia",
+        "nasa"
+      ],
+      "values_by_source": {
+        "wikidata": [
+          "1.4819e23 kg"
+        ]
+      }
+    },
+    {
+      "subject": "木卫三",
+      "relation": "HAS_RADIUS",
+      "status": [
+        "source_missing"
+      ],
+      "present_sources": [
+        "wikidata"
+      ],
+      "missing_sources": [
+        "zh_wikipedia",
+        "nasa"
+      ],
+      "values_by_source": {
+        "wikidata": [
+          "2634.1 km"
+        ]
+      }
+    },
+    {
+      "subject": "木卫三",
+      "relation": "ORBITS",
+      "status": [
+        "source_missing"
+      ],
+      "present_sources": [
+        "wikidata"
+      ],
+      "missing_sources": [
+        "zh_wikipedia",
+        "nasa"
+      ],
+      "values_by_source": {
+        "wikidata": [
+          "木星"
+        ]
+      }
+    },
+    {
+      "subject": "木卫三",
+      "relation": "PART_OF",
+      "status": [
+        "source_missing"
+      ],
+      "present_sources": [
+        "wikidata"
+      ],
+      "missing_sources": [
+        "zh_wikipedia",
+        "nasa"
+      ],
+      "values_by_source": {
+        "wikidata": [
+          "木星系统"
+        ]
+      }
+    },
+    {
+      "subject": "木卫二",
+      "relation": "DISCOVERED_BY",
+      "status": [
+        "source_missing"
+      ],
+      "present_sources": [
+        "wikidata"
+      ],
+      "missing_sources": [
+        "zh_wikipedia",
+        "nasa"
+      ],
+      "values_by_source": {
+        "wikidata": [
+          "伽利略·伽利莱"
+        ]
+      }
+    },
+    {
+      "subject": "木卫二",
+      "relation": "HAS_MASS",
+      "status": [
+        "source_missing",
+        "value_conflict"
+      ],
+      "present_sources": [
+        "wikidata",
+        "zh_wikipedia"
+      ],
+      "missing_sources": [
+        "nasa"
+      ],
+      "values_by_source": {
+        "zh_wikipedia": [
+          "0.000 013 × 10 22 kg"
+        ],
+        "wikidata": [
+          "4.7998e22 kg"
+        ]
+      }
+    },
+    {
+      "subject": "木卫二",
+      "relation": "HAS_RADIUS",
+      "status": [
+        "source_missing",
+        "value_conflict"
+      ],
+      "present_sources": [
+        "wikidata",
+        "zh_wikipedia"
+      ],
+      "missing_sources": [
+        "nasa"
+      ],
+      "values_by_source": {
+        "zh_wikipedia": [
+          "0.5 km"
+        ],
+        "wikidata": [
+          "1560.8 km"
+        ]
+      }
+    },
+    {
+      "subject": "木卫二",
+      "relation": "ORBITS",
+      "status": [
+        "source_missing"
+      ],
+      "present_sources": [
+        "wikidata"
+      ],
+      "missing_sources": [
+        "zh_wikipedia",
+        "nasa"
+      ],
+      "values_by_source": {
+        "wikidata": [
+          "木星"
+        ]
+      }
+    },
+    {
+      "subject": "木卫二",
+      "relation": "PART_OF",
+      "status": [
+        "source_missing"
+      ],
+      "present_sources": [
+        "wikidata"
+      ],
+      "missing_sources": [
+        "zh_wikipedia",
+        "nasa"
+      ],
+      "values_by_source": {
+        "wikidata": [
+          "木星系统"
+        ]
+      }
+    },
+    {
+      "subject": "木卫四",
+      "relation": "DISCOVERED_BY",
+      "status": [
+        "source_missing",
+        "exact_match"
+      ],
+      "present_sources": [
+        "wikidata",
+        "zh_wikipedia"
+      ],
+      "missing_sources": [
+        "nasa"
+      ],
+      "values_by_source": {
+        "zh_wikipedia": [
+          "伽利略·伽利莱"
+        ],
+        "wikidata": [
+          "伽利略·伽利莱"
+        ]
+      }
+    },
+    {
+      "subject": "木卫四",
+      "relation": "HAS_MASS",
+      "status": [
+        "source_missing",
+        "value_conflict"
+      ],
+      "present_sources": [
+        "wikidata",
+        "zh_wikipedia"
+      ],
+      "missing_sources": [
+        "nasa"
+      ],
+      "values_by_source": {
+        "zh_wikipedia": [
+          "0.000 137 × 10 23 kg"
+        ],
+        "wikidata": [
+          "1.0759e23 kg"
+        ]
+      }
+    },
+    {
+      "subject": "木卫四",
+      "relation": "HAS_RADIUS",
+      "status": [
+        "source_missing",
+        "value_conflict"
+      ],
+      "present_sources": [
+        "wikidata",
+        "zh_wikipedia"
+      ],
+      "missing_sources": [
+        "nasa"
+      ],
+      "values_by_source": {
+        "zh_wikipedia": [
+          "1.5 km"
+        ],
+        "wikidata": [
+          "2410.3 km"
+        ]
+      }
+    },
+    {
+      "subject": "木卫四",
+      "relation": "IS_A",
+      "status": [
+        "source_missing"
+      ],
+      "present_sources": [
+        "zh_wikipedia"
+      ],
+      "missing_sources": [
+        "wikidata",
+        "nasa"
+      ],
+      "values_by_source": {
+        "zh_wikipedia": [
+          "太阳系 第三大卫星",
+          "同步自转 卫星"
+        ]
+      }
+    },
+    {
+      "subject": "木卫四",
+      "relation": "ORBITS",
+      "status": [
+        "source_missing"
+      ],
+      "present_sources": [
+        "wikidata"
+      ],
+      "missing_sources": [
+        "zh_wikipedia",
+        "nasa"
+      ],
+      "values_by_source": {
+        "wikidata": [
+          "木星"
+        ]
+      }
+    },
+    {
+      "subject": "木卫四",
+      "relation": "PART_OF",
+      "status": [
+        "source_missing"
+      ],
+      "present_sources": [
+        "wikidata"
+      ],
+      "missing_sources": [
+        "zh_wikipedia",
+        "nasa"
+      ],
+      "values_by_source": {
+        "wikidata": [
+          "木星系统"
+        ]
+      }
+    },
+    {
+      "subject": "木星",
+      "relation": "HAS_ATMOSPHERE",
+      "status": [
+        "source_missing"
+      ],
+      "present_sources": [
+        "wikidata"
+      ],
+      "missing_sources": [
+        "zh_wikipedia",
+        "nasa"
+      ],
+      "values_by_source": {
+        "wikidata": [
+          "氢;氦;甲烷;氨"
+        ]
+      }
+    },
+    {
+      "subject": "木星",
+      "relation": "HAS_MASS",
+      "status": [
+        "source_missing",
+        "unit_equivalent"
+      ],
+      "present_sources": [
+        "wikidata",
+        "zh_wikipedia"
+      ],
+      "missing_sources": [
+        "nasa"
+      ],
+      "values_by_source": {
+        "zh_wikipedia": [
+          "1.8981 × 10 27 kg"
+        ],
+        "wikidata": [
+          "1.8982e27 kg"
+        ]
+      }
+    },
+    {
+      "subject": "木星",
+      "relation": "HAS_RADIUS",
+      "status": [
+        "source_missing",
+        "value_conflict"
+      ],
+      "present_sources": [
+        "wikidata",
+        "zh_wikipedia"
+      ],
+      "missing_sources": [
+        "nasa"
+      ],
+      "values_by_source": {
+        "zh_wikipedia": [
+          "0.4 km"
+        ],
+        "wikidata": [
+          "69911 km"
+        ]
+      }
+    },
+    {
+      "subject": "木星",
+      "relation": "IS_A",
+      "status": [
+        "source_missing"
+      ],
+      "present_sources": [
+        "zh_wikipedia"
+      ],
+      "missing_sources": [
+        "wikidata",
+        "nasa"
+      ],
+      "values_by_source": {
+        "zh_wikipedia": [
+          "颗 巨行星"
+        ]
+      }
+    },
+    {
+      "subject": "木星",
+      "relation": "ORBITS",
+      "status": [
+        "source_missing"
+      ],
+      "present_sources": [
+        "wikidata"
+      ],
+      "missing_sources": [
+        "zh_wikipedia",
+        "nasa"
+      ],
+      "values_by_source": {
+        "wikidata": [
+          "太阳"
+        ]
+      }
+    },
+    {
+      "subject": "木星",
+      "relation": "PART_OF",
+      "status": [
+        "source_missing"
+      ],
+      "present_sources": [
+        "wikidata"
+      ],
+      "missing_sources": [
+        "zh_wikipedia",
+        "nasa"
+      ],
+      "values_by_source": {
+        "wikidata": [
+          "太阳系"
+        ]
+      }
+    },
+    {
+      "subject": "柯伊伯带",
+      "relation": "IS_A",
+      "status": [
+        "source_missing"
+      ],
+      "present_sources": [
+        "zh_wikipedia"
+      ],
+      "missing_sources": [
+        "wikidata",
+        "nasa"
+      ],
+      "values_by_source": {
+        "zh_wikipedia": [
+          "短周期 彗星"
+        ]
+      }
+    },
+    {
+      "subject": "梅西尔德星",
+      "relation": "DISCOVERED_BY",
+      "status": [
+        "source_missing"
+      ],
+      "present_sources": [
+        "zh_wikipedia"
+      ],
+      "missing_sources": [
+        "wikidata",
+        "nasa"
+      ],
+      "values_by_source": {
+        "zh_wikipedia": [
+          "约翰·帕利扎"
+        ]
+      }
+    },
+    {
+      "subject": "梅西尔德星",
+      "relation": "HAS_MASS",
+      "status": [
+        "source_missing"
+      ],
+      "present_sources": [
+        "zh_wikipedia"
+      ],
+      "missing_sources": [
+        "wikidata",
+        "nasa"
+      ],
+      "values_by_source": {
+        "zh_wikipedia": [
+          "0.044 × 10 17 kg"
+        ]
+      }
+    },
+    {
+      "subject": "梅西尔德星",
+      "relation": "IS_A",
+      "status": [
+        "source_missing"
+      ],
+      "present_sources": [
+        "zh_wikipedia"
+      ],
+      "missing_sources": [
+        "wikidata",
+        "nasa"
+      ],
+      "values_by_source": {
+        "zh_wikipedia": [
+          "原始 C-型小行星"
+        ]
+      }
+    },
+    {
+      "subject": "棕矮星",
+      "relation": "DISCOVERED_BY",
+      "status": [
+        "source_missing"
+      ],
+      "present_sources": [
+        "zh_wikipedia"
+      ],
+      "missing_sources": [
+        "wikidata",
+        "nasa"
+      ],
+      "values_by_source": {
+        "zh_wikipedia": [
+          "经常会"
+        ]
+      }
+    },
+    {
+      "subject": "次棕矮星",
+      "relation": "IS_A",
+      "status": [
+        "source_missing"
+      ],
+      "present_sources": [
+        "zh_wikipedia"
+      ],
+      "missing_sources": [
+        "wikidata",
+        "nasa"
+      ],
+      "values_by_source": {
+        "zh_wikipedia": [
+          "以 恒星"
+        ]
+      }
+    },
+    {
+      "subject": "水星",
+      "relation": "HAS_ATMOSPHERE",
+      "status": [
+        "source_missing"
+      ],
+      "present_sources": [
+        "wikidata"
+      ],
+      "missing_sources": [
+        "zh_wikipedia",
+        "nasa"
+      ],
+      "values_by_source": {
+        "wikidata": [
+          "稀薄外逸层"
+        ]
+      }
+    },
+    {
+      "subject": "水星",
+      "relation": "HAS_MASS",
+      "status": [
+        "source_missing",
+        "unit_equivalent"
+      ],
+      "present_sources": [
+        "wikidata",
+        "zh_wikipedia"
+      ],
+      "missing_sources": [
+        "nasa"
+      ],
+      "values_by_source": {
+        "zh_wikipedia": [
+          "3.3022 × 10 23 kg"
+        ],
+        "wikidata": [
+          "3.3011e23 kg"
+        ]
+      }
+    },
+    {
+      "subject": "水星",
+      "relation": "HAS_RADIUS",
+      "status": [
+        "source_missing",
+        "value_conflict"
+      ],
+      "present_sources": [
+        "wikidata",
+        "zh_wikipedia"
+      ],
+      "missing_sources": [
+        "nasa"
+      ],
+      "values_by_source": {
+        "zh_wikipedia": [
+          "1.0 km"
+        ],
+        "wikidata": [
+          "2439.7 km"
+        ]
+      }
+    },
+    {
+      "subject": "水星",
+      "relation": "ORBITS",
+      "status": [
+        "source_missing"
+      ],
+      "present_sources": [
+        "wikidata"
+      ],
+      "missing_sources": [
+        "zh_wikipedia",
+        "nasa"
+      ],
+      "values_by_source": {
+        "wikidata": [
+          "太阳"
+        ]
+      }
+    },
+    {
+      "subject": "水星",
+      "relation": "PART_OF",
+      "status": [
+        "source_missing"
+      ],
+      "present_sources": [
+        "wikidata"
+      ],
+      "missing_sources": [
+        "zh_wikipedia",
+        "nasa"
+      ],
+      "values_by_source": {
+        "wikidata": [
+          "太阳系"
+        ]
+      }
+    },
+    {
+      "subject": "流星雨",
+      "relation": "IS_A",
+      "status": [
+        "source_missing"
+      ],
+      "present_sources": [
+        "zh_wikipedia"
+      ],
+      "missing_sources": [
+        "wikidata",
+        "nasa"
+      ],
+      "values_by_source": {
+        "zh_wikipedia": [
+          "行星和 彗星"
+        ]
+      }
+    },
+    {
+      "subject": "海王星",
+      "relation": "DISCOVERED_BY",
+      "status": [
+        "source_missing"
+      ],
+      "present_sources": [
+        "wikidata"
+      ],
+      "missing_sources": [
+        "zh_wikipedia",
+        "nasa"
+      ],
+      "values_by_source": {
+        "wikidata": [
+          "约翰·伽勒"
+        ]
+      }
+    },
+    {
+      "subject": "海王星",
+      "relation": "HAS_ATMOSPHERE",
+      "status": [
+        "source_missing"
+      ],
+      "present_sources": [
+        "wikidata"
+      ],
+      "missing_sources": [
+        "zh_wikipedia",
+        "nasa"
+      ],
+      "values_by_source": {
+        "wikidata": [
+          "氢;氦;甲烷"
+        ]
+      }
+    },
+    {
+      "subject": "海王星",
+      "relation": "HAS_MASS",
+      "status": [
+        "source_missing",
+        "unit_equivalent"
+      ],
+      "present_sources": [
+        "wikidata",
+        "zh_wikipedia"
+      ],
+      "missing_sources": [
+        "nasa"
+      ],
+      "values_by_source": {
+        "zh_wikipedia": [
+          "1.0243 × 10 26 kg"
+        ],
+        "wikidata": [
+          "1.02413e26 kg"
+        ]
+      }
+    },
+    {
+      "subject": "海王星",
+      "relation": "HAS_RADIUS",
+      "status": [
+        "source_missing",
+        "value_conflict"
+      ],
+      "present_sources": [
+        "wikidata",
+        "zh_wikipedia"
+      ],
+      "missing_sources": [
+        "nasa"
+      ],
+      "values_by_source": {
+        "zh_wikipedia": [
+          "15 km",
+          "30 km"
+        ],
+        "wikidata": [
+          "24622 km"
+        ]
+      }
+    },
+    {
+      "subject": "海王星",
+      "relation": "IS_A",
+      "status": [
+        "source_missing"
+      ],
+      "present_sources": [
+        "zh_wikipedia"
+      ],
+      "missing_sources": [
+        "wikidata",
+        "nasa"
+      ],
+      "values_by_source": {
+        "zh_wikipedia": [
+          "气体行星"
+        ]
+      }
+    },
+    {
+      "subject": "海王星",
+      "relation": "ORBITS",
+      "status": [
+        "source_missing"
+      ],
+      "present_sources": [
+        "wikidata"
+      ],
+      "missing_sources": [
+        "zh_wikipedia",
+        "nasa"
+      ],
+      "values_by_source": {
+        "wikidata": [
+          "太阳"
+        ]
+      }
+    },
+    {
+      "subject": "海王星",
+      "relation": "PART_OF",
+      "status": [
+        "source_missing"
+      ],
+      "present_sources": [
+        "wikidata"
+      ],
+      "missing_sources": [
+        "zh_wikipedia",
+        "nasa"
+      ],
+      "values_by_source": {
+        "wikidata": [
+          "太阳系"
+        ]
+      }
+    },
+    {
+      "subject": "火卫一",
+      "relation": "DISCOVERED_BY",
+      "status": [
+        "source_missing",
+        "exact_match"
+      ],
+      "present_sources": [
+        "wikidata",
+        "zh_wikipedia"
+      ],
+      "missing_sources": [
+        "nasa"
+      ],
+      "values_by_source": {
+        "zh_wikipedia": [
+          "阿萨夫·霍尔"
+        ],
+        "wikidata": [
+          "阿萨夫·霍尔"
+        ]
+      }
+    },
+    {
+      "subject": "火卫一",
+      "relation": "HAS_MASS",
+      "status": [
+        "source_missing",
+        "value_conflict"
+      ],
+      "present_sources": [
+        "wikidata",
+        "zh_wikipedia"
+      ],
+      "missing_sources": [
+        "nasa"
+      ],
+      "values_by_source": {
+        "zh_wikipedia": [
+          "1.072 × 10 16 kg"
+        ],
+        "wikidata": [
+          "1.0659e16 kg"
+        ]
+      }
+    },
+    {
+      "subject": "火卫一",
+      "relation": "HAS_RADIUS",
+      "status": [
+        "source_missing",
+        "value_conflict"
+      ],
+      "present_sources": [
+        "wikidata",
+        "zh_wikipedia"
+      ],
+      "missing_sources": [
+        "nasa"
+      ],
+      "values_by_source": {
+        "zh_wikipedia": [
+          "11.1km"
+        ],
+        "wikidata": [
+          "11.2667 km"
+        ]
+      }
+    },
+    {
+      "subject": "火卫一",
+      "relation": "ORBITS",
+      "status": [
+        "source_missing",
+        "exact_match"
+      ],
+      "present_sources": [
+        "nasa",
+        "wikidata"
+      ],
+      "missing_sources": [
+        "zh_wikipedia"
+      ],
+      "values_by_source": {
+        "wikidata": [
+          "火星"
+        ],
+        "nasa": [
+          "火星"
+        ]
+      }
+    },
+    {
+      "subject": "火卫一",
+      "relation": "PART_OF",
+      "status": [
+        "source_missing"
+      ],
+      "present_sources": [
+        "wikidata"
+      ],
+      "missing_sources": [
+        "zh_wikipedia",
+        "nasa"
+      ],
+      "values_by_source": {
+        "wikidata": [
+          "火星系统"
+        ]
+      }
+    },
+    {
+      "subject": "火卫二",
+      "relation": "DISCOVERED_BY",
+      "status": [
+        "source_missing"
+      ],
+      "present_sources": [
+        "wikidata"
+      ],
+      "missing_sources": [
+        "zh_wikipedia",
+        "nasa"
+      ],
+      "values_by_source": {
+        "wikidata": [
+          "阿萨夫·霍尔"
+        ]
+      }
+    },
+    {
+      "subject": "火卫二",
+      "relation": "HAS_MASS",
+      "status": [
+        "source_missing"
+      ],
+      "present_sources": [
+        "wikidata"
+      ],
+      "missing_sources": [
+        "zh_wikipedia",
+        "nasa"
+      ],
+      "values_by_source": {
+        "wikidata": [
+          "1.4762e15 kg"
+        ]
+      }
+    },
+    {
+      "subject": "火卫二",
+      "relation": "HAS_RADIUS",
+      "status": [
+        "source_missing"
+      ],
+      "present_sources": [
+        "wikidata"
+      ],
+      "missing_sources": [
+        "zh_wikipedia",
+        "nasa"
+      ],
+      "values_by_source": {
+        "wikidata": [
+          "6.2 km"
+        ]
+      }
+    },
+    {
+      "subject": "火卫二",
+      "relation": "ORBITS",
+      "status": [
+        "source_missing"
+      ],
+      "present_sources": [
+        "wikidata"
+      ],
+      "missing_sources": [
+        "zh_wikipedia",
+        "nasa"
+      ],
+      "values_by_source": {
+        "wikidata": [
+          "火星"
+        ]
+      }
+    },
+    {
+      "subject": "火卫二",
+      "relation": "PART_OF",
+      "status": [
+        "source_missing"
+      ],
+      "present_sources": [
+        "wikidata"
+      ],
+      "missing_sources": [
+        "zh_wikipedia",
+        "nasa"
+      ],
+      "values_by_source": {
+        "wikidata": [
+          "火星系统"
+        ]
+      }
+    },
+    {
+      "subject": "火星",
+      "relation": "HAS_ATMOSPHERE",
+      "status": [
+        "source_missing",
+        "value_conflict"
+      ],
+      "present_sources": [
+        "wikidata",
+        "zh_wikipedia"
+      ],
+      "missing_sources": [
+        "nasa"
+      ],
+      "values_by_source": {
+        "zh_wikipedia": [
+          "CO2",
+          "N2",
+          "Ar",
+          "O2"
+        ],
+        "wikidata": [
+          "二氧化碳;氮气;氩气"
+        ]
+      }
+    },
+    {
+      "subject": "火星",
+      "relation": "HAS_MASS",
+      "status": [
+        "source_missing",
+        "unit_equivalent"
+      ],
+      "present_sources": [
+        "wikidata",
+        "zh_wikipedia"
+      ],
+      "missing_sources": [
+        "nasa"
+      ],
+      "values_by_source": {
+        "zh_wikipedia": [
+          "6.4169 × 10 23 kg"
+        ],
+        "wikidata": [
+          "6.4171e23 kg"
+        ]
+      }
+    },
+    {
+      "subject": "火星",
+      "relation": "HAS_RADIUS",
+      "status": [
+        "source_missing",
+        "unit_equivalent"
+      ],
+      "present_sources": [
+        "wikidata",
+        "zh_wikipedia"
+      ],
+      "missing_sources": [
+        "nasa"
+      ],
+      "values_by_source": {
+        "zh_wikipedia": [
+          "3389.5 km",
+          "3396.2 km",
+          "3376.2 km"
+        ],
+        "wikidata": [
+          "3389.5 km"
+        ]
+      }
+    },
+    {
+      "subject": "火星",
+      "relation": "IS_A",
+      "status": [
+        "source_missing"
+      ],
+      "present_sources": [
+        "zh_wikipedia"
+      ],
+      "missing_sources": [
+        "wikidata",
+        "nasa"
+      ],
+      "values_by_source": {
+        "zh_wikipedia": [
+          "沙漠行星"
+        ]
+      }
+    },
+    {
+      "subject": "火星",
+      "relation": "ORBITS",
+      "status": [
+        "source_missing"
+      ],
+      "present_sources": [
+        "wikidata"
+      ],
+      "missing_sources": [
+        "zh_wikipedia",
+        "nasa"
+      ],
+      "values_by_source": {
+        "wikidata": [
+          "太阳"
+        ]
+      }
+    },
+    {
+      "subject": "火星",
+      "relation": "PART_OF",
+      "status": [
+        "source_missing"
+      ],
+      "present_sources": [
+        "wikidata"
+      ],
+      "missing_sources": [
+        "zh_wikipedia",
+        "nasa"
+      ],
+      "values_by_source": {
+        "wikidata": [
+          "太阳系"
+        ]
+      }
+    },
+    {
+      "subject": "灶神星",
+      "relation": "DISCOVERED_BY",
+      "status": [
+        "source_missing"
+      ],
+      "present_sources": [
+        "zh_wikipedia"
+      ],
+      "missing_sources": [
+        "wikidata",
+        "nasa"
+      ],
+      "values_by_source": {
+        "zh_wikipedia": [
+          "海因里希·欧伯斯"
+        ]
+      }
+    },
+    {
+      "subject": "灶神星",
+      "relation": "HAS_MASS",
+      "status": [
+        "source_missing"
+      ],
+      "present_sources": [
+        "zh_wikipedia"
+      ],
+      "missing_sources": [
+        "wikidata",
+        "nasa"
+      ],
+      "values_by_source": {
+        "zh_wikipedia": [
+          "0.000 01 × 10 20 kg"
+        ]
+      }
+    },
+    {
+      "subject": "灶神星",
+      "relation": "IS_A",
+      "status": [
+        "source_missing"
+      ],
+      "present_sources": [
+        "zh_wikipedia"
+      ],
+      "missing_sources": [
+        "wikidata",
+        "nasa"
+      ],
+      "values_by_source": {
+        "zh_wikipedia": [
+          "继 矮行星",
+          "主小行星"
+        ]
+      }
+    },
+    {
+      "subject": "疏散星团",
+      "relation": "IS_A",
+      "status": [
+        "source_missing"
+      ],
+      "present_sources": [
+        "zh_wikipedia"
+      ],
+      "missing_sources": [
+        "wikidata",
+        "nasa"
+      ],
+      "values_by_source": {
+        "zh_wikipedia": [
+          "研究 恒星"
+        ]
+      }
+    },
+    {
+      "subject": "艾女星",
+      "relation": "DISCOVERED_BY",
+      "status": [
+        "source_missing"
+      ],
+      "present_sources": [
+        "zh_wikipedia"
+      ],
+      "missing_sources": [
+        "wikidata",
+        "nasa"
+      ],
+      "values_by_source": {
+        "zh_wikipedia": [
+          "约翰·帕利扎"
+        ]
+      }
+    },
+    {
+      "subject": "艾女星",
+      "relation": "HAS_MASS",
+      "status": [
+        "source_missing"
+      ],
+      "present_sources": [
+        "zh_wikipedia"
+      ],
+      "missing_sources": [
+        "wikidata",
+        "nasa"
+      ],
+      "values_by_source": {
+        "zh_wikipedia": [
+          "0.6 × 10 16 kg"
+        ]
+      }
+    },
+    {
+      "subject": "艾女星",
+      "relation": "HAS_RADIUS",
+      "status": [
+        "source_missing"
+      ],
+      "present_sources": [
+        "zh_wikipedia"
+      ],
+      "missing_sources": [
+        "wikidata",
+        "nasa"
+      ],
+      "values_by_source": {
+        "zh_wikipedia": [
+          "15.7 km"
+        ]
+      }
+    },
+    {
+      "subject": "艾女星",
+      "relation": "IS_A",
+      "status": [
+        "source_missing"
+      ],
+      "present_sources": [
+        "zh_wikipedia"
+      ],
+      "missing_sources": [
+        "wikidata",
+        "nasa"
+      ],
+      "values_by_source": {
+        "zh_wikipedia": [
+          "继小行星",
+          "主 小行星"
+        ]
+      }
+    },
+    {
+      "subject": "行星迁移",
+      "relation": "IS_A",
+      "status": [
+        "source_missing"
+      ],
+      "present_sources": [
+        "zh_wikipedia"
+      ],
+      "missing_sources": [
+        "wikidata",
+        "nasa"
+      ],
+      "values_by_source": {
+        "zh_wikipedia": [
+          "太阳系外行星"
+        ]
+      }
+    },
+    {
+      "subject": "谷神星",
+      "relation": "DISCOVERED_BY",
+      "status": [
+        "source_missing",
+        "exact_match"
+      ],
+      "present_sources": [
+        "wikidata",
+        "zh_wikipedia"
+      ],
+      "missing_sources": [
+        "nasa"
+      ],
+      "values_by_source": {
+        "zh_wikipedia": [
+          "朱塞普·皮亚齐"
+        ],
+        "wikidata": [
+          "朱塞普·皮亚齐"
+        ]
+      }
+    },
+    {
+      "subject": "谷神星",
+      "relation": "HAS_MASS",
+      "status": [
+        "source_missing",
+        "unit_equivalent"
+      ],
+      "present_sources": [
+        "wikidata",
+        "zh_wikipedia"
+      ],
+      "missing_sources": [
+        "nasa"
+      ],
+      "values_by_source": {
+        "zh_wikipedia": [
+          "9.3839 × 10 20 kg"
+        ],
+        "wikidata": [
+          "9.3835e20 kg"
+        ]
+      }
+    },
+    {
+      "subject": "谷神星",
+      "relation": "HAS_RADIUS",
+      "status": [
+        "source_missing",
+        "value_conflict"
+      ],
+      "present_sources": [
+        "wikidata",
+        "zh_wikipedia"
+      ],
+      "missing_sources": [
+        "nasa"
+      ],
+      "values_by_source": {
+        "zh_wikipedia": [
+          "473 km"
+        ],
+        "wikidata": [
+          "469.7 km"
+        ]
+      }
+    },
+    {
+      "subject": "谷神星",
+      "relation": "IS_A",
+      "status": [
+        "source_missing"
+      ],
+      "present_sources": [
+        "zh_wikipedia"
+      ],
+      "missing_sources": [
+        "wikidata",
+        "nasa"
+      ],
+      "values_by_source": {
+        "zh_wikipedia": [
+          "主小行星"
+        ]
+      }
+    },
+    {
+      "subject": "谷神星",
+      "relation": "ORBITS",
+      "status": [
+        "source_missing"
+      ],
+      "present_sources": [
+        "wikidata"
+      ],
+      "missing_sources": [
+        "zh_wikipedia",
+        "nasa"
+      ],
+      "values_by_source": {
+        "wikidata": [
+          "太阳"
+        ]
+      }
+    },
+    {
+      "subject": "谷神星",
+      "relation": "PART_OF",
+      "status": [
+        "source_missing"
+      ],
+      "present_sources": [
+        "wikidata"
+      ],
+      "missing_sources": [
+        "zh_wikipedia",
+        "nasa"
+      ],
+      "values_by_source": {
+        "wikidata": [
+          "小行星带"
+        ]
+      }
+    },
+    {
+      "subject": "金星",
+      "relation": "HAS_ATMOSPHERE",
+      "status": [
+        "source_missing"
+      ],
+      "present_sources": [
+        "wikidata"
+      ],
+      "missing_sources": [
+        "zh_wikipedia",
+        "nasa"
+      ],
+      "values_by_source": {
+        "wikidata": [
+          "二氧化碳;氮气"
+        ]
+      }
+    },
+    {
+      "subject": "金星",
+      "relation": "HAS_MASS",
+      "status": [
+        "source_missing",
+        "unit_equivalent"
+      ],
+      "present_sources": [
+        "wikidata",
+        "zh_wikipedia"
+      ],
+      "missing_sources": [
+        "nasa"
+      ],
+      "values_by_source": {
+        "zh_wikipedia": [
+          "4.8676 × 10 24 kg"
+        ],
+        "wikidata": [
+          "4.8675e24 kg"
+        ]
+      }
+    },
+    {
+      "subject": "金星",
+      "relation": "HAS_RADIUS",
+      "status": [
+        "source_missing",
+        "value_conflict"
+      ],
+      "present_sources": [
+        "wikidata",
+        "zh_wikipedia"
+      ],
+      "missing_sources": [
+        "nasa"
+      ],
+      "values_by_source": {
+        "zh_wikipedia": [
+          "1.0km"
+        ],
+        "wikidata": [
+          "6051.8 km"
+        ]
+      }
+    },
+    {
+      "subject": "金星",
+      "relation": "IS_A",
+      "status": [
+        "source_missing"
+      ],
+      "present_sources": [
+        "zh_wikipedia"
+      ],
+      "missing_sources": [
+        "wikidata",
+        "nasa"
+      ],
+      "values_by_source": {
+        "zh_wikipedia": [
+          "类地行星"
+        ]
+      }
+    },
+    {
+      "subject": "金星",
+      "relation": "ORBITS",
+      "status": [
+        "source_missing"
+      ],
+      "present_sources": [
+        "wikidata"
+      ],
+      "missing_sources": [
+        "zh_wikipedia",
+        "nasa"
+      ],
+      "values_by_source": {
+        "wikidata": [
+          "太阳"
+        ]
+      }
+    },
+    {
+      "subject": "金星",
+      "relation": "PART_OF",
+      "status": [
+        "source_missing"
+      ],
+      "present_sources": [
+        "wikidata"
+      ],
+      "missing_sources": [
+        "zh_wikipedia",
+        "nasa"
+      ],
+      "values_by_source": {
+        "wikidata": [
+          "太阳系"
+        ]
+      }
+    },
+    {
+      "subject": "阋神星",
+      "relation": "HAS_MASS",
+      "status": [
+        "source_missing"
+      ],
+      "present_sources": [
+        "zh_wikipedia"
+      ],
+      "missing_sources": [
+        "wikidata",
+        "nasa"
+      ],
+      "values_by_source": {
+        "zh_wikipedia": [
+          "1.67 × 10 22 kg"
+        ]
+      }
+    },
+    {
+      "subject": "阋神星",
+      "relation": "HAS_RADIUS",
+      "status": [
+        "source_missing"
+      ],
+      "present_sources": [
+        "zh_wikipedia"
+      ],
+      "missing_sources": [
+        "wikidata",
+        "nasa"
+      ],
+      "values_by_source": {
+        "zh_wikipedia": [
+          "6 km"
+        ]
+      }
+    },
+    {
+      "subject": "雨神星",
+      "relation": "DISCOVERED_BY",
+      "status": [
+        "source_missing"
+      ],
+      "present_sources": [
+        "zh_wikipedia"
+      ],
+      "missing_sources": [
+        "wikidata",
+        "nasa"
+      ],
+      "values_by_source": {
+        "zh_wikipedia": [
+          "伊格纳西奥·费瑞恩"
+        ]
+      }
+    },
+    {
+      "subject": "鸟神星",
+      "relation": "HAS_MASS",
+      "status": [
+        "source_missing"
+      ],
+      "present_sources": [
+        "zh_wikipedia"
+      ],
+      "missing_sources": [
+        "wikidata",
+        "nasa"
+      ],
+      "values_by_source": {
+        "zh_wikipedia": [
+          "2.69 × 10 21 kg"
+        ]
+      }
+    },
+    {
+      "subject": "鸟神星",
+      "relation": "HAS_RADIUS",
+      "status": [
+        "source_missing"
+      ],
+      "present_sources": [
+        "zh_wikipedia"
+      ],
+      "missing_sources": [
+        "wikidata",
+        "nasa"
+      ],
+      "values_by_source": {
+        "zh_wikipedia": [
+          "7 km"
+        ]
+      }
+    }
+  ],
+  "metadata_incomplete": [],
+  "boundary": {
+    "read_only": true,
+    "default_answer_fusion": false,
+    "active_source_changed": false
+  },
+  "outputs": {
+    "json": "F:\\知识表示与处理结课作业\\第二次托洛洛测试 -重大进展\\evaluation\\source_conflict_audit.json",
+    "markdown": "F:\\知识表示与处理结课作业\\第二次托洛洛测试 -重大进展\\docs\\source_conflict_audit.md"
+  }
+}

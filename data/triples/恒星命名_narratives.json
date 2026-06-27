@@ -1,0 +1,102 @@
+[
+  {
+    "page_title": "恒星命名",
+    "section": "概要",
+    "chunk_index": 0,
+    "content": "国际天文联合会 （IAU）是国际上认可唯一能为 恒星 和各类天体分配与指定名称的机构。\n在IAU成立之前，已经有许多恒星的名字被使用，其他的名字，主要是变星（包括 新星 、 超新星 ）则一直在增加，但是多数的恒星在被提到时还是没有名字，只会用 星表 中的 编号 来称呼。",
+    "path": "概要",
+    "keywords": [
+      "国际天文联合会",
+      "是国际上认可唯一能为",
+      "恒星",
+      "和各类天体分配与指定名称的机构",
+      "成立之前",
+      "已经有许多恒星的名字被使用",
+      "其他的名字",
+      "主要是变星"
+    ],
+    "chunk_id": "93ac7a6186b9",
+    "source": "zh_wikipedia",
+    "source_role": "primary",
+    "origin": "html_fallback",
+    "type": "embedding_chunk",
+    "source_title": "恒星命名",
+    "source_name": "zh_wikipedia",
+    "schema_version": "2.0"
+  },
+  {
+    "page_title": "恒星命名",
+    "section": "固有名称",
+    "chunk_index": 1,
+    "content": "大多数 肉眼可见 明亮的恒星都有传统的名称，有许多都源自 阿拉伯语 ，但也有少数源自 拉丁文 的。\n参考 恒星专有名称 ，其中列出了一部分的名称。\n但是这些名称，无论中外都仍然有些问题存在： 拼字法通常没有标准化： 仙女座γ 的拼法就有Almach、Almaach、Almack、Alamak。\n许多恒星有一个以上常用的名字： 英仙座α 有Mirfak、Algenib、Alcheb等不同的名称； 船帆座γ 称为Regor或Suhail al Muhlif； 大熊座η 称为Alkaid或Benetnasch； 北冕座α 称为Gemma或Alphecca； 仙女座α 称为Alpheratz或Sirrah。\n由于古老的 星表 不够精确，有些星不能确定属于哪个星座。\n因此有些名字不知道是哪颗星的。\n例如： Alniyat 和 Chara 。\n有些在不同星座的恒星有著相同的名字。\n例如：Algenib可以是 英仙座α 和 飞马座γ ；Gienah出现在 天鹅座 与 乌鸦座 ；Alnair是 天鹤座α 也是 人马座ζ 。\n实际上，这些传统的名称通常只有最亮的几颗恒星被保留著继续使用，像 天狼星 （Sirius）、 大角星 （Arcturus）、 织女星 （Vega）等等。\n还有一些则是一般人比较有兴趣的恒星，像是 大陵五 （Algol）、 北极星 （Polaris）、 𫇴藁增二 （Mira）。\n其余明亮的星主要采用 拜耳命名法 的名称。\n除了传统的名称之外，还有少部分的名称来自英文。\n像是 巴纳德星 （Barnard's star），虽然是肉眼看不见的暗星，却因 自行 量大而广为人知（参见 以人名命名的恒星 ）。",
+    "path": "固有名称",
+    "keywords": [
+      "称为",
+      "仙女座",
+      "英仙座",
+      "例如",
+      "像是",
+      "大多数",
+      "肉眼可见",
+      "明亮的恒星都有传统的名称"
+    ],
+    "chunk_id": "b19de04e2793",
+    "source": "zh_wikipedia",
+    "source_role": "primary",
+    "origin": "html_fallback",
+    "type": "embedding_chunk",
+    "source_title": "恒星命名",
+    "source_name": "zh_wikipedia",
+    "schema_version": "2.0"
+  },
+  {
+    "page_title": "恒星命名",
+    "section": "佛氏星数",
+    "chunk_index": 2,
+    "content": "虽然拜耳以希腊字母命名的方法比较受欢迎，但 约翰·佛兰斯蒂德 以数字和星座名称结合的 佛氏星数 ，也依然被广泛采用。\n不过因为佛兰斯蒂德居住在英国，只为 大不列颠 看得见的星星 编号 ，因此偏向南边，靠近南极圈的星星都没有佛氏 编号 。\n详见 佛兰斯蒂德命名法 。",
+    "path": "佛氏星数",
+    "keywords": [
+      "编号",
+      "虽然拜耳以希腊字母命名的方法比较受欢迎",
+      "约翰",
+      "佛兰斯蒂德",
+      "以数字和星座名称结合的",
+      "佛氏星数",
+      "也依然被广泛采用",
+      "不过因为佛兰斯蒂德居住在英国"
+    ],
+    "chunk_id": "273a85923a6c",
+    "source": "zh_wikipedia",
+    "source_role": "primary",
+    "origin": "html_fallback",
+    "type": "embedding_chunk",
+    "source_title": "恒星命名",
+    "source_name": "zh_wikipedia",
+    "schema_version": "2.0"
+  },
+  {
+    "page_title": "恒星命名",
+    "section": "出售恒星的名字",
+    "chunk_index": 3,
+    "content": "国际公认唯一能够为恒星或天体命名的权威机构是 国际天文学联合会 （IAU，International Astronomical Union） 。\n但是，世界各地有许多私人公司出售恒星的名字， 大英图书馆 称这些是 不道德 的 企业 。\n不过，国际天文学联合会本身不会从事这种商业行为，这些公司售出的名称不会被认可，也不会被使用 。\n其中一间名为 国际星辰注册 （International Star Registry，ISR）的公司，在1980年代被指控欺诈，不实的让民众误以为购买的恒星名称可以得到 官方 认可。\n现在，ISR的这种作法已经被正式贴上标签，是一种骗局和欺诈的行为 ； 纽约市消费者事务部 （ 英语 ： New York City Department of Consumer Affairs ） 也发出ISR的做法是违法从事欺骗贸易 。",
+    "path": "出售恒星的名字",
+    "keywords": [
+      "国际公认唯一能够为恒星或天体命名的权威机构是",
+      "国际天文学联合会",
+      "但是",
+      "世界各地有许多私人公司出售恒星的名字",
+      "大英图书馆",
+      "称这些是",
+      "不道德",
+      "企业"
+    ],
+    "chunk_id": "7bd1510bdd0e",
+    "source": "zh_wikipedia",
+    "source_role": "primary",
+    "origin": "html_fallback",
+    "type": "embedding_chunk",
+    "source_title": "恒星命名",
+    "source_name": "zh_wikipedia",
+    "schema_version": "2.0"
+  }
+]

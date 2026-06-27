@@ -1,0 +1,30 @@
+[
+  {
+    "subject": "哈勃空间望远镜",
+    "relation": "HAS_MASS",
+    "object": "11000kg",
+    "pattern": "infobox",
+    "raw": "质量: 11,000公斤（24,000磅）",
+    "source": "zh_wikipedia",
+    "source_role": "primary",
+    "origin": "html_fallback",
+    "type": "triple_candidate",
+    "source_title": "哈勃空间望远镜",
+    "source_name": "zh_wikipedia",
+    "schema_version": "2.0"
+  },
+  {
+    "subject": "哈勃空间望远镜",
+    "relation": "LOCATED_IN",
+    "object": "低地球轨道",
+    "pattern": "infobox",
+    "raw": "位置: 低地球轨道",
+    "source": "zh_wikipedia",
+    "source_role": "primary",
+    "origin": "html_fallback",
+    "type": "triple_candidate",
+    "source_title": "哈勃空间望远镜",
+    "source_name": "zh_wikipedia",
+    "schema_version": "2.0"
+  }
+]

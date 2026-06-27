@@ -1,0 +1,55 @@
+{
+  "version": "nasa_boundary_audit_v1",
+  "active_source": "zh_wikipedia",
+  "active_source_test": "nasa",
+  "controlled_activation_queries": [
+    {
+      "id": "ca_mars_atmosphere",
+      "query": "火星大气"
+    },
+    {
+      "id": "ca_mars_composition",
+      "query": "火星成分"
+    },
+    {
+      "id": "ca_titan_atmosphere",
+      "query": "土卫六大气层"
+    },
+    {
+      "id": "ca_jupiter_magnetic_field",
+      "query": "木星磁场"
+    }
+  ],
+  "conflict_probes": [
+    {
+      "id": "conflict_mars",
+      "entity": "火星",
+      "query": "火星大气成分",
+      "mode": "narrative"
+    },
+    {
+      "id": "conflict_jupiter",
+      "entity": "木星",
+      "query": "木星磁场",
+      "mode": "narrative"
+    },
+    {
+      "id": "conflict_neptune",
+      "entity": "海王星",
+      "query": "海王星在哪里",
+      "mode": "graph"
+    },
+    {
+      "id": "conflict_titan",
+      "entity": "土卫六",
+      "query": "土卫六大气层",
+      "mode": "narrative"
+    },
+    {
+      "id": "conflict_europa",
+      "entity": "欧罗巴卫星",
+      "query": "欧罗巴卫星绕谁公转",
+      "mode": "graph"
+    }
+  ]
+}

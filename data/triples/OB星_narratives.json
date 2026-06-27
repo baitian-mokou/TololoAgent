@@ -1,0 +1,27 @@
+[
+  {
+    "page_title": "OB星",
+    "section": "概要",
+    "chunk_index": 0,
+    "content": "LH 72 是目前存在于 大麦哲伦云 的OB星协之一。\nOB星 是热的大质量 恒星 ，在 恒星分类 上是 O型 或 B型 ，它们形成于结构松散的 OB星协 中。\n它们的生命期很短，因此距离它们诞生的地区不会很远。\n在它们的有生之年，会辐射出数量丰沛的 紫外线 。\n这些辐射会使 巨大分子云 环绕在周围的 星际气体 快速被电离，形成 电离氢区 （H II区）或 斯特龙根球 。\n在光谱的清单中 OB光谱 的范围仍属于未知的，但它们都属于 OB星协 中的早期型恒星。",
+    "path": "概要",
+    "keywords": [
+      "星协",
+      "是目前存在于",
+      "大麦哲伦云",
+      "星协之一",
+      "是热的大质量",
+      "恒星",
+      "恒星分类",
+      "上是"
+    ],
+    "chunk_id": "eb0d10fe4eca",
+    "source": "zh_wikipedia",
+    "source_role": "primary",
+    "origin": "html_fallback",
+    "type": "embedding_chunk",
+    "source_title": "OB星",
+    "source_name": "zh_wikipedia",
+    "schema_version": "2.0"
+  }
+]

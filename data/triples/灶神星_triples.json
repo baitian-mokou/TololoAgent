@@ -1,0 +1,58 @@
+[
+  {
+    "subject": "灶神星",
+    "relation": "DISCOVERED_BY",
+    "object": "海因里希·欧伯斯",
+    "pattern": "infobox",
+    "raw": "发现者: 海因里希·欧伯斯",
+    "source": "zh_wikipedia",
+    "source_role": "primary",
+    "origin": "html_fallback",
+    "type": "triple_candidate",
+    "source_title": "灶神星",
+    "source_name": "zh_wikipedia",
+    "schema_version": "2.0"
+  },
+  {
+    "subject": "灶神星",
+    "relation": "HAS_MASS",
+    "object": "0.000 01 × 10 20 kg",
+    "pattern": "infobox",
+    "raw": "质量: 7020259076000000000♠ (2.590 76 ± 0.000 01 ) × 10 20 kg",
+    "source": "zh_wikipedia",
+    "source_role": "primary",
+    "origin": "html_fallback",
+    "type": "triple_candidate",
+    "source_title": "灶神星",
+    "source_name": "zh_wikipedia",
+    "schema_version": "2.0"
+  },
+  {
+    "subject": "灶神星",
+    "relation": "IS_A",
+    "object": "继 矮行星",
+    "pattern": "rule",
+    "raw": "灶神星是继 矮行星",
+    "source": "zh_wikipedia",
+    "source_role": "primary",
+    "origin": "html_fallback",
+    "type": "triple_candidate",
+    "source_title": "灶神星",
+    "source_name": "zh_wikipedia",
+    "schema_version": "2.0"
+  },
+  {
+    "subject": "灶神星",
+    "relation": "IS_A",
+    "object": "主小行星",
+    "pattern": "rule",
+    "raw": "灶神星是在 主小行星",
+    "source": "zh_wikipedia",
+    "source_role": "primary",
+    "origin": "html_fallback",
+    "type": "triple_candidate",
+    "source_title": "灶神星",
+    "source_name": "zh_wikipedia",
+    "schema_version": "2.0"
+  }
+]

@@ -1,0 +1,52 @@
+[
+  {
+    "page_title": "超低温矮星",
+    "section": "概要",
+    "chunk_index": 0,
+    "content": "太阳和超低温矮星 TRAPPIST-1 的体积比较。\n超低温矮星 （ Ultra-cool dwarf ）是指光谱为 M型 的 恒星 或 亚恒星 ，并且表面 有效温度 低于2,700 K（2,430 °C） 。\nTRAPPIST-1 是超低温矮星中最广为天文界所知道的一个例子 。",
+    "path": "概要",
+    "keywords": [
+      "太阳和超低温矮星",
+      "的体积比较",
+      "超低温矮星",
+      "是指光谱为",
+      "恒星",
+      "亚恒星",
+      "并且表面",
+      "有效温度"
+    ],
+    "chunk_id": "922e0babe6aa",
+    "source": "zh_wikipedia",
+    "source_role": "primary",
+    "origin": "html_fallback",
+    "type": "embedding_chunk",
+    "source_title": "超低温矮星",
+    "source_name": "zh_wikipedia",
+    "schema_version": "2.0"
+  },
+  {
+    "page_title": "超低温矮星",
+    "section": "概要",
+    "chunk_index": 1,
+    "content": "超低温矮星的概念最早是在1997年由天文学家 大卫·柯克派屈克 （ 英语 ： J. Davy Kirkpatrick ） 、 托德·亨利 （ 英语 ： Todd J. Henry ） 和 麦克·欧文 提出。\n今日该型恒星的定义为光谱型为M7或更晚期型光谱的极低质量的天体，甚至延伸到光谱型接近L4的 棕矮星 。\n并且他们认为邻近太阳的星际空间中有15%的天体是超低温矮星。\n现有的行星形成的模型显示，由于超低温矮星的低质量和小尺寸的 原行星盘 ，这些恒星周围可以形成种类相对丰富的 类地行星 ，尺寸可相当于从水星到地球尺寸，但无法形成 超级地球 ，或类似木星的巨大行星。\nTRAPPIST-1行星系统发现七颗类似地球的行星似乎验证了这种吸积模式 。\n由于其氢融合速率相较于其他低质量恒星是极为缓慢，超低温矮星的年龄可达到数千亿年，体积最小的甚至可超过1兆年。\n由于宇宙年龄仅有138亿年，所有超低温矮星都相对年轻。\n模型预测，在超低温矮星生命结束时，它们之中最小的将成为 蓝矮星 ，而不是膨胀成红巨星 。",
+    "path": "概要",
+    "keywords": [
+      "英语",
+      "超低温矮星的概念最早是在",
+      "年由天文学家",
+      "大卫",
+      "柯克派屈克",
+      "托德",
+      "亨利",
+      "麦克"
+    ],
+    "chunk_id": "aa20cbd644b2",
+    "source": "zh_wikipedia",
+    "source_role": "primary",
+    "origin": "html_fallback",
+    "type": "embedding_chunk",
+    "source_title": "超低温矮星",
+    "source_name": "zh_wikipedia",
+    "schema_version": "2.0"
+  }
+]

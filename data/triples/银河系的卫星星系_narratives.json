@@ -1,0 +1,77 @@
+[
+  {
+    "page_title": "银河系的卫星星系",
+    "section": "概要",
+    "chunk_index": 0,
+    "content": "银河系的卫星星系 是指受 银河系 引力束缚 的多个较小星系，这些星系共同构成 银河系 子群 。\n该子群与其他星系同属 本星系群 ，而本星系群又是本地星系团的组成部分 。\n根据天文观测数据，目前已在银河系周围420 千秒差距 （1.4 × 10 6 光年 ）范围内确认61个小型卫星星系存在 。\n需特别说明的是并非所有星系均直接绕行银河系，部分可能隶属于其他卫星星系的轨道系统，其中仅 大麦哲伦星云 （Large Magellanic Cloud）与 小麦哲伦星云 （Small Magellanic Cloud）能以肉眼观测，两者自史前时代便有人类观测记录。\n2006年 哈伯太空望远镜 的测量数据显示，麦哲伦星云的移动速度可能超出预期，这对其是否真正受银河系引力束缚提出质疑 。\n在已确认轨道运行的卫星星系中， 人马座矮椭球星系 （Sagittarius Dwarf Spheroidal Galaxy）以2.6千秒差距（8,500光年）的直径成为最大成员，其规模约为银河系的二十分之一 。",
+    "path": "概要",
+    "keywords": [
+      "银河系",
+      "千秒差距",
+      "光年",
+      "银河系的卫星星系",
+      "是指受",
+      "引力束缚",
+      "的多个较小星系",
+      "这些星系共同构成"
+    ],
+    "chunk_id": "18a32588ab85",
+    "source": "zh_wikipedia",
+    "source_role": "primary",
+    "origin": "html_fallback",
+    "type": "embedding_chunk",
+    "source_title": "银河系的卫星星系",
+    "source_name": "zh_wikipedia",
+    "schema_version": "2.0"
+  },
+  {
+    "page_title": "银河系的卫星星系",
+    "section": "特点",
+    "chunk_index": 1,
+    "content": "卫星星系系绕行银河的轨道从银河系 盘 边缘的1,000 光年 （310 秒差距 ）到银河系 暗物质晕 边缘的 980,000 ly（300 kpc） ，与轨道更远的星系相比，通常氢气都已耗尽。\n这是因为它们与银河系致密的热气晕相互作用，从而从卫星星系上剥离冷气体。\n该地区以外的卫星星系仍然保留著大量的气体 。",
+    "path": "特点",
+    "keywords": [
+      "边缘的",
+      "卫星星系系绕行银河的轨道从银河系",
+      "光年",
+      "秒差距",
+      "到银河系",
+      "暗物质晕",
+      "与轨道更远的星系相比",
+      "通常氢气都已耗尽"
+    ],
+    "chunk_id": "57511581f9e4",
+    "source": "zh_wikipedia",
+    "source_role": "primary",
+    "origin": "html_fallback",
+    "type": "embedding_chunk",
+    "source_title": "银河系的卫星星系",
+    "source_name": "zh_wikipedia",
+    "schema_version": "2.0"
+  },
+  {
+    "page_title": "银河系的卫星星系",
+    "section": "星流",
+    "chunk_index": 2,
+    "content": "人马座矮椭球星系 是现时正处于被银河系 吞噬 的过程中，预计将在未来1亿年内再穿过银河系的盘面。\n人马座星流 是从人马座矮椭球星系中被吸取在绕银河系极地轨道上的星流。\n室女座星流 是另一股星流，被认为曾经是一个在轨道上绕行银河系的矮星系，但已经被银河系的引力完全扯散。",
+    "path": "星流",
+    "keywords": [
+      "人马座矮椭球星系",
+      "是现时正处于被银河系",
+      "吞噬",
+      "的过程中",
+      "预计将在未来",
+      "亿年内再穿过银河系的盘面",
+      "人马座星流",
+      "是从人马座矮椭球星系中被吸取在绕银河系极地轨道上的星流"
+    ],
+    "chunk_id": "e32d27eac550",
+    "source": "zh_wikipedia",
+    "source_role": "primary",
+    "origin": "html_fallback",
+    "type": "embedding_chunk",
+    "source_title": "银河系的卫星星系",
+    "source_name": "zh_wikipedia",
+    "schema_version": "2.0"
+  }
+]

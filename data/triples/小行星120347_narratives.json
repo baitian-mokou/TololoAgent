@@ -1,0 +1,52 @@
+[
+  {
+    "page_title": "小行星120347",
+    "section": "概要",
+    "chunk_index": 0,
+    "content": "小行星120347 （120347 Salacia: 萨拉西亚 ），曾用临时编号2004 SB 60 ，是一颗 海王星外天体 ，位于 柯伊伯带 ，轨道半径略微大于 冥王星 。\n其直径约为850公里，是一颗较大的绕日小星体，被认为有可能成为一颗 矮行星 。\n该星体于2004年9月22日由Henry G. Roe、米高·E·布朗和Kristina M. Barkume发现。",
+    "path": "概要",
+    "keywords": [
+      "小行星",
+      "萨拉西亚",
+      "曾用临时编号",
+      "是一颗",
+      "海王星外天体",
+      "位于",
+      "柯伊伯带",
+      "轨道半径略微大于"
+    ],
+    "chunk_id": "67c16fd55872",
+    "source": "zh_wikipedia",
+    "source_role": "primary",
+    "origin": "html_fallback",
+    "type": "embedding_chunk",
+    "source_title": "小行星120347",
+    "source_name": "zh_wikipedia",
+    "schema_version": "2.0"
+  },
+  {
+    "page_title": "小行星120347",
+    "section": "命名",
+    "chunk_index": 1,
+    "content": "国际天文学会于2011年2月18日将小行星120347正式命名为Salacia。\n萨拉喀亚 （ 英语 ： Salacia ） 是 罗马神话 中 尼普顿 （ 海王星 ）的妻子。\n罗马神话的尼普顿就是 希腊神话 的海王 波塞冬 ；而他的妻子，罗马神话中的萨拉喀亚就是希腊神话的 安菲特里忒 （希腊语：Ἀμφιτρίτη）。\nSalacia是海水女神，其名字的词根为salt，即为咸水。\n中国天文学会2012年和2018年分别收到「潫神星」和「漾神星」的翻译推荐，但截至2020年底尚未入库。\n《天文学名词（第三版）》中，选用了“萨拉客亚”作为该天体的试用译名。",
+    "path": "命名",
+    "keywords": [
+      "国际天文学会于",
+      "日将小行星",
+      "正式命名为",
+      "萨拉喀亚",
+      "英语",
+      "罗马神话",
+      "尼普顿",
+      "海王星"
+    ],
+    "chunk_id": "72f675f30572",
+    "source": "zh_wikipedia",
+    "source_role": "primary",
+    "origin": "html_fallback",
+    "type": "embedding_chunk",
+    "source_title": "小行星120347",
+    "source_name": "zh_wikipedia",
+    "schema_version": "2.0"
+  }
+]

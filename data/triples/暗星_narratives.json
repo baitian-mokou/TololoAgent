@@ -1,0 +1,27 @@
+[
+  {
+    "page_title": "暗星",
+    "section": "概要",
+    "chunk_index": 0,
+    "content": "暗星 可以指： 暗星 (牛顿力学) （ 英语 ： Dark star (Newtonian mechanics) ） ，牛顿力学下引力强到光都无法逃离的天体 黑洞 暗星 (暗物质) ，由于内部暗物质粒子的湮灭而被加热的恒星 暗能量星 ，一种假想的由暗能量组成的替代黑洞的天体 NewPP limit report Parsed by mw‐web.eqiad.main‐7bfc4b7f98‐lw2r4 Cached time: 20260603235947 Cache expiry: 2592000 Reduced expiry: false Complications: [] CPU time usage: 0.063 seconds Real time usage: 0.090 seconds Preprocessor visited node count: 148/1000000 Revision size: 353/2097152 bytes Post‐expand include size: 3286/2097152 bytes Template argument size: 544/2097152 bytes Highest expansion depth: 11/100 Expensive parser function count: 0/500 Unstrip recursion depth: 0/20 Unstrip post‐expand size: 0/5000000 bytes Lua time usage: 0.031/10.000 seconds Lua memory usage: 1101293/52428800 bytes Number of Wikibase entities loaded: 0/500 Transclusion expansion time report (%,ms,calls,template) 100.00% 70.165 1 -total 58.78% 41.246 1 Template:Le 40.58% 28.474 1 Template:Disambig 22.65% 15.893 1 Template:Dmbox 19.83% 13.915 1 Template:Category_handler 14.33% 10.054 1 Template:Main_other 12.23% 8.582 1 Template:IfPNS Render ID 4ca1a425-5fa8-11f1-9a9a-3b60cd797cef Saved in parser cache with key zhwiki:pcache:7345028:|#|:idhash:canonical!zh and timestamp 20260603235947 and revision id 78468263. Rendering was triggered because: page_view",
+    "path": "概要",
+    "keywords": [
+      "暗星",
+      "可以指",
+      "牛顿力学",
+      "英语",
+      "牛顿力学下引力强到光都无法逃离的天体",
+      "黑洞",
+      "暗物质",
+      "由于内部暗物质粒子的湮灭而被加热的恒星"
+    ],
+    "chunk_id": "d6921e0de215",
+    "source": "zh_wikipedia",
+    "source_role": "primary",
+    "origin": "html_fallback",
+    "type": "embedding_chunk",
+    "source_title": "暗星",
+    "source_name": "zh_wikipedia",
+    "schema_version": "2.0"
+  }
+]

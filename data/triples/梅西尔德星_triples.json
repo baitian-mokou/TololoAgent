@@ -1,0 +1,44 @@
+[
+  {
+    "subject": "梅西尔德星",
+    "relation": "DISCOVERED_BY",
+    "object": "约翰·帕利扎",
+    "pattern": "infobox",
+    "raw": "发现者: 约翰·帕利扎",
+    "source": "zh_wikipedia",
+    "source_role": "primary",
+    "origin": "html_fallback",
+    "type": "triple_candidate",
+    "source_title": "梅西尔德星",
+    "source_name": "zh_wikipedia",
+    "schema_version": "2.0"
+  },
+  {
+    "subject": "梅西尔德星",
+    "relation": "HAS_MASS",
+    "object": "0.044 × 10 17 kg",
+    "pattern": "infobox",
+    "raw": "质量: 1.033(±0.044)×10 17 kg",
+    "source": "zh_wikipedia",
+    "source_role": "primary",
+    "origin": "html_fallback",
+    "type": "triple_candidate",
+    "source_title": "梅西尔德星",
+    "source_name": "zh_wikipedia",
+    "schema_version": "2.0"
+  },
+  {
+    "subject": "梅西尔德星",
+    "relation": "IS_A",
+    "object": "原始 C-型小行星",
+    "pattern": "rule",
+    "raw": "梅西尔德星是一颗原始 C-型小行星",
+    "source": "zh_wikipedia",
+    "source_role": "primary",
+    "origin": "html_fallback",
+    "type": "triple_candidate",
+    "source_title": "梅西尔德星",
+    "source_name": "zh_wikipedia",
+    "schema_version": "2.0"
+  }
+]
