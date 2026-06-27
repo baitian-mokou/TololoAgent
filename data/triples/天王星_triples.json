@@ -11,7 +11,16 @@
     "type": "triple_candidate",
     "source_title": "天王星",
     "source_name": "zh_wikipedia",
-    "schema_version": "2.0"
+    "schema_version": "2.0",
+    "measurement_kind": "unspecified_radius",
+    "quality_status": "approved_metadata_only",
+    "quality_patch_id": "source_conflict_v4_002",
+    "quality_annotation": {
+      "classification": "measurement_kind_mismatch",
+      "rationale": "Radius records mix mean/equatorial/polar or unspecified radius kinds; formal fact value was not changed.",
+      "formal_value_changed": false,
+      "reviewed_decision_source": "source_conflict_resolution_decisions.recommended.json"
+    }
   },
   {
     "subject": "天王星",
@@ -25,7 +34,16 @@
     "type": "triple_candidate",
     "source_title": "天王星",
     "source_name": "zh_wikipedia",
-    "schema_version": "2.0"
+    "schema_version": "2.0",
+    "measurement_kind": "unspecified_radius",
+    "quality_status": "approved_metadata_only",
+    "quality_patch_id": "source_conflict_v4_002",
+    "quality_annotation": {
+      "classification": "measurement_kind_mismatch",
+      "rationale": "Radius records mix mean/equatorial/polar or unspecified radius kinds; formal fact value was not changed.",
+      "formal_value_changed": false,
+      "reviewed_decision_source": "source_conflict_resolution_decisions.recommended.json"
+    }
   },
   {
     "subject": "天王星",
