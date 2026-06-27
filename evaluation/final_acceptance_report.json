@@ -1,42 +1,42 @@
 {
-  "generated_at": "2026-06-27T23:07:19",
+  "generated_at": "2026-06-27T23:30:44",
   "passed": true,
   "steps": [
     {
       "command": "python -m unittest discover tests",
       "exit_code": 0,
       "passed": true,
-      "duration_seconds": 12.244
+      "duration_seconds": 12.352
     },
     {
       "command": "python scripts/run_single_source_retrieval_eval.py",
       "exit_code": 0,
       "passed": true,
-      "duration_seconds": 100.159
+      "duration_seconds": 98.455
     },
     {
       "command": "python scripts/run_source_expansion_eval.py --source wikidata",
       "exit_code": 0,
       "passed": true,
-      "duration_seconds": 1.688
+      "duration_seconds": 1.698
     },
     {
       "command": "python scripts/run_source_expansion_eval.py --source nasa",
       "exit_code": 0,
       "passed": true,
-      "duration_seconds": 0.821
+      "duration_seconds": 0.766
     },
     {
       "command": "python scripts/collect_eval_failures.py",
       "exit_code": 0,
       "passed": true,
-      "duration_seconds": 0.078
+      "duration_seconds": 0.073
     },
     {
       "command": "python scripts/smoke_default_source_boundary.py",
       "exit_code": 0,
       "passed": true,
-      "duration_seconds": 34.259
+      "duration_seconds": 33.056
     }
   ],
   "reports": {
@@ -99,7 +99,7 @@
   "settings_key_hygiene": {
     "name": "settings_key_hygiene",
     "settings_json": "settings.json",
-    "settings_local_json_exists": false,
+    "settings_local_json_exists": true,
     "allowed_placeholder": "${TOLOLO_REMOTE_API_KEY}",
     "passed": true,
     "errors": []

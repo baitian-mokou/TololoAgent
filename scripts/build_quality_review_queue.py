@@ -23,6 +23,15 @@ DEFAULT_QUEUE = QUALITY_REVIEW_DIR / "quality_review_queue.json"
 DEFAULT_DECISIONS = QUALITY_REVIEW_DIR / "quality_review_decisions.json"
 
 ALLOWED_DECISIONS = {"pending", "approved", "rejected", "deferred"}
+ALLOWED_REVISION_STATUSES = {"none", "draft", "proposed", "validated", "rejected"}
+REVISION_FIELDS = (
+    "user_proposed_value",
+    "user_proposed_unit",
+    "user_revision_reason",
+    "user_evidence_note",
+    "user_evidence_url",
+    "revision_status",
+)
 
 
 def configure_stdout() -> None:
@@ -284,6 +293,17 @@ def build_decisions_payload(items: List[Dict[str, Any]], existing_decisions: Dic
         if human_decision not in ALLOWED_DECISIONS:
             human_decision = "pending"
         safe_to_apply = bool(prior.get("safe_to_apply")) if human_decision == "approved" else False
+        revision_status = prior.get("revision_status") or "none"
+        if revision_status not in ALLOWED_REVISION_STATUSES:
+            revision_status = "none"
+        revision_payload = {
+            "user_proposed_value": prior.get("user_proposed_value", ""),
+            "user_proposed_unit": prior.get("user_proposed_unit", ""),
+            "user_revision_reason": prior.get("user_revision_reason", ""),
+            "user_evidence_note": prior.get("user_evidence_note", ""),
+            "user_evidence_url": prior.get("user_evidence_url", ""),
+            "revision_status": revision_status,
+        }
         decisions.append(
             {
                 "review_id": item["review_id"],
@@ -300,6 +320,7 @@ def build_decisions_payload(items: List[Dict[str, Any]], existing_decisions: Dic
                 "reviewed_by": prior.get("reviewed_by", ""),
                 "reviewed_at": prior.get("reviewed_at", ""),
                 "updated_at": prior.get("updated_at") or generated_at,
+                **revision_payload,
             }
         )
     return {

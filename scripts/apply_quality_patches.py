@@ -28,6 +28,7 @@ EXPECTED_TARGET_FILE = os.path.join(BASE_DIR, "data", "triples", "天王星_trip
 
 APPROVED_DECISION = "approved"
 NON_APPLY_DECISIONS = {"pending", "rejected", "deferred"}
+ALLOWED_REVISION_STATUSES = {"none", "draft", "proposed", "validated", "rejected"}
 
 
 def configure_stdout() -> None:
@@ -128,6 +129,40 @@ def formal_values_differ(before: List[Dict[str, Any]], after: List[Dict[str, Any
     return False
 
 
+def has_user_revision(decision: Dict[str, Any]) -> bool:
+    return bool(str(decision.get("user_proposed_value", "")).strip())
+
+
+def normalized_revision_status(decision: Dict[str, Any]) -> str:
+    status = decision.get("revision_status") or "none"
+    return status if status in ALLOWED_REVISION_STATUSES else "none"
+
+
+def revision_plan_item(item: Dict[str, Any], decision: Dict[str, Any]) -> Dict[str, Any]:
+    proposed_value = str(decision.get("user_proposed_value", "")).strip()
+    proposed_unit = str(decision.get("user_proposed_unit", "")).strip()
+    if proposed_unit and proposed_unit not in proposed_value:
+        display_value = f"{proposed_value} {proposed_unit}"
+    else:
+        display_value = proposed_value
+    return {
+        "review_id": item.get("review_id"),
+        "patch_id": item.get("patch_id"),
+        "subject": item.get("subject"),
+        "relation": item.get("relation"),
+        "risk_level": item.get("risk_level"),
+        "revision_status": normalized_revision_status(decision),
+        "original_value": item.get("current_value"),
+        "system_proposed_value": item.get("proposed_value"),
+        "user_proposed_value": display_value,
+        "user_revision_reason": decision.get("user_revision_reason", ""),
+        "user_evidence_note": decision.get("user_evidence_note", ""),
+        "user_evidence_url": decision.get("user_evidence_url", ""),
+        "requires_explicit_value_change": True,
+        "status": "revision_preview_only",
+    }
+
+
 def metadata_annotation(item: Dict[str, Any], decision: Dict[str, Any]) -> Dict[str, Any]:
     metadata = dict(item.get("proposed_metadata") or {})
     metadata.setdefault("measurement_kind", "unspecified_radius")
@@ -199,20 +234,38 @@ def prepare_value_change(
     records: List[Dict[str, Any]],
     allow_value_change: bool,
     apply_requested: bool,
+    apply_value_changes: bool,
 ) -> Tuple[List[Dict[str, Any]], Dict[str, Any], List[str]]:
     errors: List[str] = []
     updated_records = deepcopy(records)
     expected_values = set(values_for_zh_source(item))
-    proposed_value = item.get("proposed_value")
+    revision_status = normalized_revision_status(decision)
+    revision_value = str(decision.get("user_proposed_value", "")).strip()
+    revision_unit = str(decision.get("user_proposed_unit", "")).strip()
+    proposed_value = revision_value if revision_status == "validated" and revision_value else item.get("proposed_value")
+    if revision_status == "validated" and revision_unit and revision_unit not in str(proposed_value):
+        proposed_value = f"{proposed_value} {revision_unit}"
     subject = item.get("subject")
     relation = item.get("relation")
-    blocked = not allow_value_change
+    blocked_reasons = []
+    if not allow_value_change:
+        blocked_reasons.append("--allow-value-change")
+    if not apply_value_changes:
+        blocked_reasons.append("--apply-value-changes")
+    if revision_status != "validated":
+        blocked_reasons.append("revision_status=validated")
+    blocked = bool(blocked_reasons)
     matched_records = []
     changed_records = []
 
     if blocked:
         if apply_requested:
-            errors.append(f"{item.get('patch_id')}: value_change requires --allow-value-change")
+            if "--allow-value-change" in blocked_reasons:
+                errors.append(f"{item.get('patch_id')}: value_change requires --allow-value-change")
+            if "--apply-value-changes" in blocked_reasons:
+                errors.append(f"{item.get('patch_id')}: value_change requires --apply-value-changes")
+            if "revision_status=validated" in blocked_reasons:
+                errors.append(f"{item.get('patch_id')}: value_change requires revision_status=validated")
         return updated_records, {
             "review_id": item.get("review_id"),
             "patch_id": item.get("patch_id"),
@@ -221,8 +274,12 @@ def prepare_value_change(
             "target_file": target_file_for_item(item),
             "current_value": item.get("current_value"),
             "proposed_value": proposed_value,
+            "revision_status": revision_status,
+            "user_proposed_value": revision_value,
+            "requires_explicit_value_change": True,
             "status": "blocked_value_change" if apply_requested else "plan_only_high_risk",
             "blocked_by_default": True,
+            "blocked_reasons": blocked_reasons,
         }, errors
 
     if proposed_value is None:
@@ -268,6 +325,9 @@ def prepare_value_change(
         "target_file": target_file_for_item(item),
         "current_value": item.get("current_value"),
         "proposed_value": proposed_value,
+        "revision_status": revision_status,
+        "user_proposed_value": revision_value,
+        "requires_explicit_value_change": True,
         "matched_records": matched_records,
         "changed_records": changed_records,
         "status": "ready" if not errors else "error",
@@ -326,6 +386,7 @@ def apply_quality_patch(
     report_path: str = DEFAULT_REPORT,
     apply: bool = False,
     allow_value_change: bool = False,
+    apply_value_changes: bool = False,
     backup_root: str = DEFAULT_BACKUP_ROOT,
 ) -> Dict[str, Any]:
     dry_run = not apply
@@ -335,6 +396,7 @@ def apply_quality_patch(
     decisions = _decisions(decisions_payload)
     errors: List[str] = []
     apply_plan: List[Dict[str, Any]] = []
+    revision_proposals: List[Dict[str, Any]] = []
     skipped_items: List[Dict[str, Any]] = []
     matched_records: List[Dict[str, Any]] = []
     changed_records: List[Dict[str, Any]] = []
@@ -349,6 +411,9 @@ def apply_quality_patch(
         patch_id = decision.get("patch_id")
         human_decision = decision.get("human_decision")
         item = item_by_patch.get(patch_id)
+        if item and has_user_revision(decision):
+            proposal = revision_plan_item(item, decision)
+            revision_proposals.append(proposal)
         if human_decision in NON_APPLY_DECISIONS:
             skipped_items.append({"patch_id": patch_id, "human_decision": human_decision})
             continue
@@ -401,6 +466,7 @@ def apply_quality_patch(
                 records_by_file[target_file],
                 allow_value_change,
                 apply,
+                apply_value_changes,
             )
             records_by_file[target_file] = updated_records
             changed_by_file.setdefault(target_file, []).extend(plan_item.get("changed_records", []))
@@ -426,8 +492,11 @@ def apply_quality_patch(
             formal_values_changed = True
         if values_changed and target_file not in value_change_files:
             errors.append(f"{target_file}: formal values changed unexpectedly")
-        if values_changed and target_file in value_change_files and not allow_value_change:
-            errors.append(f"{target_file}: value_change requires --allow-value-change")
+        if values_changed and target_file in value_change_files and (not allow_value_change or not apply_value_changes):
+            if not allow_value_change:
+                errors.append(f"{target_file}: value_change requires --allow-value-change")
+            if not apply_value_changes:
+                errors.append(f"{target_file}: value_change requires --apply-value-changes")
 
     patches_applied = 0
     applied_count = 0
@@ -453,6 +522,7 @@ def apply_quality_patch(
         "apply": bool(apply),
         "apply_metadata_only": bool(apply and not allow_value_change),
         "allow_value_change": bool(allow_value_change),
+        "apply_value_changes": bool(apply_value_changes),
         "backup_dir": backup_dir,
         "rollback_manifest": rollback_manifest,
         "decisions_path": decisions_path,
@@ -461,6 +531,7 @@ def apply_quality_patch(
         "applied_count": applied_count,
         "skipped_count": len(skipped_items),
         "apply_plan": apply_plan,
+        "revision_proposals": revision_proposals,
         "matched_records": matched_records,
         "changed_records": changed_records,
         "skipped_items": skipped_items,
@@ -485,6 +556,7 @@ def main() -> None:
     mode.add_argument("--apply", action="store_true", help="Deprecated alias for --apply-metadata-only.")
     mode.add_argument("--apply-metadata-only", action="store_true", help="Write supported approved metadata-only changes with backup and rollback manifest.")
     parser.add_argument("--allow-value-change", action="store_true", help="Allow approved value changes. High-risk changes are blocked without this flag.")
+    parser.add_argument("--apply-value-changes", action="store_true", help="Write validated approved value changes. Requires --allow-value-change and --apply/--apply-metadata-only.")
     parser.add_argument("--decisions", default=DEFAULT_DECISIONS)
     parser.add_argument("--queue", default=DEFAULT_CANDIDATES)
     parser.add_argument("--candidates", default=None, help="Deprecated alias for --queue.")
@@ -498,6 +570,7 @@ def main() -> None:
         report_path=args.report,
         apply=apply_requested,
         allow_value_change=args.allow_value_change,
+        apply_value_changes=args.apply_value_changes,
         backup_root=args.backup_root,
     )
     print(json.dumps(report, ensure_ascii=False, indent=2))

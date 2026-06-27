@@ -1,9 +1,10 @@
 {
-  "generated_at": "2026-06-27T15:03:55.618672+00:00",
+  "generated_at": "2026-06-27T15:27:56.489535+00:00",
   "dry_run": true,
   "apply": false,
   "apply_metadata_only": false,
   "allow_value_change": false,
+  "apply_value_changes": false,
   "backup_dir": null,
   "rollback_manifest": null,
   "decisions_path": "F:\\知识表示与处理结课作业\\第二次托洛洛测试 -重大进展\\data\\quality_review\\quality_review_decisions.json",
@@ -12,6 +13,7 @@
   "applied_count": 0,
   "skipped_count": 8,
   "apply_plan": [],
+  "revision_proposals": [],
   "matched_records": [],
   "changed_records": [],
   "skipped_items": [

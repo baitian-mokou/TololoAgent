@@ -16,23 +16,27 @@ python scripts/build_quality_review_queue.py
 
 4. 做决定：
 
-- 通过：只表示允许进入下一步处理。metadata-only 项可以 dry-run 或正式写本地 triples 元数据；高风险改值仍默认不写。
+- 通过：接受当前候选，只表示允许进入下一步处理。metadata-only 项可以 dry-run 或正式写本地 triples 元数据；高风险改值仍默认不写。
 - 暂缓：证据不足，等待外部来源、ontology 设计或人工判断。
-- 拒绝：候选不成立，或不需要修复。
+- 拒绝：不采用这条候选，候选不成立，或不需要修复。
 
-5. 先 dry-run：
+5. 如果你认为候选值不对，但知道另一个更合适的值，可以填写“修正建议”。它只保存到 `quality_review_decisions.json`，不会写正式 triples。
+
+修正建议的含义是：“我认为应该改成另一个值，但还没有写入正式库。”如果只填了修正值、没有写原因，它只是 `draft` 草稿；填了修正值和原因后是 `proposed`，可以在 dry-run 报告里看到原值和我的修正值。只有额外确认成 `validated` 后，才可能进入显式 value change 流程。
+
+6. 先 dry-run：
 
 ```bash
 python scripts/apply_quality_patches.py --dry-run
 ```
 
-6. 只有确认是安全 metadata-only 变更时，才考虑正式合并低风险标注：
+7. 只有确认是安全 metadata-only 变更时，才考虑正式合并低风险标注：
 
 ```bash
 python scripts/apply_quality_patches.py --apply-metadata-only
 ```
 
-正式写入前会自动生成备份目录和 `rollback_manifest.json`。不要为普通复查任务使用 `--allow-value-change`。高风险 value change 需要单独的来源证据、回滚方案和明确批准。
+正式写入前会自动生成备份目录和 `rollback_manifest.json`。不要为普通复查任务使用 `--allow-value-change`。高风险 value change 需要单独的来源证据、回滚方案、`revision_status=validated`，并且必须同时显式传入 `--allow-value-change` 和 `--apply-value-changes`。
 
 ## 安全验收
 
@@ -40,6 +44,7 @@ P10 的 smoke 脚本会在临时副本里模拟通过、暂缓、拒绝，不会
 
 ```bash
 python scripts/smoke_quality_review_workflow.py
+python scripts/validate_quality_review_revisions.py
 ```
 
 它检查：

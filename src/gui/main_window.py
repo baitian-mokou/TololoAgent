@@ -819,6 +819,43 @@ class QualityReviewTab(BaseTab):
         )
         self.detail_text.pack(fill="both", expand=True)
 
+        revision_frame = tb.Labelframe(right, text="我的修正建议（只保存到复查决定，不写正式数据库）", padding=8)
+        revision_frame.pack(fill="x", pady=(8, 4))
+        self.current_value_var = tk.StringVar(value="当前值：")
+        self.system_value_var = tk.StringVar(value="系统建议值：")
+        self.revision_value_var = tk.StringVar()
+        self.revision_unit_var = tk.StringVar()
+        self.revision_url_var = tk.StringVar()
+        self.revision_status_var = tk.StringVar(value="修正状态：none")
+        tb.Label(revision_frame, textvariable=self.current_value_var, font=("微软雅黑", 9)).grid(row=0, column=0, columnspan=4, sticky="w", pady=(0, 2))
+        tb.Label(revision_frame, textvariable=self.system_value_var, font=("微软雅黑", 9)).grid(row=1, column=0, columnspan=4, sticky="w", pady=(0, 6))
+        tb.Label(revision_frame, text="我的修正值").grid(row=2, column=0, sticky="w", padx=(0, 4))
+        self.revision_value_entry = tb.Entry(revision_frame, textvariable=self.revision_value_var, width=24)
+        self.revision_value_entry.grid(row=2, column=1, sticky="ew", padx=(0, 8))
+        tb.Label(revision_frame, text="单位").grid(row=2, column=2, sticky="w", padx=(0, 4))
+        self.revision_unit_entry = tb.Entry(revision_frame, textvariable=self.revision_unit_var, width=12)
+        self.revision_unit_entry.grid(row=2, column=3, sticky="ew")
+        tb.Label(revision_frame, text="修正原因").grid(row=3, column=0, sticky="nw", pady=(6, 0), padx=(0, 4))
+        self.revision_reason_text = tk.Text(revision_frame, height=3, font=("微软雅黑", 9), wrap="word")
+        self.revision_reason_text.grid(row=3, column=1, columnspan=3, sticky="ew", pady=(6, 0))
+        tb.Label(revision_frame, text="证据/备注").grid(row=4, column=0, sticky="nw", pady=(6, 0), padx=(0, 4))
+        self.revision_note_text = tk.Text(revision_frame, height=3, font=("微软雅黑", 9), wrap="word")
+        self.revision_note_text.grid(row=4, column=1, columnspan=3, sticky="ew", pady=(6, 0))
+        tb.Label(revision_frame, text="来源 URL").grid(row=5, column=0, sticky="w", pady=(6, 0), padx=(0, 4))
+        self.revision_url_entry = tb.Entry(revision_frame, textvariable=self.revision_url_var)
+        self.revision_url_entry.grid(row=5, column=1, columnspan=3, sticky="ew", pady=(6, 0))
+        tb.Label(revision_frame, textvariable=self.revision_status_var, foreground="#777").grid(row=6, column=0, columnspan=4, sticky="w", pady=(6, 0))
+        revision_frame.columnconfigure(1, weight=1)
+        revision_frame.columnconfigure(3, weight=1)
+
+        revision_buttons = tb.Frame(right)
+        revision_buttons.pack(fill="x", pady=(4, 4))
+        self.btn_save_revision = tb.Button(revision_buttons, text="保存修正建议", command=self._save_revision_proposal, bootstyle="primary")
+        self.btn_clear_revision = tb.Button(revision_buttons, text="清除修正建议", command=self._clear_revision_proposal)
+        self.btn_revision_dry_run = tb.Button(revision_buttons, text="预演修正合并", command=self._dry_run_revision_apply)
+        for button in (self.btn_save_revision, self.btn_clear_revision, self.btn_revision_dry_run):
+            button.pack(side="left", padx=(0, 6))
+
         decision_buttons = tb.Frame(right)
         decision_buttons.pack(fill="x", pady=(8, 4))
         self.btn_approve = tb.Button(decision_buttons, text="通过", command=lambda: self._set_decision("approved"), bootstyle="success")
@@ -918,6 +955,7 @@ class QualityReviewTab(BaseTab):
                 "",
                 f"系统建议：{item.get('system_recommendation', '建议人工复核。')}",
             ]
+            lines.extend(self._revision_detail_lines(decision))
             if item.get("risk_level") == "high":
                 lines.extend(["", "高风险提示：建议暂缓，不建议直接合并为正式事实值。"])
             if decision.get("human_reason"):
@@ -926,6 +964,7 @@ class QualityReviewTab(BaseTab):
             self.detail_text.delete("1.0", "end")
             self.detail_text.insert("end", "\n".join(lines))
             self.detail_text.config(state="disabled")
+            self._load_revision_form(item, decision)
             return
         lines = [
             f"对象：{item.get('subject', '')}",
@@ -945,10 +984,12 @@ class QualityReviewTab(BaseTab):
         lines.extend(self._format_evidence(item.get("source_evidence", {})))
         if decision.get("human_reason"):
             lines.extend(["", f"审批说明：{decision.get('human_reason')}"])
+        lines.extend(self._revision_detail_lines(decision))
         self.detail_text.config(state="normal")
         self.detail_text.delete("1.0", "end")
         self.detail_text.insert("end", "\n".join(lines))
         self.detail_text.config(state="disabled")
+        self._load_revision_form(item, decision)
 
     def _set_decision(self, human_decision):
         item = self._selected_item()
@@ -990,6 +1031,81 @@ class QualityReviewTab(BaseTab):
         })
         self._dump_json(self.decisions_path, payload)
         self._log(f"{item.get('subject')} / {item.get('relation')} 已标记为：{self._decision_label(human_decision)}。")
+        self._refresh_queue()
+        self.tree.selection_set(item.get("review_id"))
+        self._show_selected_detail()
+
+    def _decision_for_item(self, payload, item):
+        decisions = payload.setdefault("decisions", [])
+        for decision in decisions:
+            if decision.get("patch_id") == item.get("patch_id"):
+                return decision
+        decision = {"review_id": item.get("review_id"), "patch_id": item.get("patch_id")}
+        decisions.append(decision)
+        return decision
+
+    def _save_revision_proposal(self):
+        item = self._selected_item()
+        if not item:
+            messagebox.showinfo("质量复查", "请先选择一条复查记录。")
+            return
+        proposed_value = self.revision_value_var.get().strip()
+        proposed_unit = self.revision_unit_var.get().strip()
+        reason = self.revision_reason_text.get("1.0", "end").strip()
+        evidence_note = self.revision_note_text.get("1.0", "end").strip()
+        evidence_url = self.revision_url_var.get().strip()
+        revision_status = "none"
+        if proposed_value and reason:
+            revision_status = "proposed"
+        elif proposed_value:
+            revision_status = "draft"
+        payload = self._load_json(self.decisions_path, {"schema_version": "quality_review_decisions_v1", "decisions": []})
+        target = self._decision_for_item(payload, item)
+        now = datetime.now(timezone.utc).isoformat()
+        target.update({
+            "review_id": item.get("review_id"),
+            "patch_id": item.get("patch_id"),
+            "subject": item.get("subject"),
+            "relation": item.get("relation"),
+            "issue_type": item.get("issue_type"),
+            "risk_level": item.get("risk_level"),
+            "change_type": item.get("change_type"),
+            "human_decision": target.get("human_decision") or item.get("human_decision", "pending"),
+            "human_reason": target.get("human_reason", ""),
+            "approved_action": target.get("approved_action"),
+            "safe_to_apply": bool(target.get("safe_to_apply")) if target.get("human_decision") == "approved" else False,
+            "user_proposed_value": proposed_value,
+            "user_proposed_unit": proposed_unit,
+            "user_revision_reason": reason,
+            "user_evidence_note": evidence_note,
+            "user_evidence_url": evidence_url,
+            "revision_status": revision_status,
+            "updated_at": now,
+        })
+        self._dump_json(self.decisions_path, payload)
+        self._log(f"修正建议已保存为 {revision_status}；尚未写入正式 triples、Chroma 或 Neo4j。")
+        self._refresh_queue()
+        self.tree.selection_set(item.get("review_id"))
+        self._show_selected_detail()
+
+    def _clear_revision_proposal(self):
+        item = self._selected_item()
+        if not item:
+            messagebox.showinfo("质量复查", "请先选择一条复查记录。")
+            return
+        payload = self._load_json(self.decisions_path, {"schema_version": "quality_review_decisions_v1", "decisions": []})
+        target = self._decision_for_item(payload, item)
+        target.update({
+            "user_proposed_value": "",
+            "user_proposed_unit": "",
+            "user_revision_reason": "",
+            "user_evidence_note": "",
+            "user_evidence_url": "",
+            "revision_status": "none",
+            "updated_at": datetime.now(timezone.utc).isoformat(),
+        })
+        self._dump_json(self.decisions_path, payload)
+        self._log("修正建议已清除；未写入正式 triples。")
         self._refresh_queue()
         self.tree.selection_set(item.get("review_id"))
         self._show_selected_detail()
@@ -1049,6 +1165,9 @@ class QualityReviewTab(BaseTab):
     def _dry_run_apply(self):
         self._run_worker("正在生成 dry-run 合并预览...", lambda: self._apply_worker(False))
 
+    def _dry_run_revision_apply(self):
+        self._run_worker("正在预演修正建议合并（不会写正式数据库）...", lambda: self._apply_worker(False))
+
     def _apply_metadata_only(self):
         confirmed = messagebox.askyesno(
             "确认合并低风险标注",
@@ -1066,7 +1185,7 @@ class QualityReviewTab(BaseTab):
         self.frame.after(
             0,
             lambda: self._log(
-                f"{mode}完成：approved {result.get('approved_count', 0)} 项，实际应用 {result.get('applied_count', 0)} 项；Chroma/Neo4j 未写入。"
+                f"{mode}完成：approved {result.get('approved_count', 0)} 项，修正建议 {len(result.get('revision_proposals', []))} 项，实际应用 {result.get('applied_count', 0)} 项；Chroma/Neo4j 未写入。"
             ),
         )
         self.frame.after(0, self._show_apply_report)
@@ -1087,6 +1206,8 @@ class QualityReviewTab(BaseTab):
                 "human_decision": decision.get("human_decision") or item.get("human_decision"),
                 "has_external_review": bool(item.get("source_evidence", {}).get("external_review")),
                 "system_recommendation": item.get("system_recommendation"),
+                "revision_status": decision.get("revision_status", "none"),
+                "user_proposed_value": decision.get("user_proposed_value", ""),
             })
         payload = {
             "generated_at": datetime.now(timezone.utc).isoformat(),
@@ -1120,6 +1241,15 @@ class QualityReviewTab(BaseTab):
         if errors:
             lines.extend(["", "错误："])
             lines.extend(f"- {error}" for error in errors)
+        revisions = report.get("revision_proposals") or []
+        if revisions:
+            lines.extend(["", "修正建议预演："])
+            for revision in revisions:
+                lines.append(
+                    f"- {revision.get('subject')} / {revision.get('relation')}："
+                    f"{self._format_value(revision.get('original_value'))} -> {revision.get('user_proposed_value')}，"
+                    f"状态 {revision.get('revision_status')}，需要显式 value change。"
+                )
         self.detail_text.config(state="normal")
         self.detail_text.delete("1.0", "end")
         self.detail_text.insert("end", "\n".join(lines))
@@ -1148,6 +1278,45 @@ class QualityReviewTab(BaseTab):
 
     def _decision_label(self, value):
         return {"pending": "待审批", "approved": "通过", "rejected": "拒绝", "deferred": "暂缓"}.get(value, value or "待审批")
+
+    def _revision_status_label(self, value):
+        return {
+            "none": "无修正建议",
+            "draft": "草稿",
+            "proposed": "已提出，等待验证",
+            "validated": "已验证，可进入显式 value change 流程",
+            "rejected": "修正建议已拒绝",
+        }.get(value or "none", value or "无修正建议")
+
+    def _revision_detail_lines(self, decision):
+        status = decision.get("revision_status", "none")
+        if status == "none" and not decision.get("user_proposed_value"):
+            return ["", "修正建议：暂无。"]
+        return [
+            "",
+            "修正建议：",
+            f"- 状态：{self._revision_status_label(status)}",
+            f"- 我的修正值：{decision.get('user_proposed_value') or '未填写'}",
+            f"- 单位：{decision.get('user_proposed_unit') or '未填写'}",
+            f"- 原因：{decision.get('user_revision_reason') or '未填写'}",
+            f"- 证据/备注：{decision.get('user_evidence_note') or '未填写'}",
+            f"- 来源 URL：{decision.get('user_evidence_url') or '未填写'}",
+            "- 提示：修正建议尚未写入正式数据库；需要 dry-run、备份、rollback manifest 和显式 apply 流程。",
+        ]
+
+    def _load_revision_form(self, item, decision):
+        self.current_value_var.set(f"当前值：{self._format_value(item.get('current_value'))}")
+        proposed = item.get("proposed_value")
+        system_value = self._format_value(proposed) if proposed else self._format_metadata(item.get("proposed_metadata"))
+        self.system_value_var.set(f"系统建议值：{system_value}")
+        self.revision_value_var.set(decision.get("user_proposed_value", ""))
+        self.revision_unit_var.set(decision.get("user_proposed_unit", ""))
+        self.revision_url_var.set(decision.get("user_evidence_url", ""))
+        self.revision_reason_text.delete("1.0", "end")
+        self.revision_reason_text.insert("end", decision.get("user_revision_reason", ""))
+        self.revision_note_text.delete("1.0", "end")
+        self.revision_note_text.insert("end", decision.get("user_evidence_note", ""))
+        self.revision_status_var.set(f"修正状态：{self._revision_status_label(decision.get('revision_status', 'none'))}")
 
     def _format_value(self, value):
         if isinstance(value, list):

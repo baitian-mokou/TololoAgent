@@ -1,6 +1,6 @@
 # Final Acceptance Report
 
-Generated at: `2026-06-27T23:07:19`
+Generated at: `2026-06-27T23:30:44`
 
 Overall status: `PASS`
 
@@ -8,12 +8,12 @@ Overall status: `PASS`
 
 | command | exit_code | passed | duration_seconds |
 | --- | ---: | --- | ---: |
-| `python -m unittest discover tests` | 0 | true | 12.244 |
-| `python scripts/run_single_source_retrieval_eval.py` | 0 | true | 100.159 |
-| `python scripts/run_source_expansion_eval.py --source wikidata` | 0 | true | 1.688 |
-| `python scripts/run_source_expansion_eval.py --source nasa` | 0 | true | 0.821 |
-| `python scripts/collect_eval_failures.py` | 0 | true | 0.078 |
-| `python scripts/smoke_default_source_boundary.py` | 0 | true | 34.259 |
+| `python -m unittest discover tests` | 0 | true | 12.352 |
+| `python scripts/run_single_source_retrieval_eval.py` | 0 | true | 98.455 |
+| `python scripts/run_source_expansion_eval.py --source wikidata` | 0 | true | 1.698 |
+| `python scripts/run_source_expansion_eval.py --source nasa` | 0 | true | 0.766 |
+| `python scripts/collect_eval_failures.py` | 0 | true | 0.073 |
+| `python scripts/smoke_default_source_boundary.py` | 0 | true | 33.056 |
 
 ## Accuracy
 
