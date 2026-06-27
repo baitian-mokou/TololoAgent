@@ -14,6 +14,13 @@ if str(ROOT) not in sys.path:
     sys.path.insert(0, str(ROOT))
 
 from config import BASE_DIR
+from src.source_quality.review_labels import (
+    format_relation_label,
+    format_status_explanation,
+    primary_review_status,
+    recommended_action_for_review,
+    status_label,
+)
 
 
 DEFAULT_QUEUE = Path(BASE_DIR) / "data" / "quality_review" / "quality_review_queue.json"
@@ -44,12 +51,9 @@ def format_value(value: Any) -> str:
 
 
 def issue_label(issue_type: str) -> str:
-    return {
-        "true_value_conflict": "不同来源给出的事实值不一致",
-        "measurement_kind_mismatch": "数值缺少清楚的测量口径",
-        "source_granularity_mismatch": "来源精度或粒度不同",
-        "manual_review": "需要人工复核",
-    }.get(issue_type, issue_type or "需要人工复核")
+    if not issue_type:
+        return "需要人工复核"
+    return status_label(issue_type) or issue_type
 
 
 def risk_label(risk_level: str) -> str:
@@ -70,32 +74,27 @@ def external_evidence_text(item: Dict[str, Any]) -> str:
     if not external:
         return "暂无额外外部复核；请以审计证据和原始来源为准。"
     evidence = external.get("external_evidence") or {}
-    recommendation = external.get("recommendation") or external.get("action") or "未给出建议"
-    comparison = external.get("comparison_result") or "未说明比较结果"
+    recommendation = external.get("recommendation") or external.get("action") or ""
+    comparison = external.get("comparison_result") or ""
     confidence = external.get("confidence")
     normalized = evidence.get("normalized_value") or evidence.get("object") or "未给出标准化值"
     url = evidence.get("source_url") or "未给出链接"
     license_text = evidence.get("source_license") or evidence.get("license_hint") or "未说明许可"
     return (
-        f"外部复核建议：{recommendation}；比较结果：{comparison}；置信度：{confidence}。"
+        f"外部复核建议：{format_status_explanation(recommendation)}；"
+        f"比较结果：{format_status_explanation(comparison)}；置信度：{confidence}。"
         f"外部值：{normalized}；来源：{url}；许可：{license_text}。"
     )
 
 
 def recommended_action(item: Dict[str, Any]) -> str:
-    issue_type = item.get("issue_type")
-    risk_level = item.get("risk_level")
-    change_type = item.get("change_type")
-    if change_type == "metadata_only" and risk_level == "low":
-        return "通过低风险标注"
-    if issue_type == "source_granularity_mismatch":
-        return "拒绝"
-    if risk_level == "high":
-        return "需要进一步查证"
-    return "暂缓"
+    return recommended_action_for_review(item, "暂缓")
 
 
 def risk_explanation(item: Dict[str, Any]) -> str:
+    status = primary_review_status(item)
+    if status:
+        return format_status_explanation(status)
     if item.get("change_type") == "metadata_only":
         return "这条只涉及补充测量口径或质量状态，不改变 subject/relation/object。"
     if item.get("risk_level") == "high":
@@ -113,9 +112,22 @@ def merge_impact(item: Dict[str, Any]) -> str:
     return "默认不会写入正式 triples。"
 
 
+def human_system_recommendation(item: Dict[str, Any]) -> str:
+    action = recommended_action(item)
+    status = primary_review_status(item)
+    explanation = format_status_explanation(status)
+    if action == "通过":
+        return f"{explanation} 推荐操作：通过低风险标注；仍需先 dry-run。"
+    if action == "拒绝":
+        return f"{explanation} 推荐操作：拒绝当前候选，不写正式数据。"
+    if action == "填写修正建议":
+        return f"{explanation} 推荐操作：填写修正建议，保存后先 dry-run 查看差异。"
+    return f"{explanation} 推荐操作：暂缓，等待更多证据。"
+
+
 def user_summary(item: Dict[str, Any]) -> str:
     subject = item.get("subject") or "未知对象"
-    relation = item.get("relation") or "未知关系"
+    relation = format_relation_label(item.get("relation") or "未知关系")
     return (
         f"{subject} 的 {relation} 被列入质量复查。"
         f"当前记录是：{format_value(item.get('current_value'))}。"
@@ -131,16 +143,19 @@ def build_card(item: Dict[str, Any], index: int) -> Dict[str, Any]:
         "patch_id": item.get("patch_id"),
         "subject": item.get("subject"),
         "relation": item.get("relation"),
+        "relation_label": format_relation_label(item.get("relation")),
         "human_decision": item.get("human_decision", "pending"),
         "risk_level": item.get("risk_level"),
         "risk_label": risk_label(item.get("risk_level")),
+        "status_label": status_label(primary_review_status(item)),
+        "status_explanation": format_status_explanation(primary_review_status(item)),
         "current_value_summary": current_values_text(item),
         "user_facing_summary": user_summary(item),
         "recommended_user_action": recommended_action(item),
         "risk_explanation": risk_explanation(item),
         "evidence_summary": evidence_summary,
         "merge_impact_summary": merge_impact(item),
-        "system_recommendation": item.get("system_recommendation", ""),
+        "system_recommendation": human_system_recommendation(item),
     }
     return card
 
@@ -161,9 +176,12 @@ def render_markdown(cards: List[Dict[str, Any]], generated_at: str) -> str:
     for index, card in enumerate(cards, start=1):
         lines.extend(
             [
-                f"## {index}. {card.get('subject')} / {card.get('relation')}",
+                f"## {index}. {card.get('subject')} / {card.get('relation_label')}",
                 "",
                 f"- 复查项：`{card.get('patch_id')}`",
+                f"- 关系：{card.get('relation_label')}",
+                f"- 中文状态：{card.get('status_label') or '需要人工复核'}",
+                f"- 简短解释：{card.get('status_explanation')}",
                 f"- 风险等级：{card.get('risk_label')}",
                 f"- 推荐操作：{card.get('recommended_user_action')}",
                 f"- 当前值：{card.get('current_value_summary')}",
@@ -195,6 +213,9 @@ def generate_quality_review_cards(
         item["risk_explanation"] = card["risk_explanation"]
         item["evidence_summary"] = card["evidence_summary"]
         item["merge_impact_summary"] = card["merge_impact_summary"]
+        item["relation_label"] = card["relation_label"]
+        item["status_label"] = card["status_label"]
+        item["status_explanation"] = card["status_explanation"]
         cards.append(card)
     queue.setdefault("summary", {})["card_count"] = len(cards)
     queue["cards_generated_at"] = generated_at

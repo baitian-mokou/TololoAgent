@@ -25,6 +25,13 @@ from src.gui.settings_manager import SettingsManager
 from src.gui.i18n import I18nManager
 from src.gui.theme_manager import ThemeManager
 from src.gui.window_customization import window_customizer, theme_prefers_dark
+from src.source_quality.review_labels import (
+    format_relation_label,
+    format_status_explanation,
+    primary_review_status,
+    recommended_action_for_review,
+    status_label,
+)
 
 # 项目根目录常量（替代所有重复的 sys.path.insert 表达式）
 PROJECT_ROOT = os.path.dirname(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
@@ -914,7 +921,7 @@ class QualityReviewTab(BaseTab):
                 iid=item.get("review_id"),
                 values=(
                     item.get("subject", ""),
-                    item.get("relation", ""),
+                    format_relation_label(item.get("relation", "")),
                     self._issue_label(item.get("issue_type", "")),
                     self._risk_label(item.get("risk_level", "")),
                     self._decision_label(human_decision),
@@ -943,17 +950,19 @@ class QualityReviewTab(BaseTab):
         if item.get("user_facing_summary"):
             lines = [
                 f"对象：{item.get('subject', '')}",
-                f"关系：{item.get('relation', '')}",
+                f"关系：{format_relation_label(item.get('relation', ''))}",
                 f"风险：{self._risk_label(item.get('risk_level', ''))}",
                 f"当前决定：{self._decision_label(decision.get('human_decision') or item.get('human_decision', 'pending'))}",
+                f"中文状态：{self._review_status_label(item)}",
+                f"简短解释：{self._review_status_explanation(item)}",
                 "",
-                f"复查摘要：{item.get('user_facing_summary')}",
-                f"推荐操作：{item.get('recommended_user_action', '暂缓')}",
+                f"复查摘要：{self._display_summary(item)}",
+                f"推荐操作：{self._recommended_user_action(item)}",
                 f"为什么：{item.get('risk_explanation', '需要人工复核。')}",
                 f"外部证据：{item.get('evidence_summary', '暂无额外外部复核。')}",
                 f"合并影响：{item.get('merge_impact_summary', '默认不写入正式 triples。')}",
                 "",
-                f"系统建议：{item.get('system_recommendation', '建议人工复核。')}",
+                f"系统建议：{self._human_system_recommendation(item)}",
             ]
             lines.extend(self._revision_detail_lines(decision))
             if item.get("risk_level") == "high":
@@ -968,15 +977,18 @@ class QualityReviewTab(BaseTab):
             return
         lines = [
             f"对象：{item.get('subject', '')}",
-            f"关系：{item.get('relation', '')}",
+            f"关系：{format_relation_label(item.get('relation', ''))}",
             f"问题：{self._issue_label(item.get('issue_type', ''))}",
             f"风险：{self._risk_label(item.get('risk_level', ''))}",
             f"当前决定：{self._decision_label(decision.get('human_decision') or item.get('human_decision', 'pending'))}",
+            f"中文状态：{self._review_status_label(item)}",
+            f"简短解释：{self._review_status_explanation(item)}",
+            f"推荐操作：{self._recommended_user_action(item)}",
             "",
             f"当前值：{self._format_value(item.get('current_value'))}",
             f"候选值：{self._format_value(item.get('proposed_value')) if item.get('proposed_value') else self._format_metadata(item.get('proposed_metadata'))}",
             "",
-            f"系统建议：{item.get('system_recommendation', '建议人工复核。')}",
+            f"系统建议：{self._human_system_recommendation(item)}",
             f"风险说明：{self._risk_explanation(item)}",
             "",
             "来源证据：",
@@ -1030,7 +1042,7 @@ class QualityReviewTab(BaseTab):
             "updated_at": now,
         })
         self._dump_json(self.decisions_path, payload)
-        self._log(f"{item.get('subject')} / {item.get('relation')} 已标记为：{self._decision_label(human_decision)}。")
+        self._log(f"{item.get('subject')} / {format_relation_label(item.get('relation'))} 已标记为：{self._decision_label(human_decision)}。")
         self._refresh_queue()
         self.tree.selection_set(item.get("review_id"))
         self._show_selected_detail()
@@ -1137,7 +1149,11 @@ class QualityReviewTab(BaseTab):
                 "patch_id": item.get("patch_id"),
                 "subject": item.get("subject"),
                 "relation": item.get("relation"),
+                "relation_label": format_relation_label(item.get("relation")),
                 "issue_type": item.get("issue_type"),
+                "status_label": self._review_status_label(item),
+                "status_explanation": self._review_status_explanation(item),
+                "recommended_user_action": self._recommended_user_action(item),
                 "risk_level": item.get("risk_level"),
                 "change_type": item.get("change_type"),
                 "human_decision": "deferred",
@@ -1246,7 +1262,7 @@ class QualityReviewTab(BaseTab):
             lines.extend(["", "修正建议预演："])
             for revision in revisions:
                 lines.append(
-                    f"- {revision.get('subject')} / {revision.get('relation')}："
+                    f"- {revision.get('subject')} / {format_relation_label(revision.get('relation'))}："
                     f"{self._format_value(revision.get('original_value'))} -> {revision.get('user_proposed_value')}，"
                     f"状态 {revision.get('revision_status')}，需要显式 value change。"
                 )
@@ -1266,18 +1282,46 @@ class QualityReviewTab(BaseTab):
         threading.Thread(target=worker, daemon=True).start()
 
     def _issue_label(self, value):
-        return {
-            "true_value_conflict": "事实值冲突",
-            "measurement_kind_mismatch": "测量口径不明",
-            "source_granularity_mismatch": "来源精度差异",
-            "manual_review": "人工复核",
-        }.get(value, value or "待判断")
+        if value == "manual_review":
+            return "人工复核"
+        return status_label(value) or value or "待判断"
 
     def _risk_label(self, value):
         return {"high": "高", "medium": "中", "low": "低"}.get(value, value or "未定")
 
     def _decision_label(self, value):
         return {"pending": "待审批", "approved": "通过", "rejected": "拒绝", "deferred": "暂缓"}.get(value, value or "待审批")
+
+    def _review_status_label(self, item):
+        status = primary_review_status(item)
+        return status_label(status) or "需要人工复核"
+
+    def _review_status_explanation(self, item):
+        return format_status_explanation(primary_review_status(item))
+
+    def _recommended_user_action(self, item):
+        return recommended_action_for_review(item, item.get("recommended_user_action") or "暂缓")
+
+    def _human_system_recommendation(self, item):
+        action = self._recommended_user_action(item)
+        explanation = self._review_status_explanation(item)
+        if action == "通过":
+            return f"{explanation} 推荐操作：通过低风险标注；仍需先 dry-run。"
+        if action == "拒绝":
+            return f"{explanation} 推荐操作：拒绝当前候选，不写正式数据。"
+        if action == "填写修正建议":
+            return f"{explanation} 推荐操作：填写修正建议，保存后先 dry-run 查看差异。"
+        return f"{explanation} 推荐操作：暂缓，等待更多证据。"
+
+    def _display_summary(self, item):
+        relation = item.get("relation") or ""
+        relation_label = format_relation_label(relation)
+        summary = item.get("user_facing_summary") or (
+            f"{item.get('subject', '未知对象')} 的 {relation_label} 被列入质量复查。"
+        )
+        if relation and relation_label != relation:
+            summary = summary.replace(relation, relation_label)
+        return summary
 
     def _revision_status_label(self, value):
         return {
@@ -1351,8 +1395,8 @@ class QualityReviewTab(BaseTab):
         external = evidence.get("external_review") or {}
         if external:
             lines.append(
-                f"- 外部复核：{external.get('recommendation') or external.get('action')}，"
-                f"比较结果 {external.get('comparison_result') or '未说明'}，置信度 {external.get('confidence')}"
+                f"- 外部复核：{format_status_explanation(external.get('recommendation') or external.get('action'))}，"
+                f"比较结果 {format_status_explanation(external.get('comparison_result'))}，置信度 {external.get('confidence')}"
             )
             external_evidence = external.get("external_evidence") or {}
             if external_evidence:
