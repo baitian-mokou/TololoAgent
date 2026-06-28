@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-06-28T03:35:38.890294+00:00",
+  "generated_at": "2026-06-28T05:21:49.511089+00:00",
   "passed": true,
   "decisions_path": "F:\\知识表示与处理结课作业\\第二次托洛洛测试 -重大进展\\data\\quality_review\\quality_review_decisions.json",
   "queue_path": "F:\\知识表示与处理结课作业\\第二次托洛洛测试 -重大进展\\data\\quality_review\\quality_review_queue.json",
@@ -7,10 +7,10 @@
   "queue_item_count": 8,
   "revision_count": 2,
   "revision_status_counts": {
-    "applied": 1,
+    "applied": 2,
     "draft": 0,
     "none": 6,
-    "proposed": 1,
+    "proposed": 0,
     "rejected": 0,
     "validated": 0
   },
@@ -27,10 +27,5 @@
     "esa": "disabled"
   },
   "errors": [],
-  "warnings": [
-    {
-      "check": "proposed_revision_preview_only_by_default",
-      "patch_id": "source_conflict_v4_002"
-    }
-  ]
+  "warnings": []
 }

@@ -282,6 +282,7 @@ def prepare_value_change(
     allow_value_change: bool,
     apply_requested: bool,
     apply_value_changes: bool,
+    deduplicate_value_change: bool = False,
     plan_change_type: str = "value_change",
 ) -> Tuple[List[Dict[str, Any]], Dict[str, Any], List[str]]:
     errors: List[str] = []
@@ -307,6 +308,7 @@ def prepare_value_change(
     blocked = bool(blocked_reasons)
     matched_records = []
     changed_records = []
+    deduplicated_records = []
 
     if blocked:
         if apply_requested:
@@ -333,6 +335,8 @@ def prepare_value_change(
             "status": "blocked_value_change" if apply_requested else "plan_only_high_risk",
             "blocked_by_default": True,
             "blocked_reasons": blocked_reasons,
+            "dedup_enabled": bool(deduplicate_value_change),
+            "deduplicated_records": deduplicated_records,
             **duplicate_info,
         }, errors
 
@@ -370,8 +374,43 @@ def prepare_value_change(
 
     if not matched_records:
         errors.append(f"{item.get('patch_id')}: no matching records found for value_change")
-    if apply_requested and duplicate_info.get("would_create_duplicate"):
-        errors.append(f"{item.get('patch_id')}: duplicate risk requires human dedup decision before apply")
+    if duplicate_info.get("would_create_duplicate"):
+        if deduplicate_value_change:
+            candidate_indexes = []
+            matched_indexes = {record.get("index") for record in matched_records}
+            original_objects = {record.get("index"): record.get("object") for record in matched_records}
+            for index, record in enumerate(updated_records):
+                if not isinstance(record, dict):
+                    continue
+                if record.get("subject") != subject or record.get("relation") != relation:
+                    continue
+                after_value = proposed_value if index in matched_indexes else record.get("object")
+                if after_value == proposed_value:
+                    candidate_indexes.append(index)
+            if len(candidate_indexes) > 1:
+                keep_index = candidate_indexes[0]
+                remove_indexes = set(candidate_indexes[1:])
+                deduped_records = []
+                for index, record in enumerate(updated_records):
+                    if index in remove_indexes:
+                        deduplicated_records.append({
+                            "index": index,
+                            "subject": record.get("subject"),
+                            "relation": record.get("relation"),
+                            "removed_object": original_objects.get(index, record.get("object")),
+                            "kept_index": keep_index,
+                            "kept_object": proposed_value,
+                        })
+                        continue
+                    deduped_records.append(record)
+                updated_records = deduped_records
+                changed_records.extend({
+                    "index": entry["index"],
+                    "before": {"subject": entry["subject"], "relation": entry["relation"], "object": entry["removed_object"]},
+                    "after": None,
+                } for entry in deduplicated_records)
+        elif apply_requested:
+            errors.append(f"{item.get('patch_id')}: duplicate risk requires --deduplicate-value-change before apply")
 
     return updated_records, {
         "review_id": item.get("review_id"),
@@ -388,6 +427,8 @@ def prepare_value_change(
         "matched_records": matched_records,
         "matched_record_count": len(matched_records),
         "changed_records": changed_records,
+        "dedup_enabled": bool(deduplicate_value_change),
+        "deduplicated_records": deduplicated_records,
         "status": "ready" if not errors else "error",
         "blocked_by_default": False,
         **duplicate_info,
@@ -446,6 +487,7 @@ def apply_quality_patch(
     apply: bool = False,
     allow_value_change: bool = False,
     apply_value_changes: bool = False,
+    deduplicate_value_change: bool = False,
     backup_root: str = DEFAULT_BACKUP_ROOT,
 ) -> Dict[str, Any]:
     dry_run = not apply
@@ -459,6 +501,7 @@ def apply_quality_patch(
     skipped_items: List[Dict[str, Any]] = []
     matched_records: List[Dict[str, Any]] = []
     changed_records: List[Dict[str, Any]] = []
+    deduplicated_records: List[Dict[str, Any]] = []
     changed_by_file: Dict[str, List[Dict[str, Any]]] = {}
     patch_ids_by_file: Dict[str, List[str]] = {}
     records_by_file: Dict[str, List[Dict[str, Any]]] = {}
@@ -501,6 +544,7 @@ def apply_quality_patch(
                     allow_value_change,
                     False,
                     apply_value_changes,
+                    deduplicate_value_change,
                     plan_change_type="revision_value_change",
                 )
                 plan_item["status"] = "blocked_pending_approval"
@@ -577,6 +621,7 @@ def apply_quality_patch(
                 allow_value_change,
                 apply,
                 apply_value_changes,
+                deduplicate_value_change,
                 plan_change_type="revision_value_change",
             )
             records_by_file[target_file] = updated_records
@@ -586,6 +631,7 @@ def apply_quality_patch(
                 value_change_files.add(target_file)
             matched_records.extend(plan_item.get("matched_records", []))
             changed_records.extend(plan_item.get("changed_records", []))
+            deduplicated_records.extend(plan_item.get("deduplicated_records", []))
             apply_plan.append(plan_item)
             errors.extend(item_errors)
             continue
@@ -622,6 +668,7 @@ def apply_quality_patch(
                 allow_value_change,
                 apply,
                 apply_value_changes,
+                deduplicate_value_change,
             )
             records_by_file[target_file] = updated_records
             changed_by_file.setdefault(target_file, []).extend(plan_item.get("changed_records", []))
@@ -630,6 +677,7 @@ def apply_quality_patch(
                 value_change_files.add(target_file)
             matched_records.extend(plan_item.get("matched_records", []))
             changed_records.extend(plan_item.get("changed_records", []))
+            deduplicated_records.extend(plan_item.get("deduplicated_records", []))
             apply_plan.append(plan_item)
             errors.extend(item_errors)
             continue
@@ -687,6 +735,7 @@ def apply_quality_patch(
         "apply_metadata_only": bool(apply and not allow_value_change),
         "allow_value_change": bool(allow_value_change),
         "apply_value_changes": bool(apply_value_changes),
+        "deduplicate_value_change": bool(deduplicate_value_change),
         "backup_dir": backup_dir,
         "rollback_manifest": rollback_manifest,
         "decisions_path": decisions_path,
@@ -698,6 +747,7 @@ def apply_quality_patch(
         "revision_proposals": revision_proposals,
         "matched_records": matched_records,
         "changed_records": changed_records,
+        "deduplicated_records": deduplicated_records,
         "skipped_items": skipped_items,
         "formal_values_changed": formal_values_changed,
         "patches_applied": patches_applied,
@@ -721,6 +771,7 @@ def main() -> None:
     mode.add_argument("--apply-metadata-only", action="store_true", help="Write supported approved metadata-only changes with backup and rollback manifest.")
     parser.add_argument("--allow-value-change", action="store_true", help="Allow approved value changes. High-risk changes are blocked without this flag.")
     parser.add_argument("--apply-value-changes", action="store_true", help="Write validated approved value changes. Requires --allow-value-change and --apply/--apply-metadata-only.")
+    parser.add_argument("--deduplicate-value-change", action="store_true", help="Allow a validated value change to collapse duplicate subject/relation/object records into one final record.")
     parser.add_argument("--decisions", default=DEFAULT_DECISIONS)
     parser.add_argument("--queue", default=DEFAULT_CANDIDATES)
     parser.add_argument("--candidates", default=None, help="Deprecated alias for --queue.")
@@ -735,6 +786,7 @@ def main() -> None:
         apply=apply_requested,
         allow_value_change=args.allow_value_change,
         apply_value_changes=args.apply_value_changes,
+        deduplicate_value_change=args.deduplicate_value_change,
         backup_root=args.backup_root,
     )
     print(json.dumps(report, ensure_ascii=False, indent=2))

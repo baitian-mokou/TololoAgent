@@ -1,51 +1,38 @@
 {
-  "generated_at": "2026-06-28T03:03:08.558369+00:00",
+  "generated_at": "2026-06-28T05:21:50.810264+00:00",
   "decisions_path": "F:\\知识表示与处理结课作业\\第二次托洛洛测试 -重大进展\\data\\quality_review\\quality_review_decisions.json",
   "queue_path": "F:\\知识表示与处理结课作业\\第二次托洛洛测试 -重大进展\\data\\quality_review\\quality_review_queue.json",
   "preflight_count": 2,
-  "duplicate_risk_count": 1,
+  "duplicate_risk_count": 0,
   "items": [
     {
       "patch_id": "source_conflict_v4_002",
       "review_id": "qr_source_conflict_v4_002",
       "subject": "天王星",
       "relation": "HAS_RADIUS",
-      "revision_status": "proposed",
-      "human_decision": "pending",
-      "safe_to_apply": false,
+      "revision_status": "applied",
+      "human_decision": "approved",
+      "safe_to_apply": true,
       "target_file": "F:\\知识表示与处理结课作业\\第二次托洛洛测试 -重大进展\\data\\triples\\天王星_triples.json",
       "original_values": [
         "4km",
         "20km"
       ],
       "proposed_value": "25362 km",
-      "matched_record_count": 2,
-      "matched_records": [
-        {
-          "index": 0,
-          "subject": "天王星",
-          "relation": "HAS_RADIUS",
-          "object": "4km"
-        },
-        {
-          "index": 1,
-          "subject": "天王星",
-          "relation": "HAS_RADIUS",
-          "object": "20km"
-        }
-      ],
-      "would_create_duplicate": true,
-      "duplicate_candidate_count": 2,
+      "matched_record_count": 0,
+      "matched_records": [],
+      "would_create_duplicate": false,
+      "duplicate_candidate_count": 1,
       "duplicate_after_value": "25362 km",
-      "duplicate_policy": "block_apply_until_dedup_decision",
-      "recommended_next_action": "require_human_dedup_decision"
+      "duplicate_policy": "no_duplicate_detected",
+      "recommended_next_action": "no_duplicate_detected"
     },
     {
       "patch_id": "source_conflict_v4_003",
       "review_id": "qr_source_conflict_v4_003",
       "subject": "月球",
       "relation": "ORBITS",
-      "revision_status": "validated",
+      "revision_status": "applied",
       "human_decision": "approved",
       "safe_to_apply": true,
       "target_file": "F:\\知识表示与处理结课作业\\第二次托洛洛测试 -重大进展\\data\\triples\\月球_triples.json",
@@ -53,15 +40,8 @@
         "太阳系内密度第二高"
       ],
       "proposed_value": "地球",
-      "matched_record_count": 1,
-      "matched_records": [
-        {
-          "index": 3,
-          "subject": "月球",
-          "relation": "ORBITS",
-          "object": "太阳系内密度第二高"
-        }
-      ],
+      "matched_record_count": 0,
+      "matched_records": [],
       "would_create_duplicate": false,
       "duplicate_candidate_count": 1,
       "duplicate_after_value": "地球",

@@ -2,7 +2,7 @@
   {
     "subject": "天王星",
     "relation": "HAS_RADIUS",
-    "object": "4km",
+    "object": "25362 km",
     "pattern": "infobox",
     "raw": "赤道半径: 25,559 ± 4km 4.007地球",
     "source": "zh_wikipedia",
@@ -17,33 +17,11 @@
     "quality_patch_id": "source_conflict_v4_002",
     "quality_annotation": {
       "classification": "measurement_kind_mismatch",
-      "rationale": "Radius records mix mean/equatorial/polar or unspecified radius kinds; formal fact value was not changed.",
-      "formal_value_changed": false,
-      "reviewed_decision_source": "source_conflict_resolution_decisions.recommended.json"
-    }
-  },
-  {
-    "subject": "天王星",
-    "relation": "HAS_RADIUS",
-    "object": "20km",
-    "pattern": "infobox",
-    "raw": "极半径: 24,973 ± 20km 3.929地球",
-    "source": "zh_wikipedia",
-    "source_role": "primary",
-    "origin": "html_fallback",
-    "type": "triple_candidate",
-    "source_title": "天王星",
-    "source_name": "zh_wikipedia",
-    "schema_version": "2.0",
-    "measurement_kind": "unspecified_radius",
-    "quality_status": "approved_metadata_only",
-    "quality_patch_id": "source_conflict_v4_002",
-    "quality_annotation": {
-      "classification": "measurement_kind_mismatch",
-      "rationale": "Radius records mix mean/equatorial/polar or unspecified radius kinds; formal fact value was not changed.",
-      "formal_value_changed": false,
-      "reviewed_decision_source": "source_conflict_resolution_decisions.recommended.json"
-    }
+      "rationale": "approved_in_gui",
+      "formal_value_changed": true,
+      "reviewed_decision_source": "quality_review_decisions.json"
+    },
+    "quality_review_id": "qr_source_conflict_v4_002"
   },
   {
     "subject": "天王星",
