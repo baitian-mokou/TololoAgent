@@ -1,0 +1,24 @@
+[
+  {
+    "section": "大气",
+    "content": "天王星是一颗冰巨星。根据 NASA Uranus Fact Sheet，天王星质量约为 8.6810e25 kg，平均半径约为 25362 km。天王星大气以氢和氦为主，并含有让它呈蓝绿色的甲烷。",
+    "keywords": [
+      "天王星",
+      "NASA",
+      "大气",
+      "质量",
+      "半径"
+    ],
+    "page_title": "天王星",
+    "chunk_index": 0,
+    "path": "大气",
+    "chunk_id": "nasa_天王星_00",
+    "source": "nasa",
+    "source_name": "nasa",
+    "source_role": "primary",
+    "origin": "html_fallback",
+    "type": "embedding_chunk",
+    "schema_version": "nasa_shadow_ready_v1",
+    "source_title": "天王星"
+  }
+]

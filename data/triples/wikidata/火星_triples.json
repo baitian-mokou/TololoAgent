@@ -30,6 +30,21 @@
     "source_title": "火星"
   },
   {
+    "relation": "LOCATED_IN",
+    "object": "太阳系",
+    "property_id": "P276",
+    "subject": "火星",
+    "pattern": "wikidata_adapter",
+    "raw": "wikidata adapter record: 火星 LOCATED_IN 太阳系",
+    "source": "wikidata",
+    "source_name": "wikidata",
+    "source_role": "primary",
+    "origin": "api",
+    "type": "triple_candidate",
+    "schema_version": "wikidata_shadow_ready_v1",
+    "source_title": "火星"
+  },
+  {
     "relation": "HAS_MASS",
     "object": "6.4171e23 kg",
     "property_id": "P2067",

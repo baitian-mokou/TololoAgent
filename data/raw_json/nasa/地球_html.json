@@ -1,0 +1,15 @@
+{
+  "title": "地球",
+  "category": "Planet",
+  "url": "https://nssdc.gsfc.nasa.gov/planetary/factsheet/earthfact.html",
+  "html": "<div><p>地球是太阳系中的类地行星。</p><table><tr><th>Field</th><th>Earth</th></tr><tr><td>Mass (10^24 kg)</td><td>5.9724</td></tr><tr><td>Mean radius (km)</td><td>6371.0</td></tr><tr><td>Atmospheric composition</td><td>Nitrogen; Oxygen; Argon</td></tr><tr><td>Distance from Sun (10^6 km)</td><td>149.6</td></tr></table></div>",
+  "text": "地球是太阳系中的类地行星。根据 NASA Earth Fact Sheet，地球质量约为 5.9724e24 kg，平均半径约为 6371 km。地球大气主要由氮气、氧气和氩气组成，这也是地球适合生命存在的重要条件之一。",
+  "raw_text": "地球是太阳系中的类地行星。根据 NASA Earth Fact Sheet，地球质量约为 5.9724e24 kg，平均半径约为 6371 km。地球大气主要由氮气、氧气和氩气组成，这也是地球适合生命存在的重要条件之一。",
+  "source": "nasa",
+  "source_name": "nasa",
+  "source_role": "primary",
+  "schema_version": "nasa_shadow_ready_v1",
+  "origin": "html_fallback",
+  "fetch_source": "offline_fact_sheet_fixture",
+  "crawl_time": "2026-06-28 12:00:00"
+}

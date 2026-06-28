@@ -1,0 +1,16 @@
+[
+  {
+    "subject": "SMART-1",
+    "relation": "ORBITS",
+    "object": "月球",
+    "pattern": "esa_smoke_fixture",
+    "raw": "ESA smoke fixture: SMART-1 orbits the Moon.",
+    "source": "esa",
+    "source_name": "esa",
+    "source_role": "primary",
+    "origin": "html_fallback",
+    "type": "triple_candidate",
+    "schema_version": "esa_shadow_ready_v1",
+    "source_title": "SMART-1"
+  }
+]

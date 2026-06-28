@@ -8,7 +8,6 @@ from html import unescape
 from datetime import datetime, timezone
 from typing import Any, Dict, List
 
-from src.nlp.nlp_pipeline import NlpPipeline
 from src.source_adapters.base import SourceAdapter, dump_json, load_json, list_namespace_files
 from src.source_quality.value_normalizer import normalize_value
 from src.source_control import SOURCE_ROLE
@@ -32,6 +31,15 @@ NASA_MARS_FACT_FALLBACKS = (
     ("HAS_RADIUS", "3389.5 km", "km"),
     ("HAS_ATMOSPHERE", "carbon dioxide; nitrogen; argon", ""),
 )
+SATELLITE_SYSTEM_MAP = {
+    "地球": "地球系统",
+    "火星": "火星系统",
+    "木星": "木星系统",
+    "土星": "土星系统",
+    "天王星": "天王星系统",
+    "海王星": "海王星系统",
+}
+NATURAL_SATELLITES = {"月球", "火卫一", "火卫二", "木卫一", "木卫二", "木卫三", "木卫四"}
 NASA_MARS_STRICT_TABLE_FALLBACK_HTML = """
 <table>
   <tr><th>Field</th><th>Mars</th></tr>
@@ -106,13 +114,16 @@ class NasaPipelineAdapter(SourceAdapter):
         if self.mode != "offline":
             return super().materialize(output_path, mode=self.mode)
 
-        raw_payload = self.fetch_offline()
-        pipeline = NlpPipeline(
-            source_name=self.source_name,
-            source_role=SOURCE_ROLE,
-            schema_version=self.schema_version,
-        )
-        total_triples, total_narratives = pipeline.process_all()
+        fetch_status = {
+            "requested_mode": self.mode,
+            "effective_mode": "offline",
+            "status": "ok",
+            "error": "",
+            "payload": self.fetch_offline(),
+        }
+        raw_payload = fetch_status["payload"]
+        records = self.normalize_records(raw_payload)
+        summary = self.emit_records(records, write=True)
         metadata_audit = self.audit_metadata_contract()
         chroma = self.materialize_chroma()
         probes = self.probe()
@@ -135,8 +146,8 @@ class NasaPipelineAdapter(SourceAdapter):
             "triple_files": list_namespace_files(self.triples_dir, "_triples.json"),
             "narrative_files": list_namespace_files(self.triples_dir, "_narratives.json"),
             "pipeline": {
-                "total_triples": total_triples,
-                "total_narratives": total_narratives,
+                "total_triples": summary.get("total_triples", 0),
+                "total_narratives": summary.get("total_narratives", 0),
                 "summary_exists": os.path.exists(summary_path),
                 "summary": load_json(summary_path) if os.path.exists(summary_path) else {},
             },
@@ -152,6 +163,11 @@ class NasaPipelineAdapter(SourceAdapter):
             "materialization": {
                 "timestamp_utc": datetime.now(timezone.utc).isoformat(),
                 "output_path": output_path,
+            },
+            "fetch": {
+                key: value
+                for key, value in fetch_status.items()
+                if key != "payload"
             },
         }
         dump_json(output_path, report)
@@ -208,24 +224,56 @@ class NasaPipelineAdapter(SourceAdapter):
         source_url = str(payload.get("url") or NASA_FACT_SHEETS["火星"]["url"])
         source_record_id = f"offline:{title or os.path.basename(source_url)}"
         text = str(payload.get("text") or payload.get("raw_text") or payload.get("html") or "")
+        html = str(payload.get("html") or "")
         triples = []
-        if "二氧化碳" in text or "氮气" in text or "氩气" in text:
-            raw_value = "二氧化碳;氮气;氩气"
-            triples.append(self._preview_fact(
-                {"source_url": source_url, "source_record_id": source_record_id},
-                "HAS_ATMOSPHERE",
-                raw_value,
-                raw_value,
-                fetched_at or str(payload.get("crawl_time") or ""),
-                table_field="offline_raw_text",
+        if html:
+            triples.extend(
+                fact
+                for fact in parse_nasa_fact_sheet_candidates(
+                    html,
+                    payload={"source_url": source_url, "source_record_id": source_record_id},
+                    fetched_at=fetched_at or str(payload.get("crawl_time") or ""),
+                    schema_version=self.schema_version,
+                )
+                if not fact.get("relation_semantics_warning")
+            )
+        if not any(item.get("relation") == "HAS_ATMOSPHERE" for item in triples):
+            if "二氧化碳" in text or "氮气" in text or "氩气" in text:
+                raw_value = "二氧化碳;氮气;氩气"
+                triples.append(self._preview_fact(
+                    {"source_url": source_url, "source_record_id": source_record_id},
+                    "HAS_ATMOSPHERE",
+                    raw_value,
+                    raw_value,
+                    fetched_at or str(payload.get("crawl_time") or ""),
+                    table_field="offline_raw_text",
+                ))
+        orbit_host = self._extract_orbit_host(title, text)
+        if orbit_host and not any(item.get("relation") == "ORBITS" for item in triples):
+            triples.append(self._text_fact(
+                source_url=source_url,
+                source_record_id=source_record_id,
+                relation="ORBITS",
+                obj=orbit_host,
+                fetched_at=fetched_at or str(payload.get("crawl_time") or ""),
+                field_id="offline_orbit_text",
+            ))
+        if title in NATURAL_SATELLITES and orbit_host and not any(item.get("relation") == "PART_OF" for item in triples):
+            triples.append(self._text_fact(
+                source_url=source_url,
+                source_record_id=source_record_id,
+                relation="PART_OF",
+                obj=SATELLITE_SYSTEM_MAP.get(orbit_host, f"{orbit_host}系统"),
+                fetched_at=fetched_at or str(payload.get("crawl_time") or ""),
+                field_id="offline_system_text",
             ))
         return {
             "title": title,
             "triples": triples,
             "narratives": [{
-                "section": "NASA dry-run preview",
+                "section": self._infer_section(text),
                 "content": text[:300],
-                "keywords": [title, "NASA"],
+                "keywords": self._keywords_for_text(title, text),
             }] if text else [],
         }
 
@@ -241,9 +289,10 @@ class NasaPipelineAdapter(SourceAdapter):
         normalized = normalize_value(normalized_value or raw_value, relation)
         base_id = str(payload.get("source_record_id", "") or "nasa-preview")
         record_id = f"{base_id}:{table_field}" if table_field else base_id
+        display_value = canonical_fact_object(normalized["normalized_value"], normalized["normalized_unit"])
         return {
             "relation": relation,
-            "object": normalized["normalized_value"],
+            "object": display_value,
             "source_record_id": record_id,
             "table_field": table_field,
             "source_url": payload.get("source_url", ""),
@@ -254,6 +303,64 @@ class NasaPipelineAdapter(SourceAdapter):
             "normalized_value": normalized["normalized_value"],
             "unit": normalized["normalized_unit"],
             "confidence": max(0.65, float(normalized["confidence"])),
+            "parse_status": normalized["parse_status"],
+            "schema_version": self.schema_version,
+            "source_name": self.source_name,
+        }
+
+    @staticmethod
+    def _extract_orbit_host(title: str, text: str) -> str:
+        clean_text = re.sub(r"\s+", "", str(text or ""))
+        for pattern in (
+            rf"{re.escape(title)}(?:绕|围绕)([\u4e00-\u9fffA-Za-z0-9·\-]+?)(?:公转|运行)",
+            rf"{re.escape(title)}是([\u4e00-\u9fffA-Za-z0-9·\-]+?)的天然卫星",
+        ):
+            match = re.search(pattern, clean_text)
+            if match:
+                return match.group(1)
+        return ""
+
+    @staticmethod
+    def _infer_section(text: str) -> str:
+        value = str(text or "")
+        if any(token in value for token in ("大气", "气压", "二氧化碳", "氮气", "氧气", "甲烷")):
+            return "大气"
+        if any(token in value for token in ("绕", "公转", "轨道", "卫星", "探测器")):
+            return "轨道"
+        return "概要"
+
+    @staticmethod
+    def _keywords_for_text(title: str, text: str) -> List[str]:
+        keywords = [title, "NASA"]
+        for token in ("大气", "轨道", "卫星", "质量", "半径"):
+            if token in str(text or "") and token not in keywords:
+                keywords.append(token)
+        return keywords
+
+    def _text_fact(
+        self,
+        *,
+        source_url: str,
+        source_record_id: str,
+        relation: str,
+        obj: str,
+        fetched_at: str,
+        field_id: str,
+    ) -> Dict[str, Any]:
+        normalized = normalize_value(obj, relation)
+        return {
+            "relation": relation,
+            "object": normalized["normalized_value"],
+            "source_record_id": f"{source_record_id}:{field_id}",
+            "table_field": field_id,
+            "source_url": source_url,
+            "source_license": NASA_LICENSE_HINT,
+            "license_hint": NASA_LICENSE_HINT,
+            "fetched_at": fetched_at,
+            "raw_value": obj,
+            "normalized_value": normalized["normalized_value"],
+            "unit": normalized["normalized_unit"],
+            "confidence": max(0.75, float(normalized["confidence"])),
             "parse_status": normalized["parse_status"],
             "schema_version": self.schema_version,
             "source_name": self.source_name,
@@ -351,9 +458,10 @@ def build_preview_fact(
 ) -> Dict[str, Any]:
     normalized = normalize_value(raw_value, relation)
     base_id = str(payload.get("source_record_id", "") or "nasa-preview")
+    display_value = canonical_fact_object(normalized["normalized_value"], normalized["normalized_unit"])
     return {
         "relation": relation,
-        "object": normalized["normalized_value"],
+        "object": display_value,
         "source_record_id": f"{base_id}:{safe_field_id(table_field)}",
         "table_field": table_field,
         "source_url": payload.get("source_url", ""),
@@ -412,3 +520,13 @@ def normalize_nasa_value(raw_value: str, default_unit: str) -> str:
     if default_unit and default_unit not in value:
         return f"{value} {default_unit}".strip()
     return value
+
+
+def canonical_fact_object(normalized_value: str, normalized_unit: str) -> str:
+    value = str(normalized_value or "").strip().replace("e+", "e")
+    unit = str(normalized_unit or "").strip()
+    if not unit or unit == "component_set":
+        return value
+    if value.endswith(f" {unit}") or value.endswith(unit):
+        return value
+    return f"{value} {unit}".strip()

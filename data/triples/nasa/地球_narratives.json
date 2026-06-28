@@ -1,0 +1,24 @@
+[
+  {
+    "section": "大气",
+    "content": "地球是太阳系中的类地行星。根据 NASA Earth Fact Sheet，地球质量约为 5.9724e24 kg，平均半径约为 6371 km。地球大气主要由氮气、氧气和氩气组成，这也是地球适合生命存在的重要条件之一。",
+    "keywords": [
+      "地球",
+      "NASA",
+      "大气",
+      "质量",
+      "半径"
+    ],
+    "page_title": "地球",
+    "chunk_index": 0,
+    "path": "大气",
+    "chunk_id": "nasa_地球_00",
+    "source": "nasa",
+    "source_name": "nasa",
+    "source_role": "primary",
+    "origin": "html_fallback",
+    "type": "embedding_chunk",
+    "schema_version": "nasa_shadow_ready_v1",
+    "source_title": "地球"
+  }
+]

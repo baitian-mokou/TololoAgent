@@ -1,0 +1,15 @@
+{
+  "title": "天王星",
+  "category": "Planet",
+  "url": "https://nssdc.gsfc.nasa.gov/planetary/factsheet/uranusfact.html",
+  "html": "<div><p>天王星是一颗冰巨星。</p><table><tr><th>Field</th><th>Uranus</th></tr><tr><td>Mass (10^24 kg)</td><td>86.810</td></tr><tr><td>Mean radius (km)</td><td>25362</td></tr><tr><td>Atmospheric composition</td><td>Hydrogen; Helium; Methane</td></tr><tr><td>Distance from Sun (10^6 km)</td><td>2872.5</td></tr></table></div>",
+  "text": "天王星是一颗冰巨星。根据 NASA Uranus Fact Sheet，天王星质量约为 8.6810e25 kg，平均半径约为 25362 km。天王星大气以氢和氦为主，并含有让它呈蓝绿色的甲烷。",
+  "raw_text": "天王星是一颗冰巨星。根据 NASA Uranus Fact Sheet，天王星质量约为 8.6810e25 kg，平均半径约为 25362 km。天王星大气以氢和氦为主，并含有让它呈蓝绿色的甲烷。",
+  "source": "nasa",
+  "source_name": "nasa",
+  "source_role": "primary",
+  "schema_version": "nasa_shadow_ready_v1",
+  "origin": "html_fallback",
+  "fetch_source": "offline_fact_sheet_fixture",
+  "crawl_time": "2026-06-28 12:00:00"
+}

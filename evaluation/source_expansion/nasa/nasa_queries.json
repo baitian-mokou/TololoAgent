@@ -35,7 +35,7 @@
       "source_schema_version": "nasa_shadow_ready_v1"
     },
     {
-      "id": "nasa_structured_mars_mass_expected_absent",
+      "id": "nasa_structured_mars_mass",
       "category": "structured",
       "query_kind": "structured",
       "query": "火星质量是多少",
@@ -43,17 +43,20 @@
       "allowed_final_sources": [
         "fallback"
       ],
-      "expected_top_k_hit": false,
+      "expected_top_k_hit": true,
       "expected_result": {
-        "empty": true
+        "subject": "火星",
+        "relation": "HAS_MASS",
+        "object": "6.4171e23 kg"
       },
       "source_filter": [
         "nasa"
       ],
-      "source_schema_version": "nasa_shadow_ready_v1"
+      "source_schema_version": "nasa_shadow_ready_v1",
+      "normalized_expected_value": "6.4171e23kg"
     },
     {
-      "id": "nasa_structured_mars_radius_expected_absent",
+      "id": "nasa_structured_mars_radius",
       "category": "structured",
       "query_kind": "structured",
       "query": "火星半径是多少",
@@ -61,9 +64,74 @@
       "allowed_final_sources": [
         "fallback"
       ],
-      "expected_top_k_hit": false,
+      "expected_top_k_hit": true,
       "expected_result": {
-        "empty": true
+        "subject": "火星",
+        "relation": "HAS_RADIUS",
+        "object": "3389.5 km"
+      },
+      "source_filter": [
+        "nasa"
+      ],
+      "source_schema_version": "nasa_shadow_ready_v1",
+      "normalized_expected_value": "3389.5km"
+    },
+    {
+      "id": "nasa_structured_earth_mass",
+      "category": "structured",
+      "query_kind": "structured",
+      "query": "地球质量是多少",
+      "expected_path": "fallback",
+      "allowed_final_sources": [
+        "fallback"
+      ],
+      "expected_top_k_hit": true,
+      "expected_result": {
+        "subject": "地球",
+        "relation": "HAS_MASS",
+        "object": "5.9724e24 kg"
+      },
+      "source_filter": [
+        "nasa"
+      ],
+      "source_schema_version": "nasa_shadow_ready_v1",
+      "normalized_expected_value": "5.9724e24kg"
+    },
+    {
+      "id": "nasa_structured_venus_radius",
+      "category": "structured",
+      "query_kind": "structured",
+      "query": "金星半径是多少",
+      "expected_path": "fallback",
+      "allowed_final_sources": [
+        "fallback"
+      ],
+      "expected_top_k_hit": true,
+      "expected_result": {
+        "subject": "金星",
+        "relation": "HAS_RADIUS",
+        "object": "6051.8 km"
+      },
+      "source_filter": [
+        "nasa"
+      ],
+      "source_schema_version": "nasa_shadow_ready_v1",
+      "normalized_expected_value": "6051.8km"
+    },
+    {
+      "id": "nasa_structured_moon_orbits",
+      "category": "structured",
+      "query_kind": "structured",
+      "query": "月球绕谁运行",
+      "expected_path": "fallback",
+      "allowed_final_sources": [
+        "fallback"
+      ],
+      "expected_top_k_hit": true,
+      "expected_result": {
+        "subject": "月球",
+        "relation": "ORBITS",
+        "object": "地球"
       },
       "source_filter": [
         "nasa"
@@ -129,14 +197,21 @@
       "allowed_final_sources": [
         "fallback"
       ],
-      "expected_top_k_hit": false,
+      "expected_top_k_hit": true,
       "expected_result": {
-        "empty": true
+        "page_title": "火卫一",
+        "section_any_of": [
+          "轨道"
+        ]
       },
       "source_filter": [
         "nasa"
       ],
-      "source_schema_version": "nasa_shadow_ready_v1"
+      "source_schema_version": "nasa_shadow_ready_v1",
+      "expected_page_title": "火卫一",
+      "expected_section_any_of": [
+        "轨道"
+      ]
     },
     {
       "id": "nasa_negative_deimos_absent",
@@ -160,7 +235,7 @@
       "id": "nasa_negative_jupiter_absent",
       "category": "negative",
       "query_kind": "structured",
-      "query": "木星大气成分",
+      "query": "木卫四质量是多少",
       "expected_path": "fallback",
       "allowed_final_sources": [
         "fallback"
@@ -264,14 +339,21 @@
       "allowed_final_sources": [
         "fallback"
       ],
-      "expected_top_k_hit": false,
+      "expected_top_k_hit": true,
       "expected_result": {
-        "empty": true
+        "page_title": "地球",
+        "section_any_of": [
+          "大气"
+        ]
       },
       "source_filter": [
         "nasa"
       ],
-      "source_schema_version": "nasa_shadow_ready_v1"
+      "source_schema_version": "nasa_shadow_ready_v1",
+      "expected_page_title": "地球",
+      "expected_section_any_of": [
+        "大气"
+      ]
     },
     {
       "id": "nasa_metadata_structured_schema",
@@ -359,6 +441,31 @@
       ],
       "source_schema_version": "nasa_shadow_ready_v1",
       "expected_page_title": "火星",
+      "expected_section_any_of": [
+        "大气"
+      ]
+    },
+    {
+      "id": "nasa_narrative_jupiter_atmosphere",
+      "category": "narrative",
+      "query_kind": "narrative",
+      "query": "木星大气有什么成分",
+      "expected_path": "fallback",
+      "allowed_final_sources": [
+        "fallback"
+      ],
+      "expected_top_k_hit": true,
+      "expected_result": {
+        "page_title": "木星",
+        "section_any_of": [
+          "大气"
+        ]
+      },
+      "source_filter": [
+        "nasa"
+      ],
+      "source_schema_version": "nasa_shadow_ready_v1",
+      "expected_page_title": "木星",
       "expected_section_any_of": [
         "大气"
       ]
@@ -460,7 +567,7 @@
       "id": "nasa_conflict_no_wikidata_mass",
       "category": "conflict_case",
       "query_kind": "structured",
-      "query": "NASA shadow 用 Wikidata 火星质量回答吗",
+      "query": "NASA shadow 用 Wikidata 木卫四质量回答吗",
       "expected_path": "fallback",
       "allowed_final_sources": [
         "fallback"

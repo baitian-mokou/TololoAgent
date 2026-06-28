@@ -14,18 +14,18 @@
     "path": "F:\\知识表示与处理结课作业\\第二次托洛洛测试 -重大进展\\evaluation\\source_expansion\\wikidata\\wikidata_queries.json",
     "source_name": "wikidata",
     "source_schema_version": "wikidata_shadow_ready_v1",
-    "query_count": 24,
+    "query_count": 27,
     "load_error": null,
     "query_schema_versions_consistent": true
   },
   "summary": {
-    "total_queries": 24,
-    "exact_pass_count": 24,
+    "total_queries": 27,
+    "exact_pass_count": 27,
     "exact_accuracy": 1.0,
-    "top_k_hit_count": 22,
-    "top_k_hit_denominator": 22,
+    "top_k_hit_count": 25,
+    "top_k_hit_denominator": 25,
     "top_k_hit_rate": 1.0,
-    "path_selection_correct_count": 24,
+    "path_selection_correct_count": 27,
     "path_selection_correctness": 1.0,
     "graph_embedding_fallback_inconsistency_count": 0,
     "source_filter_failure_count": 0,
@@ -35,9 +35,9 @@
     "query_explainability_degraded_rate": 0.0,
     "category_breakdown": {
       "structured": {
-        "total": 5,
-        "exact_pass_count": 5,
-        "top_k_hit_count": 5,
+        "total": 8,
+        "exact_pass_count": 8,
+        "top_k_hit_count": 8,
         "query_explainability_degraded_count": 0,
         "failures": {}
       },
@@ -102,7 +102,7 @@
   "probes": {
     "graph_results_count": 0,
     "narrative_results_count": 7,
-    "fallback_graph_count": 23,
+    "fallback_graph_count": 26,
     "fallback_narrative_count": 7
   },
   "gates": {
@@ -175,7 +175,7 @@
           "conflict_case"
         ],
         "actual": {
-          "structured": 5,
+          "structured": 8,
           "narrative": 3,
           "negative": 2,
           "fallback": 2,
@@ -438,6 +438,264 @@
         "source_role": "primary",
         "origin": "api",
         "source_title": "月球",
+        "schema_version": "wikidata_shadow_ready_v1"
+      },
+      "metadata_complete": true,
+      "source_filter_failed": false,
+      "inferred_boundary_break": false,
+      "fallback_exact_match": true,
+      "fallback_top_k_hit": true,
+      "consistency_match": true,
+      "failure_category": null,
+      "expected_failure_if_any": null
+    },
+    {
+      "id": "wikidata_structured_earth_located_in",
+      "category": "structured",
+      "query_kind": "structured",
+      "query": "地球位于哪里",
+      "source_schema_version": "wikidata_shadow_ready_v1",
+      "expected_path": "fallback",
+      "actual_path": "fallback",
+      "allowed_final_sources": [
+        "fallback"
+      ],
+      "expected_result": {
+        "subject": "地球",
+        "relation": "LOCATED_IN",
+        "object": "太阳系"
+      },
+      "normalized_expected_value": null,
+      "normalized_returned_value": "太阳系",
+      "returned_result": {
+        "subject": "地球",
+        "relation": "LOCATED_IN",
+        "object": "太阳系",
+        "source": "wikidata",
+        "source_name": "wikidata",
+        "source_role": "primary",
+        "origin": "api",
+        "source_title": "地球",
+        "schema_version": "wikidata_shadow_ready_v1"
+      },
+      "top_k_results": [
+        {
+          "subject": "地球",
+          "relation": "LOCATED_IN",
+          "object": "太阳系",
+          "source": "wikidata",
+          "source_name": "wikidata",
+          "source_role": "primary",
+          "origin": "api",
+          "source_title": "地球",
+          "schema_version": "wikidata_shadow_ready_v1"
+        }
+      ],
+      "graph_only_results": [],
+      "fallback_results": [
+        {
+          "subject": "地球",
+          "relation": "LOCATED_IN",
+          "object": "太阳系",
+          "source": "wikidata",
+          "source_name": "wikidata",
+          "source_role": "primary",
+          "origin": "api",
+          "source_title": "地球",
+          "schema_version": "wikidata_shadow_ready_v1"
+        }
+      ],
+      "exact_match": true,
+      "top_k_hit": true,
+      "expected_top_k_hit": true,
+      "top_k_expectation_met": true,
+      "path_correct": true,
+      "allowed_final_source_ok": true,
+      "pass": true,
+      "query_schema_ok": true,
+      "query_explainability_degraded": false,
+      "explainability_status": "ok",
+      "source_metadata": {
+        "subject": "地球",
+        "relation": "LOCATED_IN",
+        "object": "太阳系",
+        "source": "wikidata",
+        "source_name": "wikidata",
+        "source_role": "primary",
+        "origin": "api",
+        "source_title": "地球",
+        "schema_version": "wikidata_shadow_ready_v1"
+      },
+      "metadata_complete": true,
+      "source_filter_failed": false,
+      "inferred_boundary_break": false,
+      "fallback_exact_match": true,
+      "fallback_top_k_hit": true,
+      "consistency_match": true,
+      "failure_category": null,
+      "expected_failure_if_any": null
+    },
+    {
+      "id": "wikidata_structured_moon_located_in",
+      "category": "structured",
+      "query_kind": "structured",
+      "query": "月球位于哪里",
+      "source_schema_version": "wikidata_shadow_ready_v1",
+      "expected_path": "fallback",
+      "actual_path": "fallback",
+      "allowed_final_sources": [
+        "fallback"
+      ],
+      "expected_result": {
+        "subject": "月球",
+        "relation": "LOCATED_IN",
+        "object": "地球系统"
+      },
+      "normalized_expected_value": null,
+      "normalized_returned_value": "地球系统",
+      "returned_result": {
+        "subject": "月球",
+        "relation": "LOCATED_IN",
+        "object": "地球系统",
+        "source": "wikidata",
+        "source_name": "wikidata",
+        "source_role": "primary",
+        "origin": "api",
+        "source_title": "月球",
+        "schema_version": "wikidata_shadow_ready_v1"
+      },
+      "top_k_results": [
+        {
+          "subject": "月球",
+          "relation": "LOCATED_IN",
+          "object": "地球系统",
+          "source": "wikidata",
+          "source_name": "wikidata",
+          "source_role": "primary",
+          "origin": "api",
+          "source_title": "月球",
+          "schema_version": "wikidata_shadow_ready_v1"
+        }
+      ],
+      "graph_only_results": [],
+      "fallback_results": [
+        {
+          "subject": "月球",
+          "relation": "LOCATED_IN",
+          "object": "地球系统",
+          "source": "wikidata",
+          "source_name": "wikidata",
+          "source_role": "primary",
+          "origin": "api",
+          "source_title": "月球",
+          "schema_version": "wikidata_shadow_ready_v1"
+        }
+      ],
+      "exact_match": true,
+      "top_k_hit": true,
+      "expected_top_k_hit": true,
+      "top_k_expectation_met": true,
+      "path_correct": true,
+      "allowed_final_source_ok": true,
+      "pass": true,
+      "query_schema_ok": true,
+      "query_explainability_degraded": false,
+      "explainability_status": "ok",
+      "source_metadata": {
+        "subject": "月球",
+        "relation": "LOCATED_IN",
+        "object": "地球系统",
+        "source": "wikidata",
+        "source_name": "wikidata",
+        "source_role": "primary",
+        "origin": "api",
+        "source_title": "月球",
+        "schema_version": "wikidata_shadow_ready_v1"
+      },
+      "metadata_complete": true,
+      "source_filter_failed": false,
+      "inferred_boundary_break": false,
+      "fallback_exact_match": true,
+      "fallback_top_k_hit": true,
+      "consistency_match": true,
+      "failure_category": null,
+      "expected_failure_if_any": null
+    },
+    {
+      "id": "wikidata_structured_uranus_located_in",
+      "category": "structured",
+      "query_kind": "structured",
+      "query": "天王星位于哪里",
+      "source_schema_version": "wikidata_shadow_ready_v1",
+      "expected_path": "fallback",
+      "actual_path": "fallback",
+      "allowed_final_sources": [
+        "fallback"
+      ],
+      "expected_result": {
+        "subject": "天王星",
+        "relation": "LOCATED_IN",
+        "object": "太阳系"
+      },
+      "normalized_expected_value": null,
+      "normalized_returned_value": "太阳系",
+      "returned_result": {
+        "subject": "天王星",
+        "relation": "LOCATED_IN",
+        "object": "太阳系",
+        "source": "wikidata",
+        "source_name": "wikidata",
+        "source_role": "primary",
+        "origin": "api",
+        "source_title": "天王星",
+        "schema_version": "wikidata_shadow_ready_v1"
+      },
+      "top_k_results": [
+        {
+          "subject": "天王星",
+          "relation": "LOCATED_IN",
+          "object": "太阳系",
+          "source": "wikidata",
+          "source_name": "wikidata",
+          "source_role": "primary",
+          "origin": "api",
+          "source_title": "天王星",
+          "schema_version": "wikidata_shadow_ready_v1"
+        }
+      ],
+      "graph_only_results": [],
+      "fallback_results": [
+        {
+          "subject": "天王星",
+          "relation": "LOCATED_IN",
+          "object": "太阳系",
+          "source": "wikidata",
+          "source_name": "wikidata",
+          "source_role": "primary",
+          "origin": "api",
+          "source_title": "天王星",
+          "schema_version": "wikidata_shadow_ready_v1"
+        }
+      ],
+      "exact_match": true,
+      "top_k_hit": true,
+      "expected_top_k_hit": true,
+      "top_k_expectation_met": true,
+      "path_correct": true,
+      "allowed_final_source_ok": true,
+      "pass": true,
+      "query_schema_ok": true,
+      "query_explainability_degraded": false,
+      "explainability_status": "ok",
+      "source_metadata": {
+        "subject": "天王星",
+        "relation": "LOCATED_IN",
+        "object": "太阳系",
+        "source": "wikidata",
+        "source_name": "wikidata",
+        "source_role": "primary",
+        "origin": "api",
+        "source_title": "天王星",
         "schema_version": "wikidata_shadow_ready_v1"
       },
       "metadata_complete": true,

@@ -11,43 +11,84 @@
   "triples_dir": "F:\\知识表示与处理结课作业\\第二次托洛洛测试 -重大进展\\data\\triples\\nasa",
   "raw_files": [
     {
+      "path": "F:\\知识表示与处理结课作业\\第二次托洛洛测试 -重大进展\\data\\raw_json\\nasa\\土星_html.json",
+      "title": "土星"
+    },
+    {
+      "path": "F:\\知识表示与处理结课作业\\第二次托洛洛测试 -重大进展\\data\\raw_json\\nasa\\地球_html.json",
+      "title": "地球"
+    },
+    {
+      "path": "F:\\知识表示与处理结课作业\\第二次托洛洛测试 -重大进展\\data\\raw_json\\nasa\\天王星_html.json",
+      "title": "天王星"
+    },
+    {
+      "path": "F:\\知识表示与处理结课作业\\第二次托洛洛测试 -重大进展\\data\\raw_json\\nasa\\月球_html.json",
+      "title": "月球"
+    },
+    {
+      "path": "F:\\知识表示与处理结课作业\\第二次托洛洛测试 -重大进展\\data\\raw_json\\nasa\\木星_html.json",
+      "title": "木星"
+    },
+    {
+      "path": "F:\\知识表示与处理结课作业\\第二次托洛洛测试 -重大进展\\data\\raw_json\\nasa\\海王星_html.json",
+      "title": "海王星"
+    },
+    {
       "path": "F:\\知识表示与处理结课作业\\第二次托洛洛测试 -重大进展\\data\\raw_json\\nasa\\火卫一_html.json",
       "title": "火卫一"
     },
     {
       "path": "F:\\知识表示与处理结课作业\\第二次托洛洛测试 -重大进展\\data\\raw_json\\nasa\\火星_html.json",
       "title": "火星"
+    },
+    {
+      "path": "F:\\知识表示与处理结课作业\\第二次托洛洛测试 -重大进展\\data\\raw_json\\nasa\\金星_html.json",
+      "title": "金星"
     }
   ],
   "triple_files": [
-    "F:\\知识表示与处理结课作业\\第二次托洛洛测试 -重大进展\\data\\triples\\nasa\\火卫一_triples.json"
+    "F:\\知识表示与处理结课作业\\第二次托洛洛测试 -重大进展\\data\\triples\\nasa\\土星_triples.json",
+    "F:\\知识表示与处理结课作业\\第二次托洛洛测试 -重大进展\\data\\triples\\nasa\\地球_triples.json",
+    "F:\\知识表示与处理结课作业\\第二次托洛洛测试 -重大进展\\data\\triples\\nasa\\天王星_triples.json",
+    "F:\\知识表示与处理结课作业\\第二次托洛洛测试 -重大进展\\data\\triples\\nasa\\月球_triples.json",
+    "F:\\知识表示与处理结课作业\\第二次托洛洛测试 -重大进展\\data\\triples\\nasa\\木星_triples.json",
+    "F:\\知识表示与处理结课作业\\第二次托洛洛测试 -重大进展\\data\\triples\\nasa\\海王星_triples.json",
+    "F:\\知识表示与处理结课作业\\第二次托洛洛测试 -重大进展\\data\\triples\\nasa\\火卫一_triples.json",
+    "F:\\知识表示与处理结课作业\\第二次托洛洛测试 -重大进展\\data\\triples\\nasa\\火星_triples.json",
+    "F:\\知识表示与处理结课作业\\第二次托洛洛测试 -重大进展\\data\\triples\\nasa\\金星_triples.json"
   ],
   "narrative_files": [
-    "F:\\知识表示与处理结课作业\\第二次托洛洛测试 -重大进展\\data\\triples\\nasa\\火星_narratives.json"
+    "F:\\知识表示与处理结课作业\\第二次托洛洛测试 -重大进展\\data\\triples\\nasa\\土星_narratives.json",
+    "F:\\知识表示与处理结课作业\\第二次托洛洛测试 -重大进展\\data\\triples\\nasa\\地球_narratives.json",
+    "F:\\知识表示与处理结课作业\\第二次托洛洛测试 -重大进展\\data\\triples\\nasa\\天王星_narratives.json",
+    "F:\\知识表示与处理结课作业\\第二次托洛洛测试 -重大进展\\data\\triples\\nasa\\月球_narratives.json",
+    "F:\\知识表示与处理结课作业\\第二次托洛洛测试 -重大进展\\data\\triples\\nasa\\木星_narratives.json",
+    "F:\\知识表示与处理结课作业\\第二次托洛洛测试 -重大进展\\data\\triples\\nasa\\海王星_narratives.json",
+    "F:\\知识表示与处理结课作业\\第二次托洛洛测试 -重大进展\\data\\triples\\nasa\\火卫一_narratives.json",
+    "F:\\知识表示与处理结课作业\\第二次托洛洛测试 -重大进展\\data\\triples\\nasa\\火星_narratives.json",
+    "F:\\知识表示与处理结课作业\\第二次托洛洛测试 -重大进展\\data\\triples\\nasa\\金星_narratives.json"
   ],
   "pipeline": {
-    "total_triples": 1,
-    "total_narratives": 1,
+    "total_triples": 28,
+    "total_narratives": 9,
     "summary_exists": true,
     "summary": {
-      "total_triples": 1,
-      "total_narratives": 1,
-      "total_files": 2,
-      "pipeline": "preprocess_v2",
-      "active_source": "zh_wikipedia",
-      "source_registry": {
-        "zh_wikipedia": "active",
-        "wikidata": "disabled",
-        "nasa": "disabled",
-        "esa": "disabled"
-      },
+      "total_triples": 28,
+      "total_narratives": 9,
+      "total_files": 9,
+      "pipeline": "nasa_source_adapter_v1",
       "source_schema_version": "nasa_shadow_ready_v1",
-      "time": "2026-06-28 11:40:25"
+      "materialization_mode": "offline_nasa_raw_pipeline_v1",
+      "mode": "offline",
+      "official_namespace_written": true,
+      "cutover_ready": false,
+      "time": "2026-06-28T04:31:35.532268+00:00"
     }
   },
   "metadata_contract": {
     "passed": true,
-    "checked_records": 2,
+    "checked_records": 37,
     "break_count": 0,
     "breaks": []
   },
@@ -56,9 +97,9 @@
     "reason": "nasa_shadow_does_not_enable_multisource_graph_fusion"
   },
   "chroma": {
-    "added_narratives": 1,
+    "added_narratives": 8,
     "stats": {
-      "total": 1,
+      "total": 8,
       "collections": [
         "astronomy_narratives_nasa"
       ]
@@ -85,12 +126,12 @@
     "narrative_result_count": 1,
     "narrative_results": [
       {
-        "content": "根据 NASA Mars Fact Sheet，火星大气非常稀薄，主要成分是二氧化碳，约占 95.32%，另含氮气约 2.7%、氩气约 1.6%，以及微量氧气、一氧化碳和水蒸气。\n稀薄的大气意味着火星表面气压远低于地球，保温能力较弱，也更容易受到太阳风和高能粒子的影响，因此常被描述为寒冷而干燥的环境。",
+        "content": "火星是太阳系中的第四颗行星。根据 NASA Mars Fact Sheet，火星质量约为 6.4171e23 kg，平均半径约为 3389.5 km。火星大气非常稀薄，主要成分是二氧化碳，另含氮气、氩气以及微量氧气和水蒸气，因此常被描述为寒冷而干燥的环境。",
         "score": 1.0,
         "page_title": "火星",
         "section": "大气",
-        "keywords": "根据,火星大气非常稀薄,主要成分是二氧化碳,约占,另含氮气约,氩气约,以及微量氧气,一氧化碳和水蒸气",
-        "chunk_id": "0d6b36e19d8d",
+        "keywords": "火星,NASA,大气,质量,半径",
+        "chunk_id": "nasa_火星_00",
         "source": "nasa",
         "source_name": "nasa",
         "source_title": "火星",
@@ -107,7 +148,13 @@
     "reason": "NASA is retained as shadow-only fact supplement; gate success is not active-source authorization"
   },
   "materialization": {
-    "timestamp_utc": "2026-06-28T03:40:36.412731+00:00",
+    "timestamp_utc": "2026-06-28T04:32:07.562963+00:00",
     "output_path": "F:\\知识表示与处理结课作业\\第二次托洛洛测试 -重大进展\\evaluation\\source_expansion\\nasa\\nasa_materialization_report.json"
+  },
+  "fetch": {
+    "requested_mode": "offline",
+    "effective_mode": "offline",
+    "status": "ok",
+    "error": ""
   }
 }

@@ -1,0 +1,15 @@
+{
+  "title": "海王星",
+  "category": "Planet",
+  "url": "https://nssdc.gsfc.nasa.gov/planetary/factsheet/neptunefact.html",
+  "html": "<div><p>海王星是最外侧的冰巨星之一。</p><table><tr><th>Field</th><th>Neptune</th></tr><tr><td>Mass (10^24 kg)</td><td>102.413</td></tr><tr><td>Mean radius (km)</td><td>24622</td></tr><tr><td>Atmospheric composition</td><td>Hydrogen; Helium; Methane</td></tr><tr><td>Distance from Sun (10^6 km)</td><td>4495.1</td></tr></table></div>",
+  "text": "海王星是太阳系外侧的冰巨星之一。根据 NASA Neptune Fact Sheet，海王星质量约为 1.02413e26 kg，平均半径约为 24622 km。海王星大气以氢、氦和甲烷为主，因此呈现深蓝色外观。",
+  "raw_text": "海王星是太阳系外侧的冰巨星之一。根据 NASA Neptune Fact Sheet，海王星质量约为 1.02413e26 kg，平均半径约为 24622 km。海王星大气以氢、氦和甲烷为主，因此呈现深蓝色外观。",
+  "source": "nasa",
+  "source_name": "nasa",
+  "source_role": "primary",
+  "schema_version": "nasa_shadow_ready_v1",
+  "origin": "html_fallback",
+  "fetch_source": "offline_fact_sheet_fixture",
+  "crawl_time": "2026-06-28 12:00:00"
+}

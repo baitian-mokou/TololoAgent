@@ -1,0 +1,23 @@
+[
+  {
+    "page_title": "SMART-1",
+    "section": "任务",
+    "content": "ESA smoke fixture 将 SMART-1 记录为围绕月球运行的任务样例，作为月球相关 smoke coverage 的最小补充。",
+    "keywords": [
+      "ESA",
+      "SMART-1",
+      "月球",
+      "任务"
+    ],
+    "chunk_index": 0,
+    "path": "任务",
+    "chunk_id": "esa_SMART-1_00",
+    "source": "esa",
+    "source_name": "esa",
+    "source_role": "primary",
+    "origin": "html_fallback",
+    "type": "embedding_chunk",
+    "schema_version": "esa_shadow_ready_v1",
+    "source_title": "SMART-1"
+  }
+]

@@ -1,0 +1,24 @@
+[
+  {
+    "section": "大气",
+    "content": "木星是太阳系最大的行星。根据 NASA Jupiter Fact Sheet，木星质量约为 1.8982e27 kg，平均半径约为 69911 km。木星大气主要由氢和氦组成，还含有甲烷与氨等微量成分。",
+    "keywords": [
+      "木星",
+      "NASA",
+      "大气",
+      "质量",
+      "半径"
+    ],
+    "page_title": "木星",
+    "chunk_index": 0,
+    "path": "大气",
+    "chunk_id": "nasa_木星_00",
+    "source": "nasa",
+    "source_name": "nasa",
+    "source_role": "primary",
+    "origin": "html_fallback",
+    "type": "embedding_chunk",
+    "schema_version": "nasa_shadow_ready_v1",
+    "source_title": "木星"
+  }
+]

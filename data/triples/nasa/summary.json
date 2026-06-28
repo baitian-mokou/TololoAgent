@@ -1,15 +1,12 @@
 {
-  "total_triples": 1,
-  "total_narratives": 1,
-  "total_files": 2,
-  "pipeline": "preprocess_v2",
-  "active_source": "zh_wikipedia",
-  "source_registry": {
-    "zh_wikipedia": "active",
-    "wikidata": "disabled",
-    "nasa": "disabled",
-    "esa": "disabled"
-  },
+  "total_triples": 28,
+  "total_narratives": 9,
+  "total_files": 9,
+  "pipeline": "nasa_source_adapter_v1",
   "source_schema_version": "nasa_shadow_ready_v1",
-  "time": "2026-06-28 11:40:25"
+  "materialization_mode": "offline_nasa_raw_pipeline_v1",
+  "mode": "offline",
+  "official_namespace_written": true,
+  "cutover_ready": false,
+  "time": "2026-06-28T04:31:35.532268+00:00"
 }

@@ -537,6 +537,13 @@ class LLMAgent:
         query_context = self._extract_query_context(query)
         source_filter = normalize_source_filter(source_filter, fallback_source=self.source_name)
         allow_active_source = ACTIVE_SOURCE in source_filter
+        if not allow_active_source:
+            fallback = self._search_local_triples(query, limit, query_context=query_context, source_filter=source_filter)
+            return {
+                "graph_only": [],
+                "final_result": fallback,
+                "final_source": "fallback",
+            }
         loader = self._get_neo4j_loader()
         if not loader or not loader.driver:
             fallback = self._search_local_triples(query, limit, query_context=query_context, source_filter=source_filter)

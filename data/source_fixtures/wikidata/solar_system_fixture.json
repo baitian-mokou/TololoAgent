@@ -37,6 +37,7 @@
       "triples": [
         {"relation": "ORBITS", "object": "太阳", "property_id": "P397"},
         {"relation": "PART_OF", "object": "太阳系", "property_id": "P361"},
+        {"relation": "LOCATED_IN", "object": "太阳系", "property_id": "P276"},
         {"relation": "HAS_MASS", "object": "4.8675e24 kg", "property_id": "P2067"},
         {"relation": "HAS_RADIUS", "object": "6051.8 km", "property_id": "P2120"},
         {"relation": "HAS_ATMOSPHERE", "object": "二氧化碳;氮气", "property_id": "P2067"}
@@ -51,6 +52,7 @@
       "triples": [
         {"relation": "ORBITS", "object": "太阳", "property_id": "P397"},
         {"relation": "PART_OF", "object": "太阳系", "property_id": "P361"},
+        {"relation": "LOCATED_IN", "object": "太阳系", "property_id": "P276"},
         {"relation": "HAS_MASS", "object": "5.97237e24 kg", "property_id": "P2067"},
         {"relation": "HAS_RADIUS", "object": "6371 km", "property_id": "P2120"},
         {"relation": "HAS_ATMOSPHERE", "object": "氮气;氧气;氩气", "property_id": "P2067"}
@@ -65,6 +67,7 @@
       "triples": [
         {"relation": "ORBITS", "object": "地球", "property_id": "P397"},
         {"relation": "PART_OF", "object": "地球系统", "property_id": "P361"},
+        {"relation": "LOCATED_IN", "object": "地球系统", "property_id": "P276"},
         {"relation": "HAS_MASS", "object": "7.342e22 kg", "property_id": "P2067"},
         {"relation": "HAS_RADIUS", "object": "1737.4 km", "property_id": "P2120"},
         {"relation": "HAS_ATMOSPHERE", "object": "极稀薄外逸层", "property_id": "P2067"}
@@ -79,6 +82,7 @@
       "triples": [
         {"relation": "ORBITS", "object": "太阳", "property_id": "P397"},
         {"relation": "PART_OF", "object": "太阳系", "property_id": "P361"},
+        {"relation": "LOCATED_IN", "object": "太阳系", "property_id": "P276"},
         {"relation": "HAS_MASS", "object": "6.4171e23 kg", "property_id": "P2067"},
         {"relation": "HAS_RADIUS", "object": "3389.5 km", "property_id": "P2120"},
         {"relation": "HAS_ATMOSPHERE", "object": "二氧化碳;氮气;氩气", "property_id": "P2067"}
@@ -93,6 +97,7 @@
       "triples": [
         {"relation": "ORBITS", "object": "火星", "property_id": "P397"},
         {"relation": "PART_OF", "object": "火星系统", "property_id": "P361"},
+        {"relation": "LOCATED_IN", "object": "火星系统", "property_id": "P276"},
         {"relation": "DISCOVERED_BY", "object": "阿萨夫·霍尔", "property_id": "P61"},
         {"relation": "HAS_MASS", "object": "1.0659e16 kg", "property_id": "P2067"},
         {"relation": "HAS_RADIUS", "object": "11.2667 km", "property_id": "P2120"}
@@ -121,6 +126,7 @@
       "triples": [
         {"relation": "ORBITS", "object": "太阳", "property_id": "P397"},
         {"relation": "PART_OF", "object": "太阳系", "property_id": "P361"},
+        {"relation": "LOCATED_IN", "object": "太阳系", "property_id": "P276"},
         {"relation": "HAS_MASS", "object": "1.8982e27 kg", "property_id": "P2067"},
         {"relation": "HAS_RADIUS", "object": "69911 km", "property_id": "P2120"},
         {"relation": "HAS_ATMOSPHERE", "object": "氢;氦;甲烷;氨", "property_id": "P2067"}
@@ -149,6 +155,7 @@
       "triples": [
         {"relation": "ORBITS", "object": "木星", "property_id": "P397"},
         {"relation": "PART_OF", "object": "木星系统", "property_id": "P361"},
+        {"relation": "LOCATED_IN", "object": "木星系统", "property_id": "P276"},
         {"relation": "DISCOVERED_BY", "object": "伽利略·伽利莱", "property_id": "P61"},
         {"relation": "HAS_MASS", "object": "4.7998e22 kg", "property_id": "P2067"},
         {"relation": "HAS_RADIUS", "object": "1560.8 km", "property_id": "P2120"}
@@ -177,6 +184,7 @@
       "triples": [
         {"relation": "ORBITS", "object": "木星", "property_id": "P397"},
         {"relation": "PART_OF", "object": "木星系统", "property_id": "P361"},
+        {"relation": "LOCATED_IN", "object": "木星系统", "property_id": "P276"},
         {"relation": "DISCOVERED_BY", "object": "伽利略·伽利莱", "property_id": "P61"},
         {"relation": "HAS_MASS", "object": "1.0759e23 kg", "property_id": "P2067"},
         {"relation": "HAS_RADIUS", "object": "2410.3 km", "property_id": "P2120"}
@@ -191,6 +199,7 @@
       "triples": [
         {"relation": "ORBITS", "object": "太阳", "property_id": "P397"},
         {"relation": "PART_OF", "object": "太阳系", "property_id": "P361"},
+        {"relation": "LOCATED_IN", "object": "太阳系", "property_id": "P276"},
         {"relation": "HAS_MASS", "object": "5.6834e26 kg", "property_id": "P2067"},
         {"relation": "HAS_RADIUS", "object": "58232 km", "property_id": "P2120"},
         {"relation": "HAS_ATMOSPHERE", "object": "氢;氦;甲烷", "property_id": "P2067"}
@@ -205,6 +214,7 @@
       "triples": [
         {"relation": "ORBITS", "object": "太阳", "property_id": "P397"},
         {"relation": "PART_OF", "object": "太阳系", "property_id": "P361"},
+        {"relation": "LOCATED_IN", "object": "太阳系", "property_id": "P276"},
         {"relation": "DISCOVERED_BY", "object": "威廉·赫歇尔", "property_id": "P61"},
         {"relation": "HAS_MASS", "object": "8.6810e25 kg", "property_id": "P2067"},
         {"relation": "HAS_RADIUS", "object": "25362 km", "property_id": "P2120"},
@@ -220,6 +230,7 @@
       "triples": [
         {"relation": "ORBITS", "object": "太阳", "property_id": "P397"},
         {"relation": "PART_OF", "object": "太阳系", "property_id": "P361"},
+        {"relation": "LOCATED_IN", "object": "太阳系", "property_id": "P276"},
         {"relation": "DISCOVERED_BY", "object": "约翰·伽勒", "property_id": "P61"},
         {"relation": "HAS_MASS", "object": "1.02413e26 kg", "property_id": "P2067"},
         {"relation": "HAS_RADIUS", "object": "24622 km", "property_id": "P2120"},

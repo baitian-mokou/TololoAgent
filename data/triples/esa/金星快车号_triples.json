@@ -1,0 +1,16 @@
+[
+  {
+    "subject": "金星快车号",
+    "relation": "ORBITS",
+    "object": "金星",
+    "pattern": "esa_smoke_fixture",
+    "raw": "ESA smoke fixture: Venus Express orbits Venus.",
+    "source": "esa",
+    "source_name": "esa",
+    "source_role": "primary",
+    "origin": "html_fallback",
+    "type": "triple_candidate",
+    "schema_version": "esa_shadow_ready_v1",
+    "source_title": "金星快车号"
+  }
+]

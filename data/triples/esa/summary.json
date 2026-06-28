@@ -1,12 +1,12 @@
 {
-  "total_triples": 1,
-  "total_narratives": 1,
-  "total_files": 1,
+  "total_triples": 3,
+  "total_narratives": 3,
+  "total_files": 3,
   "pipeline": "esa_source_adapter_v1",
   "source_schema_version": "esa_shadow_ready_v1",
   "materialization_mode": "offline_esa_smoke_fixture_v1",
   "mode": "offline",
   "official_namespace_written": true,
   "cutover_ready": false,
-  "time": "2026-06-28T03:40:47.513006+00:00"
+  "time": "2026-06-28T04:31:36.567825+00:00"
 }

@@ -52,7 +52,7 @@
     "F:\\知识表示与处理结课作业\\第二次托洛洛测试 -重大进展\\data\\triples\\wikidata\\金星_narratives.json"
   ],
   "pipeline": {
-    "total_triples": 93,
+    "total_triples": 104,
     "total_narratives": 18,
     "total_files": 18,
     "pipeline": "wikidata_source_adapter_v1",
@@ -61,20 +61,20 @@
     "mode": "offline",
     "official_namespace_written": true,
     "cutover_ready": false,
-    "time": "2026-06-28T03:39:58.339336+00:00"
+    "time": "2026-06-28T04:31:35.179470+00:00"
   },
   "metadata_contract": {
     "passed": true,
-    "checked_records": 111,
+    "checked_records": 122,
     "break_count": 0,
     "breaks": []
   },
   "graph": {
-    "loaded_nodes": 74,
-    "loaded_relationships": 84,
+    "loaded_nodes": 75,
+    "loaded_relationships": 96,
     "stats": {
-      "nodes": 271,
-      "rels": 406,
+      "nodes": 272,
+      "rels": 418,
       "labels": [
         "Planet",
         "Satellite",
@@ -260,6 +260,11 @@
             "property_id": "P361"
           },
           {
+            "relation": "LOCATED_IN",
+            "object": "太阳系",
+            "property_id": "P276"
+          },
+          {
             "relation": "HAS_MASS",
             "object": "4.8675e24 kg",
             "property_id": "P2067"
@@ -300,6 +305,11 @@
             "relation": "PART_OF",
             "object": "太阳系",
             "property_id": "P361"
+          },
+          {
+            "relation": "LOCATED_IN",
+            "object": "太阳系",
+            "property_id": "P276"
           },
           {
             "relation": "HAS_MASS",
@@ -344,6 +354,11 @@
             "property_id": "P361"
           },
           {
+            "relation": "LOCATED_IN",
+            "object": "地球系统",
+            "property_id": "P276"
+          },
+          {
             "relation": "HAS_MASS",
             "object": "7.342e22 kg",
             "property_id": "P2067"
@@ -382,7 +397,7 @@
     "reason": "shadow namespace is auditable; active-source cutover remains disabled"
   },
   "materialization": {
-    "timestamp_utc": "2026-06-28T03:40:12.695134+00:00",
+    "timestamp_utc": "2026-06-28T04:32:06.835233+00:00",
     "output_path": "F:\\知识表示与处理结课作业\\第二次托洛洛测试 -重大进展\\evaluation\\source_expansion\\wikidata\\wikidata_materialization_report.json"
   },
   "raw_copy_status": {

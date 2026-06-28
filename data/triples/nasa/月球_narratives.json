@@ -1,0 +1,24 @@
+[
+  {
+    "section": "轨道",
+    "content": "月球是地球的天然卫星。根据 NASA Moon Fact Sheet，月球质量约为 7.346e22 kg，平均半径约为 1737.4 km。月球拥有极稀薄的外逸层，常见成分包括氦、氩和钠。",
+    "keywords": [
+      "月球",
+      "NASA",
+      "卫星",
+      "质量",
+      "半径"
+    ],
+    "page_title": "月球",
+    "chunk_index": 0,
+    "path": "轨道",
+    "chunk_id": "nasa_月球_00",
+    "source": "nasa",
+    "source_name": "nasa",
+    "source_role": "primary",
+    "origin": "html_fallback",
+    "type": "embedding_chunk",
+    "schema_version": "nasa_shadow_ready_v1",
+    "source_title": "月球"
+  }
+]

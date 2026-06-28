@@ -30,6 +30,21 @@
     "source_title": "木卫二"
   },
   {
+    "relation": "LOCATED_IN",
+    "object": "木星系统",
+    "property_id": "P276",
+    "subject": "木卫二",
+    "pattern": "wikidata_adapter",
+    "raw": "wikidata adapter record: 木卫二 LOCATED_IN 木星系统",
+    "source": "wikidata",
+    "source_name": "wikidata",
+    "source_role": "primary",
+    "origin": "api",
+    "type": "triple_candidate",
+    "schema_version": "wikidata_shadow_ready_v1",
+    "source_title": "木卫二"
+  },
+  {
     "relation": "DISCOVERED_BY",
     "object": "伽利略·伽利莱",
     "property_id": "P61",

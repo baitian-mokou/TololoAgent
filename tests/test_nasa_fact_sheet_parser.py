@@ -1,6 +1,6 @@
 import unittest
 
-from src.source_adapters.nasa import parse_nasa_fact_sheet_candidates
+from src.source_adapters.nasa import NasaPipelineAdapter, parse_nasa_fact_sheet_candidates
 
 
 NASA_TABLE_FIXTURE = """
@@ -43,6 +43,25 @@ class NasaFactSheetParserTests(unittest.TestCase):
             self.assertEqual(fact["schema_version"], "nasa_shadow_ready_v1")
             self.assertIn("table_field", fact)
             self.assertIn("source_url", fact)
+
+    def test_offline_raw_record_keeps_numeric_facts_without_promoting_distance_to_orbits(self):
+        adapter = NasaPipelineAdapter(mode="dry-run")
+        record = adapter._record_from_offline_raw(
+            {
+                "title": "火星",
+                "url": "https://nssdc.gsfc.nasa.gov/planetary/factsheet/marsfact.html",
+                "html": NASA_TABLE_FIXTURE,
+                "text": "火星大气以二氧化碳为主。",
+                "raw_text": "火星大气以二氧化碳为主。",
+            },
+            "2026-01-01T00:00:00+00:00",
+        )
+
+        by_relation = {fact["relation"]: fact for fact in record["triples"]}
+        self.assertIn("HAS_MASS", by_relation)
+        self.assertIn("HAS_RADIUS", by_relation)
+        self.assertIn("HAS_ATMOSPHERE", by_relation)
+        self.assertNotIn("ORBITS", by_relation)
 
 
 if __name__ == "__main__":

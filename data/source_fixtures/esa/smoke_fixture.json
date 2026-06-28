@@ -22,6 +22,46 @@
           "keywords": ["ESA", "火星快车号", "火星", "任务"]
         }
       ]
+    },
+    {
+      "title": "金星快车号",
+      "triples": [
+        {
+          "subject": "金星快车号",
+          "relation": "ORBITS",
+          "object": "金星",
+          "pattern": "esa_smoke_fixture",
+          "raw": "ESA smoke fixture: Venus Express orbits Venus."
+        }
+      ],
+      "narratives": [
+        {
+          "page_title": "金星快车号",
+          "section": "任务",
+          "content": "ESA smoke fixture 将金星快车号记录为围绕金星运行的任务样例，用于验证单源检索下 ESA namespace 的最小覆盖。",
+          "keywords": ["ESA", "金星快车号", "金星", "任务"]
+        }
+      ]
+    },
+    {
+      "title": "SMART-1",
+      "triples": [
+        {
+          "subject": "SMART-1",
+          "relation": "ORBITS",
+          "object": "月球",
+          "pattern": "esa_smoke_fixture",
+          "raw": "ESA smoke fixture: SMART-1 orbits the Moon."
+        }
+      ],
+      "narratives": [
+        {
+          "page_title": "SMART-1",
+          "section": "任务",
+          "content": "ESA smoke fixture 将 SMART-1 记录为围绕月球运行的任务样例，作为月球相关 smoke coverage 的最小补充。",
+          "keywords": ["ESA", "SMART-1", "月球", "任务"]
+        }
+      ]
     }
   ]
 }

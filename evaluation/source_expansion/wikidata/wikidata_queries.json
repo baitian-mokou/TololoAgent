@@ -76,6 +76,66 @@
       "source_schema_version": "wikidata_shadow_ready_v1"
     },
     {
+      "id": "wikidata_structured_earth_located_in",
+      "category": "structured",
+      "query_kind": "structured",
+      "query": "地球位于哪里",
+      "expected_path": "fallback",
+      "allowed_final_sources": [
+        "fallback"
+      ],
+      "expected_top_k_hit": true,
+      "expected_result": {
+        "subject": "地球",
+        "relation": "LOCATED_IN",
+        "object": "太阳系"
+      },
+      "source_filter": [
+        "wikidata"
+      ],
+      "source_schema_version": "wikidata_shadow_ready_v1"
+    },
+    {
+      "id": "wikidata_structured_moon_located_in",
+      "category": "structured",
+      "query_kind": "structured",
+      "query": "月球位于哪里",
+      "expected_path": "fallback",
+      "allowed_final_sources": [
+        "fallback"
+      ],
+      "expected_top_k_hit": true,
+      "expected_result": {
+        "subject": "月球",
+        "relation": "LOCATED_IN",
+        "object": "地球系统"
+      },
+      "source_filter": [
+        "wikidata"
+      ],
+      "source_schema_version": "wikidata_shadow_ready_v1"
+    },
+    {
+      "id": "wikidata_structured_uranus_located_in",
+      "category": "structured",
+      "query_kind": "structured",
+      "query": "天王星位于哪里",
+      "expected_path": "fallback",
+      "allowed_final_sources": [
+        "fallback"
+      ],
+      "expected_top_k_hit": true,
+      "expected_result": {
+        "subject": "天王星",
+        "relation": "LOCATED_IN",
+        "object": "太阳系"
+      },
+      "source_filter": [
+        "wikidata"
+      ],
+      "source_schema_version": "wikidata_shadow_ready_v1"
+    },
+    {
       "id": "wikidata_structured_pluto_part_of",
       "category": "structured",
       "query_kind": "structured",
