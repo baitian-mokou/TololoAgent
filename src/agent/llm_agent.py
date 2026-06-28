@@ -45,6 +45,23 @@ class LLMAgent:
         "nasa": "NASA",
         "esa": "ESA",
     }
+    RELATION_AUTHORITY_ORDER = {
+        "HAS_RADIUS": ["nasa", "wikidata", "zh_wikipedia", "esa"],
+        "HAS_MASS": ["nasa", "wikidata", "zh_wikipedia", "esa"],
+        "HAS_ATMOSPHERE": ["nasa", "zh_wikipedia", "wikidata", "esa"],
+        "ORBITS": ["wikidata", "nasa", "zh_wikipedia", "esa"],
+        "PART_OF": ["wikidata", "zh_wikipedia", "nasa", "esa"],
+        "LOCATED_IN": ["wikidata", "zh_wikipedia", "esa", "nasa"],
+        "DISCOVERED_BY": ["wikidata", "zh_wikipedia", "nasa", "esa"],
+    }
+    INTENT_AUTHORITY_ORDER = {
+        "esa_mission": ["esa", "nasa", "wikidata", "zh_wikipedia"],
+        "narrative_explanation": ["zh_wikipedia", "nasa", "esa", "wikidata"],
+        "mixed_numeric_narrative": ["nasa", "wikidata", "zh_wikipedia", "esa"],
+        "numeric_fact": ["nasa", "wikidata", "zh_wikipedia", "esa"],
+        "structured_fact": ["wikidata", "nasa", "zh_wikipedia", "esa"],
+        "uncertain": ["nasa", "wikidata", "zh_wikipedia", "esa"],
+    }
 
     PLANET_LOCATION_MAP = {
         "水星": "太阳系",
@@ -755,6 +772,137 @@ class LLMAgent:
             flattened.extend(list(results_by_source.get(source_name, [])))
         return flattened
 
+    @classmethod
+    def _authority_order_for_intent(cls, intent: str) -> List[str]:
+        return list(cls.INTENT_AUTHORITY_ORDER.get(str(intent or "").strip(), cls.INTENT_AUTHORITY_ORDER["uncertain"]))
+
+    @classmethod
+    def _authority_order_for_relation(cls, relation: str, intent: str) -> List[str]:
+        return list(cls.RELATION_AUTHORITY_ORDER.get(str(relation or "").strip(), cls._authority_order_for_intent(intent)))
+
+    @staticmethod
+    def _authority_rank_map(order: List[str]) -> Dict[str, int]:
+        return {source_name: index for index, source_name in enumerate(order)}
+
+    @classmethod
+    def _sort_sources_by_authority(cls, sources: List[str], order: List[str]) -> List[str]:
+        rank_map = cls._authority_rank_map(order)
+        return sorted(
+            {str(source or "").strip() for source in sources if str(source or "").strip()},
+            key=lambda source_name: (rank_map.get(source_name, len(rank_map) + 1), source_name),
+        )
+
+    @classmethod
+    def _pick_authority_source(cls, sources: List[str], order: List[str]) -> str:
+        ranked = cls._sort_sources_by_authority(sources, order)
+        return ranked[0] if ranked else ""
+
+    @staticmethod
+    def _normalized_object_key(record: dict) -> str:
+        return normalize_to_simplified(str(record.get("object", "")).strip())
+
+    def _intent_authority_source(self, routing_trace: Dict[str, object], selected_sources: List[str]) -> str:
+        order = self._authority_order_for_intent(str(routing_trace.get("intent", "")))
+        return self._pick_authority_source(selected_sources, order)
+
+    def _group_graph_records(
+        self,
+        records: List[dict],
+        routing_trace: Dict[str, object],
+    ) -> tuple[List[dict], Dict[str, str], List[dict]]:
+        intent = str(routing_trace.get("intent", ""))
+        relation_groups: Dict[tuple, Dict[str, object]] = {}
+        for record in records:
+            subject = str(record.get("subject", "")).strip()
+            relation = str(record.get("relation", "")).strip()
+            source_name = str(record.get("source_name") or record.get("source") or "").strip()
+            object_key = self._normalized_object_key(record)
+            if not subject or not relation or not source_name or not object_key:
+                continue
+            group = relation_groups.setdefault((subject, relation), {"records_by_object": {}, "sources": []})
+            group["records_by_object"].setdefault(object_key, []).append(record)
+            group["sources"].append(source_name)
+
+        authority_by_relation: Dict[str, str] = {}
+        fused_records: List[dict] = []
+        conflicts: List[dict] = []
+
+        for (subject, relation), group in relation_groups.items():
+            order = self._authority_order_for_relation(relation, intent)
+            authority_source = self._pick_authority_source(group["sources"], order)
+            authority_by_relation[relation] = authority_source
+            rank_map = self._authority_rank_map(order)
+            records_by_object = group["records_by_object"]
+            conflicting = len(records_by_object) > 1
+            if conflicting:
+                conflicts.append({
+                    "subject": subject,
+                    "relation": relation,
+                    "authority_source": authority_source,
+                    "values": [
+                        {
+                            "object": str(entries[0].get("object", "")).strip(),
+                            "sources": self._sort_sources_by_authority(
+                                [item.get("source_name") or item.get("source") for item in entries],
+                                order,
+                            ),
+                        }
+                        for entries in records_by_object.values()
+                    ],
+                })
+
+            grouped_entries = []
+            for entries in records_by_object.values():
+                providers = self._sort_sources_by_authority(
+                    [item.get("source_name") or item.get("source") for item in entries],
+                    order,
+                )
+                best_source = providers[0]
+                best_record = next(
+                    item for item in entries
+                    if str(item.get("source_name") or item.get("source") or "").strip() == best_source
+                )
+                grouped_entries.append((rank_map.get(best_source, len(rank_map) + 1), best_record, providers))
+
+            grouped_entries.sort(key=lambda item: item[0])
+            next_rank = len(fused_records) + 1
+            for index, (_, best_record, providers) in enumerate(grouped_entries):
+                fused = dict(best_record)
+                fused["source"] = str(best_record.get("source_name") or best_record.get("source") or "")
+                fused["source_name"] = fused["source"]
+                fused["merged_sources"] = providers
+                fused["authority_source"] = authority_source
+                fused["is_authority_source"] = fused["source_name"] == authority_source
+                if conflicting:
+                    fused["conflict_group_id"] = f"{subject}:{relation}"
+                else:
+                    fused["conflict_group_id"] = ""
+                fused["rank"] = next_rank + index
+                fused_records.append(fused)
+
+        return fused_records, authority_by_relation, conflicts
+
+    def _sort_chroma_results(
+        self,
+        results: List[dict],
+        routing_trace: Dict[str, object],
+    ) -> List[dict]:
+        order = self._authority_order_for_intent(str(routing_trace.get("intent", "")))
+        rank_map = self._authority_rank_map(order)
+        sorted_results = sorted(
+            [dict(item) for item in results],
+            key=lambda item: (
+                rank_map.get(str(item.get("source_name") or item.get("source") or "").strip(), len(rank_map) + 1),
+                -(float(item.get("score", 0.0) or 0.0)),
+            ),
+        )
+        for index, item in enumerate(sorted_results, 1):
+            source_name = str(item.get("source_name") or item.get("source") or "").strip()
+            item["source"] = source_name
+            item["source_name"] = source_name
+            item["rank"] = index
+        return sorted_results
+
     def _detect_conflicts(self, records: List[dict]) -> List[dict]:
         grouped: Dict[tuple, Dict[str, List[str]]] = {}
         for record in records:
@@ -784,12 +932,14 @@ class LLMAgent:
         self,
         selected_sources: List[str],
         source_result_counts: Dict[str, Dict[str, int]],
+        authority_source: str = "",
     ) -> List[dict]:
         return [
             {
                 "source_name": source_name,
                 "neo4j_count": int(source_result_counts.get(source_name, {}).get("neo4j", 0)),
                 "chroma_count": int(source_result_counts.get(source_name, {}).get("chroma", 0)),
+                "is_authority_source": bool(authority_source) and source_name == authority_source,
             }
             for source_name in selected_sources
         ]
@@ -803,8 +953,8 @@ class LLMAgent:
         routing_trace: Dict[str, object],
     ) -> dict:
         selected_sources = list(routing_trace.get("selected_sources", []))
-        neo4j_results = self._flatten_results_by_source(neo4j_by_source, selected_sources)
-        chroma_results = self._flatten_results_by_source(chroma_by_source, selected_sources)
+        raw_neo4j_results = self._flatten_results_by_source(neo4j_by_source, selected_sources)
+        raw_chroma_results = self._flatten_results_by_source(chroma_by_source, selected_sources)
         source_result_counts = {
             source_name: {
                 "neo4j": len(neo4j_by_source.get(source_name, [])),
@@ -812,11 +962,22 @@ class LLMAgent:
             }
             for source_name in selected_sources
         }
-        conflicts = self._detect_conflicts(neo4j_results)
+        neo4j_results, authority_by_relation, conflicts = self._group_graph_records(raw_neo4j_results, routing_trace)
+        chroma_results = self._sort_chroma_results(raw_chroma_results, routing_trace)
+        authority_source = ""
+        if authority_by_relation:
+            authority_source = next(iter(authority_by_relation.values()))
+        if not authority_source:
+            authority_source = self._intent_authority_source(routing_trace, selected_sources)
+        for conflict in conflicts:
+            conflict["query"] = query
+            conflict["selected_sources"] = list(selected_sources)
+
         source_names = "、".join(self._source_display_name(source_name) for source_name in selected_sources)
-        answer_prompt = f"回答中保留来源标注。来源：{source_names}。"
+        authority_label = self._source_display_name(authority_source) if authority_source else "未判定"
+        answer_prompt = f"回答中保留来源标注。来源：{source_names}。权威优先源：{authority_label}。"
         if conflicts:
-            answer_prompt += " 如果数值或结构化事实有差异，请明确写出“来源存在差异”，不要静默覆盖。"
+            answer_prompt += " 如果数值或结构化事实有差异，请明确写出“不同来源存在差异”，不要静默覆盖。"
 
         return {
             "neo4j_results": neo4j_results,
@@ -828,10 +989,13 @@ class LLMAgent:
                 "routing_reason": str(routing_trace.get("routing_reason", "")),
                 "routing_trace": dict(routing_trace),
                 "source_result_counts": source_result_counts,
-                "fusion_mode": str(routing_trace.get("fusion_mode", "single_best")),
+                "fusion_mode": "peer_source_fusion",
+                "authority_policy_applied": True,
+                "authority_source": authority_source,
+                "authority_by_relation": authority_by_relation,
                 "conflict_detected": bool(conflicts),
                 "conflicts": conflicts,
-                "source_trace": self._build_source_trace(selected_sources, source_result_counts),
+                "source_trace": self._build_source_trace(selected_sources, source_result_counts, authority_source=authority_source),
             },
         }
 
@@ -852,9 +1016,12 @@ class LLMAgent:
             },
             "source_result_counts": counts,
             "fusion_mode": "single_source",
+            "authority_policy_applied": False,
+            "authority_source": source_name,
+            "authority_by_relation": {},
             "conflict_detected": False,
             "conflicts": [],
-            "source_trace": self._build_source_trace([source_name], counts),
+            "source_trace": self._build_source_trace([source_name], counts, authority_source=source_name),
         }
 
     def _decorate_auto_answer(self, answer: str, metadata: dict) -> str:
@@ -862,8 +1029,10 @@ class LLMAgent:
         if not text or text.startswith("[错误]"):
             return text
         lines = [text]
+        if metadata.get("authority_source"):
+            lines.append(f"权威优先源：{self._source_display_name(metadata.get('authority_source'))}")
         if metadata.get("conflict_detected"):
-            lines.append("来源存在差异，请结合各来源标注理解相关事实。")
+            lines.append("不同来源存在差异，请结合各来源标注理解相关事实。")
         lines.append(
             "来源：" + "、".join(self._source_display_name(source_name) for source_name in metadata.get("selected_sources", []))
         )

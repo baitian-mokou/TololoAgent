@@ -2332,6 +2332,8 @@ class AgentTab(BaseTab):
             self.neo4j_result.insert("end", f"selected_sources: {metadata.get('selected_sources', [])}\n")
             self.neo4j_result.insert("end", f"routing_reason: {metadata.get('routing_reason', '')}\n")
             self.neo4j_result.insert("end", f"fusion_mode: {metadata.get('fusion_mode', '')}\n")
+            self.neo4j_result.insert("end", f"authority_source: {metadata.get('authority_source', '')}\n")
+            self.neo4j_result.insert("end", f"authority_by_relation: {metadata.get('authority_by_relation', {})}\n")
             self.neo4j_result.insert("end", f"conflict_detected: {metadata.get('conflict_detected', False)}\n\n")
         if not records:
             self.neo4j_result.insert("end", self.i18n.t("agent_no_neo4j_result"))

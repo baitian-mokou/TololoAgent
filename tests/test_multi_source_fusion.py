@@ -39,11 +39,13 @@ class MultiSourceFusionTests(unittest.TestCase):
 
         self.assertIn(("nasa",), graph_calls)
         self.assertIn(("wikidata",), graph_calls)
+        self.assertIn(("zh_wikipedia",), graph_calls)
         self.assertIn(("nasa",), chroma_calls)
         self.assertIn("metadata", result)
         self.assertEqual(result["metadata"]["selected_sources"][0], "nasa")
         self.assertIn("source_trace", result["metadata"])
         self.assertEqual(result["metadata"]["source_result_counts"]["nasa"]["neo4j"], 1)
+        self.assertTrue(result["metadata"]["authority_policy_applied"])
 
     def test_auto_fusion_preserves_provenance_and_conflict_signal(self):
         agent = LLMAgent(source_name="auto")
@@ -83,12 +85,10 @@ class MultiSourceFusionTests(unittest.TestCase):
         )
 
         self.assertTrue(fused["metadata"]["conflict_detected"])
-        self.assertEqual(
-            {item["source_name"] for item in fused["neo4j_results"]},
-            {"nasa", "wikidata"},
-        )
+        self.assertEqual(fused["metadata"]["authority_by_relation"]["HAS_RADIUS"], "nasa")
+        self.assertEqual(fused["neo4j_results"][0]["source_name"], "nasa")
         self.assertIn("来源存在差异", fused["answer_prompt"])
-        self.assertEqual(fused["metadata"]["fusion_mode"], "multi_source_fusion")
+        self.assertEqual(fused["metadata"]["fusion_mode"], "peer_source_fusion")
 
 
 if __name__ == "__main__":

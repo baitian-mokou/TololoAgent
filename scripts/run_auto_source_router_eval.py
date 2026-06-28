@@ -21,18 +21,18 @@ REPORT_PATH = ROOT / "evaluation" / "auto_source_router_report.json"
 
 
 QUERY_SPECS = [
-    {"query": "火星质量是多少", "expected_sources": ["nasa", "wikidata"], "case": "numeric"},
-    {"query": "地球平均半径是多少", "expected_sources": ["nasa", "wikidata"], "case": "numeric"},
-    {"query": "金星大气成分是什么", "expected_sources": ["nasa", "wikidata"], "case": "numeric"},
-    {"query": "月球绕行什么", "expected_sources": ["wikidata"], "case": "structured"},
-    {"query": "木卫二属于什么系统", "expected_sources": ["wikidata"], "case": "structured"},
-    {"query": "冥王星位于哪里", "expected_sources": ["wikidata"], "case": "structured"},
-    {"query": "JUICE 探测任务研究什么", "expected_sources": ["esa"], "case": "esa"},
-    {"query": "Rosetta 探测器做了什么", "expected_sources": ["esa"], "case": "esa"},
-    {"query": "太阳为什么会发光", "expected_sources": ["zh_wikipedia"], "case": "narrative"},
-    {"query": "月球的形成历史是什么", "expected_sources": ["zh_wikipedia"], "case": "narrative"},
-    {"query": "火星质量是多少，为什么和地球不同", "expected_sources": ["zh_wikipedia", "wikidata", "nasa"], "case": "ambiguous"},
-    {"query": "火星半径是多少，不同来源为什么不一样", "expected_sources": ["zh_wikipedia", "wikidata", "nasa"], "case": "conflict"},
+    {"query": "火星质量是多少", "expected_sources": ["nasa", "wikidata", "zh_wikipedia", "esa"], "expected_authority_source": "nasa", "case": "numeric"},
+    {"query": "地球平均半径是多少", "expected_sources": ["nasa", "wikidata", "zh_wikipedia", "esa"], "expected_authority_source": "nasa", "case": "numeric"},
+    {"query": "金星大气成分是什么", "expected_sources": ["nasa", "wikidata", "zh_wikipedia", "esa"], "expected_authority_source": "nasa", "case": "numeric"},
+    {"query": "月球绕行什么", "expected_sources": ["wikidata", "nasa", "zh_wikipedia", "esa"], "expected_authority_source": "wikidata", "case": "structured"},
+    {"query": "木卫二属于什么系统", "expected_sources": ["wikidata", "nasa", "zh_wikipedia", "esa"], "expected_authority_source": "wikidata", "case": "structured"},
+    {"query": "冥王星位于哪里", "expected_sources": ["wikidata", "nasa", "zh_wikipedia", "esa"], "expected_authority_source": "wikidata", "case": "structured"},
+    {"query": "JUICE 探测任务研究什么", "expected_sources": ["esa", "nasa", "wikidata", "zh_wikipedia"], "expected_authority_source": "esa", "case": "esa"},
+    {"query": "Rosetta 探测器做了什么", "expected_sources": ["esa", "nasa", "wikidata", "zh_wikipedia"], "expected_authority_source": "esa", "case": "esa"},
+    {"query": "太阳为什么会发光", "expected_sources": ["zh_wikipedia", "nasa", "esa", "wikidata"], "expected_authority_source": "zh_wikipedia", "case": "narrative"},
+    {"query": "月球的形成历史是什么", "expected_sources": ["zh_wikipedia", "nasa", "esa", "wikidata"], "expected_authority_source": "zh_wikipedia", "case": "narrative"},
+    {"query": "火星质量是多少，为什么和地球不同", "expected_sources": ["nasa", "wikidata", "zh_wikipedia", "esa"], "expected_authority_source": "nasa", "case": "ambiguous"},
+    {"query": "火星半径是多少，不同来源为什么不一样", "expected_sources": ["nasa", "wikidata", "zh_wikipedia", "esa"], "expected_authority_source": "nasa", "case": "conflict"},
 ]
 
 
@@ -89,6 +89,7 @@ def evaluate() -> dict:
     cases = []
     passed_count = 0
     source_trace_missing_count = 0
+    authority_mismatch_count = 0
     silent_conflict_count = 0
 
     for spec in QUERY_SPECS:
@@ -109,6 +110,8 @@ def evaluate() -> dict:
         metadata = fused["metadata"]
         if not metadata.get("source_trace") or len(metadata["source_trace"]) != len(selected_sources):
             source_trace_missing_count += 1
+        if metadata.get("authority_source") != spec["expected_authority_source"]:
+            authority_mismatch_count += 1
         if spec["case"] == "conflict" and (
             not metadata.get("conflict_detected") or "来源存在差异" not in fused["answer_prompt"]
         ):
@@ -122,6 +125,7 @@ def evaluate() -> dict:
             "route_ok": route_ok,
             "routing_reason": routing_trace.get("routing_reason"),
             "fusion_mode": metadata.get("fusion_mode"),
+            "authority_source": metadata.get("authority_source"),
             "source_trace": metadata.get("source_trace"),
             "conflict_detected": metadata.get("conflict_detected"),
         })
@@ -135,6 +139,7 @@ def evaluate() -> dict:
     passed = (
         router_accuracy >= 0.80
         and source_trace_missing_count == 0
+        and authority_mismatch_count == 0
         and silent_conflict_count == 0
         and default_auto_enabled
     )
@@ -145,6 +150,7 @@ def evaluate() -> dict:
             "route_pass_count": passed_count,
             "router_accuracy": router_accuracy,
             "source_trace_missing_count": source_trace_missing_count,
+            "authority_mismatch_count": authority_mismatch_count,
             "silent_conflict_count": silent_conflict_count,
             "default_auto_enabled": default_auto_enabled,
         },
@@ -152,6 +158,7 @@ def evaluate() -> dict:
         "gates": {
             "router_accuracy": router_accuracy,
             "source_trace_missing_count": source_trace_missing_count,
+            "authority_mismatch_count": authority_mismatch_count,
             "silent_conflict_count": silent_conflict_count,
             "default_auto_enabled": default_auto_enabled,
             "passed": passed,

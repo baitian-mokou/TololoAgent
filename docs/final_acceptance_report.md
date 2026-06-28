@@ -1,6 +1,6 @@
 # Final Acceptance Report
 
-Generated at: `2026-06-28T14:45:19`
+Generated at: `2026-06-28T15:50:04`
 
 Overall status: `PASS`
 
@@ -8,13 +8,13 @@ Overall status: `PASS`
 
 | command | exit_code | passed | duration_seconds |
 | --- | ---: | --- | ---: |
-| `python scripts/run_auto_source_router_eval.py` | 0 | true | 0.36 |
-| `python -m unittest discover tests` | 0 | true | 12.546 |
-| `python scripts/run_single_source_retrieval_eval.py` | 0 | true | 79.066 |
-| `python scripts/run_source_expansion_eval.py --source wikidata` | 0 | true | 3.766 |
-| `python scripts/run_source_expansion_eval.py --source nasa` | 0 | true | 2.419 |
-| `python scripts/collect_eval_failures.py` | 0 | true | 0.18 |
-| `python scripts/smoke_default_source_boundary.py` | 0 | true | 24.534 |
+| `python scripts/run_auto_source_router_eval.py` | 0 | true | 0.351 |
+| `python -m unittest discover tests` | 0 | true | 12.428 |
+| `python scripts/run_single_source_retrieval_eval.py` | 0 | true | 98.331 |
+| `python scripts/run_source_expansion_eval.py --source wikidata` | 0 | true | 3.792 |
+| `python scripts/run_source_expansion_eval.py --source nasa` | 0 | true | 2.49 |
+| `python scripts/collect_eval_failures.py` | 0 | true | 0.187 |
+| `python scripts/smoke_default_source_boundary.py` | 0 | true | 25.115 |
 
 ## Auto Router
 
