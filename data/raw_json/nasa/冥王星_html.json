@@ -1,0 +1,15 @@
+{
+  "title": "冥王星",
+  "category": "Dwarf planet",
+  "url": "https://science.nasa.gov/dwarf-planets/pluto/facts/",
+  "html": "<div><table><tr><th>Field</th><th>冥王星</th></tr><tr><td>Mass (10^24 kg)</td><td>0.01303</td></tr><tr><td>Mean radius (km)</td><td>1188.3</td></tr><tr><td>Atmospheric composition</td><td>Nitrogen; Methane; Carbon monoxide</td></tr></table></div>",
+  "text": "冥王星绕太阳公转。NASA 对冥王星的资料常记录其质量约为 1.303e22 kg、平均半径约为 1188.3 km，并提到氮、甲烷和一氧化碳组成的稀薄大气。",
+  "raw_text": "冥王星绕太阳公转。NASA 对冥王星的资料常记录其质量约为 1.303e22 kg、平均半径约为 1188.3 km，并提到氮、甲烷和一氧化碳组成的稀薄大气。",
+  "source": "nasa",
+  "source_name": "nasa",
+  "source_role": "primary",
+  "schema_version": "nasa_shadow_ready_v1",
+  "origin": "html_fallback",
+  "fetch_source": "offline_fact_sheet_fixture",
+  "crawl_time": "2026-06-28 18:00:00"
+}

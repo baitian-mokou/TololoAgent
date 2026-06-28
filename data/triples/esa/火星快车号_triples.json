@@ -12,5 +12,33 @@
     "type": "triple_candidate",
     "schema_version": "esa_shadow_ready_v1",
     "source_title": "火星快车号"
+  },
+  {
+    "subject": "火星快车号",
+    "relation": "OPERATED_BY",
+    "object": "ESA",
+    "pattern": "esa_smoke_fixture",
+    "raw": "ESA operates Mars Express.",
+    "source": "esa",
+    "source_name": "esa",
+    "source_role": "primary",
+    "origin": "html_fallback",
+    "type": "triple_candidate",
+    "schema_version": "esa_shadow_ready_v1",
+    "source_title": "火星快车号"
+  },
+  {
+    "subject": "火星快车号",
+    "relation": "HAS_MISSION_TARGET",
+    "object": "火星",
+    "pattern": "esa_smoke_fixture",
+    "raw": "Mars Express targets Mars.",
+    "source": "esa",
+    "source_name": "esa",
+    "source_role": "primary",
+    "origin": "html_fallback",
+    "type": "triple_candidate",
+    "schema_version": "esa_shadow_ready_v1",
+    "source_title": "火星快车号"
   }
 ]

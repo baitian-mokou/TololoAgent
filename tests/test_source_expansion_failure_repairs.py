@@ -48,11 +48,15 @@ class SourceExpansionFailureRepairTests(unittest.TestCase):
 
         self.assertEqual(results, [])
 
-    def test_nasa_deimos_absent_query_does_not_match_phobos(self):
+    def test_nasa_deimos_query_hits_deimos_not_phobos(self):
         agent = LLMAgent(source_name="nasa")
         results = agent._search_local_triples("火卫二绕谁公转", limit=3, source_filter=["nasa"])
 
-        self.assertEqual(results, [])
+        self.assertTrue(results)
+        self.assertEqual(results[0]["subject"], "火卫二")
+        self.assertEqual(results[0]["relation"], "ORBITS")
+        self.assertEqual(results[0]["object"], "火星")
+        self.assertNotEqual(results[0]["subject"], "火卫一")
 
     def test_wikidata_earth_located_in_query_returns_solar_system(self):
         agent = LLMAgent(source_name="wikidata")

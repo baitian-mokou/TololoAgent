@@ -2,7 +2,7 @@
   {
     "page_title": "火星快车号",
     "section": "任务",
-    "content": "ESA smoke fixture 仅用于验证新增来源可以复用 SourceAdapter 物化流程；火星快车号被记录为围绕火星运行的任务样例。",
+    "content": "ESA fixture 将火星快车号记录为围绕火星运行的任务样例，并说明该任务由 ESA 运营、目标为火星。",
     "keywords": [
       "ESA",
       "火星快车号",

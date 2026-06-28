@@ -63,6 +63,23 @@ class NasaFactSheetParserTests(unittest.TestCase):
         self.assertIn("HAS_ATMOSPHERE", by_relation)
         self.assertNotIn("ORBITS", by_relation)
 
+    def test_offline_raw_satellite_record_infers_parent_system_for_added_moons(self):
+        adapter = NasaPipelineAdapter(mode="dry-run")
+        record = adapter._record_from_offline_raw(
+            {
+                "title": "土卫六",
+                "url": "https://science.nasa.gov/saturn/moons/titan/",
+                "text": "土卫六是土星的天然卫星。土卫六绕土星公转，并拥有以氮气为主的浓厚大气。",
+                "raw_text": "土卫六是土星的天然卫星。土卫六绕土星公转，并拥有以氮气为主的浓厚大气。",
+            },
+            "2026-01-01T00:00:00+00:00",
+        )
+
+        by_relation = {fact["relation"]: fact for fact in record["triples"]}
+        self.assertEqual(by_relation["ORBITS"]["object"], "土星")
+        self.assertEqual(by_relation["PART_OF"]["object"], "土星系统")
+        self.assertEqual(by_relation["HAS_ATMOSPHERE"]["object"], "CO2;N2;Ar")
+
 
 if __name__ == "__main__":
     unittest.main()

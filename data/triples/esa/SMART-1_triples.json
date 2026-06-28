@@ -12,5 +12,33 @@
     "type": "triple_candidate",
     "schema_version": "esa_shadow_ready_v1",
     "source_title": "SMART-1"
+  },
+  {
+    "subject": "SMART-1",
+    "relation": "OPERATED_BY",
+    "object": "ESA",
+    "pattern": "esa_smoke_fixture",
+    "raw": "ESA operates SMART-1.",
+    "source": "esa",
+    "source_name": "esa",
+    "source_role": "primary",
+    "origin": "html_fallback",
+    "type": "triple_candidate",
+    "schema_version": "esa_shadow_ready_v1",
+    "source_title": "SMART-1"
+  },
+  {
+    "subject": "SMART-1",
+    "relation": "HAS_MISSION_TARGET",
+    "object": "月球",
+    "pattern": "esa_smoke_fixture",
+    "raw": "SMART-1 targets the Moon.",
+    "source": "esa",
+    "source_name": "esa",
+    "source_role": "primary",
+    "origin": "html_fallback",
+    "type": "triple_candidate",
+    "schema_version": "esa_shadow_ready_v1",
+    "source_title": "SMART-1"
   }
 ]

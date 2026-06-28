@@ -38,8 +38,21 @@ SATELLITE_SYSTEM_MAP = {
     "土星": "土星系统",
     "天王星": "天王星系统",
     "海王星": "海王星系统",
+    "冥王星": "冥王星系统",
 }
-NATURAL_SATELLITES = {"月球", "火卫一", "火卫二", "木卫一", "木卫二", "木卫三", "木卫四"}
+NATURAL_SATELLITES = {
+    "月球",
+    "火卫一",
+    "火卫二",
+    "木卫一",
+    "木卫二",
+    "木卫三",
+    "木卫四",
+    "土卫六",
+    "土卫二",
+    "海卫一",
+    "冥卫一",
+}
 NASA_MARS_STRICT_TABLE_FALLBACK_HTML = """
 <table>
   <tr><th>Field</th><th>Mars</th></tr>

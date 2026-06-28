@@ -1,12 +1,12 @@
 {
-  "total_triples": 104,
-  "total_narratives": 18,
-  "total_files": 18,
+  "total_triples": 157,
+  "total_narratives": 26,
+  "total_files": 26,
   "pipeline": "wikidata_source_adapter_v1",
   "source_schema_version": "wikidata_shadow_ready_v1",
   "materialization_mode": "offline_wikidata_fixture_v1",
   "mode": "offline",
   "official_namespace_written": true,
   "cutover_ready": false,
-  "time": "2026-06-28T04:31:35.179470+00:00"
+  "time": "2026-06-28T06:01:05.668422+00:00"
 }

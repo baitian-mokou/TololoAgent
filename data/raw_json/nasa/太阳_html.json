@@ -1,0 +1,15 @@
+{
+  "title": "太阳",
+  "category": "Star",
+  "url": "https://science.nasa.gov/sun/facts/",
+  "html": "<div><table><tr><th>Field</th><th>太阳</th></tr><tr><td>Mass (10^24 kg)</td><td>1988500</td></tr><tr><td>Mean radius (km)</td><td>695700</td></tr><tr><td>Atmospheric composition</td><td>Hydrogen; Helium</td></tr></table></div>",
+  "text": "太阳是太阳系的中心恒星。NASA 资料常以氢和氦描述太阳的主要成分，并记录其质量约为 1.9885e30 kg、平均半径约为 695700 km。",
+  "raw_text": "太阳是太阳系的中心恒星。NASA 资料常以氢和氦描述太阳的主要成分，并记录其质量约为 1.9885e30 kg、平均半径约为 695700 km。",
+  "source": "nasa",
+  "source_name": "nasa",
+  "source_role": "primary",
+  "schema_version": "nasa_shadow_ready_v1",
+  "origin": "html_fallback",
+  "fetch_source": "offline_fact_sheet_fixture",
+  "crawl_time": "2026-06-28 18:00:00"
+}

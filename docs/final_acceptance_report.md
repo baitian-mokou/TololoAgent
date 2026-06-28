@@ -1,6 +1,6 @@
 # Final Acceptance Report
 
-Generated at: `2026-06-28T13:33:30`
+Generated at: `2026-06-28T14:15:27`
 
 Overall status: `PASS`
 
@@ -8,20 +8,20 @@ Overall status: `PASS`
 
 | command | exit_code | passed | duration_seconds |
 | --- | ---: | --- | ---: |
-| `python -m unittest discover tests` | 0 | true | 12.135 |
-| `python scripts/run_single_source_retrieval_eval.py` | 0 | true | 78.14 |
-| `python scripts/run_source_expansion_eval.py --source wikidata` | 0 | true | 2.12 |
-| `python scripts/run_source_expansion_eval.py --source nasa` | 0 | true | 1.305 |
-| `python scripts/collect_eval_failures.py` | 0 | true | 0.157 |
-| `python scripts/smoke_default_source_boundary.py` | 0 | true | 25.314 |
+| `python -m unittest discover tests` | 0 | true | 12.623 |
+| `python scripts/run_single_source_retrieval_eval.py` | 0 | true | 78.676 |
+| `python scripts/run_source_expansion_eval.py --source wikidata` | 0 | true | 3.845 |
+| `python scripts/run_source_expansion_eval.py --source nasa` | 0 | true | 2.453 |
+| `python scripts/collect_eval_failures.py` | 0 | true | 0.337 |
+| `python scripts/smoke_default_source_boundary.py` | 0 | true | 29.119 |
 
 ## Accuracy
 
 | report | exact_accuracy | pass count | break counts |
 | --- | ---: | ---: | --- |
 | `single_source_retrieval` | 1 | 31/31 | source_filter=0, metadata=0, inferred=0, explainability=0 |
-| `wikidata_source_expansion` | 1 | 27/27 | source_filter=0, metadata=0, inferred=0, explainability=0 |
-| `nasa_source_expansion` | 1 | 26/26 | source_filter=0, metadata=0, inferred=0, explainability=0 |
+| `wikidata_source_expansion` | 1 | 47/47 | source_filter=0, metadata=0, inferred=0, explainability=0 |
+| `nasa_source_expansion` | 1 | 42/42 | source_filter=0, metadata=0, inferred=0, explainability=0 |
 
 ## Final Counters
 

@@ -1,0 +1,23 @@
+[
+  {
+    "section": "大气",
+    "content": "木卫四是木星的天然卫星。木卫四绕木星公转，表面附近的大气极其稀薄，常提到二氧化碳和氧。",
+    "keywords": [
+      "木卫四",
+      "NASA",
+      "大气",
+      "卫星"
+    ],
+    "page_title": "木卫四",
+    "chunk_index": 0,
+    "path": "大气",
+    "chunk_id": "nasa_木卫四_00",
+    "source": "nasa",
+    "source_name": "nasa",
+    "source_role": "primary",
+    "origin": "html_fallback",
+    "type": "embedding_chunk",
+    "schema_version": "nasa_shadow_ready_v1",
+    "source_title": "木卫四"
+  }
+]

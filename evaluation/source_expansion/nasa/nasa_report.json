@@ -14,18 +14,18 @@
     "path": "F:\\知识表示与处理结课作业\\第二次托洛洛测试 -重大进展\\evaluation\\source_expansion\\nasa\\nasa_queries.json",
     "source_name": "nasa",
     "source_schema_version": "nasa_shadow_ready_v1",
-    "query_count": 26,
+    "query_count": 42,
     "load_error": null,
     "query_schema_versions_consistent": true
   },
   "summary": {
-    "total_queries": 26,
-    "exact_pass_count": 26,
+    "total_queries": 42,
+    "exact_pass_count": 42,
     "exact_accuracy": 1.0,
-    "top_k_hit_count": 20,
-    "top_k_hit_denominator": 20,
+    "top_k_hit_count": 39,
+    "top_k_hit_denominator": 39,
     "top_k_hit_rate": 1.0,
-    "path_selection_correct_count": 26,
+    "path_selection_correct_count": 42,
     "path_selection_correctness": 1.0,
     "graph_embedding_fallback_inconsistency_count": 0,
     "source_filter_failure_count": 0,
@@ -35,22 +35,22 @@
     "query_explainability_degraded_rate": 0.0,
     "category_breakdown": {
       "structured": {
-        "total": 6,
-        "exact_pass_count": 6,
-        "top_k_hit_count": 6,
+        "total": 21,
+        "exact_pass_count": 21,
+        "top_k_hit_count": 21,
         "query_explainability_degraded_count": 0,
         "failures": {}
       },
       "narrative": {
-        "total": 4,
-        "exact_pass_count": 4,
-        "top_k_hit_count": 4,
+        "total": 7,
+        "exact_pass_count": 7,
+        "top_k_hit_count": 7,
         "query_explainability_degraded_count": 0,
         "failures": {}
       },
       "negative": {
-        "total": 3,
-        "exact_pass_count": 3,
+        "total": 2,
+        "exact_pass_count": 2,
         "top_k_hit_count": 0,
         "query_explainability_degraded_count": 0,
         "failures": {}
@@ -91,9 +91,9 @@
         "failures": {}
       },
       "conflict_case": {
-        "total": 3,
-        "exact_pass_count": 3,
-        "top_k_hit_count": 1,
+        "total": 2,
+        "exact_pass_count": 2,
+        "top_k_hit_count": 2,
         "query_explainability_degraded_count": 0,
         "failures": {}
       }
@@ -101,9 +101,9 @@
   },
   "probes": {
     "graph_results_count": 0,
-    "narrative_results_count": 11,
-    "fallback_graph_count": 13,
-    "fallback_narrative_count": 11
+    "narrative_results_count": 15,
+    "fallback_graph_count": 30,
+    "fallback_narrative_count": 15
   },
   "gates": {
     "passed": true,
@@ -175,15 +175,15 @@
           "conflict_case"
         ],
         "actual": {
-          "structured": 6,
-          "narrative": 4,
-          "negative": 3,
+          "structured": 21,
+          "narrative": 7,
+          "negative": 2,
           "fallback": 2,
           "source_isolation": 2,
           "metadata_completeness": 2,
           "path_routing": 2,
           "unit_normalization": 2,
-          "conflict_case": 3
+          "conflict_case": 2
         },
         "passed": true
       }
@@ -266,6 +266,2612 @@
         "source_role": "primary",
         "origin": "html_fallback",
         "source_title": "火卫一",
+        "schema_version": "nasa_shadow_ready_v1"
+      },
+      "metadata_complete": true,
+      "source_filter_failed": false,
+      "inferred_boundary_break": false,
+      "fallback_exact_match": true,
+      "fallback_top_k_hit": true,
+      "consistency_match": true,
+      "failure_category": null,
+      "expected_failure_if_any": null
+    },
+    {
+      "id": "nasa_structured_mercury_mass",
+      "category": "structured",
+      "query_kind": "structured",
+      "query": "水星质量是多少",
+      "source_schema_version": "nasa_shadow_ready_v1",
+      "expected_path": "fallback",
+      "actual_path": "fallback",
+      "allowed_final_sources": [
+        "fallback"
+      ],
+      "expected_result": {
+        "subject": "水星",
+        "relation": "HAS_MASS",
+        "object": "3.301e23 kg"
+      },
+      "normalized_expected_value": "3.301e23kg",
+      "normalized_returned_value": "3.301e23 kg",
+      "returned_result": {
+        "subject": "水星",
+        "relation": "HAS_MASS",
+        "object": "3.301e23 kg",
+        "source": "nasa",
+        "source_name": "nasa",
+        "source_role": "primary",
+        "origin": "html_fallback",
+        "source_title": "水星",
+        "schema_version": "nasa_shadow_ready_v1"
+      },
+      "top_k_results": [
+        {
+          "subject": "水星",
+          "relation": "HAS_MASS",
+          "object": "3.301e23 kg",
+          "source": "nasa",
+          "source_name": "nasa",
+          "source_role": "primary",
+          "origin": "html_fallback",
+          "source_title": "水星",
+          "schema_version": "nasa_shadow_ready_v1"
+        }
+      ],
+      "graph_only_results": [],
+      "fallback_results": [
+        {
+          "subject": "水星",
+          "relation": "HAS_MASS",
+          "object": "3.301e23 kg",
+          "source": "nasa",
+          "source_name": "nasa",
+          "source_role": "primary",
+          "origin": "html_fallback",
+          "source_title": "水星",
+          "schema_version": "nasa_shadow_ready_v1"
+        }
+      ],
+      "exact_match": true,
+      "top_k_hit": true,
+      "expected_top_k_hit": true,
+      "top_k_expectation_met": true,
+      "path_correct": true,
+      "allowed_final_source_ok": true,
+      "pass": true,
+      "query_schema_ok": true,
+      "query_explainability_degraded": false,
+      "explainability_status": "ok",
+      "source_metadata": {
+        "subject": "水星",
+        "relation": "HAS_MASS",
+        "object": "3.301e23 kg",
+        "source": "nasa",
+        "source_name": "nasa",
+        "source_role": "primary",
+        "origin": "html_fallback",
+        "source_title": "水星",
+        "schema_version": "nasa_shadow_ready_v1"
+      },
+      "metadata_complete": true,
+      "source_filter_failed": false,
+      "inferred_boundary_break": false,
+      "fallback_exact_match": true,
+      "fallback_top_k_hit": true,
+      "consistency_match": true,
+      "failure_category": null,
+      "expected_failure_if_any": null
+    },
+    {
+      "id": "nasa_structured_mercury_radius",
+      "category": "structured",
+      "query_kind": "structured",
+      "query": "水星半径是多少",
+      "source_schema_version": "nasa_shadow_ready_v1",
+      "expected_path": "fallback",
+      "actual_path": "fallback",
+      "allowed_final_sources": [
+        "fallback"
+      ],
+      "expected_result": {
+        "subject": "水星",
+        "relation": "HAS_RADIUS",
+        "object": "2439.7 km"
+      },
+      "normalized_expected_value": "2439.7km",
+      "normalized_returned_value": "2439.7 km",
+      "returned_result": {
+        "subject": "水星",
+        "relation": "HAS_RADIUS",
+        "object": "2439.7 km",
+        "source": "nasa",
+        "source_name": "nasa",
+        "source_role": "primary",
+        "origin": "html_fallback",
+        "source_title": "水星",
+        "schema_version": "nasa_shadow_ready_v1"
+      },
+      "top_k_results": [
+        {
+          "subject": "水星",
+          "relation": "HAS_RADIUS",
+          "object": "2439.7 km",
+          "source": "nasa",
+          "source_name": "nasa",
+          "source_role": "primary",
+          "origin": "html_fallback",
+          "source_title": "水星",
+          "schema_version": "nasa_shadow_ready_v1"
+        }
+      ],
+      "graph_only_results": [],
+      "fallback_results": [
+        {
+          "subject": "水星",
+          "relation": "HAS_RADIUS",
+          "object": "2439.7 km",
+          "source": "nasa",
+          "source_name": "nasa",
+          "source_role": "primary",
+          "origin": "html_fallback",
+          "source_title": "水星",
+          "schema_version": "nasa_shadow_ready_v1"
+        }
+      ],
+      "exact_match": true,
+      "top_k_hit": true,
+      "expected_top_k_hit": true,
+      "top_k_expectation_met": true,
+      "path_correct": true,
+      "allowed_final_source_ok": true,
+      "pass": true,
+      "query_schema_ok": true,
+      "query_explainability_degraded": false,
+      "explainability_status": "ok",
+      "source_metadata": {
+        "subject": "水星",
+        "relation": "HAS_RADIUS",
+        "object": "2439.7 km",
+        "source": "nasa",
+        "source_name": "nasa",
+        "source_role": "primary",
+        "origin": "html_fallback",
+        "source_title": "水星",
+        "schema_version": "nasa_shadow_ready_v1"
+      },
+      "metadata_complete": true,
+      "source_filter_failed": false,
+      "inferred_boundary_break": false,
+      "fallback_exact_match": true,
+      "fallback_top_k_hit": true,
+      "consistency_match": true,
+      "failure_category": null,
+      "expected_failure_if_any": null
+    },
+    {
+      "id": "nasa_structured_deimos_orbits",
+      "category": "structured",
+      "query_kind": "structured",
+      "query": "火卫二绕谁公转",
+      "source_schema_version": "nasa_shadow_ready_v1",
+      "expected_path": "fallback",
+      "actual_path": "fallback",
+      "allowed_final_sources": [
+        "fallback"
+      ],
+      "expected_result": {
+        "subject": "火卫二",
+        "relation": "ORBITS",
+        "object": "火星"
+      },
+      "normalized_expected_value": null,
+      "normalized_returned_value": "火星",
+      "returned_result": {
+        "subject": "火卫二",
+        "relation": "ORBITS",
+        "object": "火星",
+        "source": "nasa",
+        "source_name": "nasa",
+        "source_role": "primary",
+        "origin": "html_fallback",
+        "source_title": "火卫二",
+        "schema_version": "nasa_shadow_ready_v1"
+      },
+      "top_k_results": [
+        {
+          "subject": "火卫二",
+          "relation": "ORBITS",
+          "object": "火星",
+          "source": "nasa",
+          "source_name": "nasa",
+          "source_role": "primary",
+          "origin": "html_fallback",
+          "source_title": "火卫二",
+          "schema_version": "nasa_shadow_ready_v1"
+        }
+      ],
+      "graph_only_results": [],
+      "fallback_results": [
+        {
+          "subject": "火卫二",
+          "relation": "ORBITS",
+          "object": "火星",
+          "source": "nasa",
+          "source_name": "nasa",
+          "source_role": "primary",
+          "origin": "html_fallback",
+          "source_title": "火卫二",
+          "schema_version": "nasa_shadow_ready_v1"
+        }
+      ],
+      "exact_match": true,
+      "top_k_hit": true,
+      "expected_top_k_hit": true,
+      "top_k_expectation_met": true,
+      "path_correct": true,
+      "allowed_final_source_ok": true,
+      "pass": true,
+      "query_schema_ok": true,
+      "query_explainability_degraded": false,
+      "explainability_status": "ok",
+      "source_metadata": {
+        "subject": "火卫二",
+        "relation": "ORBITS",
+        "object": "火星",
+        "source": "nasa",
+        "source_name": "nasa",
+        "source_role": "primary",
+        "origin": "html_fallback",
+        "source_title": "火卫二",
+        "schema_version": "nasa_shadow_ready_v1"
+      },
+      "metadata_complete": true,
+      "source_filter_failed": false,
+      "inferred_boundary_break": false,
+      "fallback_exact_match": true,
+      "fallback_top_k_hit": true,
+      "consistency_match": true,
+      "failure_category": null,
+      "expected_failure_if_any": null
+    },
+    {
+      "id": "nasa_structured_europa_radius",
+      "category": "structured",
+      "query_kind": "structured",
+      "query": "木卫二半径是多少",
+      "source_schema_version": "nasa_shadow_ready_v1",
+      "expected_path": "fallback",
+      "actual_path": "fallback",
+      "allowed_final_sources": [
+        "fallback"
+      ],
+      "expected_result": {
+        "subject": "木卫二",
+        "relation": "HAS_RADIUS",
+        "object": "1560.8 km"
+      },
+      "normalized_expected_value": "1560.8km",
+      "normalized_returned_value": "1560.8 km",
+      "returned_result": {
+        "subject": "木卫二",
+        "relation": "HAS_RADIUS",
+        "object": "1560.8 km",
+        "source": "nasa",
+        "source_name": "nasa",
+        "source_role": "primary",
+        "origin": "html_fallback",
+        "source_title": "木卫二",
+        "schema_version": "nasa_shadow_ready_v1"
+      },
+      "top_k_results": [
+        {
+          "subject": "木卫二",
+          "relation": "HAS_RADIUS",
+          "object": "1560.8 km",
+          "source": "nasa",
+          "source_name": "nasa",
+          "source_role": "primary",
+          "origin": "html_fallback",
+          "source_title": "木卫二",
+          "schema_version": "nasa_shadow_ready_v1"
+        }
+      ],
+      "graph_only_results": [],
+      "fallback_results": [
+        {
+          "subject": "木卫二",
+          "relation": "HAS_RADIUS",
+          "object": "1560.8 km",
+          "source": "nasa",
+          "source_name": "nasa",
+          "source_role": "primary",
+          "origin": "html_fallback",
+          "source_title": "木卫二",
+          "schema_version": "nasa_shadow_ready_v1"
+        }
+      ],
+      "exact_match": true,
+      "top_k_hit": true,
+      "expected_top_k_hit": true,
+      "top_k_expectation_met": true,
+      "path_correct": true,
+      "allowed_final_source_ok": true,
+      "pass": true,
+      "query_schema_ok": true,
+      "query_explainability_degraded": false,
+      "explainability_status": "ok",
+      "source_metadata": {
+        "subject": "木卫二",
+        "relation": "HAS_RADIUS",
+        "object": "1560.8 km",
+        "source": "nasa",
+        "source_name": "nasa",
+        "source_role": "primary",
+        "origin": "html_fallback",
+        "source_title": "木卫二",
+        "schema_version": "nasa_shadow_ready_v1"
+      },
+      "metadata_complete": true,
+      "source_filter_failed": false,
+      "inferred_boundary_break": false,
+      "fallback_exact_match": true,
+      "fallback_top_k_hit": true,
+      "consistency_match": true,
+      "failure_category": null,
+      "expected_failure_if_any": null
+    },
+    {
+      "id": "nasa_structured_callisto_mass",
+      "category": "structured",
+      "query_kind": "structured",
+      "query": "木卫四质量是多少",
+      "source_schema_version": "nasa_shadow_ready_v1",
+      "expected_path": "fallback",
+      "actual_path": "fallback",
+      "allowed_final_sources": [
+        "fallback"
+      ],
+      "expected_result": {
+        "subject": "木卫四",
+        "relation": "HAS_MASS",
+        "object": "1.0759e23 kg"
+      },
+      "normalized_expected_value": "1.0759e23kg",
+      "normalized_returned_value": "1.0759e23 kg",
+      "returned_result": {
+        "subject": "木卫四",
+        "relation": "HAS_MASS",
+        "object": "1.0759e23 kg",
+        "source": "nasa",
+        "source_name": "nasa",
+        "source_role": "primary",
+        "origin": "html_fallback",
+        "source_title": "木卫四",
+        "schema_version": "nasa_shadow_ready_v1"
+      },
+      "top_k_results": [
+        {
+          "subject": "木卫四",
+          "relation": "HAS_MASS",
+          "object": "1.0759e23 kg",
+          "source": "nasa",
+          "source_name": "nasa",
+          "source_role": "primary",
+          "origin": "html_fallback",
+          "source_title": "木卫四",
+          "schema_version": "nasa_shadow_ready_v1"
+        }
+      ],
+      "graph_only_results": [],
+      "fallback_results": [
+        {
+          "subject": "木卫四",
+          "relation": "HAS_MASS",
+          "object": "1.0759e23 kg",
+          "source": "nasa",
+          "source_name": "nasa",
+          "source_role": "primary",
+          "origin": "html_fallback",
+          "source_title": "木卫四",
+          "schema_version": "nasa_shadow_ready_v1"
+        }
+      ],
+      "exact_match": true,
+      "top_k_hit": true,
+      "expected_top_k_hit": true,
+      "top_k_expectation_met": true,
+      "path_correct": true,
+      "allowed_final_source_ok": true,
+      "pass": true,
+      "query_schema_ok": true,
+      "query_explainability_degraded": false,
+      "explainability_status": "ok",
+      "source_metadata": {
+        "subject": "木卫四",
+        "relation": "HAS_MASS",
+        "object": "1.0759e23 kg",
+        "source": "nasa",
+        "source_name": "nasa",
+        "source_role": "primary",
+        "origin": "html_fallback",
+        "source_title": "木卫四",
+        "schema_version": "nasa_shadow_ready_v1"
+      },
+      "metadata_complete": true,
+      "source_filter_failed": false,
+      "inferred_boundary_break": false,
+      "fallback_exact_match": true,
+      "fallback_top_k_hit": true,
+      "consistency_match": true,
+      "failure_category": null,
+      "expected_failure_if_any": null
+    },
+    {
+      "id": "nasa_structured_titan_part_of",
+      "category": "structured",
+      "query_kind": "structured",
+      "query": "土卫六属于哪里",
+      "source_schema_version": "nasa_shadow_ready_v1",
+      "expected_path": "fallback",
+      "actual_path": "fallback",
+      "allowed_final_sources": [
+        "fallback"
+      ],
+      "expected_result": {
+        "subject": "土卫六",
+        "relation": "PART_OF",
+        "object": "土星系统"
+      },
+      "normalized_expected_value": null,
+      "normalized_returned_value": "土星系统",
+      "returned_result": {
+        "subject": "土卫六",
+        "relation": "PART_OF",
+        "object": "土星系统",
+        "source": "nasa",
+        "source_name": "nasa",
+        "source_role": "primary",
+        "origin": "html_fallback",
+        "source_title": "土卫六",
+        "schema_version": "nasa_shadow_ready_v1"
+      },
+      "top_k_results": [
+        {
+          "subject": "土卫六",
+          "relation": "PART_OF",
+          "object": "土星系统",
+          "source": "nasa",
+          "source_name": "nasa",
+          "source_role": "primary",
+          "origin": "html_fallback",
+          "source_title": "土卫六",
+          "schema_version": "nasa_shadow_ready_v1"
+        }
+      ],
+      "graph_only_results": [],
+      "fallback_results": [
+        {
+          "subject": "土卫六",
+          "relation": "PART_OF",
+          "object": "土星系统",
+          "source": "nasa",
+          "source_name": "nasa",
+          "source_role": "primary",
+          "origin": "html_fallback",
+          "source_title": "土卫六",
+          "schema_version": "nasa_shadow_ready_v1"
+        }
+      ],
+      "exact_match": true,
+      "top_k_hit": true,
+      "expected_top_k_hit": true,
+      "top_k_expectation_met": true,
+      "path_correct": true,
+      "allowed_final_source_ok": true,
+      "pass": true,
+      "query_schema_ok": true,
+      "query_explainability_degraded": false,
+      "explainability_status": "ok",
+      "source_metadata": {
+        "subject": "土卫六",
+        "relation": "PART_OF",
+        "object": "土星系统",
+        "source": "nasa",
+        "source_name": "nasa",
+        "source_role": "primary",
+        "origin": "html_fallback",
+        "source_title": "土卫六",
+        "schema_version": "nasa_shadow_ready_v1"
+      },
+      "metadata_complete": true,
+      "source_filter_failed": false,
+      "inferred_boundary_break": false,
+      "fallback_exact_match": true,
+      "fallback_top_k_hit": true,
+      "consistency_match": true,
+      "failure_category": null,
+      "expected_failure_if_any": null
+    },
+    {
+      "id": "nasa_structured_enceladus_orbits",
+      "category": "structured",
+      "query_kind": "structured",
+      "query": "土卫二绕谁运行",
+      "source_schema_version": "nasa_shadow_ready_v1",
+      "expected_path": "fallback",
+      "actual_path": "fallback",
+      "allowed_final_sources": [
+        "fallback"
+      ],
+      "expected_result": {
+        "subject": "土卫二",
+        "relation": "ORBITS",
+        "object": "土星"
+      },
+      "normalized_expected_value": null,
+      "normalized_returned_value": "土星",
+      "returned_result": {
+        "subject": "土卫二",
+        "relation": "ORBITS",
+        "object": "土星",
+        "source": "nasa",
+        "source_name": "nasa",
+        "source_role": "primary",
+        "origin": "html_fallback",
+        "source_title": "土卫二",
+        "schema_version": "nasa_shadow_ready_v1"
+      },
+      "top_k_results": [
+        {
+          "subject": "土卫二",
+          "relation": "ORBITS",
+          "object": "土星",
+          "source": "nasa",
+          "source_name": "nasa",
+          "source_role": "primary",
+          "origin": "html_fallback",
+          "source_title": "土卫二",
+          "schema_version": "nasa_shadow_ready_v1"
+        }
+      ],
+      "graph_only_results": [],
+      "fallback_results": [
+        {
+          "subject": "土卫二",
+          "relation": "ORBITS",
+          "object": "土星",
+          "source": "nasa",
+          "source_name": "nasa",
+          "source_role": "primary",
+          "origin": "html_fallback",
+          "source_title": "土卫二",
+          "schema_version": "nasa_shadow_ready_v1"
+        }
+      ],
+      "exact_match": true,
+      "top_k_hit": true,
+      "expected_top_k_hit": true,
+      "top_k_expectation_met": true,
+      "path_correct": true,
+      "allowed_final_source_ok": true,
+      "pass": true,
+      "query_schema_ok": true,
+      "query_explainability_degraded": false,
+      "explainability_status": "ok",
+      "source_metadata": {
+        "subject": "土卫二",
+        "relation": "ORBITS",
+        "object": "土星",
+        "source": "nasa",
+        "source_name": "nasa",
+        "source_role": "primary",
+        "origin": "html_fallback",
+        "source_title": "土卫二",
+        "schema_version": "nasa_shadow_ready_v1"
+      },
+      "metadata_complete": true,
+      "source_filter_failed": false,
+      "inferred_boundary_break": false,
+      "fallback_exact_match": true,
+      "fallback_top_k_hit": true,
+      "consistency_match": true,
+      "failure_category": null,
+      "expected_failure_if_any": null
+    },
+    {
+      "id": "nasa_structured_triton_radius",
+      "category": "structured",
+      "query_kind": "structured",
+      "query": "海卫一半径是多少",
+      "source_schema_version": "nasa_shadow_ready_v1",
+      "expected_path": "fallback",
+      "actual_path": "fallback",
+      "allowed_final_sources": [
+        "fallback"
+      ],
+      "expected_result": {
+        "subject": "海卫一",
+        "relation": "HAS_RADIUS",
+        "object": "1353.4 km"
+      },
+      "normalized_expected_value": "1353.4km",
+      "normalized_returned_value": "1353.4 km",
+      "returned_result": {
+        "subject": "海卫一",
+        "relation": "HAS_RADIUS",
+        "object": "1353.4 km",
+        "source": "nasa",
+        "source_name": "nasa",
+        "source_role": "primary",
+        "origin": "html_fallback",
+        "source_title": "海卫一",
+        "schema_version": "nasa_shadow_ready_v1"
+      },
+      "top_k_results": [
+        {
+          "subject": "海卫一",
+          "relation": "HAS_RADIUS",
+          "object": "1353.4 km",
+          "source": "nasa",
+          "source_name": "nasa",
+          "source_role": "primary",
+          "origin": "html_fallback",
+          "source_title": "海卫一",
+          "schema_version": "nasa_shadow_ready_v1"
+        }
+      ],
+      "graph_only_results": [],
+      "fallback_results": [
+        {
+          "subject": "海卫一",
+          "relation": "HAS_RADIUS",
+          "object": "1353.4 km",
+          "source": "nasa",
+          "source_name": "nasa",
+          "source_role": "primary",
+          "origin": "html_fallback",
+          "source_title": "海卫一",
+          "schema_version": "nasa_shadow_ready_v1"
+        }
+      ],
+      "exact_match": true,
+      "top_k_hit": true,
+      "expected_top_k_hit": true,
+      "top_k_expectation_met": true,
+      "path_correct": true,
+      "allowed_final_source_ok": true,
+      "pass": true,
+      "query_schema_ok": true,
+      "query_explainability_degraded": false,
+      "explainability_status": "ok",
+      "source_metadata": {
+        "subject": "海卫一",
+        "relation": "HAS_RADIUS",
+        "object": "1353.4 km",
+        "source": "nasa",
+        "source_name": "nasa",
+        "source_role": "primary",
+        "origin": "html_fallback",
+        "source_title": "海卫一",
+        "schema_version": "nasa_shadow_ready_v1"
+      },
+      "metadata_complete": true,
+      "source_filter_failed": false,
+      "inferred_boundary_break": false,
+      "fallback_exact_match": true,
+      "fallback_top_k_hit": true,
+      "consistency_match": true,
+      "failure_category": null,
+      "expected_failure_if_any": null
+    },
+    {
+      "id": "nasa_structured_pluto_radius",
+      "category": "structured",
+      "query_kind": "structured",
+      "query": "冥王星半径是多少",
+      "source_schema_version": "nasa_shadow_ready_v1",
+      "expected_path": "fallback",
+      "actual_path": "fallback",
+      "allowed_final_sources": [
+        "fallback"
+      ],
+      "expected_result": {
+        "subject": "冥王星",
+        "relation": "HAS_RADIUS",
+        "object": "1188.3 km"
+      },
+      "normalized_expected_value": "1188.3km",
+      "normalized_returned_value": "1188.3 km",
+      "returned_result": {
+        "subject": "冥王星",
+        "relation": "HAS_RADIUS",
+        "object": "1188.3 km",
+        "source": "nasa",
+        "source_name": "nasa",
+        "source_role": "primary",
+        "origin": "html_fallback",
+        "source_title": "冥王星",
+        "schema_version": "nasa_shadow_ready_v1"
+      },
+      "top_k_results": [
+        {
+          "subject": "冥王星",
+          "relation": "HAS_RADIUS",
+          "object": "1188.3 km",
+          "source": "nasa",
+          "source_name": "nasa",
+          "source_role": "primary",
+          "origin": "html_fallback",
+          "source_title": "冥王星",
+          "schema_version": "nasa_shadow_ready_v1"
+        }
+      ],
+      "graph_only_results": [],
+      "fallback_results": [
+        {
+          "subject": "冥王星",
+          "relation": "HAS_RADIUS",
+          "object": "1188.3 km",
+          "source": "nasa",
+          "source_name": "nasa",
+          "source_role": "primary",
+          "origin": "html_fallback",
+          "source_title": "冥王星",
+          "schema_version": "nasa_shadow_ready_v1"
+        }
+      ],
+      "exact_match": true,
+      "top_k_hit": true,
+      "expected_top_k_hit": true,
+      "top_k_expectation_met": true,
+      "path_correct": true,
+      "allowed_final_source_ok": true,
+      "pass": true,
+      "query_schema_ok": true,
+      "query_explainability_degraded": false,
+      "explainability_status": "ok",
+      "source_metadata": {
+        "subject": "冥王星",
+        "relation": "HAS_RADIUS",
+        "object": "1188.3 km",
+        "source": "nasa",
+        "source_name": "nasa",
+        "source_role": "primary",
+        "origin": "html_fallback",
+        "source_title": "冥王星",
+        "schema_version": "nasa_shadow_ready_v1"
+      },
+      "metadata_complete": true,
+      "source_filter_failed": false,
+      "inferred_boundary_break": false,
+      "fallback_exact_match": true,
+      "fallback_top_k_hit": true,
+      "consistency_match": true,
+      "failure_category": null,
+      "expected_failure_if_any": null
+    },
+    {
+      "id": "nasa_structured_charon_orbits",
+      "category": "structured",
+      "query_kind": "structured",
+      "query": "冥卫一绕谁运行",
+      "source_schema_version": "nasa_shadow_ready_v1",
+      "expected_path": "fallback",
+      "actual_path": "fallback",
+      "allowed_final_sources": [
+        "fallback"
+      ],
+      "expected_result": {
+        "subject": "冥卫一",
+        "relation": "ORBITS",
+        "object": "冥王星"
+      },
+      "normalized_expected_value": null,
+      "normalized_returned_value": "冥王星",
+      "returned_result": {
+        "subject": "冥卫一",
+        "relation": "ORBITS",
+        "object": "冥王星",
+        "source": "nasa",
+        "source_name": "nasa",
+        "source_role": "primary",
+        "origin": "html_fallback",
+        "source_title": "冥卫一",
+        "schema_version": "nasa_shadow_ready_v1"
+      },
+      "top_k_results": [
+        {
+          "subject": "冥卫一",
+          "relation": "ORBITS",
+          "object": "冥王星",
+          "source": "nasa",
+          "source_name": "nasa",
+          "source_role": "primary",
+          "origin": "html_fallback",
+          "source_title": "冥卫一",
+          "schema_version": "nasa_shadow_ready_v1"
+        }
+      ],
+      "graph_only_results": [],
+      "fallback_results": [
+        {
+          "subject": "冥卫一",
+          "relation": "ORBITS",
+          "object": "冥王星",
+          "source": "nasa",
+          "source_name": "nasa",
+          "source_role": "primary",
+          "origin": "html_fallback",
+          "source_title": "冥卫一",
+          "schema_version": "nasa_shadow_ready_v1"
+        }
+      ],
+      "exact_match": true,
+      "top_k_hit": true,
+      "expected_top_k_hit": true,
+      "top_k_expectation_met": true,
+      "path_correct": true,
+      "allowed_final_source_ok": true,
+      "pass": true,
+      "query_schema_ok": true,
+      "query_explainability_degraded": false,
+      "explainability_status": "ok",
+      "source_metadata": {
+        "subject": "冥卫一",
+        "relation": "ORBITS",
+        "object": "冥王星",
+        "source": "nasa",
+        "source_name": "nasa",
+        "source_role": "primary",
+        "origin": "html_fallback",
+        "source_title": "冥卫一",
+        "schema_version": "nasa_shadow_ready_v1"
+      },
+      "metadata_complete": true,
+      "source_filter_failed": false,
+      "inferred_boundary_break": false,
+      "fallback_exact_match": true,
+      "fallback_top_k_hit": true,
+      "consistency_match": true,
+      "failure_category": null,
+      "expected_failure_if_any": null
+    },
+    {
+      "id": "nasa_narrative_mars_atmosphere",
+      "category": "narrative",
+      "query_kind": "narrative",
+      "query": "火星大气成分",
+      "source_schema_version": "nasa_shadow_ready_v1",
+      "expected_path": "fallback",
+      "actual_path": "fallback",
+      "allowed_final_sources": [
+        "fallback"
+      ],
+      "expected_result": {
+        "page_title": "火星",
+        "section_any_of": [
+          "大气"
+        ]
+      },
+      "expected_page_title": "火星",
+      "expected_section_any_of": [
+        "大气"
+      ],
+      "returned_result": {
+        "page_title": "火星",
+        "section": "大气",
+        "content": "火星是太阳系中的第四颗行星。根据 NASA Mars Fact Sheet，火星质量约为 6.4171e23 kg，平均半径约为 3389.5 km。火星大气非常稀薄，主要成分是二氧化碳，另含氮气、氩气以及微量氧气和水蒸气，因此常被描述为寒冷而干燥的环境。",
+        "score": 1.0,
+        "rank": 1,
+        "source": "nasa",
+        "source_name": "nasa",
+        "source_role": "primary",
+        "origin": "html_fallback",
+        "source_title": "火星",
+        "schema_version": "nasa_shadow_ready_v1"
+      },
+      "top_k_results": [
+        {
+          "page_title": "火星",
+          "section": "大气",
+          "content": "火星是太阳系中的第四颗行星。根据 NASA Mars Fact Sheet，火星质量约为 6.4171e23 kg，平均半径约为 3389.5 km。火星大气非常稀薄，主要成分是二氧化碳，另含氮气、氩气以及微量氧气和水蒸气，因此常被描述为寒冷而干燥的环境。",
+          "score": 1.0,
+          "rank": 1,
+          "source": "nasa",
+          "source_name": "nasa",
+          "source_role": "primary",
+          "origin": "html_fallback",
+          "source_title": "火星",
+          "schema_version": "nasa_shadow_ready_v1"
+        }
+      ],
+      "fallback_results": [
+        {
+          "page_title": "火星",
+          "section": "大气",
+          "content": "火星是太阳系中的第四颗行星。根据 NASA Mars Fact Sheet，火星质量约为 6.4171e23 kg，平均半径约为 3389.5 km。火星大气非常稀薄，主要成分是二氧化碳，另含氮气、氩气以及微量氧气和水蒸气，因此常被描述为寒冷而干燥的环境。",
+          "score": 1.0,
+          "rank": 1,
+          "source": "nasa",
+          "source_name": "nasa",
+          "source_role": "primary",
+          "origin": "html_fallback",
+          "source_title": "火星",
+          "schema_version": "nasa_shadow_ready_v1"
+        }
+      ],
+      "exact_match": true,
+      "top_k_hit": true,
+      "expected_top_k_hit": true,
+      "top_k_expectation_met": true,
+      "path_correct": true,
+      "allowed_final_source_ok": true,
+      "pass": true,
+      "query_schema_ok": true,
+      "query_explainability_degraded": false,
+      "explainability_status": "ok",
+      "source_metadata": {
+        "page_title": "火星",
+        "section": "大气",
+        "content": "火星是太阳系中的第四颗行星。根据 NASA Mars Fact Sheet，火星质量约为 6.4171e23 kg，平均半径约为 3389.5 km。火星大气非常稀薄，主要成分是二氧化碳，另含氮气、氩气以及微量氧气和水蒸气，因此常被描述为寒冷而干燥的环境。",
+        "score": 1.0,
+        "rank": 1,
+        "source": "nasa",
+        "source_name": "nasa",
+        "source_role": "primary",
+        "origin": "html_fallback",
+        "source_title": "火星",
+        "schema_version": "nasa_shadow_ready_v1"
+      },
+      "metadata_complete": true,
+      "source_filter_failed": false,
+      "inferred_boundary_break": false,
+      "fallback_exact_match": true,
+      "fallback_top_k_hit": true,
+      "consistency_match": true,
+      "failure_category": null,
+      "expected_failure_if_any": null
+    },
+    {
+      "id": "nasa_narrative_mercury_atmosphere",
+      "category": "narrative",
+      "query_kind": "narrative",
+      "query": "水星外逸层成分",
+      "source_schema_version": "nasa_shadow_ready_v1",
+      "expected_path": "fallback",
+      "actual_path": "fallback",
+      "allowed_final_sources": [
+        "fallback"
+      ],
+      "expected_result": {
+        "page_title": "水星",
+        "section_any_of": [
+          "轨道"
+        ]
+      },
+      "expected_page_title": "水星",
+      "expected_section_any_of": [
+        "轨道"
+      ],
+      "returned_result": {
+        "page_title": "水星",
+        "section": "轨道",
+        "content": "水星绕太阳公转。根据 NASA Mercury Fact Sheet，水星质量约为 3.301e23 kg，平均半径约为 2439.7 km，其稀薄外逸层常见成分包括氧、氢和氦。",
+        "score": 0.8777777777777778,
+        "rank": 1,
+        "source": "nasa",
+        "source_name": "nasa",
+        "source_role": "primary",
+        "origin": "html_fallback",
+        "source_title": "水星",
+        "schema_version": "nasa_shadow_ready_v1"
+      },
+      "top_k_results": [
+        {
+          "page_title": "水星",
+          "section": "轨道",
+          "content": "水星绕太阳公转。根据 NASA Mercury Fact Sheet，水星质量约为 3.301e23 kg，平均半径约为 2439.7 km，其稀薄外逸层常见成分包括氧、氢和氦。",
+          "score": 0.8777777777777778,
+          "rank": 1,
+          "source": "nasa",
+          "source_name": "nasa",
+          "source_role": "primary",
+          "origin": "html_fallback",
+          "source_title": "水星",
+          "schema_version": "nasa_shadow_ready_v1"
+        }
+      ],
+      "fallback_results": [
+        {
+          "page_title": "水星",
+          "section": "轨道",
+          "content": "水星绕太阳公转。根据 NASA Mercury Fact Sheet，水星质量约为 3.301e23 kg，平均半径约为 2439.7 km，其稀薄外逸层常见成分包括氧、氢和氦。",
+          "score": 0.8777777777777778,
+          "rank": 1,
+          "source": "nasa",
+          "source_name": "nasa",
+          "source_role": "primary",
+          "origin": "html_fallback",
+          "source_title": "水星",
+          "schema_version": "nasa_shadow_ready_v1"
+        }
+      ],
+      "exact_match": true,
+      "top_k_hit": true,
+      "expected_top_k_hit": true,
+      "top_k_expectation_met": true,
+      "path_correct": true,
+      "allowed_final_source_ok": true,
+      "pass": true,
+      "query_schema_ok": true,
+      "query_explainability_degraded": false,
+      "explainability_status": "ok",
+      "source_metadata": {
+        "page_title": "水星",
+        "section": "轨道",
+        "content": "水星绕太阳公转。根据 NASA Mercury Fact Sheet，水星质量约为 3.301e23 kg，平均半径约为 2439.7 km，其稀薄外逸层常见成分包括氧、氢和氦。",
+        "score": 0.8777777777777778,
+        "rank": 1,
+        "source": "nasa",
+        "source_name": "nasa",
+        "source_role": "primary",
+        "origin": "html_fallback",
+        "source_title": "水星",
+        "schema_version": "nasa_shadow_ready_v1"
+      },
+      "metadata_complete": true,
+      "source_filter_failed": false,
+      "inferred_boundary_break": false,
+      "fallback_exact_match": true,
+      "fallback_top_k_hit": true,
+      "consistency_match": true,
+      "failure_category": null,
+      "expected_failure_if_any": null
+    },
+    {
+      "id": "nasa_narrative_titan_atmosphere",
+      "category": "narrative",
+      "query_kind": "narrative",
+      "query": "土卫六大气成分",
+      "source_schema_version": "nasa_shadow_ready_v1",
+      "expected_path": "fallback",
+      "actual_path": "fallback",
+      "allowed_final_sources": [
+        "fallback"
+      ],
+      "expected_result": {
+        "page_title": "土卫六",
+        "section_any_of": [
+          "大气"
+        ]
+      },
+      "expected_page_title": "土卫六",
+      "expected_section_any_of": [
+        "大气"
+      ],
+      "returned_result": {
+        "page_title": "土卫六",
+        "section": "大气",
+        "content": "土卫六是土星的天然卫星。土卫六绕土星公转，并拥有以氮气为主、伴随甲烷的浓厚大气。",
+        "score": 1.0,
+        "rank": 1,
+        "source": "nasa",
+        "source_name": "nasa",
+        "source_role": "primary",
+        "origin": "html_fallback",
+        "source_title": "土卫六",
+        "schema_version": "nasa_shadow_ready_v1"
+      },
+      "top_k_results": [
+        {
+          "page_title": "土卫六",
+          "section": "大气",
+          "content": "土卫六是土星的天然卫星。土卫六绕土星公转，并拥有以氮气为主、伴随甲烷的浓厚大气。",
+          "score": 1.0,
+          "rank": 1,
+          "source": "nasa",
+          "source_name": "nasa",
+          "source_role": "primary",
+          "origin": "html_fallback",
+          "source_title": "土卫六",
+          "schema_version": "nasa_shadow_ready_v1"
+        }
+      ],
+      "fallback_results": [
+        {
+          "page_title": "土卫六",
+          "section": "大气",
+          "content": "土卫六是土星的天然卫星。土卫六绕土星公转，并拥有以氮气为主、伴随甲烷的浓厚大气。",
+          "score": 1.0,
+          "rank": 1,
+          "source": "nasa",
+          "source_name": "nasa",
+          "source_role": "primary",
+          "origin": "html_fallback",
+          "source_title": "土卫六",
+          "schema_version": "nasa_shadow_ready_v1"
+        }
+      ],
+      "exact_match": true,
+      "top_k_hit": true,
+      "expected_top_k_hit": true,
+      "top_k_expectation_met": true,
+      "path_correct": true,
+      "allowed_final_source_ok": true,
+      "pass": true,
+      "query_schema_ok": true,
+      "query_explainability_degraded": false,
+      "explainability_status": "ok",
+      "source_metadata": {
+        "page_title": "土卫六",
+        "section": "大气",
+        "content": "土卫六是土星的天然卫星。土卫六绕土星公转，并拥有以氮气为主、伴随甲烷的浓厚大气。",
+        "score": 1.0,
+        "rank": 1,
+        "source": "nasa",
+        "source_name": "nasa",
+        "source_role": "primary",
+        "origin": "html_fallback",
+        "source_title": "土卫六",
+        "schema_version": "nasa_shadow_ready_v1"
+      },
+      "metadata_complete": true,
+      "source_filter_failed": false,
+      "inferred_boundary_break": false,
+      "fallback_exact_match": true,
+      "fallback_top_k_hit": true,
+      "consistency_match": true,
+      "failure_category": null,
+      "expected_failure_if_any": null
+    },
+    {
+      "id": "nasa_narrative_triton_atmosphere",
+      "category": "narrative",
+      "query_kind": "narrative",
+      "query": "海卫一大气成分",
+      "source_schema_version": "nasa_shadow_ready_v1",
+      "expected_path": "fallback",
+      "actual_path": "fallback",
+      "allowed_final_sources": [
+        "fallback"
+      ],
+      "expected_result": {
+        "page_title": "海卫一",
+        "section_any_of": [
+          "大气"
+        ]
+      },
+      "expected_page_title": "海卫一",
+      "expected_section_any_of": [
+        "大气"
+      ],
+      "returned_result": {
+        "page_title": "海卫一",
+        "section": "大气",
+        "content": "海卫一是海王星的天然卫星。海卫一绕海王星公转，并拥有以氮气为主、伴随甲烷的稀薄大气。",
+        "score": 1.0,
+        "rank": 1,
+        "source": "nasa",
+        "source_name": "nasa",
+        "source_role": "primary",
+        "origin": "html_fallback",
+        "source_title": "海卫一",
+        "schema_version": "nasa_shadow_ready_v1"
+      },
+      "top_k_results": [
+        {
+          "page_title": "海卫一",
+          "section": "大气",
+          "content": "海卫一是海王星的天然卫星。海卫一绕海王星公转，并拥有以氮气为主、伴随甲烷的稀薄大气。",
+          "score": 1.0,
+          "rank": 1,
+          "source": "nasa",
+          "source_name": "nasa",
+          "source_role": "primary",
+          "origin": "html_fallback",
+          "source_title": "海卫一",
+          "schema_version": "nasa_shadow_ready_v1"
+        }
+      ],
+      "fallback_results": [
+        {
+          "page_title": "海卫一",
+          "section": "大气",
+          "content": "海卫一是海王星的天然卫星。海卫一绕海王星公转，并拥有以氮气为主、伴随甲烷的稀薄大气。",
+          "score": 1.0,
+          "rank": 1,
+          "source": "nasa",
+          "source_name": "nasa",
+          "source_role": "primary",
+          "origin": "html_fallback",
+          "source_title": "海卫一",
+          "schema_version": "nasa_shadow_ready_v1"
+        }
+      ],
+      "exact_match": true,
+      "top_k_hit": true,
+      "expected_top_k_hit": true,
+      "top_k_expectation_met": true,
+      "path_correct": true,
+      "allowed_final_source_ok": true,
+      "pass": true,
+      "query_schema_ok": true,
+      "query_explainability_degraded": false,
+      "explainability_status": "ok",
+      "source_metadata": {
+        "page_title": "海卫一",
+        "section": "大气",
+        "content": "海卫一是海王星的天然卫星。海卫一绕海王星公转，并拥有以氮气为主、伴随甲烷的稀薄大气。",
+        "score": 1.0,
+        "rank": 1,
+        "source": "nasa",
+        "source_name": "nasa",
+        "source_role": "primary",
+        "origin": "html_fallback",
+        "source_title": "海卫一",
+        "schema_version": "nasa_shadow_ready_v1"
+      },
+      "metadata_complete": true,
+      "source_filter_failed": false,
+      "inferred_boundary_break": false,
+      "fallback_exact_match": true,
+      "fallback_top_k_hit": true,
+      "consistency_match": true,
+      "failure_category": null,
+      "expected_failure_if_any": null
+    },
+    {
+      "id": "nasa_narrative_sun_summary",
+      "category": "narrative",
+      "query_kind": "narrative",
+      "query": "太阳主要成分",
+      "source_schema_version": "nasa_shadow_ready_v1",
+      "expected_path": "fallback",
+      "actual_path": "fallback",
+      "allowed_final_sources": [
+        "fallback"
+      ],
+      "expected_result": {
+        "page_title": "太阳",
+        "section_any_of": [
+          "概要"
+        ]
+      },
+      "expected_page_title": "太阳",
+      "expected_section_any_of": [
+        "概要"
+      ],
+      "returned_result": {
+        "page_title": "太阳",
+        "section": "概要",
+        "content": "太阳是太阳系的中心恒星。NASA 资料常以氢和氦描述太阳的主要成分，并记录其质量约为 1.9885e30 kg、平均半径约为 695700 km。",
+        "score": 0.8777777777777778,
+        "rank": 1,
+        "source": "nasa",
+        "source_name": "nasa",
+        "source_role": "primary",
+        "origin": "html_fallback",
+        "source_title": "太阳",
+        "schema_version": "nasa_shadow_ready_v1"
+      },
+      "top_k_results": [
+        {
+          "page_title": "太阳",
+          "section": "概要",
+          "content": "太阳是太阳系的中心恒星。NASA 资料常以氢和氦描述太阳的主要成分，并记录其质量约为 1.9885e30 kg、平均半径约为 695700 km。",
+          "score": 0.8777777777777778,
+          "rank": 1,
+          "source": "nasa",
+          "source_name": "nasa",
+          "source_role": "primary",
+          "origin": "html_fallback",
+          "source_title": "太阳",
+          "schema_version": "nasa_shadow_ready_v1"
+        },
+        {
+          "page_title": "火星",
+          "section": "大气",
+          "content": "火星是太阳系中的第四颗行星。根据 NASA Mars Fact Sheet，火星质量约为 6.4171e23 kg，平均半径约为 3389.5 km。火星大气非常稀薄，主要成分是二氧化碳，另含氮气、氩气以及微量氧气和水蒸气，因此常被描述为寒冷而干燥的环境。",
+          "score": 0.45555555555555555,
+          "rank": 2,
+          "source": "nasa",
+          "source_name": "nasa",
+          "source_role": "primary",
+          "origin": "html_fallback",
+          "source_title": "火星",
+          "schema_version": "nasa_shadow_ready_v1"
+        },
+        {
+          "page_title": "地球",
+          "section": "大气",
+          "content": "地球是太阳系中的类地行星。根据 NASA Earth Fact Sheet，地球质量约为 5.9724e24 kg，平均半径约为 6371 km。地球大气主要由氮气、氧气和氩气组成，这也是地球适合生命存在的重要条件之一。",
+          "score": 0.3888888888888889,
+          "rank": 3,
+          "source": "nasa",
+          "source_name": "nasa",
+          "source_role": "primary",
+          "origin": "html_fallback",
+          "source_title": "地球",
+          "schema_version": "nasa_shadow_ready_v1"
+        }
+      ],
+      "fallback_results": [
+        {
+          "page_title": "太阳",
+          "section": "概要",
+          "content": "太阳是太阳系的中心恒星。NASA 资料常以氢和氦描述太阳的主要成分，并记录其质量约为 1.9885e30 kg、平均半径约为 695700 km。",
+          "score": 0.8777777777777778,
+          "rank": 1,
+          "source": "nasa",
+          "source_name": "nasa",
+          "source_role": "primary",
+          "origin": "html_fallback",
+          "source_title": "太阳",
+          "schema_version": "nasa_shadow_ready_v1"
+        },
+        {
+          "page_title": "火星",
+          "section": "大气",
+          "content": "火星是太阳系中的第四颗行星。根据 NASA Mars Fact Sheet，火星质量约为 6.4171e23 kg，平均半径约为 3389.5 km。火星大气非常稀薄，主要成分是二氧化碳，另含氮气、氩气以及微量氧气和水蒸气，因此常被描述为寒冷而干燥的环境。",
+          "score": 0.45555555555555555,
+          "rank": 2,
+          "source": "nasa",
+          "source_name": "nasa",
+          "source_role": "primary",
+          "origin": "html_fallback",
+          "source_title": "火星",
+          "schema_version": "nasa_shadow_ready_v1"
+        },
+        {
+          "page_title": "地球",
+          "section": "大气",
+          "content": "地球是太阳系中的类地行星。根据 NASA Earth Fact Sheet，地球质量约为 5.9724e24 kg，平均半径约为 6371 km。地球大气主要由氮气、氧气和氩气组成，这也是地球适合生命存在的重要条件之一。",
+          "score": 0.3888888888888889,
+          "rank": 3,
+          "source": "nasa",
+          "source_name": "nasa",
+          "source_role": "primary",
+          "origin": "html_fallback",
+          "source_title": "地球",
+          "schema_version": "nasa_shadow_ready_v1"
+        }
+      ],
+      "exact_match": true,
+      "top_k_hit": true,
+      "expected_top_k_hit": true,
+      "top_k_expectation_met": true,
+      "path_correct": true,
+      "allowed_final_source_ok": true,
+      "pass": true,
+      "query_schema_ok": true,
+      "query_explainability_degraded": false,
+      "explainability_status": "ok",
+      "source_metadata": {
+        "page_title": "太阳",
+        "section": "概要",
+        "content": "太阳是太阳系的中心恒星。NASA 资料常以氢和氦描述太阳的主要成分，并记录其质量约为 1.9885e30 kg、平均半径约为 695700 km。",
+        "score": 0.8777777777777778,
+        "rank": 1,
+        "source": "nasa",
+        "source_name": "nasa",
+        "source_role": "primary",
+        "origin": "html_fallback",
+        "source_title": "太阳",
+        "schema_version": "nasa_shadow_ready_v1"
+      },
+      "metadata_complete": true,
+      "source_filter_failed": false,
+      "inferred_boundary_break": false,
+      "fallback_exact_match": true,
+      "fallback_top_k_hit": true,
+      "consistency_match": true,
+      "failure_category": null,
+      "expected_failure_if_any": null
+    },
+    {
+      "id": "nasa_negative_unknown_saturn_moon",
+      "category": "negative",
+      "query_kind": "structured",
+      "query": "不存在的土星第八十八颗卫星绕谁运行",
+      "source_schema_version": "nasa_shadow_ready_v1",
+      "expected_path": "fallback",
+      "actual_path": "fallback",
+      "allowed_final_sources": [
+        "fallback"
+      ],
+      "expected_result": {
+        "empty": true
+      },
+      "normalized_expected_value": null,
+      "normalized_returned_value": null,
+      "returned_result": null,
+      "top_k_results": [],
+      "graph_only_results": [],
+      "fallback_results": [],
+      "exact_match": true,
+      "top_k_hit": false,
+      "expected_top_k_hit": false,
+      "top_k_expectation_met": true,
+      "path_correct": true,
+      "allowed_final_source_ok": true,
+      "pass": true,
+      "query_schema_ok": true,
+      "query_explainability_degraded": false,
+      "explainability_status": "ok",
+      "source_metadata": null,
+      "metadata_complete": true,
+      "source_filter_failed": false,
+      "inferred_boundary_break": false,
+      "fallback_exact_match": true,
+      "fallback_top_k_hit": true,
+      "consistency_match": true,
+      "failure_category": null,
+      "expected_failure_if_any": null
+    },
+    {
+      "id": "nasa_negative_wikidata_only_absent",
+      "category": "negative",
+      "query_kind": "structured",
+      "query": "灶神星是谁发现的",
+      "source_schema_version": "nasa_shadow_ready_v1",
+      "expected_path": "fallback",
+      "actual_path": "fallback",
+      "allowed_final_sources": [
+        "fallback"
+      ],
+      "expected_result": {
+        "empty": true
+      },
+      "normalized_expected_value": null,
+      "normalized_returned_value": null,
+      "returned_result": null,
+      "top_k_results": [],
+      "graph_only_results": [],
+      "fallback_results": [],
+      "exact_match": true,
+      "top_k_hit": false,
+      "expected_top_k_hit": false,
+      "top_k_expectation_met": true,
+      "path_correct": true,
+      "allowed_final_source_ok": true,
+      "pass": true,
+      "query_schema_ok": true,
+      "query_explainability_degraded": false,
+      "explainability_status": "ok",
+      "source_metadata": null,
+      "metadata_complete": true,
+      "source_filter_failed": false,
+      "inferred_boundary_break": false,
+      "fallback_exact_match": true,
+      "fallback_top_k_hit": true,
+      "consistency_match": true,
+      "failure_category": null,
+      "expected_failure_if_any": null
+    },
+    {
+      "id": "nasa_fallback_local_graph",
+      "category": "fallback",
+      "query_kind": "structured",
+      "query": "火卫一是火星的卫星吗",
+      "source_schema_version": "nasa_shadow_ready_v1",
+      "expected_path": "fallback",
+      "actual_path": "fallback",
+      "allowed_final_sources": [
+        "fallback"
+      ],
+      "expected_result": {
+        "subject": "火卫一",
+        "relation": "ORBITS",
+        "object": "火星"
+      },
+      "normalized_expected_value": null,
+      "normalized_returned_value": "火星",
+      "returned_result": {
+        "subject": "火卫一",
+        "relation": "ORBITS",
+        "object": "火星",
+        "source": "nasa",
+        "source_name": "nasa",
+        "source_role": "primary",
+        "origin": "html_fallback",
+        "source_title": "火卫一",
+        "schema_version": "nasa_shadow_ready_v1"
+      },
+      "top_k_results": [
+        {
+          "subject": "火卫一",
+          "relation": "ORBITS",
+          "object": "火星",
+          "source": "nasa",
+          "source_name": "nasa",
+          "source_role": "primary",
+          "origin": "html_fallback",
+          "source_title": "火卫一",
+          "schema_version": "nasa_shadow_ready_v1"
+        },
+        {
+          "subject": "火卫一",
+          "relation": "PART_OF",
+          "object": "火星系统",
+          "source": "nasa",
+          "source_name": "nasa",
+          "source_role": "primary",
+          "origin": "html_fallback",
+          "source_title": "火卫一",
+          "schema_version": "nasa_shadow_ready_v1"
+        },
+        {
+          "subject": "火星",
+          "relation": "HAS_MASS",
+          "object": "6.4171e23 kg",
+          "source": "nasa",
+          "source_name": "nasa",
+          "source_role": "primary",
+          "origin": "html_fallback",
+          "source_title": "火星",
+          "schema_version": "nasa_shadow_ready_v1"
+        },
+        {
+          "subject": "火星",
+          "relation": "HAS_RADIUS",
+          "object": "3389.5 km",
+          "source": "nasa",
+          "source_name": "nasa",
+          "source_role": "primary",
+          "origin": "html_fallback",
+          "source_title": "火星",
+          "schema_version": "nasa_shadow_ready_v1"
+        },
+        {
+          "subject": "火星",
+          "relation": "LOCATED_IN",
+          "object": "太阳系",
+          "source": "nasa",
+          "source_name": "nasa",
+          "source_role": "primary",
+          "origin": "html_fallback",
+          "source_title": "火星",
+          "schema_version": "nasa_shadow_ready_v1"
+        }
+      ],
+      "graph_only_results": [],
+      "fallback_results": [
+        {
+          "subject": "火卫一",
+          "relation": "ORBITS",
+          "object": "火星",
+          "source": "nasa",
+          "source_name": "nasa",
+          "source_role": "primary",
+          "origin": "html_fallback",
+          "source_title": "火卫一",
+          "schema_version": "nasa_shadow_ready_v1"
+        },
+        {
+          "subject": "火卫一",
+          "relation": "PART_OF",
+          "object": "火星系统",
+          "source": "nasa",
+          "source_name": "nasa",
+          "source_role": "primary",
+          "origin": "html_fallback",
+          "source_title": "火卫一",
+          "schema_version": "nasa_shadow_ready_v1"
+        },
+        {
+          "subject": "火星",
+          "relation": "HAS_MASS",
+          "object": "6.4171e23 kg",
+          "source": "nasa",
+          "source_name": "nasa",
+          "source_role": "primary",
+          "origin": "html_fallback",
+          "source_title": "火星",
+          "schema_version": "nasa_shadow_ready_v1"
+        },
+        {
+          "subject": "火星",
+          "relation": "HAS_RADIUS",
+          "object": "3389.5 km",
+          "source": "nasa",
+          "source_name": "nasa",
+          "source_role": "primary",
+          "origin": "html_fallback",
+          "source_title": "火星",
+          "schema_version": "nasa_shadow_ready_v1"
+        },
+        {
+          "subject": "火星",
+          "relation": "LOCATED_IN",
+          "object": "太阳系",
+          "source": "nasa",
+          "source_name": "nasa",
+          "source_role": "primary",
+          "origin": "html_fallback",
+          "source_title": "火星",
+          "schema_version": "nasa_shadow_ready_v1"
+        }
+      ],
+      "exact_match": true,
+      "top_k_hit": true,
+      "expected_top_k_hit": true,
+      "top_k_expectation_met": true,
+      "path_correct": true,
+      "allowed_final_source_ok": true,
+      "pass": true,
+      "query_schema_ok": true,
+      "query_explainability_degraded": false,
+      "explainability_status": "ok",
+      "source_metadata": {
+        "subject": "火卫一",
+        "relation": "ORBITS",
+        "object": "火星",
+        "source": "nasa",
+        "source_name": "nasa",
+        "source_role": "primary",
+        "origin": "html_fallback",
+        "source_title": "火卫一",
+        "schema_version": "nasa_shadow_ready_v1"
+      },
+      "metadata_complete": true,
+      "source_filter_failed": false,
+      "inferred_boundary_break": false,
+      "fallback_exact_match": true,
+      "fallback_top_k_hit": true,
+      "consistency_match": true,
+      "failure_category": null,
+      "expected_failure_if_any": null
+    },
+    {
+      "id": "nasa_fallback_local_narrative",
+      "category": "fallback",
+      "query_kind": "narrative",
+      "query": "NASA 土卫六大气",
+      "source_schema_version": "nasa_shadow_ready_v1",
+      "expected_path": "fallback",
+      "actual_path": "fallback",
+      "allowed_final_sources": [
+        "fallback"
+      ],
+      "expected_result": {
+        "page_title": "土卫六",
+        "section_any_of": [
+          "大气"
+        ]
+      },
+      "expected_page_title": "土卫六",
+      "expected_section_any_of": [
+        "大气"
+      ],
+      "returned_result": {
+        "page_title": "土卫六",
+        "section": "大气",
+        "content": "土卫六是土星的天然卫星。土卫六绕土星公转，并拥有以氮气为主、伴随甲烷的浓厚大气。",
+        "score": 1.0,
+        "rank": 1,
+        "source": "nasa",
+        "source_name": "nasa",
+        "source_role": "primary",
+        "origin": "html_fallback",
+        "source_title": "土卫六",
+        "schema_version": "nasa_shadow_ready_v1"
+      },
+      "top_k_results": [
+        {
+          "page_title": "土卫六",
+          "section": "大气",
+          "content": "土卫六是土星的天然卫星。土卫六绕土星公转，并拥有以氮气为主、伴随甲烷的浓厚大气。",
+          "score": 1.0,
+          "rank": 1,
+          "source": "nasa",
+          "source_name": "nasa",
+          "source_role": "primary",
+          "origin": "html_fallback",
+          "source_title": "土卫六",
+          "schema_version": "nasa_shadow_ready_v1"
+        }
+      ],
+      "fallback_results": [
+        {
+          "page_title": "土卫六",
+          "section": "大气",
+          "content": "土卫六是土星的天然卫星。土卫六绕土星公转，并拥有以氮气为主、伴随甲烷的浓厚大气。",
+          "score": 1.0,
+          "rank": 1,
+          "source": "nasa",
+          "source_name": "nasa",
+          "source_role": "primary",
+          "origin": "html_fallback",
+          "source_title": "土卫六",
+          "schema_version": "nasa_shadow_ready_v1"
+        }
+      ],
+      "exact_match": true,
+      "top_k_hit": true,
+      "expected_top_k_hit": true,
+      "top_k_expectation_met": true,
+      "path_correct": true,
+      "allowed_final_source_ok": true,
+      "pass": true,
+      "query_schema_ok": true,
+      "query_explainability_degraded": false,
+      "explainability_status": "ok",
+      "source_metadata": {
+        "page_title": "土卫六",
+        "section": "大气",
+        "content": "土卫六是土星的天然卫星。土卫六绕土星公转，并拥有以氮气为主、伴随甲烷的浓厚大气。",
+        "score": 1.0,
+        "rank": 1,
+        "source": "nasa",
+        "source_name": "nasa",
+        "source_role": "primary",
+        "origin": "html_fallback",
+        "source_title": "土卫六",
+        "schema_version": "nasa_shadow_ready_v1"
+      },
+      "metadata_complete": true,
+      "source_filter_failed": false,
+      "inferred_boundary_break": false,
+      "fallback_exact_match": true,
+      "fallback_top_k_hit": true,
+      "consistency_match": true,
+      "failure_category": null,
+      "expected_failure_if_any": null
+    },
+    {
+      "id": "nasa_source_isolation_no_wikidata",
+      "category": "source_isolation",
+      "query_kind": "structured",
+      "query": "阋神星是谁发现的",
+      "source_schema_version": "nasa_shadow_ready_v1",
+      "expected_path": "fallback",
+      "actual_path": "fallback",
+      "allowed_final_sources": [
+        "fallback"
+      ],
+      "expected_result": {
+        "empty": true
+      },
+      "normalized_expected_value": null,
+      "normalized_returned_value": null,
+      "returned_result": null,
+      "top_k_results": [],
+      "graph_only_results": [],
+      "fallback_results": [],
+      "exact_match": true,
+      "top_k_hit": false,
+      "expected_top_k_hit": false,
+      "top_k_expectation_met": true,
+      "path_correct": true,
+      "allowed_final_source_ok": true,
+      "pass": true,
+      "query_schema_ok": true,
+      "query_explainability_degraded": false,
+      "explainability_status": "ok",
+      "source_metadata": null,
+      "metadata_complete": true,
+      "source_filter_failed": false,
+      "inferred_boundary_break": false,
+      "fallback_exact_match": true,
+      "fallback_top_k_hit": true,
+      "consistency_match": true,
+      "failure_category": null,
+      "expected_failure_if_any": null
+    },
+    {
+      "id": "nasa_source_isolation_titan",
+      "category": "source_isolation",
+      "query_kind": "narrative",
+      "query": "土卫六 NASA 大气说明",
+      "source_schema_version": "nasa_shadow_ready_v1",
+      "expected_path": "fallback",
+      "actual_path": "fallback",
+      "allowed_final_sources": [
+        "fallback"
+      ],
+      "expected_result": {
+        "page_title": "土卫六",
+        "section_any_of": [
+          "大气"
+        ]
+      },
+      "expected_page_title": "土卫六",
+      "expected_section_any_of": [
+        "大气"
+      ],
+      "returned_result": {
+        "page_title": "土卫六",
+        "section": "大气",
+        "content": "土卫六是土星的天然卫星。土卫六绕土星公转，并拥有以氮气为主、伴随甲烷的浓厚大气。",
+        "score": 1.0,
+        "rank": 1,
+        "source": "nasa",
+        "source_name": "nasa",
+        "source_role": "primary",
+        "origin": "html_fallback",
+        "source_title": "土卫六",
+        "schema_version": "nasa_shadow_ready_v1"
+      },
+      "top_k_results": [
+        {
+          "page_title": "土卫六",
+          "section": "大气",
+          "content": "土卫六是土星的天然卫星。土卫六绕土星公转，并拥有以氮气为主、伴随甲烷的浓厚大气。",
+          "score": 1.0,
+          "rank": 1,
+          "source": "nasa",
+          "source_name": "nasa",
+          "source_role": "primary",
+          "origin": "html_fallback",
+          "source_title": "土卫六",
+          "schema_version": "nasa_shadow_ready_v1"
+        }
+      ],
+      "fallback_results": [
+        {
+          "page_title": "土卫六",
+          "section": "大气",
+          "content": "土卫六是土星的天然卫星。土卫六绕土星公转，并拥有以氮气为主、伴随甲烷的浓厚大气。",
+          "score": 1.0,
+          "rank": 1,
+          "source": "nasa",
+          "source_name": "nasa",
+          "source_role": "primary",
+          "origin": "html_fallback",
+          "source_title": "土卫六",
+          "schema_version": "nasa_shadow_ready_v1"
+        }
+      ],
+      "exact_match": true,
+      "top_k_hit": true,
+      "expected_top_k_hit": true,
+      "top_k_expectation_met": true,
+      "path_correct": true,
+      "allowed_final_source_ok": true,
+      "pass": true,
+      "query_schema_ok": true,
+      "query_explainability_degraded": false,
+      "explainability_status": "ok",
+      "source_metadata": {
+        "page_title": "土卫六",
+        "section": "大气",
+        "content": "土卫六是土星的天然卫星。土卫六绕土星公转，并拥有以氮气为主、伴随甲烷的浓厚大气。",
+        "score": 1.0,
+        "rank": 1,
+        "source": "nasa",
+        "source_name": "nasa",
+        "source_role": "primary",
+        "origin": "html_fallback",
+        "source_title": "土卫六",
+        "schema_version": "nasa_shadow_ready_v1"
+      },
+      "metadata_complete": true,
+      "source_filter_failed": false,
+      "inferred_boundary_break": false,
+      "fallback_exact_match": true,
+      "fallback_top_k_hit": true,
+      "consistency_match": true,
+      "failure_category": null,
+      "expected_failure_if_any": null
+    },
+    {
+      "id": "nasa_metadata_structured_schema",
+      "category": "metadata_completeness",
+      "query_kind": "structured",
+      "query": "冥卫一绕谁运行 metadata",
+      "source_schema_version": "nasa_shadow_ready_v1",
+      "expected_path": "fallback",
+      "actual_path": "fallback",
+      "allowed_final_sources": [
+        "fallback"
+      ],
+      "expected_result": {
+        "subject": "冥卫一",
+        "relation": "ORBITS",
+        "object": "冥王星"
+      },
+      "normalized_expected_value": null,
+      "normalized_returned_value": "冥王星",
+      "returned_result": {
+        "subject": "冥卫一",
+        "relation": "ORBITS",
+        "object": "冥王星",
+        "source": "nasa",
+        "source_name": "nasa",
+        "source_role": "primary",
+        "origin": "html_fallback",
+        "source_title": "冥卫一",
+        "schema_version": "nasa_shadow_ready_v1"
+      },
+      "top_k_results": [
+        {
+          "subject": "冥卫一",
+          "relation": "ORBITS",
+          "object": "冥王星",
+          "source": "nasa",
+          "source_name": "nasa",
+          "source_role": "primary",
+          "origin": "html_fallback",
+          "source_title": "冥卫一",
+          "schema_version": "nasa_shadow_ready_v1"
+        }
+      ],
+      "graph_only_results": [],
+      "fallback_results": [
+        {
+          "subject": "冥卫一",
+          "relation": "ORBITS",
+          "object": "冥王星",
+          "source": "nasa",
+          "source_name": "nasa",
+          "source_role": "primary",
+          "origin": "html_fallback",
+          "source_title": "冥卫一",
+          "schema_version": "nasa_shadow_ready_v1"
+        }
+      ],
+      "exact_match": true,
+      "top_k_hit": true,
+      "expected_top_k_hit": true,
+      "top_k_expectation_met": true,
+      "path_correct": true,
+      "allowed_final_source_ok": true,
+      "pass": true,
+      "query_schema_ok": true,
+      "query_explainability_degraded": false,
+      "explainability_status": "ok",
+      "source_metadata": {
+        "subject": "冥卫一",
+        "relation": "ORBITS",
+        "object": "冥王星",
+        "source": "nasa",
+        "source_name": "nasa",
+        "source_role": "primary",
+        "origin": "html_fallback",
+        "source_title": "冥卫一",
+        "schema_version": "nasa_shadow_ready_v1"
+      },
+      "metadata_complete": true,
+      "source_filter_failed": false,
+      "inferred_boundary_break": false,
+      "fallback_exact_match": true,
+      "fallback_top_k_hit": true,
+      "consistency_match": true,
+      "failure_category": null,
+      "expected_failure_if_any": null
+    },
+    {
+      "id": "nasa_metadata_narrative_schema",
+      "category": "metadata_completeness",
+      "query_kind": "narrative",
+      "query": "海卫一大气 schema version",
+      "source_schema_version": "nasa_shadow_ready_v1",
+      "expected_path": "fallback",
+      "actual_path": "fallback",
+      "allowed_final_sources": [
+        "fallback"
+      ],
+      "expected_result": {
+        "page_title": "海卫一",
+        "section_any_of": [
+          "大气"
+        ]
+      },
+      "expected_page_title": "海卫一",
+      "expected_section_any_of": [
+        "大气"
+      ],
+      "returned_result": {
+        "page_title": "海卫一",
+        "section": "大气",
+        "content": "海卫一是海王星的天然卫星。海卫一绕海王星公转，并拥有以氮气为主、伴随甲烷的稀薄大气。",
+        "score": 1.0,
+        "rank": 1,
+        "source": "nasa",
+        "source_name": "nasa",
+        "source_role": "primary",
+        "origin": "html_fallback",
+        "source_title": "海卫一",
+        "schema_version": "nasa_shadow_ready_v1"
+      },
+      "top_k_results": [
+        {
+          "page_title": "海卫一",
+          "section": "大气",
+          "content": "海卫一是海王星的天然卫星。海卫一绕海王星公转，并拥有以氮气为主、伴随甲烷的稀薄大气。",
+          "score": 1.0,
+          "rank": 1,
+          "source": "nasa",
+          "source_name": "nasa",
+          "source_role": "primary",
+          "origin": "html_fallback",
+          "source_title": "海卫一",
+          "schema_version": "nasa_shadow_ready_v1"
+        }
+      ],
+      "fallback_results": [
+        {
+          "page_title": "海卫一",
+          "section": "大气",
+          "content": "海卫一是海王星的天然卫星。海卫一绕海王星公转，并拥有以氮气为主、伴随甲烷的稀薄大气。",
+          "score": 1.0,
+          "rank": 1,
+          "source": "nasa",
+          "source_name": "nasa",
+          "source_role": "primary",
+          "origin": "html_fallback",
+          "source_title": "海卫一",
+          "schema_version": "nasa_shadow_ready_v1"
+        }
+      ],
+      "exact_match": true,
+      "top_k_hit": true,
+      "expected_top_k_hit": true,
+      "top_k_expectation_met": true,
+      "path_correct": true,
+      "allowed_final_source_ok": true,
+      "pass": true,
+      "query_schema_ok": true,
+      "query_explainability_degraded": false,
+      "explainability_status": "ok",
+      "source_metadata": {
+        "page_title": "海卫一",
+        "section": "大气",
+        "content": "海卫一是海王星的天然卫星。海卫一绕海王星公转，并拥有以氮气为主、伴随甲烷的稀薄大气。",
+        "score": 1.0,
+        "rank": 1,
+        "source": "nasa",
+        "source_name": "nasa",
+        "source_role": "primary",
+        "origin": "html_fallback",
+        "source_title": "海卫一",
+        "schema_version": "nasa_shadow_ready_v1"
+      },
+      "metadata_complete": true,
+      "source_filter_failed": false,
+      "inferred_boundary_break": false,
+      "fallback_exact_match": true,
+      "fallback_top_k_hit": true,
+      "consistency_match": true,
+      "failure_category": null,
+      "expected_failure_if_any": null
+    },
+    {
+      "id": "nasa_path_routing_structured",
+      "category": "path_routing",
+      "query_kind": "structured",
+      "query": "木卫四轨道主星",
+      "source_schema_version": "nasa_shadow_ready_v1",
+      "expected_path": "fallback",
+      "actual_path": "fallback",
+      "allowed_final_sources": [
+        "fallback"
+      ],
+      "expected_result": {
+        "subject": "木卫四",
+        "relation": "ORBITS",
+        "object": "木星"
+      },
+      "normalized_expected_value": null,
+      "normalized_returned_value": "木星",
+      "returned_result": {
+        "subject": "木卫四",
+        "relation": "ORBITS",
+        "object": "木星",
+        "source": "nasa",
+        "source_name": "nasa",
+        "source_role": "primary",
+        "origin": "html_fallback",
+        "source_title": "木卫四",
+        "schema_version": "nasa_shadow_ready_v1"
+      },
+      "top_k_results": [
+        {
+          "subject": "木卫四",
+          "relation": "ORBITS",
+          "object": "木星",
+          "source": "nasa",
+          "source_name": "nasa",
+          "source_role": "primary",
+          "origin": "html_fallback",
+          "source_title": "木卫四",
+          "schema_version": "nasa_shadow_ready_v1"
+        }
+      ],
+      "graph_only_results": [],
+      "fallback_results": [
+        {
+          "subject": "木卫四",
+          "relation": "ORBITS",
+          "object": "木星",
+          "source": "nasa",
+          "source_name": "nasa",
+          "source_role": "primary",
+          "origin": "html_fallback",
+          "source_title": "木卫四",
+          "schema_version": "nasa_shadow_ready_v1"
+        }
+      ],
+      "exact_match": true,
+      "top_k_hit": true,
+      "expected_top_k_hit": true,
+      "top_k_expectation_met": true,
+      "path_correct": true,
+      "allowed_final_source_ok": true,
+      "pass": true,
+      "query_schema_ok": true,
+      "query_explainability_degraded": false,
+      "explainability_status": "ok",
+      "source_metadata": {
+        "subject": "木卫四",
+        "relation": "ORBITS",
+        "object": "木星",
+        "source": "nasa",
+        "source_name": "nasa",
+        "source_role": "primary",
+        "origin": "html_fallback",
+        "source_title": "木卫四",
+        "schema_version": "nasa_shadow_ready_v1"
+      },
+      "metadata_complete": true,
+      "source_filter_failed": false,
+      "inferred_boundary_break": false,
+      "fallback_exact_match": true,
+      "fallback_top_k_hit": true,
+      "consistency_match": true,
+      "failure_category": null,
+      "expected_failure_if_any": null
+    },
+    {
+      "id": "nasa_path_routing_narrative",
+      "category": "path_routing",
+      "query_kind": "narrative",
+      "query": "冥王星稀薄大气说明",
+      "source_schema_version": "nasa_shadow_ready_v1",
+      "expected_path": "fallback",
+      "actual_path": "fallback",
+      "allowed_final_sources": [
+        "fallback"
+      ],
+      "expected_result": {
+        "page_title": "冥王星",
+        "section_any_of": [
+          "大气"
+        ]
+      },
+      "expected_page_title": "冥王星",
+      "expected_section_any_of": [
+        "大气"
+      ],
+      "returned_result": {
+        "page_title": "冥王星",
+        "section": "大气",
+        "content": "冥王星绕太阳公转。NASA 对冥王星的资料常记录其质量约为 1.303e22 kg、平均半径约为 1188.3 km，并提到氮、甲烷和一氧化碳组成的稀薄大气。",
+        "score": 1.0,
+        "rank": 1,
+        "source": "nasa",
+        "source_name": "nasa",
+        "source_role": "primary",
+        "origin": "html_fallback",
+        "source_title": "冥王星",
+        "schema_version": "nasa_shadow_ready_v1"
+      },
+      "top_k_results": [
+        {
+          "page_title": "冥王星",
+          "section": "大气",
+          "content": "冥王星绕太阳公转。NASA 对冥王星的资料常记录其质量约为 1.303e22 kg、平均半径约为 1188.3 km，并提到氮、甲烷和一氧化碳组成的稀薄大气。",
+          "score": 1.0,
+          "rank": 1,
+          "source": "nasa",
+          "source_name": "nasa",
+          "source_role": "primary",
+          "origin": "html_fallback",
+          "source_title": "冥王星",
+          "schema_version": "nasa_shadow_ready_v1"
+        }
+      ],
+      "fallback_results": [
+        {
+          "page_title": "冥王星",
+          "section": "大气",
+          "content": "冥王星绕太阳公转。NASA 对冥王星的资料常记录其质量约为 1.303e22 kg、平均半径约为 1188.3 km，并提到氮、甲烷和一氧化碳组成的稀薄大气。",
+          "score": 1.0,
+          "rank": 1,
+          "source": "nasa",
+          "source_name": "nasa",
+          "source_role": "primary",
+          "origin": "html_fallback",
+          "source_title": "冥王星",
+          "schema_version": "nasa_shadow_ready_v1"
+        }
+      ],
+      "exact_match": true,
+      "top_k_hit": true,
+      "expected_top_k_hit": true,
+      "top_k_expectation_met": true,
+      "path_correct": true,
+      "allowed_final_source_ok": true,
+      "pass": true,
+      "query_schema_ok": true,
+      "query_explainability_degraded": false,
+      "explainability_status": "ok",
+      "source_metadata": {
+        "page_title": "冥王星",
+        "section": "大气",
+        "content": "冥王星绕太阳公转。NASA 对冥王星的资料常记录其质量约为 1.303e22 kg、平均半径约为 1188.3 km，并提到氮、甲烷和一氧化碳组成的稀薄大气。",
+        "score": 1.0,
+        "rank": 1,
+        "source": "nasa",
+        "source_name": "nasa",
+        "source_role": "primary",
+        "origin": "html_fallback",
+        "source_title": "冥王星",
+        "schema_version": "nasa_shadow_ready_v1"
+      },
+      "metadata_complete": true,
+      "source_filter_failed": false,
+      "inferred_boundary_break": false,
+      "fallback_exact_match": true,
+      "fallback_top_k_hit": true,
+      "consistency_match": true,
+      "failure_category": null,
+      "expected_failure_if_any": null
+    },
+    {
+      "id": "nasa_unit_pluto_mass",
+      "category": "unit_normalization",
+      "query_kind": "structured",
+      "query": "冥王星的质量",
+      "source_schema_version": "nasa_shadow_ready_v1",
+      "expected_path": "fallback",
+      "actual_path": "fallback",
+      "allowed_final_sources": [
+        "fallback"
+      ],
+      "expected_result": {
+        "subject": "冥王星",
+        "relation": "HAS_MASS",
+        "object": "1.303e22 kg"
+      },
+      "normalized_expected_value": "1.303e22kg",
+      "normalized_returned_value": "1.303e22 kg",
+      "returned_result": {
+        "subject": "冥王星",
+        "relation": "HAS_MASS",
+        "object": "1.303e22 kg",
+        "source": "nasa",
+        "source_name": "nasa",
+        "source_role": "primary",
+        "origin": "html_fallback",
+        "source_title": "冥王星",
+        "schema_version": "nasa_shadow_ready_v1"
+      },
+      "top_k_results": [
+        {
+          "subject": "冥王星",
+          "relation": "HAS_MASS",
+          "object": "1.303e22 kg",
+          "source": "nasa",
+          "source_name": "nasa",
+          "source_role": "primary",
+          "origin": "html_fallback",
+          "source_title": "冥王星",
+          "schema_version": "nasa_shadow_ready_v1"
+        }
+      ],
+      "graph_only_results": [],
+      "fallback_results": [
+        {
+          "subject": "冥王星",
+          "relation": "HAS_MASS",
+          "object": "1.303e22 kg",
+          "source": "nasa",
+          "source_name": "nasa",
+          "source_role": "primary",
+          "origin": "html_fallback",
+          "source_title": "冥王星",
+          "schema_version": "nasa_shadow_ready_v1"
+        }
+      ],
+      "exact_match": true,
+      "top_k_hit": true,
+      "expected_top_k_hit": true,
+      "top_k_expectation_met": true,
+      "path_correct": true,
+      "allowed_final_source_ok": true,
+      "pass": true,
+      "query_schema_ok": true,
+      "query_explainability_degraded": false,
+      "explainability_status": "ok",
+      "source_metadata": {
+        "subject": "冥王星",
+        "relation": "HAS_MASS",
+        "object": "1.303e22 kg",
+        "source": "nasa",
+        "source_name": "nasa",
+        "source_role": "primary",
+        "origin": "html_fallback",
+        "source_title": "冥王星",
+        "schema_version": "nasa_shadow_ready_v1"
+      },
+      "metadata_complete": true,
+      "source_filter_failed": false,
+      "inferred_boundary_break": false,
+      "fallback_exact_match": true,
+      "fallback_top_k_hit": true,
+      "consistency_match": true,
+      "failure_category": null,
+      "expected_failure_if_any": null
+    },
+    {
+      "id": "nasa_unit_titan_radius",
+      "category": "unit_normalization",
+      "query_kind": "structured",
+      "query": "土卫六半径是多少",
+      "source_schema_version": "nasa_shadow_ready_v1",
+      "expected_path": "fallback",
+      "actual_path": "fallback",
+      "allowed_final_sources": [
+        "fallback"
+      ],
+      "expected_result": {
+        "subject": "土卫六",
+        "relation": "HAS_RADIUS",
+        "object": "2574.7 km"
+      },
+      "normalized_expected_value": "2574.7km",
+      "normalized_returned_value": "2574.7 km",
+      "returned_result": {
+        "subject": "土卫六",
+        "relation": "HAS_RADIUS",
+        "object": "2574.7 km",
+        "source": "nasa",
+        "source_name": "nasa",
+        "source_role": "primary",
+        "origin": "html_fallback",
+        "source_title": "土卫六",
+        "schema_version": "nasa_shadow_ready_v1"
+      },
+      "top_k_results": [
+        {
+          "subject": "土卫六",
+          "relation": "HAS_RADIUS",
+          "object": "2574.7 km",
+          "source": "nasa",
+          "source_name": "nasa",
+          "source_role": "primary",
+          "origin": "html_fallback",
+          "source_title": "土卫六",
+          "schema_version": "nasa_shadow_ready_v1"
+        }
+      ],
+      "graph_only_results": [],
+      "fallback_results": [
+        {
+          "subject": "土卫六",
+          "relation": "HAS_RADIUS",
+          "object": "2574.7 km",
+          "source": "nasa",
+          "source_name": "nasa",
+          "source_role": "primary",
+          "origin": "html_fallback",
+          "source_title": "土卫六",
+          "schema_version": "nasa_shadow_ready_v1"
+        }
+      ],
+      "exact_match": true,
+      "top_k_hit": true,
+      "expected_top_k_hit": true,
+      "top_k_expectation_met": true,
+      "path_correct": true,
+      "allowed_final_source_ok": true,
+      "pass": true,
+      "query_schema_ok": true,
+      "query_explainability_degraded": false,
+      "explainability_status": "ok",
+      "source_metadata": {
+        "subject": "土卫六",
+        "relation": "HAS_RADIUS",
+        "object": "2574.7 km",
+        "source": "nasa",
+        "source_name": "nasa",
+        "source_role": "primary",
+        "origin": "html_fallback",
+        "source_title": "土卫六",
+        "schema_version": "nasa_shadow_ready_v1"
+      },
+      "metadata_complete": true,
+      "source_filter_failed": false,
+      "inferred_boundary_break": false,
+      "fallback_exact_match": true,
+      "fallback_top_k_hit": true,
+      "consistency_match": true,
+      "failure_category": null,
+      "expected_failure_if_any": null
+    },
+    {
+      "id": "nasa_conflict_pluto_atmosphere",
+      "category": "conflict_case",
+      "query_kind": "narrative",
+      "query": "冥王星大气主要是氮气还是氧气",
+      "source_schema_version": "nasa_shadow_ready_v1",
+      "expected_path": "fallback",
+      "actual_path": "fallback",
+      "allowed_final_sources": [
+        "fallback"
+      ],
+      "expected_result": {
+        "page_title": "冥王星",
+        "section_any_of": [
+          "大气"
+        ]
+      },
+      "expected_page_title": "冥王星",
+      "expected_section_any_of": [
+        "大气"
+      ],
+      "returned_result": {
+        "page_title": "冥王星",
+        "section": "大气",
+        "content": "冥王星绕太阳公转。NASA 对冥王星的资料常记录其质量约为 1.303e22 kg、平均半径约为 1188.3 km，并提到氮、甲烷和一氧化碳组成的稀薄大气。",
+        "score": 1.0,
+        "rank": 1,
+        "source": "nasa",
+        "source_name": "nasa",
+        "source_role": "primary",
+        "origin": "html_fallback",
+        "source_title": "冥王星",
+        "schema_version": "nasa_shadow_ready_v1"
+      },
+      "top_k_results": [
+        {
+          "page_title": "冥王星",
+          "section": "大气",
+          "content": "冥王星绕太阳公转。NASA 对冥王星的资料常记录其质量约为 1.303e22 kg、平均半径约为 1188.3 km，并提到氮、甲烷和一氧化碳组成的稀薄大气。",
+          "score": 1.0,
+          "rank": 1,
+          "source": "nasa",
+          "source_name": "nasa",
+          "source_role": "primary",
+          "origin": "html_fallback",
+          "source_title": "冥王星",
+          "schema_version": "nasa_shadow_ready_v1"
+        }
+      ],
+      "fallback_results": [
+        {
+          "page_title": "冥王星",
+          "section": "大气",
+          "content": "冥王星绕太阳公转。NASA 对冥王星的资料常记录其质量约为 1.303e22 kg、平均半径约为 1188.3 km，并提到氮、甲烷和一氧化碳组成的稀薄大气。",
+          "score": 1.0,
+          "rank": 1,
+          "source": "nasa",
+          "source_name": "nasa",
+          "source_role": "primary",
+          "origin": "html_fallback",
+          "source_title": "冥王星",
+          "schema_version": "nasa_shadow_ready_v1"
+        }
+      ],
+      "exact_match": true,
+      "top_k_hit": true,
+      "expected_top_k_hit": true,
+      "top_k_expectation_met": true,
+      "path_correct": true,
+      "allowed_final_source_ok": true,
+      "pass": true,
+      "query_schema_ok": true,
+      "query_explainability_degraded": false,
+      "explainability_status": "ok",
+      "source_metadata": {
+        "page_title": "冥王星",
+        "section": "大气",
+        "content": "冥王星绕太阳公转。NASA 对冥王星的资料常记录其质量约为 1.303e22 kg、平均半径约为 1188.3 km，并提到氮、甲烷和一氧化碳组成的稀薄大气。",
+        "score": 1.0,
+        "rank": 1,
+        "source": "nasa",
+        "source_name": "nasa",
+        "source_role": "primary",
+        "origin": "html_fallback",
+        "source_title": "冥王星",
+        "schema_version": "nasa_shadow_ready_v1"
+      },
+      "metadata_complete": true,
+      "source_filter_failed": false,
+      "inferred_boundary_break": false,
+      "fallback_exact_match": true,
+      "fallback_top_k_hit": true,
+      "consistency_match": true,
+      "failure_category": null,
+      "expected_failure_if_any": null
+    },
+    {
+      "id": "nasa_conflict_titan_atmosphere",
+      "category": "conflict_case",
+      "query_kind": "narrative",
+      "query": "土卫六大气主要是氮气还是二氧化碳",
+      "source_schema_version": "nasa_shadow_ready_v1",
+      "expected_path": "fallback",
+      "actual_path": "fallback",
+      "allowed_final_sources": [
+        "fallback"
+      ],
+      "expected_result": {
+        "page_title": "土卫六",
+        "section_any_of": [
+          "大气"
+        ]
+      },
+      "expected_page_title": "土卫六",
+      "expected_section_any_of": [
+        "大气"
+      ],
+      "returned_result": {
+        "page_title": "土卫六",
+        "section": "大气",
+        "content": "土卫六是土星的天然卫星。土卫六绕土星公转，并拥有以氮气为主、伴随甲烷的浓厚大气。",
+        "score": 1.0,
+        "rank": 1,
+        "source": "nasa",
+        "source_name": "nasa",
+        "source_role": "primary",
+        "origin": "html_fallback",
+        "source_title": "土卫六",
+        "schema_version": "nasa_shadow_ready_v1"
+      },
+      "top_k_results": [
+        {
+          "page_title": "土卫六",
+          "section": "大气",
+          "content": "土卫六是土星的天然卫星。土卫六绕土星公转，并拥有以氮气为主、伴随甲烷的浓厚大气。",
+          "score": 1.0,
+          "rank": 1,
+          "source": "nasa",
+          "source_name": "nasa",
+          "source_role": "primary",
+          "origin": "html_fallback",
+          "source_title": "土卫六",
+          "schema_version": "nasa_shadow_ready_v1"
+        }
+      ],
+      "fallback_results": [
+        {
+          "page_title": "土卫六",
+          "section": "大气",
+          "content": "土卫六是土星的天然卫星。土卫六绕土星公转，并拥有以氮气为主、伴随甲烷的浓厚大气。",
+          "score": 1.0,
+          "rank": 1,
+          "source": "nasa",
+          "source_name": "nasa",
+          "source_role": "primary",
+          "origin": "html_fallback",
+          "source_title": "土卫六",
+          "schema_version": "nasa_shadow_ready_v1"
+        }
+      ],
+      "exact_match": true,
+      "top_k_hit": true,
+      "expected_top_k_hit": true,
+      "top_k_expectation_met": true,
+      "path_correct": true,
+      "allowed_final_source_ok": true,
+      "pass": true,
+      "query_schema_ok": true,
+      "query_explainability_degraded": false,
+      "explainability_status": "ok",
+      "source_metadata": {
+        "page_title": "土卫六",
+        "section": "大气",
+        "content": "土卫六是土星的天然卫星。土卫六绕土星公转，并拥有以氮气为主、伴随甲烷的浓厚大气。",
+        "score": 1.0,
+        "rank": 1,
+        "source": "nasa",
+        "source_name": "nasa",
+        "source_role": "primary",
+        "origin": "html_fallback",
+        "source_title": "土卫六",
         "schema_version": "nasa_shadow_ready_v1"
       },
       "metadata_complete": true,
@@ -708,10 +3314,10 @@
       "expected_failure_if_any": null
     },
     {
-      "id": "nasa_narrative_mars_atmosphere",
-      "category": "narrative",
-      "query_kind": "narrative",
-      "query": "火星大气成分",
+      "id": "nasa_structured_sun_radius",
+      "category": "structured",
+      "query_kind": "structured",
+      "query": "太阳半径是多少",
       "source_schema_version": "nasa_shadow_ready_v1",
       "expected_path": "fallback",
       "actual_path": "fallback",
@@ -719,543 +3325,47 @@
         "fallback"
       ],
       "expected_result": {
-        "page_title": "火星",
-        "section_any_of": [
-          "大气"
-        ]
+        "subject": "太阳",
+        "relation": "HAS_RADIUS",
+        "object": "695700 km"
       },
-      "expected_page_title": "火星",
-      "expected_section_any_of": [
-        "大气"
-      ],
+      "normalized_expected_value": "695700km",
+      "normalized_returned_value": "695700 km",
       "returned_result": {
-        "page_title": "火星",
-        "section": "大气",
-        "content": "火星是太阳系中的第四颗行星。根据 NASA Mars Fact Sheet，火星质量约为 6.4171e23 kg，平均半径约为 3389.5 km。火星大气非常稀薄，主要成分是二氧化碳，另含氮气、氩气以及微量氧气和水蒸气，因此常被描述为寒冷而干燥的环境。",
-        "score": 1.0,
-        "rank": 1,
+        "subject": "太阳",
+        "relation": "HAS_RADIUS",
+        "object": "695700 km",
         "source": "nasa",
         "source_name": "nasa",
         "source_role": "primary",
         "origin": "html_fallback",
-        "source_title": "火星",
+        "source_title": "太阳",
         "schema_version": "nasa_shadow_ready_v1"
       },
       "top_k_results": [
         {
-          "page_title": "火星",
-          "section": "大气",
-          "content": "火星是太阳系中的第四颗行星。根据 NASA Mars Fact Sheet，火星质量约为 6.4171e23 kg，平均半径约为 3389.5 km。火星大气非常稀薄，主要成分是二氧化碳，另含氮气、氩气以及微量氧气和水蒸气，因此常被描述为寒冷而干燥的环境。",
-          "score": 1.0,
-          "rank": 1,
-          "source": "nasa",
-          "source_name": "nasa",
-          "source_role": "primary",
-          "origin": "html_fallback",
-          "source_title": "火星",
-          "schema_version": "nasa_shadow_ready_v1"
-        }
-      ],
-      "fallback_results": [
-        {
-          "page_title": "火星",
-          "section": "大气",
-          "content": "火星是太阳系中的第四颗行星。根据 NASA Mars Fact Sheet，火星质量约为 6.4171e23 kg，平均半径约为 3389.5 km。火星大气非常稀薄，主要成分是二氧化碳，另含氮气、氩气以及微量氧气和水蒸气，因此常被描述为寒冷而干燥的环境。",
-          "score": 1.0,
-          "rank": 1,
-          "source": "nasa",
-          "source_name": "nasa",
-          "source_role": "primary",
-          "origin": "html_fallback",
-          "source_title": "火星",
-          "schema_version": "nasa_shadow_ready_v1"
-        }
-      ],
-      "exact_match": true,
-      "top_k_hit": true,
-      "expected_top_k_hit": true,
-      "top_k_expectation_met": true,
-      "path_correct": true,
-      "allowed_final_source_ok": true,
-      "pass": true,
-      "query_schema_ok": true,
-      "query_explainability_degraded": false,
-      "explainability_status": "ok",
-      "source_metadata": {
-        "page_title": "火星",
-        "section": "大气",
-        "content": "火星是太阳系中的第四颗行星。根据 NASA Mars Fact Sheet，火星质量约为 6.4171e23 kg，平均半径约为 3389.5 km。火星大气非常稀薄，主要成分是二氧化碳，另含氮气、氩气以及微量氧气和水蒸气，因此常被描述为寒冷而干燥的环境。",
-        "score": 1.0,
-        "rank": 1,
-        "source": "nasa",
-        "source_name": "nasa",
-        "source_role": "primary",
-        "origin": "html_fallback",
-        "source_title": "火星",
-        "schema_version": "nasa_shadow_ready_v1"
-      },
-      "metadata_complete": true,
-      "source_filter_failed": false,
-      "inferred_boundary_break": false,
-      "fallback_exact_match": true,
-      "fallback_top_k_hit": true,
-      "consistency_match": true,
-      "failure_category": null,
-      "expected_failure_if_any": null
-    },
-    {
-      "id": "nasa_narrative_mars_weather",
-      "category": "narrative",
-      "query_kind": "narrative",
-      "query": "火星为什么寒冷干燥",
-      "source_schema_version": "nasa_shadow_ready_v1",
-      "expected_path": "fallback",
-      "actual_path": "fallback",
-      "allowed_final_sources": [
-        "fallback"
-      ],
-      "expected_result": {
-        "page_title": "火星",
-        "section_any_of": [
-          "大气"
-        ]
-      },
-      "expected_page_title": "火星",
-      "expected_section_any_of": [
-        "大气"
-      ],
-      "returned_result": {
-        "page_title": "火星",
-        "section": "大气",
-        "content": "火星是太阳系中的第四颗行星。根据 NASA Mars Fact Sheet，火星质量约为 6.4171e23 kg，平均半径约为 3389.5 km。火星大气非常稀薄，主要成分是二氧化碳，另含氮气、氩气以及微量氧气和水蒸气，因此常被描述为寒冷而干燥的环境。",
-        "score": 0.9444444444444444,
-        "rank": 1,
-        "source": "nasa",
-        "source_name": "nasa",
-        "source_role": "primary",
-        "origin": "html_fallback",
-        "source_title": "火星",
-        "schema_version": "nasa_shadow_ready_v1"
-      },
-      "top_k_results": [
-        {
-          "page_title": "火星",
-          "section": "大气",
-          "content": "火星是太阳系中的第四颗行星。根据 NASA Mars Fact Sheet，火星质量约为 6.4171e23 kg，平均半径约为 3389.5 km。火星大气非常稀薄，主要成分是二氧化碳，另含氮气、氩气以及微量氧气和水蒸气，因此常被描述为寒冷而干燥的环境。",
-          "score": 0.9444444444444444,
-          "rank": 1,
-          "source": "nasa",
-          "source_name": "nasa",
-          "source_role": "primary",
-          "origin": "html_fallback",
-          "source_title": "火星",
-          "schema_version": "nasa_shadow_ready_v1"
-        }
-      ],
-      "fallback_results": [
-        {
-          "page_title": "火星",
-          "section": "大气",
-          "content": "火星是太阳系中的第四颗行星。根据 NASA Mars Fact Sheet，火星质量约为 6.4171e23 kg，平均半径约为 3389.5 km。火星大气非常稀薄，主要成分是二氧化碳，另含氮气、氩气以及微量氧气和水蒸气，因此常被描述为寒冷而干燥的环境。",
-          "score": 0.9444444444444444,
-          "rank": 1,
-          "source": "nasa",
-          "source_name": "nasa",
-          "source_role": "primary",
-          "origin": "html_fallback",
-          "source_title": "火星",
-          "schema_version": "nasa_shadow_ready_v1"
-        }
-      ],
-      "exact_match": true,
-      "top_k_hit": true,
-      "expected_top_k_hit": true,
-      "top_k_expectation_met": true,
-      "path_correct": true,
-      "allowed_final_source_ok": true,
-      "pass": true,
-      "query_schema_ok": true,
-      "query_explainability_degraded": false,
-      "explainability_status": "ok",
-      "source_metadata": {
-        "page_title": "火星",
-        "section": "大气",
-        "content": "火星是太阳系中的第四颗行星。根据 NASA Mars Fact Sheet，火星质量约为 6.4171e23 kg，平均半径约为 3389.5 km。火星大气非常稀薄，主要成分是二氧化碳，另含氮气、氩气以及微量氧气和水蒸气，因此常被描述为寒冷而干燥的环境。",
-        "score": 0.9444444444444444,
-        "rank": 1,
-        "source": "nasa",
-        "source_name": "nasa",
-        "source_role": "primary",
-        "origin": "html_fallback",
-        "source_title": "火星",
-        "schema_version": "nasa_shadow_ready_v1"
-      },
-      "metadata_complete": true,
-      "source_filter_failed": false,
-      "inferred_boundary_break": false,
-      "fallback_exact_match": true,
-      "fallback_top_k_hit": true,
-      "consistency_match": true,
-      "failure_category": null,
-      "expected_failure_if_any": null
-    },
-    {
-      "id": "nasa_narrative_phobos_context_absent",
-      "category": "narrative",
-      "query_kind": "narrative",
-      "query": "火卫一任务页面摘要",
-      "source_schema_version": "nasa_shadow_ready_v1",
-      "expected_path": "fallback",
-      "actual_path": "fallback",
-      "allowed_final_sources": [
-        "fallback"
-      ],
-      "expected_result": {
-        "page_title": "火卫一",
-        "section_any_of": [
-          "轨道"
-        ]
-      },
-      "expected_page_title": "火卫一",
-      "expected_section_any_of": [
-        "轨道"
-      ],
-      "returned_result": {
-        "page_title": "火卫一",
-        "section": "轨道",
-        "content": "火卫一是火星的天然卫星。火卫一绕火星公转，并且轨道高度较低。",
-        "score": 0.7444444444444445,
-        "rank": 1,
-        "source": "nasa",
-        "source_name": "nasa",
-        "source_role": "primary",
-        "origin": "html_fallback",
-        "source_title": "火卫一",
-        "schema_version": "nasa_shadow_ready_v1"
-      },
-      "top_k_results": [
-        {
-          "page_title": "火卫一",
-          "section": "轨道",
-          "content": "火卫一是火星的天然卫星。火卫一绕火星公转，并且轨道高度较低。",
-          "score": 0.7444444444444445,
-          "rank": 1,
-          "source": "nasa",
-          "source_name": "nasa",
-          "source_role": "primary",
-          "origin": "html_fallback",
-          "source_title": "火卫一",
-          "schema_version": "nasa_shadow_ready_v1"
-        }
-      ],
-      "fallback_results": [
-        {
-          "page_title": "火卫一",
-          "section": "轨道",
-          "content": "火卫一是火星的天然卫星。火卫一绕火星公转，并且轨道高度较低。",
-          "score": 0.7444444444444445,
-          "rank": 1,
-          "source": "nasa",
-          "source_name": "nasa",
-          "source_role": "primary",
-          "origin": "html_fallback",
-          "source_title": "火卫一",
-          "schema_version": "nasa_shadow_ready_v1"
-        }
-      ],
-      "exact_match": true,
-      "top_k_hit": true,
-      "expected_top_k_hit": true,
-      "top_k_expectation_met": true,
-      "path_correct": true,
-      "allowed_final_source_ok": true,
-      "pass": true,
-      "query_schema_ok": true,
-      "query_explainability_degraded": false,
-      "explainability_status": "ok",
-      "source_metadata": {
-        "page_title": "火卫一",
-        "section": "轨道",
-        "content": "火卫一是火星的天然卫星。火卫一绕火星公转，并且轨道高度较低。",
-        "score": 0.7444444444444445,
-        "rank": 1,
-        "source": "nasa",
-        "source_name": "nasa",
-        "source_role": "primary",
-        "origin": "html_fallback",
-        "source_title": "火卫一",
-        "schema_version": "nasa_shadow_ready_v1"
-      },
-      "metadata_complete": true,
-      "source_filter_failed": false,
-      "inferred_boundary_break": false,
-      "fallback_exact_match": true,
-      "fallback_top_k_hit": true,
-      "consistency_match": true,
-      "failure_category": null,
-      "expected_failure_if_any": null
-    },
-    {
-      "id": "nasa_negative_deimos_absent",
-      "category": "negative",
-      "query_kind": "structured",
-      "query": "火卫二绕谁公转",
-      "source_schema_version": "nasa_shadow_ready_v1",
-      "expected_path": "fallback",
-      "actual_path": "fallback",
-      "allowed_final_sources": [
-        "fallback"
-      ],
-      "expected_result": {
-        "empty": true
-      },
-      "normalized_expected_value": null,
-      "normalized_returned_value": null,
-      "returned_result": null,
-      "top_k_results": [],
-      "graph_only_results": [],
-      "fallback_results": [],
-      "exact_match": true,
-      "top_k_hit": false,
-      "expected_top_k_hit": false,
-      "top_k_expectation_met": true,
-      "path_correct": true,
-      "allowed_final_source_ok": true,
-      "pass": true,
-      "query_schema_ok": true,
-      "query_explainability_degraded": false,
-      "explainability_status": "ok",
-      "source_metadata": null,
-      "metadata_complete": true,
-      "source_filter_failed": false,
-      "inferred_boundary_break": false,
-      "fallback_exact_match": true,
-      "fallback_top_k_hit": true,
-      "consistency_match": true,
-      "failure_category": null,
-      "expected_failure_if_any": null
-    },
-    {
-      "id": "nasa_negative_jupiter_absent",
-      "category": "negative",
-      "query_kind": "structured",
-      "query": "木卫四质量是多少",
-      "source_schema_version": "nasa_shadow_ready_v1",
-      "expected_path": "fallback",
-      "actual_path": "fallback",
-      "allowed_final_sources": [
-        "fallback"
-      ],
-      "expected_result": {
-        "empty": true
-      },
-      "normalized_expected_value": null,
-      "normalized_returned_value": null,
-      "returned_result": null,
-      "top_k_results": [],
-      "graph_only_results": [],
-      "fallback_results": [],
-      "exact_match": true,
-      "top_k_hit": false,
-      "expected_top_k_hit": false,
-      "top_k_expectation_met": true,
-      "path_correct": true,
-      "allowed_final_source_ok": true,
-      "pass": true,
-      "query_schema_ok": true,
-      "query_explainability_degraded": false,
-      "explainability_status": "ok",
-      "source_metadata": null,
-      "metadata_complete": true,
-      "source_filter_failed": false,
-      "inferred_boundary_break": false,
-      "fallback_exact_match": true,
-      "fallback_top_k_hit": true,
-      "consistency_match": true,
-      "failure_category": null,
-      "expected_failure_if_any": null
-    },
-    {
-      "id": "nasa_negative_wikidata_only_absent",
-      "category": "negative",
-      "query_kind": "structured",
-      "query": "谷神星是谁发现的",
-      "source_schema_version": "nasa_shadow_ready_v1",
-      "expected_path": "fallback",
-      "actual_path": "fallback",
-      "allowed_final_sources": [
-        "fallback"
-      ],
-      "expected_result": {
-        "empty": true
-      },
-      "normalized_expected_value": null,
-      "normalized_returned_value": null,
-      "returned_result": null,
-      "top_k_results": [],
-      "graph_only_results": [],
-      "fallback_results": [],
-      "exact_match": true,
-      "top_k_hit": false,
-      "expected_top_k_hit": false,
-      "top_k_expectation_met": true,
-      "path_correct": true,
-      "allowed_final_source_ok": true,
-      "pass": true,
-      "query_schema_ok": true,
-      "query_explainability_degraded": false,
-      "explainability_status": "ok",
-      "source_metadata": null,
-      "metadata_complete": true,
-      "source_filter_failed": false,
-      "inferred_boundary_break": false,
-      "fallback_exact_match": true,
-      "fallback_top_k_hit": true,
-      "consistency_match": true,
-      "failure_category": null,
-      "expected_failure_if_any": null
-    },
-    {
-      "id": "nasa_fallback_local_graph",
-      "category": "fallback",
-      "query_kind": "structured",
-      "query": "火卫一是火星的卫星吗",
-      "source_schema_version": "nasa_shadow_ready_v1",
-      "expected_path": "fallback",
-      "actual_path": "fallback",
-      "allowed_final_sources": [
-        "fallback"
-      ],
-      "expected_result": {
-        "subject": "火卫一",
-        "relation": "ORBITS",
-        "object": "火星"
-      },
-      "normalized_expected_value": null,
-      "normalized_returned_value": "火星",
-      "returned_result": {
-        "subject": "火卫一",
-        "relation": "ORBITS",
-        "object": "火星",
-        "source": "nasa",
-        "source_name": "nasa",
-        "source_role": "primary",
-        "origin": "html_fallback",
-        "source_title": "火卫一",
-        "schema_version": "nasa_shadow_ready_v1"
-      },
-      "top_k_results": [
-        {
-          "subject": "火卫一",
-          "relation": "ORBITS",
-          "object": "火星",
-          "source": "nasa",
-          "source_name": "nasa",
-          "source_role": "primary",
-          "origin": "html_fallback",
-          "source_title": "火卫一",
-          "schema_version": "nasa_shadow_ready_v1"
-        },
-        {
-          "subject": "火卫一",
-          "relation": "PART_OF",
-          "object": "火星系统",
-          "source": "nasa",
-          "source_name": "nasa",
-          "source_role": "primary",
-          "origin": "html_fallback",
-          "source_title": "火卫一",
-          "schema_version": "nasa_shadow_ready_v1"
-        },
-        {
-          "subject": "火星",
-          "relation": "HAS_MASS",
-          "object": "6.4171e23 kg",
-          "source": "nasa",
-          "source_name": "nasa",
-          "source_role": "primary",
-          "origin": "html_fallback",
-          "source_title": "火星",
-          "schema_version": "nasa_shadow_ready_v1"
-        },
-        {
-          "subject": "火星",
+          "subject": "太阳",
           "relation": "HAS_RADIUS",
-          "object": "3389.5 km",
+          "object": "695700 km",
           "source": "nasa",
           "source_name": "nasa",
           "source_role": "primary",
           "origin": "html_fallback",
-          "source_title": "火星",
-          "schema_version": "nasa_shadow_ready_v1"
-        },
-        {
-          "subject": "火星",
-          "relation": "LOCATED_IN",
-          "object": "太阳系",
-          "source": "nasa",
-          "source_name": "nasa",
-          "source_role": "primary",
-          "origin": "html_fallback",
-          "source_title": "火星",
+          "source_title": "太阳",
           "schema_version": "nasa_shadow_ready_v1"
         }
       ],
       "graph_only_results": [],
       "fallback_results": [
         {
-          "subject": "火卫一",
-          "relation": "ORBITS",
-          "object": "火星",
-          "source": "nasa",
-          "source_name": "nasa",
-          "source_role": "primary",
-          "origin": "html_fallback",
-          "source_title": "火卫一",
-          "schema_version": "nasa_shadow_ready_v1"
-        },
-        {
-          "subject": "火卫一",
-          "relation": "PART_OF",
-          "object": "火星系统",
-          "source": "nasa",
-          "source_name": "nasa",
-          "source_role": "primary",
-          "origin": "html_fallback",
-          "source_title": "火卫一",
-          "schema_version": "nasa_shadow_ready_v1"
-        },
-        {
-          "subject": "火星",
-          "relation": "HAS_MASS",
-          "object": "6.4171e23 kg",
-          "source": "nasa",
-          "source_name": "nasa",
-          "source_role": "primary",
-          "origin": "html_fallback",
-          "source_title": "火星",
-          "schema_version": "nasa_shadow_ready_v1"
-        },
-        {
-          "subject": "火星",
+          "subject": "太阳",
           "relation": "HAS_RADIUS",
-          "object": "3389.5 km",
+          "object": "695700 km",
           "source": "nasa",
           "source_name": "nasa",
           "source_role": "primary",
           "origin": "html_fallback",
-          "source_title": "火星",
-          "schema_version": "nasa_shadow_ready_v1"
-        },
-        {
-          "subject": "火星",
-          "relation": "LOCATED_IN",
-          "object": "太阳系",
-          "source": "nasa",
-          "source_name": "nasa",
-          "source_role": "primary",
-          "origin": "html_fallback",
-          "source_title": "火星",
+          "source_title": "太阳",
           "schema_version": "nasa_shadow_ready_v1"
         }
       ],
@@ -1270,14 +3380,14 @@
       "query_explainability_degraded": false,
       "explainability_status": "ok",
       "source_metadata": {
-        "subject": "火卫一",
-        "relation": "ORBITS",
-        "object": "火星",
+        "subject": "太阳",
+        "relation": "HAS_RADIUS",
+        "object": "695700 km",
         "source": "nasa",
         "source_name": "nasa",
         "source_role": "primary",
         "origin": "html_fallback",
-        "source_title": "火卫一",
+        "source_title": "太阳",
         "schema_version": "nasa_shadow_ready_v1"
       },
       "metadata_complete": true,
@@ -1290,10 +3400,10 @@
       "expected_failure_if_any": null
     },
     {
-      "id": "nasa_fallback_local_narrative",
-      "category": "fallback",
-      "query_kind": "narrative",
-      "query": "NASA Mars Fact Sheet 火星大气",
+      "id": "nasa_structured_europa_part_of",
+      "category": "structured",
+      "query_kind": "structured",
+      "query": "木卫二属于哪里",
       "source_schema_version": "nasa_shadow_ready_v1",
       "expected_path": "fallback",
       "actual_path": "fallback",
@@ -1301,55 +3411,47 @@
         "fallback"
       ],
       "expected_result": {
-        "page_title": "火星",
-        "section_any_of": [
-          "大气"
-        ]
+        "subject": "木卫二",
+        "relation": "PART_OF",
+        "object": "木星系统"
       },
-      "expected_page_title": "火星",
-      "expected_section_any_of": [
-        "大气"
-      ],
+      "normalized_expected_value": null,
+      "normalized_returned_value": "木星系统",
       "returned_result": {
-        "page_title": "火星",
-        "section": "大气",
-        "content": "火星是太阳系中的第四颗行星。根据 NASA Mars Fact Sheet，火星质量约为 6.4171e23 kg，平均半径约为 3389.5 km。火星大气非常稀薄，主要成分是二氧化碳，另含氮气、氩气以及微量氧气和水蒸气，因此常被描述为寒冷而干燥的环境。",
-        "score": 1.0,
-        "rank": 1,
+        "subject": "木卫二",
+        "relation": "PART_OF",
+        "object": "木星系统",
         "source": "nasa",
         "source_name": "nasa",
         "source_role": "primary",
         "origin": "html_fallback",
-        "source_title": "火星",
+        "source_title": "木卫二",
         "schema_version": "nasa_shadow_ready_v1"
       },
       "top_k_results": [
         {
-          "page_title": "火星",
-          "section": "大气",
-          "content": "火星是太阳系中的第四颗行星。根据 NASA Mars Fact Sheet，火星质量约为 6.4171e23 kg，平均半径约为 3389.5 km。火星大气非常稀薄，主要成分是二氧化碳，另含氮气、氩气以及微量氧气和水蒸气，因此常被描述为寒冷而干燥的环境。",
-          "score": 1.0,
-          "rank": 1,
+          "subject": "木卫二",
+          "relation": "PART_OF",
+          "object": "木星系统",
           "source": "nasa",
           "source_name": "nasa",
           "source_role": "primary",
           "origin": "html_fallback",
-          "source_title": "火星",
+          "source_title": "木卫二",
           "schema_version": "nasa_shadow_ready_v1"
         }
       ],
+      "graph_only_results": [],
       "fallback_results": [
         {
-          "page_title": "火星",
-          "section": "大气",
-          "content": "火星是太阳系中的第四颗行星。根据 NASA Mars Fact Sheet，火星质量约为 6.4171e23 kg，平均半径约为 3389.5 km。火星大气非常稀薄，主要成分是二氧化碳，另含氮气、氩气以及微量氧气和水蒸气，因此常被描述为寒冷而干燥的环境。",
-          "score": 1.0,
-          "rank": 1,
+          "subject": "木卫二",
+          "relation": "PART_OF",
+          "object": "木星系统",
           "source": "nasa",
           "source_name": "nasa",
           "source_role": "primary",
           "origin": "html_fallback",
-          "source_title": "火星",
+          "source_title": "木卫二",
           "schema_version": "nasa_shadow_ready_v1"
         }
       ],
@@ -1364,16 +3466,14 @@
       "query_explainability_degraded": false,
       "explainability_status": "ok",
       "source_metadata": {
-        "page_title": "火星",
-        "section": "大气",
-        "content": "火星是太阳系中的第四颗行星。根据 NASA Mars Fact Sheet，火星质量约为 6.4171e23 kg，平均半径约为 3389.5 km。火星大气非常稀薄，主要成分是二氧化碳，另含氮气、氩气以及微量氧气和水蒸气，因此常被描述为寒冷而干燥的环境。",
-        "score": 1.0,
-        "rank": 1,
+        "subject": "木卫二",
+        "relation": "PART_OF",
+        "object": "木星系统",
         "source": "nasa",
         "source_name": "nasa",
         "source_role": "primary",
         "origin": "html_fallback",
-        "source_title": "火星",
+        "source_title": "木卫二",
         "schema_version": "nasa_shadow_ready_v1"
       },
       "metadata_complete": true,
@@ -1386,10 +3486,10 @@
       "expected_failure_if_any": null
     },
     {
-      "id": "nasa_source_isolation_no_wikidata",
-      "category": "source_isolation",
+      "id": "nasa_structured_triton_orbits",
+      "category": "structured",
       "query_kind": "structured",
-      "query": "冥王星是谁发现的",
+      "query": "海卫一绕谁运行",
       "source_schema_version": "nasa_shadow_ready_v1",
       "expected_path": "fallback",
       "actual_path": "fallback",
@@ -1397,17 +3497,53 @@
         "fallback"
       ],
       "expected_result": {
-        "empty": true
+        "subject": "海卫一",
+        "relation": "ORBITS",
+        "object": "海王星"
       },
       "normalized_expected_value": null,
-      "normalized_returned_value": null,
-      "returned_result": null,
-      "top_k_results": [],
+      "normalized_returned_value": "海王星",
+      "returned_result": {
+        "subject": "海卫一",
+        "relation": "ORBITS",
+        "object": "海王星",
+        "source": "nasa",
+        "source_name": "nasa",
+        "source_role": "primary",
+        "origin": "html_fallback",
+        "source_title": "海卫一",
+        "schema_version": "nasa_shadow_ready_v1"
+      },
+      "top_k_results": [
+        {
+          "subject": "海卫一",
+          "relation": "ORBITS",
+          "object": "海王星",
+          "source": "nasa",
+          "source_name": "nasa",
+          "source_role": "primary",
+          "origin": "html_fallback",
+          "source_title": "海卫一",
+          "schema_version": "nasa_shadow_ready_v1"
+        }
+      ],
       "graph_only_results": [],
-      "fallback_results": [],
+      "fallback_results": [
+        {
+          "subject": "海卫一",
+          "relation": "ORBITS",
+          "object": "海王星",
+          "source": "nasa",
+          "source_name": "nasa",
+          "source_role": "primary",
+          "origin": "html_fallback",
+          "source_title": "海卫一",
+          "schema_version": "nasa_shadow_ready_v1"
+        }
+      ],
       "exact_match": true,
-      "top_k_hit": false,
-      "expected_top_k_hit": false,
+      "top_k_hit": true,
+      "expected_top_k_hit": true,
       "top_k_expectation_met": true,
       "path_correct": true,
       "allowed_final_source_ok": true,
@@ -1415,7 +3551,17 @@
       "query_schema_ok": true,
       "query_explainability_degraded": false,
       "explainability_status": "ok",
-      "source_metadata": null,
+      "source_metadata": {
+        "subject": "海卫一",
+        "relation": "ORBITS",
+        "object": "海王星",
+        "source": "nasa",
+        "source_name": "nasa",
+        "source_role": "primary",
+        "origin": "html_fallback",
+        "source_title": "海卫一",
+        "schema_version": "nasa_shadow_ready_v1"
+      },
       "metadata_complete": true,
       "source_filter_failed": false,
       "inferred_boundary_break": false,
@@ -1426,8 +3572,180 @@
       "expected_failure_if_any": null
     },
     {
-      "id": "nasa_source_isolation_no_zhwiki",
-      "category": "source_isolation",
+      "id": "nasa_structured_pluto_mass",
+      "category": "structured",
+      "query_kind": "structured",
+      "query": "冥王星质量是多少",
+      "source_schema_version": "nasa_shadow_ready_v1",
+      "expected_path": "fallback",
+      "actual_path": "fallback",
+      "allowed_final_sources": [
+        "fallback"
+      ],
+      "expected_result": {
+        "subject": "冥王星",
+        "relation": "HAS_MASS",
+        "object": "1.303e22 kg"
+      },
+      "normalized_expected_value": "1.303e22kg",
+      "normalized_returned_value": "1.303e22 kg",
+      "returned_result": {
+        "subject": "冥王星",
+        "relation": "HAS_MASS",
+        "object": "1.303e22 kg",
+        "source": "nasa",
+        "source_name": "nasa",
+        "source_role": "primary",
+        "origin": "html_fallback",
+        "source_title": "冥王星",
+        "schema_version": "nasa_shadow_ready_v1"
+      },
+      "top_k_results": [
+        {
+          "subject": "冥王星",
+          "relation": "HAS_MASS",
+          "object": "1.303e22 kg",
+          "source": "nasa",
+          "source_name": "nasa",
+          "source_role": "primary",
+          "origin": "html_fallback",
+          "source_title": "冥王星",
+          "schema_version": "nasa_shadow_ready_v1"
+        }
+      ],
+      "graph_only_results": [],
+      "fallback_results": [
+        {
+          "subject": "冥王星",
+          "relation": "HAS_MASS",
+          "object": "1.303e22 kg",
+          "source": "nasa",
+          "source_name": "nasa",
+          "source_role": "primary",
+          "origin": "html_fallback",
+          "source_title": "冥王星",
+          "schema_version": "nasa_shadow_ready_v1"
+        }
+      ],
+      "exact_match": true,
+      "top_k_hit": true,
+      "expected_top_k_hit": true,
+      "top_k_expectation_met": true,
+      "path_correct": true,
+      "allowed_final_source_ok": true,
+      "pass": true,
+      "query_schema_ok": true,
+      "query_explainability_degraded": false,
+      "explainability_status": "ok",
+      "source_metadata": {
+        "subject": "冥王星",
+        "relation": "HAS_MASS",
+        "object": "1.303e22 kg",
+        "source": "nasa",
+        "source_name": "nasa",
+        "source_role": "primary",
+        "origin": "html_fallback",
+        "source_title": "冥王星",
+        "schema_version": "nasa_shadow_ready_v1"
+      },
+      "metadata_complete": true,
+      "source_filter_failed": false,
+      "inferred_boundary_break": false,
+      "fallback_exact_match": true,
+      "fallback_top_k_hit": true,
+      "consistency_match": true,
+      "failure_category": null,
+      "expected_failure_if_any": null
+    },
+    {
+      "id": "nasa_structured_charon_radius",
+      "category": "structured",
+      "query_kind": "structured",
+      "query": "冥卫一半径是多少",
+      "source_schema_version": "nasa_shadow_ready_v1",
+      "expected_path": "fallback",
+      "actual_path": "fallback",
+      "allowed_final_sources": [
+        "fallback"
+      ],
+      "expected_result": {
+        "subject": "冥卫一",
+        "relation": "HAS_RADIUS",
+        "object": "606 km"
+      },
+      "normalized_expected_value": "606km",
+      "normalized_returned_value": "606 km",
+      "returned_result": {
+        "subject": "冥卫一",
+        "relation": "HAS_RADIUS",
+        "object": "606 km",
+        "source": "nasa",
+        "source_name": "nasa",
+        "source_role": "primary",
+        "origin": "html_fallback",
+        "source_title": "冥卫一",
+        "schema_version": "nasa_shadow_ready_v1"
+      },
+      "top_k_results": [
+        {
+          "subject": "冥卫一",
+          "relation": "HAS_RADIUS",
+          "object": "606 km",
+          "source": "nasa",
+          "source_name": "nasa",
+          "source_role": "primary",
+          "origin": "html_fallback",
+          "source_title": "冥卫一",
+          "schema_version": "nasa_shadow_ready_v1"
+        }
+      ],
+      "graph_only_results": [],
+      "fallback_results": [
+        {
+          "subject": "冥卫一",
+          "relation": "HAS_RADIUS",
+          "object": "606 km",
+          "source": "nasa",
+          "source_name": "nasa",
+          "source_role": "primary",
+          "origin": "html_fallback",
+          "source_title": "冥卫一",
+          "schema_version": "nasa_shadow_ready_v1"
+        }
+      ],
+      "exact_match": true,
+      "top_k_hit": true,
+      "expected_top_k_hit": true,
+      "top_k_expectation_met": true,
+      "path_correct": true,
+      "allowed_final_source_ok": true,
+      "pass": true,
+      "query_schema_ok": true,
+      "query_explainability_degraded": false,
+      "explainability_status": "ok",
+      "source_metadata": {
+        "subject": "冥卫一",
+        "relation": "HAS_RADIUS",
+        "object": "606 km",
+        "source": "nasa",
+        "source_name": "nasa",
+        "source_role": "primary",
+        "origin": "html_fallback",
+        "source_title": "冥卫一",
+        "schema_version": "nasa_shadow_ready_v1"
+      },
+      "metadata_complete": true,
+      "source_filter_failed": false,
+      "inferred_boundary_break": false,
+      "fallback_exact_match": true,
+      "fallback_top_k_hit": true,
+      "consistency_match": true,
+      "failure_category": null,
+      "expected_failure_if_any": null
+    },
+    {
+      "id": "nasa_narrative_earth_atmosphere",
+      "category": "narrative",
       "query_kind": "narrative",
       "query": "地球大气成分",
       "source_schema_version": "nasa_shadow_ready_v1",
@@ -1510,370 +3828,6 @@
         "source_role": "primary",
         "origin": "html_fallback",
         "source_title": "地球",
-        "schema_version": "nasa_shadow_ready_v1"
-      },
-      "metadata_complete": true,
-      "source_filter_failed": false,
-      "inferred_boundary_break": false,
-      "fallback_exact_match": true,
-      "fallback_top_k_hit": true,
-      "consistency_match": true,
-      "failure_category": null,
-      "expected_failure_if_any": null
-    },
-    {
-      "id": "nasa_metadata_structured_schema",
-      "category": "metadata_completeness",
-      "query_kind": "structured",
-      "query": "火卫一绕谁运行 metadata",
-      "source_schema_version": "nasa_shadow_ready_v1",
-      "expected_path": "fallback",
-      "actual_path": "fallback",
-      "allowed_final_sources": [
-        "fallback"
-      ],
-      "expected_result": {
-        "subject": "火卫一",
-        "relation": "ORBITS",
-        "object": "火星"
-      },
-      "normalized_expected_value": null,
-      "normalized_returned_value": "火星",
-      "returned_result": {
-        "subject": "火卫一",
-        "relation": "ORBITS",
-        "object": "火星",
-        "source": "nasa",
-        "source_name": "nasa",
-        "source_role": "primary",
-        "origin": "html_fallback",
-        "source_title": "火卫一",
-        "schema_version": "nasa_shadow_ready_v1"
-      },
-      "top_k_results": [
-        {
-          "subject": "火卫一",
-          "relation": "ORBITS",
-          "object": "火星",
-          "source": "nasa",
-          "source_name": "nasa",
-          "source_role": "primary",
-          "origin": "html_fallback",
-          "source_title": "火卫一",
-          "schema_version": "nasa_shadow_ready_v1"
-        }
-      ],
-      "graph_only_results": [],
-      "fallback_results": [
-        {
-          "subject": "火卫一",
-          "relation": "ORBITS",
-          "object": "火星",
-          "source": "nasa",
-          "source_name": "nasa",
-          "source_role": "primary",
-          "origin": "html_fallback",
-          "source_title": "火卫一",
-          "schema_version": "nasa_shadow_ready_v1"
-        }
-      ],
-      "exact_match": true,
-      "top_k_hit": true,
-      "expected_top_k_hit": true,
-      "top_k_expectation_met": true,
-      "path_correct": true,
-      "allowed_final_source_ok": true,
-      "pass": true,
-      "query_schema_ok": true,
-      "query_explainability_degraded": false,
-      "explainability_status": "ok",
-      "source_metadata": {
-        "subject": "火卫一",
-        "relation": "ORBITS",
-        "object": "火星",
-        "source": "nasa",
-        "source_name": "nasa",
-        "source_role": "primary",
-        "origin": "html_fallback",
-        "source_title": "火卫一",
-        "schema_version": "nasa_shadow_ready_v1"
-      },
-      "metadata_complete": true,
-      "source_filter_failed": false,
-      "inferred_boundary_break": false,
-      "fallback_exact_match": true,
-      "fallback_top_k_hit": true,
-      "consistency_match": true,
-      "failure_category": null,
-      "expected_failure_if_any": null
-    },
-    {
-      "id": "nasa_metadata_narrative_schema",
-      "category": "metadata_completeness",
-      "query_kind": "narrative",
-      "query": "火星大气 schema version",
-      "source_schema_version": "nasa_shadow_ready_v1",
-      "expected_path": "fallback",
-      "actual_path": "fallback",
-      "allowed_final_sources": [
-        "fallback"
-      ],
-      "expected_result": {
-        "page_title": "火星",
-        "section_any_of": [
-          "大气"
-        ]
-      },
-      "expected_page_title": "火星",
-      "expected_section_any_of": [
-        "大气"
-      ],
-      "returned_result": {
-        "page_title": "火星",
-        "section": "大气",
-        "content": "火星是太阳系中的第四颗行星。根据 NASA Mars Fact Sheet，火星质量约为 6.4171e23 kg，平均半径约为 3389.5 km。火星大气非常稀薄，主要成分是二氧化碳，另含氮气、氩气以及微量氧气和水蒸气，因此常被描述为寒冷而干燥的环境。",
-        "score": 1.0,
-        "rank": 1,
-        "source": "nasa",
-        "source_name": "nasa",
-        "source_role": "primary",
-        "origin": "html_fallback",
-        "source_title": "火星",
-        "schema_version": "nasa_shadow_ready_v1"
-      },
-      "top_k_results": [
-        {
-          "page_title": "火星",
-          "section": "大气",
-          "content": "火星是太阳系中的第四颗行星。根据 NASA Mars Fact Sheet，火星质量约为 6.4171e23 kg，平均半径约为 3389.5 km。火星大气非常稀薄，主要成分是二氧化碳，另含氮气、氩气以及微量氧气和水蒸气，因此常被描述为寒冷而干燥的环境。",
-          "score": 1.0,
-          "rank": 1,
-          "source": "nasa",
-          "source_name": "nasa",
-          "source_role": "primary",
-          "origin": "html_fallback",
-          "source_title": "火星",
-          "schema_version": "nasa_shadow_ready_v1"
-        }
-      ],
-      "fallback_results": [
-        {
-          "page_title": "火星",
-          "section": "大气",
-          "content": "火星是太阳系中的第四颗行星。根据 NASA Mars Fact Sheet，火星质量约为 6.4171e23 kg，平均半径约为 3389.5 km。火星大气非常稀薄，主要成分是二氧化碳，另含氮气、氩气以及微量氧气和水蒸气，因此常被描述为寒冷而干燥的环境。",
-          "score": 1.0,
-          "rank": 1,
-          "source": "nasa",
-          "source_name": "nasa",
-          "source_role": "primary",
-          "origin": "html_fallback",
-          "source_title": "火星",
-          "schema_version": "nasa_shadow_ready_v1"
-        }
-      ],
-      "exact_match": true,
-      "top_k_hit": true,
-      "expected_top_k_hit": true,
-      "top_k_expectation_met": true,
-      "path_correct": true,
-      "allowed_final_source_ok": true,
-      "pass": true,
-      "query_schema_ok": true,
-      "query_explainability_degraded": false,
-      "explainability_status": "ok",
-      "source_metadata": {
-        "page_title": "火星",
-        "section": "大气",
-        "content": "火星是太阳系中的第四颗行星。根据 NASA Mars Fact Sheet，火星质量约为 6.4171e23 kg，平均半径约为 3389.5 km。火星大气非常稀薄，主要成分是二氧化碳，另含氮气、氩气以及微量氧气和水蒸气，因此常被描述为寒冷而干燥的环境。",
-        "score": 1.0,
-        "rank": 1,
-        "source": "nasa",
-        "source_name": "nasa",
-        "source_role": "primary",
-        "origin": "html_fallback",
-        "source_title": "火星",
-        "schema_version": "nasa_shadow_ready_v1"
-      },
-      "metadata_complete": true,
-      "source_filter_failed": false,
-      "inferred_boundary_break": false,
-      "fallback_exact_match": true,
-      "fallback_top_k_hit": true,
-      "consistency_match": true,
-      "failure_category": null,
-      "expected_failure_if_any": null
-    },
-    {
-      "id": "nasa_path_routing_structured",
-      "category": "path_routing",
-      "query_kind": "structured",
-      "query": "火卫一轨道主星",
-      "source_schema_version": "nasa_shadow_ready_v1",
-      "expected_path": "fallback",
-      "actual_path": "fallback",
-      "allowed_final_sources": [
-        "fallback"
-      ],
-      "expected_result": {
-        "subject": "火卫一",
-        "relation": "ORBITS",
-        "object": "火星"
-      },
-      "normalized_expected_value": null,
-      "normalized_returned_value": "火星",
-      "returned_result": {
-        "subject": "火卫一",
-        "relation": "ORBITS",
-        "object": "火星",
-        "source": "nasa",
-        "source_name": "nasa",
-        "source_role": "primary",
-        "origin": "html_fallback",
-        "source_title": "火卫一",
-        "schema_version": "nasa_shadow_ready_v1"
-      },
-      "top_k_results": [
-        {
-          "subject": "火卫一",
-          "relation": "ORBITS",
-          "object": "火星",
-          "source": "nasa",
-          "source_name": "nasa",
-          "source_role": "primary",
-          "origin": "html_fallback",
-          "source_title": "火卫一",
-          "schema_version": "nasa_shadow_ready_v1"
-        }
-      ],
-      "graph_only_results": [],
-      "fallback_results": [
-        {
-          "subject": "火卫一",
-          "relation": "ORBITS",
-          "object": "火星",
-          "source": "nasa",
-          "source_name": "nasa",
-          "source_role": "primary",
-          "origin": "html_fallback",
-          "source_title": "火卫一",
-          "schema_version": "nasa_shadow_ready_v1"
-        }
-      ],
-      "exact_match": true,
-      "top_k_hit": true,
-      "expected_top_k_hit": true,
-      "top_k_expectation_met": true,
-      "path_correct": true,
-      "allowed_final_source_ok": true,
-      "pass": true,
-      "query_schema_ok": true,
-      "query_explainability_degraded": false,
-      "explainability_status": "ok",
-      "source_metadata": {
-        "subject": "火卫一",
-        "relation": "ORBITS",
-        "object": "火星",
-        "source": "nasa",
-        "source_name": "nasa",
-        "source_role": "primary",
-        "origin": "html_fallback",
-        "source_title": "火卫一",
-        "schema_version": "nasa_shadow_ready_v1"
-      },
-      "metadata_complete": true,
-      "source_filter_failed": false,
-      "inferred_boundary_break": false,
-      "fallback_exact_match": true,
-      "fallback_top_k_hit": true,
-      "consistency_match": true,
-      "failure_category": null,
-      "expected_failure_if_any": null
-    },
-    {
-      "id": "nasa_path_routing_narrative",
-      "category": "path_routing",
-      "query_kind": "narrative",
-      "query": "火星表面气压为什么低",
-      "source_schema_version": "nasa_shadow_ready_v1",
-      "expected_path": "fallback",
-      "actual_path": "fallback",
-      "allowed_final_sources": [
-        "fallback"
-      ],
-      "expected_result": {
-        "page_title": "火星",
-        "section_any_of": [
-          "大气"
-        ]
-      },
-      "expected_page_title": "火星",
-      "expected_section_any_of": [
-        "大气"
-      ],
-      "returned_result": {
-        "page_title": "火星",
-        "section": "大气",
-        "content": "火星是太阳系中的第四颗行星。根据 NASA Mars Fact Sheet，火星质量约为 6.4171e23 kg，平均半径约为 3389.5 km。火星大气非常稀薄，主要成分是二氧化碳，另含氮气、氩气以及微量氧气和水蒸气，因此常被描述为寒冷而干燥的环境。",
-        "score": 0.8111111111111111,
-        "rank": 1,
-        "source": "nasa",
-        "source_name": "nasa",
-        "source_role": "primary",
-        "origin": "html_fallback",
-        "source_title": "火星",
-        "schema_version": "nasa_shadow_ready_v1"
-      },
-      "top_k_results": [
-        {
-          "page_title": "火星",
-          "section": "大气",
-          "content": "火星是太阳系中的第四颗行星。根据 NASA Mars Fact Sheet，火星质量约为 6.4171e23 kg，平均半径约为 3389.5 km。火星大气非常稀薄，主要成分是二氧化碳，另含氮气、氩气以及微量氧气和水蒸气，因此常被描述为寒冷而干燥的环境。",
-          "score": 0.8111111111111111,
-          "rank": 1,
-          "source": "nasa",
-          "source_name": "nasa",
-          "source_role": "primary",
-          "origin": "html_fallback",
-          "source_title": "火星",
-          "schema_version": "nasa_shadow_ready_v1"
-        }
-      ],
-      "fallback_results": [
-        {
-          "page_title": "火星",
-          "section": "大气",
-          "content": "火星是太阳系中的第四颗行星。根据 NASA Mars Fact Sheet，火星质量约为 6.4171e23 kg，平均半径约为 3389.5 km。火星大气非常稀薄，主要成分是二氧化碳，另含氮气、氩气以及微量氧气和水蒸气，因此常被描述为寒冷而干燥的环境。",
-          "score": 0.8111111111111111,
-          "rank": 1,
-          "source": "nasa",
-          "source_name": "nasa",
-          "source_role": "primary",
-          "origin": "html_fallback",
-          "source_title": "火星",
-          "schema_version": "nasa_shadow_ready_v1"
-        }
-      ],
-      "exact_match": true,
-      "top_k_hit": true,
-      "expected_top_k_hit": true,
-      "top_k_expectation_met": true,
-      "path_correct": true,
-      "allowed_final_source_ok": true,
-      "pass": true,
-      "query_schema_ok": true,
-      "query_explainability_degraded": false,
-      "explainability_status": "ok",
-      "source_metadata": {
-        "page_title": "火星",
-        "section": "大气",
-        "content": "火星是太阳系中的第四颗行星。根据 NASA Mars Fact Sheet，火星质量约为 6.4171e23 kg，平均半径约为 3389.5 km。火星大气非常稀薄，主要成分是二氧化碳，另含氮气、氩气以及微量氧气和水蒸气，因此常被描述为寒冷而干燥的环境。",
-        "score": 0.8111111111111111,
-        "rank": 1,
-        "source": "nasa",
-        "source_name": "nasa",
-        "source_role": "primary",
-        "origin": "html_fallback",
-        "source_title": "火星",
         "schema_version": "nasa_shadow_ready_v1"
       },
       "metadata_complete": true,
@@ -1972,374 +3926,6 @@
         "source_title": "木星",
         "schema_version": "nasa_shadow_ready_v1"
       },
-      "metadata_complete": true,
-      "source_filter_failed": false,
-      "inferred_boundary_break": false,
-      "fallback_exact_match": true,
-      "fallback_top_k_hit": true,
-      "consistency_match": true,
-      "failure_category": null,
-      "expected_failure_if_any": null
-    },
-    {
-      "id": "nasa_unit_atmosphere_percent_co2",
-      "category": "unit_normalization",
-      "query_kind": "narrative",
-      "query": "火星二氧化碳约占多少百分比",
-      "source_schema_version": "nasa_shadow_ready_v1",
-      "expected_path": "fallback",
-      "actual_path": "fallback",
-      "allowed_final_sources": [
-        "fallback"
-      ],
-      "expected_result": {
-        "page_title": "火星",
-        "section_any_of": [
-          "大气"
-        ]
-      },
-      "expected_page_title": "火星",
-      "expected_section_any_of": [
-        "大气"
-      ],
-      "returned_result": {
-        "page_title": "火星",
-        "section": "大气",
-        "content": "火星是太阳系中的第四颗行星。根据 NASA Mars Fact Sheet，火星质量约为 6.4171e23 kg，平均半径约为 3389.5 km。火星大气非常稀薄，主要成分是二氧化碳，另含氮气、氩气以及微量氧气和水蒸气，因此常被描述为寒冷而干燥的环境。",
-        "score": 0.8111111111111111,
-        "rank": 1,
-        "source": "nasa",
-        "source_name": "nasa",
-        "source_role": "primary",
-        "origin": "html_fallback",
-        "source_title": "火星",
-        "schema_version": "nasa_shadow_ready_v1"
-      },
-      "top_k_results": [
-        {
-          "page_title": "火星",
-          "section": "大气",
-          "content": "火星是太阳系中的第四颗行星。根据 NASA Mars Fact Sheet，火星质量约为 6.4171e23 kg，平均半径约为 3389.5 km。火星大气非常稀薄，主要成分是二氧化碳，另含氮气、氩气以及微量氧气和水蒸气，因此常被描述为寒冷而干燥的环境。",
-          "score": 0.8111111111111111,
-          "rank": 1,
-          "source": "nasa",
-          "source_name": "nasa",
-          "source_role": "primary",
-          "origin": "html_fallback",
-          "source_title": "火星",
-          "schema_version": "nasa_shadow_ready_v1"
-        }
-      ],
-      "fallback_results": [
-        {
-          "page_title": "火星",
-          "section": "大气",
-          "content": "火星是太阳系中的第四颗行星。根据 NASA Mars Fact Sheet，火星质量约为 6.4171e23 kg，平均半径约为 3389.5 km。火星大气非常稀薄，主要成分是二氧化碳，另含氮气、氩气以及微量氧气和水蒸气，因此常被描述为寒冷而干燥的环境。",
-          "score": 0.8111111111111111,
-          "rank": 1,
-          "source": "nasa",
-          "source_name": "nasa",
-          "source_role": "primary",
-          "origin": "html_fallback",
-          "source_title": "火星",
-          "schema_version": "nasa_shadow_ready_v1"
-        }
-      ],
-      "exact_match": true,
-      "top_k_hit": true,
-      "expected_top_k_hit": true,
-      "top_k_expectation_met": true,
-      "path_correct": true,
-      "allowed_final_source_ok": true,
-      "pass": true,
-      "query_schema_ok": true,
-      "query_explainability_degraded": false,
-      "explainability_status": "ok",
-      "source_metadata": {
-        "page_title": "火星",
-        "section": "大气",
-        "content": "火星是太阳系中的第四颗行星。根据 NASA Mars Fact Sheet，火星质量约为 6.4171e23 kg，平均半径约为 3389.5 km。火星大气非常稀薄，主要成分是二氧化碳，另含氮气、氩气以及微量氧气和水蒸气，因此常被描述为寒冷而干燥的环境。",
-        "score": 0.8111111111111111,
-        "rank": 1,
-        "source": "nasa",
-        "source_name": "nasa",
-        "source_role": "primary",
-        "origin": "html_fallback",
-        "source_title": "火星",
-        "schema_version": "nasa_shadow_ready_v1"
-      },
-      "metadata_complete": true,
-      "source_filter_failed": false,
-      "inferred_boundary_break": false,
-      "fallback_exact_match": true,
-      "fallback_top_k_hit": true,
-      "consistency_match": true,
-      "failure_category": null,
-      "expected_failure_if_any": null
-    },
-    {
-      "id": "nasa_unit_atmosphere_percent_nitrogen",
-      "category": "unit_normalization",
-      "query_kind": "narrative",
-      "query": "火星氮气约 2.7%",
-      "source_schema_version": "nasa_shadow_ready_v1",
-      "expected_path": "fallback",
-      "actual_path": "fallback",
-      "allowed_final_sources": [
-        "fallback"
-      ],
-      "expected_result": {
-        "page_title": "火星",
-        "section_any_of": [
-          "大气"
-        ]
-      },
-      "expected_page_title": "火星",
-      "expected_section_any_of": [
-        "大气"
-      ],
-      "returned_result": {
-        "page_title": "火星",
-        "section": "大气",
-        "content": "火星是太阳系中的第四颗行星。根据 NASA Mars Fact Sheet，火星质量约为 6.4171e23 kg，平均半径约为 3389.5 km。火星大气非常稀薄，主要成分是二氧化碳，另含氮气、氩气以及微量氧气和水蒸气，因此常被描述为寒冷而干燥的环境。",
-        "score": 0.8111111111111111,
-        "rank": 1,
-        "source": "nasa",
-        "source_name": "nasa",
-        "source_role": "primary",
-        "origin": "html_fallback",
-        "source_title": "火星",
-        "schema_version": "nasa_shadow_ready_v1"
-      },
-      "top_k_results": [
-        {
-          "page_title": "火星",
-          "section": "大气",
-          "content": "火星是太阳系中的第四颗行星。根据 NASA Mars Fact Sheet，火星质量约为 6.4171e23 kg，平均半径约为 3389.5 km。火星大气非常稀薄，主要成分是二氧化碳，另含氮气、氩气以及微量氧气和水蒸气，因此常被描述为寒冷而干燥的环境。",
-          "score": 0.8111111111111111,
-          "rank": 1,
-          "source": "nasa",
-          "source_name": "nasa",
-          "source_role": "primary",
-          "origin": "html_fallback",
-          "source_title": "火星",
-          "schema_version": "nasa_shadow_ready_v1"
-        }
-      ],
-      "fallback_results": [
-        {
-          "page_title": "火星",
-          "section": "大气",
-          "content": "火星是太阳系中的第四颗行星。根据 NASA Mars Fact Sheet，火星质量约为 6.4171e23 kg，平均半径约为 3389.5 km。火星大气非常稀薄，主要成分是二氧化碳，另含氮气、氩气以及微量氧气和水蒸气，因此常被描述为寒冷而干燥的环境。",
-          "score": 0.8111111111111111,
-          "rank": 1,
-          "source": "nasa",
-          "source_name": "nasa",
-          "source_role": "primary",
-          "origin": "html_fallback",
-          "source_title": "火星",
-          "schema_version": "nasa_shadow_ready_v1"
-        }
-      ],
-      "exact_match": true,
-      "top_k_hit": true,
-      "expected_top_k_hit": true,
-      "top_k_expectation_met": true,
-      "path_correct": true,
-      "allowed_final_source_ok": true,
-      "pass": true,
-      "query_schema_ok": true,
-      "query_explainability_degraded": false,
-      "explainability_status": "ok",
-      "source_metadata": {
-        "page_title": "火星",
-        "section": "大气",
-        "content": "火星是太阳系中的第四颗行星。根据 NASA Mars Fact Sheet，火星质量约为 6.4171e23 kg，平均半径约为 3389.5 km。火星大气非常稀薄，主要成分是二氧化碳，另含氮气、氩气以及微量氧气和水蒸气，因此常被描述为寒冷而干燥的环境。",
-        "score": 0.8111111111111111,
-        "rank": 1,
-        "source": "nasa",
-        "source_name": "nasa",
-        "source_role": "primary",
-        "origin": "html_fallback",
-        "source_title": "火星",
-        "schema_version": "nasa_shadow_ready_v1"
-      },
-      "metadata_complete": true,
-      "source_filter_failed": false,
-      "inferred_boundary_break": false,
-      "fallback_exact_match": true,
-      "fallback_top_k_hit": true,
-      "consistency_match": true,
-      "failure_category": null,
-      "expected_failure_if_any": null
-    },
-    {
-      "id": "nasa_conflict_mars_co2",
-      "category": "conflict_case",
-      "query_kind": "narrative",
-      "query": "火星大气主要是氧气还是二氧化碳",
-      "source_schema_version": "nasa_shadow_ready_v1",
-      "expected_path": "fallback",
-      "actual_path": "fallback",
-      "allowed_final_sources": [
-        "fallback"
-      ],
-      "expected_result": {
-        "page_title": "火星",
-        "section_any_of": [
-          "大气"
-        ]
-      },
-      "expected_page_title": "火星",
-      "expected_section_any_of": [
-        "大气"
-      ],
-      "returned_result": {
-        "page_title": "火星",
-        "section": "大气",
-        "content": "火星是太阳系中的第四颗行星。根据 NASA Mars Fact Sheet，火星质量约为 6.4171e23 kg，平均半径约为 3389.5 km。火星大气非常稀薄，主要成分是二氧化碳，另含氮气、氩气以及微量氧气和水蒸气，因此常被描述为寒冷而干燥的环境。",
-        "score": 1.0,
-        "rank": 1,
-        "source": "nasa",
-        "source_name": "nasa",
-        "source_role": "primary",
-        "origin": "html_fallback",
-        "source_title": "火星",
-        "schema_version": "nasa_shadow_ready_v1"
-      },
-      "top_k_results": [
-        {
-          "page_title": "火星",
-          "section": "大气",
-          "content": "火星是太阳系中的第四颗行星。根据 NASA Mars Fact Sheet，火星质量约为 6.4171e23 kg，平均半径约为 3389.5 km。火星大气非常稀薄，主要成分是二氧化碳，另含氮气、氩气以及微量氧气和水蒸气，因此常被描述为寒冷而干燥的环境。",
-          "score": 1.0,
-          "rank": 1,
-          "source": "nasa",
-          "source_name": "nasa",
-          "source_role": "primary",
-          "origin": "html_fallback",
-          "source_title": "火星",
-          "schema_version": "nasa_shadow_ready_v1"
-        }
-      ],
-      "fallback_results": [
-        {
-          "page_title": "火星",
-          "section": "大气",
-          "content": "火星是太阳系中的第四颗行星。根据 NASA Mars Fact Sheet，火星质量约为 6.4171e23 kg，平均半径约为 3389.5 km。火星大气非常稀薄，主要成分是二氧化碳，另含氮气、氩气以及微量氧气和水蒸气，因此常被描述为寒冷而干燥的环境。",
-          "score": 1.0,
-          "rank": 1,
-          "source": "nasa",
-          "source_name": "nasa",
-          "source_role": "primary",
-          "origin": "html_fallback",
-          "source_title": "火星",
-          "schema_version": "nasa_shadow_ready_v1"
-        }
-      ],
-      "exact_match": true,
-      "top_k_hit": true,
-      "expected_top_k_hit": true,
-      "top_k_expectation_met": true,
-      "path_correct": true,
-      "allowed_final_source_ok": true,
-      "pass": true,
-      "query_schema_ok": true,
-      "query_explainability_degraded": false,
-      "explainability_status": "ok",
-      "source_metadata": {
-        "page_title": "火星",
-        "section": "大气",
-        "content": "火星是太阳系中的第四颗行星。根据 NASA Mars Fact Sheet，火星质量约为 6.4171e23 kg，平均半径约为 3389.5 km。火星大气非常稀薄，主要成分是二氧化碳，另含氮气、氩气以及微量氧气和水蒸气，因此常被描述为寒冷而干燥的环境。",
-        "score": 1.0,
-        "rank": 1,
-        "source": "nasa",
-        "source_name": "nasa",
-        "source_role": "primary",
-        "origin": "html_fallback",
-        "source_title": "火星",
-        "schema_version": "nasa_shadow_ready_v1"
-      },
-      "metadata_complete": true,
-      "source_filter_failed": false,
-      "inferred_boundary_break": false,
-      "fallback_exact_match": true,
-      "fallback_top_k_hit": true,
-      "consistency_match": true,
-      "failure_category": null,
-      "expected_failure_if_any": null
-    },
-    {
-      "id": "nasa_conflict_no_multisource_pluto",
-      "category": "conflict_case",
-      "query_kind": "structured",
-      "query": "NASA shadow 里冥王星属于柯伊伯带吗",
-      "source_schema_version": "nasa_shadow_ready_v1",
-      "expected_path": "fallback",
-      "actual_path": "fallback",
-      "allowed_final_sources": [
-        "fallback"
-      ],
-      "expected_result": {
-        "empty": true
-      },
-      "normalized_expected_value": null,
-      "normalized_returned_value": null,
-      "returned_result": null,
-      "top_k_results": [],
-      "graph_only_results": [],
-      "fallback_results": [],
-      "exact_match": true,
-      "top_k_hit": false,
-      "expected_top_k_hit": false,
-      "top_k_expectation_met": true,
-      "path_correct": true,
-      "allowed_final_source_ok": true,
-      "pass": true,
-      "query_schema_ok": true,
-      "query_explainability_degraded": false,
-      "explainability_status": "ok",
-      "source_metadata": null,
-      "metadata_complete": true,
-      "source_filter_failed": false,
-      "inferred_boundary_break": false,
-      "fallback_exact_match": true,
-      "fallback_top_k_hit": true,
-      "consistency_match": true,
-      "failure_category": null,
-      "expected_failure_if_any": null
-    },
-    {
-      "id": "nasa_conflict_no_wikidata_mass",
-      "category": "conflict_case",
-      "query_kind": "structured",
-      "query": "NASA shadow 用 Wikidata 木卫四质量回答吗",
-      "source_schema_version": "nasa_shadow_ready_v1",
-      "expected_path": "fallback",
-      "actual_path": "fallback",
-      "allowed_final_sources": [
-        "fallback"
-      ],
-      "expected_result": {
-        "empty": true
-      },
-      "normalized_expected_value": null,
-      "normalized_returned_value": null,
-      "returned_result": null,
-      "top_k_results": [],
-      "graph_only_results": [],
-      "fallback_results": [],
-      "exact_match": true,
-      "top_k_hit": false,
-      "expected_top_k_hit": false,
-      "top_k_expectation_met": true,
-      "path_correct": true,
-      "allowed_final_source_ok": true,
-      "pass": true,
-      "query_schema_ok": true,
-      "query_explainability_degraded": false,
-      "explainability_status": "ok",
-      "source_metadata": null,
       "metadata_complete": true,
       "source_filter_failed": false,
       "inferred_boundary_break": false,

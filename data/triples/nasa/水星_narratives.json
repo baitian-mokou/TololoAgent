@@ -1,0 +1,23 @@
+[
+  {
+    "section": "轨道",
+    "content": "水星绕太阳公转。根据 NASA Mercury Fact Sheet，水星质量约为 3.301e23 kg，平均半径约为 2439.7 km，其稀薄外逸层常见成分包括氧、氢和氦。",
+    "keywords": [
+      "水星",
+      "NASA",
+      "质量",
+      "半径"
+    ],
+    "page_title": "水星",
+    "chunk_index": 0,
+    "path": "轨道",
+    "chunk_id": "nasa_水星_00",
+    "source": "nasa",
+    "source_name": "nasa",
+    "source_role": "primary",
+    "origin": "html_fallback",
+    "type": "embedding_chunk",
+    "schema_version": "nasa_shadow_ready_v1",
+    "source_title": "水星"
+  }
+]

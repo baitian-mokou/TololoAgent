@@ -1,7 +1,7 @@
 {
-  "version": "esa_smoke_fixture_v1",
+  "version": "esa_smoke_fixture_v2",
   "source_name": "esa",
-  "note": "Small adapter smoke fixture; not a production ESA knowledge source.",
+  "note": "Offline smoke-plus fixture for ESA shadow namespace; still disabled and single-source only.",
   "records": [
     {
       "title": "火星快车号",
@@ -12,14 +12,33 @@
           "object": "火星",
           "pattern": "esa_smoke_fixture",
           "raw": "ESA smoke fixture: Mars Express orbits Mars."
+        },
+        {
+          "subject": "火星快车号",
+          "relation": "OPERATED_BY",
+          "object": "ESA",
+          "pattern": "esa_smoke_fixture",
+          "raw": "ESA operates Mars Express."
+        },
+        {
+          "subject": "火星快车号",
+          "relation": "HAS_MISSION_TARGET",
+          "object": "火星",
+          "pattern": "esa_smoke_fixture",
+          "raw": "Mars Express targets Mars."
         }
       ],
       "narratives": [
         {
           "page_title": "火星快车号",
           "section": "任务",
-          "content": "ESA smoke fixture 仅用于验证新增来源可以复用 SourceAdapter 物化流程；火星快车号被记录为围绕火星运行的任务样例。",
-          "keywords": ["ESA", "火星快车号", "火星", "任务"]
+          "content": "ESA fixture 将火星快车号记录为围绕火星运行的任务样例，并说明该任务由 ESA 运营、目标为火星。",
+          "keywords": [
+            "ESA",
+            "火星快车号",
+            "火星",
+            "任务"
+          ]
         }
       ]
     },
@@ -32,14 +51,33 @@
           "object": "金星",
           "pattern": "esa_smoke_fixture",
           "raw": "ESA smoke fixture: Venus Express orbits Venus."
+        },
+        {
+          "subject": "金星快车号",
+          "relation": "OPERATED_BY",
+          "object": "ESA",
+          "pattern": "esa_smoke_fixture",
+          "raw": "ESA operates Venus Express."
+        },
+        {
+          "subject": "金星快车号",
+          "relation": "HAS_MISSION_TARGET",
+          "object": "金星",
+          "pattern": "esa_smoke_fixture",
+          "raw": "Venus Express targets Venus."
         }
       ],
       "narratives": [
         {
           "page_title": "金星快车号",
           "section": "任务",
-          "content": "ESA smoke fixture 将金星快车号记录为围绕金星运行的任务样例，用于验证单源检索下 ESA namespace 的最小覆盖。",
-          "keywords": ["ESA", "金星快车号", "金星", "任务"]
+          "content": "ESA fixture 将金星快车号记录为围绕金星运行的任务样例，并补充其由 ESA 运营、目标为金星。",
+          "keywords": [
+            "ESA",
+            "金星快车号",
+            "金星",
+            "任务"
+          ]
         }
       ]
     },
@@ -52,14 +90,199 @@
           "object": "月球",
           "pattern": "esa_smoke_fixture",
           "raw": "ESA smoke fixture: SMART-1 orbits the Moon."
+        },
+        {
+          "subject": "SMART-1",
+          "relation": "OPERATED_BY",
+          "object": "ESA",
+          "pattern": "esa_smoke_fixture",
+          "raw": "ESA operates SMART-1."
+        },
+        {
+          "subject": "SMART-1",
+          "relation": "HAS_MISSION_TARGET",
+          "object": "月球",
+          "pattern": "esa_smoke_fixture",
+          "raw": "SMART-1 targets the Moon."
         }
       ],
       "narratives": [
         {
           "page_title": "SMART-1",
           "section": "任务",
-          "content": "ESA smoke fixture 将 SMART-1 记录为围绕月球运行的任务样例，作为月球相关 smoke coverage 的最小补充。",
-          "keywords": ["ESA", "SMART-1", "月球", "任务"]
+          "content": "ESA fixture 将 SMART-1 记录为围绕月球运行的任务样例，并注明其由 ESA 运营、目标为月球。",
+          "keywords": [
+            "ESA",
+            "SMART-1",
+            "月球",
+            "任务"
+          ]
+        }
+      ]
+    },
+    {
+      "title": "JUICE",
+      "triples": [
+        {
+          "subject": "JUICE",
+          "relation": "OPERATED_BY",
+          "object": "ESA",
+          "pattern": "esa_smoke_fixture",
+          "raw": "ESA operates JUICE."
+        },
+        {
+          "subject": "JUICE",
+          "relation": "HAS_MISSION_TARGET",
+          "object": "木星",
+          "pattern": "esa_smoke_fixture",
+          "raw": "JUICE targets Jupiter."
+        },
+        {
+          "subject": "JUICE",
+          "relation": "HAS_MISSION_TARGET",
+          "object": "木卫二",
+          "pattern": "esa_smoke_fixture",
+          "raw": "JUICE targets Europa."
+        },
+        {
+          "subject": "JUICE",
+          "relation": "HAS_MISSION_TARGET",
+          "object": "木卫三",
+          "pattern": "esa_smoke_fixture",
+          "raw": "JUICE targets Ganymede."
+        },
+        {
+          "subject": "JUICE",
+          "relation": "HAS_MISSION_TARGET",
+          "object": "木卫四",
+          "pattern": "esa_smoke_fixture",
+          "raw": "JUICE targets Callisto."
+        }
+      ],
+      "narratives": [
+        {
+          "page_title": "JUICE",
+          "section": "任务",
+          "content": "ESA fixture 将 JUICE 记录为由 ESA 运营、面向木星及其木卫二、木卫三、木卫四的探测任务。",
+          "keywords": [
+            "ESA",
+            "JUICE",
+            "木星",
+            "木卫二",
+            "木卫三",
+            "木卫四"
+          ]
+        }
+      ]
+    },
+    {
+      "title": "Rosetta",
+      "triples": [
+        {
+          "subject": "Rosetta",
+          "relation": "OPERATED_BY",
+          "object": "ESA",
+          "pattern": "esa_smoke_fixture",
+          "raw": "ESA operates Rosetta."
+        },
+        {
+          "subject": "Rosetta",
+          "relation": "HAS_MISSION_TARGET",
+          "object": "彗星",
+          "pattern": "esa_smoke_fixture",
+          "raw": "Rosetta targets a comet."
+        }
+      ],
+      "narratives": [
+        {
+          "page_title": "Rosetta",
+          "section": "任务",
+          "content": "ESA fixture 将 Rosetta 记录为由 ESA 运营、以彗星为主要任务目标的代表性深空任务。",
+          "keywords": [
+            "ESA",
+            "Rosetta",
+            "彗星",
+            "任务"
+          ]
+        }
+      ]
+    },
+    {
+      "title": "Gaia",
+      "triples": [
+        {
+          "subject": "Gaia",
+          "relation": "ORBITS",
+          "object": "太阳",
+          "pattern": "esa_smoke_fixture",
+          "raw": "ESA smoke fixture: Gaia follows a solar orbit near Sun-Earth L2."
+        },
+        {
+          "subject": "Gaia",
+          "relation": "OPERATED_BY",
+          "object": "ESA",
+          "pattern": "esa_smoke_fixture",
+          "raw": "ESA operates Gaia."
+        },
+        {
+          "subject": "Gaia",
+          "relation": "HAS_MISSION_TARGET",
+          "object": "银河系",
+          "pattern": "esa_smoke_fixture",
+          "raw": "Gaia targets Milky Way astrometry."
+        }
+      ],
+      "narratives": [
+        {
+          "page_title": "Gaia",
+          "section": "任务",
+          "content": "ESA fixture 将 Gaia 记录为由 ESA 运营、沿太阳轨道工作并服务于银河系恒星测量的任务样例。",
+          "keywords": [
+            "ESA",
+            "Gaia",
+            "太阳",
+            "银河系",
+            "任务"
+          ]
+        }
+      ]
+    },
+    {
+      "title": "Solar Orbiter",
+      "triples": [
+        {
+          "subject": "Solar Orbiter",
+          "relation": "ORBITS",
+          "object": "太阳",
+          "pattern": "esa_smoke_fixture",
+          "raw": "ESA smoke fixture: Solar Orbiter orbits the Sun."
+        },
+        {
+          "subject": "Solar Orbiter",
+          "relation": "OPERATED_BY",
+          "object": "ESA",
+          "pattern": "esa_smoke_fixture",
+          "raw": "ESA operates Solar Orbiter."
+        },
+        {
+          "subject": "Solar Orbiter",
+          "relation": "HAS_MISSION_TARGET",
+          "object": "太阳",
+          "pattern": "esa_smoke_fixture",
+          "raw": "Solar Orbiter targets the Sun."
+        }
+      ],
+      "narratives": [
+        {
+          "page_title": "Solar Orbiter",
+          "section": "任务",
+          "content": "ESA fixture 将 Solar Orbiter 记录为沿太阳轨道工作的 ESA 任务，目标直指太阳及其日球层环境。",
+          "keywords": [
+            "ESA",
+            "Solar Orbiter",
+            "太阳",
+            "任务"
+          ]
         }
       ]
     }

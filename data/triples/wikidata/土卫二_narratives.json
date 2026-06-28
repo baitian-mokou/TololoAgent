@@ -1,0 +1,22 @@
+[
+  {
+    "section": "发现",
+    "content": "土卫二 fixture 记录其属于土星系统，并保留威廉·赫歇尔的发现者信息，便于单源检索验证。",
+    "keywords": [
+      "土卫二",
+      "土星系统",
+      "发现"
+    ],
+    "page_title": "土卫二",
+    "chunk_index": 0,
+    "path": "发现",
+    "chunk_id": "wikidata_土卫二_00",
+    "source": "wikidata",
+    "source_name": "wikidata",
+    "source_role": "primary",
+    "origin": "api",
+    "type": "embedding_chunk",
+    "schema_version": "wikidata_shadow_ready_v1",
+    "source_title": "土卫二"
+  }
+]

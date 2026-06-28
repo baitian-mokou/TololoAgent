@@ -1,0 +1,22 @@
+[
+  {
+    "section": "分类",
+    "content": "鸟神星 fixture 将其记录为柯伊伯带矮行星样例，并保留迈克·布朗团队相关发现信息。",
+    "keywords": [
+      "鸟神星",
+      "柯伊伯带",
+      "发现"
+    ],
+    "page_title": "鸟神星",
+    "chunk_index": 0,
+    "path": "分类",
+    "chunk_id": "wikidata_鸟神星_00",
+    "source": "wikidata",
+    "source_name": "wikidata",
+    "source_role": "primary",
+    "origin": "api",
+    "type": "embedding_chunk",
+    "schema_version": "wikidata_shadow_ready_v1",
+    "source_title": "鸟神星"
+  }
+]

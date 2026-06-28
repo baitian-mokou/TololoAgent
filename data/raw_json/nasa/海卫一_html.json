@@ -1,0 +1,15 @@
+{
+  "title": "海卫一",
+  "category": "Satellite",
+  "url": "https://science.nasa.gov/neptune/moons/triton/",
+  "html": "<div><table><tr><th>Field</th><th>海卫一</th></tr><tr><td>Mass (10^24 kg)</td><td>0.02139</td></tr><tr><td>Mean radius (km)</td><td>1353.4</td></tr><tr><td>Atmospheric composition</td><td>Nitrogen; Methane</td></tr></table></div>",
+  "text": "海卫一是海王星的天然卫星。海卫一绕海王星公转，并拥有以氮气为主、伴随甲烷的稀薄大气。",
+  "raw_text": "海卫一是海王星的天然卫星。海卫一绕海王星公转，并拥有以氮气为主、伴随甲烷的稀薄大气。",
+  "source": "nasa",
+  "source_name": "nasa",
+  "source_role": "primary",
+  "schema_version": "nasa_shadow_ready_v1",
+  "origin": "html_fallback",
+  "fetch_source": "offline_fact_sheet_fixture",
+  "crawl_time": "2026-06-28 18:00:00"
+}

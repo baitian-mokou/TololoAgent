@@ -2,7 +2,7 @@
   {
     "page_title": "金星快车号",
     "section": "任务",
-    "content": "ESA smoke fixture 将金星快车号记录为围绕金星运行的任务样例，用于验证单源检索下 ESA namespace 的最小覆盖。",
+    "content": "ESA fixture 将金星快车号记录为围绕金星运行的任务样例，并补充其由 ESA 运营、目标为金星。",
     "keywords": [
       "ESA",
       "金星快车号",

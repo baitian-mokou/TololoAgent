@@ -1,0 +1,22 @@
+[
+  {
+    "section": "大气",
+    "content": "木卫二是木星的天然卫星。木卫二绕木星公转，并拥有极薄的氧气外逸层。",
+    "keywords": [
+      "木卫二",
+      "NASA",
+      "卫星"
+    ],
+    "page_title": "木卫二",
+    "chunk_index": 0,
+    "path": "大气",
+    "chunk_id": "nasa_木卫二_00",
+    "source": "nasa",
+    "source_name": "nasa",
+    "source_role": "primary",
+    "origin": "html_fallback",
+    "type": "embedding_chunk",
+    "schema_version": "nasa_shadow_ready_v1",
+    "source_title": "木卫二"
+  }
+]

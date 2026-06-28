@@ -1,0 +1,15 @@
+{
+  "title": "冥卫一",
+  "category": "Satellite",
+  "url": "https://science.nasa.gov/dwarf-planets/pluto/moons/charon/",
+  "html": "<div><table><tr><th>Field</th><th>冥卫一</th></tr><tr><td>Mass (10^24 kg)</td><td>0.001586</td></tr><tr><td>Mean radius (km)</td><td>606</td></tr></table></div>",
+  "text": "冥卫一是冥王星的天然卫星。冥卫一绕冥王星公转，是冥王星系统中最大的卫星。",
+  "raw_text": "冥卫一是冥王星的天然卫星。冥卫一绕冥王星公转，是冥王星系统中最大的卫星。",
+  "source": "nasa",
+  "source_name": "nasa",
+  "source_role": "primary",
+  "schema_version": "nasa_shadow_ready_v1",
+  "origin": "html_fallback",
+  "fetch_source": "offline_fact_sheet_fixture",
+  "crawl_time": "2026-06-28 18:00:00"
+}

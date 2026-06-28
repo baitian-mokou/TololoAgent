@@ -1,5 +1,5 @@
 {
-  "version": "source_expansion_gold_set_v2",
+  "version": "source_expansion_gold_set_v3",
   "source_name": "nasa",
   "source_schema_version": "nasa_shadow_ready_v1",
   "source_purpose": "authoritative_fact_verification_and_numeric_supplement",
@@ -33,6 +33,643 @@
         "nasa"
       ],
       "source_schema_version": "nasa_shadow_ready_v1"
+    },
+    {
+      "id": "nasa_structured_mercury_mass",
+      "category": "structured",
+      "query_kind": "structured",
+      "query": "水星质量是多少",
+      "expected_path": "fallback",
+      "allowed_final_sources": [
+        "fallback"
+      ],
+      "expected_top_k_hit": true,
+      "expected_result": {
+        "subject": "水星",
+        "relation": "HAS_MASS",
+        "object": "3.301e23 kg"
+      },
+      "source_filter": [
+        "nasa"
+      ],
+      "source_schema_version": "nasa_shadow_ready_v1",
+      "normalized_expected_value": "3.301e23kg"
+    },
+    {
+      "id": "nasa_structured_mercury_radius",
+      "category": "structured",
+      "query_kind": "structured",
+      "query": "水星半径是多少",
+      "expected_path": "fallback",
+      "allowed_final_sources": [
+        "fallback"
+      ],
+      "expected_top_k_hit": true,
+      "expected_result": {
+        "subject": "水星",
+        "relation": "HAS_RADIUS",
+        "object": "2439.7 km"
+      },
+      "source_filter": [
+        "nasa"
+      ],
+      "source_schema_version": "nasa_shadow_ready_v1",
+      "normalized_expected_value": "2439.7km"
+    },
+    {
+      "id": "nasa_structured_deimos_orbits",
+      "category": "structured",
+      "query_kind": "structured",
+      "query": "火卫二绕谁公转",
+      "expected_path": "fallback",
+      "allowed_final_sources": [
+        "fallback"
+      ],
+      "expected_top_k_hit": true,
+      "expected_result": {
+        "subject": "火卫二",
+        "relation": "ORBITS",
+        "object": "火星"
+      },
+      "source_filter": [
+        "nasa"
+      ],
+      "source_schema_version": "nasa_shadow_ready_v1"
+    },
+    {
+      "id": "nasa_structured_europa_radius",
+      "category": "structured",
+      "query_kind": "structured",
+      "query": "木卫二半径是多少",
+      "expected_path": "fallback",
+      "allowed_final_sources": [
+        "fallback"
+      ],
+      "expected_top_k_hit": true,
+      "expected_result": {
+        "subject": "木卫二",
+        "relation": "HAS_RADIUS",
+        "object": "1560.8 km"
+      },
+      "source_filter": [
+        "nasa"
+      ],
+      "source_schema_version": "nasa_shadow_ready_v1",
+      "normalized_expected_value": "1560.8km"
+    },
+    {
+      "id": "nasa_structured_callisto_mass",
+      "category": "structured",
+      "query_kind": "structured",
+      "query": "木卫四质量是多少",
+      "expected_path": "fallback",
+      "allowed_final_sources": [
+        "fallback"
+      ],
+      "expected_top_k_hit": true,
+      "expected_result": {
+        "subject": "木卫四",
+        "relation": "HAS_MASS",
+        "object": "1.0759e23 kg"
+      },
+      "source_filter": [
+        "nasa"
+      ],
+      "source_schema_version": "nasa_shadow_ready_v1",
+      "normalized_expected_value": "1.0759e23kg"
+    },
+    {
+      "id": "nasa_structured_titan_part_of",
+      "category": "structured",
+      "query_kind": "structured",
+      "query": "土卫六属于哪里",
+      "expected_path": "fallback",
+      "allowed_final_sources": [
+        "fallback"
+      ],
+      "expected_top_k_hit": true,
+      "expected_result": {
+        "subject": "土卫六",
+        "relation": "PART_OF",
+        "object": "土星系统"
+      },
+      "source_filter": [
+        "nasa"
+      ],
+      "source_schema_version": "nasa_shadow_ready_v1"
+    },
+    {
+      "id": "nasa_structured_enceladus_orbits",
+      "category": "structured",
+      "query_kind": "structured",
+      "query": "土卫二绕谁运行",
+      "expected_path": "fallback",
+      "allowed_final_sources": [
+        "fallback"
+      ],
+      "expected_top_k_hit": true,
+      "expected_result": {
+        "subject": "土卫二",
+        "relation": "ORBITS",
+        "object": "土星"
+      },
+      "source_filter": [
+        "nasa"
+      ],
+      "source_schema_version": "nasa_shadow_ready_v1"
+    },
+    {
+      "id": "nasa_structured_triton_radius",
+      "category": "structured",
+      "query_kind": "structured",
+      "query": "海卫一半径是多少",
+      "expected_path": "fallback",
+      "allowed_final_sources": [
+        "fallback"
+      ],
+      "expected_top_k_hit": true,
+      "expected_result": {
+        "subject": "海卫一",
+        "relation": "HAS_RADIUS",
+        "object": "1353.4 km"
+      },
+      "source_filter": [
+        "nasa"
+      ],
+      "source_schema_version": "nasa_shadow_ready_v1",
+      "normalized_expected_value": "1353.4km"
+    },
+    {
+      "id": "nasa_structured_pluto_radius",
+      "category": "structured",
+      "query_kind": "structured",
+      "query": "冥王星半径是多少",
+      "expected_path": "fallback",
+      "allowed_final_sources": [
+        "fallback"
+      ],
+      "expected_top_k_hit": true,
+      "expected_result": {
+        "subject": "冥王星",
+        "relation": "HAS_RADIUS",
+        "object": "1188.3 km"
+      },
+      "source_filter": [
+        "nasa"
+      ],
+      "source_schema_version": "nasa_shadow_ready_v1",
+      "normalized_expected_value": "1188.3km"
+    },
+    {
+      "id": "nasa_structured_charon_orbits",
+      "category": "structured",
+      "query_kind": "structured",
+      "query": "冥卫一绕谁运行",
+      "expected_path": "fallback",
+      "allowed_final_sources": [
+        "fallback"
+      ],
+      "expected_top_k_hit": true,
+      "expected_result": {
+        "subject": "冥卫一",
+        "relation": "ORBITS",
+        "object": "冥王星"
+      },
+      "source_filter": [
+        "nasa"
+      ],
+      "source_schema_version": "nasa_shadow_ready_v1"
+    },
+    {
+      "id": "nasa_narrative_mars_atmosphere",
+      "category": "narrative",
+      "query_kind": "narrative",
+      "query": "火星大气成分",
+      "expected_path": "fallback",
+      "allowed_final_sources": [
+        "fallback"
+      ],
+      "expected_top_k_hit": true,
+      "expected_result": {
+        "page_title": "火星",
+        "section_any_of": [
+          "大气"
+        ]
+      },
+      "source_filter": [
+        "nasa"
+      ],
+      "source_schema_version": "nasa_shadow_ready_v1",
+      "expected_page_title": "火星",
+      "expected_section_any_of": [
+        "大气"
+      ]
+    },
+    {
+      "id": "nasa_narrative_mercury_atmosphere",
+      "category": "narrative",
+      "query_kind": "narrative",
+      "query": "水星外逸层成分",
+      "expected_path": "fallback",
+      "allowed_final_sources": [
+        "fallback"
+      ],
+      "expected_top_k_hit": true,
+      "expected_result": {
+        "page_title": "水星",
+        "section_any_of": [
+          "轨道"
+        ]
+      },
+      "source_filter": [
+        "nasa"
+      ],
+      "source_schema_version": "nasa_shadow_ready_v1",
+      "expected_page_title": "水星",
+      "expected_section_any_of": [
+        "轨道"
+      ]
+    },
+    {
+      "id": "nasa_narrative_titan_atmosphere",
+      "category": "narrative",
+      "query_kind": "narrative",
+      "query": "土卫六大气成分",
+      "expected_path": "fallback",
+      "allowed_final_sources": [
+        "fallback"
+      ],
+      "expected_top_k_hit": true,
+      "expected_result": {
+        "page_title": "土卫六",
+        "section_any_of": [
+          "大气"
+        ]
+      },
+      "source_filter": [
+        "nasa"
+      ],
+      "source_schema_version": "nasa_shadow_ready_v1",
+      "expected_page_title": "土卫六",
+      "expected_section_any_of": [
+        "大气"
+      ]
+    },
+    {
+      "id": "nasa_narrative_triton_atmosphere",
+      "category": "narrative",
+      "query_kind": "narrative",
+      "query": "海卫一大气成分",
+      "expected_path": "fallback",
+      "allowed_final_sources": [
+        "fallback"
+      ],
+      "expected_top_k_hit": true,
+      "expected_result": {
+        "page_title": "海卫一",
+        "section_any_of": [
+          "大气"
+        ]
+      },
+      "source_filter": [
+        "nasa"
+      ],
+      "source_schema_version": "nasa_shadow_ready_v1",
+      "expected_page_title": "海卫一",
+      "expected_section_any_of": [
+        "大气"
+      ]
+    },
+    {
+      "id": "nasa_narrative_sun_summary",
+      "category": "narrative",
+      "query_kind": "narrative",
+      "query": "太阳主要成分",
+      "expected_path": "fallback",
+      "allowed_final_sources": [
+        "fallback"
+      ],
+      "expected_top_k_hit": true,
+      "expected_result": {
+        "page_title": "太阳",
+        "section_any_of": [
+          "概要"
+        ]
+      },
+      "source_filter": [
+        "nasa"
+      ],
+      "source_schema_version": "nasa_shadow_ready_v1",
+      "expected_page_title": "太阳",
+      "expected_section_any_of": [
+        "概要"
+      ]
+    },
+    {
+      "id": "nasa_negative_unknown_saturn_moon",
+      "category": "negative",
+      "query_kind": "structured",
+      "query": "不存在的土星第八十八颗卫星绕谁运行",
+      "expected_path": "fallback",
+      "allowed_final_sources": [
+        "fallback"
+      ],
+      "expected_top_k_hit": false,
+      "expected_result": {
+        "empty": true
+      },
+      "source_filter": [
+        "nasa"
+      ],
+      "source_schema_version": "nasa_shadow_ready_v1"
+    },
+    {
+      "id": "nasa_negative_wikidata_only_absent",
+      "category": "negative",
+      "query_kind": "structured",
+      "query": "灶神星是谁发现的",
+      "expected_path": "fallback",
+      "allowed_final_sources": [
+        "fallback"
+      ],
+      "expected_top_k_hit": false,
+      "expected_result": {
+        "empty": true
+      },
+      "source_filter": [
+        "nasa"
+      ],
+      "source_schema_version": "nasa_shadow_ready_v1"
+    },
+    {
+      "id": "nasa_fallback_local_graph",
+      "category": "fallback",
+      "query_kind": "structured",
+      "query": "火卫一是火星的卫星吗",
+      "expected_path": "fallback",
+      "allowed_final_sources": [
+        "fallback"
+      ],
+      "expected_top_k_hit": true,
+      "expected_result": {
+        "subject": "火卫一",
+        "relation": "ORBITS",
+        "object": "火星"
+      },
+      "source_filter": [
+        "nasa"
+      ],
+      "source_schema_version": "nasa_shadow_ready_v1"
+    },
+    {
+      "id": "nasa_fallback_local_narrative",
+      "category": "fallback",
+      "query_kind": "narrative",
+      "query": "NASA 土卫六大气",
+      "expected_path": "fallback",
+      "allowed_final_sources": [
+        "fallback"
+      ],
+      "expected_top_k_hit": true,
+      "expected_result": {
+        "page_title": "土卫六",
+        "section_any_of": [
+          "大气"
+        ]
+      },
+      "source_filter": [
+        "nasa"
+      ],
+      "source_schema_version": "nasa_shadow_ready_v1",
+      "expected_page_title": "土卫六",
+      "expected_section_any_of": [
+        "大气"
+      ]
+    },
+    {
+      "id": "nasa_source_isolation_no_wikidata",
+      "category": "source_isolation",
+      "query_kind": "structured",
+      "query": "阋神星是谁发现的",
+      "expected_path": "fallback",
+      "allowed_final_sources": [
+        "fallback"
+      ],
+      "expected_top_k_hit": false,
+      "expected_result": {
+        "empty": true
+      },
+      "source_filter": [
+        "nasa"
+      ],
+      "source_schema_version": "nasa_shadow_ready_v1"
+    },
+    {
+      "id": "nasa_source_isolation_titan",
+      "category": "source_isolation",
+      "query_kind": "narrative",
+      "query": "土卫六 NASA 大气说明",
+      "expected_path": "fallback",
+      "allowed_final_sources": [
+        "fallback"
+      ],
+      "expected_top_k_hit": true,
+      "expected_result": {
+        "page_title": "土卫六",
+        "section_any_of": [
+          "大气"
+        ]
+      },
+      "source_filter": [
+        "nasa"
+      ],
+      "source_schema_version": "nasa_shadow_ready_v1",
+      "expected_page_title": "土卫六",
+      "expected_section_any_of": [
+        "大气"
+      ]
+    },
+    {
+      "id": "nasa_metadata_structured_schema",
+      "category": "metadata_completeness",
+      "query_kind": "structured",
+      "query": "冥卫一绕谁运行 metadata",
+      "expected_path": "fallback",
+      "allowed_final_sources": [
+        "fallback"
+      ],
+      "expected_top_k_hit": true,
+      "expected_result": {
+        "subject": "冥卫一",
+        "relation": "ORBITS",
+        "object": "冥王星"
+      },
+      "source_filter": [
+        "nasa"
+      ],
+      "source_schema_version": "nasa_shadow_ready_v1"
+    },
+    {
+      "id": "nasa_metadata_narrative_schema",
+      "category": "metadata_completeness",
+      "query_kind": "narrative",
+      "query": "海卫一大气 schema version",
+      "expected_path": "fallback",
+      "allowed_final_sources": [
+        "fallback"
+      ],
+      "expected_top_k_hit": true,
+      "expected_result": {
+        "page_title": "海卫一",
+        "section_any_of": [
+          "大气"
+        ]
+      },
+      "source_filter": [
+        "nasa"
+      ],
+      "source_schema_version": "nasa_shadow_ready_v1",
+      "expected_page_title": "海卫一",
+      "expected_section_any_of": [
+        "大气"
+      ]
+    },
+    {
+      "id": "nasa_path_routing_structured",
+      "category": "path_routing",
+      "query_kind": "structured",
+      "query": "木卫四轨道主星",
+      "expected_path": "fallback",
+      "allowed_final_sources": [
+        "fallback"
+      ],
+      "expected_top_k_hit": true,
+      "expected_result": {
+        "subject": "木卫四",
+        "relation": "ORBITS",
+        "object": "木星"
+      },
+      "source_filter": [
+        "nasa"
+      ],
+      "source_schema_version": "nasa_shadow_ready_v1"
+    },
+    {
+      "id": "nasa_path_routing_narrative",
+      "category": "path_routing",
+      "query_kind": "narrative",
+      "query": "冥王星稀薄大气说明",
+      "expected_path": "fallback",
+      "allowed_final_sources": [
+        "fallback"
+      ],
+      "expected_top_k_hit": true,
+      "expected_result": {
+        "page_title": "冥王星",
+        "section_any_of": [
+          "大气"
+        ]
+      },
+      "source_filter": [
+        "nasa"
+      ],
+      "source_schema_version": "nasa_shadow_ready_v1",
+      "expected_page_title": "冥王星",
+      "expected_section_any_of": [
+        "大气"
+      ]
+    },
+    {
+      "id": "nasa_unit_pluto_mass",
+      "category": "unit_normalization",
+      "query_kind": "structured",
+      "query": "冥王星的质量",
+      "expected_path": "fallback",
+      "allowed_final_sources": [
+        "fallback"
+      ],
+      "expected_top_k_hit": true,
+      "expected_result": {
+        "subject": "冥王星",
+        "relation": "HAS_MASS",
+        "object": "1.303e22 kg"
+      },
+      "source_filter": [
+        "nasa"
+      ],
+      "source_schema_version": "nasa_shadow_ready_v1",
+      "normalized_expected_value": "1.303e22kg"
+    },
+    {
+      "id": "nasa_unit_titan_radius",
+      "category": "unit_normalization",
+      "query_kind": "structured",
+      "query": "土卫六半径是多少",
+      "expected_path": "fallback",
+      "allowed_final_sources": [
+        "fallback"
+      ],
+      "expected_top_k_hit": true,
+      "expected_result": {
+        "subject": "土卫六",
+        "relation": "HAS_RADIUS",
+        "object": "2574.7 km"
+      },
+      "source_filter": [
+        "nasa"
+      ],
+      "source_schema_version": "nasa_shadow_ready_v1",
+      "normalized_expected_value": "2574.7km"
+    },
+    {
+      "id": "nasa_conflict_pluto_atmosphere",
+      "category": "conflict_case",
+      "query_kind": "narrative",
+      "query": "冥王星大气主要是氮气还是氧气",
+      "expected_path": "fallback",
+      "allowed_final_sources": [
+        "fallback"
+      ],
+      "expected_top_k_hit": true,
+      "expected_result": {
+        "page_title": "冥王星",
+        "section_any_of": [
+          "大气"
+        ]
+      },
+      "source_filter": [
+        "nasa"
+      ],
+      "source_schema_version": "nasa_shadow_ready_v1",
+      "expected_page_title": "冥王星",
+      "expected_section_any_of": [
+        "大气"
+      ]
+    },
+    {
+      "id": "nasa_conflict_titan_atmosphere",
+      "category": "conflict_case",
+      "query_kind": "narrative",
+      "query": "土卫六大气主要是氮气还是二氧化碳",
+      "expected_path": "fallback",
+      "allowed_final_sources": [
+        "fallback"
+      ],
+      "expected_top_k_hit": true,
+      "expected_result": {
+        "page_title": "土卫六",
+        "section_any_of": [
+          "大气"
+        ]
+      },
+      "source_filter": [
+        "nasa"
+      ],
+      "source_schema_version": "nasa_shadow_ready_v1",
+      "expected_page_title": "土卫六",
+      "expected_section_any_of": [
+        "大气"
+      ]
     },
     {
       "id": "nasa_structured_mars_mass",
@@ -139,92 +776,40 @@
       "source_schema_version": "nasa_shadow_ready_v1"
     },
     {
-      "id": "nasa_narrative_mars_atmosphere",
-      "category": "narrative",
-      "query_kind": "narrative",
-      "query": "火星大气成分",
-      "expected_path": "fallback",
-      "allowed_final_sources": [
-        "fallback"
-      ],
-      "expected_top_k_hit": true,
-      "expected_result": {
-        "page_title": "火星",
-        "section_any_of": [
-          "大气"
-        ]
-      },
-      "source_filter": [
-        "nasa"
-      ],
-      "source_schema_version": "nasa_shadow_ready_v1",
-      "expected_page_title": "火星",
-      "expected_section_any_of": [
-        "大气"
-      ]
-    },
-    {
-      "id": "nasa_narrative_mars_weather",
-      "category": "narrative",
-      "query_kind": "narrative",
-      "query": "火星为什么寒冷干燥",
-      "expected_path": "fallback",
-      "allowed_final_sources": [
-        "fallback"
-      ],
-      "expected_top_k_hit": true,
-      "expected_result": {
-        "page_title": "火星",
-        "section_any_of": [
-          "大气"
-        ]
-      },
-      "source_filter": [
-        "nasa"
-      ],
-      "source_schema_version": "nasa_shadow_ready_v1",
-      "expected_page_title": "火星",
-      "expected_section_any_of": [
-        "大气"
-      ]
-    },
-    {
-      "id": "nasa_narrative_phobos_context_absent",
-      "category": "narrative",
-      "query_kind": "narrative",
-      "query": "火卫一任务页面摘要",
-      "expected_path": "fallback",
-      "allowed_final_sources": [
-        "fallback"
-      ],
-      "expected_top_k_hit": true,
-      "expected_result": {
-        "page_title": "火卫一",
-        "section_any_of": [
-          "轨道"
-        ]
-      },
-      "source_filter": [
-        "nasa"
-      ],
-      "source_schema_version": "nasa_shadow_ready_v1",
-      "expected_page_title": "火卫一",
-      "expected_section_any_of": [
-        "轨道"
-      ]
-    },
-    {
-      "id": "nasa_negative_deimos_absent",
-      "category": "negative",
+      "id": "nasa_structured_sun_radius",
+      "category": "structured",
       "query_kind": "structured",
-      "query": "火卫二绕谁公转",
+      "query": "太阳半径是多少",
       "expected_path": "fallback",
       "allowed_final_sources": [
         "fallback"
       ],
-      "expected_top_k_hit": false,
+      "expected_top_k_hit": true,
       "expected_result": {
-        "empty": true
+        "subject": "太阳",
+        "relation": "HAS_RADIUS",
+        "object": "695700 km"
+      },
+      "source_filter": [
+        "nasa"
+      ],
+      "source_schema_version": "nasa_shadow_ready_v1",
+      "normalized_expected_value": "695700km"
+    },
+    {
+      "id": "nasa_structured_europa_part_of",
+      "category": "structured",
+      "query_kind": "structured",
+      "query": "木卫二属于哪里",
+      "expected_path": "fallback",
+      "allowed_final_sources": [
+        "fallback"
+      ],
+      "expected_top_k_hit": true,
+      "expected_result": {
+        "subject": "木卫二",
+        "relation": "PART_OF",
+        "object": "木星系统"
       },
       "source_filter": [
         "nasa"
@@ -232,55 +817,19 @@
       "source_schema_version": "nasa_shadow_ready_v1"
     },
     {
-      "id": "nasa_negative_jupiter_absent",
-      "category": "negative",
+      "id": "nasa_structured_triton_orbits",
+      "category": "structured",
       "query_kind": "structured",
-      "query": "木卫四质量是多少",
-      "expected_path": "fallback",
-      "allowed_final_sources": [
-        "fallback"
-      ],
-      "expected_top_k_hit": false,
-      "expected_result": {
-        "empty": true
-      },
-      "source_filter": [
-        "nasa"
-      ],
-      "source_schema_version": "nasa_shadow_ready_v1"
-    },
-    {
-      "id": "nasa_negative_wikidata_only_absent",
-      "category": "negative",
-      "query_kind": "structured",
-      "query": "谷神星是谁发现的",
-      "expected_path": "fallback",
-      "allowed_final_sources": [
-        "fallback"
-      ],
-      "expected_top_k_hit": false,
-      "expected_result": {
-        "empty": true
-      },
-      "source_filter": [
-        "nasa"
-      ],
-      "source_schema_version": "nasa_shadow_ready_v1"
-    },
-    {
-      "id": "nasa_fallback_local_graph",
-      "category": "fallback",
-      "query_kind": "structured",
-      "query": "火卫一是火星的卫星吗",
+      "query": "海卫一绕谁运行",
       "expected_path": "fallback",
       "allowed_final_sources": [
         "fallback"
       ],
       "expected_top_k_hit": true,
       "expected_result": {
-        "subject": "火卫一",
+        "subject": "海卫一",
         "relation": "ORBITS",
-        "object": "火星"
+        "object": "海王星"
       },
       "source_filter": [
         "nasa"
@@ -288,51 +837,50 @@
       "source_schema_version": "nasa_shadow_ready_v1"
     },
     {
-      "id": "nasa_fallback_local_narrative",
-      "category": "fallback",
-      "query_kind": "narrative",
-      "query": "NASA Mars Fact Sheet 火星大气",
+      "id": "nasa_structured_pluto_mass",
+      "category": "structured",
+      "query_kind": "structured",
+      "query": "冥王星质量是多少",
       "expected_path": "fallback",
       "allowed_final_sources": [
         "fallback"
       ],
       "expected_top_k_hit": true,
       "expected_result": {
-        "page_title": "火星",
-        "section_any_of": [
-          "大气"
-        ]
+        "subject": "冥王星",
+        "relation": "HAS_MASS",
+        "object": "1.303e22 kg"
       },
       "source_filter": [
         "nasa"
       ],
       "source_schema_version": "nasa_shadow_ready_v1",
-      "expected_page_title": "火星",
-      "expected_section_any_of": [
-        "大气"
-      ]
+      "normalized_expected_value": "1.303e22kg"
     },
     {
-      "id": "nasa_source_isolation_no_wikidata",
-      "category": "source_isolation",
+      "id": "nasa_structured_charon_radius",
+      "category": "structured",
       "query_kind": "structured",
-      "query": "冥王星是谁发现的",
+      "query": "冥卫一半径是多少",
       "expected_path": "fallback",
       "allowed_final_sources": [
         "fallback"
       ],
-      "expected_top_k_hit": false,
+      "expected_top_k_hit": true,
       "expected_result": {
-        "empty": true
+        "subject": "冥卫一",
+        "relation": "HAS_RADIUS",
+        "object": "606 km"
       },
       "source_filter": [
         "nasa"
       ],
-      "source_schema_version": "nasa_shadow_ready_v1"
+      "source_schema_version": "nasa_shadow_ready_v1",
+      "normalized_expected_value": "606km"
     },
     {
-      "id": "nasa_source_isolation_no_zhwiki",
-      "category": "source_isolation",
+      "id": "nasa_narrative_earth_atmosphere",
+      "category": "narrative",
       "query_kind": "narrative",
       "query": "地球大气成分",
       "expected_path": "fallback",
@@ -351,96 +899,6 @@
       ],
       "source_schema_version": "nasa_shadow_ready_v1",
       "expected_page_title": "地球",
-      "expected_section_any_of": [
-        "大气"
-      ]
-    },
-    {
-      "id": "nasa_metadata_structured_schema",
-      "category": "metadata_completeness",
-      "query_kind": "structured",
-      "query": "火卫一绕谁运行 metadata",
-      "expected_path": "fallback",
-      "allowed_final_sources": [
-        "fallback"
-      ],
-      "expected_top_k_hit": true,
-      "expected_result": {
-        "subject": "火卫一",
-        "relation": "ORBITS",
-        "object": "火星"
-      },
-      "source_filter": [
-        "nasa"
-      ],
-      "source_schema_version": "nasa_shadow_ready_v1"
-    },
-    {
-      "id": "nasa_metadata_narrative_schema",
-      "category": "metadata_completeness",
-      "query_kind": "narrative",
-      "query": "火星大气 schema version",
-      "expected_path": "fallback",
-      "allowed_final_sources": [
-        "fallback"
-      ],
-      "expected_top_k_hit": true,
-      "expected_result": {
-        "page_title": "火星",
-        "section_any_of": [
-          "大气"
-        ]
-      },
-      "source_filter": [
-        "nasa"
-      ],
-      "source_schema_version": "nasa_shadow_ready_v1",
-      "expected_page_title": "火星",
-      "expected_section_any_of": [
-        "大气"
-      ]
-    },
-    {
-      "id": "nasa_path_routing_structured",
-      "category": "path_routing",
-      "query_kind": "structured",
-      "query": "火卫一轨道主星",
-      "expected_path": "fallback",
-      "allowed_final_sources": [
-        "fallback"
-      ],
-      "expected_top_k_hit": true,
-      "expected_result": {
-        "subject": "火卫一",
-        "relation": "ORBITS",
-        "object": "火星"
-      },
-      "source_filter": [
-        "nasa"
-      ],
-      "source_schema_version": "nasa_shadow_ready_v1"
-    },
-    {
-      "id": "nasa_path_routing_narrative",
-      "category": "path_routing",
-      "query_kind": "narrative",
-      "query": "火星表面气压为什么低",
-      "expected_path": "fallback",
-      "allowed_final_sources": [
-        "fallback"
-      ],
-      "expected_top_k_hit": true,
-      "expected_result": {
-        "page_title": "火星",
-        "section_any_of": [
-          "大气"
-        ]
-      },
-      "source_filter": [
-        "nasa"
-      ],
-      "source_schema_version": "nasa_shadow_ready_v1",
-      "expected_page_title": "火星",
       "expected_section_any_of": [
         "大气"
       ]
@@ -469,117 +927,6 @@
       "expected_section_any_of": [
         "大气"
       ]
-    },
-    {
-      "id": "nasa_unit_atmosphere_percent_co2",
-      "category": "unit_normalization",
-      "query_kind": "narrative",
-      "query": "火星二氧化碳约占多少百分比",
-      "expected_path": "fallback",
-      "allowed_final_sources": [
-        "fallback"
-      ],
-      "expected_top_k_hit": true,
-      "expected_result": {
-        "page_title": "火星",
-        "section_any_of": [
-          "大气"
-        ]
-      },
-      "source_filter": [
-        "nasa"
-      ],
-      "source_schema_version": "nasa_shadow_ready_v1",
-      "expected_page_title": "火星",
-      "expected_section_any_of": [
-        "大气"
-      ]
-    },
-    {
-      "id": "nasa_unit_atmosphere_percent_nitrogen",
-      "category": "unit_normalization",
-      "query_kind": "narrative",
-      "query": "火星氮气约 2.7%",
-      "expected_path": "fallback",
-      "allowed_final_sources": [
-        "fallback"
-      ],
-      "expected_top_k_hit": true,
-      "expected_result": {
-        "page_title": "火星",
-        "section_any_of": [
-          "大气"
-        ]
-      },
-      "source_filter": [
-        "nasa"
-      ],
-      "source_schema_version": "nasa_shadow_ready_v1",
-      "expected_page_title": "火星",
-      "expected_section_any_of": [
-        "大气"
-      ]
-    },
-    {
-      "id": "nasa_conflict_mars_co2",
-      "category": "conflict_case",
-      "query_kind": "narrative",
-      "query": "火星大气主要是氧气还是二氧化碳",
-      "expected_path": "fallback",
-      "allowed_final_sources": [
-        "fallback"
-      ],
-      "expected_top_k_hit": true,
-      "expected_result": {
-        "page_title": "火星",
-        "section_any_of": [
-          "大气"
-        ]
-      },
-      "source_filter": [
-        "nasa"
-      ],
-      "source_schema_version": "nasa_shadow_ready_v1",
-      "expected_page_title": "火星",
-      "expected_section_any_of": [
-        "大气"
-      ]
-    },
-    {
-      "id": "nasa_conflict_no_multisource_pluto",
-      "category": "conflict_case",
-      "query_kind": "structured",
-      "query": "NASA shadow 里冥王星属于柯伊伯带吗",
-      "expected_path": "fallback",
-      "allowed_final_sources": [
-        "fallback"
-      ],
-      "expected_top_k_hit": false,
-      "expected_result": {
-        "empty": true
-      },
-      "source_filter": [
-        "nasa"
-      ],
-      "source_schema_version": "nasa_shadow_ready_v1"
-    },
-    {
-      "id": "nasa_conflict_no_wikidata_mass",
-      "category": "conflict_case",
-      "query_kind": "structured",
-      "query": "NASA shadow 用 Wikidata 木卫四质量回答吗",
-      "expected_path": "fallback",
-      "allowed_final_sources": [
-        "fallback"
-      ],
-      "expected_top_k_hit": false,
-      "expected_result": {
-        "empty": true
-      },
-      "source_filter": [
-        "nasa"
-      ],
-      "source_schema_version": "nasa_shadow_ready_v1"
     }
   ]
 }

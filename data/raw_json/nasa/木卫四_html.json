@@ -1,0 +1,15 @@
+{
+  "title": "木卫四",
+  "category": "Satellite",
+  "url": "https://science.nasa.gov/jupiter/moons/callisto/",
+  "html": "<div><table><tr><th>Field</th><th>木卫四</th></tr><tr><td>Mass (10^24 kg)</td><td>0.10759</td></tr><tr><td>Mean radius (km)</td><td>2410.3</td></tr><tr><td>Atmospheric composition</td><td>Carbon dioxide; Oxygen</td></tr></table></div>",
+  "text": "木卫四是木星的天然卫星。木卫四绕木星公转，表面附近的大气极其稀薄，常提到二氧化碳和氧。",
+  "raw_text": "木卫四是木星的天然卫星。木卫四绕木星公转，表面附近的大气极其稀薄，常提到二氧化碳和氧。",
+  "source": "nasa",
+  "source_name": "nasa",
+  "source_role": "primary",
+  "schema_version": "nasa_shadow_ready_v1",
+  "origin": "html_fallback",
+  "fetch_source": "offline_fact_sheet_fixture",
+  "crawl_time": "2026-06-28 18:00:00"
+}

@@ -1,5 +1,5 @@
 {
-  "version": "wikidata_solar_system_fixture_v1",
+  "version": "wikidata_solar_system_fixture_v2",
   "source_name": "wikidata",
   "note": "Offline auditable fixture. Live Wikidata fetch is a future enhancement.",
   "records": [
@@ -340,6 +340,11 @@
           "property_id": "P361"
         },
         {
+          "relation": "LOCATED_IN",
+          "object": "火星系统",
+          "property_id": "P276"
+        },
+        {
           "relation": "DISCOVERED_BY",
           "object": "阿萨夫·霍尔",
           "property_id": "P61"
@@ -430,6 +435,11 @@
           "property_id": "P361"
         },
         {
+          "relation": "LOCATED_IN",
+          "object": "木星系统",
+          "property_id": "P276"
+        },
+        {
           "relation": "DISCOVERED_BY",
           "object": "伽利略·伽利莱",
           "property_id": "P61"
@@ -517,6 +527,11 @@
           "relation": "PART_OF",
           "object": "木星系统",
           "property_id": "P361"
+        },
+        {
+          "relation": "LOCATED_IN",
+          "object": "木星系统",
+          "property_id": "P276"
         },
         {
           "relation": "DISCOVERED_BY",
@@ -641,6 +656,100 @@
       ]
     },
     {
+      "title": "土卫六",
+      "qid": "Q2565",
+      "triples": [
+        {
+          "relation": "ORBITS",
+          "object": "土星",
+          "property_id": "P397"
+        },
+        {
+          "relation": "PART_OF",
+          "object": "土星系统",
+          "property_id": "P361"
+        },
+        {
+          "relation": "LOCATED_IN",
+          "object": "土星系统",
+          "property_id": "P276"
+        },
+        {
+          "relation": "DISCOVERED_BY",
+          "object": "克里斯蒂安·惠更斯",
+          "property_id": "P61"
+        },
+        {
+          "relation": "HAS_MASS",
+          "object": "1.3452e23 kg",
+          "property_id": "P2067"
+        },
+        {
+          "relation": "HAS_RADIUS",
+          "object": "2574.7 km",
+          "property_id": "P2120"
+        }
+      ],
+      "narratives": [
+        {
+          "section": "发现",
+          "content": "土卫六 fixture 将其记录为土星系统成员，并保留克里斯蒂安·惠更斯这一发现者信息以及质量、半径等结构化事实。",
+          "keywords": [
+            "土卫六",
+            "土星系统",
+            "发现者"
+          ]
+        }
+      ]
+    },
+    {
+      "title": "土卫二",
+      "qid": "Q3303",
+      "triples": [
+        {
+          "relation": "ORBITS",
+          "object": "土星",
+          "property_id": "P397"
+        },
+        {
+          "relation": "PART_OF",
+          "object": "土星系统",
+          "property_id": "P361"
+        },
+        {
+          "relation": "LOCATED_IN",
+          "object": "土星系统",
+          "property_id": "P276"
+        },
+        {
+          "relation": "DISCOVERED_BY",
+          "object": "威廉·赫歇尔",
+          "property_id": "P61"
+        },
+        {
+          "relation": "HAS_MASS",
+          "object": "1.0802e20 kg",
+          "property_id": "P2067"
+        },
+        {
+          "relation": "HAS_RADIUS",
+          "object": "252.1 km",
+          "property_id": "P2120"
+        }
+      ],
+      "narratives": [
+        {
+          "section": "发现",
+          "content": "土卫二 fixture 记录其属于土星系统，并保留威廉·赫歇尔的发现者信息，便于单源检索验证。",
+          "keywords": [
+            "土卫二",
+            "土星系统",
+            "发现"
+          ]
+        }
+      ]
+    },
+    {
       "title": "天王星",
       "qid": "Q324",
       "triples": [
@@ -745,6 +854,53 @@
       ]
     },
     {
+      "title": "海卫一",
+      "qid": "Q3359",
+      "triples": [
+        {
+          "relation": "ORBITS",
+          "object": "海王星",
+          "property_id": "P397"
+        },
+        {
+          "relation": "PART_OF",
+          "object": "海王星系统",
+          "property_id": "P361"
+        },
+        {
+          "relation": "LOCATED_IN",
+          "object": "海王星系统",
+          "property_id": "P276"
+        },
+        {
+          "relation": "DISCOVERED_BY",
+          "object": "威廉·拉塞尔",
+          "property_id": "P61"
+        },
+        {
+          "relation": "HAS_MASS",
+          "object": "2.139e22 kg",
+          "property_id": "P2067"
+        },
+        {
+          "relation": "HAS_RADIUS",
+          "object": "1353.4 km",
+          "property_id": "P2120"
+        }
+      ],
+      "narratives": [
+        {
+          "section": "发现",
+          "content": "海卫一 fixture 保留其绕海王星运行、属于海王星系统以及由威廉·拉塞尔发现等核心事实。",
+          "keywords": [
+            "海卫一",
+            "海王星",
+            "发现者"
+          ]
+        }
+      ]
+    },
+    {
       "title": "冥王星",
       "qid": "Q339",
       "triples": [
@@ -757,6 +913,11 @@
           "relation": "PART_OF",
           "object": "柯伊伯带",
           "property_id": "P361"
+        },
+        {
+          "relation": "LOCATED_IN",
+          "object": "柯伊伯带",
+          "property_id": "P276"
         },
         {
           "relation": "DISCOVERED_BY",
@@ -792,6 +953,53 @@
       ]
     },
     {
+      "title": "冥卫一",
+      "qid": "Q5964",
+      "triples": [
+        {
+          "relation": "ORBITS",
+          "object": "冥王星",
+          "property_id": "P397"
+        },
+        {
+          "relation": "PART_OF",
+          "object": "冥王星系统",
+          "property_id": "P361"
+        },
+        {
+          "relation": "LOCATED_IN",
+          "object": "冥王星系统",
+          "property_id": "P276"
+        },
+        {
+          "relation": "DISCOVERED_BY",
+          "object": "詹姆斯·克里斯蒂",
+          "property_id": "P61"
+        },
+        {
+          "relation": "HAS_MASS",
+          "object": "1.586e21 kg",
+          "property_id": "P2067"
+        },
+        {
+          "relation": "HAS_RADIUS",
+          "object": "606 km",
+          "property_id": "P2120"
+        }
+      ],
+      "narratives": [
+        {
+          "section": "发现",
+          "content": "冥卫一 fixture 记录其属于冥王星系统，并将发现者登记为詹姆斯·克里斯蒂。",
+          "keywords": [
+            "冥卫一",
+            "冥王星系统",
+            "发现者"
+          ]
+        }
+      ]
+    },
+    {
       "title": "谷神星",
       "qid": "Q596",
       "triples": [
@@ -804,6 +1012,11 @@
           "relation": "PART_OF",
           "object": "小行星带",
           "property_id": "P361"
+        },
+        {
+          "relation": "LOCATED_IN",
+          "object": "小行星带",
+          "property_id": "P276"
         },
         {
           "relation": "DISCOVERED_BY",
@@ -827,6 +1040,194 @@
           "content": "谷神星 fixture 记录其位于小行星带，发现者为朱塞普·皮亚齐。",
           "keywords": [
             "谷神星",
+            "小行星带",
+            "发现者"
+          ]
+        }
+      ]
+    },
+    {
+      "title": "阋神星",
+      "qid": "Q16711",
+      "triples": [
+        {
+          "relation": "ORBITS",
+          "object": "太阳",
+          "property_id": "P397"
+        },
+        {
+          "relation": "PART_OF",
+          "object": "离散盘",
+          "property_id": "P361"
+        },
+        {
+          "relation": "LOCATED_IN",
+          "object": "太阳系",
+          "property_id": "P276"
+        },
+        {
+          "relation": "DISCOVERED_BY",
+          "object": "迈克·布朗",
+          "property_id": "P61"
+        },
+        {
+          "relation": "HAS_MASS",
+          "object": "1.6466e22 kg",
+          "property_id": "P2067"
+        },
+        {
+          "relation": "HAS_RADIUS",
+          "object": "1163 km",
+          "property_id": "P2120"
+        }
+      ],
+      "narratives": [
+        {
+          "section": "分类",
+          "content": "阋神星 fixture 将其视为太阳系中的矮行星样例，保留离散盘成员关系和迈克·布朗相关发现信息。",
+          "keywords": [
+            "阋神星",
+            "离散盘",
+            "矮行星"
+          ]
+        }
+      ]
+    },
+    {
+      "title": "鸟神星",
+      "qid": "Q14913",
+      "triples": [
+        {
+          "relation": "ORBITS",
+          "object": "太阳",
+          "property_id": "P397"
+        },
+        {
+          "relation": "PART_OF",
+          "object": "柯伊伯带",
+          "property_id": "P361"
+        },
+        {
+          "relation": "LOCATED_IN",
+          "object": "太阳系",
+          "property_id": "P276"
+        },
+        {
+          "relation": "DISCOVERED_BY",
+          "object": "迈克·布朗",
+          "property_id": "P61"
+        },
+        {
+          "relation": "HAS_MASS",
+          "object": "3.1e21 kg",
+          "property_id": "P2067"
+        },
+        {
+          "relation": "HAS_RADIUS",
+          "object": "715 km",
+          "property_id": "P2120"
+        }
+      ],
+      "narratives": [
+        {
+          "section": "分类",
+          "content": "鸟神星 fixture 将其记录为柯伊伯带矮行星样例，并保留迈克·布朗团队相关发现信息。",
+          "keywords": [
+            "鸟神星",
+            "柯伊伯带",
+            "发现"
+          ]
+        }
+      ]
+    },
+    {
+      "title": "妊神星",
+      "qid": "Q15034",
+      "triples": [
+        {
+          "relation": "ORBITS",
+          "object": "太阳",
+          "property_id": "P397"
+        },
+        {
+          "relation": "PART_OF",
+          "object": "柯伊伯带",
+          "property_id": "P361"
+        },
+        {
+          "relation": "LOCATED_IN",
+          "object": "太阳系",
+          "property_id": "P276"
+        },
+        {
+          "relation": "DISCOVERED_BY",
+          "object": "迈克·布朗",
+          "property_id": "P61"
+        },
+        {
+          "relation": "HAS_MASS",
+          "object": "4.006e21 kg",
+          "property_id": "P2067"
+        },
+        {
+          "relation": "HAS_RADIUS",
+          "object": "816 km",
+          "property_id": "P2120"
+        }
+      ],
+      "narratives": [
+        {
+          "section": "分类",
+          "content": "妊神星 fixture 保留其作为柯伊伯带矮行星的结构化事实，可用于 source isolation 和单位归一化检索。",
+          "keywords": [
+            "妊神星",
+            "柯伊伯带",
+            "半径"
+          ]
+        }
+      ]
+    },
+    {
+      "title": "灶神星",
+      "qid": "Q3030",
+      "triples": [
+        {
+          "relation": "ORBITS",
+          "object": "太阳",
+          "property_id": "P397"
+        },
+        {
+          "relation": "PART_OF",
+          "object": "小行星带",
+          "property_id": "P361"
+        },
+        {
+          "relation": "LOCATED_IN",
+          "object": "小行星带",
+          "property_id": "P276"
+        },
+        {
+          "relation": "DISCOVERED_BY",
+          "object": "海因里希·威廉·奥伯斯",
+          "property_id": "P61"
+        },
+        {
+          "relation": "HAS_MASS",
+          "object": "2.5908e20 kg",
+          "property_id": "P2067"
+        },
+        {
+          "relation": "HAS_RADIUS",
+          "object": "262.7 km",
+          "property_id": "P2120"
+        }
+      ],
+      "narratives": [
+        {
+          "section": "发现",
+          "content": "灶神星 fixture 将其记录为小行星带中的代表性天体，并保留海因里希·威廉·奥伯斯的发现者信息。",
+          "keywords": [
+            "灶神星",
             "小行星带",
             "发现者"
           ]

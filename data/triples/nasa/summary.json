@@ -1,12 +1,12 @@
 {
-  "total_triples": 28,
-  "total_narratives": 9,
-  "total_files": 9,
+  "total_triples": 72,
+  "total_narratives": 19,
+  "total_files": 19,
   "pipeline": "nasa_source_adapter_v1",
   "source_schema_version": "nasa_shadow_ready_v1",
   "materialization_mode": "offline_nasa_raw_pipeline_v1",
   "mode": "offline",
   "official_namespace_written": true,
   "cutover_ready": false,
-  "time": "2026-06-28T04:31:35.532268+00:00"
+  "time": "2026-06-28T06:01:09.225189+00:00"
 }

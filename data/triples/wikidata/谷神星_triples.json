@@ -30,6 +30,21 @@
     "source_title": "谷神星"
   },
   {
+    "relation": "LOCATED_IN",
+    "object": "小行星带",
+    "property_id": "P276",
+    "subject": "谷神星",
+    "pattern": "wikidata_adapter",
+    "raw": "wikidata adapter record: 谷神星 LOCATED_IN 小行星带",
+    "source": "wikidata",
+    "source_name": "wikidata",
+    "source_role": "primary",
+    "origin": "api",
+    "type": "triple_candidate",
+    "schema_version": "wikidata_shadow_ready_v1",
+    "source_title": "谷神星"
+  },
+  {
     "relation": "DISCOVERED_BY",
     "object": "朱塞普·皮亚齐",
     "property_id": "P61",

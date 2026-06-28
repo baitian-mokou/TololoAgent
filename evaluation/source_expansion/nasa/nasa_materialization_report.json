@@ -11,6 +11,22 @@
   "triples_dir": "F:\\知识表示与处理结课作业\\第二次托洛洛测试 -重大进展\\data\\triples\\nasa",
   "raw_files": [
     {
+      "path": "F:\\知识表示与处理结课作业\\第二次托洛洛测试 -重大进展\\data\\raw_json\\nasa\\冥卫一_html.json",
+      "title": "冥卫一"
+    },
+    {
+      "path": "F:\\知识表示与处理结课作业\\第二次托洛洛测试 -重大进展\\data\\raw_json\\nasa\\冥王星_html.json",
+      "title": "冥王星"
+    },
+    {
+      "path": "F:\\知识表示与处理结课作业\\第二次托洛洛测试 -重大进展\\data\\raw_json\\nasa\\土卫二_html.json",
+      "title": "土卫二"
+    },
+    {
+      "path": "F:\\知识表示与处理结课作业\\第二次托洛洛测试 -重大进展\\data\\raw_json\\nasa\\土卫六_html.json",
+      "title": "土卫六"
+    },
+    {
       "path": "F:\\知识表示与处理结课作业\\第二次托洛洛测试 -重大进展\\data\\raw_json\\nasa\\土星_html.json",
       "title": "土星"
     },
@@ -23,12 +39,32 @@
       "title": "天王星"
     },
     {
+      "path": "F:\\知识表示与处理结课作业\\第二次托洛洛测试 -重大进展\\data\\raw_json\\nasa\\太阳_html.json",
+      "title": "太阳"
+    },
+    {
       "path": "F:\\知识表示与处理结课作业\\第二次托洛洛测试 -重大进展\\data\\raw_json\\nasa\\月球_html.json",
       "title": "月球"
     },
     {
+      "path": "F:\\知识表示与处理结课作业\\第二次托洛洛测试 -重大进展\\data\\raw_json\\nasa\\木卫二_html.json",
+      "title": "木卫二"
+    },
+    {
+      "path": "F:\\知识表示与处理结课作业\\第二次托洛洛测试 -重大进展\\data\\raw_json\\nasa\\木卫四_html.json",
+      "title": "木卫四"
+    },
+    {
       "path": "F:\\知识表示与处理结课作业\\第二次托洛洛测试 -重大进展\\data\\raw_json\\nasa\\木星_html.json",
       "title": "木星"
+    },
+    {
+      "path": "F:\\知识表示与处理结课作业\\第二次托洛洛测试 -重大进展\\data\\raw_json\\nasa\\水星_html.json",
+      "title": "水星"
+    },
+    {
+      "path": "F:\\知识表示与处理结课作业\\第二次托洛洛测试 -重大进展\\data\\raw_json\\nasa\\海卫一_html.json",
+      "title": "海卫一"
     },
     {
       "path": "F:\\知识表示与处理结课作业\\第二次托洛洛测试 -重大进展\\data\\raw_json\\nasa\\海王星_html.json",
@@ -37,6 +73,10 @@
     {
       "path": "F:\\知识表示与处理结课作业\\第二次托洛洛测试 -重大进展\\data\\raw_json\\nasa\\火卫一_html.json",
       "title": "火卫一"
+    },
+    {
+      "path": "F:\\知识表示与处理结课作业\\第二次托洛洛测试 -重大进展\\data\\raw_json\\nasa\\火卫二_html.json",
+      "title": "火卫二"
     },
     {
       "path": "F:\\知识表示与处理结课作业\\第二次托洛洛测试 -重大进展\\data\\raw_json\\nasa\\火星_html.json",
@@ -48,47 +88,67 @@
     }
   ],
   "triple_files": [
+    "F:\\知识表示与处理结课作业\\第二次托洛洛测试 -重大进展\\data\\triples\\nasa\\冥卫一_triples.json",
+    "F:\\知识表示与处理结课作业\\第二次托洛洛测试 -重大进展\\data\\triples\\nasa\\冥王星_triples.json",
+    "F:\\知识表示与处理结课作业\\第二次托洛洛测试 -重大进展\\data\\triples\\nasa\\土卫二_triples.json",
+    "F:\\知识表示与处理结课作业\\第二次托洛洛测试 -重大进展\\data\\triples\\nasa\\土卫六_triples.json",
     "F:\\知识表示与处理结课作业\\第二次托洛洛测试 -重大进展\\data\\triples\\nasa\\土星_triples.json",
     "F:\\知识表示与处理结课作业\\第二次托洛洛测试 -重大进展\\data\\triples\\nasa\\地球_triples.json",
     "F:\\知识表示与处理结课作业\\第二次托洛洛测试 -重大进展\\data\\triples\\nasa\\天王星_triples.json",
+    "F:\\知识表示与处理结课作业\\第二次托洛洛测试 -重大进展\\data\\triples\\nasa\\太阳_triples.json",
     "F:\\知识表示与处理结课作业\\第二次托洛洛测试 -重大进展\\data\\triples\\nasa\\月球_triples.json",
+    "F:\\知识表示与处理结课作业\\第二次托洛洛测试 -重大进展\\data\\triples\\nasa\\木卫二_triples.json",
+    "F:\\知识表示与处理结课作业\\第二次托洛洛测试 -重大进展\\data\\triples\\nasa\\木卫四_triples.json",
     "F:\\知识表示与处理结课作业\\第二次托洛洛测试 -重大进展\\data\\triples\\nasa\\木星_triples.json",
+    "F:\\知识表示与处理结课作业\\第二次托洛洛测试 -重大进展\\data\\triples\\nasa\\水星_triples.json",
+    "F:\\知识表示与处理结课作业\\第二次托洛洛测试 -重大进展\\data\\triples\\nasa\\海卫一_triples.json",
     "F:\\知识表示与处理结课作业\\第二次托洛洛测试 -重大进展\\data\\triples\\nasa\\海王星_triples.json",
     "F:\\知识表示与处理结课作业\\第二次托洛洛测试 -重大进展\\data\\triples\\nasa\\火卫一_triples.json",
+    "F:\\知识表示与处理结课作业\\第二次托洛洛测试 -重大进展\\data\\triples\\nasa\\火卫二_triples.json",
     "F:\\知识表示与处理结课作业\\第二次托洛洛测试 -重大进展\\data\\triples\\nasa\\火星_triples.json",
     "F:\\知识表示与处理结课作业\\第二次托洛洛测试 -重大进展\\data\\triples\\nasa\\金星_triples.json"
   ],
   "narrative_files": [
+    "F:\\知识表示与处理结课作业\\第二次托洛洛测试 -重大进展\\data\\triples\\nasa\\冥卫一_narratives.json",
+    "F:\\知识表示与处理结课作业\\第二次托洛洛测试 -重大进展\\data\\triples\\nasa\\冥王星_narratives.json",
+    "F:\\知识表示与处理结课作业\\第二次托洛洛测试 -重大进展\\data\\triples\\nasa\\土卫二_narratives.json",
+    "F:\\知识表示与处理结课作业\\第二次托洛洛测试 -重大进展\\data\\triples\\nasa\\土卫六_narratives.json",
     "F:\\知识表示与处理结课作业\\第二次托洛洛测试 -重大进展\\data\\triples\\nasa\\土星_narratives.json",
     "F:\\知识表示与处理结课作业\\第二次托洛洛测试 -重大进展\\data\\triples\\nasa\\地球_narratives.json",
     "F:\\知识表示与处理结课作业\\第二次托洛洛测试 -重大进展\\data\\triples\\nasa\\天王星_narratives.json",
+    "F:\\知识表示与处理结课作业\\第二次托洛洛测试 -重大进展\\data\\triples\\nasa\\太阳_narratives.json",
     "F:\\知识表示与处理结课作业\\第二次托洛洛测试 -重大进展\\data\\triples\\nasa\\月球_narratives.json",
+    "F:\\知识表示与处理结课作业\\第二次托洛洛测试 -重大进展\\data\\triples\\nasa\\木卫二_narratives.json",
+    "F:\\知识表示与处理结课作业\\第二次托洛洛测试 -重大进展\\data\\triples\\nasa\\木卫四_narratives.json",
     "F:\\知识表示与处理结课作业\\第二次托洛洛测试 -重大进展\\data\\triples\\nasa\\木星_narratives.json",
+    "F:\\知识表示与处理结课作业\\第二次托洛洛测试 -重大进展\\data\\triples\\nasa\\水星_narratives.json",
+    "F:\\知识表示与处理结课作业\\第二次托洛洛测试 -重大进展\\data\\triples\\nasa\\海卫一_narratives.json",
     "F:\\知识表示与处理结课作业\\第二次托洛洛测试 -重大进展\\data\\triples\\nasa\\海王星_narratives.json",
     "F:\\知识表示与处理结课作业\\第二次托洛洛测试 -重大进展\\data\\triples\\nasa\\火卫一_narratives.json",
+    "F:\\知识表示与处理结课作业\\第二次托洛洛测试 -重大进展\\data\\triples\\nasa\\火卫二_narratives.json",
     "F:\\知识表示与处理结课作业\\第二次托洛洛测试 -重大进展\\data\\triples\\nasa\\火星_narratives.json",
     "F:\\知识表示与处理结课作业\\第二次托洛洛测试 -重大进展\\data\\triples\\nasa\\金星_narratives.json"
   ],
   "pipeline": {
-    "total_triples": 28,
-    "total_narratives": 9,
+    "total_triples": 72,
+    "total_narratives": 19,
     "summary_exists": true,
     "summary": {
-      "total_triples": 28,
-      "total_narratives": 9,
-      "total_files": 9,
+      "total_triples": 72,
+      "total_narratives": 19,
+      "total_files": 19,
       "pipeline": "nasa_source_adapter_v1",
       "source_schema_version": "nasa_shadow_ready_v1",
       "materialization_mode": "offline_nasa_raw_pipeline_v1",
       "mode": "offline",
       "official_namespace_written": true,
       "cutover_ready": false,
-      "time": "2026-06-28T04:31:35.532268+00:00"
+      "time": "2026-06-28T06:01:09.225189+00:00"
     }
   },
   "metadata_contract": {
     "passed": true,
-    "checked_records": 37,
+    "checked_records": 91,
     "break_count": 0,
     "breaks": []
   },
@@ -97,9 +157,9 @@
     "reason": "nasa_shadow_does_not_enable_multisource_graph_fusion"
   },
   "chroma": {
-    "added_narratives": 8,
+    "added_narratives": 11,
     "stats": {
-      "total": 8,
+      "total": 11,
       "collections": [
         "astronomy_narratives_nasa"
       ]
@@ -107,7 +167,7 @@
   },
   "probes": {
     "graph_query": "火卫一绕谁公转",
-    "graph_final_source": "graph",
+    "graph_final_source": "fallback",
     "graph_final_result_count": 1,
     "graph_final_results": [
       {
@@ -148,7 +208,7 @@
     "reason": "NASA is retained as shadow-only fact supplement; gate success is not active-source authorization"
   },
   "materialization": {
-    "timestamp_utc": "2026-06-28T04:32:07.562963+00:00",
+    "timestamp_utc": "2026-06-28T06:01:23.953350+00:00",
     "output_path": "F:\\知识表示与处理结课作业\\第二次托洛洛测试 -重大进展\\evaluation\\source_expansion\\nasa\\nasa_materialization_report.json"
   },
   "fetch": {

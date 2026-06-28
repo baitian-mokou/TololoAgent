@@ -1,0 +1,72 @@
+[
+  {
+    "subject": "JUICE",
+    "relation": "OPERATED_BY",
+    "object": "ESA",
+    "pattern": "esa_smoke_fixture",
+    "raw": "ESA operates JUICE.",
+    "source": "esa",
+    "source_name": "esa",
+    "source_role": "primary",
+    "origin": "html_fallback",
+    "type": "triple_candidate",
+    "schema_version": "esa_shadow_ready_v1",
+    "source_title": "JUICE"
+  },
+  {
+    "subject": "JUICE",
+    "relation": "HAS_MISSION_TARGET",
+    "object": "木星",
+    "pattern": "esa_smoke_fixture",
+    "raw": "JUICE targets Jupiter.",
+    "source": "esa",
+    "source_name": "esa",
+    "source_role": "primary",
+    "origin": "html_fallback",
+    "type": "triple_candidate",
+    "schema_version": "esa_shadow_ready_v1",
+    "source_title": "JUICE"
+  },
+  {
+    "subject": "JUICE",
+    "relation": "HAS_MISSION_TARGET",
+    "object": "木卫二",
+    "pattern": "esa_smoke_fixture",
+    "raw": "JUICE targets Europa.",
+    "source": "esa",
+    "source_name": "esa",
+    "source_role": "primary",
+    "origin": "html_fallback",
+    "type": "triple_candidate",
+    "schema_version": "esa_shadow_ready_v1",
+    "source_title": "JUICE"
+  },
+  {
+    "subject": "JUICE",
+    "relation": "HAS_MISSION_TARGET",
+    "object": "木卫三",
+    "pattern": "esa_smoke_fixture",
+    "raw": "JUICE targets Ganymede.",
+    "source": "esa",
+    "source_name": "esa",
+    "source_role": "primary",
+    "origin": "html_fallback",
+    "type": "triple_candidate",
+    "schema_version": "esa_shadow_ready_v1",
+    "source_title": "JUICE"
+  },
+  {
+    "subject": "JUICE",
+    "relation": "HAS_MISSION_TARGET",
+    "object": "木卫四",
+    "pattern": "esa_smoke_fixture",
+    "raw": "JUICE targets Callisto.",
+    "source": "esa",
+    "source_name": "esa",
+    "source_role": "primary",
+    "origin": "html_fallback",
+    "type": "triple_candidate",
+    "schema_version": "esa_shadow_ready_v1",
+    "source_title": "JUICE"
+  }
+]

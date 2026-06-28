@@ -12,5 +12,33 @@
     "type": "triple_candidate",
     "schema_version": "esa_shadow_ready_v1",
     "source_title": "金星快车号"
+  },
+  {
+    "subject": "金星快车号",
+    "relation": "OPERATED_BY",
+    "object": "ESA",
+    "pattern": "esa_smoke_fixture",
+    "raw": "ESA operates Venus Express.",
+    "source": "esa",
+    "source_name": "esa",
+    "source_role": "primary",
+    "origin": "html_fallback",
+    "type": "triple_candidate",
+    "schema_version": "esa_shadow_ready_v1",
+    "source_title": "金星快车号"
+  },
+  {
+    "subject": "金星快车号",
+    "relation": "HAS_MISSION_TARGET",
+    "object": "金星",
+    "pattern": "esa_smoke_fixture",
+    "raw": "Venus Express targets Venus.",
+    "source": "esa",
+    "source_name": "esa",
+    "source_role": "primary",
+    "origin": "html_fallback",
+    "type": "triple_candidate",
+    "schema_version": "esa_shadow_ready_v1",
+    "source_title": "金星快车号"
   }
 ]

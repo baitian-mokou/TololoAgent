@@ -1,0 +1,24 @@
+[
+  {
+    "section": "大气",
+    "content": "冥王星绕太阳公转。NASA 对冥王星的资料常记录其质量约为 1.303e22 kg、平均半径约为 1188.3 km，并提到氮、甲烷和一氧化碳组成的稀薄大气。",
+    "keywords": [
+      "冥王星",
+      "NASA",
+      "大气",
+      "质量",
+      "半径"
+    ],
+    "page_title": "冥王星",
+    "chunk_index": 0,
+    "path": "大气",
+    "chunk_id": "nasa_冥王星_00",
+    "source": "nasa",
+    "source_name": "nasa",
+    "source_role": "primary",
+    "origin": "html_fallback",
+    "type": "embedding_chunk",
+    "schema_version": "nasa_shadow_ready_v1",
+    "source_title": "冥王星"
+  }
+]

@@ -1,0 +1,23 @@
+[
+  {
+    "page_title": "Solar Orbiter",
+    "section": "任务",
+    "content": "ESA fixture 将 Solar Orbiter 记录为沿太阳轨道工作的 ESA 任务，目标直指太阳及其日球层环境。",
+    "keywords": [
+      "ESA",
+      "Solar Orbiter",
+      "太阳",
+      "任务"
+    ],
+    "chunk_index": 0,
+    "path": "任务",
+    "chunk_id": "esa_Solar Orbiter_00",
+    "source": "esa",
+    "source_name": "esa",
+    "source_role": "primary",
+    "origin": "html_fallback",
+    "type": "embedding_chunk",
+    "schema_version": "esa_shadow_ready_v1",
+    "source_title": "Solar Orbiter"
+  }
+]

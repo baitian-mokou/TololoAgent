@@ -1,0 +1,15 @@
+{
+  "title": "土卫二",
+  "category": "Satellite",
+  "url": "https://science.nasa.gov/saturn/moons/enceladus/",
+  "html": "<div><table><tr><th>Field</th><th>土卫二</th></tr><tr><td>Mass (10^24 kg)</td><td>0.00010805</td></tr><tr><td>Mean radius (km)</td><td>252.1</td></tr><tr><td>Atmospheric composition</td><td>Water vapor; Carbon dioxide; Methane</td></tr></table></div>",
+  "text": "土卫二是土星的天然卫星。土卫二绕土星公转，羽流相关资料常提到水蒸气、二氧化碳和甲烷。",
+  "raw_text": "土卫二是土星的天然卫星。土卫二绕土星公转，羽流相关资料常提到水蒸气、二氧化碳和甲烷。",
+  "source": "nasa",
+  "source_name": "nasa",
+  "source_role": "primary",
+  "schema_version": "nasa_shadow_ready_v1",
+  "origin": "html_fallback",
+  "fetch_source": "offline_fact_sheet_fixture",
+  "crawl_time": "2026-06-28 18:00:00"
+}

@@ -1,0 +1,15 @@
+{
+  "title": "水星",
+  "category": "Planet",
+  "url": "https://nssdc.gsfc.nasa.gov/planetary/factsheet/mercuryfact.html",
+  "html": "<div><table><tr><th>Field</th><th>水星</th></tr><tr><td>Mass (10^24 kg)</td><td>0.33010</td></tr><tr><td>Mean radius (km)</td><td>2439.7</td></tr><tr><td>Atmospheric composition</td><td>Oxygen; Hydrogen; Helium</td></tr></table></div>",
+  "text": "水星绕太阳公转。根据 NASA Mercury Fact Sheet，水星质量约为 3.301e23 kg，平均半径约为 2439.7 km，其稀薄外逸层常见成分包括氧、氢和氦。",
+  "raw_text": "水星绕太阳公转。根据 NASA Mercury Fact Sheet，水星质量约为 3.301e23 kg，平均半径约为 2439.7 km，其稀薄外逸层常见成分包括氧、氢和氦。",
+  "source": "nasa",
+  "source_name": "nasa",
+  "source_role": "primary",
+  "schema_version": "nasa_shadow_ready_v1",
+  "origin": "html_fallback",
+  "fetch_source": "offline_fact_sheet_fixture",
+  "crawl_time": "2026-06-28 18:00:00"
+}

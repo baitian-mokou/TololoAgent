@@ -1,0 +1,22 @@
+[
+  {
+    "section": "发现",
+    "content": "土卫六 fixture 将其记录为土星系统成员，并保留克里斯蒂安·惠更斯这一发现者信息以及质量、半径等结构化事实。",
+    "keywords": [
+      "土卫六",
+      "土星系统",
+      "发现者"
+    ],
+    "page_title": "土卫六",
+    "chunk_index": 0,
+    "path": "发现",
+    "chunk_id": "wikidata_土卫六_00",
+    "source": "wikidata",
+    "source_name": "wikidata",
+    "source_role": "primary",
+    "origin": "api",
+    "type": "embedding_chunk",
+    "schema_version": "wikidata_shadow_ready_v1",
+    "source_title": "土卫六"
+  }
+]

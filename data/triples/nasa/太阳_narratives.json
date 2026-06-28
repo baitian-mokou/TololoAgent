@@ -1,0 +1,23 @@
+[
+  {
+    "section": "概要",
+    "content": "太阳是太阳系的中心恒星。NASA 资料常以氢和氦描述太阳的主要成分，并记录其质量约为 1.9885e30 kg、平均半径约为 695700 km。",
+    "keywords": [
+      "太阳",
+      "NASA",
+      "质量",
+      "半径"
+    ],
+    "page_title": "太阳",
+    "chunk_index": 0,
+    "path": "概要",
+    "chunk_id": "nasa_太阳_00",
+    "source": "nasa",
+    "source_name": "nasa",
+    "source_role": "primary",
+    "origin": "html_fallback",
+    "type": "embedding_chunk",
+    "schema_version": "nasa_shadow_ready_v1",
+    "source_title": "太阳"
+  }
+]

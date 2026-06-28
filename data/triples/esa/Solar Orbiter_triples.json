@@ -1,0 +1,44 @@
+[
+  {
+    "subject": "Solar Orbiter",
+    "relation": "ORBITS",
+    "object": "太阳",
+    "pattern": "esa_smoke_fixture",
+    "raw": "ESA smoke fixture: Solar Orbiter orbits the Sun.",
+    "source": "esa",
+    "source_name": "esa",
+    "source_role": "primary",
+    "origin": "html_fallback",
+    "type": "triple_candidate",
+    "schema_version": "esa_shadow_ready_v1",
+    "source_title": "Solar Orbiter"
+  },
+  {
+    "subject": "Solar Orbiter",
+    "relation": "OPERATED_BY",
+    "object": "ESA",
+    "pattern": "esa_smoke_fixture",
+    "raw": "ESA operates Solar Orbiter.",
+    "source": "esa",
+    "source_name": "esa",
+    "source_role": "primary",
+    "origin": "html_fallback",
+    "type": "triple_candidate",
+    "schema_version": "esa_shadow_ready_v1",
+    "source_title": "Solar Orbiter"
+  },
+  {
+    "subject": "Solar Orbiter",
+    "relation": "HAS_MISSION_TARGET",
+    "object": "太阳",
+    "pattern": "esa_smoke_fixture",
+    "raw": "Solar Orbiter targets the Sun.",
+    "source": "esa",
+    "source_name": "esa",
+    "source_role": "primary",
+    "origin": "html_fallback",
+    "type": "triple_candidate",
+    "schema_version": "esa_shadow_ready_v1",
+    "source_title": "Solar Orbiter"
+  }
+]

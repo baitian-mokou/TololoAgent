@@ -1,0 +1,215 @@
+{
+  "version": "source_expansion_gold_set_v1",
+  "source_name": "esa",
+  "source_schema_version": "esa_shadow_ready_v1",
+  "top_k_default": 5,
+  "force_local_graph_fallback": true,
+  "force_local_narrative_fallback": true,
+  "gates": {
+    "exact_accuracy_min": 0.65,
+    "source_filter_failure_max": 0,
+    "metadata_contract_break_max": 0,
+    "inferred_boundary_break_max": 0,
+    "query_explainability_degraded_max": 0
+  },
+  "queries": [
+    {
+      "id": "esa_structured_mars_express_orbits",
+      "category": "structured",
+      "query_kind": "structured",
+      "query": "火星快车号绕谁运行",
+      "expected_path": "fallback",
+      "allowed_final_sources": [
+        "fallback"
+      ],
+      "expected_top_k_hit": true,
+      "expected_result": {
+        "subject": "火星快车号",
+        "relation": "ORBITS",
+        "object": "火星"
+      },
+      "source_filter": [
+        "esa"
+      ],
+      "source_schema_version": "esa_shadow_ready_v1"
+    },
+    {
+      "id": "esa_narrative_juice_targets",
+      "category": "narrative",
+      "query_kind": "narrative",
+      "query": "JUICE 任务目标有哪些",
+      "expected_path": "fallback",
+      "allowed_final_sources": [
+        "fallback"
+      ],
+      "expected_top_k_hit": true,
+      "expected_result": {
+        "page_title": "JUICE",
+        "section_any_of": [
+          "任务"
+        ]
+      },
+      "source_filter": [
+        "esa"
+      ],
+      "source_schema_version": "esa_shadow_ready_v1",
+      "expected_page_title": "JUICE",
+      "expected_section_any_of": [
+        "任务"
+      ]
+    },
+    {
+      "id": "esa_negative_unknown_probe",
+      "category": "negative",
+      "query_kind": "structured",
+      "query": "不存在的 ESA 探测器绕谁运行",
+      "expected_path": "fallback",
+      "allowed_final_sources": [
+        "fallback"
+      ],
+      "expected_top_k_hit": false,
+      "expected_result": {
+        "empty": true
+      },
+      "source_filter": [
+        "esa"
+      ],
+      "source_schema_version": "esa_shadow_ready_v1"
+    },
+    {
+      "id": "esa_fallback_local_graph",
+      "category": "fallback",
+      "query_kind": "structured",
+      "query": "SMART-1 绕谁运行",
+      "expected_path": "fallback",
+      "allowed_final_sources": [
+        "fallback"
+      ],
+      "expected_top_k_hit": true,
+      "expected_result": {
+        "subject": "SMART-1",
+        "relation": "ORBITS",
+        "object": "月球"
+      },
+      "source_filter": [
+        "esa"
+      ],
+      "source_schema_version": "esa_shadow_ready_v1"
+    },
+    {
+      "id": "esa_source_isolation_gaia",
+      "category": "source_isolation",
+      "query_kind": "narrative",
+      "query": "Gaia 银河系测量任务",
+      "expected_path": "fallback",
+      "allowed_final_sources": [
+        "fallback"
+      ],
+      "expected_top_k_hit": true,
+      "expected_result": {
+        "page_title": "Gaia",
+        "section_any_of": [
+          "任务"
+        ]
+      },
+      "source_filter": [
+        "esa"
+      ],
+      "source_schema_version": "esa_shadow_ready_v1",
+      "expected_page_title": "Gaia",
+      "expected_section_any_of": [
+        "任务"
+      ]
+    },
+    {
+      "id": "esa_metadata_structured_schema",
+      "category": "metadata_completeness",
+      "query_kind": "structured",
+      "query": "Solar Orbiter 绕谁运行 metadata",
+      "expected_path": "fallback",
+      "allowed_final_sources": [
+        "fallback"
+      ],
+      "expected_top_k_hit": true,
+      "expected_result": {
+        "subject": "Solar Orbiter",
+        "relation": "ORBITS",
+        "object": "太阳"
+      },
+      "source_filter": [
+        "esa"
+      ],
+      "source_schema_version": "esa_shadow_ready_v1"
+    },
+    {
+      "id": "esa_path_routing_narrative",
+      "category": "path_routing",
+      "query_kind": "narrative",
+      "query": "Rosetta 彗星任务说明",
+      "expected_path": "fallback",
+      "allowed_final_sources": [
+        "fallback"
+      ],
+      "expected_top_k_hit": true,
+      "expected_result": {
+        "page_title": "Rosetta",
+        "section_any_of": [
+          "任务"
+        ]
+      },
+      "source_filter": [
+        "esa"
+      ],
+      "source_schema_version": "esa_shadow_ready_v1",
+      "expected_page_title": "Rosetta",
+      "expected_section_any_of": [
+        "任务"
+      ]
+    },
+    {
+      "id": "esa_unit_normalization_smart1_orbit",
+      "category": "unit_normalization",
+      "query_kind": "structured",
+      "query": "SMART-1 绕谁飞行",
+      "expected_path": "fallback",
+      "allowed_final_sources": [
+        "fallback"
+      ],
+      "expected_top_k_hit": true,
+      "expected_result": {
+        "subject": "SMART-1",
+        "relation": "ORBITS",
+        "object": "月球"
+      },
+      "source_filter": [
+        "esa"
+      ],
+      "source_schema_version": "esa_shadow_ready_v1"
+    },
+    {
+      "id": "esa_conflict_case_target",
+      "category": "conflict_case",
+      "query_kind": "narrative",
+      "query": "JUICE 是去木星还是火星",
+      "expected_path": "fallback",
+      "allowed_final_sources": [
+        "fallback"
+      ],
+      "expected_top_k_hit": true,
+      "expected_result": {
+        "page_title": "JUICE",
+        "section_any_of": [
+          "任务"
+        ]
+      },
+      "source_filter": [
+        "esa"
+      ],
+      "source_schema_version": "esa_shadow_ready_v1",
+      "expected_page_title": "JUICE",
+      "expected_section_any_of": [
+        "任务"
+      ]
+    }
+  ]
+}

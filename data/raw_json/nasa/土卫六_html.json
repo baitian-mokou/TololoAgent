@@ -1,0 +1,15 @@
+{
+  "title": "土卫六",
+  "category": "Satellite",
+  "url": "https://science.nasa.gov/saturn/moons/titan/",
+  "html": "<div><table><tr><th>Field</th><th>土卫六</th></tr><tr><td>Mass (10^24 kg)</td><td>0.13455</td></tr><tr><td>Mean radius (km)</td><td>2574.7</td></tr><tr><td>Atmospheric composition</td><td>Nitrogen; Methane</td></tr></table></div>",
+  "text": "土卫六是土星的天然卫星。土卫六绕土星公转，并拥有以氮气为主、伴随甲烷的浓厚大气。",
+  "raw_text": "土卫六是土星的天然卫星。土卫六绕土星公转，并拥有以氮气为主、伴随甲烷的浓厚大气。",
+  "source": "nasa",
+  "source_name": "nasa",
+  "source_role": "primary",
+  "schema_version": "nasa_shadow_ready_v1",
+  "origin": "html_fallback",
+  "fetch_source": "offline_fact_sheet_fixture",
+  "crawl_time": "2026-06-28 18:00:00"
+}

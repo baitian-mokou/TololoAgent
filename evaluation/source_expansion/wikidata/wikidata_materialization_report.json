@@ -12,11 +12,15 @@
     "F:\\知识表示与处理结课作业\\第二次托洛洛测试 -重大进展\\data\\raw_json\\wikidata\\solar_system_fixture.json"
   ],
   "triple_files": [
+    "F:\\知识表示与处理结课作业\\第二次托洛洛测试 -重大进展\\data\\triples\\wikidata\\冥卫一_triples.json",
     "F:\\知识表示与处理结课作业\\第二次托洛洛测试 -重大进展\\data\\triples\\wikidata\\冥王星_triples.json",
+    "F:\\知识表示与处理结课作业\\第二次托洛洛测试 -重大进展\\data\\triples\\wikidata\\土卫二_triples.json",
+    "F:\\知识表示与处理结课作业\\第二次托洛洛测试 -重大进展\\data\\triples\\wikidata\\土卫六_triples.json",
     "F:\\知识表示与处理结课作业\\第二次托洛洛测试 -重大进展\\data\\triples\\wikidata\\土星_triples.json",
     "F:\\知识表示与处理结课作业\\第二次托洛洛测试 -重大进展\\data\\triples\\wikidata\\地球_triples.json",
     "F:\\知识表示与处理结课作业\\第二次托洛洛测试 -重大进展\\data\\triples\\wikidata\\天王星_triples.json",
     "F:\\知识表示与处理结课作业\\第二次托洛洛测试 -重大进展\\data\\triples\\wikidata\\太阳_triples.json",
+    "F:\\知识表示与处理结课作业\\第二次托洛洛测试 -重大进展\\data\\triples\\wikidata\\妊神星_triples.json",
     "F:\\知识表示与处理结课作业\\第二次托洛洛测试 -重大进展\\data\\triples\\wikidata\\月球_triples.json",
     "F:\\知识表示与处理结课作业\\第二次托洛洛测试 -重大进展\\data\\triples\\wikidata\\木卫一_triples.json",
     "F:\\知识表示与处理结课作业\\第二次托洛洛测试 -重大进展\\data\\triples\\wikidata\\木卫三_triples.json",
@@ -24,19 +28,27 @@
     "F:\\知识表示与处理结课作业\\第二次托洛洛测试 -重大进展\\data\\triples\\wikidata\\木卫四_triples.json",
     "F:\\知识表示与处理结课作业\\第二次托洛洛测试 -重大进展\\data\\triples\\wikidata\\木星_triples.json",
     "F:\\知识表示与处理结课作业\\第二次托洛洛测试 -重大进展\\data\\triples\\wikidata\\水星_triples.json",
+    "F:\\知识表示与处理结课作业\\第二次托洛洛测试 -重大进展\\data\\triples\\wikidata\\海卫一_triples.json",
     "F:\\知识表示与处理结课作业\\第二次托洛洛测试 -重大进展\\data\\triples\\wikidata\\海王星_triples.json",
     "F:\\知识表示与处理结课作业\\第二次托洛洛测试 -重大进展\\data\\triples\\wikidata\\火卫一_triples.json",
     "F:\\知识表示与处理结课作业\\第二次托洛洛测试 -重大进展\\data\\triples\\wikidata\\火卫二_triples.json",
     "F:\\知识表示与处理结课作业\\第二次托洛洛测试 -重大进展\\data\\triples\\wikidata\\火星_triples.json",
+    "F:\\知识表示与处理结课作业\\第二次托洛洛测试 -重大进展\\data\\triples\\wikidata\\灶神星_triples.json",
     "F:\\知识表示与处理结课作业\\第二次托洛洛测试 -重大进展\\data\\triples\\wikidata\\谷神星_triples.json",
-    "F:\\知识表示与处理结课作业\\第二次托洛洛测试 -重大进展\\data\\triples\\wikidata\\金星_triples.json"
+    "F:\\知识表示与处理结课作业\\第二次托洛洛测试 -重大进展\\data\\triples\\wikidata\\金星_triples.json",
+    "F:\\知识表示与处理结课作业\\第二次托洛洛测试 -重大进展\\data\\triples\\wikidata\\阋神星_triples.json",
+    "F:\\知识表示与处理结课作业\\第二次托洛洛测试 -重大进展\\data\\triples\\wikidata\\鸟神星_triples.json"
   ],
   "narrative_files": [
+    "F:\\知识表示与处理结课作业\\第二次托洛洛测试 -重大进展\\data\\triples\\wikidata\\冥卫一_narratives.json",
     "F:\\知识表示与处理结课作业\\第二次托洛洛测试 -重大进展\\data\\triples\\wikidata\\冥王星_narratives.json",
+    "F:\\知识表示与处理结课作业\\第二次托洛洛测试 -重大进展\\data\\triples\\wikidata\\土卫二_narratives.json",
+    "F:\\知识表示与处理结课作业\\第二次托洛洛测试 -重大进展\\data\\triples\\wikidata\\土卫六_narratives.json",
     "F:\\知识表示与处理结课作业\\第二次托洛洛测试 -重大进展\\data\\triples\\wikidata\\土星_narratives.json",
     "F:\\知识表示与处理结课作业\\第二次托洛洛测试 -重大进展\\data\\triples\\wikidata\\地球_narratives.json",
     "F:\\知识表示与处理结课作业\\第二次托洛洛测试 -重大进展\\data\\triples\\wikidata\\天王星_narratives.json",
     "F:\\知识表示与处理结课作业\\第二次托洛洛测试 -重大进展\\data\\triples\\wikidata\\太阳_narratives.json",
+    "F:\\知识表示与处理结课作业\\第二次托洛洛测试 -重大进展\\data\\triples\\wikidata\\妊神星_narratives.json",
     "F:\\知识表示与处理结课作业\\第二次托洛洛测试 -重大进展\\data\\triples\\wikidata\\月球_narratives.json",
     "F:\\知识表示与处理结课作业\\第二次托洛洛测试 -重大进展\\data\\triples\\wikidata\\木卫一_narratives.json",
     "F:\\知识表示与处理结课作业\\第二次托洛洛测试 -重大进展\\data\\triples\\wikidata\\木卫三_narratives.json",
@@ -44,37 +56,41 @@
     "F:\\知识表示与处理结课作业\\第二次托洛洛测试 -重大进展\\data\\triples\\wikidata\\木卫四_narratives.json",
     "F:\\知识表示与处理结课作业\\第二次托洛洛测试 -重大进展\\data\\triples\\wikidata\\木星_narratives.json",
     "F:\\知识表示与处理结课作业\\第二次托洛洛测试 -重大进展\\data\\triples\\wikidata\\水星_narratives.json",
+    "F:\\知识表示与处理结课作业\\第二次托洛洛测试 -重大进展\\data\\triples\\wikidata\\海卫一_narratives.json",
     "F:\\知识表示与处理结课作业\\第二次托洛洛测试 -重大进展\\data\\triples\\wikidata\\海王星_narratives.json",
     "F:\\知识表示与处理结课作业\\第二次托洛洛测试 -重大进展\\data\\triples\\wikidata\\火卫一_narratives.json",
     "F:\\知识表示与处理结课作业\\第二次托洛洛测试 -重大进展\\data\\triples\\wikidata\\火卫二_narratives.json",
     "F:\\知识表示与处理结课作业\\第二次托洛洛测试 -重大进展\\data\\triples\\wikidata\\火星_narratives.json",
+    "F:\\知识表示与处理结课作业\\第二次托洛洛测试 -重大进展\\data\\triples\\wikidata\\灶神星_narratives.json",
     "F:\\知识表示与处理结课作业\\第二次托洛洛测试 -重大进展\\data\\triples\\wikidata\\谷神星_narratives.json",
-    "F:\\知识表示与处理结课作业\\第二次托洛洛测试 -重大进展\\data\\triples\\wikidata\\金星_narratives.json"
+    "F:\\知识表示与处理结课作业\\第二次托洛洛测试 -重大进展\\data\\triples\\wikidata\\金星_narratives.json",
+    "F:\\知识表示与处理结课作业\\第二次托洛洛测试 -重大进展\\data\\triples\\wikidata\\阋神星_narratives.json",
+    "F:\\知识表示与处理结课作业\\第二次托洛洛测试 -重大进展\\data\\triples\\wikidata\\鸟神星_narratives.json"
   ],
   "pipeline": {
-    "total_triples": 104,
-    "total_narratives": 18,
-    "total_files": 18,
+    "total_triples": 157,
+    "total_narratives": 26,
+    "total_files": 26,
     "pipeline": "wikidata_source_adapter_v1",
     "source_schema_version": "wikidata_shadow_ready_v1",
     "materialization_mode": "offline_wikidata_fixture_v1",
     "mode": "offline",
     "official_namespace_written": true,
     "cutover_ready": false,
-    "time": "2026-06-28T04:31:35.179470+00:00"
+    "time": "2026-06-28T06:01:05.668422+00:00"
   },
   "metadata_contract": {
     "passed": true,
-    "checked_records": 122,
+    "checked_records": 183,
     "break_count": 0,
     "breaks": []
   },
   "graph": {
-    "loaded_nodes": 75,
-    "loaded_relationships": 96,
+    "loaded_nodes": 107,
+    "loaded_relationships": 148,
     "stats": {
-      "nodes": 272,
-      "rels": 418,
+      "nodes": 290,
+      "rels": 470,
       "labels": [
         "Planet",
         "Satellite",
@@ -106,9 +122,9 @@
     }
   },
   "chroma": {
-    "added_narratives": 4,
+    "added_narratives": 7,
     "stats": {
-      "total": 4,
+      "total": 7,
       "collections": [
         "astronomy_narratives_wikidata"
       ]
@@ -116,7 +132,7 @@
   },
   "probes": {
     "graph_query": "火卫一绕谁公转",
-    "graph_final_source": "graph",
+    "graph_final_source": "fallback",
     "graph_final_result_count": 1,
     "graph_final_results": [
       {
@@ -158,7 +174,7 @@
     "error": ""
   },
   "preview": {
-    "record_count": 18,
+    "record_count": 26,
     "sample_records": [
       {
         "title": "太阳",
@@ -397,7 +413,7 @@
     "reason": "shadow namespace is auditable; active-source cutover remains disabled"
   },
   "materialization": {
-    "timestamp_utc": "2026-06-28T04:32:06.835233+00:00",
+    "timestamp_utc": "2026-06-28T06:01:22.573764+00:00",
     "output_path": "F:\\知识表示与处理结课作业\\第二次托洛洛测试 -重大进展\\evaluation\\source_expansion\\wikidata\\wikidata_materialization_report.json"
   },
   "raw_copy_status": {

@@ -17,19 +17,26 @@ This document records the final offline fixture-based acceptance state for the c
 | source | raw files | triple files | narrative files | state |
 | --- | ---: | ---: | ---: | --- |
 | `zh_wikipedia` | 469 | 63 | 416 | active baseline |
-| `wikidata` | 1 | 18 | 18 | disabled formal shadow candidate |
-| `nasa` | 2 | 1 | 1 | disabled shadow fact supplement |
-| `esa` | 1 | 1 | 1 | disabled smoke-only source |
+| `wikidata` | 1 | 26 | 26 | disabled formal shadow candidate |
+| `nasa` | 19 | 19 | 19 | disabled shadow fact supplement |
+| `esa` | 1 | 7 | 7 | disabled smoke-only source |
 
 Counts are file counts under the source-aware `data/raw_json` and `data/triples` namespaces.
+
+Current triple totals from the latest materialization summaries:
+
+- `wikidata`: `157` triples
+- `nasa`: `72` triples
+- `esa`: `22` triples
 
 ## Final Evaluation Results
 
 | report | pass count | exact_accuracy | source_filter_failure_count | metadata_contract_break_count | inferred_boundary_break_count | query_explainability_degraded_count |
 | --- | ---: | ---: | ---: | ---: | ---: | ---: |
 | `single_source_retrieval` | 31/31 | 1.0 | 0 | 0 | 0 | 0 |
-| `wikidata source expansion` | 24/24 | 1.0 | 0 | 0 | 0 | 0 |
-| `nasa source expansion` | 22/22 | 1.0 | 0 | 0 | 0 | 0 |
+| `wikidata source expansion` | 47/47 | 1.0 | 0 | 0 | 0 | 0 |
+| `nasa source expansion` | 42/42 | 1.0 | 0 | 0 | 0 | 0 |
+| `esa source expansion (smoke)` | 6/9 | 0.6667 | 0 | 0 | 0 | 0 |
 
 Final triage:
 
@@ -41,9 +48,9 @@ Final triage:
 
 ## Source Conclusions
 
-- Wikidata shadow source: `24/24` pass, `cutover_ready=false`. It is a formal second-source shadow candidate, not an active source.
-- NASA shadow source: `22/22` pass, shadow-only. It remains positioned as an auditable fact supplement, not the next active source.
-- ESA: smoke-only and disabled. It validates the source namespace/adapter path and does not enter the default retrieval path.
+- Wikidata shadow source: `47/47` pass, `cutover_ready=false`. It now covers more solar-system bodies, moon-system relations, and discovery facts while remaining a disabled shadow source.
+- NASA shadow source: `42/42` pass, shadow-only. It now provides broader radius, mass, atmosphere, and moon-system coverage while staying outside the default retrieval path.
+- ESA: smoke-only and disabled. The ESA smoke set now covers `JUICE`, `Rosetta`, `Gaia`, `Solar Orbiter`, `SMART-1`, `火星快车号`, and `金星快车号`; its smoke gate passes at `6/9` exact accuracy.
 
 ## Acceptance Command
 
