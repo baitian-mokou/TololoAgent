@@ -45,6 +45,14 @@ class GuiSourceSelectionTests(unittest.TestCase):
 
         factory.assert_called_once_with(source_name="nasa")
 
+    def test_esa_selection_passes_source_name(self):
+        tab = self._make_tab("esa")
+        factory = Mock()
+
+        tab._create_agent(factory)
+
+        factory.assert_called_once_with(source_name="esa")
+
     def test_source_router_stays_disabled_by_default(self):
         trace = SourceRouterPreview().route("火星质量是多少")
 
