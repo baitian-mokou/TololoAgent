@@ -7,7 +7,7 @@ import json
 import threading
 import webbrowser
 import tkinter as tk
-from tkinter import scrolledtext, messagebox
+from tkinter import scrolledtext, messagebox, ttk
 from datetime import datetime, timezone
 import ttkbootstrap as tb
 from ttkbootstrap.constants import *
@@ -1857,12 +1857,15 @@ class VisualizeTab(BaseTab):
 
 class AgentTab(BaseTab):
     """Agent对话标签页 — 知识搜索 + LLM智能问答"""
+    SOURCE_OPTIONS = ("zh_wikipedia", "wikidata", "nasa", "esa")
+
     def __init__(self, parent, main_window):
         super().__init__(parent, main_window)
         self._assistant_prefix_text = self._assistant_prefix()
         self._ask_in_progress = False
         self._request_epoch = 0
         self._active_llm_signature = None
+        self.source_var = tk.StringVar(value="zh_wikipedia")
         self._build_ui()
     def _build_ui(self):
         self.title_label = tb.Label(self.frame, text=self.i18n.t("agent_title"),
@@ -1881,12 +1884,29 @@ class AgentTab(BaseTab):
         self.btn_refresh_status = tb.Button(status_frame, text=self.i18n.t("agent_refresh_status"),
                                             command=self._refresh_all_status, width=12)
         self.btn_refresh_status.pack(side="left")
+        self.current_source_label = tb.Label(
+            status_frame,
+            text=self._source_status_text(),
+            font=("微软雅黑", 10),
+        )
+        self.current_source_label.pack(side="right")
 
         # ── 输入行 ──
         input_row = tb.Frame(self.frame)
         input_row.pack(fill="x", pady=(0, 8))
         tb.Label(input_row, text=self.i18n.t("agent_ask_label"),
                  font=("微软雅黑", 10)).pack(side="left", padx=(0, 5))
+        self.source_label = tb.Label(input_row, text="数据源", font=("微软雅黑", 10))
+        self.source_label.pack(side="left", padx=(0, 5))
+        self.source_combo = ttk.Combobox(
+            input_row,
+            textvariable=self.source_var,
+            values=self.SOURCE_OPTIONS,
+            state="readonly",
+            width=14,
+        )
+        self.source_combo.pack(side="left", padx=(0, 5))
+        self.source_combo.bind("<<ComboboxSelected>>", lambda event: self._refresh_source_status())
         self.query_var = tk.StringVar()
         self.query_entry = tb.Entry(input_row, textvariable=self.query_var,
                                    font=("微软雅黑", 10))
@@ -1968,6 +1988,8 @@ class AgentTab(BaseTab):
             if isinstance(child, tb.LabelFrame):
                 if "chat" in child.cget("text").lower() or "对话" in child.cget("text"):
                     child.config(text=self.i18n.t("agent_chat_history"))
+        self.source_label.config(text="数据源")
+        self._refresh_source_status()
         if self._ask_in_progress:
             self.btn_ask.config(state="disabled", text=self.i18n.t("agent_ask_thinking"))
         else:
@@ -1976,6 +1998,23 @@ class AgentTab(BaseTab):
             self.btn_refresh_status.config(text=self.i18n.t("agent_refresh_status"))
         self.btn_toggle.config(text=self.i18n.t("agent_toggle_detail") if not self.result_visible
                                else self.i18n.t("agent_toggle_detail_open"))
+
+    def _selected_source_name(self) -> str:
+        selected = str(self.source_var.get() or "").strip()
+        return selected if selected in self.SOURCE_OPTIONS else "zh_wikipedia"
+
+    def _source_status_text(self) -> str:
+        return f"当前数据源：{self._selected_source_name()}"
+
+    def _refresh_source_status(self):
+        if hasattr(self, "current_source_label"):
+            self.current_source_label.config(text=self._source_status_text())
+
+    def _create_agent(self, agent_factory=None):
+        if agent_factory is None:
+            from src.agent.llm_agent import LLMAgent
+            agent_factory = LLMAgent
+        return agent_factory(source_name=self._selected_source_name())
 
     def _toggle_result(self):
         """切换检索详情面板的显示/隐藏（grid 布局，上下4:6，左右各50%）"""
@@ -2024,8 +2063,7 @@ class AgentTab(BaseTab):
         def worker():
             try:
                 self._add_path()
-                from src.agent.llm_agent import LLMAgent
-                agent = LLMAgent()
+                agent = self._create_agent()
 
                 if agent.use_remote_api:
                     self.frame.after(0, lambda: self._update_remote_status_labels(
@@ -2120,8 +2158,7 @@ class AgentTab(BaseTab):
         def worker():
             try:
                 self._add_path()
-                from src.agent.llm_agent import LLMAgent
-                agent = LLMAgent()
+                agent = self._create_agent()
                 self._schedule_if_current(request_epoch, lambda: self._set_assistant_prefix(agent))
 
                 if agent.use_remote_api:
