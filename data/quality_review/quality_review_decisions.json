@@ -72,7 +72,10 @@
       "user_revision_reason": "月球绕行于地球，是地球的卫星",
       "user_evidence_note": "无",
       "user_evidence_url": "无",
-      "revision_status": "validated"
+      "revision_status": "applied",
+      "applied_at": "2026-06-28T03:31:28.330359+00:00",
+      "applied_backup_dir": "F:\\知识表示与处理结课作业\\第二次托洛洛测试 -重大进展\\data\\backups\\quality_review\\20260628_113128",
+      "applied_rollback_manifest": "F:\\知识表示与处理结课作业\\第二次托洛洛测试 -重大进展\\data\\backups\\quality_review\\20260628_113128\\rollback_manifest.json"
     },
     {
       "review_id": "qr_source_conflict_v4_004",

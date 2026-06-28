@@ -18,7 +18,7 @@ DEFAULT_QUEUE = Path(BASE_DIR) / "data" / "quality_review" / "quality_review_que
 DEFAULT_DECISIONS = Path(BASE_DIR) / "data" / "quality_review" / "quality_review_decisions.json"
 DEFAULT_OUTPUT = Path(BASE_DIR) / "evaluation" / "quality_review_revision_validation.json"
 
-ALLOWED_REVISION_STATUSES = {"none", "draft", "proposed", "validated", "rejected"}
+ALLOWED_REVISION_STATUSES = {"none", "draft", "proposed", "validated", "rejected", "applied"}
 
 
 def configure_stdout() -> None:
@@ -92,7 +92,7 @@ def validate_quality_review_revisions(
                 warnings.append({"check": "validated_revision_waiting_for_approved_decision", "patch_id": patch_id})
             if decision.get("safe_to_apply") is not True:
                 warnings.append({"check": "validated_revision_waiting_for_safe_to_apply_true", "patch_id": patch_id})
-        if item.get("risk_level") == "high" and has_revision and decision.get("safe_to_apply") is True and status != "validated":
+        if item.get("risk_level") == "high" and has_revision and decision.get("safe_to_apply") is True and status not in {"validated", "applied"}:
             errors.append({"check": "high_risk_revision_must_not_be_safe_to_apply_before_validation", "patch_id": patch_id})
 
     source_registry_ok = (

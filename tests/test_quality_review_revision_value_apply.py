@@ -279,6 +279,19 @@ class QualityReviewRevisionValueApplyTests(unittest.TestCase):
             self.assertFalse(report["chroma_written"])
             self.assertFalse(report["neo4j_written"])
 
+            next_report = apply_quality_patch(
+                decisions_path=str(decisions_path),
+                candidates_path=str(queue_path),
+                report_path=str(report_path),
+                apply=False,
+                allow_value_change=True,
+                apply_value_changes=True,
+                backup_root=str(root / "backups"),
+            )
+            decision = json.loads(decisions_path.read_text(encoding="utf-8"))["decisions"][0]
+            self.assertEqual(decision["revision_status"], "applied")
+            self.assertFalse(next_report["errors"])
+
 
 if __name__ == "__main__":
     unittest.main()

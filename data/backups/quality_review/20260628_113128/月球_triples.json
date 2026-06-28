@@ -44,7 +44,7 @@
   {
     "subject": "月球",
     "relation": "ORBITS",
-    "object": "地球",
+    "object": "太阳系内密度第二高",
     "pattern": "rule",
     "raw": "月球是太阳系内密度第二高的卫星",
     "source": "zh_wikipedia",
@@ -53,14 +53,6 @@
     "type": "triple_candidate",
     "source_title": "月球",
     "source_name": "zh_wikipedia",
-    "schema_version": "2.0",
-    "quality_patch_id": "source_conflict_v4_003",
-    "quality_review_id": "qr_source_conflict_v4_003",
-    "quality_annotation": {
-      "classification": "true_value_conflict",
-      "rationale": "approved_in_gui",
-      "formal_value_changed": true,
-      "reviewed_decision_source": "quality_review_decisions.json"
-    }
+    "schema_version": "2.0"
   }
 ]

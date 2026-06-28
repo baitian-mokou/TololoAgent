@@ -28,7 +28,7 @@ EXPECTED_TARGET_FILE = os.path.join(BASE_DIR, "data", "triples", "天王星_trip
 
 APPROVED_DECISION = "approved"
 NON_APPLY_DECISIONS = {"pending", "rejected", "deferred"}
-ALLOWED_REVISION_STATUSES = {"none", "draft", "proposed", "validated", "rejected"}
+ALLOWED_REVISION_STATUSES = {"none", "draft", "proposed", "validated", "rejected", "applied"}
 
 
 def configure_stdout() -> None:
@@ -470,6 +470,9 @@ def apply_quality_patch(
         patch_id = decision.get("patch_id")
         human_decision = decision.get("human_decision")
         item = item_by_patch.get(patch_id)
+        if normalized_revision_status(decision) == "applied":
+            skipped_items.append({"patch_id": patch_id, "human_decision": human_decision, "reason": "revision already applied"})
+            continue
         if item and has_user_revision(decision):
             proposal = revision_plan_item(item, decision)
             revision_proposals.append(proposal)
@@ -655,6 +658,7 @@ def apply_quality_patch(
     backup_dir = None
     rollback_manifest = None
     if apply and not errors:
+        applied_at = datetime.now(timezone.utc).isoformat()
         files_to_write = {target_file: patch_ids_by_file.get(target_file, []) for target_file in changed_by_file if changed_by_file.get(target_file)}
         if files_to_write:
             backup_dir = make_backup_dir(backup_root)
@@ -667,6 +671,14 @@ def apply_quality_patch(
                     if plan_item.get("target_file") == target_file and plan_item.get("changed_records"):
                         plan_item["status"] = "applied"
                         applied_count += 1
+                        for decision in decisions:
+                            if decision.get("patch_id") == plan_item.get("patch_id"):
+                                decision["revision_status"] = "applied"
+                                decision["applied_at"] = applied_at
+                                decision["applied_backup_dir"] = backup_dir
+                                decision["applied_rollback_manifest"] = rollback_manifest.get("path") if rollback_manifest else None
+        if applied_count:
+            dump_json(decisions_path, decisions_payload)
 
     report = {
         "generated_at": datetime.now(timezone.utc).isoformat(),

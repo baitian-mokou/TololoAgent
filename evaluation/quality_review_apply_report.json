@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-06-28T03:27:20.840675+00:00",
+  "generated_at": "2026-06-28T03:35:14.650921+00:00",
   "dry_run": true,
   "apply": false,
   "apply_metadata_only": false,
@@ -9,55 +9,10 @@
   "rollback_manifest": null,
   "decisions_path": "F:\\知识表示与处理结课作业\\第二次托洛洛测试 -重大进展\\data\\quality_review\\quality_review_decisions.json",
   "queue_path": "F:\\知识表示与处理结课作业\\第二次托洛洛测试 -重大进展\\data\\quality_review\\quality_review_queue.json",
-  "approved_count": 1,
+  "approved_count": 0,
   "applied_count": 0,
-  "skipped_count": 7,
-  "apply_plan": [
-    {
-      "review_id": "qr_source_conflict_v4_003",
-      "patch_id": "source_conflict_v4_003",
-      "change_type": "revision_value_change",
-      "original_change_type": "manual_review",
-      "risk_level": "high",
-      "target_file": "F:\\知识表示与处理结课作业\\第二次托洛洛测试 -重大进展\\data\\triples\\月球_triples.json",
-      "current_value": "太阳系内密度第二高",
-      "proposed_value": "地球",
-      "revision_status": "validated",
-      "user_proposed_value": "地球",
-      "requires_explicit_value_change": true,
-      "matched_records": [
-        {
-          "index": 3,
-          "subject": "月球",
-          "relation": "ORBITS",
-          "object": "太阳系内密度第二高"
-        }
-      ],
-      "matched_record_count": 1,
-      "changed_records": [
-        {
-          "index": 3,
-          "before": {
-            "subject": "月球",
-            "relation": "ORBITS",
-            "object": "太阳系内密度第二高"
-          },
-          "after": {
-            "subject": "月球",
-            "relation": "ORBITS",
-            "object": "地球"
-          }
-        }
-      ],
-      "status": "ready",
-      "blocked_by_default": false,
-      "would_create_duplicate": false,
-      "duplicate_candidate_count": 1,
-      "duplicate_after_value": "地球",
-      "duplicate_policy": "no_duplicate_detected",
-      "recommended_next_action": "no_duplicate_detected"
-    }
-  ],
+  "skipped_count": 8,
+  "apply_plan": [],
   "revision_proposals": [
     {
       "review_id": "qr_source_conflict_v4_002",
@@ -77,47 +32,10 @@
       "user_evidence_url": "无",
       "requires_explicit_value_change": true,
       "status": "revision_preview_only"
-    },
-    {
-      "review_id": "qr_source_conflict_v4_003",
-      "patch_id": "source_conflict_v4_003",
-      "subject": "月球",
-      "relation": "ORBITS",
-      "risk_level": "high",
-      "revision_status": "validated",
-      "original_value": "太阳系内密度第二高",
-      "system_proposed_value": "manual review; no automatic data change",
-      "user_proposed_value": "地球",
-      "user_revision_reason": "月球绕行于地球，是地球的卫星",
-      "user_evidence_note": "无",
-      "user_evidence_url": "无",
-      "requires_explicit_value_change": true,
-      "status": "revision_preview_only"
     }
   ],
-  "matched_records": [
-    {
-      "index": 3,
-      "subject": "月球",
-      "relation": "ORBITS",
-      "object": "太阳系内密度第二高"
-    }
-  ],
-  "changed_records": [
-    {
-      "index": 3,
-      "before": {
-        "subject": "月球",
-        "relation": "ORBITS",
-        "object": "太阳系内密度第二高"
-      },
-      "after": {
-        "subject": "月球",
-        "relation": "ORBITS",
-        "object": "地球"
-      }
-    }
-  ],
+  "matched_records": [],
+  "changed_records": [],
   "skipped_items": [
     {
       "patch_id": "source_conflict_v4_001",
@@ -126,6 +44,11 @@
     {
       "patch_id": "source_conflict_v4_002",
       "human_decision": "pending"
+    },
+    {
+      "patch_id": "source_conflict_v4_003",
+      "human_decision": "approved",
+      "reason": "revision already applied"
     },
     {
       "patch_id": "source_conflict_v4_004",
@@ -148,7 +71,7 @@
       "human_decision": "pending"
     }
   ],
-  "formal_values_changed": true,
+  "formal_values_changed": false,
   "patches_applied": 0,
   "formal_data_written": false,
   "chroma_written": false,

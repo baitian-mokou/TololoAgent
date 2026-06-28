@@ -1,0 +1,17 @@
+{
+  "created_at": "2026-06-28T03:31:28.329098+00:00",
+  "backup_dir": "F:\\知识表示与处理结课作业\\第二次托洛洛测试 -重大进展\\data\\backups\\quality_review\\20260628_113128",
+  "entries": [
+    {
+      "original_path": "F:\\知识表示与处理结课作业\\第二次托洛洛测试 -重大进展\\data\\triples\\月球_triples.json",
+      "backup_path": "F:\\知识表示与处理结课作业\\第二次托洛洛测试 -重大进展\\data\\backups\\quality_review\\20260628_113128\\月球_triples.json",
+      "original_sha256": "3e9ebe17badecb90dad7bcf60f275d02856f0a379f4697273977d2da10a9fcf4",
+      "patch_ids": [
+        "source_conflict_v4_003"
+      ],
+      "restore_instruction": "Copy backup_path back to original_path to roll back this file."
+    }
+  ],
+  "chroma_written": false,
+  "neo4j_written": false
+}
