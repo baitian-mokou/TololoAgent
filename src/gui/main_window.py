@@ -35,6 +35,20 @@ from src.source_quality.review_labels import (
 
 # 项目根目录常量（替代所有重复的 sys.path.insert 表达式）
 PROJECT_ROOT = os.path.dirname(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
+QUALITY_REVIEW_WORKBENCH_GEOMETRY = "1180x760"
+QUALITY_REVIEW_WORKBENCH_MIN_SIZE = (1000, 650)
+QUALITY_REVIEW_WORKBENCH_TITLE = "质量复查工作台"
+QUALITY_REVIEW_WORKBENCH_BOTTOM_BUTTONS = (
+    "通过",
+    "暂缓",
+    "拒绝",
+    "保存修正建议",
+    "清除修正建议",
+    "预演合并",
+    "合并低风险标注",
+    "导出复查报告",
+    "刷新",
+)
 
 
 class BaseTab:
@@ -767,6 +781,8 @@ class QualityReviewTab(BaseTab):
         self.gui_report_path = os.path.join(PROJECT_ROOT, "evaluation", "quality_review_gui_report.json")
         self.items = []
         self.decisions_by_patch = {}
+        self.workbench_window = None
+        self.workbench_controls = {}
         self._build_ui()
         self._refresh_queue()
 
@@ -785,6 +801,16 @@ class QualityReviewTab(BaseTab):
             foreground="#777",
         )
         self.desc_label.pack(anchor="w", pady=(0, 12))
+
+        launch_row = tb.Frame(self.frame)
+        launch_row.pack(fill="x", pady=(0, 10))
+        self.btn_open_workbench = tb.Button(
+            launch_row,
+            text="打开大窗口复查",
+            command=self.open_large_review_window,
+            bootstyle="primary",
+        )
+        self.btn_open_workbench.pack(side="left")
 
         body = tb.Frame(self.frame)
         body.pack(fill="both", expand=True)
@@ -890,6 +916,128 @@ class QualityReviewTab(BaseTab):
     def refresh_texts(self):
         self.title_label.config(text="质量复查 - 有争议数据审批台")
         self.desc_label.config(text="这里只审批待复查数据；默认只生成预览，不写 Chroma 或 Neo4j。")
+        self.btn_open_workbench.config(text="打开大窗口复查")
+
+    def open_large_review_window(self):
+        if self.workbench_window is not None and self.workbench_window.winfo_exists():
+            self.workbench_window.lift()
+            self.workbench_window.focus_force()
+            return
+
+        window = tb.Toplevel(self.frame)
+        self.workbench_window = window
+        window.title(QUALITY_REVIEW_WORKBENCH_TITLE)
+        window.geometry(QUALITY_REVIEW_WORKBENCH_GEOMETRY)
+        window.minsize(*QUALITY_REVIEW_WORKBENCH_MIN_SIZE)
+        window.columnconfigure(0, weight=1)
+        window.rowconfigure(0, weight=1)
+        window.rowconfigure(1, weight=0)
+        window.protocol("WM_DELETE_WINDOW", self._close_workbench)
+
+        content = tb.Frame(window, padding=12)
+        content.grid(row=0, column=0, sticky="nsew")
+        content.columnconfigure(0, weight=1)
+        content.columnconfigure(1, weight=2)
+        content.rowconfigure(0, weight=1)
+
+        left = tb.Frame(content)
+        left.grid(row=0, column=0, sticky="nsew", padx=(0, 10))
+        left.rowconfigure(1, weight=1)
+        tb.Label(left, text="复查项列表", font=("微软雅黑", 12, "bold")).grid(row=0, column=0, sticky="w", pady=(0, 6))
+        columns = ("subject", "relation", "issue_type", "risk_level", "human_decision")
+        tree = tb.Treeview(left, columns=columns, show="headings")
+        headings = {"subject": "对象", "relation": "关系", "issue_type": "状态", "risk_level": "风险", "human_decision": "决定"}
+        widths = {"subject": 110, "relation": 170, "issue_type": 150, "risk_level": 60, "human_decision": 80}
+        for column in columns:
+            tree.heading(column, text=headings[column])
+            tree.column(column, width=widths[column], anchor="w", stretch=True)
+        tree.grid(row=1, column=0, sticky="nsew")
+        left_scroll = tb.Scrollbar(left, orient="vertical", command=tree.yview)
+        left_scroll.grid(row=1, column=1, sticky="ns")
+        tree.configure(yscrollcommand=left_scroll.set)
+
+        right = tb.Frame(content)
+        right.grid(row=0, column=1, sticky="nsew")
+        right.columnconfigure(0, weight=1)
+        right.rowconfigure(1, weight=1)
+        tb.Label(right, text="详情、人话解释与修正建议", font=("微软雅黑", 12, "bold")).grid(row=0, column=0, sticky="w", pady=(0, 6))
+        detail_text = scrolledtext.ScrolledText(
+            right,
+            height=16,
+            state="disabled",
+            font=("微软雅黑", 10),
+            wrap="word",
+            relief="sunken",
+            borderwidth=1,
+        )
+        detail_text.grid(row=1, column=0, sticky="nsew")
+
+        revision_frame = tb.Labelframe(right, text="我的修正建议（只保存到 decisions，不写正式数据库）", padding=8)
+        revision_frame.grid(row=2, column=0, sticky="ew", pady=(8, 0))
+        revision_frame.columnconfigure(1, weight=1)
+        revision_frame.columnconfigure(3, weight=1)
+        current_var = tk.StringVar(value="当前值：")
+        system_var = tk.StringVar(value="系统建议值：")
+        value_var = tk.StringVar()
+        unit_var = tk.StringVar()
+        url_var = tk.StringVar()
+        status_var = tk.StringVar(value="修正状态：none")
+        tb.Label(revision_frame, textvariable=current_var, font=("微软雅黑", 9)).grid(row=0, column=0, columnspan=4, sticky="w", pady=(0, 2))
+        tb.Label(revision_frame, textvariable=system_var, font=("微软雅黑", 9)).grid(row=1, column=0, columnspan=4, sticky="w", pady=(0, 6))
+        tb.Label(revision_frame, text="我的修正值").grid(row=2, column=0, sticky="w", padx=(0, 4))
+        tb.Entry(revision_frame, textvariable=value_var, width=24).grid(row=2, column=1, sticky="ew", padx=(0, 8))
+        tb.Label(revision_frame, text="单位").grid(row=2, column=2, sticky="w", padx=(0, 4))
+        tb.Entry(revision_frame, textvariable=unit_var, width=12).grid(row=2, column=3, sticky="ew")
+        tb.Label(revision_frame, text="修正原因").grid(row=3, column=0, sticky="nw", pady=(6, 0), padx=(0, 4))
+        reason_text = tk.Text(revision_frame, height=3, font=("微软雅黑", 9), wrap="word")
+        reason_text.grid(row=3, column=1, columnspan=3, sticky="ew", pady=(6, 0))
+        tb.Label(revision_frame, text="证据/备注").grid(row=4, column=0, sticky="nw", pady=(6, 0), padx=(0, 4))
+        note_text = tk.Text(revision_frame, height=3, font=("微软雅黑", 9), wrap="word")
+        note_text.grid(row=4, column=1, columnspan=3, sticky="ew", pady=(6, 0))
+        tb.Label(revision_frame, text="来源 URL").grid(row=5, column=0, sticky="w", pady=(6, 0), padx=(0, 4))
+        tb.Entry(revision_frame, textvariable=url_var).grid(row=5, column=1, columnspan=3, sticky="ew", pady=(6, 0))
+        tb.Label(revision_frame, textvariable=status_var, foreground="#777").grid(row=6, column=0, columnspan=4, sticky="w", pady=(6, 0))
+
+        bottom = tb.Frame(window, padding=(12, 8))
+        bottom.grid(row=1, column=0, sticky="ew")
+        for index in range(len(QUALITY_REVIEW_WORKBENCH_BOTTOM_BUTTONS)):
+            bottom.columnconfigure(index, weight=0)
+        controls = {
+            "window": window,
+            "tree": tree,
+            "detail_text": detail_text,
+            "current_var": current_var,
+            "system_var": system_var,
+            "value_var": value_var,
+            "unit_var": unit_var,
+            "url_var": url_var,
+            "status_var": status_var,
+            "reason_text": reason_text,
+            "note_text": note_text,
+        }
+        self.workbench_controls = controls
+        buttons = [
+            ("通过", lambda: self._set_workbench_decision("approved"), "success"),
+            ("暂缓", lambda: self._set_workbench_decision("deferred"), "warning"),
+            ("拒绝", lambda: self._set_workbench_decision("rejected"), "danger"),
+            ("保存修正建议", self._save_workbench_revision_proposal, "primary"),
+            ("清除修正建议", self._clear_workbench_revision_proposal, "secondary"),
+            ("预演合并", self._dry_run_apply, "secondary"),
+            ("合并低风险标注", self._apply_metadata_only, "danger"),
+            ("导出复查报告", self._export_review_report, "secondary"),
+            ("刷新", self._refresh_workbench_queue, "secondary"),
+        ]
+        for text, command, style in buttons:
+            tb.Button(bottom, text=text, command=command, bootstyle=style).pack(side="left", padx=(0, 6))
+
+        tree.bind("<<TreeviewSelect>>", lambda _event: self._show_workbench_detail())
+        self._refresh_workbench_queue()
+
+    def _close_workbench(self):
+        if self.workbench_window is not None and self.workbench_window.winfo_exists():
+            self.workbench_window.destroy()
+        self.workbench_window = None
+        self.workbench_controls = {}
 
     def _load_json(self, path, default):
         if not os.path.exists(path):
@@ -932,8 +1080,54 @@ class QualityReviewTab(BaseTab):
             self.tree.selection_set(self.items[0].get("review_id"))
             self._show_selected_detail()
 
+    def _refresh_workbench_queue(self):
+        controls = self.workbench_controls
+        tree = controls.get("tree")
+        if not tree:
+            return
+        queue = self._load_json(self.queue_path, {"items": []})
+        decisions = self._load_json(self.decisions_path, {"decisions": []})
+        self.decisions_by_patch = {
+            item.get("patch_id"): item for item in decisions.get("decisions", []) if item.get("patch_id")
+        }
+        self.items = queue.get("items", [])
+        for row in tree.get_children():
+            tree.delete(row)
+        for item in self.items:
+            decision = self.decisions_by_patch.get(item.get("patch_id"), {})
+            human_decision = decision.get("human_decision") or item.get("human_decision", "pending")
+            tree.insert(
+                "",
+                "end",
+                iid=item.get("review_id"),
+                values=(
+                    item.get("subject", ""),
+                    format_relation_label(item.get("relation", "")),
+                    self._review_status_label(item),
+                    self._risk_label(item.get("risk_level", "")),
+                    self._decision_label(human_decision),
+                ),
+            )
+        if self.items:
+            tree.selection_set(self.items[0].get("review_id"))
+            self._show_workbench_detail()
+        self._refresh_queue()
+
     def _selected_item(self):
         selection = self.tree.selection()
+        if not selection:
+            return None
+        review_id = selection[0]
+        for item in self.items:
+            if item.get("review_id") == review_id:
+                return item
+        return None
+
+    def _selected_workbench_item(self):
+        tree = self.workbench_controls.get("tree")
+        if not tree:
+            return None
+        selection = tree.selection()
         if not selection:
             return None
         review_id = selection[0]
@@ -1003,11 +1197,61 @@ class QualityReviewTab(BaseTab):
         self.detail_text.config(state="disabled")
         self._load_revision_form(item, decision)
 
+    def _show_workbench_detail(self):
+        controls = self.workbench_controls
+        detail_text = controls.get("detail_text")
+        if not detail_text:
+            return
+        item = self._selected_workbench_item()
+        if not item:
+            return
+        decision = self.decisions_by_patch.get(item.get("patch_id"), {})
+        lines = [
+            f"对象：{item.get('subject', '')}",
+            f"关系：{format_relation_label(item.get('relation', ''))}",
+            f"风险：{self._risk_label(item.get('risk_level', ''))}",
+            f"当前决定：{self._decision_label(decision.get('human_decision') or item.get('human_decision', 'pending'))}",
+            f"中文状态：{self._review_status_label(item)}",
+            f"简短解释：{self._review_status_explanation(item)}",
+            f"推荐操作：{self._recommended_user_action(item)}",
+            "",
+            f"复查摘要：{self._display_summary(item)}",
+            f"当前值：{self._format_value(item.get('current_value'))}",
+            f"候选值：{self._format_value(item.get('proposed_value')) if item.get('proposed_value') else self._format_metadata(item.get('proposed_metadata'))}",
+            f"合并影响：{item.get('merge_impact_summary', '默认不写入正式 triples。')}",
+            f"系统建议：{self._human_system_recommendation(item)}",
+            "",
+            "来源证据：",
+        ]
+        lines.extend(self._format_evidence(item.get("source_evidence", {})))
+        lines.extend(self._revision_detail_lines(decision))
+        if item.get("risk_level") == "high":
+            lines.extend(["", "高风险提示：建议暂缓或填写修正建议，不建议第一轮直接合并为正式事实值。"])
+        detail_text.config(state="normal")
+        detail_text.delete("1.0", "end")
+        detail_text.insert("end", "\n".join(lines))
+        detail_text.config(state="disabled")
+        self._load_workbench_revision_form(item, decision)
+
     def _set_decision(self, human_decision):
         item = self._selected_item()
         if not item:
             messagebox.showinfo("质量复查", "请先选择一条复查记录。")
             return
+        self._set_decision_for_item(item, human_decision)
+        self._refresh_queue()
+        self.tree.selection_set(item.get("review_id"))
+        self._show_selected_detail()
+
+    def _set_workbench_decision(self, human_decision):
+        item = self._selected_workbench_item()
+        if not item:
+            messagebox.showinfo("质量复查", "请先选择一条复查记录。")
+            return
+        self._set_decision_for_item(item, human_decision)
+        self._refresh_workbench_queue()
+
+    def _set_decision_for_item(self, item, human_decision):
         payload = self._load_json(self.decisions_path, {"schema_version": "quality_review_decisions_v1", "decisions": []})
         decisions = payload.setdefault("decisions", [])
         target = None
@@ -1043,9 +1287,6 @@ class QualityReviewTab(BaseTab):
         })
         self._dump_json(self.decisions_path, payload)
         self._log(f"{item.get('subject')} / {format_relation_label(item.get('relation'))} 已标记为：{self._decision_label(human_decision)}。")
-        self._refresh_queue()
-        self.tree.selection_set(item.get("review_id"))
-        self._show_selected_detail()
 
     def _decision_for_item(self, payload, item):
         decisions = payload.setdefault("decisions", [])
@@ -1066,6 +1307,26 @@ class QualityReviewTab(BaseTab):
         reason = self.revision_reason_text.get("1.0", "end").strip()
         evidence_note = self.revision_note_text.get("1.0", "end").strip()
         evidence_url = self.revision_url_var.get().strip()
+        self._save_revision_for_item(item, proposed_value, proposed_unit, reason, evidence_note, evidence_url)
+        self._refresh_queue()
+        self.tree.selection_set(item.get("review_id"))
+        self._show_selected_detail()
+
+    def _save_workbench_revision_proposal(self):
+        item = self._selected_workbench_item()
+        if not item:
+            messagebox.showinfo("质量复查", "请先选择一条复查记录。")
+            return
+        controls = self.workbench_controls
+        proposed_value = controls["value_var"].get().strip()
+        proposed_unit = controls["unit_var"].get().strip()
+        reason = controls["reason_text"].get("1.0", "end").strip()
+        evidence_note = controls["note_text"].get("1.0", "end").strip()
+        evidence_url = controls["url_var"].get().strip()
+        self._save_revision_for_item(item, proposed_value, proposed_unit, reason, evidence_note, evidence_url)
+        self._refresh_workbench_queue()
+
+    def _save_revision_for_item(self, item, proposed_value, proposed_unit, reason, evidence_note, evidence_url):
         revision_status = "none"
         if proposed_value and reason:
             revision_status = "proposed"
@@ -1096,15 +1357,26 @@ class QualityReviewTab(BaseTab):
         })
         self._dump_json(self.decisions_path, payload)
         self._log(f"修正建议已保存为 {revision_status}；尚未写入正式 triples、Chroma 或 Neo4j。")
-        self._refresh_queue()
-        self.tree.selection_set(item.get("review_id"))
-        self._show_selected_detail()
 
     def _clear_revision_proposal(self):
         item = self._selected_item()
         if not item:
             messagebox.showinfo("质量复查", "请先选择一条复查记录。")
             return
+        self._clear_revision_for_item(item)
+        self._refresh_queue()
+        self.tree.selection_set(item.get("review_id"))
+        self._show_selected_detail()
+
+    def _clear_workbench_revision_proposal(self):
+        item = self._selected_workbench_item()
+        if not item:
+            messagebox.showinfo("质量复查", "请先选择一条复查记录。")
+            return
+        self._clear_revision_for_item(item)
+        self._refresh_workbench_queue()
+
+    def _clear_revision_for_item(self, item):
         payload = self._load_json(self.decisions_path, {"schema_version": "quality_review_decisions_v1", "decisions": []})
         target = self._decision_for_item(payload, item)
         target.update({
@@ -1118,9 +1390,6 @@ class QualityReviewTab(BaseTab):
         })
         self._dump_json(self.decisions_path, payload)
         self._log("修正建议已清除；未写入正式 triples。")
-        self._refresh_queue()
-        self.tree.selection_set(item.get("review_id"))
-        self._show_selected_detail()
 
     def _defer_all_high_risk(self):
         confirmed = messagebox.askyesno(
@@ -1266,10 +1535,13 @@ class QualityReviewTab(BaseTab):
                     f"{self._format_value(revision.get('original_value'))} -> {revision.get('user_proposed_value')}，"
                     f"状态 {revision.get('revision_status')}，需要显式 value change。"
                 )
-        self.detail_text.config(state="normal")
-        self.detail_text.delete("1.0", "end")
-        self.detail_text.insert("end", "\n".join(lines))
-        self.detail_text.config(state="disabled")
+        for widget in (self.detail_text, self.workbench_controls.get("detail_text")):
+            if not widget:
+                continue
+            widget.config(state="normal")
+            widget.delete("1.0", "end")
+            widget.insert("end", "\n".join(lines))
+            widget.config(state="disabled")
         self._log("已显示最近 apply report。")
 
     def _run_worker(self, start_message, target):
@@ -1330,16 +1602,36 @@ class QualityReviewTab(BaseTab):
             "proposed": "已提出，等待验证",
             "validated": "已验证，可进入显式 value change 流程",
             "rejected": "修正建议已拒绝",
+            "applied": "已写入正式库",
         }.get(value or "none", value or "无修正建议")
+
+    def _revision_status_explanation(self, decision):
+        status = decision.get("revision_status", "none")
+        if status == "proposed":
+            return "已保存修正建议，但尚未验证；当前只能等待验证，不能显示为可合并。"
+        if status == "validated":
+            return "已验证，可进入 dry-run 合并；正式写入仍需要审批通过、safe_to_apply=true 和显式 value-change 参数。"
+        if status == "draft":
+            return "草稿只保存，不会进入合并；请补充修正原因和证据。"
+        if status == "rejected":
+            return "这条修正建议已拒绝，不会进入合并。"
+        if status == "applied":
+            return "已写入正式库；请检查 rollback manifest。"
+        return "暂无修正建议。"
 
     def _revision_detail_lines(self, decision):
         status = decision.get("revision_status", "none")
         if status == "none" and not decision.get("user_proposed_value"):
             return ["", "修正建议：暂无。"]
+        approval_status = "已审批通过" if decision.get("human_decision") == "approved" else "尚未审批通过"
+        applied_status = "已写入正式库" if decision.get("applied_at") else "尚未写入正式库"
         return [
             "",
             "修正建议：",
             f"- 状态：{self._revision_status_label(status)}",
+            f"- 状态说明：{self._revision_status_explanation(decision)}",
+            f"- 审批状态：{approval_status}",
+            f"- 写入状态：{applied_status}",
             f"- 我的修正值：{decision.get('user_proposed_value') or '未填写'}",
             f"- 单位：{decision.get('user_proposed_unit') or '未填写'}",
             f"- 原因：{decision.get('user_revision_reason') or '未填写'}",
@@ -1361,6 +1653,23 @@ class QualityReviewTab(BaseTab):
         self.revision_note_text.delete("1.0", "end")
         self.revision_note_text.insert("end", decision.get("user_evidence_note", ""))
         self.revision_status_var.set(f"修正状态：{self._revision_status_label(decision.get('revision_status', 'none'))}")
+
+    def _load_workbench_revision_form(self, item, decision):
+        controls = self.workbench_controls
+        if not controls:
+            return
+        controls["current_var"].set(f"当前值：{self._format_value(item.get('current_value'))}")
+        proposed = item.get("proposed_value")
+        system_value = self._format_value(proposed) if proposed else self._format_metadata(item.get("proposed_metadata"))
+        controls["system_var"].set(f"系统建议值：{system_value}")
+        controls["value_var"].set(decision.get("user_proposed_value", ""))
+        controls["unit_var"].set(decision.get("user_proposed_unit", ""))
+        controls["url_var"].set(decision.get("user_evidence_url", ""))
+        controls["reason_text"].delete("1.0", "end")
+        controls["reason_text"].insert("end", decision.get("user_revision_reason", ""))
+        controls["note_text"].delete("1.0", "end")
+        controls["note_text"].insert("end", decision.get("user_evidence_note", ""))
+        controls["status_var"].set(f"修正状态：{self._revision_status_label(decision.get('revision_status', 'none'))}")
 
     def _format_value(self, value):
         if isinstance(value, list):

@@ -235,6 +235,7 @@ def prepare_value_change(
     allow_value_change: bool,
     apply_requested: bool,
     apply_value_changes: bool,
+    plan_change_type: str = "value_change",
 ) -> Tuple[List[Dict[str, Any]], Dict[str, Any], List[str]]:
     errors: List[str] = []
     updated_records = deepcopy(records)
@@ -269,7 +270,8 @@ def prepare_value_change(
         return updated_records, {
             "review_id": item.get("review_id"),
             "patch_id": item.get("patch_id"),
-            "change_type": "value_change",
+            "change_type": plan_change_type,
+            "original_change_type": item.get("change_type"),
             "risk_level": item.get("risk_level"),
             "target_file": target_file_for_item(item),
             "current_value": item.get("current_value"),
@@ -320,7 +322,8 @@ def prepare_value_change(
     return updated_records, {
         "review_id": item.get("review_id"),
         "patch_id": item.get("patch_id"),
-        "change_type": "value_change",
+        "change_type": plan_change_type,
+        "original_change_type": item.get("change_type"),
         "risk_level": item.get("risk_level"),
         "target_file": target_file_for_item(item),
         "current_value": item.get("current_value"),
@@ -430,11 +433,54 @@ def apply_quality_patch(
         if decision.get("safe_to_apply") is not True:
             errors.append(f"{patch_id}: approved decision must set safe_to_apply=true")
             continue
-        if decision.get("approved_action") and decision.get("approved_action") != item.get("action"):
+        has_revision = has_user_revision(decision)
+        is_validated_revision = has_revision and normalized_revision_status(decision) == "validated"
+        if has_revision and not is_validated_revision:
+            if apply:
+                errors.append(f"{patch_id}: value_change requires revision_status=validated")
+            skipped_items.append({
+                "patch_id": patch_id,
+                "human_decision": human_decision,
+                "revision_status": normalized_revision_status(decision),
+                "reason": "revision is not validated; value-change apply plan is blocked",
+            })
+            continue
+        if (
+            decision.get("approved_action")
+            and not is_validated_revision
+            and decision.get("approved_action") != item.get("action")
+        ):
             errors.append(f"{patch_id}: approved_action does not match review action")
             continue
 
         change_type = item.get("change_type")
+        if is_validated_revision:
+            target_file = target_file_for_item(item)
+            if target_file not in records_by_file:
+                records_by_file[target_file] = load_json(target_file)
+                if not isinstance(records_by_file[target_file], list):
+                    errors.append(f"{patch_id}: target file is not a list of triples")
+                    continue
+            updated_records, plan_item, item_errors = prepare_value_change(
+                item,
+                decision,
+                records_by_file[target_file],
+                allow_value_change,
+                apply,
+                apply_value_changes,
+                plan_change_type="revision_value_change",
+            )
+            records_by_file[target_file] = updated_records
+            changed_by_file.setdefault(target_file, []).extend(plan_item.get("changed_records", []))
+            if plan_item.get("changed_records"):
+                patch_ids_by_file.setdefault(target_file, []).append(patch_id)
+                value_change_files.add(target_file)
+            matched_records.extend(plan_item.get("matched_records", []))
+            changed_records.extend(plan_item.get("changed_records", []))
+            apply_plan.append(plan_item)
+            errors.extend(item_errors)
+            continue
+
         if change_type == "metadata_only" or item.get("action") == "add_measurement_kind":
             target_file = target_file_for_item(item)
             if target_file not in records_by_file:

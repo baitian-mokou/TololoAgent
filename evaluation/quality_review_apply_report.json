@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-06-27T15:27:56.489535+00:00",
+  "generated_at": "2026-06-28T01:54:10.866709+00:00",
   "dry_run": true,
   "apply": false,
   "apply_metadata_only": false,
@@ -13,7 +13,43 @@
   "applied_count": 0,
   "skipped_count": 8,
   "apply_plan": [],
-  "revision_proposals": [],
+  "revision_proposals": [
+    {
+      "review_id": "qr_source_conflict_v4_002",
+      "patch_id": "source_conflict_v4_002",
+      "subject": "天王星",
+      "relation": "HAS_RADIUS",
+      "risk_level": "low",
+      "revision_status": "proposed",
+      "original_value": [
+        "4km",
+        "20km"
+      ],
+      "system_proposed_value": null,
+      "user_proposed_value": "25362 km",
+      "user_revision_reason": "wikidata: 25362 km",
+      "user_evidence_note": "wikidata: 25362 km，不认为zh_wikipedia: 4km、20km是正确的。",
+      "user_evidence_url": "无",
+      "requires_explicit_value_change": true,
+      "status": "revision_preview_only"
+    },
+    {
+      "review_id": "qr_source_conflict_v4_003",
+      "patch_id": "source_conflict_v4_003",
+      "subject": "月球",
+      "relation": "ORBITS",
+      "risk_level": "high",
+      "revision_status": "proposed",
+      "original_value": "太阳系内密度第二高",
+      "system_proposed_value": "manual review; no automatic data change",
+      "user_proposed_value": "地球",
+      "user_revision_reason": "月球绕行于地球，是地球的卫星",
+      "user_evidence_note": "无",
+      "user_evidence_url": "无",
+      "requires_explicit_value_change": true,
+      "status": "revision_preview_only"
+    }
+  ],
   "matched_records": [],
   "changed_records": [],
   "skipped_items": [
