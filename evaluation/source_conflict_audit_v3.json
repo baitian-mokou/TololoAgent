@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-06-27T12:26:31.582597+00:00",
+  "generated_at": "2026-06-28T03:41:12.758802+00:00",
   "sources": [
     "zh_wikipedia",
     "wikidata",
@@ -11,13 +11,13 @@
     "total_subject_relation_keys": 188,
     "metadata_incomplete_count": 0,
     "insufficient_metadata_count": 0,
-    "value_conflict_count": 8,
+    "value_conflict_count": 7,
     "entity_alias_equivalent_count": 0,
     "same_quantity_different_measurement_kind_count": 1,
     "radius_kind_mismatch_count": 1,
     "mass_reference_mismatch_count": 0,
     "likely_zhwiki_extraction_error_count": 7,
-    "exact_match_count": 5,
+    "exact_match_count": 6,
     "unit_equivalent_count": 16,
     "normalized_equivalent_count": 0,
     "synonym_equivalent_count": 2,
@@ -28,8 +28,8 @@
     "unit_equivalent": 16,
     "likely_zhwiki_extraction_error": 7,
     "synonym_equivalent": 2,
-    "exact_match": 5,
-    "value_conflict": 8,
+    "exact_match": 6,
+    "value_conflict": 7,
     "same_quantity_different_measurement_kind": 1,
     "radius_kind_mismatch": 1
   },
@@ -86,9 +86,9 @@
   ],
   "v1_v2_v3_comparison": {
     "value_conflict": {
-      "v1": 19,
-      "v2": 9,
-      "v3": 8
+      "v1": 18,
+      "v2": 8,
+      "v3": 7
     },
     "unit_equivalent": {
       "v1": 15,
@@ -4212,9 +4212,9 @@
       "relation": "ORBITS",
       "status": [
         "source_missing",
-        "value_conflict"
+        "exact_match"
       ],
-      "reason": "Missing sources: nasa. Values parse successfully but normalized values differ for ORBITS. Values parse successfully but normalized values differ for ORBITS.",
+      "reason": "Missing sources: nasa. Raw object strings match after whitespace/case normalization.",
       "present_sources": [
         "wikidata",
         "zh_wikipedia"
@@ -4224,7 +4224,7 @@
       ],
       "values_by_source": {
         "zh_wikipedia": [
-          "太阳系内密度第二高"
+          "地球"
         ],
         "wikidata": [
           "地球"
@@ -4233,8 +4233,8 @@
       "normalized_by_source": {
         "zh_wikipedia": [
           {
-            "raw_value": "太阳系内密度第二高",
-            "normalized_value": "太阳系内密度第二高",
+            "raw_value": "地球",
+            "normalized_value": "地球",
             "normalized_unit": "",
             "numeric_value": null,
             "relation": "ORBITS",

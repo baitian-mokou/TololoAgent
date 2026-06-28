@@ -3,6 +3,7 @@
   "source_schema_version": "esa_shadow_ready_v1",
   "source_role": "primary",
   "namespace_status": "shadow_only",
+  "mode": "offline",
   "materialization_mode": "offline_esa_smoke_fixture_v1",
   "cutover_ready": false,
   "raw_dir": "F:\\知识表示与处理结课作业\\第二次托洛洛测试 -重大进展\\data\\raw_json\\esa",
@@ -23,8 +24,10 @@
     "pipeline": "esa_source_adapter_v1",
     "source_schema_version": "esa_shadow_ready_v1",
     "materialization_mode": "offline_esa_smoke_fixture_v1",
+    "mode": "offline",
+    "official_namespace_written": true,
     "cutover_ready": false,
-    "time": "2026-06-27T04:58:49.026605+00:00"
+    "time": "2026-06-28T03:40:47.513006+00:00"
   },
   "metadata_contract": {
     "passed": true,
@@ -37,12 +40,77 @@
     "reason": "graph_loader_not_configured"
   },
   "chroma": {
-    "skipped": true,
-    "reason": "chroma_store_not_configured"
+    "added_narratives": 1,
+    "stats": {
+      "total": 1,
+      "collections": [
+        "astronomy_narratives_esa"
+      ]
+    }
   },
   "probes": {
-    "skipped": true,
-    "reason": "agent_not_configured"
+    "graph_query": "火卫一绕谁公转",
+    "graph_final_source": "fallback",
+    "graph_final_result_count": 0,
+    "graph_final_results": [],
+    "narrative_query": "火星大气成分",
+    "narrative_result_count": 1,
+    "narrative_results": [
+      {
+        "content": "ESA smoke fixture 仅用于验证新增来源可以复用 SourceAdapter 物化流程；火星快车号被记录为围绕火星运行的任务样例。",
+        "score": 0.6304741779963176,
+        "page_title": "火星快车号",
+        "section": "任务",
+        "keywords": "ESA,火星快车号,火星,任务",
+        "chunk_id": "esa_火星快车号_00",
+        "source": "esa",
+        "source_name": "esa",
+        "source_title": "火星快车号",
+        "source_role": "primary",
+        "origin": "html_fallback",
+        "schema_version": "esa_shadow_ready_v1",
+        "rank": 1
+      }
+    ]
+  },
+  "fetch": {
+    "requested_mode": "offline",
+    "effective_mode": "offline",
+    "status": "ok",
+    "error": ""
+  },
+  "preview": {
+    "record_count": 1,
+    "sample_records": [
+      {
+        "title": "火星快车号",
+        "triples": [
+          {
+            "subject": "火星快车号",
+            "relation": "ORBITS",
+            "object": "火星",
+            "pattern": "esa_smoke_fixture",
+            "raw": "ESA smoke fixture: Mars Express orbits Mars."
+          }
+        ],
+        "narratives": [
+          {
+            "page_title": "火星快车号",
+            "section": "任务",
+            "content": "ESA smoke fixture 仅用于验证新增来源可以复用 SourceAdapter 物化流程；火星快车号被记录为围绕火星运行的任务样例。",
+            "keywords": [
+              "ESA",
+              "火星快车号",
+              "火星",
+              "任务"
+            ]
+          }
+        ]
+      }
+    ],
+    "official_triples_written": true,
+    "official_chroma_written": true,
+    "official_neo4j_written": false
   },
   "readiness_gate": {
     "passed": true,
@@ -50,7 +118,7 @@
     "reason": "shadow namespace is auditable; active-source cutover remains disabled"
   },
   "materialization": {
-    "timestamp_utc": "2026-06-27T04:58:49.029044+00:00",
+    "timestamp_utc": "2026-06-28T03:40:57.799172+00:00",
     "output_path": "F:\\知识表示与处理结课作业\\第二次托洛洛测试 -重大进展\\evaluation\\source_expansion\\esa\\esa_materialization_report.json"
   },
   "raw_copy_status": {

@@ -1,15 +1,15 @@
 {
-  "generated_at": "2026-06-27T12:26:31.607353+00:00",
+  "generated_at": "2026-06-28T03:41:12.781065+00:00",
   "version": "v4_conflict_resolution_candidates",
   "summary": {
     "metadata_incomplete_count": 0,
-    "evidence_packet_count": 8,
-    "quality_patch_candidate_count": 8,
-    "requires_human_approval_count": 8
+    "evidence_packet_count": 7,
+    "quality_patch_candidate_count": 7,
+    "requires_human_approval_count": 7
   },
-  "v3_value_conflict_count": 8,
+  "v3_value_conflict_count": 7,
   "classification_counts": {
-    "true_value_conflict": 6,
+    "true_value_conflict": 5,
     "measurement_kind_mismatch": 1,
     "source_granularity_mismatch": 1
   },
@@ -171,74 +171,6 @@
       "likely_resolution": "add_measurement_kind",
       "confidence": 0.78,
       "reason": "Radius records mix mean/equatorial/polar or unspecified radius kinds."
-    },
-    {
-      "subject": "月球",
-      "relation": "ORBITS",
-      "sources_involved": [
-        "wikidata",
-        "zh_wikipedia"
-      ],
-      "values_by_source": {
-        "zh_wikipedia": [
-          "太阳系内密度第二高"
-        ],
-        "wikidata": [
-          "地球"
-        ]
-      },
-      "evidence_by_source": {
-        "zh_wikipedia": [
-          {
-            "raw_value": "太阳系内密度第二高",
-            "normalized_value": "太阳系内密度第二高",
-            "unit": "",
-            "parse_status": "text_normalized",
-            "measurement_kind": "orbit_target",
-            "measurement_confidence": 0.75,
-            "measurement_evidence": [
-              "generic orbit target relation"
-            ],
-            "measurement_warning": "",
-            "source_title": "月球",
-            "source_url": "",
-            "source_record_id": "",
-            "target_file": "F:\\知识表示与处理结课作业\\第二次托洛洛测试 -重大进展\\data\\triples\\月球_triples.json",
-            "target_record_hint": {
-              "subject": "月球",
-              "relation": "ORBITS",
-              "object": "太阳系内密度第二高"
-            }
-          }
-        ],
-        "wikidata": [
-          {
-            "raw_value": "地球",
-            "normalized_value": "地球",
-            "unit": "",
-            "parse_status": "text_normalized",
-            "measurement_kind": "orbit_target",
-            "measurement_confidence": 0.75,
-            "measurement_evidence": [
-              "generic orbit target relation"
-            ],
-            "measurement_warning": "",
-            "source_title": "月球",
-            "source_url": "",
-            "source_record_id": "",
-            "target_file": "F:\\知识表示与处理结课作业\\第二次托洛洛测试 -重大进展\\data\\triples\\wikidata\\月球_triples.json",
-            "target_record_hint": {
-              "subject": "月球",
-              "relation": "ORBITS",
-              "object": "地球"
-            }
-          }
-        ]
-      },
-      "audit_classification": "true_value_conflict",
-      "likely_resolution": "no_action_manual_review",
-      "confidence": 0.62,
-      "reason": "Orbit targets remain different after alias normalization."
     },
     {
       "subject": "木卫二",
@@ -641,33 +573,6 @@
       "patch_id": "source_conflict_v4_003",
       "action": "no_action_manual_review",
       "target_source": "zh_wikipedia",
-      "target_file": "F:\\知识表示与处理结课作业\\第二次托洛洛测试 -重大进展\\data\\triples\\月球_triples.json",
-      "target_record_hint": {
-        "subject": "月球",
-        "relation": "ORBITS",
-        "object": "太阳系内密度第二高"
-      },
-      "before": {
-        "values_by_source": {
-          "zh_wikipedia": [
-            "太阳系内密度第二高"
-          ],
-          "wikidata": [
-            "地球"
-          ]
-        }
-      },
-      "after": {
-        "proposal": "manual review; no automatic data change"
-      },
-      "rationale": "Orbit targets remain different after alias normalization.",
-      "confidence": 0.62,
-      "requires_human_approval": true
-    },
-    {
-      "patch_id": "source_conflict_v4_004",
-      "action": "no_action_manual_review",
-      "target_source": "zh_wikipedia",
       "target_file": "F:\\知识表示与处理结课作业\\第二次托洛洛测试 -重大进展\\data\\triples\\木卫二_triples.json",
       "target_record_hint": {
         "subject": "木卫二",
@@ -692,7 +597,7 @@
       "requires_human_approval": true
     },
     {
-      "patch_id": "source_conflict_v4_005",
+      "patch_id": "source_conflict_v4_004",
       "action": "no_action_manual_review",
       "target_source": "zh_wikipedia",
       "target_file": "F:\\知识表示与处理结课作业\\第二次托洛洛测试 -重大进展\\data\\triples\\木卫四_triples.json",
@@ -719,7 +624,7 @@
       "requires_human_approval": true
     },
     {
-      "patch_id": "source_conflict_v4_006",
+      "patch_id": "source_conflict_v4_005",
       "action": "no_action_manual_review",
       "target_source": "zh_wikipedia",
       "target_file": "F:\\知识表示与处理结课作业\\第二次托洛洛测试 -重大进展\\data\\triples\\火卫一_triples.json",
@@ -746,7 +651,7 @@
       "requires_human_approval": true
     },
     {
-      "patch_id": "source_conflict_v4_007",
+      "patch_id": "source_conflict_v4_006",
       "action": "no_action_manual_review",
       "target_source": "zh_wikipedia",
       "target_file": "F:\\知识表示与处理结课作业\\第二次托洛洛测试 -重大进展\\data\\triples\\火卫一_triples.json",
@@ -773,7 +678,7 @@
       "requires_human_approval": true
     },
     {
-      "patch_id": "source_conflict_v4_008",
+      "patch_id": "source_conflict_v4_007",
       "action": "no_action_manual_review",
       "target_source": "zh_wikipedia",
       "target_file": "F:\\知识表示与处理结课作业\\第二次托洛洛测试 -重大进展\\data\\triples\\金星_triples.json",

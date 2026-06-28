@@ -216,6 +216,17 @@
           "origin": "html_fallback",
           "source_title": "月球",
           "schema_version": "zh_wikipedia_single_source_v1"
+        },
+        {
+          "subject": "月球",
+          "relation": "ORBITS",
+          "object": "地球",
+          "source": "zh_wikipedia",
+          "source_name": "zh_wikipedia",
+          "source_role": "primary",
+          "origin": "html_fallback",
+          "source_title": "月球",
+          "schema_version": "zh_wikipedia_single_source_v1"
         }
       ],
       "exact_match": true,

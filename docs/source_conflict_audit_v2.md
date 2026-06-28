@@ -8,9 +8,9 @@ This v2 audit is read-only. It normalizes numeric units and atmosphere synonyms 
 - `total_subject_relation_keys`: 188
 - `metadata_incomplete_count`: 0
 - `insufficient_metadata_count`: 0
-- `value_conflict_count`: 9
+- `value_conflict_count`: 8
 - `likely_zhwiki_extraction_error_count`: 7
-- `exact_match_count`: 5
+- `exact_match_count`: 6
 - `unit_equivalent_count`: 16
 - `normalized_equivalent_count`: 0
 - `synonym_equivalent_count`: 2
@@ -18,8 +18,8 @@ This v2 audit is read-only. It normalizes numeric units and atmosphere synonyms 
 
 ## V1 vs V2
 
-- `v1_value_conflict_count`: 19
-- `v2_value_conflict_count`: 9
+- `v1_value_conflict_count`: 18
+- `v2_value_conflict_count`: 8
 - `v2_unit_equivalent_count`: 16
 - `v2_normalized_equivalent_count`: 0
 - `v2_synonym_equivalent_count`: 2
@@ -35,7 +35,6 @@ This v2 audit is read-only. It normalizes numeric units and atmosphere synonyms 
 
 - `天王星` / `HAS_MASS`: Missing sources: nasa. Values parse successfully but normalized values differ for HAS_MASS. {"zh_wikipedia": ["0.0013 × 10 25 kg"], "wikidata": ["8.6810e25 kg"]}
 - `天王星` / `HAS_RADIUS`: Missing sources: nasa. Values remain different after normalization; at least one source could not be fully parsed for HAS_RADIUS. {"zh_wikipedia": ["4km", "20km"], "wikidata": ["25362 km"]}
-- `月球` / `ORBITS`: Missing sources: nasa. Values parse successfully but normalized values differ for ORBITS. {"zh_wikipedia": ["太阳系内密度第二高"], "wikidata": ["地球"]}
 - `木卫二` / `HAS_MASS`: Missing sources: nasa. Values parse successfully but normalized values differ for HAS_MASS. {"zh_wikipedia": ["0.000 013 × 10 22 kg"], "wikidata": ["4.7998e22 kg"]}
 - `木卫四` / `HAS_MASS`: Missing sources: nasa. Values parse successfully but normalized values differ for HAS_MASS. {"zh_wikipedia": ["0.000 137 × 10 23 kg"], "wikidata": ["1.0759e23 kg"]}
 - `火卫一` / `HAS_MASS`: Missing sources: nasa. Values parse successfully but normalized values differ for HAS_MASS. {"zh_wikipedia": ["1.072 × 10 16 kg"], "wikidata": ["1.0659e16 kg"]}

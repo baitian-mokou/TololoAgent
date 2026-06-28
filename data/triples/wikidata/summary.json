@@ -5,6 +5,8 @@
   "pipeline": "wikidata_source_adapter_v1",
   "source_schema_version": "wikidata_shadow_ready_v1",
   "materialization_mode": "offline_wikidata_fixture_v1",
+  "mode": "offline",
+  "official_namespace_written": true,
   "cutover_ready": false,
-  "time": "2026-06-27T04:56:35.790382+00:00"
+  "time": "2026-06-28T03:39:58.339336+00:00"
 }

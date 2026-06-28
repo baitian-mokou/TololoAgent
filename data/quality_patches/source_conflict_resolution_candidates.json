@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-06-27T12:26:31.606983+00:00",
+  "generated_at": "2026-06-28T03:41:12.780786+00:00",
   "source": "source_conflict_audit_v4",
   "apply_supported": false,
   "candidates": [
@@ -62,33 +62,6 @@
       "patch_id": "source_conflict_v4_003",
       "action": "no_action_manual_review",
       "target_source": "zh_wikipedia",
-      "target_file": "F:\\知识表示与处理结课作业\\第二次托洛洛测试 -重大进展\\data\\triples\\月球_triples.json",
-      "target_record_hint": {
-        "subject": "月球",
-        "relation": "ORBITS",
-        "object": "太阳系内密度第二高"
-      },
-      "before": {
-        "values_by_source": {
-          "zh_wikipedia": [
-            "太阳系内密度第二高"
-          ],
-          "wikidata": [
-            "地球"
-          ]
-        }
-      },
-      "after": {
-        "proposal": "manual review; no automatic data change"
-      },
-      "rationale": "Orbit targets remain different after alias normalization.",
-      "confidence": 0.62,
-      "requires_human_approval": true
-    },
-    {
-      "patch_id": "source_conflict_v4_004",
-      "action": "no_action_manual_review",
-      "target_source": "zh_wikipedia",
       "target_file": "F:\\知识表示与处理结课作业\\第二次托洛洛测试 -重大进展\\data\\triples\\木卫二_triples.json",
       "target_record_hint": {
         "subject": "木卫二",
@@ -113,7 +86,7 @@
       "requires_human_approval": true
     },
     {
-      "patch_id": "source_conflict_v4_005",
+      "patch_id": "source_conflict_v4_004",
       "action": "no_action_manual_review",
       "target_source": "zh_wikipedia",
       "target_file": "F:\\知识表示与处理结课作业\\第二次托洛洛测试 -重大进展\\data\\triples\\木卫四_triples.json",
@@ -140,7 +113,7 @@
       "requires_human_approval": true
     },
     {
-      "patch_id": "source_conflict_v4_006",
+      "patch_id": "source_conflict_v4_005",
       "action": "no_action_manual_review",
       "target_source": "zh_wikipedia",
       "target_file": "F:\\知识表示与处理结课作业\\第二次托洛洛测试 -重大进展\\data\\triples\\火卫一_triples.json",
@@ -167,7 +140,7 @@
       "requires_human_approval": true
     },
     {
-      "patch_id": "source_conflict_v4_007",
+      "patch_id": "source_conflict_v4_006",
       "action": "no_action_manual_review",
       "target_source": "zh_wikipedia",
       "target_file": "F:\\知识表示与处理结课作业\\第二次托洛洛测试 -重大进展\\data\\triples\\火卫一_triples.json",
@@ -194,7 +167,7 @@
       "requires_human_approval": true
     },
     {
-      "patch_id": "source_conflict_v4_008",
+      "patch_id": "source_conflict_v4_007",
       "action": "no_action_manual_review",
       "target_source": "zh_wikipedia",
       "target_file": "F:\\知识表示与处理结课作业\\第二次托洛洛测试 -重大进展\\data\\triples\\金星_triples.json",

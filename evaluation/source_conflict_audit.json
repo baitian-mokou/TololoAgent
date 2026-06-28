@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-06-27T12:26:31.518409+00:00",
+  "generated_at": "2026-06-28T03:41:12.708298+00:00",
   "sources": [
     "zh_wikipedia",
     "wikidata",
@@ -9,16 +9,16 @@
     "total_records": 248,
     "total_subject_relation_keys": 188,
     "metadata_incomplete_count": 0,
-    "value_conflict_count": 19,
-    "exact_match_count": 5,
+    "value_conflict_count": 18,
+    "exact_match_count": 6,
     "unit_equivalent_count": 15,
     "source_missing_count": 188
   },
   "status_counts": {
     "source_missing": 188,
     "unit_equivalent": 15,
-    "value_conflict": 19,
-    "exact_match": 5
+    "value_conflict": 18,
+    "exact_match": 6
   },
   "findings": [
     {
@@ -1952,7 +1952,7 @@
       "relation": "ORBITS",
       "status": [
         "source_missing",
-        "value_conflict"
+        "exact_match"
       ],
       "present_sources": [
         "wikidata",
@@ -1963,7 +1963,7 @@
       ],
       "values_by_source": {
         "zh_wikipedia": [
-          "太阳系内密度第二高"
+          "地球"
         ],
         "wikidata": [
           "地球"

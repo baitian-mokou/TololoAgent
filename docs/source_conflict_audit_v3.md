@@ -6,7 +6,7 @@ This v3 audit is read-only. It adds Wikidata unit-QID normalization, entity alia
 
 | Metric | V1 | V2 | V3 |
 | --- | ---: | ---: | ---: |
-| `value_conflict` | 19 | 9 | 8 |
+| `value_conflict` | 18 | 8 | 7 |
 | `unit_equivalent` | 15 | 16 | 16 |
 | `synonym_equivalent` | 0 | 2 | 2 |
 | `entity_alias_equivalent` | 0 | 0 | 0 |
@@ -24,7 +24,6 @@ This v3 audit is read-only. It adds Wikidata unit-QID normalization, entity alia
 
 - `天王星` / `HAS_MASS`: Missing sources: nasa. Values parse successfully but normalized values differ for HAS_MASS. Values parse successfully but normalized values differ for HAS_MASS. {"zh_wikipedia": ["0.0013 × 10 25 kg"], "wikidata": ["8.6810e25 kg"]}
 - `天王星` / `HAS_RADIUS`: Missing sources: nasa. Values remain different after normalization; at least one source could not be fully parsed for HAS_RADIUS. Values remain different after normalization; at least one source could not be fully parsed for HAS_RADIUS. {"zh_wikipedia": ["4km", "20km"], "wikidata": ["25362 km"]}
-- `月球` / `ORBITS`: Missing sources: nasa. Values parse successfully but normalized values differ for ORBITS. Values parse successfully but normalized values differ for ORBITS. {"zh_wikipedia": ["太阳系内密度第二高"], "wikidata": ["地球"]}
 - `木卫二` / `HAS_MASS`: Missing sources: nasa. Values parse successfully but normalized values differ for HAS_MASS. Values parse successfully but normalized values differ for HAS_MASS. {"zh_wikipedia": ["0.000 013 × 10 22 kg"], "wikidata": ["4.7998e22 kg"]}
 - `木卫四` / `HAS_MASS`: Missing sources: nasa. Values parse successfully but normalized values differ for HAS_MASS. Values parse successfully but normalized values differ for HAS_MASS. {"zh_wikipedia": ["0.000 137 × 10 23 kg"], "wikidata": ["1.0759e23 kg"]}
 - `火卫一` / `HAS_MASS`: Missing sources: nasa. Values parse successfully but normalized values differ for HAS_MASS. Values parse successfully but normalized values differ for HAS_MASS. {"zh_wikipedia": ["1.072 × 10 16 kg"], "wikidata": ["1.0659e16 kg"]}

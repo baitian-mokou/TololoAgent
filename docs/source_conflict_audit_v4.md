@@ -5,15 +5,14 @@ This v4 audit creates evidence packets and candidate quality patches only. It do
 ## Summary
 
 - `metadata_incomplete_count`: 0
-- `evidence_packet_count`: 8
-- `quality_patch_candidate_count`: 8
-- `requires_human_approval_count`: 8
+- `evidence_packet_count`: 7
+- `quality_patch_candidate_count`: 7
+- `requires_human_approval_count`: 7
 
 ## Evidence Packets
 
 - `天王星` / `HAS_MASS`: `true_value_conflict`; no_action_manual_review; confidence `0.6`
 - `天王星` / `HAS_RADIUS`: `measurement_kind_mismatch`; add_measurement_kind; confidence `0.78`
-- `月球` / `ORBITS`: `true_value_conflict`; no_action_manual_review; confidence `0.62`
 - `木卫二` / `HAS_MASS`: `true_value_conflict`; no_action_manual_review; confidence `0.6`
 - `木卫四` / `HAS_MASS`: `true_value_conflict`; no_action_manual_review; confidence `0.6`
 - `火卫一` / `HAS_MASS`: `source_granularity_mismatch`; no_action_manual_review; confidence `0.76`
@@ -29,7 +28,6 @@ This v4 audit creates evidence packets and candidate quality patches only. It do
 - `source_conflict_v4_005` `no_action_manual_review` -> `zh_wikipedia`; approval required `True`
 - `source_conflict_v4_006` `no_action_manual_review` -> `zh_wikipedia`; approval required `True`
 - `source_conflict_v4_007` `no_action_manual_review` -> `zh_wikipedia`; approval required `True`
-- `source_conflict_v4_008` `no_action_manual_review` -> `zh_wikipedia`; approval required `True`
 
 ## Boundary
 

@@ -7,8 +7,8 @@ This audit is read-only. It compares existing triples in `zh_wikipedia`, `wikida
 - `total_records`: 248
 - `total_subject_relation_keys`: 188
 - `metadata_incomplete_count`: 0
-- `value_conflict_count`: 19
-- `exact_match_count`: 5
+- `value_conflict_count`: 18
+- `exact_match_count`: 6
 - `unit_equivalent_count`: 15
 - `source_missing_count`: 188
 
@@ -16,8 +16,8 @@ This audit is read-only. It compares existing triples in `zh_wikipedia`, `wikida
 
 - `source_missing`: 188
 - `unit_equivalent`: 15
-- `value_conflict`: 19
-- `exact_match`: 5
+- `value_conflict`: 18
+- `exact_match`: 6
 
 ## Notable Value Conflicts
 
@@ -27,7 +27,6 @@ This audit is read-only. It compares existing triples in `zh_wikipedia`, `wikida
 - `地球` / `HAS_MASS`: {"zh_wikipedia": ["5.972 37 × 10 24 kg"], "wikidata": ["5.97237e24 kg"]}
 - `天王星` / `HAS_MASS`: {"zh_wikipedia": ["0.0013 × 10 25 kg"], "wikidata": ["8.6810e25 kg"]}
 - `天王星` / `HAS_RADIUS`: {"zh_wikipedia": ["4km", "20km"], "wikidata": ["25362 km"]}
-- `月球` / `ORBITS`: {"zh_wikipedia": ["太阳系内密度第二高"], "wikidata": ["地球"]}
 - `木卫二` / `HAS_MASS`: {"zh_wikipedia": ["0.000 013 × 10 22 kg"], "wikidata": ["4.7998e22 kg"]}
 - `木卫二` / `HAS_RADIUS`: {"zh_wikipedia": ["0.5 km"], "wikidata": ["1560.8 km"]}
 - `木卫四` / `HAS_MASS`: {"zh_wikipedia": ["0.000 137 × 10 23 kg"], "wikidata": ["1.0759e23 kg"]}

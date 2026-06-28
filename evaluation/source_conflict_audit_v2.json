@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-06-27T12:26:31.554387+00:00",
+  "generated_at": "2026-06-28T03:41:12.734363+00:00",
   "sources": [
     "zh_wikipedia",
     "wikidata",
@@ -11,9 +11,9 @@
     "total_subject_relation_keys": 188,
     "metadata_incomplete_count": 0,
     "insufficient_metadata_count": 0,
-    "value_conflict_count": 9,
+    "value_conflict_count": 8,
     "likely_zhwiki_extraction_error_count": 7,
-    "exact_match_count": 5,
+    "exact_match_count": 6,
     "unit_equivalent_count": 16,
     "normalized_equivalent_count": 0,
     "synonym_equivalent_count": 2,
@@ -24,8 +24,8 @@
     "unit_equivalent": 16,
     "likely_zhwiki_extraction_error": 7,
     "synonym_equivalent": 2,
-    "exact_match": 5,
-    "value_conflict": 9
+    "exact_match": 6,
+    "value_conflict": 8
   },
   "source_missing_breakdown": {
     "by_source": {
@@ -68,8 +68,8 @@
     }
   },
   "v1_v2_comparison": {
-    "v1_value_conflict_count": 19,
-    "v2_value_conflict_count": 9,
+    "v1_value_conflict_count": 18,
+    "v2_value_conflict_count": 8,
     "v2_unit_equivalent_count": 16,
     "v2_normalized_equivalent_count": 0,
     "v2_synonym_equivalent_count": 2,
@@ -3630,9 +3630,9 @@
       "relation": "ORBITS",
       "status": [
         "source_missing",
-        "value_conflict"
+        "exact_match"
       ],
-      "reason": "Missing sources: nasa. Values parse successfully but normalized values differ for ORBITS.",
+      "reason": "Missing sources: nasa. Raw object strings match after whitespace/case normalization.",
       "present_sources": [
         "wikidata",
         "zh_wikipedia"
@@ -3642,7 +3642,7 @@
       ],
       "values_by_source": {
         "zh_wikipedia": [
-          "太阳系内密度第二高"
+          "地球"
         ],
         "wikidata": [
           "地球"
@@ -3651,8 +3651,8 @@
       "normalized_by_source": {
         "zh_wikipedia": [
           {
-            "raw_value": "太阳系内密度第二高",
-            "normalized_value": "太阳系内密度第二高",
+            "raw_value": "地球",
+            "normalized_value": "地球",
             "normalized_unit": "",
             "numeric_value": null,
             "relation": "ORBITS",

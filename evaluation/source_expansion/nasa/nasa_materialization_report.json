@@ -1,17 +1,29 @@
 {
   "source_name": "nasa",
   "source_schema_version": "nasa_shadow_ready_v1",
-  "raw_dir": "F:\\第二次托洛洛测试 -重大进展\\data\\raw_json\\nasa",
-  "triples_dir": "F:\\第二次托洛洛测试 -重大进展\\data\\triples\\nasa",
+  "source_role": "primary",
+  "namespace_status": "shadow_only",
+  "source_purpose": "authoritative_fact_verification_and_numeric_supplement",
+  "mode": "offline",
+  "materialization_mode": "offline_nasa_raw_pipeline_v1",
+  "cutover_ready": false,
+  "raw_dir": "F:\\知识表示与处理结课作业\\第二次托洛洛测试 -重大进展\\data\\raw_json\\nasa",
+  "triples_dir": "F:\\知识表示与处理结课作业\\第二次托洛洛测试 -重大进展\\data\\triples\\nasa",
   "raw_files": [
     {
-      "path": "F:\\第二次托洛洛测试 -重大进展\\data\\raw_json\\nasa\\火卫一_html.json",
+      "path": "F:\\知识表示与处理结课作业\\第二次托洛洛测试 -重大进展\\data\\raw_json\\nasa\\火卫一_html.json",
       "title": "火卫一"
     },
     {
-      "path": "F:\\第二次托洛洛测试 -重大进展\\data\\raw_json\\nasa\\火星_html.json",
+      "path": "F:\\知识表示与处理结课作业\\第二次托洛洛测试 -重大进展\\data\\raw_json\\nasa\\火星_html.json",
       "title": "火星"
     }
+  ],
+  "triple_files": [
+    "F:\\知识表示与处理结课作业\\第二次托洛洛测试 -重大进展\\data\\triples\\nasa\\火卫一_triples.json"
+  ],
+  "narrative_files": [
+    "F:\\知识表示与处理结课作业\\第二次托洛洛测试 -重大进展\\data\\triples\\nasa\\火星_narratives.json"
   ],
   "pipeline": {
     "total_triples": 1,
@@ -30,8 +42,18 @@
         "esa": "disabled"
       },
       "source_schema_version": "nasa_shadow_ready_v1",
-      "time": "2026-06-24 21:38:35"
+      "time": "2026-06-28 11:40:25"
     }
+  },
+  "metadata_contract": {
+    "passed": true,
+    "checked_records": 2,
+    "break_count": 0,
+    "breaks": []
+  },
+  "graph": {
+    "skipped": true,
+    "reason": "nasa_shadow_does_not_enable_multisource_graph_fusion"
   },
   "chroma": {
     "added_narratives": 1,
@@ -43,6 +65,7 @@
     }
   },
   "probes": {
+    "graph_query": "火卫一绕谁公转",
     "graph_final_source": "graph",
     "graph_final_result_count": 1,
     "graph_final_results": [
@@ -58,6 +81,7 @@
         "schema_version": "nasa_shadow_ready_v1"
       }
     ],
+    "narrative_query": "火星大气成分",
     "narrative_result_count": 1,
     "narrative_results": [
       {
@@ -77,8 +101,13 @@
       }
     ]
   },
+  "readiness_gate": {
+    "passed": true,
+    "cutover_ready": false,
+    "reason": "NASA is retained as shadow-only fact supplement; gate success is not active-source authorization"
+  },
   "materialization": {
-    "timestamp_utc": "2026-06-24T13:38:46.911588+00:00",
-    "output_path": "F:\\第二次托洛洛测试 -重大进展\\evaluation\\source_expansion\\nasa\\nasa_materialization_report.json"
+    "timestamp_utc": "2026-06-28T03:40:36.412731+00:00",
+    "output_path": "F:\\知识表示与处理结课作业\\第二次托洛洛测试 -重大进展\\evaluation\\source_expansion\\nasa\\nasa_materialization_report.json"
   }
 }
