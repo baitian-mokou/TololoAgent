@@ -1,0 +1,321 @@
+{
+  "generated_at": "2026-06-28T14:43:16",
+  "summary": {
+    "total_queries": 12,
+    "route_pass_count": 12,
+    "router_accuracy": 1.0,
+    "source_trace_missing_count": 0,
+    "silent_conflict_count": 0,
+    "default_auto_enabled": true
+  },
+  "cases": [
+    {
+      "query": "火星质量是多少",
+      "case": "numeric",
+      "expected_sources": [
+        "nasa",
+        "wikidata"
+      ],
+      "selected_sources": [
+        "nasa",
+        "wikidata"
+      ],
+      "route_ok": true,
+      "routing_reason": "numeric or physical-parameter keywords matched; prefer nasa then wikidata",
+      "fusion_mode": "single_best",
+      "source_trace": [
+        {
+          "source_name": "nasa",
+          "neo4j_count": 1,
+          "chroma_count": 1
+        },
+        {
+          "source_name": "wikidata",
+          "neo4j_count": 1,
+          "chroma_count": 1
+        }
+      ],
+      "conflict_detected": false
+    },
+    {
+      "query": "地球平均半径是多少",
+      "case": "numeric",
+      "expected_sources": [
+        "nasa",
+        "wikidata"
+      ],
+      "selected_sources": [
+        "nasa",
+        "wikidata"
+      ],
+      "route_ok": true,
+      "routing_reason": "numeric or physical-parameter keywords matched; prefer nasa then wikidata",
+      "fusion_mode": "single_best",
+      "source_trace": [
+        {
+          "source_name": "nasa",
+          "neo4j_count": 1,
+          "chroma_count": 1
+        },
+        {
+          "source_name": "wikidata",
+          "neo4j_count": 1,
+          "chroma_count": 1
+        }
+      ],
+      "conflict_detected": false
+    },
+    {
+      "query": "金星大气成分是什么",
+      "case": "numeric",
+      "expected_sources": [
+        "nasa",
+        "wikidata"
+      ],
+      "selected_sources": [
+        "nasa",
+        "wikidata"
+      ],
+      "route_ok": true,
+      "routing_reason": "numeric or physical-parameter keywords matched; prefer nasa then wikidata",
+      "fusion_mode": "single_best",
+      "source_trace": [
+        {
+          "source_name": "nasa",
+          "neo4j_count": 1,
+          "chroma_count": 1
+        },
+        {
+          "source_name": "wikidata",
+          "neo4j_count": 1,
+          "chroma_count": 1
+        }
+      ],
+      "conflict_detected": false
+    },
+    {
+      "query": "月球绕行什么",
+      "case": "structured",
+      "expected_sources": [
+        "wikidata"
+      ],
+      "selected_sources": [
+        "wikidata"
+      ],
+      "route_ok": true,
+      "routing_reason": "structured relation keywords matched; route to wikidata",
+      "fusion_mode": "single_best",
+      "source_trace": [
+        {
+          "source_name": "wikidata",
+          "neo4j_count": 1,
+          "chroma_count": 0
+        }
+      ],
+      "conflict_detected": false
+    },
+    {
+      "query": "木卫二属于什么系统",
+      "case": "structured",
+      "expected_sources": [
+        "wikidata"
+      ],
+      "selected_sources": [
+        "wikidata"
+      ],
+      "route_ok": true,
+      "routing_reason": "structured relation keywords matched; route to wikidata",
+      "fusion_mode": "single_best",
+      "source_trace": [
+        {
+          "source_name": "wikidata",
+          "neo4j_count": 1,
+          "chroma_count": 0
+        }
+      ],
+      "conflict_detected": false
+    },
+    {
+      "query": "冥王星位于哪里",
+      "case": "structured",
+      "expected_sources": [
+        "wikidata"
+      ],
+      "selected_sources": [
+        "wikidata"
+      ],
+      "route_ok": true,
+      "routing_reason": "structured relation keywords matched; route to wikidata",
+      "fusion_mode": "single_best",
+      "source_trace": [
+        {
+          "source_name": "wikidata",
+          "neo4j_count": 1,
+          "chroma_count": 0
+        }
+      ],
+      "conflict_detected": false
+    },
+    {
+      "query": "JUICE 探测任务研究什么",
+      "case": "esa",
+      "expected_sources": [
+        "esa"
+      ],
+      "selected_sources": [
+        "esa"
+      ],
+      "route_ok": true,
+      "routing_reason": "esa mission keywords matched; route to esa",
+      "fusion_mode": "single_best",
+      "source_trace": [
+        {
+          "source_name": "esa",
+          "neo4j_count": 0,
+          "chroma_count": 1
+        }
+      ],
+      "conflict_detected": false
+    },
+    {
+      "query": "Rosetta 探测器做了什么",
+      "case": "esa",
+      "expected_sources": [
+        "esa"
+      ],
+      "selected_sources": [
+        "esa"
+      ],
+      "route_ok": true,
+      "routing_reason": "esa mission keywords matched; route to esa",
+      "fusion_mode": "single_best",
+      "source_trace": [
+        {
+          "source_name": "esa",
+          "neo4j_count": 0,
+          "chroma_count": 1
+        }
+      ],
+      "conflict_detected": false
+    },
+    {
+      "query": "太阳为什么会发光",
+      "case": "narrative",
+      "expected_sources": [
+        "zh_wikipedia"
+      ],
+      "selected_sources": [
+        "zh_wikipedia"
+      ],
+      "route_ok": true,
+      "routing_reason": "narrative explanation keywords matched; route to zh_wikipedia",
+      "fusion_mode": "single_best",
+      "source_trace": [
+        {
+          "source_name": "zh_wikipedia",
+          "neo4j_count": 0,
+          "chroma_count": 1
+        }
+      ],
+      "conflict_detected": false
+    },
+    {
+      "query": "月球的形成历史是什么",
+      "case": "narrative",
+      "expected_sources": [
+        "zh_wikipedia"
+      ],
+      "selected_sources": [
+        "zh_wikipedia"
+      ],
+      "route_ok": true,
+      "routing_reason": "narrative explanation keywords matched; route to zh_wikipedia",
+      "fusion_mode": "single_best",
+      "source_trace": [
+        {
+          "source_name": "zh_wikipedia",
+          "neo4j_count": 0,
+          "chroma_count": 1
+        }
+      ],
+      "conflict_detected": false
+    },
+    {
+      "query": "火星质量是多少，为什么和地球不同",
+      "case": "ambiguous",
+      "expected_sources": [
+        "zh_wikipedia",
+        "wikidata",
+        "nasa"
+      ],
+      "selected_sources": [
+        "zh_wikipedia",
+        "wikidata",
+        "nasa"
+      ],
+      "route_ok": true,
+      "routing_reason": "query mixes numeric fact and explanation; use default multi-source fusion",
+      "fusion_mode": "multi_source_fusion",
+      "source_trace": [
+        {
+          "source_name": "zh_wikipedia",
+          "neo4j_count": 0,
+          "chroma_count": 1
+        },
+        {
+          "source_name": "wikidata",
+          "neo4j_count": 1,
+          "chroma_count": 0
+        },
+        {
+          "source_name": "nasa",
+          "neo4j_count": 1,
+          "chroma_count": 0
+        }
+      ],
+      "conflict_detected": false
+    },
+    {
+      "query": "火星半径是多少，不同来源为什么不一样",
+      "case": "conflict",
+      "expected_sources": [
+        "zh_wikipedia",
+        "wikidata",
+        "nasa"
+      ],
+      "selected_sources": [
+        "zh_wikipedia",
+        "wikidata",
+        "nasa"
+      ],
+      "route_ok": true,
+      "routing_reason": "query mixes numeric fact and explanation; use default multi-source fusion",
+      "fusion_mode": "multi_source_fusion",
+      "source_trace": [
+        {
+          "source_name": "zh_wikipedia",
+          "neo4j_count": 0,
+          "chroma_count": 1
+        },
+        {
+          "source_name": "wikidata",
+          "neo4j_count": 1,
+          "chroma_count": 0
+        },
+        {
+          "source_name": "nasa",
+          "neo4j_count": 1,
+          "chroma_count": 0
+        }
+      ],
+      "conflict_detected": true
+    }
+  ],
+  "gates": {
+    "router_accuracy": 1.0,
+    "source_trace_missing_count": 0,
+    "silent_conflict_count": 0,
+    "default_auto_enabled": true,
+    "passed": true
+  }
+}

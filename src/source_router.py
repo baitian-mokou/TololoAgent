@@ -65,6 +65,116 @@ class SourceRouterPreview:
         ).as_dict()
 
 
+class SourceRouter:
+    """Minimal keyword router for the GUI auto-source mode."""
+
+    ESA_KEYWORDS = (
+        "juice",
+        "rosetta",
+        "gaia",
+        "solar orbiter",
+        "mars express",
+        "esa",
+        "探测任务",
+        "航天任务",
+        "探测器",
+    )
+    NUMERIC_KEYWORDS = (
+        "质量",
+        "半径",
+        "直径",
+        "大气",
+        "成分",
+        "物理参数",
+        "距离",
+        "平均半径",
+        "质量是多少",
+        "mass",
+        "radius",
+        "diameter",
+        "distance",
+        "atmosphere",
+        "composition",
+    )
+    STRUCTURED_KEYWORDS = (
+        "属于",
+        "位于",
+        "绕行",
+        "发现者",
+        "谁发现",
+        "part of",
+        "located in",
+        "orbits",
+    )
+    NARRATIVE_KEYWORDS = (
+        "为什么",
+        "如何",
+        "原理",
+        "介绍",
+        "解释",
+        "形成",
+        "历史",
+        "发光",
+        "生命",
+    )
+
+    def route(self, query: str) -> Dict[str, object]:
+        text = str(query or "")
+        lowered = text.lower()
+        has_numeric = any(keyword in lowered for keyword in self.NUMERIC_KEYWORDS)
+        has_structured = any(keyword in lowered for keyword in self.STRUCTURED_KEYWORDS)
+        has_narrative = any(keyword in lowered for keyword in self.NARRATIVE_KEYWORDS)
+        has_esa = any(keyword in lowered for keyword in self.ESA_KEYWORDS)
+
+        if has_esa:
+            return {
+                "query": text,
+                "intent": "esa_mission",
+                "selected_sources": ["esa"],
+                "routing_reason": "esa mission keywords matched; route to esa",
+                "fusion_mode": "single_best",
+            }
+        if has_numeric and has_narrative:
+            return {
+                "query": text,
+                "intent": "mixed_numeric_narrative",
+                "selected_sources": ["zh_wikipedia", "wikidata", "nasa"],
+                "routing_reason": "query mixes numeric fact and explanation; use default multi-source fusion",
+                "fusion_mode": "multi_source_fusion",
+            }
+        if has_structured:
+            return {
+                "query": text,
+                "intent": "structured_fact",
+                "selected_sources": ["wikidata"],
+                "routing_reason": "structured relation keywords matched; route to wikidata",
+                "fusion_mode": "single_best",
+            }
+        if has_numeric:
+            return {
+                "query": text,
+                "intent": "numeric_fact",
+                "selected_sources": ["nasa", "wikidata"],
+                "routing_reason": "numeric or physical-parameter keywords matched; prefer nasa then wikidata",
+                "fusion_mode": "single_best",
+            }
+        if has_narrative:
+            return {
+                "query": text,
+                "intent": "narrative_explanation",
+                "selected_sources": ["zh_wikipedia"],
+                "routing_reason": "narrative explanation keywords matched; route to zh_wikipedia",
+                "fusion_mode": "single_best",
+            }
+        return {
+            "query": text,
+            "intent": "uncertain",
+            "selected_sources": ["zh_wikipedia", "wikidata", "nasa"],
+            "routing_reason": "router is uncertain; fall back to default multi-source fusion",
+            "fusion_mode": "multi_source_fusion",
+        }
+
+
 def classify_query_intent(query: str) -> str:
     text = str(query or "").lower()
     numerical_terms = ("质量", "半径", "直径", "距离", "温度", "mass", "radius", "diameter", "distance", "temperature")

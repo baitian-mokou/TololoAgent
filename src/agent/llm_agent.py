@@ -11,7 +11,7 @@ import urllib.request
 import urllib.error
 import threading
 import logging
-from typing import Optional, Callable
+from typing import Callable, Dict, List, Optional
 
 sys.path.insert(0, os.path.join(os.path.dirname(os.path.abspath(__file__)), '..', '..'))
 from config import OLLAMA_BASE_URL, OLLAMA_MODEL, OLLAMA_TIMEOUT, TRIPLES_DIR
@@ -30,12 +30,21 @@ from src.source_control import (
     get_source_schema_version,
     normalize_source_filter,
 )
+from src.source_router import SourceRouter
 
 logger = logging.getLogger(__name__)
 
 
 class LLMAgent:
     """Qwen3 知识增强对话引擎（支持本地Ollama和远程OpenAI兼容API）"""
+
+    AUTO_SOURCE_NAME = "auto"
+    SOURCE_DISPLAY_NAMES = {
+        "zh_wikipedia": "中文维基",
+        "wikidata": "Wikidata",
+        "nasa": "NASA",
+        "esa": "ESA",
+    }
 
     PLANET_LOCATION_MAP = {
         "水星": "太阳系",
@@ -721,6 +730,237 @@ class LLMAgent:
             item['rank'] = index
         return candidates[:top_k]
 
+    @classmethod
+    def _source_display_name(cls, source_name: str) -> str:
+        return cls.SOURCE_DISPLAY_NAMES.get(str(source_name or "").strip(), str(source_name or "").strip())
+
+    def _is_auto_source(self) -> bool:
+        return str(self.source_name or "").strip() == self.AUTO_SOURCE_NAME
+
+    def _search_single_source_bundle(self, source_name: str, query: str) -> tuple[list, list]:
+        source_agent = self if self.source_name == source_name else LLMAgent(source_name=source_name)
+        try:
+            return (
+                source_agent.search_neo4j(query, source_filter=[source_name]),
+                source_agent.search_chroma(query, source_filter=[source_name]),
+            )
+        finally:
+            if source_agent is not self:
+                source_agent.close()
+
+    @staticmethod
+    def _flatten_results_by_source(results_by_source: Dict[str, List[dict]], ordered_sources: List[str]) -> List[dict]:
+        flattened = []
+        for source_name in ordered_sources:
+            flattened.extend(list(results_by_source.get(source_name, [])))
+        return flattened
+
+    def _detect_conflicts(self, records: List[dict]) -> List[dict]:
+        grouped: Dict[tuple, Dict[str, List[str]]] = {}
+        for record in records:
+            subject = str(record.get("subject", "")).strip()
+            relation = str(record.get("relation", "")).strip()
+            obj = normalize_to_simplified(str(record.get("object", "")).strip())
+            source_name = str(record.get("source_name") or record.get("source") or "").strip()
+            if not subject or not relation or not obj or not source_name:
+                continue
+            grouped.setdefault((subject, relation), {}).setdefault(obj, []).append(source_name)
+
+        conflicts = []
+        for (subject, relation), values in grouped.items():
+            if len(values) <= 1:
+                continue
+            conflicts.append({
+                "subject": subject,
+                "relation": relation,
+                "values": [
+                    {"object": obj, "sources": sources}
+                    for obj, sources in values.items()
+                ],
+            })
+        return conflicts
+
+    def _build_source_trace(
+        self,
+        selected_sources: List[str],
+        source_result_counts: Dict[str, Dict[str, int]],
+    ) -> List[dict]:
+        return [
+            {
+                "source_name": source_name,
+                "neo4j_count": int(source_result_counts.get(source_name, {}).get("neo4j", 0)),
+                "chroma_count": int(source_result_counts.get(source_name, {}).get("chroma", 0)),
+            }
+            for source_name in selected_sources
+        ]
+
+    def _fuse_auto_results(
+        self,
+        query: str,
+        *,
+        neo4j_by_source: Dict[str, List[dict]],
+        chroma_by_source: Dict[str, List[dict]],
+        routing_trace: Dict[str, object],
+    ) -> dict:
+        selected_sources = list(routing_trace.get("selected_sources", []))
+        neo4j_results = self._flatten_results_by_source(neo4j_by_source, selected_sources)
+        chroma_results = self._flatten_results_by_source(chroma_by_source, selected_sources)
+        source_result_counts = {
+            source_name: {
+                "neo4j": len(neo4j_by_source.get(source_name, [])),
+                "chroma": len(chroma_by_source.get(source_name, [])),
+            }
+            for source_name in selected_sources
+        }
+        conflicts = self._detect_conflicts(neo4j_results)
+        source_names = "、".join(self._source_display_name(source_name) for source_name in selected_sources)
+        answer_prompt = f"回答中保留来源标注。来源：{source_names}。"
+        if conflicts:
+            answer_prompt += " 如果数值或结构化事实有差异，请明确写出“来源存在差异”，不要静默覆盖。"
+
+        return {
+            "neo4j_results": neo4j_results,
+            "chroma_results": chroma_results,
+            "answer_prompt": answer_prompt,
+            "metadata": {
+                "query": query,
+                "selected_sources": selected_sources,
+                "routing_reason": str(routing_trace.get("routing_reason", "")),
+                "routing_trace": dict(routing_trace),
+                "source_result_counts": source_result_counts,
+                "fusion_mode": str(routing_trace.get("fusion_mode", "single_best")),
+                "conflict_detected": bool(conflicts),
+                "conflicts": conflicts,
+                "source_trace": self._build_source_trace(selected_sources, source_result_counts),
+            },
+        }
+
+    def _build_manual_metadata(self, source_name: str, neo4j_results: list, chroma_results: list) -> dict:
+        counts = {
+            source_name: {
+                "neo4j": len(neo4j_results),
+                "chroma": len(chroma_results),
+            }
+        }
+        return {
+            "selected_sources": [source_name],
+            "routing_reason": "manual source selection",
+            "routing_trace": {
+                "selected_sources": [source_name],
+                "routing_reason": "manual source selection",
+                "fusion_mode": "single_source",
+            },
+            "source_result_counts": counts,
+            "fusion_mode": "single_source",
+            "conflict_detected": False,
+            "conflicts": [],
+            "source_trace": self._build_source_trace([source_name], counts),
+        }
+
+    def _decorate_auto_answer(self, answer: str, metadata: dict) -> str:
+        text = str(answer or "").strip()
+        if not text or text.startswith("[错误]"):
+            return text
+        lines = [text]
+        if metadata.get("conflict_detected"):
+            lines.append("来源存在差异，请结合各来源标注理解相关事实。")
+        lines.append(
+            "来源：" + "、".join(self._source_display_name(source_name) for source_name in metadata.get("selected_sources", []))
+        )
+        return "\n".join(lines)
+
+    def _ask_single_source(self, question: str, history: list = None, on_token: Callable[[str], None] = None) -> dict:
+        neo4j_results = []
+        chroma_results = []
+        search_errors = []
+
+        def search_neo4j_task():
+            nonlocal neo4j_results
+            try:
+                neo4j_results = self.search_neo4j(question)
+            except Exception as e:
+                search_errors.append(f"Neo4j检索: {e}")
+
+        def search_chroma_task():
+            nonlocal chroma_results
+            try:
+                chroma_results = self.search_chroma(question)
+            except Exception as e:
+                search_errors.append(f"Chroma检索: {e}")
+
+        threads = [
+            threading.Thread(target=search_neo4j_task, daemon=True),
+            threading.Thread(target=search_chroma_task, daemon=True),
+        ]
+        for thread in threads:
+            thread.start()
+        for thread in threads:
+            thread.join(timeout=10)
+
+        if search_errors:
+            logger.warning("检索告警: %s", "; ".join(search_errors))
+
+        answer = self.chat(
+            user_input=question,
+            neo4j_results=neo4j_results,
+            chroma_results=chroma_results,
+            history=history,
+            on_token=on_token,
+        )
+
+        return {
+            "answer": answer,
+            "neo4j_count": len(neo4j_results),
+            "chroma_count": len(chroma_results),
+            "neo4j_results": neo4j_results,
+            "chroma_results": chroma_results,
+            "metadata": self._build_manual_metadata(self.source_name, neo4j_results, chroma_results),
+        }
+
+    def _ask_auto(self, question: str, history: list = None, on_token: Callable[[str], None] = None) -> dict:
+        routing_trace = SourceRouter().route(question)
+        selected_sources = list(routing_trace.get("selected_sources", []))
+        neo4j_by_source: Dict[str, List[dict]] = {}
+        chroma_by_source: Dict[str, List[dict]] = {}
+        search_errors = []
+
+        for source_name in selected_sources:
+            try:
+                neo4j_results, chroma_results = self._search_single_source_bundle(source_name, question)
+                neo4j_by_source[source_name] = neo4j_results
+                chroma_by_source[source_name] = chroma_results
+            except Exception as e:
+                search_errors.append(f"{source_name}: {e}")
+                neo4j_by_source[source_name] = []
+                chroma_by_source[source_name] = []
+
+        if search_errors:
+            logger.warning("自动路由检索告警: %s", "; ".join(search_errors))
+
+        fused = self._fuse_auto_results(
+            question,
+            neo4j_by_source=neo4j_by_source,
+            chroma_by_source=chroma_by_source,
+            routing_trace=routing_trace,
+        )
+        fused["metadata"]["search_errors"] = list(search_errors)
+        answer = self.chat(
+            user_input=f"{question}\n\n补充要求：{fused['answer_prompt']}",
+            neo4j_results=fused["neo4j_results"],
+            chroma_results=fused["chroma_results"],
+            history=history,
+            on_token=on_token,
+        )
+        answer = self._decorate_auto_answer(answer, fused["metadata"])
+        return {
+            "answer": answer,
+            "neo4j_count": len(fused["neo4j_results"]),
+            "chroma_count": len(fused["chroma_results"]),
+            "neo4j_results": fused["neo4j_results"],
+            "chroma_results": fused["chroma_results"],
+            "metadata": fused["metadata"],
+        }
+
     # ─── 流式响应解析（Ollama NDJSON + SSE 共用） ──────────
 
     def _stream_ndjson(self, resp, on_token):
@@ -1115,51 +1355,9 @@ class LLMAgent:
         """
         一键问答：自动执行知识检索 + LLM 生成
         """
-        # 并行检索
-        neo4j_results = []
-        chroma_results = []
-        search_errors = []
-
-        def search_neo4j_task():
-            nonlocal neo4j_results
-            try:
-                neo4j_results = self.search_neo4j(question)
-            except Exception as e:
-                search_errors.append(f"Neo4j检索: {e}")
-
-        def search_chroma_task():
-            nonlocal chroma_results
-            try:
-                chroma_results = self.search_chroma(question)
-            except Exception as e:
-                search_errors.append(f"Chroma检索: {e}")
-
-        threads = [
-            threading.Thread(target=search_neo4j_task, daemon=True),
-            threading.Thread(target=search_chroma_task, daemon=True),
-        ]
-        for t in threads:
-            t.start()
-        for t in threads:
-            t.join(timeout=10)
-
-        if search_errors:
-            logger.warning("检索告警: %s", "; ".join(search_errors))
-
-        # 调用 LLM
-        answer = self.chat(
-            user_input=question,
-            neo4j_results=neo4j_results,
-            chroma_results=chroma_results,
-            history=history,
-            on_token=on_token,
-        )
-
-        return {
-            "answer": answer,
-            "neo4j_count": len(neo4j_results),
-            "chroma_count": len(chroma_results),
-        }
+        if self._is_auto_source():
+            return self._ask_auto(question, history=history, on_token=on_token)
+        return self._ask_single_source(question, history=history, on_token=on_token)
 
     def close(self):
         """释放资源"""

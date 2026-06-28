@@ -1,42 +1,48 @@
 {
-  "generated_at": "2026-06-28T14:15:27",
+  "generated_at": "2026-06-28T14:45:19",
   "passed": true,
   "steps": [
+    {
+      "command": "python scripts/run_auto_source_router_eval.py",
+      "exit_code": 0,
+      "passed": true,
+      "duration_seconds": 0.36
+    },
     {
       "command": "python -m unittest discover tests",
       "exit_code": 0,
       "passed": true,
-      "duration_seconds": 12.623
+      "duration_seconds": 12.546
     },
     {
       "command": "python scripts/run_single_source_retrieval_eval.py",
       "exit_code": 0,
       "passed": true,
-      "duration_seconds": 78.676
+      "duration_seconds": 79.066
     },
     {
       "command": "python scripts/run_source_expansion_eval.py --source wikidata",
       "exit_code": 0,
       "passed": true,
-      "duration_seconds": 3.845
+      "duration_seconds": 3.766
     },
     {
       "command": "python scripts/run_source_expansion_eval.py --source nasa",
       "exit_code": 0,
       "passed": true,
-      "duration_seconds": 2.453
+      "duration_seconds": 2.419
     },
     {
       "command": "python scripts/collect_eval_failures.py",
       "exit_code": 0,
       "passed": true,
-      "duration_seconds": 0.337
+      "duration_seconds": 0.18
     },
     {
       "command": "python scripts/smoke_default_source_boundary.py",
       "exit_code": 0,
       "passed": true,
-      "duration_seconds": 29.119
+      "duration_seconds": 24.534
     }
   ],
   "reports": {
@@ -73,6 +79,16 @@
       "query_explainability_degraded_count": 0,
       "gates_passed": true
     }
+  },
+  "auto_source_router": {
+    "path": "evaluation\\auto_source_router_report.json",
+    "total_queries": 12,
+    "route_pass_count": 12,
+    "router_accuracy": 1.0,
+    "source_trace_missing_count": 0,
+    "silent_conflict_count": 0,
+    "default_auto_enabled": true,
+    "gates_passed": true
   },
   "failure_count": 0,
   "aggregate_break_counts": {

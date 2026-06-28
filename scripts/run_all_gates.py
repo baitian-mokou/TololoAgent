@@ -22,6 +22,7 @@ FINAL_JSON = EVALUATION_DIR / "final_acceptance_report.json"
 FINAL_MD = DOCS_DIR / "final_acceptance_report.md"
 
 COMMANDS = [
+    ("python scripts/run_auto_source_router_eval.py", [sys.executable, "scripts/run_auto_source_router_eval.py"]),
     ("python -m unittest discover tests", [sys.executable, "-m", "unittest", "discover", "tests"]),
     ("python scripts/run_single_source_retrieval_eval.py", [sys.executable, "scripts/run_single_source_retrieval_eval.py"]),
     (
@@ -99,6 +100,22 @@ def _summary_from_report(path: Path) -> Dict[str, Any]:
     }
 
 
+def _auto_router_summary(path: Path) -> Dict[str, Any]:
+    report = _read_json(path)
+    summary = report.get("summary", {})
+    gates = report.get("gates", {})
+    return {
+        "path": str(path.relative_to(ROOT)),
+        "total_queries": summary.get("total_queries"),
+        "route_pass_count": summary.get("route_pass_count"),
+        "router_accuracy": summary.get("router_accuracy"),
+        "source_trace_missing_count": summary.get("source_trace_missing_count", 0),
+        "silent_conflict_count": summary.get("silent_conflict_count", 0),
+        "default_auto_enabled": summary.get("default_auto_enabled"),
+        "gates_passed": gates.get("passed"),
+    }
+
+
 def _settings_key_hygiene() -> Dict[str, Any]:
     settings_path = ROOT / "settings.json"
     local_settings_path = ROOT / "settings.local.json"
@@ -133,6 +150,7 @@ def _default_source_state() -> Dict[str, Any]:
 
 
 def _build_report(steps: List[Dict[str, Any]], key_hygiene: Dict[str, Any]) -> Dict[str, Any]:
+    auto_router = _auto_router_summary(EVALUATION_DIR / "auto_source_router_report.json")
     single = _summary_from_report(EVALUATION_DIR / "single_source_retrieval_report.json")
     wikidata = _summary_from_report(EVALUATION_DIR / "source_expansion" / "wikidata" / "wikidata_report.json")
     nasa = _summary_from_report(EVALUATION_DIR / "source_expansion" / "nasa" / "nasa_report.json")
@@ -161,6 +179,7 @@ def _build_report(steps: List[Dict[str, Any]], key_hygiene: Dict[str, Any]) -> D
     }
     acceptance_passed = (
         all(step["passed"] for step in steps)
+        and auto_router.get("gates_passed") is True
         and key_hygiene["passed"]
         and triage.get("failure_count") == 0
         and smoke.get("passed") is True
@@ -172,6 +191,7 @@ def _build_report(steps: List[Dict[str, Any]], key_hygiene: Dict[str, Any]) -> D
         "passed": acceptance_passed,
         "steps": steps,
         "reports": report_summaries,
+        "auto_source_router": auto_router,
         "failure_count": triage.get("failure_count"),
         "aggregate_break_counts": aggregate_break_counts,
         "default_source": source_state,
@@ -192,6 +212,7 @@ def _fmt_accuracy(value: Optional[float]) -> str:
 
 def _write_markdown(report: Dict[str, Any]) -> None:
     reports = report["reports"]
+    auto_router = report["auto_source_router"]
     breaks = report["aggregate_break_counts"]
     source = report["default_source"]
     lines = [
@@ -212,6 +233,15 @@ def _write_markdown(report: Dict[str, Any]) -> None:
         )
     lines.extend(
         [
+            "",
+            "## Auto Router",
+            "",
+            f"- `router_accuracy = {_fmt_accuracy(auto_router.get('router_accuracy'))}`",
+            f"- `route_pass_count = {auto_router.get('route_pass_count')}/{auto_router.get('total_queries')}`",
+            f"- `source_trace_missing_count = {auto_router.get('source_trace_missing_count')}`",
+            f"- `silent_conflict_count = {auto_router.get('silent_conflict_count')}`",
+            f"- `default_auto_enabled = {str(auto_router.get('default_auto_enabled')).lower()}`",
+            f"- `auto_router_gates_passed = {str(auto_router.get('gates_passed')).lower()}`",
             "",
             "## Accuracy",
             "",

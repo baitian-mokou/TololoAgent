@@ -1857,7 +1857,16 @@ class VisualizeTab(BaseTab):
 
 class AgentTab(BaseTab):
     """Agent对话标签页 — 知识搜索 + LLM智能问答"""
-    SOURCE_OPTIONS = ("zh_wikipedia", "wikidata", "nasa", "esa")
+    SOURCE_OPTIONS = ("auto", "zh_wikipedia", "wikidata", "nasa", "esa")
+    SOURCE_LABELS = {
+        "auto": "自动（推荐）",
+        "zh_wikipedia": "zh_wikipedia",
+        "wikidata": "wikidata",
+        "nasa": "nasa",
+        "esa": "esa",
+    }
+    DEFAULT_SOURCE_NAME = "auto"
+    SOURCE_LABEL_TO_NAME = {label: name for name, label in SOURCE_LABELS.items()}
 
     def __init__(self, parent, main_window):
         super().__init__(parent, main_window)
@@ -1865,7 +1874,7 @@ class AgentTab(BaseTab):
         self._ask_in_progress = False
         self._request_epoch = 0
         self._active_llm_signature = None
-        self.source_var = tk.StringVar(value="zh_wikipedia")
+        self.source_var = tk.StringVar(value=self.SOURCE_LABELS[self.DEFAULT_SOURCE_NAME])
         self._build_ui()
     def _build_ui(self):
         self.title_label = tb.Label(self.frame, text=self.i18n.t("agent_title"),
@@ -1901,7 +1910,7 @@ class AgentTab(BaseTab):
         self.source_combo = ttk.Combobox(
             input_row,
             textvariable=self.source_var,
-            values=self.SOURCE_OPTIONS,
+            values=tuple(self.SOURCE_LABELS[name] for name in self.SOURCE_OPTIONS),
             state="readonly",
             width=14,
         )
@@ -2001,10 +2010,15 @@ class AgentTab(BaseTab):
 
     def _selected_source_name(self) -> str:
         selected = str(self.source_var.get() or "").strip()
-        return selected if selected in self.SOURCE_OPTIONS else "zh_wikipedia"
+        if selected in self.SOURCE_OPTIONS:
+            return selected
+        return self.SOURCE_LABEL_TO_NAME.get(selected, self.DEFAULT_SOURCE_NAME)
+
+    def _selected_source_label(self) -> str:
+        return self.SOURCE_LABELS.get(self._selected_source_name(), self._selected_source_name())
 
     def _source_status_text(self) -> str:
-        return f"当前数据源：{self._selected_source_name()}"
+        return f"当前数据源：{self._selected_source_label()}"
 
     def _refresh_source_status(self):
         if hasattr(self, "current_source_label"):
@@ -2183,34 +2197,31 @@ class AgentTab(BaseTab):
                         self._schedule_if_current(request_epoch, lambda: self._append_chat("error", err))
                         return
 
-                neo4j_results = agent.search_neo4j(query)
-                chroma_results = agent.search_chroma(query)
+                full_response = []
+                def on_token(token):
+                    full_response.append(token)
+                    self._schedule_if_current(request_epoch, lambda token=token: self._append_token(token))
+
+                result = agent.ask(
+                    question=query,
+                    history=self.chat_history,
+                    on_token=on_token,
+                )
                 if not self._is_current_request(request_epoch):
                     return
+                neo4j_results = result.get("neo4j_results", [])
+                chroma_results = result.get("chroma_results", [])
+                metadata = result.get("metadata", {})
+                answer = result.get("answer", "")
 
-                self._schedule_if_current(request_epoch, lambda: self._show_neo4j_results(neo4j_results))
-                self._schedule_if_current(request_epoch, lambda: self._show_chroma_results(chroma_results))
+                self._schedule_if_current(request_epoch, lambda: self._show_neo4j_results(neo4j_results, metadata))
+                self._schedule_if_current(request_epoch, lambda: self._show_chroma_results(chroma_results, metadata))
 
                 if neo4j_results or chroma_results:
                     self._schedule_if_current(
                         request_epoch,
                         lambda: self._toggle_result() if not self.result_visible else None,
                     )
-
-                full_response = []
-                def on_token(token):
-                    full_response.append(token)
-                    self._schedule_if_current(request_epoch, lambda token=token: self._append_token(token))
-
-                answer = agent.chat(
-                    user_input=query,
-                    neo4j_results=neo4j_results,
-                    chroma_results=chroma_results,
-                    history=self.chat_history,
-                    on_token=on_token,
-                )
-                if not self._is_current_request(request_epoch):
-                    return
 
                 self.chat_history.append({"role": "user", "content": query})
                 self.chat_history.append({"role": "assistant", "content": answer})
@@ -2314,9 +2325,14 @@ class AgentTab(BaseTab):
         widget.see("end")
         widget.config(state="disabled")
 
-    def _show_neo4j_results(self, records):
+    def _show_neo4j_results(self, records, metadata=None):
         self.neo4j_result.config(state="normal")
         self.neo4j_result.delete("1.0", "end")
+        if metadata:
+            self.neo4j_result.insert("end", f"selected_sources: {metadata.get('selected_sources', [])}\n")
+            self.neo4j_result.insert("end", f"routing_reason: {metadata.get('routing_reason', '')}\n")
+            self.neo4j_result.insert("end", f"fusion_mode: {metadata.get('fusion_mode', '')}\n")
+            self.neo4j_result.insert("end", f"conflict_detected: {metadata.get('conflict_detected', False)}\n\n")
         if not records:
             self.neo4j_result.insert("end", self.i18n.t("agent_no_neo4j_result"))
         else:
@@ -2324,12 +2340,15 @@ class AgentTab(BaseTab):
                 self.i18n.t("agent_neo4j_found", count=len(records)) + "\n")
             for r in records:
                 self.neo4j_result.insert("end",
-                    f"  ({r['subject']}) -[{r['relation']}]-> ({r['object']})\n")
+                    f"  [{r.get('source_name', r.get('source', 'unknown'))}] "
+                    f"({r['subject']}) -[{r['relation']}]-> ({r['object']})\n")
         self.neo4j_result.config(state="disabled")
 
-    def _show_chroma_results(self, results):
+    def _show_chroma_results(self, results, metadata=None):
         self.chroma_result.config(state="normal")
         self.chroma_result.delete("1.0", "end")
+        if metadata:
+            self.chroma_result.insert("end", f"source_trace: {metadata.get('source_trace', [])}\n\n")
         if not results:
             self.chroma_result.insert("end", self.i18n.t("agent_no_chroma_result"))
         else:
@@ -2337,7 +2356,7 @@ class AgentTab(BaseTab):
                 self.i18n.t("agent_chroma_found", count=len(results)) + "\n")
             for r in results:
                 self.chroma_result.insert("end",
-                    f"  [{r.get('rank', '?')}] {r.get('page_title', '未知')} "
+                    f"  [{r.get('rank', '?')}] [{r.get('source_name', r.get('source', 'unknown'))}] {r.get('page_title', '未知')} "
                     f"(相关度: {r.get('score', 0):.2f})\n"
                     f"      {r.get('content', '')[:80]}...\n")
         self.chroma_result.config(state="disabled")

@@ -1,6 +1,6 @@
 # Final Acceptance Report
 
-Generated at: `2026-06-28T14:15:27`
+Generated at: `2026-06-28T14:45:19`
 
 Overall status: `PASS`
 
@@ -8,12 +8,22 @@ Overall status: `PASS`
 
 | command | exit_code | passed | duration_seconds |
 | --- | ---: | --- | ---: |
-| `python -m unittest discover tests` | 0 | true | 12.623 |
-| `python scripts/run_single_source_retrieval_eval.py` | 0 | true | 78.676 |
-| `python scripts/run_source_expansion_eval.py --source wikidata` | 0 | true | 3.845 |
-| `python scripts/run_source_expansion_eval.py --source nasa` | 0 | true | 2.453 |
-| `python scripts/collect_eval_failures.py` | 0 | true | 0.337 |
-| `python scripts/smoke_default_source_boundary.py` | 0 | true | 29.119 |
+| `python scripts/run_auto_source_router_eval.py` | 0 | true | 0.36 |
+| `python -m unittest discover tests` | 0 | true | 12.546 |
+| `python scripts/run_single_source_retrieval_eval.py` | 0 | true | 79.066 |
+| `python scripts/run_source_expansion_eval.py --source wikidata` | 0 | true | 3.766 |
+| `python scripts/run_source_expansion_eval.py --source nasa` | 0 | true | 2.419 |
+| `python scripts/collect_eval_failures.py` | 0 | true | 0.18 |
+| `python scripts/smoke_default_source_boundary.py` | 0 | true | 24.534 |
+
+## Auto Router
+
+- `router_accuracy = 1`
+- `route_pass_count = 12/12`
+- `source_trace_missing_count = 0`
+- `silent_conflict_count = 0`
+- `default_auto_enabled = true`
+- `auto_router_gates_passed = true`
 
 ## Accuracy
 
