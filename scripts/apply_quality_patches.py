@@ -178,6 +178,53 @@ def metadata_annotation(item: Dict[str, Any], decision: Dict[str, Any]) -> Dict[
     return metadata
 
 
+def preview_value_matches(item: Dict[str, Any], records: List[Dict[str, Any]]) -> List[Dict[str, Any]]:
+    expected_values = set(values_for_zh_source(item))
+    subject = item.get("subject")
+    relation = item.get("relation")
+    matches = []
+    for index, record in enumerate(records):
+        if not isinstance(record, dict):
+            continue
+        if record.get("subject") == subject and record.get("relation") == relation and record.get("object") in expected_values:
+            matches.append({
+                "index": index,
+                "subject": record.get("subject"),
+                "relation": record.get("relation"),
+                "object": record.get("object"),
+            })
+    return matches
+
+
+def duplicate_preflight_info(
+    item: Dict[str, Any],
+    records: List[Dict[str, Any]],
+    matched_records: List[Dict[str, Any]],
+    proposed_value: Any,
+) -> Dict[str, Any]:
+    subject = item.get("subject")
+    relation = item.get("relation")
+    matched_indexes = {record.get("index") for record in matched_records}
+    duplicate_candidate_count = 0
+    if proposed_value is not None:
+        for index, record in enumerate(records):
+            if not isinstance(record, dict):
+                continue
+            if record.get("subject") != subject or record.get("relation") != relation:
+                continue
+            after_value = proposed_value if index in matched_indexes else record.get("object")
+            if after_value == proposed_value:
+                duplicate_candidate_count += 1
+    would_create_duplicate = duplicate_candidate_count > 1
+    return {
+        "would_create_duplicate": would_create_duplicate,
+        "duplicate_candidate_count": duplicate_candidate_count,
+        "duplicate_after_value": proposed_value,
+        "duplicate_policy": "block_apply_until_dedup_decision" if would_create_duplicate else "no_duplicate_detected",
+        "recommended_next_action": "require_human_dedup_decision" if would_create_duplicate else "no_duplicate_detected",
+    }
+
+
 def prepare_metadata_change(
     item: Dict[str, Any],
     decision: Dict[str, Any],
@@ -248,6 +295,8 @@ def prepare_value_change(
         proposed_value = f"{proposed_value} {revision_unit}"
     subject = item.get("subject")
     relation = item.get("relation")
+    preview_matches = preview_value_matches(item, records)
+    duplicate_info = duplicate_preflight_info(item, records, preview_matches, proposed_value)
     blocked_reasons = []
     if not allow_value_change:
         blocked_reasons.append("--allow-value-change")
@@ -279,9 +328,12 @@ def prepare_value_change(
             "revision_status": revision_status,
             "user_proposed_value": revision_value,
             "requires_explicit_value_change": True,
+            "matched_records": preview_matches,
+            "matched_record_count": len(preview_matches),
             "status": "blocked_value_change" if apply_requested else "plan_only_high_risk",
             "blocked_by_default": True,
             "blocked_reasons": blocked_reasons,
+            **duplicate_info,
         }, errors
 
     if proposed_value is None:
@@ -318,6 +370,8 @@ def prepare_value_change(
 
     if not matched_records:
         errors.append(f"{item.get('patch_id')}: no matching records found for value_change")
+    if apply_requested and duplicate_info.get("would_create_duplicate"):
+        errors.append(f"{item.get('patch_id')}: duplicate risk requires human dedup decision before apply")
 
     return updated_records, {
         "review_id": item.get("review_id"),
@@ -332,9 +386,11 @@ def prepare_value_change(
         "user_proposed_value": revision_value,
         "requires_explicit_value_change": True,
         "matched_records": matched_records,
+        "matched_record_count": len(matched_records),
         "changed_records": changed_records,
         "status": "ready" if not errors else "error",
         "blocked_by_default": False,
+        **duplicate_info,
     }, errors
 
 
