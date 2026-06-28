@@ -1,9 +1,11 @@
 {
-  "generated_at": "2026-06-28T02:29:39.544584+00:00",
+  "generated_at": "2026-06-28T02:36:21.267829+00:00",
   "decisions_path": "F:\\知识表示与处理结课作业\\第二次托洛洛测试 -重大进展\\data\\quality_review\\quality_review_decisions.json",
   "queue_path": "F:\\知识表示与处理结课作业\\第二次托洛洛测试 -重大进展\\data\\quality_review\\quality_review_queue.json",
   "candidate_count": 2,
-  "marked_validated": [],
+  "marked_validated": [
+    "source_conflict_v4_003"
+  ],
   "auto_approved": false,
   "formal_triples_written": false,
   "formal_data_written": false,
@@ -46,7 +48,7 @@
       "original_value": "太阳系内密度第二高",
       "proposed_value": "地球",
       "risk_level": "high",
-      "revision_status": "proposed",
+      "revision_status": "validated",
       "human_decision": "pending",
       "safe_to_apply": false,
       "evidence_note": "无",

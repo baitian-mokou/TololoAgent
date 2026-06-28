@@ -44,13 +44,13 @@
       "safe_to_apply": false,
       "reviewed_by": "",
       "reviewed_at": "",
-      "updated_at": "2026-06-27T13:23:22.760083+00:00",
-      "user_proposed_value": "",
-      "user_proposed_unit": "",
-      "user_revision_reason": "",
-      "user_evidence_note": "",
-      "user_evidence_url": "",
-      "revision_status": "none"
+      "updated_at": "2026-06-28T01:27:53.109637+00:00",
+      "user_proposed_value": "25362",
+      "user_proposed_unit": "km",
+      "user_revision_reason": "wikidata: 25362 km",
+      "user_evidence_note": "wikidata: 25362 km，不认为zh_wikipedia: 4km、20km是正确的。",
+      "user_evidence_url": "无",
+      "revision_status": "proposed"
     },
     {
       "review_id": "qr_source_conflict_v4_003",
@@ -66,13 +66,13 @@
       "safe_to_apply": false,
       "reviewed_by": "",
       "reviewed_at": "",
-      "updated_at": "2026-06-27T13:23:22.760083+00:00",
-      "user_proposed_value": "",
+      "updated_at": "2026-06-28T02:36:21.267093+00:00",
+      "user_proposed_value": "地球",
       "user_proposed_unit": "",
-      "user_revision_reason": "",
-      "user_evidence_note": "",
-      "user_evidence_url": "",
-      "revision_status": "none"
+      "user_revision_reason": "月球绕行于地球，是地球的卫星",
+      "user_evidence_note": "无",
+      "user_evidence_url": "无",
+      "revision_status": "validated"
     },
     {
       "review_id": "qr_source_conflict_v4_004",

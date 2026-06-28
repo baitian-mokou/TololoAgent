@@ -139,6 +139,31 @@ class QualityReviewRevisionValueApplyTests(unittest.TestCase):
             self.assertEqual(report["apply_plan"][0]["original_change_type"], "manual_review")
             self.assertEqual(report["apply_plan"][0]["proposed_value"], "地球")
 
+    def test_validated_pending_revision_enters_blocked_dry_run_plan(self):
+        with tempfile.TemporaryDirectory() as tmpdir:
+            root = Path(tmpdir)
+            target, queue_path, decisions_path, report_path = revision_fixture(root)
+            before = target.read_text(encoding="utf-8")
+            write_decisions(decisions_path, [
+                revision_decision("manual_patch", "地球", approved=False),
+            ])
+
+            report = apply_quality_patch(
+                decisions_path=str(decisions_path),
+                candidates_path=str(queue_path),
+                report_path=str(report_path),
+                apply=False,
+                allow_value_change=True,
+                apply_value_changes=True,
+            )
+
+            self.assertEqual(before, target.read_text(encoding="utf-8"))
+            self.assertEqual(report["apply_plan"][0]["change_type"], "revision_value_change")
+            self.assertEqual(report["apply_plan"][0]["status"], "blocked_pending_approval")
+            self.assertFalse(report["apply_plan"][0]["formal_write_ready"])
+            self.assertIn("human_decision_not_approved", report["apply_plan"][0]["approval_blockers"])
+            self.assertIn("safe_to_apply_not_true", report["apply_plan"][0]["approval_blockers"])
+
     def test_validated_metadata_only_revision_enters_value_plan(self):
         with tempfile.TemporaryDirectory() as tmpdir:
             root = Path(tmpdir)

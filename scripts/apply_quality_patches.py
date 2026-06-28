@@ -473,6 +473,56 @@ def apply_quality_patch(
         if item and has_user_revision(decision):
             proposal = revision_plan_item(item, decision)
             revision_proposals.append(proposal)
+        is_validated_revision_preview = (
+            item
+            and has_user_revision(decision)
+            and normalized_revision_status(decision) == "validated"
+            and not apply
+            and (human_decision != APPROVED_DECISION or decision.get("safe_to_apply") is not True)
+        )
+        if is_validated_revision_preview:
+            target_file = target_file_for_item(item)
+            blockers = []
+            if human_decision != APPROVED_DECISION:
+                blockers.append("human_decision_not_approved")
+            if decision.get("safe_to_apply") is not True:
+                blockers.append("safe_to_apply_not_true")
+            try:
+                preview_records = load_json(target_file)
+                if not isinstance(preview_records, list):
+                    raise ValueError(f"{target_file}: target file is not a list of triples")
+                _updated, plan_item, item_errors = prepare_value_change(
+                    item,
+                    decision,
+                    preview_records,
+                    allow_value_change,
+                    False,
+                    apply_value_changes,
+                    plan_change_type="revision_value_change",
+                )
+                plan_item["status"] = "blocked_pending_approval"
+                plan_item["formal_write_ready"] = False
+                plan_item["approval_blockers"] = blockers
+                if item_errors:
+                    plan_item["plan_errors"] = item_errors
+                apply_plan.append(plan_item)
+            except Exception as exc:
+                apply_plan.append({
+                    "review_id": item.get("review_id"),
+                    "patch_id": patch_id,
+                    "change_type": "revision_value_change",
+                    "status": "error",
+                    "formal_write_ready": False,
+                    "approval_blockers": blockers,
+                    "errors": [str(exc)],
+                })
+            skipped_items.append({
+                "patch_id": patch_id,
+                "human_decision": human_decision or "missing",
+                "revision_status": "validated",
+                "reason": "validated revision is waiting for approval and safe_to_apply=true",
+            })
+            continue
         if human_decision in NON_APPLY_DECISIONS:
             skipped_items.append({"patch_id": patch_id, "human_decision": human_decision})
             continue

@@ -1,10 +1,10 @@
 {
-  "generated_at": "2026-06-28T02:29:40.448665+00:00",
+  "generated_at": "2026-06-28T02:45:22.426163+00:00",
   "dry_run": true,
   "apply": false,
   "apply_metadata_only": false,
-  "allow_value_change": false,
-  "apply_value_changes": false,
+  "allow_value_change": true,
+  "apply_value_changes": true,
   "backup_dir": null,
   "rollback_manifest": null,
   "decisions_path": "F:\\知识表示与处理结课作业\\第二次托洛洛测试 -重大进展\\data\\quality_review\\quality_review_decisions.json",
@@ -12,7 +12,57 @@
   "approved_count": 0,
   "applied_count": 0,
   "skipped_count": 8,
-  "apply_plan": [],
+  "apply_plan": [
+    {
+      "review_id": "qr_source_conflict_v4_003",
+      "patch_id": "source_conflict_v4_003",
+      "change_type": "revision_value_change",
+      "original_change_type": "manual_review",
+      "risk_level": "high",
+      "target_file": "F:\\知识表示与处理结课作业\\第二次托洛洛测试 -重大进展\\data\\triples\\月球_triples.json",
+      "current_value": "太阳系内密度第二高",
+      "proposed_value": "地球",
+      "revision_status": "validated",
+      "user_proposed_value": "地球",
+      "requires_explicit_value_change": true,
+      "matched_records": [
+        {
+          "index": 3,
+          "subject": "月球",
+          "relation": "ORBITS",
+          "object": "太阳系内密度第二高"
+        }
+      ],
+      "matched_record_count": 1,
+      "changed_records": [
+        {
+          "index": 3,
+          "before": {
+            "subject": "月球",
+            "relation": "ORBITS",
+            "object": "太阳系内密度第二高"
+          },
+          "after": {
+            "subject": "月球",
+            "relation": "ORBITS",
+            "object": "地球"
+          }
+        }
+      ],
+      "status": "blocked_pending_approval",
+      "blocked_by_default": false,
+      "would_create_duplicate": false,
+      "duplicate_candidate_count": 1,
+      "duplicate_after_value": "地球",
+      "duplicate_policy": "no_duplicate_detected",
+      "recommended_next_action": "no_duplicate_detected",
+      "formal_write_ready": false,
+      "approval_blockers": [
+        "human_decision_not_approved",
+        "safe_to_apply_not_true"
+      ]
+    }
+  ],
   "revision_proposals": [
     {
       "review_id": "qr_source_conflict_v4_002",
@@ -39,7 +89,7 @@
       "subject": "月球",
       "relation": "ORBITS",
       "risk_level": "high",
-      "revision_status": "proposed",
+      "revision_status": "validated",
       "original_value": "太阳系内密度第二高",
       "system_proposed_value": "manual review; no automatic data change",
       "user_proposed_value": "地球",
@@ -63,7 +113,9 @@
     },
     {
       "patch_id": "source_conflict_v4_003",
-      "human_decision": "pending"
+      "human_decision": "pending",
+      "revision_status": "validated",
+      "reason": "validated revision is waiting for approval and safe_to_apply=true"
     },
     {
       "patch_id": "source_conflict_v4_004",

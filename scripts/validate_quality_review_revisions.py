@@ -89,9 +89,9 @@ def validate_quality_review_revisions(
             warnings.append({"check": "proposed_revision_preview_only_by_default", "patch_id": patch_id})
         if status == "validated":
             if decision.get("human_decision") != "approved":
-                errors.append({"check": "validated_revision_requires_approved_decision", "patch_id": patch_id})
+                warnings.append({"check": "validated_revision_waiting_for_approved_decision", "patch_id": patch_id})
             if decision.get("safe_to_apply") is not True:
-                errors.append({"check": "validated_revision_requires_safe_to_apply_true", "patch_id": patch_id})
+                warnings.append({"check": "validated_revision_waiting_for_safe_to_apply_true", "patch_id": patch_id})
         if item.get("risk_level") == "high" and has_revision and decision.get("safe_to_apply") is True and status != "validated":
             errors.append({"check": "high_risk_revision_must_not_be_safe_to_apply_before_validation", "patch_id": patch_id})
 
