@@ -1,0 +1,81 @@
+{
+  "source": "nasa",
+  "raw_records_written": 19,
+  "processed_records_written": 19,
+  "triples_written": 72,
+  "narratives_written": 19,
+  "graph_written": true,
+  "chroma_written": true,
+  "crawled_urls": [
+    "https://science.nasa.gov/dwarf-planets/pluto/moons/charon/",
+    "https://science.nasa.gov/dwarf-planets/pluto/facts/",
+    "https://science.nasa.gov/saturn/moons/enceladus/",
+    "https://science.nasa.gov/saturn/moons/titan/",
+    "https://nssdc.gsfc.nasa.gov/planetary/factsheet/saturnfact.html",
+    "https://nssdc.gsfc.nasa.gov/planetary/factsheet/earthfact.html",
+    "https://nssdc.gsfc.nasa.gov/planetary/factsheet/uranusfact.html",
+    "https://science.nasa.gov/sun/facts/",
+    "https://nssdc.gsfc.nasa.gov/planetary/factsheet/moonfact.html",
+    "https://science.nasa.gov/jupiter/moons/europa/",
+    "https://science.nasa.gov/jupiter/moons/callisto/",
+    "https://nssdc.gsfc.nasa.gov/planetary/factsheet/jupiterfact.html",
+    "https://nssdc.gsfc.nasa.gov/planetary/factsheet/mercuryfact.html",
+    "https://science.nasa.gov/neptune/moons/triton/",
+    "https://nssdc.gsfc.nasa.gov/planetary/factsheet/neptunefact.html",
+    "https://science.nasa.gov/mars/moons/phobos/",
+    "https://science.nasa.gov/mars/moons/deimos/",
+    "https://nssdc.gsfc.nasa.gov/planetary/factsheet/marsfact.html",
+    "https://nssdc.gsfc.nasa.gov/planetary/factsheet/venusfact.html"
+  ],
+  "skipped_urls": [],
+  "errors": [],
+  "warnings": [],
+  "materialization_details": {
+    "graph": {
+      "loaded_nodes": 63,
+      "loaded_relationships": 61,
+      "stats": {
+        "nodes": 301,
+        "rels": 642,
+        "labels": [
+          "Planet",
+          "Satellite",
+          "PlanetType",
+          "Star",
+          "DwarfPlanet",
+          "Asteroid",
+          "Comet",
+          "OrbitParameter",
+          "EnvironmentalFeature",
+          "Mission",
+          "Concept",
+          "CelestialBody",
+          "Galaxy"
+        ],
+        "rel_types": [
+          "围绕",
+          "拥有轨道参数",
+          "拥有环境特征",
+          "IS_A",
+          "DISCOVERED_BY",
+          "LOCATED_IN",
+          "ORBITS",
+          "PART_OF",
+          "HAS_RADIUS",
+          "HAS_MASS",
+          "HAS_ATMOSPHERE"
+        ]
+      }
+    },
+    "chroma": {
+      "added_narratives": 11,
+      "stats": {
+        "total": 11,
+        "collections": [
+          "astronomy_narratives_nasa"
+        ]
+      }
+    }
+  },
+  "generated_at": "2026-06-28T09:30:01.951830+00:00"
+}

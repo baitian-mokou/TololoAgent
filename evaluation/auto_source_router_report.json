@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-06-28T15:47:41",
+  "generated_at": "2026-06-28T17:32:18",
   "summary": {
     "total_queries": 12,
     "route_pass_count": 12,
@@ -55,7 +55,14 @@
           "is_authority_source": false
         }
       ],
-      "conflict_detected": false
+      "conflict_detected": false,
+      "conflicts": [],
+      "cross_source_fusion_summary": {
+        "multi_source_agreement_count": 1,
+        "near_equivalent_values_count": 0,
+        "measurement_kind_difference_count": 0,
+        "human_review_required_count": 0
+      }
     },
     {
       "query": "地球平均半径是多少",
@@ -102,7 +109,14 @@
           "is_authority_source": false
         }
       ],
-      "conflict_detected": false
+      "conflict_detected": false,
+      "conflicts": [],
+      "cross_source_fusion_summary": {
+        "multi_source_agreement_count": 1,
+        "near_equivalent_values_count": 0,
+        "measurement_kind_difference_count": 0,
+        "human_review_required_count": 0
+      }
     },
     {
       "query": "金星大气成分是什么",
@@ -149,7 +163,14 @@
           "is_authority_source": false
         }
       ],
-      "conflict_detected": false
+      "conflict_detected": false,
+      "conflicts": [],
+      "cross_source_fusion_summary": {
+        "multi_source_agreement_count": 1,
+        "near_equivalent_values_count": 0,
+        "measurement_kind_difference_count": 0,
+        "human_review_required_count": 0
+      }
     },
     {
       "query": "月球绕行什么",
@@ -196,7 +217,14 @@
           "is_authority_source": false
         }
       ],
-      "conflict_detected": false
+      "conflict_detected": false,
+      "conflicts": [],
+      "cross_source_fusion_summary": {
+        "multi_source_agreement_count": 0,
+        "near_equivalent_values_count": 0,
+        "measurement_kind_difference_count": 0,
+        "human_review_required_count": 0
+      }
     },
     {
       "query": "木卫二属于什么系统",
@@ -243,7 +271,14 @@
           "is_authority_source": false
         }
       ],
-      "conflict_detected": false
+      "conflict_detected": false,
+      "conflicts": [],
+      "cross_source_fusion_summary": {
+        "multi_source_agreement_count": 0,
+        "near_equivalent_values_count": 0,
+        "measurement_kind_difference_count": 0,
+        "human_review_required_count": 0
+      }
     },
     {
       "query": "冥王星位于哪里",
@@ -290,7 +325,14 @@
           "is_authority_source": false
         }
       ],
-      "conflict_detected": false
+      "conflict_detected": false,
+      "conflicts": [],
+      "cross_source_fusion_summary": {
+        "multi_source_agreement_count": 0,
+        "near_equivalent_values_count": 0,
+        "measurement_kind_difference_count": 0,
+        "human_review_required_count": 0
+      }
     },
     {
       "query": "JUICE 探测任务研究什么",
@@ -337,7 +379,14 @@
           "is_authority_source": false
         }
       ],
-      "conflict_detected": false
+      "conflict_detected": false,
+      "conflicts": [],
+      "cross_source_fusion_summary": {
+        "multi_source_agreement_count": 0,
+        "near_equivalent_values_count": 0,
+        "measurement_kind_difference_count": 0,
+        "human_review_required_count": 0
+      }
     },
     {
       "query": "Rosetta 探测器做了什么",
@@ -384,7 +433,14 @@
           "is_authority_source": false
         }
       ],
-      "conflict_detected": false
+      "conflict_detected": false,
+      "conflicts": [],
+      "cross_source_fusion_summary": {
+        "multi_source_agreement_count": 0,
+        "near_equivalent_values_count": 0,
+        "measurement_kind_difference_count": 0,
+        "human_review_required_count": 0
+      }
     },
     {
       "query": "太阳为什么会发光",
@@ -431,7 +487,14 @@
           "is_authority_source": false
         }
       ],
-      "conflict_detected": false
+      "conflict_detected": false,
+      "conflicts": [],
+      "cross_source_fusion_summary": {
+        "multi_source_agreement_count": 0,
+        "near_equivalent_values_count": 0,
+        "measurement_kind_difference_count": 0,
+        "human_review_required_count": 0
+      }
     },
     {
       "query": "月球的形成历史是什么",
@@ -478,7 +541,14 @@
           "is_authority_source": false
         }
       ],
-      "conflict_detected": false
+      "conflict_detected": false,
+      "conflicts": [],
+      "cross_source_fusion_summary": {
+        "multi_source_agreement_count": 0,
+        "near_equivalent_values_count": 0,
+        "measurement_kind_difference_count": 0,
+        "human_review_required_count": 0
+      }
     },
     {
       "query": "火星质量是多少，为什么和地球不同",
@@ -525,10 +595,17 @@
           "is_authority_source": false
         }
       ],
-      "conflict_detected": false
+      "conflict_detected": false,
+      "conflicts": [],
+      "cross_source_fusion_summary": {
+        "multi_source_agreement_count": 1,
+        "near_equivalent_values_count": 0,
+        "measurement_kind_difference_count": 0,
+        "human_review_required_count": 0
+      }
     },
     {
-      "query": "火星半径是多少，不同来源为什么不一样",
+      "query": "金星半径是多少，不同来源为什么不一样",
       "case": "conflict",
       "expected_sources": [
         "nasa",
@@ -572,7 +649,41 @@
           "is_authority_source": false
         }
       ],
-      "conflict_detected": true
+      "conflict_detected": true,
+      "conflicts": [
+        {
+          "subject": "金星",
+          "relation": "HAS_RADIUS",
+          "authority_source": "nasa",
+          "values": [
+            {
+              "object": "1.0 km",
+              "sources": [
+                "nasa"
+              ]
+            },
+            {
+              "object": "6051.8 km",
+              "sources": [
+                "wikidata"
+              ]
+            }
+          ],
+          "query": "金星半径是多少，不同来源为什么不一样",
+          "selected_sources": [
+            "nasa",
+            "wikidata",
+            "zh_wikipedia",
+            "esa"
+          ]
+        }
+      ],
+      "cross_source_fusion_summary": {
+        "multi_source_agreement_count": 0,
+        "near_equivalent_values_count": 0,
+        "measurement_kind_difference_count": 0,
+        "human_review_required_count": 1
+      }
     }
   ],
   "gates": {

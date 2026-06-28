@@ -2,7 +2,7 @@ import unittest
 from unittest.mock import Mock
 
 import config
-from src.gui.main_window import AgentTab
+from src.gui.main_window import AgentTab, CrawlTab
 
 
 class GuiSourceSelectionTests(unittest.TestCase):
@@ -56,6 +56,10 @@ class GuiSourceSelectionTests(unittest.TestCase):
         tab._create_agent(factory)
 
         factory.assert_called_once_with(source_name="esa")
+
+    def test_crawl_tab_exposes_four_source_buttons_without_all_button(self):
+        self.assertEqual(CrawlTab.SOURCE_BUTTON_ORDER, ("zh_wikipedia", "wikidata", "nasa", "esa"))
+        self.assertNotIn("all", CrawlTab.SOURCE_BUTTON_ORDER)
 
 
 if __name__ == "__main__":

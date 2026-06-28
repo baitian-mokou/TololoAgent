@@ -47,7 +47,7 @@ class MultiSourceFusionTests(unittest.TestCase):
         self.assertEqual(result["metadata"]["source_result_counts"]["nasa"]["neo4j"], 1)
         self.assertTrue(result["metadata"]["authority_policy_applied"])
 
-    def test_auto_fusion_preserves_provenance_and_conflict_signal(self):
+    def test_auto_fusion_preserves_provenance_for_near_equivalent_values(self):
         agent = LLMAgent(source_name="auto")
 
         fused = agent._fuse_auto_results(
@@ -84,11 +84,44 @@ class MultiSourceFusionTests(unittest.TestCase):
             },
         )
 
-        self.assertTrue(fused["metadata"]["conflict_detected"])
+        self.assertFalse(fused["metadata"]["conflict_detected"])
         self.assertEqual(fused["metadata"]["authority_by_relation"]["HAS_RADIUS"], "nasa")
         self.assertEqual(fused["neo4j_results"][0]["source_name"], "nasa")
-        self.assertIn("来源存在差异", fused["answer_prompt"])
+        self.assertEqual(fused["neo4j_results"][0]["fusion_status"], "near_equivalent_values")
+        self.assertNotIn("来源存在差异", fused["answer_prompt"])
         self.assertEqual(fused["metadata"]["fusion_mode"], "peer_source_fusion")
+
+    def test_auto_fusion_keeps_true_conflicts_visible(self):
+        agent = LLMAgent(source_name="auto")
+
+        fused = agent._fuse_auto_results(
+            "金星半径是多少",
+            neo4j_by_source={
+                "nasa": [{
+                    "subject": "金星",
+                    "relation": "HAS_RADIUS",
+                    "object": "1.0 km",
+                    "source": "nasa",
+                    "source_name": "nasa",
+                }],
+                "wikidata": [{
+                    "subject": "金星",
+                    "relation": "HAS_RADIUS",
+                    "object": "6051.8 km",
+                    "source": "wikidata",
+                    "source_name": "wikidata",
+                }],
+            },
+            chroma_by_source={},
+            routing_trace={
+                "selected_sources": ["nasa", "wikidata", "zh_wikipedia"],
+                "routing_reason": "numeric_query",
+                "fusion_mode": "peer_source_fusion",
+            },
+        )
+
+        self.assertTrue(fused["metadata"]["conflict_detected"])
+        self.assertIn("来源存在差异", fused["answer_prompt"])
 
 
 if __name__ == "__main__":

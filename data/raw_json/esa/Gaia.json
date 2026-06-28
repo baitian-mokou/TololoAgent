@@ -1,0 +1,43 @@
+{
+  "record": {
+    "title": "Gaia",
+    "triples": [
+      {
+        "subject": "Gaia",
+        "relation": "ORBITS",
+        "object": "太阳",
+        "pattern": "esa_smoke_fixture",
+        "raw": "ESA smoke fixture: Gaia follows a solar orbit near Sun-Earth L2."
+      },
+      {
+        "subject": "Gaia",
+        "relation": "OPERATED_BY",
+        "object": "ESA",
+        "pattern": "esa_smoke_fixture",
+        "raw": "ESA operates Gaia."
+      },
+      {
+        "subject": "Gaia",
+        "relation": "HAS_MISSION_TARGET",
+        "object": "银河系",
+        "pattern": "esa_smoke_fixture",
+        "raw": "Gaia targets Milky Way astrometry."
+      }
+    ],
+    "narratives": [
+      {
+        "page_title": "Gaia",
+        "section": "任务",
+        "content": "ESA fixture 将 Gaia 记录为由 ESA 运营、沿太阳轨道工作并服务于银河系恒星测量的任务样例。",
+        "keywords": [
+          "ESA",
+          "Gaia",
+          "太阳",
+          "银河系",
+          "任务"
+        ]
+      }
+    ]
+  },
+  "fixture_source": "smoke_fixture.json"
+}

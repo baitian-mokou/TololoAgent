@@ -1,0 +1,58 @@
+{
+  "record": {
+    "title": "JUICE",
+    "triples": [
+      {
+        "subject": "JUICE",
+        "relation": "OPERATED_BY",
+        "object": "ESA",
+        "pattern": "esa_smoke_fixture",
+        "raw": "ESA operates JUICE."
+      },
+      {
+        "subject": "JUICE",
+        "relation": "HAS_MISSION_TARGET",
+        "object": "木星",
+        "pattern": "esa_smoke_fixture",
+        "raw": "JUICE targets Jupiter."
+      },
+      {
+        "subject": "JUICE",
+        "relation": "HAS_MISSION_TARGET",
+        "object": "木卫二",
+        "pattern": "esa_smoke_fixture",
+        "raw": "JUICE targets Europa."
+      },
+      {
+        "subject": "JUICE",
+        "relation": "HAS_MISSION_TARGET",
+        "object": "木卫三",
+        "pattern": "esa_smoke_fixture",
+        "raw": "JUICE targets Ganymede."
+      },
+      {
+        "subject": "JUICE",
+        "relation": "HAS_MISSION_TARGET",
+        "object": "木卫四",
+        "pattern": "esa_smoke_fixture",
+        "raw": "JUICE targets Callisto."
+      }
+    ],
+    "narratives": [
+      {
+        "page_title": "JUICE",
+        "section": "任务",
+        "content": "ESA fixture 将 JUICE 记录为由 ESA 运营、面向木星及其木卫二、木卫三、木卫四的探测任务。",
+        "keywords": [
+          "ESA",
+          "JUICE",
+          "木星",
+          "木卫二",
+          "木卫三",
+          "木卫四"
+        ]
+      }
+    ]
+  },
+  "fixture_source": "smoke_fixture.json"
+}

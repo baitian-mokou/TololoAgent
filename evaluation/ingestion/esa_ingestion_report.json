@@ -1,0 +1,67 @@
+{
+  "source": "esa",
+  "raw_records_written": 5,
+  "processed_records_written": 5,
+  "triples_written": 16,
+  "narratives_written": 5,
+  "graph_written": true,
+  "chroma_written": true,
+  "crawled_urls": [
+    "https://www.esa.int/Science_Exploration/Space_Science/Juice",
+    "https://www.esa.int/Science_Exploration/Space_Science/Rosetta",
+    "https://www.esa.int/Science_Exploration/Space_Science/Gaia",
+    "https://www.esa.int/Science_Exploration/Space_Science/Solar_Orbiter",
+    "https://www.esa.int/Science_Exploration/Space_Science/Mars_Express"
+  ],
+  "skipped_urls": [],
+  "errors": [],
+  "warnings": [],
+  "materialization_details": {
+    "graph": {
+      "loaded_nodes": 6,
+      "loaded_relationships": 3,
+      "stats": {
+        "nodes": 299,
+        "rels": 586,
+        "labels": [
+          "Planet",
+          "Satellite",
+          "PlanetType",
+          "Star",
+          "DwarfPlanet",
+          "Asteroid",
+          "Comet",
+          "OrbitParameter",
+          "EnvironmentalFeature",
+          "Mission",
+          "Concept",
+          "CelestialBody",
+          "Galaxy"
+        ],
+        "rel_types": [
+          "围绕",
+          "拥有轨道参数",
+          "拥有环境特征",
+          "IS_A",
+          "DISCOVERED_BY",
+          "LOCATED_IN",
+          "ORBITS",
+          "PART_OF",
+          "HAS_RADIUS",
+          "HAS_MASS",
+          "HAS_ATMOSPHERE"
+        ]
+      }
+    },
+    "chroma": {
+      "added_narratives": 7,
+      "stats": {
+        "total": 7,
+        "collections": [
+          "astronomy_narratives_esa"
+        ]
+      }
+    }
+  },
+  "generated_at": "2026-06-28T09:25:28.479521+00:00"
+}

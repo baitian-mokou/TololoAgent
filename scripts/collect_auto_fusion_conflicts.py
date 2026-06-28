@@ -4,6 +4,7 @@ import argparse
 import json
 import os
 import sys
+from datetime import datetime, timezone
 from pathlib import Path
 from typing import Any, Dict, List
 
@@ -15,6 +16,8 @@ from config import BASE_DIR
 
 
 DEFAULT_OUTPUT = os.path.join(BASE_DIR, "data", "quality_patches", "auto_fusion_conflict_candidates.json")
+DEFAULT_INPUT = os.path.join(BASE_DIR, "evaluation", "auto_source_router_report.json")
+DEFAULT_REPORT = os.path.join(BASE_DIR, "evaluation", "ingestion", "auto_fusion_conflict_report.json")
 
 
 def _normalize_values_by_source(values: List[Dict[str, Any]]) -> Dict[str, List[str]]:
@@ -24,6 +27,41 @@ def _normalize_values_by_source(values: List[Dict[str, Any]]) -> Dict[str, List[
         for source_name in item.get("sources", []):
             values_by_source.setdefault(str(source_name).strip(), []).append(obj)
     return values_by_source
+
+
+def _extract_conflicts(payload: Any) -> List[Dict[str, Any]]:
+    if isinstance(payload, list):
+        return list(payload)
+    if not isinstance(payload, dict):
+        return []
+    if isinstance(payload.get("conflicts"), list):
+        return list(payload.get("conflicts", []))
+
+    conflicts: List[Dict[str, Any]] = []
+    for case in payload.get("cases", []):
+        for conflict in case.get("conflicts", []):
+            normalized = dict(conflict)
+            normalized.setdefault("query", case.get("query", ""))
+            normalized.setdefault("selected_sources", case.get("selected_sources", []))
+            normalized.setdefault("authority_source", case.get("authority_source", ""))
+            conflicts.append(normalized)
+    return conflicts
+
+
+def _aggregate_fusion_summary(payload: Any) -> Dict[str, int]:
+    summary = {
+        "multi_source_agreement_count": 0,
+        "near_equivalent_values_count": 0,
+        "measurement_kind_difference_count": 0,
+        "human_review_required_count": 0,
+    }
+    if not isinstance(payload, dict):
+        return summary
+    for case in payload.get("cases", []):
+        case_summary = case.get("cross_source_fusion_summary", {}) or {}
+        for key in summary:
+            summary[key] += int(case_summary.get(key, 0) or 0)
+    return summary
 
 
 def build_auto_fusion_conflict_candidates(conflicts: List[Dict[str, Any]], output_path: str | None = None) -> Dict[str, Any]:
@@ -74,18 +112,58 @@ def build_auto_fusion_conflict_candidates(conflicts: List[Dict[str, Any]], outpu
     return payload
 
 
+def build_auto_fusion_conflict_report(
+    conflicts: List[Dict[str, Any]],
+    candidate_payload: Dict[str, Any],
+    *,
+    candidate_output_path: str = DEFAULT_OUTPUT,
+    fusion_summary: Dict[str, int] | None = None,
+    output_path: str | None = None,
+) -> Dict[str, Any]:
+    report = {
+        "generated_at": datetime.now(timezone.utc).isoformat(),
+        "summary": {
+            "true_conflict_count": len(conflicts),
+            "candidate_count": int(candidate_payload.get("summary", {}).get("candidate_count", 0)),
+            **dict(fusion_summary or {}),
+        },
+        "conflicts": conflicts,
+        "candidate_output": candidate_output_path,
+    }
+    if output_path:
+        path = Path(output_path)
+        path.parent.mkdir(parents=True, exist_ok=True)
+        path.write_text(json.dumps(report, ensure_ascii=False, indent=2) + "\n", encoding="utf-8")
+    return report
+
+
 def main() -> int:
     if hasattr(sys.stdout, "reconfigure"):
         sys.stdout.reconfigure(encoding="utf-8", errors="replace")
     parser = argparse.ArgumentParser(description="Convert auto-fusion conflict packets into quality review candidates.")
-    parser.add_argument("input", help="JSON file containing a list of conflict packets or a payload with `conflicts`.")
+    parser.add_argument("input", nargs="?", default=DEFAULT_INPUT, help="JSON file containing a list of conflict packets or a payload with `conflicts`.")
     parser.add_argument("--output", default=DEFAULT_OUTPUT)
+    parser.add_argument("--report", default=DEFAULT_REPORT)
     args = parser.parse_args()
 
     payload = json.loads(Path(args.input).read_text(encoding="utf-8"))
-    conflicts = payload.get("conflicts", []) if isinstance(payload, dict) else payload
+    conflicts = _extract_conflicts(payload)
+    fusion_summary = _aggregate_fusion_summary(payload)
     report = build_auto_fusion_conflict_candidates(list(conflicts or []), output_path=args.output)
-    print(json.dumps({"output": args.output, "candidate_count": report["summary"]["candidate_count"]}, ensure_ascii=False, indent=2))
+    audit = build_auto_fusion_conflict_report(
+        list(conflicts or []),
+        report,
+        candidate_output_path=args.output,
+        fusion_summary=fusion_summary,
+        output_path=args.report,
+    )
+    print(json.dumps({
+        "input": args.input,
+        "output": args.output,
+        "report": args.report,
+        "candidate_count": report["summary"]["candidate_count"],
+        "true_conflict_count": audit["summary"]["true_conflict_count"],
+    }, ensure_ascii=False, indent=2))
     return 0
 
 

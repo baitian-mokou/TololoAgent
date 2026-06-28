@@ -1,0 +1,42 @@
+{
+  "record": {
+    "title": "火星快车号",
+    "triples": [
+      {
+        "subject": "火星快车号",
+        "relation": "ORBITS",
+        "object": "火星",
+        "pattern": "esa_smoke_fixture",
+        "raw": "ESA smoke fixture: Mars Express orbits Mars."
+      },
+      {
+        "subject": "火星快车号",
+        "relation": "OPERATED_BY",
+        "object": "ESA",
+        "pattern": "esa_smoke_fixture",
+        "raw": "ESA operates Mars Express."
+      },
+      {
+        "subject": "火星快车号",
+        "relation": "HAS_MISSION_TARGET",
+        "object": "火星",
+        "pattern": "esa_smoke_fixture",
+        "raw": "Mars Express targets Mars."
+      }
+    ],
+    "narratives": [
+      {
+        "page_title": "火星快车号",
+        "section": "任务",
+        "content": "ESA fixture 将火星快车号记录为围绕火星运行的任务样例，并说明该任务由 ESA 运营、目标为火星。",
+        "keywords": [
+          "ESA",
+          "火星快车号",
+          "火星",
+          "任务"
+        ]
+      }
+    ]
+  },
+  "fixture_source": "smoke_fixture.json"
+}

@@ -1,0 +1,82 @@
+{
+  "source": "wikidata",
+  "raw_records_written": 20,
+  "processed_records_written": 20,
+  "triples_written": 121,
+  "narratives_written": 20,
+  "graph_written": true,
+  "chroma_written": true,
+  "crawled_urls": [
+    "https://www.wikidata.org/wiki/Q525",
+    "https://www.wikidata.org/wiki/Q308",
+    "https://www.wikidata.org/wiki/Q313",
+    "https://www.wikidata.org/wiki/Q2",
+    "https://www.wikidata.org/wiki/Q405",
+    "https://www.wikidata.org/wiki/Q111",
+    "https://www.wikidata.org/wiki/Q319",
+    "https://www.wikidata.org/wiki/Q193",
+    "https://www.wikidata.org/wiki/Q324",
+    "https://www.wikidata.org/wiki/Q332",
+    "https://www.wikidata.org/wiki/Q339",
+    "https://www.wikidata.org/wiki/Q596",
+    "https://www.wikidata.org/wiki/Q7547",
+    "https://www.wikidata.org/wiki/Q7548",
+    "https://www.wikidata.org/wiki/Q3143",
+    "https://www.wikidata.org/wiki/Q3169",
+    "https://www.wikidata.org/wiki/Q3134",
+    "https://www.wikidata.org/wiki/Q2565",
+    "https://www.wikidata.org/wiki/Q3359",
+    "https://www.wikidata.org/wiki/Q3030"
+  ],
+  "skipped_urls": [],
+  "errors": [],
+  "warnings": [],
+  "materialization_details": {
+    "graph": {
+      "loaded_nodes": 107,
+      "loaded_relationships": 148,
+      "stats": {
+        "nodes": 299,
+        "rels": 631,
+        "labels": [
+          "Planet",
+          "Satellite",
+          "PlanetType",
+          "Star",
+          "DwarfPlanet",
+          "Asteroid",
+          "Comet",
+          "OrbitParameter",
+          "EnvironmentalFeature",
+          "Mission",
+          "Concept",
+          "CelestialBody",
+          "Galaxy"
+        ],
+        "rel_types": [
+          "围绕",
+          "拥有轨道参数",
+          "拥有环境特征",
+          "IS_A",
+          "DISCOVERED_BY",
+          "LOCATED_IN",
+          "ORBITS",
+          "PART_OF",
+          "HAS_RADIUS",
+          "HAS_MASS",
+          "HAS_ATMOSPHERE"
+        ]
+      }
+    },
+    "chroma": {
+      "added_narratives": 7,
+      "stats": {
+        "total": 7,
+        "collections": [
+          "astronomy_narratives_wikidata"
+        ]
+      }
+    }
+  },
+  "generated_at": "2026-06-28T09:30:00.145353+00:00"
+}

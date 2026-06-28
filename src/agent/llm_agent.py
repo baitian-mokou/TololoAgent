@@ -30,6 +30,7 @@ from src.source_control import (
     get_source_schema_version,
     normalize_source_filter,
 )
+from src.source_quality.cross_source_fusion import fuse_cross_source_records
 from src.source_router import SourceRouter
 
 logger = logging.getLogger(__name__)
@@ -83,6 +84,15 @@ class LLMAgent:
         "天卫": "天王星",
         "海卫": "海王星",
         "冥卫": "冥王星",
+    }
+    RELATION_RAW_HINTS = {
+        "HAS_MASS": "质量",
+        "HAS_RADIUS": "半径",
+        "HAS_ATMOSPHERE": "大气",
+        "ORBITS": "绕行",
+        "PART_OF": "属于",
+        "LOCATED_IN": "位于",
+        "DISCOVERED_BY": "发现者",
     }
 
     def __init__(self, source_name=None, source_role=None, schema_version=None):
@@ -314,7 +324,7 @@ class LLMAgent:
         normalized = normalize_triple_record(triple)
         subject = self._normalize_entity_name(normalized.get("subject", ""))
         relation = normalize_to_simplified(str(normalized.get("relation", "")).strip())
-        raw = normalize_to_simplified(str(normalized.get("raw", "")).strip())
+        raw = self._semantic_raw_context(normalized)
         obj = Neo4jLoader._normalize_relation_object(relation, normalized.get("object", ""), raw=raw, subject=subject)
         source_title = self._normalize_entity_name(normalized.get("source_title", ""))
         primary = query_context.get("primary_entity", "")
@@ -678,7 +688,7 @@ class LLMAgent:
                     continue
                 subject = str(normalized.get('subject', ''))
                 relation = str(normalized.get('relation', ''))
-                raw = normalize_to_simplified(str(normalized.get('raw', '')).strip())
+                raw = self._semantic_raw_context(normalized)
                 obj = Neo4jLoader._normalize_relation_object(relation, normalized.get('object', ''), raw=raw, subject=subject)
                 if not obj:
                     obj = str(normalized.get('object', ''))
@@ -801,6 +811,24 @@ class LLMAgent:
     def _normalized_object_key(record: dict) -> str:
         return normalize_to_simplified(str(record.get("object", "")).strip())
 
+    @classmethod
+    def _semantic_raw_context(cls, normalized: dict) -> str:
+        raw = normalize_to_simplified(str(normalized.get("raw", "")).strip())
+        if raw:
+            return raw
+        relation = normalize_to_simplified(str(normalized.get("relation", "")).strip())
+        source_field = normalize_to_simplified(
+            str(
+                normalized.get("source_field")
+                or normalized.get("table_field")
+                or normalized.get("property_id")
+                or ""
+            ).strip()
+        )
+        obj = normalize_to_simplified(str(normalized.get("object", "")).strip())
+        relation_hint = cls.RELATION_RAW_HINTS.get(relation, relation)
+        return " ".join(part for part in (source_field, relation_hint, obj) if part)
+
     def _intent_authority_source(self, routing_trace: Dict[str, object], selected_sources: List[str]) -> str:
         order = self._authority_order_for_intent(str(routing_trace.get("intent", "")))
         return self._pick_authority_source(selected_sources, order)
@@ -809,66 +837,59 @@ class LLMAgent:
         self,
         records: List[dict],
         routing_trace: Dict[str, object],
-    ) -> tuple[List[dict], Dict[str, str], List[dict]]:
+    ) -> tuple[List[dict], Dict[str, str], List[dict], Dict[str, int]]:
         intent = str(routing_trace.get("intent", ""))
-        relation_groups: Dict[tuple, Dict[str, object]] = {}
-        for record in records:
+        fusion_report = fuse_cross_source_records(list(records or []))
+        summary = dict(fusion_report.get("summary", {}))
+        relation_groups: Dict[tuple, List[dict]] = {}
+        for record in fusion_report.get("fused_records", []):
             subject = str(record.get("subject", "")).strip()
             relation = str(record.get("relation", "")).strip()
-            source_name = str(record.get("source_name") or record.get("source") or "").strip()
-            object_key = self._normalized_object_key(record)
-            if not subject or not relation or not source_name or not object_key:
+            if not subject or not relation:
                 continue
-            group = relation_groups.setdefault((subject, relation), {"records_by_object": {}, "sources": []})
-            group["records_by_object"].setdefault(object_key, []).append(record)
-            group["sources"].append(source_name)
+            relation_groups.setdefault((subject, relation), []).append(dict(record))
+        review_by_key = {
+            (str(item.get("subject", "")).strip(), str(item.get("relation", "")).strip()): dict(item)
+            for item in fusion_report.get("review_candidates", [])
+        }
 
         authority_by_relation: Dict[str, str] = {}
         fused_records: List[dict] = []
         conflicts: List[dict] = []
 
-        for (subject, relation), group in relation_groups.items():
+        for (subject, relation), group_records in relation_groups.items():
             order = self._authority_order_for_relation(relation, intent)
-            authority_source = self._pick_authority_source(group["sources"], order)
+            provider_pool = []
+            for record in group_records:
+                provider_pool.extend(record.get("sources", []) or [record.get("source_name") or record.get("source")])
+            authority_source = self._pick_authority_source(provider_pool, order)
             authority_by_relation[relation] = authority_source
             rank_map = self._authority_rank_map(order)
-            records_by_object = group["records_by_object"]
-            conflicting = len(records_by_object) > 1
+
+            review_candidate = review_by_key.get((subject, relation))
+            conflicting = bool(review_candidate)
             if conflicting:
                 conflicts.append({
                     "subject": subject,
                     "relation": relation,
                     "authority_source": authority_source,
-                    "values": [
-                        {
-                            "object": str(entries[0].get("object", "")).strip(),
-                            "sources": self._sort_sources_by_authority(
-                                [item.get("source_name") or item.get("source") for item in entries],
-                                order,
-                            ),
-                        }
-                        for entries in records_by_object.values()
-                    ],
+                    "values": list(review_candidate.get("values", [])),
                 })
 
             grouped_entries = []
-            for entries in records_by_object.values():
+            for record in group_records:
                 providers = self._sort_sources_by_authority(
-                    [item.get("source_name") or item.get("source") for item in entries],
+                    list(record.get("sources", []) or [record.get("source_name") or record.get("source")]),
                     order,
                 )
-                best_source = providers[0]
-                best_record = next(
-                    item for item in entries
-                    if str(item.get("source_name") or item.get("source") or "").strip() == best_source
-                )
-                grouped_entries.append((rank_map.get(best_source, len(rank_map) + 1), best_record, providers))
+                best_source = providers[0] if providers else str(record.get("source_name") or record.get("source") or "").strip()
+                grouped_entries.append((rank_map.get(best_source, len(rank_map) + 1), dict(record), providers))
 
             grouped_entries.sort(key=lambda item: item[0])
             next_rank = len(fused_records) + 1
             for index, (_, best_record, providers) in enumerate(grouped_entries):
                 fused = dict(best_record)
-                fused["source"] = str(best_record.get("source_name") or best_record.get("source") or "")
+                fused["source"] = str(providers[0] if providers else best_record.get("source_name") or best_record.get("source") or "")
                 fused["source_name"] = fused["source"]
                 fused["merged_sources"] = providers
                 fused["authority_source"] = authority_source
@@ -880,7 +901,7 @@ class LLMAgent:
                 fused["rank"] = next_rank + index
                 fused_records.append(fused)
 
-        return fused_records, authority_by_relation, conflicts
+        return fused_records, authority_by_relation, conflicts, summary
 
     def _sort_chroma_results(
         self,
@@ -962,7 +983,7 @@ class LLMAgent:
             }
             for source_name in selected_sources
         }
-        neo4j_results, authority_by_relation, conflicts = self._group_graph_records(raw_neo4j_results, routing_trace)
+        neo4j_results, authority_by_relation, conflicts, fusion_summary = self._group_graph_records(raw_neo4j_results, routing_trace)
         chroma_results = self._sort_chroma_results(raw_chroma_results, routing_trace)
         authority_source = ""
         if authority_by_relation:
@@ -995,6 +1016,7 @@ class LLMAgent:
                 "authority_by_relation": authority_by_relation,
                 "conflict_detected": bool(conflicts),
                 "conflicts": conflicts,
+                "cross_source_fusion_summary": fusion_summary,
                 "source_trace": self._build_source_trace(selected_sources, source_result_counts, authority_source=authority_source),
             },
         }
@@ -1042,6 +1064,7 @@ class LLMAgent:
         neo4j_results = []
         chroma_results = []
         search_errors = []
+        retrieval_wait_timeout = max(int(getattr(self, "timeout", 0) or 0), 30)
 
         def search_neo4j_task():
             nonlocal neo4j_results
@@ -1064,7 +1087,7 @@ class LLMAgent:
         for thread in threads:
             thread.start()
         for thread in threads:
-            thread.join(timeout=10)
+            thread.join(timeout=retrieval_wait_timeout)
 
         if search_errors:
             logger.warning("检索告警: %s", "; ".join(search_errors))

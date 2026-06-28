@@ -1,0 +1,46 @@
+{
+  "record": {
+    "title": "太阳",
+    "qid": "Q525",
+    "triples": [
+      {
+        "relation": "LOCATED_IN",
+        "object": "太阳系",
+        "property_id": "P361"
+      },
+      {
+        "relation": "PART_OF",
+        "object": "太阳系",
+        "property_id": "P361"
+      },
+      {
+        "relation": "HAS_MASS",
+        "object": "1.9885e30 kg",
+        "property_id": "P2067"
+      },
+      {
+        "relation": "HAS_RADIUS",
+        "object": "695700 km",
+        "property_id": "P2120"
+      },
+      {
+        "relation": "HAS_ATMOSPHERE",
+        "object": "氢;氦",
+        "property_id": "P2067"
+      }
+    ],
+    "narratives": [
+      {
+        "section": "Wikidata 摘要",
+        "content": "Wikidata fixture 将太阳登记为太阳系的中心恒星，并保留质量、半径和主要成分等结构化事实。",
+        "keywords": [
+          "太阳",
+          "太阳系",
+          "质量",
+          "半径"
+        ]
+      }
+    ]
+  },
+  "fixture_source": "solar_system_fixture.json"
+}

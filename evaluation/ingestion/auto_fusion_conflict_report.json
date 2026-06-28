@@ -1,0 +1,40 @@
+{
+  "generated_at": "2026-06-28T09:31:56.253179+00:00",
+  "summary": {
+    "true_conflict_count": 1,
+    "candidate_count": 1,
+    "multi_source_agreement_count": 4,
+    "near_equivalent_values_count": 0,
+    "measurement_kind_difference_count": 0,
+    "human_review_required_count": 1
+  },
+  "conflicts": [
+    {
+      "subject": "金星",
+      "relation": "HAS_RADIUS",
+      "authority_source": "nasa",
+      "values": [
+        {
+          "object": "1.0 km",
+          "sources": [
+            "nasa"
+          ]
+        },
+        {
+          "object": "6051.8 km",
+          "sources": [
+            "wikidata"
+          ]
+        }
+      ],
+      "query": "金星半径是多少，不同来源为什么不一样",
+      "selected_sources": [
+        "nasa",
+        "wikidata",
+        "zh_wikipedia",
+        "esa"
+      ]
+    }
+  ],
+  "candidate_output": "F:\\知识表示与处理结课作业\\第二次托洛洛测试 -重大进展\\data\\quality_patches\\auto_fusion_conflict_candidates.json"
+}

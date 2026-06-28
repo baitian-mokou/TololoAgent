@@ -1,0 +1,30 @@
+{
+  "source": "zh_wikipedia",
+  "raw_records_written": 3,
+  "processed_records_written": 3,
+  "triples_written": 3,
+  "narratives_written": 115,
+  "graph_written": false,
+  "chroma_written": false,
+  "crawled_urls": [
+    "https://zh.wikipedia.org/wiki/太阳",
+    "https://zh.wikipedia.org/wiki/太阳系",
+    "https://zh.wikipedia.org/wiki/水星"
+  ],
+  "skipped_urls": [],
+  "errors": [],
+  "warnings": [
+    "active source materialization skipped to avoid overwriting the formal namespace"
+  ],
+  "materialization_details": {
+    "graph": {
+      "skipped": true,
+      "reason": "active_source_boundary"
+    },
+    "chroma": {
+      "skipped": true,
+      "reason": "active_source_boundary"
+    }
+  },
+  "generated_at": "2026-06-28T09:22:40.287665+00:00"
+}

@@ -406,8 +406,18 @@ class MainWindow:
 
 class CrawlTab(BaseTab):
     """爬虫管理标签页"""
+    SOURCE_BUTTON_ORDER = ("zh_wikipedia", "wikidata", "nasa", "esa")
+    SOURCE_BUTTON_TEXT_KEYS = {
+        "zh_wikipedia": "crawler_btn_source_zh_wikipedia",
+        "wikidata": "crawler_btn_source_wikidata",
+        "nasa": "crawler_btn_source_nasa",
+        "esa": "crawler_btn_source_esa",
+    }
+    DEFAULT_LIMIT = 20
+
     def __init__(self, parent, main_window):
         super().__init__(parent, main_window)
+        self.source_buttons = {}
         self._build_ui()
 
     def _build_ui(self):
@@ -416,9 +426,14 @@ class CrawlTab(BaseTab):
         self.title_label.pack(anchor="w", pady=(0, 15))
         btn_frame = tb.Frame(self.frame)
         btn_frame.pack(fill="x", pady=(0, 10))
-        self.btn_crawl = tb.Button(btn_frame, text=self.i18n.t("crawler_btn_start"),
-                                  command=self._start_crawl)
-        self.btn_crawl.pack(side="left", padx=(0, 5))
+        for source_name in self.SOURCE_BUTTON_ORDER:
+            button = tb.Button(
+                btn_frame,
+                text=self.i18n.t(self.SOURCE_BUTTON_TEXT_KEYS[source_name]),
+                command=lambda source_name=source_name: self._start_crawl_for_source(source_name),
+            )
+            button.pack(side="left", padx=(0, 5))
+            self.source_buttons[source_name] = button
         self.btn_stop = tb.Button(btn_frame, text=self.i18n.t("crawler_btn_stop"),
                                  command=self._stop, state="disabled")
         self.btn_stop.pack(side="left", padx=5)
@@ -431,32 +446,36 @@ class CrawlTab(BaseTab):
 
     def refresh_texts(self):
         self.title_label.config(text=self.i18n.t("crawler_title"))
-        self.btn_crawl.config(text=self.i18n.t("crawler_btn_start"))
+        for source_name, button in self.source_buttons.items():
+            button.config(text=self.i18n.t(self.SOURCE_BUTTON_TEXT_KEYS[source_name]))
         self.btn_stop.config(text=self.i18n.t("crawler_btn_stop"))
         self.log_title.config(text=self.i18n.t("crawler_log_title"))
 
     def _set_buttons(self, running=True):
-        self.btn_crawl.config(state="disabled" if running else "normal")
+        for button in self.source_buttons.values():
+            button.config(state="disabled" if running else "normal")
         self.btn_stop.config(state="normal" if running else "disabled")
 
-    def _start_crawl(self):
+    @staticmethod
+    def _source_display_name(source_name):
+        return AgentTab.SOURCE_LABELS.get(source_name, source_name)
+
+    def _start_crawl_for_source(self, source_name):
         self.log_text.config(state="normal")
         self.log_text.delete("1.0", "end")
         self.log_text.config(state="disabled")
         self._set_buttons(True)
         self.progress["value"] = 0
-        self._log(self.i18n.t("crawler_start_log"))
+        self.progress["maximum"] = self.DEFAULT_LIMIT
+        self._log(self.i18n.t("crawler_start_log_source", source=self._source_display_name(source_name), limit=self.DEFAULT_LIMIT))
+
         def worker():
             try:
                 self._add_path()
-                from src.crawler.spider import TololoCrawler
-                crawler = TololoCrawler()
-                crawler.set_progress_callback(
-                    lambda c, t, m: self.frame.after(0, lambda c=c, t=t, m=m: self._progress_update(c, t, m))
-                )
-                success, total = crawler.crawl_all()
-                self.frame.after(0, lambda success=success, crawler=crawler: self._log(
-                    self.i18n.t("crawler_complete", success=success, total=len(crawler.crawled_titles))))
+                from scripts.ingest_solar_system_sources import run_controlled_ingestion
+
+                report = run_controlled_ingestion(source_name, limit=self.DEFAULT_LIMIT, mode="auto")
+                self.frame.after(0, lambda report=report: self._handle_ingestion_report(report))
             except Exception as exc:
                 self.frame.after(0, lambda err_msg=str(exc): self._log(
                     self.i18n.t("crawler_error", error=err_msg)))
@@ -469,6 +488,27 @@ class CrawlTab(BaseTab):
             self.progress["maximum"] = total
             self.progress["value"] = current
         self._log(message)
+
+    def _handle_ingestion_report(self, report):
+        total = max(int(report.get("processed_records_written", 0) or 0), 1)
+        self.progress["maximum"] = total
+        self.progress["value"] = total
+        source_name = str(report.get("source") or "")
+        self._log(
+            self.i18n.t(
+                "crawler_complete_source",
+                source=self._source_display_name(source_name),
+                raw=report.get("raw_records_written", 0),
+                triples=report.get("triples_written", 0),
+                narratives=report.get("narratives_written", 0),
+            )
+        )
+        for warning in report.get("warnings", []):
+            self._log(f"[warning] {warning}")
+        for error in report.get("errors", []):
+            self._log(f"[error] {error}")
+        for skipped_url in report.get("skipped_urls", []):
+            self._log(f"[skipped] {skipped_url}")
 
     def _stop(self):
         self._log(self.i18n.t("crawler_stopped"))
