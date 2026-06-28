@@ -50,7 +50,7 @@ def summarize_decisions(decisions: List[Dict[str, Any]]) -> Dict[str, Any]:
             change_type = decision.get("change_type")
             if change_type == "metadata_only":
                 approved_metadata_only += 1
-            if change_type == "value_change":
+            if change_type == "value_change" or decision.get("approved_action") == "revision_value_change":
                 approved_value_change += 1
                 approved_value_change_patch_ids.append(decision.get("patch_id"))
 

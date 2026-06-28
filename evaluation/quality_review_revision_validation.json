@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-06-28T02:45:23.877747+00:00",
+  "generated_at": "2026-06-28T03:03:36.907946+00:00",
   "passed": true,
   "decisions_path": "F:\\知识表示与处理结课作业\\第二次托洛洛测试 -重大进展\\data\\quality_review\\quality_review_decisions.json",
   "queue_path": "F:\\知识表示与处理结课作业\\第二次托洛洛测试 -重大进展\\data\\quality_review\\quality_review_queue.json",
@@ -30,14 +30,6 @@
     {
       "check": "proposed_revision_preview_only_by_default",
       "patch_id": "source_conflict_v4_002"
-    },
-    {
-      "check": "validated_revision_waiting_for_approved_decision",
-      "patch_id": "source_conflict_v4_003"
-    },
-    {
-      "check": "validated_revision_waiting_for_safe_to_apply_true",
-      "patch_id": "source_conflict_v4_003"
     }
   ]
 }

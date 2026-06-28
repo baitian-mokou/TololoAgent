@@ -4,6 +4,7 @@ import unittest
 from pathlib import Path
 
 import config
+from scripts.summarize_quality_review_decisions import summarize_decisions
 from scripts.validate_quality_patch_decisions import validate_decisions
 
 
@@ -100,6 +101,19 @@ class QualityReviewDecisionTests(unittest.TestCase):
         self.assertEqual(config.SOURCE_REGISTRY.get("zh_wikipedia"), "active")
         for source in ("wikidata", "nasa", "esa"):
             self.assertEqual(config.SOURCE_REGISTRY.get(source), "disabled")
+
+    def test_approved_revision_value_change_counts_as_value_change(self):
+        summary = summarize_decisions([
+            {
+                "patch_id": "source_conflict_v4_003",
+                "human_decision": "approved",
+                "change_type": "manual_review",
+                "approved_action": "revision_value_change",
+            }
+        ])
+
+        self.assertEqual(summary["approved_value_change_count"], 1)
+        self.assertEqual(summary["approved_value_change_patch_ids"], ["source_conflict_v4_003"])
 
 
 if __name__ == "__main__":

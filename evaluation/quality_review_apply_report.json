@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-06-28T02:45:22.426163+00:00",
+  "generated_at": "2026-06-28T03:27:20.840675+00:00",
   "dry_run": true,
   "apply": false,
   "apply_metadata_only": false,
@@ -9,9 +9,9 @@
   "rollback_manifest": null,
   "decisions_path": "F:\\知识表示与处理结课作业\\第二次托洛洛测试 -重大进展\\data\\quality_review\\quality_review_decisions.json",
   "queue_path": "F:\\知识表示与处理结课作业\\第二次托洛洛测试 -重大进展\\data\\quality_review\\quality_review_queue.json",
-  "approved_count": 0,
+  "approved_count": 1,
   "applied_count": 0,
-  "skipped_count": 8,
+  "skipped_count": 7,
   "apply_plan": [
     {
       "review_id": "qr_source_conflict_v4_003",
@@ -49,18 +49,13 @@
           }
         }
       ],
-      "status": "blocked_pending_approval",
+      "status": "ready",
       "blocked_by_default": false,
       "would_create_duplicate": false,
       "duplicate_candidate_count": 1,
       "duplicate_after_value": "地球",
       "duplicate_policy": "no_duplicate_detected",
-      "recommended_next_action": "no_duplicate_detected",
-      "formal_write_ready": false,
-      "approval_blockers": [
-        "human_decision_not_approved",
-        "safe_to_apply_not_true"
-      ]
+      "recommended_next_action": "no_duplicate_detected"
     }
   ],
   "revision_proposals": [
@@ -100,8 +95,29 @@
       "status": "revision_preview_only"
     }
   ],
-  "matched_records": [],
-  "changed_records": [],
+  "matched_records": [
+    {
+      "index": 3,
+      "subject": "月球",
+      "relation": "ORBITS",
+      "object": "太阳系内密度第二高"
+    }
+  ],
+  "changed_records": [
+    {
+      "index": 3,
+      "before": {
+        "subject": "月球",
+        "relation": "ORBITS",
+        "object": "太阳系内密度第二高"
+      },
+      "after": {
+        "subject": "月球",
+        "relation": "ORBITS",
+        "object": "地球"
+      }
+    }
+  ],
   "skipped_items": [
     {
       "patch_id": "source_conflict_v4_001",
@@ -110,12 +126,6 @@
     {
       "patch_id": "source_conflict_v4_002",
       "human_decision": "pending"
-    },
-    {
-      "patch_id": "source_conflict_v4_003",
-      "human_decision": "pending",
-      "revision_status": "validated",
-      "reason": "validated revision is waiting for approval and safe_to_apply=true"
     },
     {
       "patch_id": "source_conflict_v4_004",
@@ -138,7 +148,7 @@
       "human_decision": "pending"
     }
   ],
-  "formal_values_changed": false,
+  "formal_values_changed": true,
   "patches_applied": 0,
   "formal_data_written": false,
   "chroma_written": false,

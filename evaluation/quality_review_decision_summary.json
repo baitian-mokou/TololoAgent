@@ -1,20 +1,31 @@
 {
-  "generated_at": "2026-06-27T15:04:13.276327+00:00",
+  "generated_at": "2026-06-28T03:03:27.644794+00:00",
   "decisions_path": "F:\\知识表示与处理结课作业\\第二次托洛洛测试 -重大进展\\data\\quality_review\\quality_review_decisions.json",
   "passed": true,
   "summary": {
     "total_decisions": 8,
     "counts": {
-      "pending": 8,
-      "approved": 0,
+      "pending": 7,
+      "approved": 1,
       "deferred": 0,
       "rejected": 0
     },
     "unknown_decision_count": 0,
     "approved_metadata_only_count": 0,
-    "approved_value_change_count": 0,
-    "approved_value_change_patch_ids": [],
-    "warnings": []
+    "approved_value_change_count": 1,
+    "approved_value_change_patch_ids": [
+      "source_conflict_v4_003"
+    ],
+    "warnings": [
+      {
+        "level": "red",
+        "code": "approved_value_change_present",
+        "message": "存在已通过的 value_change。不要在第一轮直接合并事实值。",
+        "patch_ids": [
+          "source_conflict_v4_003"
+        ]
+      }
+    ]
   },
   "formal_triples_written": false,
   "chroma_written": false,

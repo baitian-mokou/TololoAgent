@@ -778,6 +778,7 @@ class QualityReviewTab(BaseTab):
         self.queue_path = os.path.join(PROJECT_ROOT, "data", "quality_review", "quality_review_queue.json")
         self.decisions_path = os.path.join(PROJECT_ROOT, "data", "quality_review", "quality_review_decisions.json")
         self.report_path = os.path.join(PROJECT_ROOT, "evaluation", "quality_review_apply_report.json")
+        self.preflight_path = os.path.join(PROJECT_ROOT, "evaluation", "revision_value_change_preflight.json")
         self.gui_report_path = os.path.join(PROJECT_ROOT, "evaluation", "quality_review_gui_report.json")
         self.items = []
         self.decisions_by_patch = {}
@@ -1072,7 +1073,7 @@ class QualityReviewTab(BaseTab):
                     format_relation_label(item.get("relation", "")),
                     self._issue_label(item.get("issue_type", "")),
                     self._risk_label(item.get("risk_level", "")),
-                    self._decision_label(human_decision),
+                    self._decision_status_label(decision, human_decision),
                 ),
             )
         self._log(f"已加载 {len(self.items)} 条复查记录。")
@@ -1105,7 +1106,7 @@ class QualityReviewTab(BaseTab):
                     format_relation_label(item.get("relation", "")),
                     self._review_status_label(item),
                     self._risk_label(item.get("risk_level", "")),
-                    self._decision_label(human_decision),
+                    self._decision_status_label(decision, human_decision),
                 ),
             )
         if self.items:
@@ -1269,6 +1270,22 @@ class QualityReviewTab(BaseTab):
             "deferred": "deferred_in_gui",
             "rejected": "rejected_in_gui",
         }
+        has_revision = bool(str(target.get("user_proposed_value", "")).strip())
+        preflight = self._preflight_item_for_patch(item.get("patch_id"))
+        is_validated_revision = has_revision and (
+            target.get("revision_status") == "validated"
+            or preflight.get("revision_status") == "validated"
+        )
+        if human_decision == "approved" and is_validated_revision and preflight.get("would_create_duplicate"):
+            self._log("这条修正建议存在重复事实风险，需先做去重决策，不能直接通过为可合并。")
+            return
+        approved_action = item.get("action") if human_decision == "approved" else None
+        safe_to_apply = bool(item.get("safe_to_apply")) if human_decision == "approved" else False
+        revision_status = target.get("revision_status")
+        if human_decision == "approved" and is_validated_revision:
+            approved_action = "revision_value_change"
+            safe_to_apply = True
+            revision_status = "validated"
         target.update({
             "review_id": item.get("review_id"),
             "patch_id": item.get("patch_id"),
@@ -1279,12 +1296,14 @@ class QualityReviewTab(BaseTab):
             "change_type": item.get("change_type"),
             "human_decision": human_decision,
             "human_reason": reason_by_decision[human_decision],
-            "approved_action": item.get("action") if human_decision == "approved" else None,
-            "safe_to_apply": bool(item.get("safe_to_apply")) if human_decision == "approved" else False,
+            "approved_action": approved_action,
+            "safe_to_apply": safe_to_apply,
             "reviewed_by": "gui",
             "reviewed_at": now,
             "updated_at": now,
         })
+        if revision_status:
+            target["revision_status"] = revision_status
         self._dump_json(self.decisions_path, payload)
         self._log(f"{item.get('subject')} / {format_relation_label(item.get('relation'))} 已标记为：{self._decision_label(human_decision)}。")
 
@@ -1334,6 +1353,13 @@ class QualityReviewTab(BaseTab):
             revision_status = "draft"
         payload = self._load_json(self.decisions_path, {"schema_version": "quality_review_decisions_v1", "decisions": []})
         target = self._decision_for_item(payload, item)
+        if (
+            target.get("revision_status") == "validated"
+            and proposed_value == target.get("user_proposed_value", "")
+            and proposed_unit == target.get("user_proposed_unit", "")
+            and reason == target.get("user_revision_reason", "")
+        ):
+            revision_status = "validated"
         now = datetime.now(timezone.utc).isoformat()
         target.update({
             "review_id": item.get("review_id"),
@@ -1563,6 +1589,18 @@ class QualityReviewTab(BaseTab):
 
     def _decision_label(self, value):
         return {"pending": "待审批", "approved": "通过", "rejected": "拒绝", "deferred": "暂缓"}.get(value, value or "待审批")
+
+    def _decision_status_label(self, decision, human_decision):
+        if human_decision == "approved" and not decision.get("applied_at"):
+            return "已批准，等待合并"
+        return self._decision_label(human_decision)
+
+    def _preflight_item_for_patch(self, patch_id):
+        report = self._load_json(getattr(self, "preflight_path", ""), {"items": []})
+        for row in report.get("items", []):
+            if row.get("patch_id") == patch_id:
+                return row
+        return {}
 
     def _review_status_label(self, item):
         status = primary_review_status(item)
