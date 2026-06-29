@@ -172,6 +172,41 @@ class Neo4jLoader:
             session.run("MATCH (n) DETACH DELETE n")
         print("[Neo4j] 数据库已清空")
 
+    def clear_source_namespace(self, source_name: Optional[str] = None) -> int:
+        """删除指定 source 的关系，并清理仅属于该 source 的孤立节点。"""
+        if not self.driver:
+            return 0
+        target_source = normalize_to_simplified(str(source_name or self.source_name or ACTIVE_SOURCE).strip())
+        if not target_source:
+            return 0
+
+        removed = 0
+        with self.driver.session() as session:
+            rel_result = session.run(
+                "MATCH ()-[r]->() "
+                "WHERE coalesce(r.source, '') = $source_name "
+                "WITH collect(r) AS rels, count(r) AS rel_count "
+                "FOREACH (rel IN rels | DELETE rel) "
+                "RETURN rel_count AS removed_relationships",
+                source_name=target_source,
+            ).single()
+            if rel_result:
+                removed += int(rel_result.get("removed_relationships", 0) or 0)
+
+            node_result = session.run(
+                "MATCH (n) "
+                "WHERE coalesce(n.source, '') = $source_name AND NOT (n)--() "
+                "WITH collect(n) AS nodes, count(n) AS node_count "
+                "FOREACH (node IN nodes | DELETE node) "
+                "RETURN node_count AS removed_nodes",
+                source_name=target_source,
+            ).single()
+            if node_result:
+                removed += int(node_result.get("removed_nodes", 0) or 0)
+
+        print(f"[Neo4j] 已清理 source namespace: {target_source} (删除 {removed} 项)")
+        return removed
+
     @staticmethod
     def _normalize_object_text(value: str) -> str:
         value = normalize_to_simplified(str(value or "")).strip()

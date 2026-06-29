@@ -1,45 +1,7 @@
 {
   "schema_version": "auto_fusion_conflict_candidates_v1",
   "summary": {
-    "candidate_count": 1
+    "candidate_count": 0
   },
-  "candidates": [
-    {
-      "patch_id": "auto_fusion_conflict_001",
-      "classification": "true_value_conflict",
-      "action": "no_action_manual_review",
-      "authority_source": "nasa",
-      "target_source": "nasa",
-      "target_file": "",
-      "target_record_hint": {
-        "subject": "金星",
-        "relation": "HAS_RADIUS",
-        "object": "1.0 km"
-      },
-      "before": {
-        "values_by_source": {
-          "nasa": [
-            "1.0 km"
-          ],
-          "wikidata": [
-            "6051.8 km"
-          ]
-        }
-      },
-      "after": {
-        "proposal": "manual review; no automatic data change"
-      },
-      "rationale": "Auto fusion detected conflicting peer-source facts for `金星` / `HAS_RADIUS`.",
-      "confidence": 0.8,
-      "requires_human_approval": true,
-      "query": "金星半径是多少，不同来源为什么不一样",
-      "selected_sources": [
-        "nasa",
-        "wikidata",
-        "zh_wikipedia",
-        "esa"
-      ],
-      "quality_review_origin": "auto_fusion"
-    }
-  ]
+  "candidates": []
 }

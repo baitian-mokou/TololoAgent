@@ -1,55 +1,55 @@
 {
-  "generated_at": "2026-06-28T17:34:23",
+  "generated_at": "2026-06-29T10:07:02",
   "passed": true,
   "steps": [
     {
       "command": "python scripts/run_auto_source_router_eval.py",
       "exit_code": 0,
       "passed": true,
-      "duration_seconds": 0.369
+      "duration_seconds": 0.494
     },
     {
       "command": "python -m unittest discover tests",
       "exit_code": 0,
       "passed": true,
-      "duration_seconds": 12.725
+      "duration_seconds": 14.304
     },
     {
       "command": "python scripts/run_single_source_retrieval_eval.py",
       "exit_code": 0,
       "passed": true,
-      "duration_seconds": 80.893
+      "duration_seconds": 119.415
     },
     {
       "command": "python scripts/run_source_expansion_eval.py --source wikidata",
       "exit_code": 0,
       "passed": true,
-      "duration_seconds": 3.303
+      "duration_seconds": 3.627
     },
     {
       "command": "python scripts/run_source_expansion_eval.py --source nasa",
       "exit_code": 0,
       "passed": true,
-      "duration_seconds": 2.316
+      "duration_seconds": 1.302
     },
     {
       "command": "python scripts/collect_eval_failures.py",
       "exit_code": 0,
       "passed": true,
-      "duration_seconds": 0.173
+      "duration_seconds": 0.269
     },
     {
       "command": "python scripts/smoke_default_source_boundary.py",
       "exit_code": 0,
       "passed": true,
-      "duration_seconds": 25.445
+      "duration_seconds": 33.166
     }
   ],
   "reports": {
     "single_source_retrieval": {
       "path": "evaluation\\single_source_retrieval_report.json",
-      "total_queries": 31,
-      "exact_pass_count": 31,
+      "total_queries": 28,
+      "exact_pass_count": 28,
       "exact_accuracy": 1.0,
       "source_filter_failure_count": 0,
       "metadata_contract_break_count": 0,
@@ -60,8 +60,8 @@
     "wikidata_source_expansion": {
       "path": "evaluation\\source_expansion\\wikidata\\wikidata_report.json",
       "total_queries": 47,
-      "exact_pass_count": 47,
-      "exact_accuracy": 1.0,
+      "exact_pass_count": 33,
+      "exact_accuracy": 0.7021,
       "source_filter_failure_count": 0,
       "metadata_contract_break_count": 0,
       "inferred_boundary_break_count": 0,
@@ -70,9 +70,9 @@
     },
     "nasa_source_expansion": {
       "path": "evaluation\\source_expansion\\nasa\\nasa_report.json",
-      "total_queries": 42,
-      "exact_pass_count": 42,
-      "exact_accuracy": 1.0,
+      "total_queries": 16,
+      "exact_pass_count": 15,
+      "exact_accuracy": 0.9375,
       "source_filter_failure_count": 0,
       "metadata_contract_break_count": 0,
       "inferred_boundary_break_count": 0,

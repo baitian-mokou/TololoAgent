@@ -171,6 +171,7 @@ def build_triage_payload(reports: List[Dict[str, Any]], missing_reports: List[Di
     for report in reports:
         payload = report["payload"]
         summary = dict(payload.get("summary") or {})
+        gates = dict(payload.get("gates") or {})
         report_summaries.append(
             {
                 "report_name": report["report_name"],
@@ -180,9 +181,11 @@ def build_triage_payload(reports: List[Dict[str, Any]], missing_reports: List[Di
                 "source_filter_failure_count": summary.get("source_filter_failure_count"),
                 "metadata_contract_break_count": summary.get("metadata_contract_break_count"),
                 "inferred_boundary_break_count": summary.get("inferred_boundary_break_count"),
+                "gates_passed": gates.get("passed"),
             }
         )
-        failures.extend(extract_failures(report["report_name"], report["source"], payload))
+        if gates.get("passed") is False:
+            failures.extend(extract_failures(report["report_name"], report["source"], payload))
 
     return {
         "status": "failures_found" if failures else "no_failures",

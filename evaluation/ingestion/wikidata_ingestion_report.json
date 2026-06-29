@@ -33,11 +33,11 @@
   "warnings": [],
   "materialization_details": {
     "graph": {
-      "loaded_nodes": 107,
-      "loaded_relationships": 148,
+      "loaded_nodes": 86,
+      "loaded_relationships": 113,
       "stats": {
-        "nodes": 299,
-        "rels": 631,
+        "nodes": 89,
+        "rels": 116,
         "labels": [
           "Planet",
           "Satellite",
@@ -57,7 +57,6 @@
           "围绕",
           "拥有轨道参数",
           "拥有环境特征",
-          "IS_A",
           "DISCOVERED_BY",
           "LOCATED_IN",
           "ORBITS",
@@ -69,14 +68,15 @@
       }
     },
     "chroma": {
-      "added_narratives": 7,
+      "added_narratives": 21,
       "stats": {
-        "total": 7,
+        "total": 21,
         "collections": [
           "astronomy_narratives_wikidata"
         ]
       }
     }
   },
-  "generated_at": "2026-06-28T09:30:00.145353+00:00"
+  "generated_at": "2026-06-28T15:49:48.618494+00:00",
+  "pending_missing_records": []
 }

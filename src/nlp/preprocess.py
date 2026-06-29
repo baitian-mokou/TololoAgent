@@ -75,6 +75,11 @@ CANONICAL_MASS_RE = re.compile(
     r'\d[\d,]*(?:\.\d+)?(?:\s+\d+)?(?:\s*[×xX]\s*10\s*[+\-−]?\s*\d+)?\s*'
     r'(?:kg|千克|公斤|吨|噸|太阳质量|太陽質量|地球质量|地球質量|木星质量|木星質量|M⊕|M♃)'
 )
+VALUE_WITH_UNCERTAINTY_RE = re.compile(
+    r'(\d[\d,]*(?:\.\d+)?)\s*±\s*\d[\d,]*(?:\.\d+)?\s*'
+    r'(kg|吨|噸|太阳质量|地球质量|木星质量|km|KM|米|m|AU|M⊕|M♃)',
+    flags=re.IGNORECASE,
+)
 
 ASTRO_ENTITY_PATTERN = r'[\u4e00-\u9fffA-Za-z0-9][\u4e00-\u9fffA-Za-z0-9\s+\-·]{1,39}'
 ASTRO_CONTAINER_PATTERN = r'[\u4e00-\u9fffA-Za-z0-9][\u4e00-\u9fffA-Za-z0-9\s+\-·]{1,39}(?:系统|系統)?'
@@ -609,12 +614,13 @@ class WikiPreprocessor:
         value = normalize_to_simplified(value or '')
         value = value.replace('\xa0', ' ')
         value = re.sub(r'\d{6,}♠\s*', ' ', value)
-        value = re.sub(r'[（(]\s*(\d[\d,.]*)\s*[±+-]\s*[\d,.]+\s*[)）]', r' \1 ', value)
         value = value.replace('千克', 'kg').replace('公斤', 'kg')
         value = value.replace('公里', 'km').replace('千米', 'km')
         value = value.replace('太陽質量', '太阳质量').replace('地球質量', '地球质量')
         value = value.replace('木星質量', '木星质量')
         value = value.replace('−', '-').replace('—', '-')
+        value = VALUE_WITH_UNCERTAINTY_RE.sub(r'\1 \2', value)
+        value = re.sub(r'[（(]\s*(\d[\d,.]*)\s*[±+-]\s*[\d,.]+\s*[)）]', r' \1 ', value)
         value = re.sub(r'[()（）]', ' ', value)
         value = re.sub(r'(?<=\d)\s+(?=\d\s*[×xX])', '', value)
         value = re.sub(r'\s+', ' ', value).strip('，。、；;：: ')

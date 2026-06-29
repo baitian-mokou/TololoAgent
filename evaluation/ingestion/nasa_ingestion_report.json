@@ -1,29 +1,14 @@
 {
   "source": "nasa",
-  "raw_records_written": 19,
-  "processed_records_written": 19,
-  "triples_written": 72,
-  "narratives_written": 19,
+  "raw_records_written": 4,
+  "processed_records_written": 4,
+  "triples_written": 7,
+  "narratives_written": 4,
   "graph_written": true,
   "chroma_written": true,
   "crawled_urls": [
-    "https://science.nasa.gov/dwarf-planets/pluto/moons/charon/",
-    "https://science.nasa.gov/dwarf-planets/pluto/facts/",
-    "https://science.nasa.gov/saturn/moons/enceladus/",
-    "https://science.nasa.gov/saturn/moons/titan/",
-    "https://nssdc.gsfc.nasa.gov/planetary/factsheet/saturnfact.html",
     "https://nssdc.gsfc.nasa.gov/planetary/factsheet/earthfact.html",
-    "https://nssdc.gsfc.nasa.gov/planetary/factsheet/uranusfact.html",
-    "https://science.nasa.gov/sun/facts/",
-    "https://nssdc.gsfc.nasa.gov/planetary/factsheet/moonfact.html",
-    "https://science.nasa.gov/jupiter/moons/europa/",
-    "https://science.nasa.gov/jupiter/moons/callisto/",
-    "https://nssdc.gsfc.nasa.gov/planetary/factsheet/jupiterfact.html",
     "https://nssdc.gsfc.nasa.gov/planetary/factsheet/mercuryfact.html",
-    "https://science.nasa.gov/neptune/moons/triton/",
-    "https://nssdc.gsfc.nasa.gov/planetary/factsheet/neptunefact.html",
-    "https://science.nasa.gov/mars/moons/phobos/",
-    "https://science.nasa.gov/mars/moons/deimos/",
     "https://nssdc.gsfc.nasa.gov/planetary/factsheet/marsfact.html",
     "https://nssdc.gsfc.nasa.gov/planetary/factsheet/venusfact.html"
   ],
@@ -32,11 +17,11 @@
   "warnings": [],
   "materialization_details": {
     "graph": {
-      "loaded_nodes": 63,
-      "loaded_relationships": 61,
+      "loaded_nodes": 9,
+      "loaded_relationships": 6,
       "stats": {
-        "nodes": 301,
-        "rels": 642,
+        "nodes": 92,
+        "rels": 119,
         "labels": [
           "Planet",
           "Satellite",
@@ -56,7 +41,6 @@
           "围绕",
           "拥有轨道参数",
           "拥有环境特征",
-          "IS_A",
           "DISCOVERED_BY",
           "LOCATED_IN",
           "ORBITS",
@@ -68,14 +52,15 @@
       }
     },
     "chroma": {
-      "added_narratives": 11,
+      "added_narratives": 4,
       "stats": {
-        "total": 11,
+        "total": 4,
         "collections": [
           "astronomy_narratives_nasa"
         ]
       }
     }
   },
-  "generated_at": "2026-06-28T09:30:01.951830+00:00"
+  "generated_at": "2026-06-29T02:05:33.299268+00:00",
+  "low_coverage_warning": ""
 }

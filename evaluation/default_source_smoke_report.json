@@ -105,7 +105,7 @@
         "explicit_source_filter": [
           "nasa"
         ],
-        "explicit_record_count": 0,
+        "explicit_record_count": 1,
         "default_sources_after_explicit": [
           "zh_wikipedia"
         ],

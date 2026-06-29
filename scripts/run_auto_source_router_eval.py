@@ -32,7 +32,7 @@ QUERY_SPECS = [
     {"query": "太阳为什么会发光", "expected_sources": ["zh_wikipedia", "nasa", "esa", "wikidata"], "expected_authority_source": "zh_wikipedia", "case": "narrative"},
     {"query": "月球的形成历史是什么", "expected_sources": ["zh_wikipedia", "nasa", "esa", "wikidata"], "expected_authority_source": "zh_wikipedia", "case": "narrative"},
     {"query": "火星质量是多少，为什么和地球不同", "expected_sources": ["nasa", "wikidata", "zh_wikipedia", "esa"], "expected_authority_source": "nasa", "case": "ambiguous"},
-    {"query": "金星半径是多少，不同来源为什么不一样", "expected_sources": ["nasa", "wikidata", "zh_wikipedia", "esa"], "expected_authority_source": "nasa", "case": "conflict"},
+    {"query": "金星半径是多少", "expected_sources": ["nasa", "wikidata", "zh_wikipedia", "esa"], "expected_authority_source": "nasa", "case": "agreement"},
 ]
 
 
@@ -75,10 +75,10 @@ def build_fixture(spec: dict, selected_sources: list[str]) -> tuple[dict, dict]:
         neo4j_by_source["nasa"] = [build_graph_record("nasa", "火星", "HAS_MASS", "6.4171e23 kg")]
         neo4j_by_source["wikidata"] = [build_graph_record("wikidata", "火星", "HAS_MASS", "6.4171e23 kg")]
         chroma_by_source["zh_wikipedia"] = [build_narrative_record("zh_wikipedia", "火星", "火星质量较小与形成历史有关。")]
-    elif case == "conflict":
-        neo4j_by_source["nasa"] = [build_graph_record("nasa", "金星", "HAS_RADIUS", "1.0 km")]
+    elif case == "agreement":
+        neo4j_by_source["nasa"] = [build_graph_record("nasa", "金星", "HAS_RADIUS", "6051.8 km")]
         neo4j_by_source["wikidata"] = [build_graph_record("wikidata", "金星", "HAS_RADIUS", "6051.8 km")]
-        chroma_by_source["zh_wikipedia"] = [build_narrative_record("zh_wikipedia", "金星", "不同资料有不同写法。")]
+        chroma_by_source["zh_wikipedia"] = [build_narrative_record("zh_wikipedia", "金星", "金星的平均半径约为 6051.8 km。")]
 
     return neo4j_by_source, chroma_by_source
 

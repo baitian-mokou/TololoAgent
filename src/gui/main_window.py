@@ -11,6 +11,7 @@ from tkinter import scrolledtext, messagebox, ttk
 from datetime import datetime, timezone
 import ttkbootstrap as tb
 from ttkbootstrap.constants import *
+from config import ACTIVE_SOURCE
 
 from src.gui.components.widget_settings import SettingsDialog
 from src.gui.console_manager import (
@@ -407,17 +408,25 @@ class MainWindow:
 class CrawlTab(BaseTab):
     """爬虫管理标签页"""
     SOURCE_BUTTON_ORDER = ("zh_wikipedia", "wikidata", "nasa", "esa")
+    CLEANUP_SOURCE_ORDER = SOURCE_BUTTON_ORDER
     SOURCE_BUTTON_TEXT_KEYS = {
         "zh_wikipedia": "crawler_btn_source_zh_wikipedia",
         "wikidata": "crawler_btn_source_wikidata",
         "nasa": "crawler_btn_source_nasa",
         "esa": "crawler_btn_source_esa",
     }
-    DEFAULT_LIMIT = 20
+    DEFAULT_LIMIT = 80
+    SOURCE_LIMITS = {
+        "zh_wikipedia": 80,
+        "wikidata": 80,
+        "nasa": 120,
+        "esa": 60,
+    }
 
     def __init__(self, parent, main_window):
         super().__init__(parent, main_window)
         self.source_buttons = {}
+        self.cleanup_buttons = {}
         self._build_ui()
 
     def _build_ui(self):
@@ -425,7 +434,7 @@ class CrawlTab(BaseTab):
                                   font=("微软雅黑", 16, "bold"), style="Title.TLabel")
         self.title_label.pack(anchor="w", pady=(0, 15))
         btn_frame = tb.Frame(self.frame)
-        btn_frame.pack(fill="x", pady=(0, 10))
+        btn_frame.pack(fill="x", pady=(0, 8))
         for source_name in self.SOURCE_BUTTON_ORDER:
             button = tb.Button(
                 btn_frame,
@@ -434,9 +443,32 @@ class CrawlTab(BaseTab):
             )
             button.pack(side="left", padx=(0, 5))
             self.source_buttons[source_name] = button
+        self.btn_crawl_all = tb.Button(
+            btn_frame,
+            text=self.i18n.t("crawler_btn_source_all"),
+            command=self._start_crawl_all,
+        )
+        self.btn_crawl_all.pack(side="left", padx=(4, 5))
         self.btn_stop = tb.Button(btn_frame, text=self.i18n.t("crawler_btn_stop"),
                                  command=self._stop, state="disabled")
         self.btn_stop.pack(side="left", padx=5)
+        cleanup_frame = tb.Frame(self.frame)
+        cleanup_frame.pack(fill="x", pady=(0, 10))
+        self.cleanup_label = tb.Label(
+            cleanup_frame,
+            text=self.i18n.t("crawler_cleanup_label"),
+            font=("微软雅黑", 10),
+        )
+        self.cleanup_label.pack(side="left", padx=(0, 8))
+        for source_name in self.CLEANUP_SOURCE_ORDER:
+            button = tb.Button(
+                cleanup_frame,
+                text=self.i18n.t("crawler_btn_delete_source", source=self._source_display_name(source_name)),
+                command=lambda source_name=source_name: self._delete_crawl_data_for_source(source_name),
+                bootstyle="danger-outline",
+            )
+            button.pack(side="left", padx=(0, 5))
+            self.cleanup_buttons[source_name] = button
         self.progress = tb.Progressbar(self.frame, mode="determinate", value=0)
         self.progress.pack(fill="x", pady=(0, 10))
         self.log_title = tb.Label(self.frame, text=self.i18n.t("crawler_log_title"),
@@ -448,33 +480,58 @@ class CrawlTab(BaseTab):
         self.title_label.config(text=self.i18n.t("crawler_title"))
         for source_name, button in self.source_buttons.items():
             button.config(text=self.i18n.t(self.SOURCE_BUTTON_TEXT_KEYS[source_name]))
+        self.btn_crawl_all.config(text=self.i18n.t("crawler_btn_source_all"))
+        self.cleanup_label.config(text=self.i18n.t("crawler_cleanup_label"))
+        for source_name, button in self.cleanup_buttons.items():
+            button.config(
+                text=self.i18n.t("crawler_btn_delete_source", source=self._source_display_name(source_name))
+            )
         self.btn_stop.config(text=self.i18n.t("crawler_btn_stop"))
         self.log_title.config(text=self.i18n.t("crawler_log_title"))
 
     def _set_buttons(self, running=True):
         for button in self.source_buttons.values():
             button.config(state="disabled" if running else "normal")
+        for button in self.cleanup_buttons.values():
+            button.config(state="disabled" if running else "normal")
+        self.btn_crawl_all.config(state="disabled" if running else "normal")
         self.btn_stop.config(state="normal" if running else "disabled")
 
     @staticmethod
     def _source_display_name(source_name):
         return AgentTab.SOURCE_LABELS.get(source_name, source_name)
 
-    def _start_crawl_for_source(self, source_name):
+    @classmethod
+    def _limit_for_source(cls, source_name):
+        return int(cls.SOURCE_LIMITS.get(source_name, cls.DEFAULT_LIMIT))
+
+    @staticmethod
+    def _cleanup_summary_lines(report):
+        deleted_dirs = len(report.get("deleted", {}).get("directories", []))
+        deleted_files = len(report.get("deleted", {}).get("files", []))
+        missing_dirs = len(report.get("missing", {}).get("directories", []))
+        missing_files = len(report.get("missing", {}).get("files", []))
+        return deleted_dirs, deleted_files, missing_dirs, missing_files
+
+    def _prepare_run(self, maximum):
         self.log_text.config(state="normal")
         self.log_text.delete("1.0", "end")
         self.log_text.config(state="disabled")
         self._set_buttons(True)
         self.progress["value"] = 0
-        self.progress["maximum"] = self.DEFAULT_LIMIT
-        self._log(self.i18n.t("crawler_start_log_source", source=self._source_display_name(source_name), limit=self.DEFAULT_LIMIT))
+        self.progress["maximum"] = max(int(maximum or 1), 1)
+
+    def _start_crawl_for_source(self, source_name):
+        source_limit = self._limit_for_source(source_name)
+        self._prepare_run(source_limit)
+        self._log(self.i18n.t("crawler_start_log_source", source=self._source_display_name(source_name), limit=source_limit))
 
         def worker():
             try:
                 self._add_path()
                 from scripts.ingest_solar_system_sources import run_controlled_ingestion
 
-                report = run_controlled_ingestion(source_name, limit=self.DEFAULT_LIMIT, mode="auto")
+                report = run_controlled_ingestion(source_name, limit=source_limit, mode="auto")
                 self.frame.after(0, lambda report=report: self._handle_ingestion_report(report))
             except Exception as exc:
                 self.frame.after(0, lambda err_msg=str(exc): self._log(
@@ -483,16 +540,63 @@ class CrawlTab(BaseTab):
                 self.frame.after(0, lambda: self._set_buttons(False))
         threading.Thread(target=worker, daemon=True).start()
 
+    def _start_crawl_all(self):
+        sources = list(self.SOURCE_BUTTON_ORDER)
+        total_limit = sum(self._limit_for_source(source_name) for source_name in sources)
+        self._prepare_run(total_limit)
+        self._log(self.i18n.t("crawler_start_log_all", count=len(sources), limit=total_limit))
+
+        def worker():
+            try:
+                self._add_path()
+                from scripts.ingest_solar_system_sources import run_controlled_ingestion
+
+                reports = []
+                total_sources = len(sources)
+                for index, source_name in enumerate(sources, start=1):
+                    self.frame.after(
+                        0,
+                        lambda source_name=source_name, index=index, total_sources=total_sources: self._log(
+                            self.i18n.t(
+                                "crawler_progress_source",
+                                current=index,
+                                total=total_sources,
+                                source=self._source_display_name(source_name),
+                            )
+                        ),
+                    )
+                    source_limit = self._limit_for_source(source_name)
+                    report = run_controlled_ingestion(source_name, limit=source_limit, mode="auto")
+                    reports.append(report)
+                    self.frame.after(
+                        0,
+                        lambda report=report, source_name=source_name: self._handle_ingestion_report(
+                            report,
+                            progress_value=sum(self._limit_for_source(name) for name in sources[: sources.index(source_name) + 1]),
+                            keep_progress_max=total_limit,
+                        ),
+                    )
+                self.frame.after(0, lambda reports=reports: self._log(
+                    self.i18n.t("crawler_complete_all", count=len(reports))
+                ))
+            except Exception as exc:
+                self.frame.after(0, lambda err_msg=str(exc): self._log(
+                    self.i18n.t("crawler_error", error=err_msg)))
+            finally:
+                self.frame.after(0, lambda: self._set_buttons(False))
+
+        threading.Thread(target=worker, daemon=True).start()
+
     def _progress_update(self, current, total, message):
         if total > 0:
             self.progress["maximum"] = total
             self.progress["value"] = current
         self._log(message)
 
-    def _handle_ingestion_report(self, report):
+    def _handle_ingestion_report(self, report, progress_value=None, keep_progress_max=None):
         total = max(int(report.get("processed_records_written", 0) or 0), 1)
-        self.progress["maximum"] = total
-        self.progress["value"] = total
+        self.progress["maximum"] = keep_progress_max or total
+        self.progress["value"] = progress_value if progress_value is not None else total
         source_name = str(report.get("source") or "")
         self._log(
             self.i18n.t(
@@ -510,6 +614,87 @@ class CrawlTab(BaseTab):
         for skipped_url in report.get("skipped_urls", []):
             self._log(f"[skipped] {skipped_url}")
 
+    def _delete_crawl_data_for_source(self, source_name):
+        if not messagebox.askyesno(
+            self.i18n.t("crawler_delete_confirm_title"),
+            self.i18n.t("crawler_delete_confirm_message", source=self._source_display_name(source_name)),
+        ):
+            return
+
+        self._prepare_run(1)
+        self._log(self.i18n.t("crawler_delete_start", source=self._source_display_name(source_name)))
+
+        def worker():
+            try:
+                self._add_path()
+                from scripts.ingest_solar_system_sources import clear_source_ingestion_outputs
+                from src.knowledge_graph.neo4j_loader import Neo4jLoader
+                from src.vector_store.chroma_store import ChromaStore
+
+                report = clear_source_ingestion_outputs(source_name)
+                graph_removed = False
+                chroma_removed = False
+                graph_error = ""
+                chroma_error = ""
+
+                try:
+                    loader = Neo4jLoader(source_name=source_name)
+                    graph_removed = bool(loader.clear_source_namespace(source_name))
+                    loader.close()
+                except Exception as exc:
+                    graph_error = str(exc)
+
+                try:
+                    store = ChromaStore(source_name=source_name)
+                    chroma_removed = bool(store.clear_database())
+                except Exception as exc:
+                    chroma_error = str(exc)
+
+                self.frame.after(
+                    0,
+                    lambda report=report, graph_removed=graph_removed, chroma_removed=chroma_removed, graph_error=graph_error, chroma_error=chroma_error: self._handle_delete_report(
+                        report,
+                        graph_removed,
+                        chroma_removed,
+                        graph_error,
+                        chroma_error,
+                    ),
+                )
+            except Exception as exc:
+                self.frame.after(0, lambda err_msg=str(exc): self._log(
+                    self.i18n.t("crawler_error", error=err_msg)))
+            finally:
+                self.frame.after(0, lambda: self._set_buttons(False))
+
+        threading.Thread(target=worker, daemon=True).start()
+
+    def _handle_delete_report(self, report, graph_removed, chroma_removed, graph_error, chroma_error):
+        self.progress["maximum"] = 1
+        self.progress["value"] = 1
+        source_name = str(report.get("source") or "")
+        deleted_dirs, deleted_files, missing_dirs, missing_files = self._cleanup_summary_lines(report)
+        self._log(
+            self.i18n.t(
+                "crawler_delete_complete",
+                source=self._source_display_name(source_name),
+                deleted_dirs=deleted_dirs,
+                deleted_files=deleted_files,
+                missing_dirs=missing_dirs,
+                missing_files=missing_files,
+            )
+        )
+        self._log(
+            self.i18n.t(
+                "crawler_delete_runtime",
+                graph_status="ok" if graph_removed else ("skip" if graph_error else "none"),
+                chroma_status="ok" if chroma_removed else ("skip" if chroma_error else "none"),
+            )
+        )
+        if graph_error:
+            self._log(f"[graph-warning] {graph_error}")
+        if chroma_error:
+            self._log(f"[chroma-warning] {chroma_error}")
+
     def _stop(self):
         self._log(self.i18n.t("crawler_stopped"))
         self._set_buttons(False)
@@ -517,20 +702,59 @@ class CrawlTab(BaseTab):
 
 class NlpTab(BaseTab):
     """NLP预处理标签页"""
+    SOURCE_BUTTON_ORDER = CrawlTab.SOURCE_BUTTON_ORDER
+    SOURCE_BUTTON_TEXT_KEYS = CrawlTab.SOURCE_BUTTON_TEXT_KEYS
+
     def __init__(self, parent, main_window):
         super().__init__(parent, main_window)
+        self.source_buttons = {}
+        self.selected_source_name = ACTIVE_SOURCE
         self._build_ui()
+
+    def _nlp_source_name(self):
+        return self.selected_source_name or ACTIVE_SOURCE
+
+    def _nlp_source_label(self):
+        source_name = self._nlp_source_name()
+        return AgentTab.SOURCE_LABELS.get(source_name, source_name)
+
+    def _refresh_source_buttons(self):
+        for source_name, button in self.source_buttons.items():
+            button.config(bootstyle="primary" if source_name == self._nlp_source_name() else "secondary-outline")
+
+    def _set_selected_source(self, source_name):
+        self.selected_source_name = source_name or ACTIVE_SOURCE
+        self._refresh_source_buttons()
+        self.info_label.config(text=self.i18n.t("nlp_desc", source=self._nlp_source_label()))
+
+    def _set_source_buttons_enabled(self, enabled: bool):
+        state = "normal" if enabled else "disabled"
+        for button in self.source_buttons.values():
+            button.config(state=state)
 
     def _build_ui(self):
         self.title_label = tb.Label(self.frame, text=self.i18n.t("nlp_title"),
                                   font=("微软雅黑", 16, "bold"), style="Title.TLabel")
         self.title_label.pack(anchor="w", pady=(0, 15))
-        self.info_label = tb.Label(self.frame, text=self.i18n.t("nlp_desc"),
+
+        source_frame = tb.Frame(self.frame)
+        source_frame.pack(fill="x", pady=(0, 8))
+        for source_name in self.SOURCE_BUTTON_ORDER:
+            button = tb.Button(
+                source_frame,
+                text=self.i18n.t(self.SOURCE_BUTTON_TEXT_KEYS[source_name]),
+                command=lambda source_name=source_name: self._set_selected_source(source_name),
+            )
+            button.pack(side="left", padx=(0, 5))
+            self.source_buttons[source_name] = button
+
+        self.info_label = tb.Label(self.frame, text=self.i18n.t("nlp_desc", source=self._nlp_source_label()),
                                 font=("微软雅黑", 10), foreground="#555")
         self.info_label.pack(anchor="w", pady=(0, 15))
         self.btn_process = tb.Button(self.frame, text=self.i18n.t("nlp_btn_start"),
                                     command=self._start_nlp)
         self.btn_process.pack(anchor="w", pady=(0, 10))
+        self._refresh_source_buttons()
         self.progress = tb.Progressbar(self.frame, mode="determinate", value=0)
         self.progress.pack(fill="x", pady=(0, 10))
         self.log_title = tb.Label(self.frame, text=self.i18n.t("nlp_log_title"),
@@ -540,17 +764,22 @@ class NlpTab(BaseTab):
 
     def refresh_texts(self):
         self.title_label.config(text=self.i18n.t("nlp_title"))
-        self.info_label.config(text=self.i18n.t("nlp_desc"))
+        self.info_label.config(text=self.i18n.t("nlp_desc", source=self._nlp_source_label()))
+        for source_name, button in self.source_buttons.items():
+            button.config(text=self.i18n.t(self.SOURCE_BUTTON_TEXT_KEYS[source_name]))
         self.btn_process.config(text=self.i18n.t("nlp_btn_start"))
         self.log_title.config(text=self.i18n.t("nlp_log_title"))
 
     def _start_nlp(self):
+        source_name = self._nlp_source_name()
+        source_label = self._nlp_source_label()
         self.log_text.config(state="normal")
         self.log_text.delete("1.0", "end")
         self.log_text.config(state="disabled")
         self.btn_process.config(state="disabled")
+        self._set_source_buttons_enabled(False)
         self.progress["value"] = 0
-        self._log(self.i18n.t("nlp_start_log"))
+        self._log(self.i18n.t("nlp_start_log_source", source=source_label))
         def worker():
             try:
                 self._add_path()
@@ -559,7 +788,7 @@ class NlpTab(BaseTab):
                     self.frame.after(0, lambda: self._log(m))
                     if t > 0:
                         self.frame.after(0, lambda: self.progress.configure(maximum=t, value=c))
-                pipeline = NlpPipeline(progress_callback=callback)
+                pipeline = NlpPipeline(progress_callback=callback, source_name=source_name)
                 t, n = pipeline.process_all()
                 self.frame.after(0, lambda: self._log(
                     self.i18n.t("nlp_complete", triples=t, narratives=n)))
@@ -574,6 +803,7 @@ class NlpTab(BaseTab):
                 self.frame.after(0, lambda: self._log(traceback.format_exc()))
             finally:
                 self.frame.after(0, lambda: self.btn_process.config(state="normal"))
+                self.frame.after(0, lambda: self._set_source_buttons_enabled(True))
         threading.Thread(target=worker, daemon=True).start()
 
 
