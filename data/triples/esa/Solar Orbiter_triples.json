@@ -1,0 +1,18 @@
+[
+  {
+    "subject": "Solar Orbiter",
+    "relation": "ORBITS",
+    "object": "太阳",
+    "pattern": "esa_smoke_fixture",
+    "raw": "ESA smoke fixture: Solar Orbiter orbits the Sun.",
+    "source_url": "https://www.esa.int/Science_Exploration/Space_Science/Solar_Orbiter",
+    "source_field": "",
+    "source": "esa",
+    "source_name": "esa",
+    "source_role": "primary",
+    "origin": "api",
+    "type": "triple_candidate",
+    "schema_version": "esa_shadow_ready_v1",
+    "source_title": "Solar Orbiter"
+  }
+]

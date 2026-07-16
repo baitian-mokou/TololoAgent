@@ -1,0 +1,22 @@
+[
+  {
+    "section": "任务",
+    "content": "ESA - The launcher Science & Exploration The launcher 5938 views 7 likes ESA / Science & Exploration / Space Science / Mars Express Starsem, a European/Russian company, supplied the Soyuz/Fregat rocket that launched Mars Express on 2 June 2003. The Soyuz rocket was first launched in November 1963 and has since flown more than 1500 times with a 98% success rate. It usually has three stages, but a fourth stage is added for particularly demanding launches. In the case of Mars Express, this is the Fregat. During the launch, the Fregat was ignited twice. The first ignition placed it into a circular orbit after separation from Soyuz. The second, a few hours later, injected Mars Express into its interplanetary trajectory. Launcher mass capability Launcher Launcher capability Soyuz/Fregat 1200 kg",
+    "keywords": [
+      "ESA - The launcher",
+      "ESA",
+      "太阳系任务",
+      "火星"
+    ],
+    "page_title": "ESA - The launcher",
+    "path": "任务",
+    "chunk_index": 0,
+    "source": "esa",
+    "source_name": "esa",
+    "source_role": "primary",
+    "source_title": "ESA - The launcher",
+    "origin": "html_fallback",
+    "schema_version": "esa_shadow_ready_v1",
+    "type": "embedding_chunk"
+  }
+]

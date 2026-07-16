@@ -1,0 +1,20 @@
+[
+  {
+    "section": "任务",
+    "content": "ESA - Creating chaos: Craters and collapse on Mars Science & Exploration Creating chaos: Craters and collapse on Mars 19/11/2020 8291 views 197 likes ESA / Science & Exploration / Space Science / Mars Express Elevation can be deceiving in satellite imagery of Mars, even when differences are extreme – as demonstrated by this image of Pyrrhae Regio from ESA’s Mars Express . A chunk of terrain has collapsed and dropped more than four kilometres below its surroundings, illustrating the incredible contrast and dynamism seen across the martian surface. This slice of Mars, seen here as imaged by Mars Express’ High Resolution Stereo Camera (HRSC) , shows signs of various intriguing processes. A scattering of impact craters, formed as incoming bodies from space collided with Mars’ surface, can be s",
+    "keywords": [
+      "ESA - Creating chaos: Craters and collapse on Mars",
+      "ESA",
+      "太阳系任务",
+      "火星"
+    ],
+    "page_title": "ESA - Creating chaos: Craters and collapse on Mars",
+    "source": "esa",
+    "source_name": "esa",
+    "source_role": "primary",
+    "origin": "api",
+    "type": "embedding_chunk",
+    "schema_version": "esa_shadow_ready_v1",
+    "source_title": "ESA - Creating chaos: Craters and collapse on Mars"
+  }
+]

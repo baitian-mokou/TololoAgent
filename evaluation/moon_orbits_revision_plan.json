@@ -1,0 +1,31 @@
+{
+  "generated_at": "2026-06-28T02:36:32.214502+00:00",
+  "subject": "月球",
+  "relation": "ORBITS",
+  "patch_id": "source_conflict_v4_003",
+  "original_value": "太阳系内密度第二高",
+  "proposed_value": "地球",
+  "duplicate_risk": false,
+  "revision_status": "validated",
+  "human_decision": "pending",
+  "safe_to_apply": false,
+  "formal_write_ready": false,
+  "next_required_user_action": "approve_and_set_safe_to_apply_then_dry_run",
+  "uranus_radius_guard": {
+    "patch_id": "source_conflict_v4_002",
+    "blocked_by_duplicate_risk": true,
+    "recommended_next_action": "require_human_dedup_decision",
+    "revision_status": "proposed"
+  },
+  "formal_triples_written": false,
+  "formal_data_written": false,
+  "chroma_written": false,
+  "neo4j_written": false,
+  "active_source": "zh_wikipedia",
+  "source_registry": {
+    "zh_wikipedia": "active",
+    "wikidata": "disabled",
+    "nasa": "disabled",
+    "esa": "disabled"
+  }
+}

@@ -1,0 +1,24 @@
+[
+  {
+    "section": "任务",
+    "content": "ESA - Mars Express Frequently Asked Questions (FAQs) Science & Exploration Mars Express Frequently Asked Questions (FAQs) 24482 views 41 likes ESA / Science & Exploration / Space Science / Mars Express About Mars Express Where does the name ‘Mars Express’ come from? Mars Express is so called because, at the time, it was built more quickly than any other comparable planetary mission. Mars Express's design and development phase took about five years, compared with about ten years for previous similar missions. Where did the lander name ‘Beagle 2’ come from? The Mars Express lander – Beagle 2 – was named after the ship on which Charles Darwin sailed around the world when formulating his ideas about evolution. What are the mission objectives? What scientific return do you expect from the orbit",
+    "keywords": [
+      "ESA - Mars Express Frequently Asked Questions (FAQs)",
+      "ESA",
+      "太阳系任务",
+      "火星",
+      "金星",
+      "月球"
+    ],
+    "page_title": "ESA - Mars Express Frequently Asked Questions (FAQs)",
+    "path": "任务",
+    "chunk_index": 0,
+    "source": "esa",
+    "source_name": "esa",
+    "source_role": "primary",
+    "source_title": "ESA - Mars Express Frequently Asked Questions (FAQs)",
+    "origin": "html_fallback",
+    "schema_version": "esa_shadow_ready_v1",
+    "type": "embedding_chunk"
+  }
+]

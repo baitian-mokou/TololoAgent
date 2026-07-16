@@ -1,0 +1,20 @@
+[
+  {
+    "section": "任务",
+    "content": "ESA - How many comets are there? Science & Exploration How many comets are there? 49437 views 184 likes ESA / Science & Exploration / Space Science / Rosetta Occasionally a comet makes the headlines, perhaps because it is visible from Earth with the unaided eye. This gives the impression that comets are rare. However, nothing could be further from the truth. There are thought to be so many comets that even astronomers can’t count them all. Comets were born in the outer reaches of the Solar System, 4600 million years ago, when the planets were forming, from dust and ice. A comet outburst seen by ESA's Rosetta mission Only when a comet swings in towards the Sun does it begin to evaporate and generate the tails for which comets are so famous. Observations of Comet Halley during its last appea",
+    "keywords": [
+      "ESA - How many comets are there?",
+      "ESA",
+      "太阳系任务",
+      "彗星"
+    ],
+    "page_title": "ESA - How many comets are there?",
+    "source": "esa",
+    "source_name": "esa",
+    "source_role": "primary",
+    "origin": "api",
+    "type": "embedding_chunk",
+    "schema_version": "esa_shadow_ready_v1",
+    "source_title": "ESA - How many comets are there?"
+  }
+]

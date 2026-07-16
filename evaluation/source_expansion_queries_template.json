@@ -1,0 +1,14 @@
+{
+  "version": "source_expansion_gold_set_v1",
+  "source_name": "<source_name>",
+  "source_schema_version": "<source_name>_shadow_ready_v1",
+  "top_k_default": 5,
+  "gates": {
+    "exact_accuracy_min": 0.0,
+    "source_filter_failure_max": 0,
+    "metadata_contract_break_max": 0,
+    "inferred_boundary_break_max": 0,
+    "query_explainability_degraded_max": 0
+  },
+  "queries": []
+}

@@ -1,0 +1,320 @@
+{
+  "source_name": "esa",
+  "source_schema_version": "esa_shadow_ready_v1",
+  "source_role": "primary",
+  "namespace_status": "shadow_only",
+  "mode": "offline",
+  "materialization_mode": "offline_esa_smoke_fixture_v1",
+  "cutover_ready": false,
+  "raw_dir": "F:\\知识表示与处理结课作业\\第二次托洛洛测试 -重大进展\\data\\raw_json\\esa",
+  "triples_dir": "F:\\知识表示与处理结课作业\\第二次托洛洛测试 -重大进展\\data\\triples\\esa",
+  "raw_files": [
+    "F:\\知识表示与处理结课作业\\第二次托洛洛测试 -重大进展\\data\\raw_json\\esa\\smoke_fixture.json"
+  ],
+  "triple_files": [
+    "F:\\知识表示与处理结课作业\\第二次托洛洛测试 -重大进展\\data\\triples\\esa\\Gaia_triples.json",
+    "F:\\知识表示与处理结课作业\\第二次托洛洛测试 -重大进展\\data\\triples\\esa\\JUICE_triples.json",
+    "F:\\知识表示与处理结课作业\\第二次托洛洛测试 -重大进展\\data\\triples\\esa\\Rosetta_triples.json",
+    "F:\\知识表示与处理结课作业\\第二次托洛洛测试 -重大进展\\data\\triples\\esa\\SMART-1_triples.json",
+    "F:\\知识表示与处理结课作业\\第二次托洛洛测试 -重大进展\\data\\triples\\esa\\Solar Orbiter_triples.json",
+    "F:\\知识表示与处理结课作业\\第二次托洛洛测试 -重大进展\\data\\triples\\esa\\火星快车号_triples.json",
+    "F:\\知识表示与处理结课作业\\第二次托洛洛测试 -重大进展\\data\\triples\\esa\\金星快车号_triples.json"
+  ],
+  "narrative_files": [
+    "F:\\知识表示与处理结课作业\\第二次托洛洛测试 -重大进展\\data\\triples\\esa\\Gaia_narratives.json",
+    "F:\\知识表示与处理结课作业\\第二次托洛洛测试 -重大进展\\data\\triples\\esa\\JUICE_narratives.json",
+    "F:\\知识表示与处理结课作业\\第二次托洛洛测试 -重大进展\\data\\triples\\esa\\Rosetta_narratives.json",
+    "F:\\知识表示与处理结课作业\\第二次托洛洛测试 -重大进展\\data\\triples\\esa\\SMART-1_narratives.json",
+    "F:\\知识表示与处理结课作业\\第二次托洛洛测试 -重大进展\\data\\triples\\esa\\Solar Orbiter_narratives.json",
+    "F:\\知识表示与处理结课作业\\第二次托洛洛测试 -重大进展\\data\\triples\\esa\\火星快车号_narratives.json",
+    "F:\\知识表示与处理结课作业\\第二次托洛洛测试 -重大进展\\data\\triples\\esa\\金星快车号_narratives.json"
+  ],
+  "pipeline": {
+    "total_triples": 22,
+    "total_narratives": 7,
+    "total_files": 7,
+    "pipeline": "esa_source_adapter_v1",
+    "source_schema_version": "esa_shadow_ready_v1",
+    "materialization_mode": "offline_esa_smoke_fixture_v1",
+    "mode": "offline",
+    "official_namespace_written": true,
+    "cutover_ready": false,
+    "time": "2026-06-28T06:01:08.032882+00:00"
+  },
+  "metadata_contract": {
+    "passed": true,
+    "checked_records": 29,
+    "break_count": 0,
+    "breaks": []
+  },
+  "graph": {
+    "skipped": true,
+    "reason": "graph_loader_not_configured"
+  },
+  "chroma": {
+    "added_narratives": 7,
+    "stats": {
+      "total": 7,
+      "collections": [
+        "astronomy_narratives_esa"
+      ]
+    }
+  },
+  "probes": {
+    "graph_query": "火卫一绕谁公转",
+    "graph_final_source": "fallback",
+    "graph_final_result_count": 0,
+    "graph_final_results": [],
+    "narrative_query": "火星大气成分",
+    "narrative_result_count": 1,
+    "narrative_results": [
+      {
+        "content": "ESA fixture 将火星快车号记录为围绕火星运行的任务样例，并说明该任务由 ESA 运营、目标为火星。",
+        "score": 0.6216010994381375,
+        "page_title": "火星快车号",
+        "section": "任务",
+        "keywords": "ESA,火星快车号,火星,任务",
+        "chunk_id": "esa_火星快车号_00",
+        "source": "esa",
+        "source_name": "esa",
+        "source_title": "火星快车号",
+        "source_role": "primary",
+        "origin": "html_fallback",
+        "schema_version": "esa_shadow_ready_v1",
+        "rank": 1
+      }
+    ]
+  },
+  "fetch": {
+    "requested_mode": "offline",
+    "effective_mode": "offline",
+    "status": "ok",
+    "error": ""
+  },
+  "preview": {
+    "record_count": 7,
+    "sample_records": [
+      {
+        "title": "火星快车号",
+        "triples": [
+          {
+            "subject": "火星快车号",
+            "relation": "ORBITS",
+            "object": "火星",
+            "pattern": "esa_smoke_fixture",
+            "raw": "ESA smoke fixture: Mars Express orbits Mars."
+          },
+          {
+            "subject": "火星快车号",
+            "relation": "OPERATED_BY",
+            "object": "ESA",
+            "pattern": "esa_smoke_fixture",
+            "raw": "ESA operates Mars Express."
+          },
+          {
+            "subject": "火星快车号",
+            "relation": "HAS_MISSION_TARGET",
+            "object": "火星",
+            "pattern": "esa_smoke_fixture",
+            "raw": "Mars Express targets Mars."
+          }
+        ],
+        "narratives": [
+          {
+            "page_title": "火星快车号",
+            "section": "任务",
+            "content": "ESA fixture 将火星快车号记录为围绕火星运行的任务样例，并说明该任务由 ESA 运营、目标为火星。",
+            "keywords": [
+              "ESA",
+              "火星快车号",
+              "火星",
+              "任务"
+            ]
+          }
+        ]
+      },
+      {
+        "title": "金星快车号",
+        "triples": [
+          {
+            "subject": "金星快车号",
+            "relation": "ORBITS",
+            "object": "金星",
+            "pattern": "esa_smoke_fixture",
+            "raw": "ESA smoke fixture: Venus Express orbits Venus."
+          },
+          {
+            "subject": "金星快车号",
+            "relation": "OPERATED_BY",
+            "object": "ESA",
+            "pattern": "esa_smoke_fixture",
+            "raw": "ESA operates Venus Express."
+          },
+          {
+            "subject": "金星快车号",
+            "relation": "HAS_MISSION_TARGET",
+            "object": "金星",
+            "pattern": "esa_smoke_fixture",
+            "raw": "Venus Express targets Venus."
+          }
+        ],
+        "narratives": [
+          {
+            "page_title": "金星快车号",
+            "section": "任务",
+            "content": "ESA fixture 将金星快车号记录为围绕金星运行的任务样例，并补充其由 ESA 运营、目标为金星。",
+            "keywords": [
+              "ESA",
+              "金星快车号",
+              "金星",
+              "任务"
+            ]
+          }
+        ]
+      },
+      {
+        "title": "SMART-1",
+        "triples": [
+          {
+            "subject": "SMART-1",
+            "relation": "ORBITS",
+            "object": "月球",
+            "pattern": "esa_smoke_fixture",
+            "raw": "ESA smoke fixture: SMART-1 orbits the Moon."
+          },
+          {
+            "subject": "SMART-1",
+            "relation": "OPERATED_BY",
+            "object": "ESA",
+            "pattern": "esa_smoke_fixture",
+            "raw": "ESA operates SMART-1."
+          },
+          {
+            "subject": "SMART-1",
+            "relation": "HAS_MISSION_TARGET",
+            "object": "月球",
+            "pattern": "esa_smoke_fixture",
+            "raw": "SMART-1 targets the Moon."
+          }
+        ],
+        "narratives": [
+          {
+            "page_title": "SMART-1",
+            "section": "任务",
+            "content": "ESA fixture 将 SMART-1 记录为围绕月球运行的任务样例，并注明其由 ESA 运营、目标为月球。",
+            "keywords": [
+              "ESA",
+              "SMART-1",
+              "月球",
+              "任务"
+            ]
+          }
+        ]
+      },
+      {
+        "title": "JUICE",
+        "triples": [
+          {
+            "subject": "JUICE",
+            "relation": "OPERATED_BY",
+            "object": "ESA",
+            "pattern": "esa_smoke_fixture",
+            "raw": "ESA operates JUICE."
+          },
+          {
+            "subject": "JUICE",
+            "relation": "HAS_MISSION_TARGET",
+            "object": "木星",
+            "pattern": "esa_smoke_fixture",
+            "raw": "JUICE targets Jupiter."
+          },
+          {
+            "subject": "JUICE",
+            "relation": "HAS_MISSION_TARGET",
+            "object": "木卫二",
+            "pattern": "esa_smoke_fixture",
+            "raw": "JUICE targets Europa."
+          },
+          {
+            "subject": "JUICE",
+            "relation": "HAS_MISSION_TARGET",
+            "object": "木卫三",
+            "pattern": "esa_smoke_fixture",
+            "raw": "JUICE targets Ganymede."
+          },
+          {
+            "subject": "JUICE",
+            "relation": "HAS_MISSION_TARGET",
+            "object": "木卫四",
+            "pattern": "esa_smoke_fixture",
+            "raw": "JUICE targets Callisto."
+          }
+        ],
+        "narratives": [
+          {
+            "page_title": "JUICE",
+            "section": "任务",
+            "content": "ESA fixture 将 JUICE 记录为由 ESA 运营、面向木星及其木卫二、木卫三、木卫四的探测任务。",
+            "keywords": [
+              "ESA",
+              "JUICE",
+              "木星",
+              "木卫二",
+              "木卫三",
+              "木卫四"
+            ]
+          }
+        ]
+      },
+      {
+        "title": "Rosetta",
+        "triples": [
+          {
+            "subject": "Rosetta",
+            "relation": "OPERATED_BY",
+            "object": "ESA",
+            "pattern": "esa_smoke_fixture",
+            "raw": "ESA operates Rosetta."
+          },
+          {
+            "subject": "Rosetta",
+            "relation": "HAS_MISSION_TARGET",
+            "object": "彗星",
+            "pattern": "esa_smoke_fixture",
+            "raw": "Rosetta targets a comet."
+          }
+        ],
+        "narratives": [
+          {
+            "page_title": "Rosetta",
+            "section": "任务",
+            "content": "ESA fixture 将 Rosetta 记录为由 ESA 运营、以彗星为主要任务目标的代表性深空任务。",
+            "keywords": [
+              "ESA",
+              "Rosetta",
+              "彗星",
+              "任务"
+            ]
+          }
+        ]
+      }
+    ],
+    "official_triples_written": true,
+    "official_chroma_written": true,
+    "official_neo4j_written": false
+  },
+  "readiness_gate": {
+    "passed": true,
+    "cutover_ready": false,
+    "reason": "shadow namespace is auditable; active-source cutover remains disabled"
+  },
+  "materialization": {
+    "timestamp_utc": "2026-06-28T06:01:21.984591+00:00",
+    "output_path": "F:\\知识表示与处理结课作业\\第二次托洛洛测试 -重大进展\\evaluation\\source_expansion\\esa\\esa_materialization_report.json"
+  },
+  "raw_copy_status": {
+    "written": true,
+    "path": "F:\\知识表示与处理结课作业\\第二次托洛洛测试 -重大进展\\data\\raw_json\\esa\\smoke_fixture.json",
+    "error": ""
+  }
+}

@@ -1,0 +1,50 @@
+{
+  "record": {
+    "title": "鸟神星",
+    "qid": "Q14913",
+    "triples": [
+      {
+        "relation": "ORBITS",
+        "object": "太阳",
+        "property_id": "P397"
+      },
+      {
+        "relation": "PART_OF",
+        "object": "柯伊伯带",
+        "property_id": "P361"
+      },
+      {
+        "relation": "LOCATED_IN",
+        "object": "太阳系",
+        "property_id": "P276"
+      },
+      {
+        "relation": "DISCOVERED_BY",
+        "object": "迈克·布朗",
+        "property_id": "P61"
+      },
+      {
+        "relation": "HAS_MASS",
+        "object": "3.1e21 kg",
+        "property_id": "P2067"
+      },
+      {
+        "relation": "HAS_RADIUS",
+        "object": "715 km",
+        "property_id": "P2120"
+      }
+    ],
+    "narratives": [
+      {
+        "section": "分类",
+        "content": "鸟神星 fixture 将其记录为柯伊伯带矮行星样例，并保留迈克·布朗团队相关发现信息。",
+        "keywords": [
+          "鸟神星",
+          "柯伊伯带",
+          "发现"
+        ]
+      }
+    ]
+  },
+  "fixture_source": "solar_system_fixture.json"
+}

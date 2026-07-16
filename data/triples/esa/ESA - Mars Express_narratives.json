@@ -1,0 +1,23 @@
+[
+  {
+    "section": "任务",
+    "content": "ESA - Mars Express Science & Exploration Mars Express Investigating the Red Planet The mission Since beginning science operations in 2004, Mars Express has provided breathtaking views of Mars in three dimensions. It has provided the most complete map of the chemical composition of the atmosphere, studied Mars’s innermost moon Phobos in unprecedented detail, and traced the history of water across the globe, demonstrating that Mars once harboured environmental conditions that may have been suitable for life. Launch date: 2 June 2003 Arrival at Mars: December 2003 Status: In operation Targets: Mars's atmosphere, surface and subsurface; Mars's moons Phobos and Deimos 10 m imaging resolution 8 instruments 1120 kg launch mass 2 decades of operation Latest All Stories Videos Images Story Science",
+    "keywords": [
+      "ESA - Mars Express",
+      "ESA",
+      "太阳系任务",
+      "火星",
+      "月球"
+    ],
+    "page_title": "ESA - Mars Express",
+    "path": "任务",
+    "chunk_index": 0,
+    "source": "esa",
+    "source_name": "esa",
+    "source_role": "primary",
+    "source_title": "ESA - Mars Express",
+    "origin": "html_fallback",
+    "schema_version": "esa_shadow_ready_v1",
+    "type": "embedding_chunk"
+  }
+]

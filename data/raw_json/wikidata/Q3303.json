@@ -1,0 +1,50 @@
+{
+  "record": {
+    "title": "土卫二",
+    "qid": "Q3303",
+    "triples": [
+      {
+        "relation": "ORBITS",
+        "object": "土星",
+        "property_id": "P397"
+      },
+      {
+        "relation": "PART_OF",
+        "object": "土星系统",
+        "property_id": "P361"
+      },
+      {
+        "relation": "LOCATED_IN",
+        "object": "土星系统",
+        "property_id": "P276"
+      },
+      {
+        "relation": "DISCOVERED_BY",
+        "object": "威廉·赫歇尔",
+        "property_id": "P61"
+      },
+      {
+        "relation": "HAS_MASS",
+        "object": "1.0802e20 kg",
+        "property_id": "P2067"
+      },
+      {
+        "relation": "HAS_RADIUS",
+        "object": "252.1 km",
+        "property_id": "P2120"
+      }
+    ],
+    "narratives": [
+      {
+        "section": "发现",
+        "content": "土卫二 fixture 记录其属于土星系统，并保留威廉·赫歇尔的发现者信息，便于单源检索验证。",
+        "keywords": [
+          "土卫二",
+          "土星系统",
+          "发现"
+        ]
+      }
+    ]
+  },
+  "fixture_source": "solar_system_fixture.json"
+}

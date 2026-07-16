@@ -1,0 +1,34 @@
+[
+  {
+    "subject": "Rosetta",
+    "relation": "OPERATED_BY",
+    "object": "ESA",
+    "pattern": "esa_smoke_fixture",
+    "raw": "ESA operates Rosetta.",
+    "source_url": "https://www.esa.int/Science_Exploration/Space_Science/Rosetta",
+    "source_field": "",
+    "source": "esa",
+    "source_name": "esa",
+    "source_role": "primary",
+    "origin": "api",
+    "type": "triple_candidate",
+    "schema_version": "esa_shadow_ready_v1",
+    "source_title": "Rosetta"
+  },
+  {
+    "subject": "Rosetta",
+    "relation": "HAS_MISSION_TARGET",
+    "object": "彗星",
+    "pattern": "esa_smoke_fixture",
+    "raw": "Rosetta targets a comet.",
+    "source_url": "https://www.esa.int/Science_Exploration/Space_Science/Rosetta",
+    "source_field": "",
+    "source": "esa",
+    "source_name": "esa",
+    "source_role": "primary",
+    "origin": "api",
+    "type": "triple_candidate",
+    "schema_version": "esa_shadow_ready_v1",
+    "source_title": "Rosetta"
+  }
+]

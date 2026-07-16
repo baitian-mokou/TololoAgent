@@ -1,0 +1,96 @@
+{
+  "generated_at": "2026-06-27T12:22:55.075789+00:00",
+  "dry_run": false,
+  "apply": true,
+  "patch_id": "source_conflict_v4_002",
+  "target_file": "F:\\知识表示与处理结课作业\\第二次托洛洛测试 -重大进展\\data\\triples\\天王星_triples.json",
+  "matched_records": [
+    {
+      "index": 0,
+      "subject": "天王星",
+      "relation": "HAS_RADIUS",
+      "object": "4km"
+    },
+    {
+      "index": 1,
+      "subject": "天王星",
+      "relation": "HAS_RADIUS",
+      "object": "20km"
+    }
+  ],
+  "changed_records": [
+    {
+      "index": 0,
+      "before_keys": [
+        "object",
+        "origin",
+        "pattern",
+        "raw",
+        "relation",
+        "schema_version",
+        "source",
+        "source_name",
+        "source_role",
+        "source_title",
+        "subject",
+        "type"
+      ],
+      "after_keys": [
+        "measurement_kind",
+        "object",
+        "origin",
+        "pattern",
+        "quality_annotation",
+        "quality_patch_id",
+        "quality_status",
+        "raw",
+        "relation",
+        "schema_version",
+        "source",
+        "source_name",
+        "source_role",
+        "source_title",
+        "subject",
+        "type"
+      ]
+    },
+    {
+      "index": 1,
+      "before_keys": [
+        "object",
+        "origin",
+        "pattern",
+        "raw",
+        "relation",
+        "schema_version",
+        "source",
+        "source_name",
+        "source_role",
+        "source_title",
+        "subject",
+        "type"
+      ],
+      "after_keys": [
+        "measurement_kind",
+        "object",
+        "origin",
+        "pattern",
+        "quality_annotation",
+        "quality_patch_id",
+        "quality_status",
+        "raw",
+        "relation",
+        "schema_version",
+        "source",
+        "source_name",
+        "source_role",
+        "source_title",
+        "subject",
+        "type"
+      ]
+    }
+  ],
+  "formal_values_changed": false,
+  "patches_applied": 1,
+  "errors": []
+}

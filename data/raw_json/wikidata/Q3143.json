@@ -1,0 +1,50 @@
+{
+  "record": {
+    "title": "木卫二",
+    "qid": "Q3143",
+    "triples": [
+      {
+        "relation": "ORBITS",
+        "object": "木星",
+        "property_id": "P397"
+      },
+      {
+        "relation": "PART_OF",
+        "object": "木星系统",
+        "property_id": "P361"
+      },
+      {
+        "relation": "LOCATED_IN",
+        "object": "木星系统",
+        "property_id": "P276"
+      },
+      {
+        "relation": "DISCOVERED_BY",
+        "object": "伽利略·伽利莱",
+        "property_id": "P61"
+      },
+      {
+        "relation": "HAS_MASS",
+        "object": "4.7998e22 kg",
+        "property_id": "P2067"
+      },
+      {
+        "relation": "HAS_RADIUS",
+        "object": "1560.8 km",
+        "property_id": "P2120"
+      }
+    ],
+    "narratives": [
+      {
+        "section": "伽利略卫星",
+        "content": "木卫二 fixture 记录其绕木星运行，属于木星系统，并保留半径与质量数值。",
+        "keywords": [
+          "木卫二",
+          "木星",
+          "半径"
+        ]
+      }
+    ]
+  },
+  "fixture_source": "solar_system_fixture.json"
+}

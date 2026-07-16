@@ -1,0 +1,18 @@
+[
+  {
+    "subject": "Gaia",
+    "relation": "ORBITS",
+    "object": "太阳",
+    "pattern": "esa_smoke_fixture",
+    "raw": "ESA smoke fixture: Gaia follows a solar orbit near Sun-Earth L2.",
+    "source_url": "https://www.esa.int/Science_Exploration/Space_Science/Gaia",
+    "source_field": "",
+    "source": "esa",
+    "source_name": "esa",
+    "source_role": "primary",
+    "origin": "api",
+    "type": "triple_candidate",
+    "schema_version": "esa_shadow_ready_v1",
+    "source_title": "Gaia"
+  }
+]

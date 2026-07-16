@@ -1,0 +1,64 @@
+{
+  "generated_at": "2026-06-28T05:30:01.153249+00:00",
+  "decisions_path": "F:\\知识表示与处理结课作业\\第二次托洛洛测试 -重大进展\\data\\quality_review\\quality_review_decisions.json",
+  "queue_path": "F:\\知识表示与处理结课作业\\第二次托洛洛测试 -重大进展\\data\\quality_review\\quality_review_queue.json",
+  "preflight_count": 2,
+  "duplicate_risk_count": 0,
+  "items": [
+    {
+      "patch_id": "source_conflict_v4_002",
+      "review_id": "qr_source_conflict_v4_002",
+      "subject": "天王星",
+      "relation": "HAS_RADIUS",
+      "revision_status": "applied",
+      "human_decision": "approved",
+      "safe_to_apply": true,
+      "target_file": "F:\\知识表示与处理结课作业\\第二次托洛洛测试 -重大进展\\data\\triples\\天王星_triples.json",
+      "original_values": [
+        "4km",
+        "20km"
+      ],
+      "proposed_value": "25362 km",
+      "matched_record_count": 0,
+      "matched_records": [],
+      "would_create_duplicate": false,
+      "duplicate_candidate_count": 1,
+      "duplicate_after_value": "25362 km",
+      "duplicate_policy": "no_duplicate_detected",
+      "recommended_next_action": "no_duplicate_detected"
+    },
+    {
+      "patch_id": "source_conflict_v4_003",
+      "review_id": "qr_source_conflict_v4_003",
+      "subject": "月球",
+      "relation": "ORBITS",
+      "revision_status": "applied",
+      "human_decision": "approved",
+      "safe_to_apply": true,
+      "target_file": "F:\\知识表示与处理结课作业\\第二次托洛洛测试 -重大进展\\data\\triples\\月球_triples.json",
+      "original_values": [
+        "太阳系内密度第二高"
+      ],
+      "proposed_value": "地球",
+      "matched_record_count": 0,
+      "matched_records": [],
+      "would_create_duplicate": false,
+      "duplicate_candidate_count": 1,
+      "duplicate_after_value": "地球",
+      "duplicate_policy": "no_duplicate_detected",
+      "recommended_next_action": "no_duplicate_detected"
+    }
+  ],
+  "formal_triples_written": false,
+  "formal_data_written": false,
+  "chroma_written": false,
+  "neo4j_written": false,
+  "active_source": "zh_wikipedia",
+  "source_registry": {
+    "zh_wikipedia": "active",
+    "wikidata": "disabled",
+    "nasa": "disabled",
+    "esa": "disabled"
+  },
+  "errors": []
+}

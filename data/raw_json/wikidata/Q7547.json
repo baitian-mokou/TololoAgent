@@ -1,0 +1,50 @@
+{
+  "record": {
+    "title": "火卫一",
+    "qid": "Q7547",
+    "triples": [
+      {
+        "relation": "ORBITS",
+        "object": "火星",
+        "property_id": "P397"
+      },
+      {
+        "relation": "PART_OF",
+        "object": "火星系统",
+        "property_id": "P361"
+      },
+      {
+        "relation": "LOCATED_IN",
+        "object": "火星系统",
+        "property_id": "P276"
+      },
+      {
+        "relation": "DISCOVERED_BY",
+        "object": "阿萨夫·霍尔",
+        "property_id": "P61"
+      },
+      {
+        "relation": "HAS_MASS",
+        "object": "1.0659e16 kg",
+        "property_id": "P2067"
+      },
+      {
+        "relation": "HAS_RADIUS",
+        "object": "11.2667 km",
+        "property_id": "P2120"
+      }
+    ],
+    "narratives": [
+      {
+        "section": "发现",
+        "content": "火卫一 fixture 记录其绕火星运行，并将发现者登记为阿萨夫·霍尔。",
+        "keywords": [
+          "火卫一",
+          "火星",
+          "发现者"
+        ]
+      }
+    ]
+  },
+  "fixture_source": "solar_system_fixture.json"
+}

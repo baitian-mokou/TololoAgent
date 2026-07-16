@@ -1,0 +1,13 @@
+{
+  "generated_at": "2026-06-29T02:04:11.716131+00:00",
+  "summary": {
+    "true_conflict_count": 0,
+    "candidate_count": 0,
+    "multi_source_agreement_count": 5,
+    "near_equivalent_values_count": 0,
+    "measurement_kind_difference_count": 0,
+    "human_review_required_count": 0
+  },
+  "conflicts": [],
+  "candidate_output": "F:\\知识表示与处理结课作业\\第二次托洛洛测试 -重大进展\\data\\quality_patches\\auto_fusion_conflict_candidates.json"
+}

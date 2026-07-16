@@ -1,0 +1,59 @@
+{
+  "passed": true,
+  "checks": [
+    {
+      "name": "pending_does_not_write",
+      "passed": true
+    },
+    {
+      "name": "deferred_does_not_write",
+      "passed": true
+    },
+    {
+      "name": "rejected_does_not_write",
+      "passed": true
+    },
+    {
+      "name": "approved_metadata_only_dry_run_plan",
+      "passed": true
+    },
+    {
+      "name": "high_risk_value_change_blocked_by_default",
+      "passed": true
+    },
+    {
+      "name": "dry_run_writes_no_chroma",
+      "passed": true
+    },
+    {
+      "name": "dry_run_writes_no_neo4j",
+      "passed": true
+    },
+    {
+      "name": "high_risk_apply_attempt_writes_no_formal_value",
+      "passed": true
+    },
+    {
+      "name": "apply_attempt_writes_no_chroma",
+      "passed": true
+    },
+    {
+      "name": "apply_attempt_writes_no_neo4j",
+      "passed": true
+    },
+    {
+      "name": "active_source_still_zh_wikipedia",
+      "passed": true,
+      "active_source": "zh_wikipedia"
+    },
+    {
+      "name": "run_all_gates_report_passed",
+      "passed": true,
+      "final_report_path": "F:\\知识表示与处理结课作业\\第二次托洛洛测试 -重大进展\\evaluation\\final_acceptance_report.json"
+    }
+  ],
+  "formal_triples_written": false,
+  "chroma_written": false,
+  "neo4j_written": false,
+  "active_source": "zh_wikipedia"
+}

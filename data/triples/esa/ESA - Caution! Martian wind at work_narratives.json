@@ -1,0 +1,20 @@
+[
+  {
+    "section": "任务",
+    "content": "ESA - Caution! Martian wind at work Science & Exploration Caution! Martian wind at work 23/02/2022 6255 views 95 likes ESA / Science & Exploration / Space Science / Mars Express This image from ESA’s Mars Express shows part of possibly the largest single source of dust on Mars: a wind-sculpted feature known as the Medusae Fossae Formation, or MFF. Medusae Fossae in context The MFF is not only a veritable dust factory, but also remarkably extensive – it is the largest sedimentary deposit on the planet and stretches out discontinuously for more than 5000 km, covering an area about the size of India. It is named for the Greek mythological Gorgon Medusa , who was able to turn those who looked into her eyes to stone, with the suffix ‘fossae’ being Latin for trenches or hollows. The formation is",
+    "keywords": [
+      "ESA - Caution! Martian wind at work",
+      "ESA",
+      "太阳系任务",
+      "火星"
+    ],
+    "page_title": "ESA - Caution! Martian wind at work",
+    "source": "esa",
+    "source_name": "esa",
+    "source_role": "primary",
+    "origin": "api",
+    "type": "embedding_chunk",
+    "schema_version": "esa_shadow_ready_v1",
+    "source_title": "ESA - Caution! Martian wind at work"
+  }
+]

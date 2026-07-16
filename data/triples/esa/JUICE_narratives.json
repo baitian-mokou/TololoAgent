@@ -1,0 +1,45 @@
+[
+  {
+    "page_title": "JUICE",
+    "section": "任务",
+    "content": "ESA fixture 将 JUICE 记录为由 ESA 运营、面向木星及其木卫二、木卫三、木卫四的探测任务。",
+    "keywords": [
+      "ESA",
+      "JUICE",
+      "木星",
+      "木卫二",
+      "木卫三",
+      "木卫四"
+    ],
+    "source": "esa",
+    "source_name": "esa",
+    "source_role": "primary",
+    "origin": "api",
+    "type": "embedding_chunk",
+    "schema_version": "esa_shadow_ready_v1",
+    "source_title": "JUICE"
+  },
+  {
+    "section": "任务",
+    "content": "JUICE JUICE mission to Jupiter, Europa, Ganymede and Callisto.",
+    "keywords": [
+      "JUICE",
+      "ESA",
+      "太阳系任务",
+      "木星",
+      "木卫二",
+      "木卫三",
+      "木卫四"
+    ],
+    "page_title": "JUICE",
+    "path": "任务",
+    "chunk_index": 0,
+    "source": "esa",
+    "source_name": "esa",
+    "source_role": "primary",
+    "source_title": "JUICE",
+    "origin": "html_fallback",
+    "schema_version": "esa_shadow_ready_v1",
+    "type": "embedding_chunk"
+  }
+]

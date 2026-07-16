@@ -1,0 +1,23 @@
+[
+  {
+    "section": "任务",
+    "content": "ESA - Philae’s extraordinary comet landing relived Science & Exploration Philae’s extraordinary comet landing relived 12/11/2024 9258 views 55 likes ESA / Science & Exploration / Space Science / Rosetta On 12 November 2014, after a ten year journey through the Solar System and over 500 million kilometres from home, Rosetta’s lander Philae made space exploration history by touching down on a comet for the first time. On the occasion of the tenth anniversary of this extraordinary feat, we celebrate Philae’s impressive achievements at Comet 67P/Churyumov-Gerasimenko. Decisions, decisions Rosetta arrived at the comet on 6 August 2014, and the race was immediately on to find a suitable landing site for its lander Philae. The site needed to offer a balance of safety and unique science potential.",
+    "keywords": [
+      "ESA - Philae’s extraordinary comet landing relived",
+      "ESA",
+      "太阳系任务",
+      "彗星",
+      "月球"
+    ],
+    "page_title": "ESA - Philae’s extraordinary comet landing relived",
+    "path": "任务",
+    "chunk_index": 0,
+    "source": "esa",
+    "source_name": "esa",
+    "source_role": "primary",
+    "source_title": "ESA - Philae’s extraordinary comet landing relived",
+    "origin": "html_fallback",
+    "schema_version": "esa_shadow_ready_v1",
+    "type": "embedding_chunk"
+  }
+]

@@ -1,0 +1,20 @@
+[
+  {
+    "section": "任务",
+    "content": "ESA - Chaotic terrain in Ariadnes Colles Science & Exploration Chaotic terrain in Ariadnes Colles 24/04/2009 3722 views 17 likes ESA / Science & Exploration / Space Science / Mars Express These images, taken by the Mars Express High Resolution Stereo Camera, show the region of Ariadnes Colles on the Red Planet. The image data were acquired on 16 April 2007 and are centred at 34° south and 172° east. The ground resolution is about 13 m/pixel. Ariadnes Colles context map Mars exhibits numerous 'chaotic terrains'. These are areas with an apparently inordinate accumulation of rocks of varying sizes and flat-topped features. Ariadnes Colles is one such chaotic terrain located in the planet's southern highlands. It covers an area of 180 x 160 sq km, roughly half the size of Estonia. These images",
+    "keywords": [
+      "ESA - Chaotic terrain in Ariadnes Colles",
+      "ESA",
+      "太阳系任务",
+      "火星"
+    ],
+    "page_title": "ESA - Chaotic terrain in Ariadnes Colles",
+    "source": "esa",
+    "source_name": "esa",
+    "source_role": "primary",
+    "origin": "api",
+    "type": "embedding_chunk",
+    "schema_version": "esa_shadow_ready_v1",
+    "source_title": "ESA - Chaotic terrain in Ariadnes Colles"
+  }
+]

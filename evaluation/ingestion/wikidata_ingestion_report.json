@@ -1,0 +1,91 @@
+{
+  "source": "wikidata",
+  "raw_records_written": 25,
+  "processed_records_written": 25,
+  "triples_written": 151,
+  "narratives_written": 25,
+  "graph_written": true,
+  "chroma_written": true,
+  "crawled_urls": [
+    "https://www.wikidata.org/wiki/Q525",
+    "https://www.wikidata.org/wiki/Q308",
+    "https://www.wikidata.org/wiki/Q313",
+    "https://www.wikidata.org/wiki/Q2",
+    "https://www.wikidata.org/wiki/Q405",
+    "https://www.wikidata.org/wiki/Q111",
+    "https://www.wikidata.org/wiki/Q319",
+    "https://www.wikidata.org/wiki/Q193",
+    "https://www.wikidata.org/wiki/Q324",
+    "https://www.wikidata.org/wiki/Q332",
+    "https://www.wikidata.org/wiki/Q339",
+    "https://www.wikidata.org/wiki/Q596",
+    "https://www.wikidata.org/wiki/Q7547",
+    "https://www.wikidata.org/wiki/Q7548",
+    "https://www.wikidata.org/wiki/Q3143",
+    "https://www.wikidata.org/wiki/Q3169",
+    "https://www.wikidata.org/wiki/Q3134",
+    "https://www.wikidata.org/wiki/Q2565",
+    "https://www.wikidata.org/wiki/Q3303",
+    "https://www.wikidata.org/wiki/Q3359",
+    "https://www.wikidata.org/wiki/Q5964",
+    "https://www.wikidata.org/wiki/Q16711",
+    "https://www.wikidata.org/wiki/Q14913",
+    "https://www.wikidata.org/wiki/Q15034",
+    "https://www.wikidata.org/wiki/Q3030"
+  ],
+  "skipped_urls": [],
+  "errors": [],
+  "warnings": [],
+  "materialization_details": {
+    "graph": {
+      "cleared_items": 190,
+      "loaded_nodes": 104,
+      "loaded_relationships": 142,
+      "stats": {
+        "nodes": 324,
+        "rels": 457,
+        "labels": [
+          "Planet",
+          "Satellite",
+          "PlanetType",
+          "Star",
+          "DwarfPlanet",
+          "Asteroid",
+          "Comet",
+          "OrbitParameter",
+          "EnvironmentalFeature",
+          "Mission",
+          "Concept",
+          "CelestialBody",
+          "Galaxy"
+        ],
+        "rel_types": [
+          "围绕",
+          "拥有轨道参数",
+          "拥有环境特征",
+          "IS_A",
+          "DISCOVERED_BY",
+          "LOCATED_IN",
+          "ORBITS",
+          "PART_OF",
+          "HAS_RADIUS",
+          "HAS_MASS",
+          "HAS_ATMOSPHERE",
+          "OPERATED_BY",
+          "HAS_MISSION_TARGET"
+        ]
+      }
+    },
+    "chroma": {
+      "added_narratives": 25,
+      "stats": {
+        "total": 25,
+        "collections": [
+          "astronomy_narratives_wikidata"
+        ]
+      }
+    }
+  },
+  "generated_at": "2026-07-04T02:52:00.085334+00:00",
+  "pending_missing_records": []
+}

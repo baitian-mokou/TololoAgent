@@ -1,0 +1,21 @@
+[
+  {
+    "section": "任务",
+    "content": "ESA - Industry Science & Exploration Industry 14/04/2003 4092 views 2 likes ESA / Science & Exploration / Space Science / Mars Express Mars Express is a pioneer – and not just because it is Europe's first mission to the Red Planet. It is also pioneering more economic ways of building space science missions at ESA. These new working methods have already proved effective and will be applied to future science missions in the agency’s long-term scientific programme. A new approach ESA is spending just 150 million Euros (1996 prices) on Mars Express, which is about one third of the cost of previous similar missions. This sum covers the development of the spacecraft, the launch and the operations. Orbiter instruments and the Beagle 2 lander are provided separately. The mission was also built unu",
+    "keywords": [
+      "ESA - Industry",
+      "ESA",
+      "太阳系任务",
+      "彗星",
+      "火星"
+    ],
+    "page_title": "ESA - Industry",
+    "source": "esa",
+    "source_name": "esa",
+    "source_role": "primary",
+    "origin": "api",
+    "type": "embedding_chunk",
+    "schema_version": "esa_shadow_ready_v1",
+    "source_title": "ESA - Industry"
+  }
+]

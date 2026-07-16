@@ -1,0 +1,25 @@
+[
+  {
+    "section": "任务",
+    "content": "ESA - Why does it take so long to get to Mercury? Science & Exploration Why does it take so long to get to Mercury? 67052 views 146 likes ESA / Science & Exploration / Space Science / BepiColombo Earth is on average ten times closer to Mercury than Jupiter, but missions to both planets can take a similar amount of time to reach their science orbits. Why is that? In the 1970s, NASA’s Mariner 10 spacecraft took just 147 days to reach the innermost planet of the Solar System. But more recent missions, NASA’s Messenger in the 2000s and the European-Japanese BepiColombo , launched in 2018, need years to arrive at Mercury. The reason is that they are not making the same journey. While Mariner 10 made three flybys of Mercury while in orbit around the Sun, providing our first up close view of its",
+    "keywords": [
+      "ESA - Why does it take so long to get to Mercury?",
+      "ESA",
+      "太阳系任务",
+      "木星",
+      "水星",
+      "火星",
+      "金星"
+    ],
+    "page_title": "ESA - Why does it take so long to get to Mercury?",
+    "path": "任务",
+    "chunk_index": 0,
+    "source": "esa",
+    "source_name": "esa",
+    "source_role": "primary",
+    "source_title": "ESA - Why does it take so long to get to Mercury?",
+    "origin": "html_fallback",
+    "schema_version": "esa_shadow_ready_v1",
+    "type": "embedding_chunk"
+  }
+]

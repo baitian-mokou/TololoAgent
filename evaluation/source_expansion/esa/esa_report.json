@@ -1,0 +1,1073 @@
+{
+  "source": "esa",
+  "descriptor": {
+    "source_name": "esa",
+    "status": "disabled",
+    "source_role": "primary",
+    "schema_version": "esa_shadow_ready_v1",
+    "expected_schema_version": "esa_shadow_ready_v1",
+    "is_active": false,
+    "is_known": true
+  },
+  "manifest": {
+    "exists": true,
+    "path": "F:\\知识表示与处理结课作业\\第二次托洛洛测试 -重大进展\\evaluation\\source_expansion\\esa\\esa_queries.json",
+    "source_name": "esa",
+    "source_schema_version": "esa_shadow_ready_v1",
+    "query_count": 9,
+    "load_error": null,
+    "query_schema_versions_consistent": true
+  },
+  "summary": {
+    "total_queries": 9,
+    "exact_pass_count": 9,
+    "exact_accuracy": 1.0,
+    "top_k_hit_count": 8,
+    "top_k_hit_denominator": 8,
+    "top_k_hit_rate": 1.0,
+    "path_selection_correct_count": 9,
+    "path_selection_correctness": 1.0,
+    "graph_embedding_fallback_inconsistency_count": 0,
+    "source_filter_failure_count": 0,
+    "metadata_contract_break_count": 0,
+    "inferred_boundary_break_count": 0,
+    "query_explainability_degraded_count": 0,
+    "query_explainability_degraded_rate": 0.0,
+    "category_breakdown": {
+      "structured": {
+        "total": 1,
+        "exact_pass_count": 1,
+        "top_k_hit_count": 1,
+        "query_explainability_degraded_count": 0,
+        "failures": {}
+      },
+      "narrative": {
+        "total": 1,
+        "exact_pass_count": 1,
+        "top_k_hit_count": 1,
+        "query_explainability_degraded_count": 0,
+        "failures": {}
+      },
+      "negative": {
+        "total": 1,
+        "exact_pass_count": 1,
+        "top_k_hit_count": 0,
+        "query_explainability_degraded_count": 0,
+        "failures": {}
+      },
+      "fallback": {
+        "total": 1,
+        "exact_pass_count": 1,
+        "top_k_hit_count": 1,
+        "query_explainability_degraded_count": 0,
+        "failures": {}
+      },
+      "source_isolation": {
+        "total": 1,
+        "exact_pass_count": 1,
+        "top_k_hit_count": 1,
+        "query_explainability_degraded_count": 0,
+        "failures": {}
+      },
+      "metadata_completeness": {
+        "total": 1,
+        "exact_pass_count": 1,
+        "top_k_hit_count": 1,
+        "query_explainability_degraded_count": 0,
+        "failures": {}
+      },
+      "path_routing": {
+        "total": 1,
+        "exact_pass_count": 1,
+        "top_k_hit_count": 1,
+        "query_explainability_degraded_count": 0,
+        "failures": {}
+      },
+      "unit_normalization": {
+        "total": 1,
+        "exact_pass_count": 1,
+        "top_k_hit_count": 1,
+        "query_explainability_degraded_count": 0,
+        "failures": {}
+      },
+      "conflict_case": {
+        "total": 1,
+        "exact_pass_count": 1,
+        "top_k_hit_count": 1,
+        "query_explainability_degraded_count": 0,
+        "failures": {}
+      }
+    }
+  },
+  "probes": {
+    "graph_results_count": 0,
+    "narrative_results_count": 8,
+    "fallback_graph_count": 4,
+    "fallback_narrative_count": 8
+  },
+  "gates": {
+    "passed": true,
+    "checks": [
+      {
+        "name": "queryset_present",
+        "passed": true,
+        "actual": true
+      },
+      {
+        "name": "descriptor_matches_manifest_source",
+        "passed": true,
+        "actual": "esa",
+        "expected": "esa"
+      },
+      {
+        "name": "descriptor_matches_manifest_schema",
+        "passed": true,
+        "actual": "esa_shadow_ready_v1",
+        "expected": "esa_shadow_ready_v1"
+      },
+      {
+        "name": "query_schema_versions_consistent",
+        "passed": true,
+        "actual": true,
+        "expected": true
+      },
+      {
+        "name": "exact_accuracy_min",
+        "expected": 0.65,
+        "actual": 1.0,
+        "passed": true
+      },
+      {
+        "name": "query_failure_max",
+        "expected": 0,
+        "actual": 0,
+        "passed": true
+      },
+      {
+        "name": "source_filter_failure_max",
+        "expected": 0,
+        "actual": 0,
+        "passed": true
+      },
+      {
+        "name": "metadata_contract_break_max",
+        "expected": 0,
+        "actual": 0,
+        "passed": true
+      },
+      {
+        "name": "inferred_boundary_break_max",
+        "expected": 0,
+        "actual": 0,
+        "passed": true
+      },
+      {
+        "name": "query_explainability_degraded_max",
+        "expected": 0,
+        "actual": 0,
+        "passed": true
+      },
+      {
+        "name": "required_category_coverage",
+        "expected": [
+          "structured",
+          "narrative",
+          "negative",
+          "fallback",
+          "source_isolation",
+          "metadata_completeness",
+          "path_routing",
+          "unit_normalization",
+          "conflict_case"
+        ],
+        "actual": {
+          "structured": 1,
+          "narrative": 1,
+          "negative": 1,
+          "fallback": 1,
+          "source_isolation": 1,
+          "metadata_completeness": 1,
+          "path_routing": 1,
+          "unit_normalization": 1,
+          "conflict_case": 1
+        },
+        "passed": true
+      }
+    ],
+    "exit_code": 0
+  },
+  "results": [
+    {
+      "id": "esa_structured_mars_express_orbits",
+      "category": "structured",
+      "query_kind": "structured",
+      "query": "火星快车号绕谁运行",
+      "source_schema_version": "esa_shadow_ready_v1",
+      "expected_path": "fallback",
+      "actual_path": "fallback",
+      "allowed_final_sources": [
+        "fallback"
+      ],
+      "expected_result": {
+        "subject": "火星快车号",
+        "relation": "ORBITS",
+        "object": "火星"
+      },
+      "normalized_expected_value": null,
+      "normalized_returned_value": "火星",
+      "returned_result": {
+        "subject": "火星快车号",
+        "relation": "ORBITS",
+        "object": "火星",
+        "source": "esa",
+        "source_name": "esa",
+        "source_role": "primary",
+        "origin": "api",
+        "source_title": "火星快车号",
+        "schema_version": "esa_shadow_ready_v1"
+      },
+      "top_k_results": [
+        {
+          "subject": "火星快车号",
+          "relation": "ORBITS",
+          "object": "火星",
+          "source": "esa",
+          "source_name": "esa",
+          "source_role": "primary",
+          "origin": "api",
+          "source_title": "火星快车号",
+          "schema_version": "esa_shadow_ready_v1"
+        }
+      ],
+      "graph_only_results": [],
+      "fallback_results": [
+        {
+          "subject": "火星快车号",
+          "relation": "ORBITS",
+          "object": "火星",
+          "source": "esa",
+          "source_name": "esa",
+          "source_role": "primary",
+          "origin": "api",
+          "source_title": "火星快车号",
+          "schema_version": "esa_shadow_ready_v1"
+        }
+      ],
+      "exact_match": true,
+      "top_k_hit": true,
+      "expected_top_k_hit": true,
+      "top_k_expectation_met": true,
+      "path_correct": true,
+      "allowed_final_source_ok": true,
+      "pass": true,
+      "query_schema_ok": true,
+      "query_explainability_degraded": false,
+      "explainability_status": "ok",
+      "source_metadata": {
+        "subject": "火星快车号",
+        "relation": "ORBITS",
+        "object": "火星",
+        "source": "esa",
+        "source_name": "esa",
+        "source_role": "primary",
+        "origin": "api",
+        "source_title": "火星快车号",
+        "schema_version": "esa_shadow_ready_v1"
+      },
+      "metadata_complete": true,
+      "source_filter_failed": false,
+      "inferred_boundary_break": false,
+      "fallback_exact_match": true,
+      "fallback_top_k_hit": true,
+      "consistency_match": true,
+      "failure_category": null,
+      "expected_failure_if_any": null
+    },
+    {
+      "id": "esa_narrative_juice_targets",
+      "category": "narrative",
+      "query_kind": "narrative",
+      "query": "JUICE 任务目标有哪些",
+      "source_schema_version": "esa_shadow_ready_v1",
+      "expected_path": "fallback",
+      "actual_path": "fallback",
+      "allowed_final_sources": [
+        "fallback"
+      ],
+      "expected_result": {
+        "page_title": "JUICE",
+        "section_any_of": [
+          "任务"
+        ]
+      },
+      "expected_page_title": "JUICE",
+      "expected_section_any_of": [
+        "任务"
+      ],
+      "returned_result": {
+        "page_title": "JUICE",
+        "section": "任务",
+        "content": "ESA fixture 将 JUICE 记录为由 ESA 运营、面向木星及其木卫二、木卫三、木卫四的探测任务。",
+        "score": 0.9555555555555556,
+        "rank": 1,
+        "source": "esa",
+        "source_name": "esa",
+        "source_role": "primary",
+        "origin": "api",
+        "source_title": "JUICE",
+        "schema_version": "esa_shadow_ready_v1"
+      },
+      "top_k_results": [
+        {
+          "page_title": "JUICE",
+          "section": "任务",
+          "content": "ESA fixture 将 JUICE 记录为由 ESA 运营、面向木星及其木卫二、木卫三、木卫四的探测任务。",
+          "score": 0.9555555555555556,
+          "rank": 1,
+          "source": "esa",
+          "source_name": "esa",
+          "source_role": "primary",
+          "origin": "api",
+          "source_title": "JUICE",
+          "schema_version": "esa_shadow_ready_v1"
+        }
+      ],
+      "fallback_results": [
+        {
+          "page_title": "JUICE",
+          "section": "任务",
+          "content": "ESA fixture 将 JUICE 记录为由 ESA 运营、面向木星及其木卫二、木卫三、木卫四的探测任务。",
+          "score": 0.9555555555555556,
+          "rank": 1,
+          "source": "esa",
+          "source_name": "esa",
+          "source_role": "primary",
+          "origin": "api",
+          "source_title": "JUICE",
+          "schema_version": "esa_shadow_ready_v1"
+        }
+      ],
+      "exact_match": true,
+      "top_k_hit": true,
+      "expected_top_k_hit": true,
+      "top_k_expectation_met": true,
+      "path_correct": true,
+      "allowed_final_source_ok": true,
+      "pass": true,
+      "query_schema_ok": true,
+      "query_explainability_degraded": false,
+      "explainability_status": "ok",
+      "source_metadata": {
+        "page_title": "JUICE",
+        "section": "任务",
+        "content": "ESA fixture 将 JUICE 记录为由 ESA 运营、面向木星及其木卫二、木卫三、木卫四的探测任务。",
+        "score": 0.9555555555555556,
+        "rank": 1,
+        "source": "esa",
+        "source_name": "esa",
+        "source_role": "primary",
+        "origin": "api",
+        "source_title": "JUICE",
+        "schema_version": "esa_shadow_ready_v1"
+      },
+      "metadata_complete": true,
+      "source_filter_failed": false,
+      "inferred_boundary_break": false,
+      "fallback_exact_match": true,
+      "fallback_top_k_hit": true,
+      "consistency_match": true,
+      "failure_category": null,
+      "expected_failure_if_any": null
+    },
+    {
+      "id": "esa_negative_unknown_probe",
+      "category": "negative",
+      "query_kind": "structured",
+      "query": "不存在的 ESA 探测器绕谁运行",
+      "source_schema_version": "esa_shadow_ready_v1",
+      "expected_path": "fallback",
+      "actual_path": "fallback",
+      "allowed_final_sources": [
+        "fallback"
+      ],
+      "expected_result": {
+        "empty": true
+      },
+      "normalized_expected_value": null,
+      "normalized_returned_value": null,
+      "returned_result": null,
+      "top_k_results": [],
+      "graph_only_results": [],
+      "fallback_results": [],
+      "exact_match": true,
+      "top_k_hit": false,
+      "expected_top_k_hit": false,
+      "top_k_expectation_met": true,
+      "path_correct": true,
+      "allowed_final_source_ok": true,
+      "pass": true,
+      "query_schema_ok": true,
+      "query_explainability_degraded": false,
+      "explainability_status": "ok",
+      "source_metadata": null,
+      "metadata_complete": true,
+      "source_filter_failed": false,
+      "inferred_boundary_break": false,
+      "fallback_exact_match": true,
+      "fallback_top_k_hit": true,
+      "consistency_match": true,
+      "failure_category": null,
+      "expected_failure_if_any": null
+    },
+    {
+      "id": "esa_fallback_local_graph",
+      "category": "fallback",
+      "query_kind": "structured",
+      "query": "SMART-1 绕谁运行",
+      "source_schema_version": "esa_shadow_ready_v1",
+      "expected_path": "fallback",
+      "actual_path": "fallback",
+      "allowed_final_sources": [
+        "fallback"
+      ],
+      "expected_result": {
+        "subject": "SMART-1",
+        "relation": "ORBITS",
+        "object": "月球"
+      },
+      "normalized_expected_value": null,
+      "normalized_returned_value": "月球",
+      "returned_result": {
+        "subject": "SMART-1",
+        "relation": "ORBITS",
+        "object": "月球",
+        "source": "esa",
+        "source_name": "esa",
+        "source_role": "primary",
+        "origin": "api",
+        "source_title": "SMART-1",
+        "schema_version": "esa_shadow_ready_v1"
+      },
+      "top_k_results": [
+        {
+          "subject": "SMART-1",
+          "relation": "ORBITS",
+          "object": "月球",
+          "source": "esa",
+          "source_name": "esa",
+          "source_role": "primary",
+          "origin": "api",
+          "source_title": "SMART-1",
+          "schema_version": "esa_shadow_ready_v1"
+        }
+      ],
+      "graph_only_results": [],
+      "fallback_results": [
+        {
+          "subject": "SMART-1",
+          "relation": "ORBITS",
+          "object": "月球",
+          "source": "esa",
+          "source_name": "esa",
+          "source_role": "primary",
+          "origin": "api",
+          "source_title": "SMART-1",
+          "schema_version": "esa_shadow_ready_v1"
+        }
+      ],
+      "exact_match": true,
+      "top_k_hit": true,
+      "expected_top_k_hit": true,
+      "top_k_expectation_met": true,
+      "path_correct": true,
+      "allowed_final_source_ok": true,
+      "pass": true,
+      "query_schema_ok": true,
+      "query_explainability_degraded": false,
+      "explainability_status": "ok",
+      "source_metadata": {
+        "subject": "SMART-1",
+        "relation": "ORBITS",
+        "object": "月球",
+        "source": "esa",
+        "source_name": "esa",
+        "source_role": "primary",
+        "origin": "api",
+        "source_title": "SMART-1",
+        "schema_version": "esa_shadow_ready_v1"
+      },
+      "metadata_complete": true,
+      "source_filter_failed": false,
+      "inferred_boundary_break": false,
+      "fallback_exact_match": true,
+      "fallback_top_k_hit": true,
+      "consistency_match": true,
+      "failure_category": null,
+      "expected_failure_if_any": null
+    },
+    {
+      "id": "esa_source_isolation_gaia",
+      "category": "source_isolation",
+      "query_kind": "narrative",
+      "query": "Gaia 银河系测量任务",
+      "source_schema_version": "esa_shadow_ready_v1",
+      "expected_path": "fallback",
+      "actual_path": "fallback",
+      "allowed_final_sources": [
+        "fallback"
+      ],
+      "expected_result": {
+        "page_title": "Gaia",
+        "section_any_of": [
+          "任务"
+        ]
+      },
+      "expected_page_title": "Gaia",
+      "expected_section_any_of": [
+        "任务"
+      ],
+      "returned_result": {
+        "page_title": "Gaia",
+        "section": "任务",
+        "content": "ESA fixture 将 Gaia 记录为由 ESA 运营、沿太阳轨道工作并服务于银河系恒星测量的任务样例。",
+        "score": 1.0,
+        "rank": 1,
+        "source": "esa",
+        "source_name": "esa",
+        "source_role": "primary",
+        "origin": "api",
+        "source_title": "Gaia",
+        "schema_version": "esa_shadow_ready_v1"
+      },
+      "top_k_results": [
+        {
+          "page_title": "Gaia",
+          "section": "任务",
+          "content": "ESA fixture 将 Gaia 记录为由 ESA 运营、沿太阳轨道工作并服务于银河系恒星测量的任务样例。",
+          "score": 1.0,
+          "rank": 1,
+          "source": "esa",
+          "source_name": "esa",
+          "source_role": "primary",
+          "origin": "api",
+          "source_title": "Gaia",
+          "schema_version": "esa_shadow_ready_v1"
+        },
+        {
+          "page_title": "ESA - Gaia spots possible moons around hundreds of asteroids",
+          "section": "任务",
+          "content": "ESA - Gaia spots possible moons around hundreds of asteroids Science & Exploration Gaia spots possible moons around hundreds of asteroids 08/08/2024 9254 views 65 likes ESA / Science & Exploration / S...",
+          "score": 0.7111111111111111,
+          "rank": 2,
+          "source": "esa",
+          "source_name": "esa",
+          "source_role": "primary",
+          "origin": "api",
+          "source_title": "ESA - Gaia spots possible moons around hundreds of asteroids",
+          "schema_version": "esa_shadow_ready_v1"
+        },
+        {
+          "page_title": "ESA - Jupiter’s moon Europa to obscure distant star",
+          "section": "任务",
+          "content": "ESA - Jupiter’s moon Europa to obscure distant star Science & Exploration Jupiter’s moon Europa to obscure distant star 07/06/2022 7782 views 121 likes ESA / Science & Exploration / Space Science / Ga...",
+          "score": 0.4888888888888889,
+          "rank": 3,
+          "source": "esa",
+          "source_name": "esa",
+          "source_role": "primary",
+          "origin": "api",
+          "source_title": "ESA - Jupiter’s moon Europa to obscure distant star",
+          "schema_version": "esa_shadow_ready_v1"
+        }
+      ],
+      "fallback_results": [
+        {
+          "page_title": "Gaia",
+          "section": "任务",
+          "content": "ESA fixture 将 Gaia 记录为由 ESA 运营、沿太阳轨道工作并服务于银河系恒星测量的任务样例。",
+          "score": 1.0,
+          "rank": 1,
+          "source": "esa",
+          "source_name": "esa",
+          "source_role": "primary",
+          "origin": "api",
+          "source_title": "Gaia",
+          "schema_version": "esa_shadow_ready_v1"
+        },
+        {
+          "page_title": "ESA - Gaia spots possible moons around hundreds of asteroids",
+          "section": "任务",
+          "content": "ESA - Gaia spots possible moons around hundreds of asteroids Science & Exploration Gaia spots possible moons around hundreds of asteroids 08/08/2024 9254 views 65 likes ESA / Science & Exploration / S...",
+          "score": 0.7111111111111111,
+          "rank": 2,
+          "source": "esa",
+          "source_name": "esa",
+          "source_role": "primary",
+          "origin": "api",
+          "source_title": "ESA - Gaia spots possible moons around hundreds of asteroids",
+          "schema_version": "esa_shadow_ready_v1"
+        },
+        {
+          "page_title": "ESA - Jupiter’s moon Europa to obscure distant star",
+          "section": "任务",
+          "content": "ESA - Jupiter’s moon Europa to obscure distant star Science & Exploration Jupiter’s moon Europa to obscure distant star 07/06/2022 7782 views 121 likes ESA / Science & Exploration / Space Science / Ga...",
+          "score": 0.4888888888888889,
+          "rank": 3,
+          "source": "esa",
+          "source_name": "esa",
+          "source_role": "primary",
+          "origin": "api",
+          "source_title": "ESA - Jupiter’s moon Europa to obscure distant star",
+          "schema_version": "esa_shadow_ready_v1"
+        }
+      ],
+      "exact_match": true,
+      "top_k_hit": true,
+      "expected_top_k_hit": true,
+      "top_k_expectation_met": true,
+      "path_correct": true,
+      "allowed_final_source_ok": true,
+      "pass": true,
+      "query_schema_ok": true,
+      "query_explainability_degraded": false,
+      "explainability_status": "ok",
+      "source_metadata": {
+        "page_title": "Gaia",
+        "section": "任务",
+        "content": "ESA fixture 将 Gaia 记录为由 ESA 运营、沿太阳轨道工作并服务于银河系恒星测量的任务样例。",
+        "score": 1.0,
+        "rank": 1,
+        "source": "esa",
+        "source_name": "esa",
+        "source_role": "primary",
+        "origin": "api",
+        "source_title": "Gaia",
+        "schema_version": "esa_shadow_ready_v1"
+      },
+      "metadata_complete": true,
+      "source_filter_failed": false,
+      "inferred_boundary_break": false,
+      "fallback_exact_match": true,
+      "fallback_top_k_hit": true,
+      "consistency_match": true,
+      "failure_category": null,
+      "expected_failure_if_any": null
+    },
+    {
+      "id": "esa_metadata_structured_schema",
+      "category": "metadata_completeness",
+      "query_kind": "structured",
+      "query": "Solar Orbiter 绕谁运行 metadata",
+      "source_schema_version": "esa_shadow_ready_v1",
+      "expected_path": "fallback",
+      "actual_path": "fallback",
+      "allowed_final_sources": [
+        "fallback"
+      ],
+      "expected_result": {
+        "subject": "Solar Orbiter",
+        "relation": "ORBITS",
+        "object": "太阳"
+      },
+      "normalized_expected_value": null,
+      "normalized_returned_value": "太阳",
+      "returned_result": {
+        "subject": "Solar Orbiter",
+        "relation": "ORBITS",
+        "object": "太阳",
+        "source": "esa",
+        "source_name": "esa",
+        "source_role": "primary",
+        "origin": "api",
+        "source_title": "Solar Orbiter",
+        "schema_version": "esa_shadow_ready_v1"
+      },
+      "top_k_results": [
+        {
+          "subject": "Solar Orbiter",
+          "relation": "ORBITS",
+          "object": "太阳",
+          "source": "esa",
+          "source_name": "esa",
+          "source_role": "primary",
+          "origin": "api",
+          "source_title": "Solar Orbiter",
+          "schema_version": "esa_shadow_ready_v1"
+        }
+      ],
+      "graph_only_results": [],
+      "fallback_results": [
+        {
+          "subject": "Solar Orbiter",
+          "relation": "ORBITS",
+          "object": "太阳",
+          "source": "esa",
+          "source_name": "esa",
+          "source_role": "primary",
+          "origin": "api",
+          "source_title": "Solar Orbiter",
+          "schema_version": "esa_shadow_ready_v1"
+        }
+      ],
+      "exact_match": true,
+      "top_k_hit": true,
+      "expected_top_k_hit": true,
+      "top_k_expectation_met": true,
+      "path_correct": true,
+      "allowed_final_source_ok": true,
+      "pass": true,
+      "query_schema_ok": true,
+      "query_explainability_degraded": false,
+      "explainability_status": "ok",
+      "source_metadata": {
+        "subject": "Solar Orbiter",
+        "relation": "ORBITS",
+        "object": "太阳",
+        "source": "esa",
+        "source_name": "esa",
+        "source_role": "primary",
+        "origin": "api",
+        "source_title": "Solar Orbiter",
+        "schema_version": "esa_shadow_ready_v1"
+      },
+      "metadata_complete": true,
+      "source_filter_failed": false,
+      "inferred_boundary_break": false,
+      "fallback_exact_match": true,
+      "fallback_top_k_hit": true,
+      "consistency_match": true,
+      "failure_category": null,
+      "expected_failure_if_any": null
+    },
+    {
+      "id": "esa_path_routing_narrative",
+      "category": "path_routing",
+      "query_kind": "narrative",
+      "query": "Rosetta 彗星任务说明",
+      "source_schema_version": "esa_shadow_ready_v1",
+      "expected_path": "fallback",
+      "actual_path": "fallback",
+      "allowed_final_sources": [
+        "fallback"
+      ],
+      "expected_result": {
+        "page_title": "Rosetta",
+        "section_any_of": [
+          "任务"
+        ]
+      },
+      "expected_page_title": "Rosetta",
+      "expected_section_any_of": [
+        "任务"
+      ],
+      "returned_result": {
+        "page_title": "Rosetta",
+        "section": "任务",
+        "content": "ESA fixture 将 Rosetta 记录为由 ESA 运营、以彗星为主要任务目标的代表性深空任务。",
+        "score": 0.9111111111111111,
+        "rank": 1,
+        "source": "esa",
+        "source_name": "esa",
+        "source_role": "primary",
+        "origin": "api",
+        "source_title": "Rosetta",
+        "schema_version": "esa_shadow_ready_v1"
+      },
+      "top_k_results": [
+        {
+          "page_title": "Rosetta",
+          "section": "任务",
+          "content": "ESA fixture 将 Rosetta 记录为由 ESA 运营、以彗星为主要任务目标的代表性深空任务。",
+          "score": 0.9111111111111111,
+          "rank": 1,
+          "source": "esa",
+          "source_name": "esa",
+          "source_role": "primary",
+          "origin": "api",
+          "source_title": "Rosetta",
+          "schema_version": "esa_shadow_ready_v1"
+        },
+        {
+          "page_title": "ESA - Getting to know Rosetta’s comet",
+          "section": "任务",
+          "content": "ESA - Getting to know Rosetta’s comet Science & Exploration Getting to know Rosetta’s comet 22/01/2015 63685 views 288 likes ESA / Science & Exploration / Space Science / Rosetta Rosetta is revealing ...",
+          "score": 0.5666666666666667,
+          "rank": 2,
+          "source": "esa",
+          "source_name": "esa",
+          "source_role": "primary",
+          "origin": "api",
+          "source_title": "ESA - Getting to know Rosetta’s comet",
+          "schema_version": "esa_shadow_ready_v1"
+        },
+        {
+          "page_title": "ESA - Mission complete: Rosetta’s journey ends in daring descent to comet",
+          "section": "任务",
+          "content": "ESA - Mission complete: Rosetta’s journey ends in daring descent to comet Science & Exploration Mission complete: Rosetta’s journey ends in daring descent to comet 30/09/2016 135135 views 838 likes ES...",
+          "score": 0.5666666666666667,
+          "rank": 3,
+          "source": "esa",
+          "source_name": "esa",
+          "source_role": "primary",
+          "origin": "api",
+          "source_title": "ESA - Mission complete: Rosetta’s journey ends in daring descent to comet",
+          "schema_version": "esa_shadow_ready_v1"
+        }
+      ],
+      "fallback_results": [
+        {
+          "page_title": "Rosetta",
+          "section": "任务",
+          "content": "ESA fixture 将 Rosetta 记录为由 ESA 运营、以彗星为主要任务目标的代表性深空任务。",
+          "score": 0.9111111111111111,
+          "rank": 1,
+          "source": "esa",
+          "source_name": "esa",
+          "source_role": "primary",
+          "origin": "api",
+          "source_title": "Rosetta",
+          "schema_version": "esa_shadow_ready_v1"
+        },
+        {
+          "page_title": "ESA - Getting to know Rosetta’s comet",
+          "section": "任务",
+          "content": "ESA - Getting to know Rosetta’s comet Science & Exploration Getting to know Rosetta’s comet 22/01/2015 63685 views 288 likes ESA / Science & Exploration / Space Science / Rosetta Rosetta is revealing ...",
+          "score": 0.5666666666666667,
+          "rank": 2,
+          "source": "esa",
+          "source_name": "esa",
+          "source_role": "primary",
+          "origin": "api",
+          "source_title": "ESA - Getting to know Rosetta’s comet",
+          "schema_version": "esa_shadow_ready_v1"
+        },
+        {
+          "page_title": "ESA - Mission complete: Rosetta’s journey ends in daring descent to comet",
+          "section": "任务",
+          "content": "ESA - Mission complete: Rosetta’s journey ends in daring descent to comet Science & Exploration Mission complete: Rosetta’s journey ends in daring descent to comet 30/09/2016 135135 views 838 likes ES...",
+          "score": 0.5666666666666667,
+          "rank": 3,
+          "source": "esa",
+          "source_name": "esa",
+          "source_role": "primary",
+          "origin": "api",
+          "source_title": "ESA - Mission complete: Rosetta’s journey ends in daring descent to comet",
+          "schema_version": "esa_shadow_ready_v1"
+        }
+      ],
+      "exact_match": true,
+      "top_k_hit": true,
+      "expected_top_k_hit": true,
+      "top_k_expectation_met": true,
+      "path_correct": true,
+      "allowed_final_source_ok": true,
+      "pass": true,
+      "query_schema_ok": true,
+      "query_explainability_degraded": false,
+      "explainability_status": "ok",
+      "source_metadata": {
+        "page_title": "Rosetta",
+        "section": "任务",
+        "content": "ESA fixture 将 Rosetta 记录为由 ESA 运营、以彗星为主要任务目标的代表性深空任务。",
+        "score": 0.9111111111111111,
+        "rank": 1,
+        "source": "esa",
+        "source_name": "esa",
+        "source_role": "primary",
+        "origin": "api",
+        "source_title": "Rosetta",
+        "schema_version": "esa_shadow_ready_v1"
+      },
+      "metadata_complete": true,
+      "source_filter_failed": false,
+      "inferred_boundary_break": false,
+      "fallback_exact_match": true,
+      "fallback_top_k_hit": true,
+      "consistency_match": true,
+      "failure_category": null,
+      "expected_failure_if_any": null
+    },
+    {
+      "id": "esa_unit_normalization_smart1_orbit",
+      "category": "unit_normalization",
+      "query_kind": "structured",
+      "query": "SMART-1 绕谁飞行",
+      "source_schema_version": "esa_shadow_ready_v1",
+      "expected_path": "fallback",
+      "actual_path": "fallback",
+      "allowed_final_sources": [
+        "fallback"
+      ],
+      "expected_result": {
+        "subject": "SMART-1",
+        "relation": "ORBITS",
+        "object": "月球"
+      },
+      "normalized_expected_value": null,
+      "normalized_returned_value": "月球",
+      "returned_result": {
+        "subject": "SMART-1",
+        "relation": "ORBITS",
+        "object": "月球",
+        "source": "esa",
+        "source_name": "esa",
+        "source_role": "primary",
+        "origin": "api",
+        "source_title": "SMART-1",
+        "schema_version": "esa_shadow_ready_v1"
+      },
+      "top_k_results": [
+        {
+          "subject": "SMART-1",
+          "relation": "ORBITS",
+          "object": "月球",
+          "source": "esa",
+          "source_name": "esa",
+          "source_role": "primary",
+          "origin": "api",
+          "source_title": "SMART-1",
+          "schema_version": "esa_shadow_ready_v1"
+        }
+      ],
+      "graph_only_results": [],
+      "fallback_results": [
+        {
+          "subject": "SMART-1",
+          "relation": "ORBITS",
+          "object": "月球",
+          "source": "esa",
+          "source_name": "esa",
+          "source_role": "primary",
+          "origin": "api",
+          "source_title": "SMART-1",
+          "schema_version": "esa_shadow_ready_v1"
+        }
+      ],
+      "exact_match": true,
+      "top_k_hit": true,
+      "expected_top_k_hit": true,
+      "top_k_expectation_met": true,
+      "path_correct": true,
+      "allowed_final_source_ok": true,
+      "pass": true,
+      "query_schema_ok": true,
+      "query_explainability_degraded": false,
+      "explainability_status": "ok",
+      "source_metadata": {
+        "subject": "SMART-1",
+        "relation": "ORBITS",
+        "object": "月球",
+        "source": "esa",
+        "source_name": "esa",
+        "source_role": "primary",
+        "origin": "api",
+        "source_title": "SMART-1",
+        "schema_version": "esa_shadow_ready_v1"
+      },
+      "metadata_complete": true,
+      "source_filter_failed": false,
+      "inferred_boundary_break": false,
+      "fallback_exact_match": true,
+      "fallback_top_k_hit": true,
+      "consistency_match": true,
+      "failure_category": null,
+      "expected_failure_if_any": null
+    },
+    {
+      "id": "esa_conflict_case_target",
+      "category": "conflict_case",
+      "query_kind": "narrative",
+      "query": "JUICE 是去木星还是火星",
+      "source_schema_version": "esa_shadow_ready_v1",
+      "expected_path": "fallback",
+      "actual_path": "fallback",
+      "allowed_final_sources": [
+        "fallback"
+      ],
+      "expected_result": {
+        "page_title": "JUICE",
+        "section_any_of": [
+          "任务"
+        ]
+      },
+      "expected_page_title": "JUICE",
+      "expected_section_any_of": [
+        "任务"
+      ],
+      "returned_result": {
+        "page_title": "JUICE",
+        "section": "任务",
+        "content": "ESA fixture 将 JUICE 记录为由 ESA 运营、面向木星及其木卫二、木卫三、木卫四的探测任务。",
+        "score": 0.8,
+        "rank": 1,
+        "source": "esa",
+        "source_name": "esa",
+        "source_role": "primary",
+        "origin": "api",
+        "source_title": "JUICE",
+        "schema_version": "esa_shadow_ready_v1"
+      },
+      "top_k_results": [
+        {
+          "page_title": "JUICE",
+          "section": "任务",
+          "content": "ESA fixture 将 JUICE 记录为由 ESA 运营、面向木星及其木卫二、木卫三、木卫四的探测任务。",
+          "score": 0.8,
+          "rank": 1,
+          "source": "esa",
+          "source_name": "esa",
+          "source_role": "primary",
+          "origin": "api",
+          "source_title": "JUICE",
+          "schema_version": "esa_shadow_ready_v1"
+        }
+      ],
+      "fallback_results": [
+        {
+          "page_title": "JUICE",
+          "section": "任务",
+          "content": "ESA fixture 将 JUICE 记录为由 ESA 运营、面向木星及其木卫二、木卫三、木卫四的探测任务。",
+          "score": 0.8,
+          "rank": 1,
+          "source": "esa",
+          "source_name": "esa",
+          "source_role": "primary",
+          "origin": "api",
+          "source_title": "JUICE",
+          "schema_version": "esa_shadow_ready_v1"
+        }
+      ],
+      "exact_match": true,
+      "top_k_hit": true,
+      "expected_top_k_hit": true,
+      "top_k_expectation_met": true,
+      "path_correct": true,
+      "allowed_final_source_ok": true,
+      "pass": true,
+      "query_schema_ok": true,
+      "query_explainability_degraded": false,
+      "explainability_status": "ok",
+      "source_metadata": {
+        "page_title": "JUICE",
+        "section": "任务",
+        "content": "ESA fixture 将 JUICE 记录为由 ESA 运营、面向木星及其木卫二、木卫三、木卫四的探测任务。",
+        "score": 0.8,
+        "rank": 1,
+        "source": "esa",
+        "source_name": "esa",
+        "source_role": "primary",
+        "origin": "api",
+        "source_title": "JUICE",
+        "schema_version": "esa_shadow_ready_v1"
+      },
+      "metadata_complete": true,
+      "source_filter_failed": false,
+      "inferred_boundary_break": false,
+      "fallback_exact_match": true,
+      "fallback_top_k_hit": true,
+      "consistency_match": true,
+      "failure_category": null,
+      "expected_failure_if_any": null
+    }
+  ]
+}

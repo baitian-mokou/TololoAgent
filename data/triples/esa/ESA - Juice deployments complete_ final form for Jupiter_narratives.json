@@ -1,0 +1,23 @@
+[
+  {
+    "section": "任务",
+    "content": "ESA - Juice deployments complete: final form for Jupiter Science & Exploration Juice deployments complete: final form for Jupiter 26/05/2023 13873 views 187 likes ESA / Science & Exploration / Space Science / Juice Flight controllers at ESA’s mission control centre in Germany have been busy this week, working with instrument teams on the final deployments to prepare ESA’s Jupiter Icy Moons Explorer (Juice) for exploring Jupiter. It has been six weeks since Juice began its journey, and in that time the Flight Control Team have deployed all the solar panels, antennas, probes and booms that were tucked away safely during launch. The last step has been the swinging out and locking into place of the probes and antennas that make up Juice’s Radio & Plasma Wave Investigation (RPWI) . “It’s been a",
+    "keywords": [
+      "ESA - Juice deployments complete: final form for Jupiter",
+      "ESA",
+      "太阳系任务",
+      "木星",
+      "木卫二",
+      "木卫三",
+      "木卫四"
+    ],
+    "page_title": "ESA - Juice deployments complete: final form for Jupiter",
+    "source": "esa",
+    "source_name": "esa",
+    "source_role": "primary",
+    "origin": "api",
+    "type": "embedding_chunk",
+    "schema_version": "esa_shadow_ready_v1",
+    "source_title": "ESA - Juice deployments complete: final form for Jupiter"
+  }
+]

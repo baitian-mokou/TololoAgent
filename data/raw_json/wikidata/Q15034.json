@@ -1,0 +1,50 @@
+{
+  "record": {
+    "title": "妊神星",
+    "qid": "Q15034",
+    "triples": [
+      {
+        "relation": "ORBITS",
+        "object": "太阳",
+        "property_id": "P397"
+      },
+      {
+        "relation": "PART_OF",
+        "object": "柯伊伯带",
+        "property_id": "P361"
+      },
+      {
+        "relation": "LOCATED_IN",
+        "object": "太阳系",
+        "property_id": "P276"
+      },
+      {
+        "relation": "DISCOVERED_BY",
+        "object": "迈克·布朗",
+        "property_id": "P61"
+      },
+      {
+        "relation": "HAS_MASS",
+        "object": "4.006e21 kg",
+        "property_id": "P2067"
+      },
+      {
+        "relation": "HAS_RADIUS",
+        "object": "816 km",
+        "property_id": "P2120"
+      }
+    ],
+    "narratives": [
+      {
+        "section": "分类",
+        "content": "妊神星 fixture 保留其作为柯伊伯带矮行星的结构化事实，可用于 source isolation 和单位归一化检索。",
+        "keywords": [
+          "妊神星",
+          "柯伊伯带",
+          "半径"
+        ]
+      }
+    ]
+  },
+  "fixture_source": "solar_system_fixture.json"
+}

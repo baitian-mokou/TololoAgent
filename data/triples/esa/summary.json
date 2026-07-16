@@ -1,0 +1,15 @@
+{
+  "total_triples": 5,
+  "total_narratives": 94,
+  "total_files": 94,
+  "pipeline": "preprocess_v2",
+  "active_source": "zh_wikipedia",
+  "source_registry": {
+    "zh_wikipedia": "active",
+    "wikidata": "disabled",
+    "nasa": "disabled",
+    "esa": "disabled"
+  },
+  "source_schema_version": "esa_shadow_ready_v1",
+  "time": "2026-07-04 12:49:21"
+}

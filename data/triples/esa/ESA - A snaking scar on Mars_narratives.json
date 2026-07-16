@@ -1,0 +1,20 @@
+[
+  {
+    "section": "任务",
+    "content": "ESA - A snaking scar on Mars Science & Exploration A snaking scar on Mars 03/07/2024 16129 views 81 likes ESA / Science & Exploration / Space Science / Mars Express A fascinating feature takes centre stage in this new image from ESA’s Mars Express : a dark, uneven scar slicing through marbled ground at the foot of a giant volcano. A broader view of Aganippe Fossa This scar, known as Aganippe Fossa, is a patchy, roughly 600-km-long feature known as a ‘ graben ’: a ditch-like groove with steep walls on either side. Aganippe Fossa cuts across the lower flank of one of Mars’s largest volcanoes, Arsia Mons. Mars Express regularly observes Arsia Mons and its nearby companions in the region of Tharsis , where several of Mars’s behemoth volcanoes are found. This includes Olympus Mons , the tallest",
+    "keywords": [
+      "ESA - A snaking scar on Mars",
+      "ESA",
+      "太阳系任务",
+      "火星"
+    ],
+    "page_title": "ESA - A snaking scar on Mars",
+    "source": "esa",
+    "source_name": "esa",
+    "source_role": "primary",
+    "origin": "api",
+    "type": "embedding_chunk",
+    "schema_version": "esa_shadow_ready_v1",
+    "source_title": "ESA - A snaking scar on Mars"
+  }
+]

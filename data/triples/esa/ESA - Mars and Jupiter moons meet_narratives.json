@@ -1,0 +1,23 @@
+[
+  {
+    "section": "任务",
+    "content": "ESA - Mars and Jupiter moons meet Science & Exploration Mars and Jupiter moons meet 13/10/2022 22618 views 58 likes ESA / Science & Exploration / Space Science / Mars Express ESA’s Mars Express has captured the rare moment of Mars’ small moon Deimos passing in front of Jupiter and its four largest moons ­– the focus of ESA’s upcoming Jupiter Icy Moons Explorer launching next year. Celestial alignments like these enable a more precise determination of the martian moons’ orbits. Since arriving in orbit at the Red Planet in 2003, Mars Express routinely observes the planet’s geology. It also monitors the planet’s two moons Phobos and Deimos to understand more about their surface composition, in particular Phobos’ mysterious grooved terrain , and ultimately the moons’ puzzling origin. This incl",
+    "keywords": [
+      "ESA - Mars and Jupiter moons meet",
+      "ESA",
+      "太阳系任务",
+      "木星",
+      "木卫二",
+      "木卫三",
+      "木卫四"
+    ],
+    "page_title": "ESA - Mars and Jupiter moons meet",
+    "source": "esa",
+    "source_name": "esa",
+    "source_role": "primary",
+    "origin": "api",
+    "type": "embedding_chunk",
+    "schema_version": "esa_shadow_ready_v1",
+    "source_title": "ESA - Mars and Jupiter moons meet"
+  }
+]

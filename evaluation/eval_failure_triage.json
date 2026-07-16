@@ -1,0 +1,38 @@
+{
+  "status": "no_failures",
+  "failure_count": 0,
+  "reports": [
+    {
+      "report_name": "single_source_retrieval",
+      "source": "zh_wikipedia",
+      "path": "evaluation\\single_source_retrieval_report.json",
+      "exact_accuracy": 1.0,
+      "source_filter_failure_count": 0,
+      "metadata_contract_break_count": 0,
+      "inferred_boundary_break_count": 0,
+      "gates_passed": true
+    },
+    {
+      "report_name": "wikidata_source_expansion",
+      "source": "wikidata",
+      "path": "evaluation\\source_expansion\\wikidata\\wikidata_report.json",
+      "exact_accuracy": 1.0,
+      "source_filter_failure_count": 0,
+      "metadata_contract_break_count": 0,
+      "inferred_boundary_break_count": 0,
+      "gates_passed": true
+    },
+    {
+      "report_name": "nasa_source_expansion",
+      "source": "nasa",
+      "path": "evaluation\\source_expansion\\nasa\\nasa_report.json",
+      "exact_accuracy": 1.0,
+      "source_filter_failure_count": 0,
+      "metadata_contract_break_count": 0,
+      "inferred_boundary_break_count": 0,
+      "gates_passed": true
+    }
+  ],
+  "missing_reports": [],
+  "failures": []
+}

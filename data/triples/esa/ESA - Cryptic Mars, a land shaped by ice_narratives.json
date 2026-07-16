@@ -1,0 +1,20 @@
+[
+  {
+    "section": "任务",
+    "content": "ESA - Cryptic Mars, a land shaped by ice Science & Exploration Cryptic Mars, a land shaped by ice 09/10/2024 6710 views 82 likes ESA / Science & Exploration / Space Science / Mars Express ESA’s Mars Express has captured an astonishing array of landforms emerging from a thick winter blanket of frost as spring arrives in the south polar region of Mars. Some of these features are surprisingly dark compared with their icy surroundings, earning their nickname of ‘cryptic terrain’. A broader view of Australe Scopuli The seasonal polar caps of Mars are mainly composed of carbon dioxide ice with some water ice. The ice partially sublimates (turns directly from solid ice into vapour) in spring, releasing large amounts of gas into Mars’ thin atmosphere. In autumn, the vapour condenses again, and the",
+    "keywords": [
+      "ESA - Cryptic Mars, a land shaped by ice",
+      "ESA",
+      "太阳系任务",
+      "火星"
+    ],
+    "page_title": "ESA - Cryptic Mars, a land shaped by ice",
+    "source": "esa",
+    "source_name": "esa",
+    "source_role": "primary",
+    "origin": "api",
+    "type": "embedding_chunk",
+    "schema_version": "esa_shadow_ready_v1",
+    "source_title": "ESA - Cryptic Mars, a land shaped by ice"
+  }
+]

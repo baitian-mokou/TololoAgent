@@ -1,0 +1,13 @@
+beautifulsoup4
+chromadb
+huggingface-hub
+jieba
+neo4j
+numpy
+opencc-python-reimplemented
+pillow
+pystray
+requests
+sentence-transformers
+torch
+ttkbootstrap

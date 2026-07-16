@@ -1,0 +1,23 @@
+[
+  {
+    "section": "任务",
+    "content": "ESA - ESA’s ExoMars and Mars Express observe Comet 3I/ATLAS Science & Exploration ESA’s ExoMars and Mars Express observe Comet 3I/ATLAS 07/10/2025 627802 views 831 likes ESA / Science & Exploration / Space Science Between 1 and 7 October, ESA’s ExoMars Trace Gas Orbiter (TGO) and Mars Express spacecraft turned their eyes towards interstellar Comet 3I/ATLAS , as it passed close to Mars. The two Mars orbiters had the closest view of the comet of all ESA spacecraft . During its closest approach to the Red Planet on 3 October, the interstellar interloper was 30 million km away from them. Each spacecraft used its dedicated camera to watch the comet pass. Both cameras are designed to photograph the bright surface of Mars just a few hundred to a few thousand km below. Scientists were unsure what",
+    "keywords": [
+      "ESA - ESA’s ExoMars and Mars Express observe Comet 3I/ATLAS",
+      "ESA",
+      "太阳系任务",
+      "木星",
+      "木卫二",
+      "木卫三",
+      "木卫四"
+    ],
+    "page_title": "ESA - ESA’s ExoMars and Mars Express observe Comet 3I/ATLAS",
+    "source": "esa",
+    "source_name": "esa",
+    "source_role": "primary",
+    "origin": "api",
+    "type": "embedding_chunk",
+    "schema_version": "esa_shadow_ready_v1",
+    "source_title": "ESA - ESA’s ExoMars and Mars Express observe Comet 3I/ATLAS"
+  }
+]

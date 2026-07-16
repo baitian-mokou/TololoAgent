@@ -1,0 +1,670 @@
+{
+  "generated_at": "2026-07-07T13:27:32",
+  "summary": {
+    "total_queries": 12,
+    "route_pass_count": 12,
+    "router_accuracy": 1.0,
+    "source_trace_missing_count": 0,
+    "authority_mismatch_count": 0,
+    "silent_conflict_count": 0,
+    "default_auto_enabled": true
+  },
+  "cases": [
+    {
+      "query": "火星质量是多少",
+      "case": "numeric",
+      "expected_sources": [
+        "nasa",
+        "wikidata",
+        "zh_wikipedia",
+        "esa"
+      ],
+      "selected_sources": [
+        "nasa",
+        "wikidata",
+        "zh_wikipedia",
+        "esa"
+      ],
+      "route_ok": true,
+      "routing_reason": "numeric or physical-parameter keywords matched; keep nasa first but search peer candidates in parallel",
+      "fusion_mode": "peer_source_fusion",
+      "authority_source": "nasa",
+      "source_trace": [
+        {
+          "source_name": "nasa",
+          "neo4j_count": 1,
+          "chroma_count": 1,
+          "is_authority_source": true
+        },
+        {
+          "source_name": "wikidata",
+          "neo4j_count": 1,
+          "chroma_count": 1,
+          "is_authority_source": false
+        },
+        {
+          "source_name": "zh_wikipedia",
+          "neo4j_count": 1,
+          "chroma_count": 1,
+          "is_authority_source": false
+        },
+        {
+          "source_name": "esa",
+          "neo4j_count": 1,
+          "chroma_count": 1,
+          "is_authority_source": false
+        }
+      ],
+      "conflict_detected": false,
+      "conflicts": [],
+      "cross_source_fusion_summary": {
+        "multi_source_agreement_count": 1,
+        "near_equivalent_values_count": 0,
+        "measurement_kind_difference_count": 0,
+        "human_review_required_count": 0
+      }
+    },
+    {
+      "query": "地球平均半径是多少",
+      "case": "numeric",
+      "expected_sources": [
+        "nasa",
+        "wikidata",
+        "zh_wikipedia",
+        "esa"
+      ],
+      "selected_sources": [
+        "nasa",
+        "wikidata",
+        "zh_wikipedia",
+        "esa"
+      ],
+      "route_ok": true,
+      "routing_reason": "numeric or physical-parameter keywords matched; keep nasa first but search peer candidates in parallel",
+      "fusion_mode": "peer_source_fusion",
+      "authority_source": "nasa",
+      "source_trace": [
+        {
+          "source_name": "nasa",
+          "neo4j_count": 1,
+          "chroma_count": 1,
+          "is_authority_source": true
+        },
+        {
+          "source_name": "wikidata",
+          "neo4j_count": 1,
+          "chroma_count": 1,
+          "is_authority_source": false
+        },
+        {
+          "source_name": "zh_wikipedia",
+          "neo4j_count": 1,
+          "chroma_count": 1,
+          "is_authority_source": false
+        },
+        {
+          "source_name": "esa",
+          "neo4j_count": 1,
+          "chroma_count": 1,
+          "is_authority_source": false
+        }
+      ],
+      "conflict_detected": false,
+      "conflicts": [],
+      "cross_source_fusion_summary": {
+        "multi_source_agreement_count": 1,
+        "near_equivalent_values_count": 0,
+        "measurement_kind_difference_count": 0,
+        "human_review_required_count": 0
+      }
+    },
+    {
+      "query": "金星大气成分是什么",
+      "case": "numeric",
+      "expected_sources": [
+        "nasa",
+        "wikidata",
+        "zh_wikipedia",
+        "esa"
+      ],
+      "selected_sources": [
+        "nasa",
+        "wikidata",
+        "zh_wikipedia",
+        "esa"
+      ],
+      "route_ok": true,
+      "routing_reason": "numeric or physical-parameter keywords matched; keep nasa first but search peer candidates in parallel",
+      "fusion_mode": "peer_source_fusion",
+      "authority_source": "nasa",
+      "source_trace": [
+        {
+          "source_name": "nasa",
+          "neo4j_count": 1,
+          "chroma_count": 1,
+          "is_authority_source": true
+        },
+        {
+          "source_name": "wikidata",
+          "neo4j_count": 1,
+          "chroma_count": 1,
+          "is_authority_source": false
+        },
+        {
+          "source_name": "zh_wikipedia",
+          "neo4j_count": 1,
+          "chroma_count": 1,
+          "is_authority_source": false
+        },
+        {
+          "source_name": "esa",
+          "neo4j_count": 1,
+          "chroma_count": 1,
+          "is_authority_source": false
+        }
+      ],
+      "conflict_detected": false,
+      "conflicts": [],
+      "cross_source_fusion_summary": {
+        "multi_source_agreement_count": 1,
+        "near_equivalent_values_count": 0,
+        "measurement_kind_difference_count": 0,
+        "human_review_required_count": 0
+      }
+    },
+    {
+      "query": "月球绕行什么",
+      "case": "structured",
+      "expected_sources": [
+        "wikidata",
+        "nasa",
+        "zh_wikipedia",
+        "esa"
+      ],
+      "selected_sources": [
+        "wikidata",
+        "nasa",
+        "zh_wikipedia",
+        "esa"
+      ],
+      "route_ok": true,
+      "routing_reason": "structured relation keywords matched; keep wikidata first but search peer candidates in parallel",
+      "fusion_mode": "peer_source_fusion",
+      "authority_source": "wikidata",
+      "source_trace": [
+        {
+          "source_name": "wikidata",
+          "neo4j_count": 1,
+          "chroma_count": 0,
+          "is_authority_source": true
+        },
+        {
+          "source_name": "nasa",
+          "neo4j_count": 0,
+          "chroma_count": 0,
+          "is_authority_source": false
+        },
+        {
+          "source_name": "zh_wikipedia",
+          "neo4j_count": 0,
+          "chroma_count": 0,
+          "is_authority_source": false
+        },
+        {
+          "source_name": "esa",
+          "neo4j_count": 0,
+          "chroma_count": 0,
+          "is_authority_source": false
+        }
+      ],
+      "conflict_detected": false,
+      "conflicts": [],
+      "cross_source_fusion_summary": {
+        "multi_source_agreement_count": 0,
+        "near_equivalent_values_count": 0,
+        "measurement_kind_difference_count": 0,
+        "human_review_required_count": 0
+      }
+    },
+    {
+      "query": "木卫二属于什么系统",
+      "case": "structured",
+      "expected_sources": [
+        "wikidata",
+        "nasa",
+        "zh_wikipedia",
+        "esa"
+      ],
+      "selected_sources": [
+        "wikidata",
+        "nasa",
+        "zh_wikipedia",
+        "esa"
+      ],
+      "route_ok": true,
+      "routing_reason": "structured relation keywords matched; keep wikidata first but search peer candidates in parallel",
+      "fusion_mode": "peer_source_fusion",
+      "authority_source": "wikidata",
+      "source_trace": [
+        {
+          "source_name": "wikidata",
+          "neo4j_count": 1,
+          "chroma_count": 0,
+          "is_authority_source": true
+        },
+        {
+          "source_name": "nasa",
+          "neo4j_count": 0,
+          "chroma_count": 0,
+          "is_authority_source": false
+        },
+        {
+          "source_name": "zh_wikipedia",
+          "neo4j_count": 0,
+          "chroma_count": 0,
+          "is_authority_source": false
+        },
+        {
+          "source_name": "esa",
+          "neo4j_count": 0,
+          "chroma_count": 0,
+          "is_authority_source": false
+        }
+      ],
+      "conflict_detected": false,
+      "conflicts": [],
+      "cross_source_fusion_summary": {
+        "multi_source_agreement_count": 0,
+        "near_equivalent_values_count": 0,
+        "measurement_kind_difference_count": 0,
+        "human_review_required_count": 0
+      }
+    },
+    {
+      "query": "冥王星位于哪里",
+      "case": "structured",
+      "expected_sources": [
+        "wikidata",
+        "nasa",
+        "zh_wikipedia",
+        "esa"
+      ],
+      "selected_sources": [
+        "wikidata",
+        "nasa",
+        "zh_wikipedia",
+        "esa"
+      ],
+      "route_ok": true,
+      "routing_reason": "structured relation keywords matched; keep wikidata first but search peer candidates in parallel",
+      "fusion_mode": "peer_source_fusion",
+      "authority_source": "wikidata",
+      "source_trace": [
+        {
+          "source_name": "wikidata",
+          "neo4j_count": 1,
+          "chroma_count": 0,
+          "is_authority_source": true
+        },
+        {
+          "source_name": "nasa",
+          "neo4j_count": 0,
+          "chroma_count": 0,
+          "is_authority_source": false
+        },
+        {
+          "source_name": "zh_wikipedia",
+          "neo4j_count": 0,
+          "chroma_count": 0,
+          "is_authority_source": false
+        },
+        {
+          "source_name": "esa",
+          "neo4j_count": 0,
+          "chroma_count": 0,
+          "is_authority_source": false
+        }
+      ],
+      "conflict_detected": false,
+      "conflicts": [],
+      "cross_source_fusion_summary": {
+        "multi_source_agreement_count": 0,
+        "near_equivalent_values_count": 0,
+        "measurement_kind_difference_count": 0,
+        "human_review_required_count": 0
+      }
+    },
+    {
+      "query": "JUICE 探测任务研究什么",
+      "case": "esa",
+      "expected_sources": [
+        "esa",
+        "nasa",
+        "wikidata",
+        "zh_wikipedia"
+      ],
+      "selected_sources": [
+        "esa",
+        "nasa",
+        "wikidata",
+        "zh_wikipedia"
+      ],
+      "route_ok": true,
+      "routing_reason": "esa mission keywords matched; keep esa first but search peer candidates in parallel",
+      "fusion_mode": "peer_source_fusion",
+      "authority_source": "esa",
+      "source_trace": [
+        {
+          "source_name": "esa",
+          "neo4j_count": 0,
+          "chroma_count": 1,
+          "is_authority_source": true
+        },
+        {
+          "source_name": "nasa",
+          "neo4j_count": 0,
+          "chroma_count": 0,
+          "is_authority_source": false
+        },
+        {
+          "source_name": "wikidata",
+          "neo4j_count": 0,
+          "chroma_count": 0,
+          "is_authority_source": false
+        },
+        {
+          "source_name": "zh_wikipedia",
+          "neo4j_count": 0,
+          "chroma_count": 0,
+          "is_authority_source": false
+        }
+      ],
+      "conflict_detected": false,
+      "conflicts": [],
+      "cross_source_fusion_summary": {
+        "multi_source_agreement_count": 0,
+        "near_equivalent_values_count": 0,
+        "measurement_kind_difference_count": 0,
+        "human_review_required_count": 0
+      }
+    },
+    {
+      "query": "Rosetta 探测器做了什么",
+      "case": "esa",
+      "expected_sources": [
+        "esa",
+        "nasa",
+        "wikidata",
+        "zh_wikipedia"
+      ],
+      "selected_sources": [
+        "esa",
+        "nasa",
+        "wikidata",
+        "zh_wikipedia"
+      ],
+      "route_ok": true,
+      "routing_reason": "esa mission keywords matched; keep esa first but search peer candidates in parallel",
+      "fusion_mode": "peer_source_fusion",
+      "authority_source": "esa",
+      "source_trace": [
+        {
+          "source_name": "esa",
+          "neo4j_count": 0,
+          "chroma_count": 1,
+          "is_authority_source": true
+        },
+        {
+          "source_name": "nasa",
+          "neo4j_count": 0,
+          "chroma_count": 0,
+          "is_authority_source": false
+        },
+        {
+          "source_name": "wikidata",
+          "neo4j_count": 0,
+          "chroma_count": 0,
+          "is_authority_source": false
+        },
+        {
+          "source_name": "zh_wikipedia",
+          "neo4j_count": 0,
+          "chroma_count": 0,
+          "is_authority_source": false
+        }
+      ],
+      "conflict_detected": false,
+      "conflicts": [],
+      "cross_source_fusion_summary": {
+        "multi_source_agreement_count": 0,
+        "near_equivalent_values_count": 0,
+        "measurement_kind_difference_count": 0,
+        "human_review_required_count": 0
+      }
+    },
+    {
+      "query": "太阳为什么会发光",
+      "case": "narrative",
+      "expected_sources": [
+        "zh_wikipedia",
+        "nasa",
+        "esa",
+        "wikidata"
+      ],
+      "selected_sources": [
+        "zh_wikipedia",
+        "nasa",
+        "esa",
+        "wikidata"
+      ],
+      "route_ok": true,
+      "routing_reason": "narrative explanation keywords matched; keep zh_wikipedia first but search peer candidates in parallel",
+      "fusion_mode": "peer_source_fusion",
+      "authority_source": "zh_wikipedia",
+      "source_trace": [
+        {
+          "source_name": "zh_wikipedia",
+          "neo4j_count": 0,
+          "chroma_count": 1,
+          "is_authority_source": true
+        },
+        {
+          "source_name": "nasa",
+          "neo4j_count": 0,
+          "chroma_count": 0,
+          "is_authority_source": false
+        },
+        {
+          "source_name": "esa",
+          "neo4j_count": 0,
+          "chroma_count": 0,
+          "is_authority_source": false
+        },
+        {
+          "source_name": "wikidata",
+          "neo4j_count": 0,
+          "chroma_count": 0,
+          "is_authority_source": false
+        }
+      ],
+      "conflict_detected": false,
+      "conflicts": [],
+      "cross_source_fusion_summary": {
+        "multi_source_agreement_count": 0,
+        "near_equivalent_values_count": 0,
+        "measurement_kind_difference_count": 0,
+        "human_review_required_count": 0
+      }
+    },
+    {
+      "query": "月球的形成历史是什么",
+      "case": "narrative",
+      "expected_sources": [
+        "zh_wikipedia",
+        "nasa",
+        "esa",
+        "wikidata"
+      ],
+      "selected_sources": [
+        "zh_wikipedia",
+        "nasa",
+        "esa",
+        "wikidata"
+      ],
+      "route_ok": true,
+      "routing_reason": "narrative explanation keywords matched; keep zh_wikipedia first but search peer candidates in parallel",
+      "fusion_mode": "peer_source_fusion",
+      "authority_source": "zh_wikipedia",
+      "source_trace": [
+        {
+          "source_name": "zh_wikipedia",
+          "neo4j_count": 0,
+          "chroma_count": 1,
+          "is_authority_source": true
+        },
+        {
+          "source_name": "nasa",
+          "neo4j_count": 0,
+          "chroma_count": 0,
+          "is_authority_source": false
+        },
+        {
+          "source_name": "esa",
+          "neo4j_count": 0,
+          "chroma_count": 0,
+          "is_authority_source": false
+        },
+        {
+          "source_name": "wikidata",
+          "neo4j_count": 0,
+          "chroma_count": 0,
+          "is_authority_source": false
+        }
+      ],
+      "conflict_detected": false,
+      "conflicts": [],
+      "cross_source_fusion_summary": {
+        "multi_source_agreement_count": 0,
+        "near_equivalent_values_count": 0,
+        "measurement_kind_difference_count": 0,
+        "human_review_required_count": 0
+      }
+    },
+    {
+      "query": "火星质量是多少，为什么和地球不同",
+      "case": "ambiguous",
+      "expected_sources": [
+        "nasa",
+        "wikidata",
+        "zh_wikipedia",
+        "esa"
+      ],
+      "selected_sources": [
+        "nasa",
+        "wikidata",
+        "zh_wikipedia",
+        "esa"
+      ],
+      "route_ok": true,
+      "routing_reason": "query mixes numeric fact and explanation; use peer candidate sources and let relation-aware fusion decide authority",
+      "fusion_mode": "peer_source_fusion",
+      "authority_source": "nasa",
+      "source_trace": [
+        {
+          "source_name": "nasa",
+          "neo4j_count": 1,
+          "chroma_count": 0,
+          "is_authority_source": true
+        },
+        {
+          "source_name": "wikidata",
+          "neo4j_count": 1,
+          "chroma_count": 0,
+          "is_authority_source": false
+        },
+        {
+          "source_name": "zh_wikipedia",
+          "neo4j_count": 0,
+          "chroma_count": 1,
+          "is_authority_source": false
+        },
+        {
+          "source_name": "esa",
+          "neo4j_count": 0,
+          "chroma_count": 0,
+          "is_authority_source": false
+        }
+      ],
+      "conflict_detected": false,
+      "conflicts": [],
+      "cross_source_fusion_summary": {
+        "multi_source_agreement_count": 1,
+        "near_equivalent_values_count": 0,
+        "measurement_kind_difference_count": 0,
+        "human_review_required_count": 0
+      }
+    },
+    {
+      "query": "金星半径是多少",
+      "case": "agreement",
+      "expected_sources": [
+        "nasa",
+        "wikidata",
+        "zh_wikipedia",
+        "esa"
+      ],
+      "selected_sources": [
+        "nasa",
+        "wikidata",
+        "zh_wikipedia",
+        "esa"
+      ],
+      "route_ok": true,
+      "routing_reason": "numeric or physical-parameter keywords matched; keep nasa first but search peer candidates in parallel",
+      "fusion_mode": "peer_source_fusion",
+      "authority_source": "nasa",
+      "source_trace": [
+        {
+          "source_name": "nasa",
+          "neo4j_count": 1,
+          "chroma_count": 0,
+          "is_authority_source": true
+        },
+        {
+          "source_name": "wikidata",
+          "neo4j_count": 1,
+          "chroma_count": 0,
+          "is_authority_source": false
+        },
+        {
+          "source_name": "zh_wikipedia",
+          "neo4j_count": 0,
+          "chroma_count": 1,
+          "is_authority_source": false
+        },
+        {
+          "source_name": "esa",
+          "neo4j_count": 0,
+          "chroma_count": 0,
+          "is_authority_source": false
+        }
+      ],
+      "conflict_detected": false,
+      "conflicts": [],
+      "cross_source_fusion_summary": {
+        "multi_source_agreement_count": 1,
+        "near_equivalent_values_count": 0,
+        "measurement_kind_difference_count": 0,
+        "human_review_required_count": 0
+      }
+    }
+  ],
+  "gates": {
+    "router_accuracy": 1.0,
+    "source_trace_missing_count": 0,
+    "authority_mismatch_count": 0,
+    "silent_conflict_count": 0,
+    "default_auto_enabled": true,
+    "passed": true
+  }
+}

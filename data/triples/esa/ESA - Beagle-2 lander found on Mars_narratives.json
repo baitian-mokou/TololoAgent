@@ -1,0 +1,20 @@
+[
+  {
+    "section": "任务",
+    "content": "ESA - Beagle-2 lander found on Mars Science & Exploration Beagle-2 lander found on Mars 16/01/2015 93114 views 297 likes ESA / Science & Exploration / Space Science / Mars Express The UK-led Beagle-2 Mars lander, which hitched a ride on ESA’s Mars Express mission and was lost on Mars since 2003, has been found in images taken by a NASA orbiter at the Red Planet. Beagle-2 was released from its mother craft on 19 December 2003 and was due to land six days later. But nothing was heard from the lander after its scheduled touchdown, and searches by Mars Express and NASA’s Mars Odyssey mission were fruitless. Now, over a decade later, the lander has been identified in images taken by the high-resolution camera on NASA’s Mars Reconnaissance Orbiter. The lander is seen partially deployed on the su",
+    "keywords": [
+      "ESA - Beagle-2 lander found on Mars",
+      "ESA",
+      "太阳系任务",
+      "火星"
+    ],
+    "page_title": "ESA - Beagle-2 lander found on Mars",
+    "source": "esa",
+    "source_name": "esa",
+    "source_role": "primary",
+    "origin": "api",
+    "type": "embedding_chunk",
+    "schema_version": "esa_shadow_ready_v1",
+    "source_title": "ESA - Beagle-2 lander found on Mars"
+  }
+]

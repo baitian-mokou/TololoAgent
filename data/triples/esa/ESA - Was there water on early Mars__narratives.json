@@ -1,0 +1,22 @@
+[
+  {
+    "section": "任务",
+    "content": "ESA - Was there water on early Mars? Science & Exploration Was there water on early Mars? 10316 views 21 likes ESA / Science & Exploration / Space Science / Mars Express For a number of decades, astronomers have wondered about water on Mars. Thanks to ESA's Mars Express, much of the speculation has been replaced with facts. Ancient river valley network Since the Viking missions of the 1970s, planetary scientists have changed their perception of water on Mars several times, passing from the picture of a dry planet to that of a warmer and wetter one. Mars Express's data are now shedding a new light on the complex issue of the evolution of water on the Red Planet. All seven of Mars Express' instruments are helping us unravel Mars' watery history – answering questions such as: where was the li",
+    "keywords": [
+      "ESA - Was there water on early Mars?",
+      "ESA",
+      "太阳系任务",
+      "火星"
+    ],
+    "page_title": "ESA - Was there water on early Mars?",
+    "path": "任务",
+    "chunk_index": 0,
+    "source": "esa",
+    "source_name": "esa",
+    "source_role": "primary",
+    "source_title": "ESA - Was there water on early Mars?",
+    "origin": "html_fallback",
+    "schema_version": "esa_shadow_ready_v1",
+    "type": "embedding_chunk"
+  }
+]

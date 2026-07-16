@@ -1,0 +1,22 @@
+[
+  {
+    "section": "任务",
+    "content": "ESA - Gaia Science & Exploration Gaia ESA's billion star surveyor The mission From 27 July 2014 to 15 January 2025, Gaia has made more than three trillion observations of two billion stars and other objects throughout our Milky Way galaxy and beyond, mapping their motions, luminosity, temperature and composition. Gaia's extraordinarily precise three-dimensional map will provide the data needed to tackle an enormous range of important questions related to the origin, structure and evolutionary history of our galaxy. Launch: 19 December 2013 Orbit: L2 Lagrange point End of science observations : 15 January 2025 Upcoming data releases: Data Release 4 (based on 66 months of data): expected December 2026 Data Release 5 (based on all mission data): not before the end of 2030 Previous data releas",
+    "keywords": [
+      "ESA - Gaia",
+      "ESA",
+      "太阳系任务",
+      "太阳"
+    ],
+    "page_title": "ESA - Gaia",
+    "path": "任务",
+    "chunk_index": 0,
+    "source": "esa",
+    "source_name": "esa",
+    "source_role": "primary",
+    "source_title": "ESA - Gaia",
+    "origin": "html_fallback",
+    "schema_version": "esa_shadow_ready_v1",
+    "type": "embedding_chunk"
+  }
+]

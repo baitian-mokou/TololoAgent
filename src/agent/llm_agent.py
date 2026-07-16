@@ -1,0 +1,2224 @@
+"""
+LLM Agent — 基于 Qwen3 的知识增强对话引擎
+通过 Ollama API 调用 Qwen3 模型，结合 Neo4j 知识图谱和 Chroma 向量库实现 RAG
+"""
+import sys
+import os
+import json
+import glob
+import re
+import urllib.request
+import urllib.error
+import threading
+import logging
+from typing import Callable, Dict, List, Optional
+
+sys.path.insert(0, os.path.join(os.path.dirname(os.path.abspath(__file__)), '..', '..'))
+from config import BASE_DIR, OLLAMA_BASE_URL, OLLAMA_MODEL, OLLAMA_TIMEOUT, TRIPLES_DIR
+from src.nlp.query_analyzer import build_query_context
+from src.nlp.text_normalizer import (
+    normalize_narrative_record,
+    normalize_to_simplified,
+    normalize_triple_record,
+)
+from src.source_control import (
+    ACTIVE_SOURCE,
+    ORIGIN_INTERNAL_LINK,
+    SOURCE_ROLE,
+    get_single_source_baseline_namespace,
+    get_source_namespace_dir,
+    get_source_schema_version,
+    normalize_source_filter,
+)
+from src.source_quality.cross_source_fusion import fuse_cross_source_records
+from src.source_router import SourceRouter
+
+logger = logging.getLogger(__name__)
+
+
+class LLMAgent:
+    """Qwen3 知识增强对话引擎（支持本地Ollama和远程OpenAI兼容API）"""
+
+    AUTO_SOURCE_NAME = "auto"
+    SOURCE_DISPLAY_NAMES = {
+        "zh_wikipedia": "中文维基",
+        "wikidata": "Wikidata",
+        "nasa": "NASA",
+        "esa": "ESA",
+    }
+    RELATION_AUTHORITY_ORDER = {
+        "HAS_RADIUS": ["nasa", "wikidata", "zh_wikipedia", "esa"],
+        "HAS_DIAMETER": ["nasa", "wikidata", "zh_wikipedia", "esa"],
+        "HAS_MASS": ["nasa", "wikidata", "zh_wikipedia", "esa"],
+        "HAS_ATMOSPHERE": ["nasa", "zh_wikipedia", "wikidata", "esa"],
+        "ORBITS": ["wikidata", "nasa", "zh_wikipedia", "esa"],
+        "PART_OF": ["wikidata", "zh_wikipedia", "nasa", "esa"],
+        "LOCATED_IN": ["wikidata", "zh_wikipedia", "esa", "nasa"],
+        "DISCOVERED_BY": ["wikidata", "zh_wikipedia", "nasa", "esa"],
+    }
+    INTENT_AUTHORITY_ORDER = {
+        "esa_mission": ["esa", "nasa", "wikidata", "zh_wikipedia"],
+        "narrative_explanation": ["zh_wikipedia", "nasa", "esa", "wikidata"],
+        "mixed_numeric_narrative": ["nasa", "wikidata", "zh_wikipedia", "esa"],
+        "numeric_fact": ["nasa", "wikidata", "zh_wikipedia", "esa"],
+        "structured_fact": ["wikidata", "nasa", "zh_wikipedia", "esa"],
+        "uncertain": ["nasa", "wikidata", "zh_wikipedia", "esa"],
+    }
+
+    PLANET_LOCATION_MAP = {
+        "水星": "太阳系",
+        "金星": "太阳系",
+        "地球": "太阳系",
+        "火星": "太阳系",
+        "木星": "太阳系",
+        "土星": "太阳系",
+        "天王星": "太阳系",
+        "海王星": "太阳系",
+        "冥王星": "太阳系",
+        "太阳": "太阳系",
+    }
+
+    SATELLITE_HOST_PREFIXES = {
+        "火卫": "火星",
+        "木卫": "木星",
+        "土卫": "土星",
+        "天卫": "天王星",
+        "海卫": "海王星",
+        "冥卫": "冥王星",
+    }
+    RELATION_RAW_HINTS = {
+        "HAS_MASS": "质量",
+        "HAS_RADIUS": "半径",
+        "HAS_ATMOSPHERE": "大气",
+        "ORBITS": "绕行",
+        "PART_OF": "属于",
+        "LOCATED_IN": "位于",
+        "DISCOVERED_BY": "发现者",
+    }
+
+    def __init__(self, source_name=None, source_role=None, schema_version=None):
+        # settings 缓存，避免每次 chat 都读磁盘
+        self._settings_cache = None
+        self.source_name = source_name or get_single_source_baseline_namespace() or ACTIVE_SOURCE
+        self.source_role = source_role or SOURCE_ROLE
+        self.schema_version = schema_version
+        self.triples_dir = get_source_namespace_dir(TRIPLES_DIR, self.source_name)
+        self._load_settings()
+        self._neo4j_loader = None
+        self._chroma_store = None
+        self._entity_catalog = None
+
+    def _load_settings(self):
+        """加载 settings.json 中的LLM配置（带缓存）"""
+        from src.gui.settings_manager import SettingsManager
+        try:
+            sm = SettingsManager()
+            data = sm.get_all()
+            self._settings_cache = data
+        except Exception as e:
+            logger.warning("读取 settings.json 失败，回退到默认配置: %s", e)
+            data = self._settings_cache or {}
+
+        conn = data.get("connect", {})
+        self.base_url = conn.get("ollama_url", OLLAMA_BASE_URL).rstrip('/')
+        self.model = conn.get("ollama_model", OLLAMA_MODEL)
+        self.timeout = int(conn.get("ollama_timeout", OLLAMA_TIMEOUT))
+
+        # 远程API开关
+        llm_src = data.get("llm_source", {})
+        self.use_remote_api = llm_src.get("use_remote_api", False)
+        self.api_base = llm_src.get("api_base", "").rstrip('/')
+        self.remote_model = (
+            llm_src.get("remote_model", "").strip()
+            or self._default_remote_model(self.api_base)
+            or self.model
+        )
+        self.api_key = llm_src.get("api_key", "")
+
+        # 推理参数
+        agent = data.get("agent", {})
+        self.temperature = float(agent.get("temperature", 0.7))
+        self.top_p = float(agent.get("top_p", 0.9))
+        self.max_tokens = int(agent.get("max_tokens", 2048))
+
+        # 系统提示词
+        self.system_role = agent.get("system_role",
+            "你是一个专业的太阳系天文学知识助手，基于托洛洛太阳系知识图谱系统为用户解答问题。")
+        self.retrieval_instruction = agent.get("retrieval_instruction",
+            "请根据以下知识图谱检索结果，用中文回答用户的问题。如果检索结果不足以回答问题，请如实说明，不要编造信息。回答应简洁准确，可适当补充天文学常识。")
+        self.fallback_response = agent.get("fallback_response",
+            "请基于以上知识检索结果回答问题。如果知识库中没有相关信息，请说'知识库中暂无相关信息'，然后你可以基于你的常识补充说明。")
+
+    # ─── 可用性检测 ────────────────────────────────────────
+
+    @staticmethod
+    def _default_remote_model(api_base: str) -> str:
+        if "deepseek" in str(api_base or "").lower():
+            return "deepseek-v4-flash"
+        return ""
+
+    @staticmethod
+    def _normalize_model_name(name: str) -> str:
+        name = str(name or "").strip().lower()
+        if name.endswith(":latest"):
+            name = name[:-7]
+        return name
+
+    @classmethod
+    def _model_names_match(cls, requested: str, available: str) -> bool:
+        requested = cls._normalize_model_name(requested)
+        available = cls._normalize_model_name(available)
+        return bool(requested and available and requested == available)
+
+    def is_ollama_running(self) -> bool:
+        """检测 Ollama 服务是否运行"""
+        try:
+            req = urllib.request.Request(f"{self.base_url}/api/tags")
+            with urllib.request.urlopen(req, timeout=3) as resp:
+                return resp.status == 200
+        except Exception:
+            return False
+
+    def is_model_available(self) -> bool:
+        """检测 Qwen3 模型是否已下载"""
+        models = self.get_available_models()
+        if any(self._model_names_match(self.model, name) for name in models):
+            return True
+
+        # Some Ollama setups can load a configured model via /api/chat even when
+        # the tag list is stale or incomplete. /api/show is a closer availability
+        # probe for the exact model name used by chat.
+        try:
+            payload = json.dumps({"model": self.model}).encode("utf-8")
+            req = urllib.request.Request(
+                f"{self.base_url}/api/show",
+                data=payload,
+                headers={"Content-Type": "application/json"},
+                method="POST",
+            )
+            with urllib.request.urlopen(req, timeout=5) as resp:
+                resp.read()
+                return True
+        except Exception:
+            return False
+
+    def get_available_models(self) -> list:
+        """获取已下载的模型列表"""
+        try:
+            req = urllib.request.Request(f"{self.base_url}/api/tags")
+            with urllib.request.urlopen(req, timeout=5) as resp:
+                data = json.loads(resp.read().decode())
+                names = []
+                for item in data.get("models", []):
+                    for key in ("name", "model"):
+                        name = item.get(key)
+                        if name and name not in names:
+                            names.append(name)
+                return names
+        except Exception:
+            return []
+
+    # ─── 知识检索 ────────────────────────────────────────
+
+    def _get_neo4j_loader(self):
+        """懒加载 Neo4jLoader"""
+        if self._neo4j_loader is None:
+            try:
+                from src.knowledge_graph.neo4j_loader import Neo4jLoader
+                self._neo4j_loader = Neo4jLoader(source_name=self.source_name)
+            except Exception as e:
+                logger.warning("Neo4jLoader 初始化失败: %s", e)
+                return None
+        return self._neo4j_loader
+
+    def _get_chroma_store(self):
+        """懒加载 ChromaStore"""
+        if self._chroma_store is None:
+            try:
+                from src.vector_store.chroma_store import ChromaStore
+                self._chroma_store = ChromaStore(source_name=self.source_name)
+            except Exception as e:
+                logger.warning("ChromaStore 初始化失败: %s", e)
+                return None
+        return self._chroma_store
+
+    @staticmethod
+    def _normalize_entity_name(name: str) -> str:
+        value = normalize_to_simplified(str(name or "")).strip()
+        value = re.sub(r"_+", "_", value)
+        if "#" in value:
+            value = value.split("#", 1)[0].strip()
+        value = re.sub(r"\s+", " ", value)
+        return value
+
+    def _get_entity_catalog(self) -> list:
+        if self._entity_catalog is not None:
+            return self._entity_catalog
+
+        entities = set()
+        for path in glob.glob(os.path.join(self.triples_dir, "*.json")):
+            base = os.path.basename(path)
+            for suffix in ("_triples.json", "_narratives.json"):
+                if base.endswith(suffix):
+                    entity = self._normalize_entity_name(base[:-len(suffix)])
+                    if entity:
+                        entities.add(entity)
+        for path in self._fixture_bundle_paths_for_source(self.source_name):
+            if not os.path.exists(path):
+                continue
+            try:
+                with open(path, "r", encoding="utf-8") as handle:
+                    payload = json.load(handle)
+            except Exception:
+                continue
+            for record in payload.get("records", []):
+                entity = self._normalize_entity_name(record.get("title", ""))
+                if entity:
+                    entities.add(entity)
+        self._entity_catalog = sorted(entities, key=len, reverse=True)
+        return self._entity_catalog
+
+    def _extract_query_context(self, query: str) -> dict:
+        alias_map = {
+            "月亮": "月球",
+            "red planet": "火星",
+            "mars": "火星",
+            "moon": "月球",
+            "pluto": "冥王星",
+        }
+        return build_query_context(
+            query,
+            known_titles=self._get_entity_catalog(),
+            alias_map=alias_map,
+            max_topic_terms=8,
+        )
+
+    @staticmethod
+    def _looks_like_explanatory_text(text: str) -> bool:
+        value = normalize_to_simplified(str(text or "")).strip()
+        if not value:
+            return True
+        if "\n" in value or len(value) > 60:
+            return True
+        bad_phrases = (
+            "因为", "由于", "因此", "所以", "表示", "意味着", "说明", "推测",
+            "可能", "可以", "而且", "但是", "其中", "之后", "目前", "已经",
+            "认为", "发现有", "导致", "形成", "存在",
+        )
+        return any(token in value for token in bad_phrases)
+
+    @classmethod
+    def _is_valid_discoverer_name(cls, text: str) -> bool:
+        value = normalize_to_simplified(str(text or "")).strip()
+        value = value.replace("（ 美国 ）", "").replace("（美国）", "").strip(" ，,.;；。")
+        if not value:
+            return False
+        if re.search(r"\d|年|月|日|天文台|发现日期|罗威尔", value):
+            return False
+        cleaned = re.sub(r"[·,，、 ]", "", value)
+        if len(cleaned) < 2 or len(cleaned) > 30:
+            return False
+        return not cls._looks_like_explanatory_text(value)
+
+    @classmethod
+    def _is_valid_orbit_target(cls, text: str) -> bool:
+        value = normalize_to_simplified(str(text or "")).strip()
+        if not value or cls._looks_like_explanatory_text(value):
+            return False
+        if len(value) > 20:
+            return False
+        if any(token in value for token in ("轨道", "密度", "同步自转", "行星-", "系统", "卫星")):
+            return value in {"太阳", "地球", "火星", "木星", "土星", "天王星", "海王星", "冥王星", "月球"}
+        return bool(re.fullmatch(r"[\u4e00-\u9fffA-Za-z·\-]{2,20}", value))
+
+    def _score_local_triple_candidate(self, triple: dict, query_context: dict) -> int:
+        from src.knowledge_graph.neo4j_loader import Neo4jLoader
+
+        normalized = normalize_triple_record(triple)
+        subject = self._normalize_entity_name(normalized.get("subject", ""))
+        relation = normalize_to_simplified(str(normalized.get("relation", "")).strip())
+        raw = self._semantic_raw_context(normalized)
+        obj = Neo4jLoader._normalize_relation_object(relation, normalized.get("object", ""), raw=raw, subject=subject)
+        source_title = self._normalize_entity_name(normalized.get("source_title", ""))
+        primary = query_context.get("primary_entity", "")
+        query_text = query_context.get("query", "")
+        entities = [self._normalize_entity_name(item) for item in query_context.get("entities", []) if item]
+        topic_terms = query_context.get("topic_terms", [])
+        relation_hints = query_context.get("relation_hints", [])
+        if "negative_absence" in query_context.get("topic_intents", []):
+            return -1
+
+        if relation not in Neo4jLoader.GRAPH_RELATION_WHITELIST:
+            return -1
+        if not Neo4jLoader._is_valid_subject(subject):
+            return -1
+        if relation == "DISCOVERED_BY" and not Neo4jLoader._is_valid_discoverer(obj):
+            return -1
+        if relation == "ORBITS" and not Neo4jLoader._is_valid_orbit_target(obj):
+            return -1
+        if relation == "IS_A" and not Neo4jLoader._is_valid_type_object(obj):
+            return -1
+        if relation == "LOCATED_IN" and not Neo4jLoader._is_valid_location_object(obj):
+            return -1
+        if relation == "PART_OF" and not Neo4jLoader._is_valid_part_of_object(obj):
+            return -1
+        if relation == "HAS_ATMOSPHERE" and not Neo4jLoader._is_valid_atmosphere_object(obj):
+            return -1
+        if relation in {"HAS_RADIUS", "HAS_MASS"} and not Neo4jLoader._is_valid_quantity_object(obj, relation):
+            return -1
+
+        score = 0
+        strict_relation_query = (
+            primary
+            and len(relation_hints) == 1
+            and relation_hints[0] in {"ORBITS", "DISCOVERED_BY", "HAS_ATMOSPHERE", "LOCATED_IN", "PART_OF", "HAS_RADIUS", "HAS_MASS", "IS_A"}
+        )
+
+        if strict_relation_query:
+            if relation != relation_hints[0]:
+                return -1
+            if subject == primary:
+                score += 120
+            elif subject in entities:
+                score += 95
+            else:
+                return -1
+        elif entities:
+            if subject == primary:
+                score += 120
+            elif subject in entities:
+                score += 95
+            else:
+                return -1
+        elif primary:
+            if subject == primary:
+                score += 120
+            else:
+                return -1
+
+        if query_text.startswith(subject):
+            score += 45
+
+        if relation_hints:
+            if relation in relation_hints:
+                score += 70
+            else:
+                return -1
+
+        for token in topic_terms:
+            if not token:
+                continue
+            if token in subject:
+                score += 18
+            if token in obj:
+                score += 20
+            if token in relation:
+                score += 24
+            if token in source_title or token in raw:
+                score += 12
+
+        for entity in entities[:3]:
+            if source_title and entity and entity in source_title:
+                score += 12 if entity != primary else 18
+            if raw and entity and entity in raw:
+                score += 8 if entity != primary else 10
+
+        return score
+
+    def _infer_satellite_host(self, entity: str) -> str:
+        normalized = self._normalize_entity_name(entity)
+        if normalized == "月球":
+            return "地球"
+        for prefix, host in self.SATELLITE_HOST_PREFIXES.items():
+            if normalized.startswith(prefix):
+                return host
+        return ""
+
+    def _infer_structured_graph_answer(self, query_context: dict) -> list:
+        primary = query_context.get("primary_entity", "")
+        relation_hints = query_context.get("relation_hints", [])
+        if not primary or not relation_hints:
+            return []
+
+        if "ORBITS" in relation_hints:
+            host = self._infer_satellite_host(primary)
+            if host:
+                return [{
+                    "subject": primary,
+                    "relation": "ORBITS",
+                    "object": host,
+                    "source": ACTIVE_SOURCE,
+                    "source_name": ACTIVE_SOURCE,
+                    "source_title": primary,
+                    "source_role": SOURCE_ROLE,
+                    "origin": ORIGIN_INTERNAL_LINK,
+                    "schema_version": get_source_schema_version(ACTIVE_SOURCE),
+                }]
+
+        if "PART_OF" in relation_hints:
+            host = self._infer_satellite_host(primary)
+            if host:
+                return [{
+                    "subject": primary,
+                    "relation": "PART_OF",
+                    "object": f"{host}系统",
+                    "source": ACTIVE_SOURCE,
+                    "source_name": ACTIVE_SOURCE,
+                    "source_title": primary,
+                    "source_role": SOURCE_ROLE,
+                    "origin": ORIGIN_INTERNAL_LINK,
+                    "schema_version": get_source_schema_version(ACTIVE_SOURCE),
+                }]
+
+        if "LOCATED_IN" in relation_hints:
+            if primary in self.PLANET_LOCATION_MAP:
+                return [{
+                    "subject": primary,
+                    "relation": "LOCATED_IN",
+                    "object": self.PLANET_LOCATION_MAP[primary],
+                    "source": ACTIVE_SOURCE,
+                    "source_name": ACTIVE_SOURCE,
+                    "source_title": primary,
+                    "source_role": SOURCE_ROLE,
+                    "origin": ORIGIN_INTERNAL_LINK,
+                    "schema_version": get_source_schema_version(ACTIVE_SOURCE),
+                }]
+            host = self._infer_satellite_host(primary)
+            if host:
+                return [{
+                    "subject": primary,
+                    "relation": "LOCATED_IN",
+                    "object": f"{host}系统",
+                    "source": ACTIVE_SOURCE,
+                    "source_name": ACTIVE_SOURCE,
+                    "source_title": primary,
+                    "source_role": SOURCE_ROLE,
+                    "origin": ORIGIN_INTERNAL_LINK,
+                    "schema_version": get_source_schema_version(ACTIVE_SOURCE),
+                }]
+
+        return []
+
+    @staticmethod
+    def _presentation_export_triples_path() -> str:
+        return os.path.join(BASE_DIR, "data", "presentation_exports", "solar_system_triples_merged.json")
+
+    def _load_multi_hop_fact_records(self, source_filter=None) -> list:
+        """Load the compact presentation fact set used as a deterministic multi-hop mirror."""
+        source_filter = normalize_source_filter(source_filter, fallback_source=self.source_name)
+        records = []
+        path = self._presentation_export_triples_path()
+        if not os.path.exists(path):
+            return records
+        try:
+            with open(path, "r", encoding="utf-8") as handle:
+                payload = json.load(handle)
+        except Exception:
+            return records
+        if isinstance(payload, dict):
+            payload = payload.get("records") or payload.get("triples") or []
+
+        for triple in payload:
+            normalized = normalize_triple_record(triple)
+            source_name = normalized.get("source") or normalized.get("source_name") or ACTIVE_SOURCE
+            if source_name not in source_filter:
+                continue
+            subject = self._normalize_entity_name(normalized.get("subject", ""))
+            relation = normalize_to_simplified(str(normalized.get("relation", "")).strip())
+            obj = normalize_to_simplified(str(normalized.get("object", "")).strip())
+            if not subject or not relation or not obj:
+                continue
+            records.append({
+                "subject": subject,
+                "relation": relation,
+                "object": obj,
+                "source": source_name,
+                "source_name": normalized.get("source_name") or source_name,
+                "source_title": normalized.get("source_title") or subject,
+                "source_role": normalized.get("source_role", SOURCE_ROLE),
+                "origin": normalized.get("origin", ""),
+                "schema_version": normalized.get("schema_version") or get_source_schema_version(source_name),
+            })
+        return records
+
+    @staticmethod
+    def _dedupe_fact_records(records: list) -> list:
+        deduped = []
+        seen = set()
+        for record in records or []:
+            key = (record.get("subject"), record.get("relation"), record.get("object"), record.get("source_name") or record.get("source"))
+            if key in seen:
+                continue
+            seen.add(key)
+            deduped.append(record)
+        return deduped
+
+    def _query_entity_relation(
+        self,
+        entity: str,
+        target_relations: list,
+        query_context: dict,
+        *,
+        loader=None,
+        limit: int = 20,
+        source_filter=None,
+    ) -> list:
+        if not entity or not target_relations:
+            return []
+
+        source_filter = normalize_source_filter(source_filter, fallback_source=self.source_name)
+        entity_context = dict(query_context)
+        entity_context["entities"] = [entity]
+        entity_context["primary_entity"] = entity
+        entity_context["relation_hints"] = list(dict.fromkeys(target_relations))
+        entity_context["topic_terms"] = [
+            term for term in query_context.get("topic_terms", [])
+            if term not in {"绕", "绕行", "公转", "轨道", "行星", "天体", "卫星", "所属", "数据", "集中", "标注"}
+        ]
+
+        resolved = []
+        if loader and getattr(loader, "driver", None):
+            try:
+                resolved = loader.search_graph(entity_context, limit=limit, source_filter=source_filter)
+            except Exception as exc:
+                logger.warning("多跳实体关系查询失败: %s", exc)
+        if not resolved:
+            resolved = self._search_local_triples(
+                entity_context.get("query", ""),
+                limit=limit,
+                query_context=entity_context,
+                source_filter=source_filter,
+            )
+        if not resolved:
+            resolved = [
+                record for record in self._load_multi_hop_fact_records(source_filter)
+                if record.get("subject") == entity and record.get("relation") in target_relations
+            ]
+
+        filtered = [
+            record for record in resolved
+            if record.get("subject") == entity and record.get("relation") in target_relations
+        ]
+        diameter_records = self._apply_diameter_derivation_if_needed(query_context, filtered)
+        if diameter_records:
+            return diameter_records[:limit]
+        return filtered[:limit]
+
+    @staticmethod
+    def _asks_for_diameter(query_context: dict) -> bool:
+        return (
+            "diameter" in query_context.get("topic_intents", [])
+            or "直径" in normalize_to_simplified(str(query_context.get("query", "") or ""))
+        )
+
+    @staticmethod
+    def _derive_diameter_record(radius_record: dict) -> dict:
+        obj = normalize_to_simplified(str(radius_record.get("object", "")).strip())
+        match = re.search(r"([0-9][0-9,]*(?:\.\d+)?)\s*(km|千米|公里)", obj, re.IGNORECASE)
+        if not match:
+            return {}
+        radius = float(match.group(1).replace(",", ""))
+        unit = "km" if match.group(2).lower() == "km" else match.group(2)
+        diameter = radius * 2
+        diameter_text = f"{diameter:,.1f} {unit}"
+        derived = dict(radius_record)
+        derived["relation"] = "HAS_DIAMETER"
+        derived["object"] = f"{diameter_text}（由半径 {radius_record.get('object')} × 2 计算）"
+        derived["origin"] = radius_record.get("origin") or ORIGIN_INTERNAL_LINK
+        return derived
+
+    @classmethod
+    def _derive_diameter_records_if_needed(cls, query_context: dict, records: list) -> list:
+        if not cls._asks_for_diameter(query_context):
+            return []
+        derived = []
+        for record in records or []:
+            if record.get("relation") != "HAS_RADIUS":
+                continue
+            diameter = cls._derive_diameter_record(record)
+            if diameter:
+                derived.append(diameter)
+        return derived
+
+    @classmethod
+    def _apply_diameter_derivation_if_needed(cls, query_context: dict, records: list) -> list:
+        derived = cls._derive_diameter_records_if_needed(query_context, records)
+        if not derived:
+            return []
+        non_radius = [record for record in records or [] if record.get("relation") != "HAS_RADIUS"]
+        return derived + non_radius
+
+    @staticmethod
+    def _asks_for_orbit_host_parameter(query_context: dict, target_relation: str) -> bool:
+        query = normalize_to_simplified(str(query_context.get("query", "") or ""))
+        relation_hints = query_context.get("relation_hints", [])
+        if "ORBITS" not in relation_hints or target_relation not in relation_hints:
+            return False
+        host_markers = (
+            "绕行的行星", "公转的行星", "环绕的行星", "绕着的行星", "绕著的行星",
+            "绕行的天体", "公转的天体", "环绕的天体", "绕着的天体", "绕著的天体",
+            "母行星", "主行星",
+        )
+        if any(marker in query for marker in host_markers):
+            return True
+        if "绕行" in query and "行星" in query:
+            return True
+        if "公转" in query and "行星" in query:
+            return True
+        if "的行星" in query or "所属行星" in query or "所属的行星" in query:
+            return True
+        if target_relation in {"IS_A", "HAS_ATMOSPHERE"} and ("绕行" in query or "公转" in query) and "天体" in query:
+            return True
+        return False
+
+    def _resolve_orbit_host_parameter(
+        self,
+        query_context: dict,
+        records: list,
+        *,
+        loader=None,
+        limit: int = 20,
+        source_filter=None,
+    ) -> list:
+        target_relations = [
+            relation
+            for relation in ("HAS_MASS", "HAS_RADIUS", "HAS_ATMOSPHERE", "IS_A")
+            if self._asks_for_orbit_host_parameter(query_context, relation)
+        ]
+        primary = query_context.get("primary_entity", "")
+        if not primary or not target_relations:
+            return []
+
+        host = ""
+        for record in records or []:
+            if record.get("subject") == primary and record.get("relation") == "ORBITS":
+                host = str(record.get("object") or "").strip()
+                break
+        if not host:
+            host = self._infer_satellite_host(primary)
+        if not host:
+            return []
+
+        return self._query_entity_relation(
+            host,
+            target_relations,
+            query_context,
+            loader=loader,
+            limit=limit,
+            source_filter=source_filter,
+        )
+
+    def _resolve_named_multi_hop_entity(
+        self,
+        query_context: dict,
+        *,
+        loader=None,
+        limit: int = 20,
+        source_filter=None,
+    ) -> list:
+        relation_hints = [item for item in query_context.get("relation_hints", []) if item in {"IS_A", "LOCATED_IN", "PART_OF"}]
+        if not relation_hints:
+            return []
+
+        query = query_context.get("query", "")
+        for entity in query_context.get("entities", []):
+            normalized = self._normalize_entity_name(entity)
+            if not normalized:
+                continue
+            if normalized and normalized in query and normalized.endswith(("卫星", "系统", "群")):
+                resolved = self._query_entity_relation(
+                    normalized,
+                    relation_hints,
+                    query_context,
+                    loader=loader,
+                    limit=limit,
+                    source_filter=source_filter,
+                )
+                if resolved:
+                    return resolved[:limit]
+        return []
+
+    def _resolve_reverse_multi_hop_query(self, query_context: dict, *, limit: int = 20, source_filter=None) -> list:
+        query = normalize_to_simplified(str(query_context.get("query", "") or ""))
+        if not query:
+            return []
+        facts = self._dedupe_fact_records(self._load_multi_hop_fact_records(source_filter))
+        if not facts:
+            return []
+
+        by_subject = {}
+        for record in facts:
+            by_subject.setdefault(record.get("subject"), []).append(record)
+
+        def has_fact(subject: str, relation: str, obj: str = "") -> bool:
+            for record in by_subject.get(subject, []):
+                if record.get("relation") != relation:
+                    continue
+                if not obj or record.get("object") == obj:
+                    return True
+            return False
+
+        def records_for(subject: str, relation: str, obj: str = "") -> list:
+            return [
+                record for record in by_subject.get(subject, [])
+                if record.get("relation") == relation and (not obj or record.get("object") == obj)
+            ]
+
+        discoverers = sorted({
+            record.get("object") for record in facts
+            if record.get("relation") == "DISCOVERED_BY" and record.get("object") in query
+        }, key=len, reverse=True)
+        systems = sorted({
+            record.get("object") for record in facts
+            if record.get("relation") in {"PART_OF", "LOCATED_IN"} and record.get("object") in query
+        }, key=len, reverse=True)
+
+        if discoverers and systems and "属于" in query and "发现" in query:
+            discoverer = discoverers[0]
+            system = systems[0]
+            subjects = [
+                subject for subject in by_subject
+                if has_fact(subject, "DISCOVERED_BY", discoverer) and has_fact(subject, "PART_OF", system)
+            ]
+            results = []
+            for subject in sorted(subjects):
+                results.extend(records_for(subject, "DISCOVERED_BY", discoverer))
+                results.extend(records_for(subject, "PART_OF", system))
+            return self._dedupe_fact_records(results)[:limit]
+
+        if discoverers and "发现" in query:
+            discoverer = discoverers[0]
+            if "绕" in query or "公转" in query:
+                target_relation = "ORBITS"
+            elif "属于" in query or "系统" in query:
+                target_relation = "PART_OF"
+            else:
+                target_relation = ""
+            if target_relation:
+                host_hint = ""
+                if "土星卫星" in query:
+                    host_hint = "土星"
+                elif "天王星卫星" in query:
+                    host_hint = "天王星"
+                elif "木星卫星" in query:
+                    host_hint = "木星"
+                elif "火星卫星" in query:
+                    host_hint = "火星"
+                results = []
+                for subject in sorted(by_subject):
+                    if not has_fact(subject, "DISCOVERED_BY", discoverer):
+                        continue
+                    if host_hint:
+                        if target_relation == "ORBITS" and not has_fact(subject, "ORBITS", host_hint):
+                            continue
+                        if target_relation == "PART_OF" and not has_fact(subject, "PART_OF", f"{host_hint}系统"):
+                            continue
+                    results.extend(records_for(subject, target_relation))
+                if results:
+                    return self._dedupe_fact_records(results)[:limit]
+
+        if ("绕太阳" in query or "太阳公转" in query) and "哪个" in query:
+            target_relation = "HAS_ATMOSPHERE" if "大气" in query else "IS_A"
+            target_objects = sorted({
+                record.get("object") for record in facts
+                if record.get("relation") == target_relation and record.get("object") in query
+            }, key=len, reverse=True)
+            if target_objects:
+                target_obj = target_objects[0]
+                results = []
+                for subject in sorted(by_subject):
+                    if has_fact(subject, "ORBITS", "太阳") and has_fact(subject, target_relation, target_obj):
+                        results.extend(records_for(subject, target_relation, target_obj))
+                if results:
+                    return self._dedupe_fact_records(results)[:limit]
+
+        return []
+
+    def _resolve_multi_hop_query(
+        self,
+        query_context: dict,
+        records: list,
+        *,
+        loader=None,
+        limit: int = 20,
+        source_filter=None,
+    ) -> list:
+        resolvers = (
+            lambda: self._resolve_orbit_host_parameter(
+                query_context,
+                records,
+                loader=loader,
+                limit=limit,
+                source_filter=source_filter,
+            ),
+            lambda: self._resolve_named_multi_hop_entity(
+                query_context,
+                loader=loader,
+                limit=limit,
+                source_filter=source_filter,
+            ),
+            lambda: self._resolve_reverse_multi_hop_query(
+                query_context,
+                limit=limit,
+                source_filter=source_filter,
+            ),
+        )
+        for resolve in resolvers:
+            resolved = resolve()
+            if resolved:
+                return resolved[:limit]
+        return []
+
+    def _score_local_narrative_candidate(self, narrative: dict, query_context: dict) -> int:
+        page_title = self._normalize_entity_name(narrative.get("page_title", ""))
+        section = normalize_to_simplified(str(narrative.get("section", "")).strip())
+        keywords = narrative.get("keywords", [])
+        if isinstance(keywords, list):
+            keywords_blob = ",".join(normalize_to_simplified(str(item).strip()) for item in keywords)
+        else:
+            keywords_blob = normalize_to_simplified(str(keywords or "").strip())
+        content = normalize_to_simplified(str(narrative.get("content", "")).strip())
+        primary = query_context.get("primary_entity", "")
+        entities = [self._normalize_entity_name(item) for item in query_context.get("entities", []) if item]
+        topic_terms = query_context.get("topic_terms", [])
+        query = query_context.get("query", "")
+        relation_hints = query_context.get("relation_hints", [])
+
+        if "negative_absence" in query_context.get("topic_intents", []):
+            return -1
+
+        score = 0
+        strict_entity_narrative = primary and any(hint in relation_hints for hint in ("HAS_ATMOSPHERE", "HAS_RADIUS", "HAS_MASS"))
+        if entities:
+            if page_title == primary:
+                score += 120
+            elif page_title in entities:
+                score += 95
+            elif primary and primary in page_title:
+                score += 70
+            elif any(entity and entity in page_title for entity in entities):
+                score += 55
+            elif strict_entity_narrative:
+                return -1
+            elif any(entity and entity in content for entity in entities):
+                score += 30
+            else:
+                score -= 95
+        elif primary:
+            if page_title == primary:
+                score += 120
+            elif primary in page_title:
+                score += 70
+            elif primary in content:
+                score += 30
+            else:
+                score -= 95
+
+        for token in topic_terms:
+            if token in section:
+                score += 26
+            if token in keywords_blob:
+                score += 18
+            if token in content:
+                score += 12
+
+        for entity in entities[:3]:
+            if entity and entity in content:
+                score += 10 if entity != primary else 14
+        if "为什么" in query or "为何" in query:
+            if any(token in content for token in ("因为", "由于", "因此", "导致", "使得", "所以")):
+                score += 12
+        if "成分" in query and any(token in content for token in ("二氧化碳", "氮气", "氩气", "%")):
+            score += 14
+        if "稀薄" in query and any(token in content for token in ("稀薄", "较薄", "气压", "太阳风")):
+            score += 14
+        score += self._score_solar_luminosity_narrative(section, keywords_blob, content, query_context)
+
+        return score
+
+    @staticmethod
+    def _score_solar_luminosity_narrative(section: str, keywords: str, content: str, query_context: dict) -> int:
+        if "solar_luminosity" not in query_context.get("topic_intents", []):
+            return 0
+        text = f"{section} {keywords} {content}"
+        has_fusion = any(token in text for token in ("核融合", "核反应", "氢融合", "融合反应"))
+        has_energy = any(token in text for token in ("能量", "能量来源", "释放能量", "辐射能"))
+
+        bonus = 0
+        if has_fusion and has_energy:
+            bonus += 80
+        if section.startswith("核心"):
+            bonus += 36
+        elif section == "概要" and has_fusion:
+            bonus += 30
+        if "能量来源" in text:
+            bonus += 20
+        return bonus
+
+    def search_neo4j(self, query: str, limit=20, source_filter=None) -> list:
+        """在 Neo4j 知识图谱中搜索相关关系"""
+        trace = self.search_neo4j_trace(query, limit=limit, source_filter=source_filter)
+        return trace["final_result"]
+
+    def search_neo4j_trace(self, query: str, limit=20, source_filter=None) -> dict:
+        """返回图查询结果、最终结果及最终来源，便于回归验证。"""
+        query = normalize_to_simplified(query).strip()
+        query_context = self._extract_query_context(query)
+        source_filter = normalize_source_filter(source_filter, fallback_source=self.source_name)
+        allow_active_source = ACTIVE_SOURCE in source_filter
+        if not allow_active_source:
+            if self.source_name not in source_filter:
+                return {
+                    "graph_only": [],
+                    "final_result": [],
+                    "final_source": "fallback",
+                }
+            fallback = self._search_local_triples(query, limit, query_context=query_context, source_filter=source_filter)
+            return {
+                "graph_only": [],
+                "final_result": fallback,
+                "final_source": "fallback",
+            }
+        loader = self._get_neo4j_loader()
+        if not loader or not loader.driver:
+            fallback = self._search_local_triples(query, limit, query_context=query_context, source_filter=source_filter)
+            multi_hop = self._resolve_multi_hop_query(
+                query_context,
+                fallback,
+                loader=None,
+                limit=limit,
+                source_filter=source_filter,
+            )
+            if multi_hop:
+                return {
+                    "graph_only": [],
+                    "final_result": multi_hop[:limit],
+                    "final_source": "graph",
+                }
+            diameter = self._apply_diameter_derivation_if_needed(query_context, fallback)
+            if diameter:
+                return {
+                    "graph_only": [],
+                    "final_result": diameter[:limit],
+                    "final_source": "graph",
+                }
+            if fallback:
+                return {
+                    "graph_only": [],
+                    "final_result": fallback,
+                    "final_source": "graph",
+                }
+            inferred = self._infer_structured_graph_answer(query_context) if allow_active_source else []
+            return {
+                "graph_only": [],
+                "final_result": inferred[:limit],
+                "final_source": "inferred" if inferred else "fallback",
+            }
+        try:
+            records = loader.search_graph(query_context, limit=limit, source_filter=source_filter)
+            multi_hop = self._resolve_multi_hop_query(
+                query_context,
+                records,
+                loader=loader,
+                limit=limit,
+                source_filter=source_filter,
+            )
+            if multi_hop:
+                return {
+                    "graph_only": records[:limit],
+                    "final_result": multi_hop[:limit],
+                    "final_source": "graph",
+                }
+            diameter = self._apply_diameter_derivation_if_needed(query_context, records)
+            if diameter:
+                return {
+                    "graph_only": records[:limit],
+                    "final_result": diameter[:limit],
+                    "final_source": "graph",
+                }
+            if records:
+                return {
+                    "graph_only": records[:limit],
+                    "final_result": records[:limit],
+                    "final_source": "graph",
+                }
+            fallback = self._search_local_triples(query, limit, query_context=query_context, source_filter=source_filter)
+            if fallback:
+                diameter = self._apply_diameter_derivation_if_needed(query_context, fallback)
+                if diameter:
+                    return {
+                        "graph_only": [],
+                        "final_result": diameter[:limit],
+                        "final_source": "graph",
+                    }
+                return {
+                    "graph_only": [],
+                    "final_result": fallback,
+                    "final_source": "graph",
+                }
+            inferred = self._infer_structured_graph_answer(query_context) if allow_active_source else []
+            if inferred:
+                return {
+                    "graph_only": [],
+                    "final_result": inferred[:limit],
+                    "final_source": "inferred",
+                }
+            return {
+                "graph_only": [],
+                "final_result": fallback,
+                "final_source": "fallback",
+            }
+        except Exception as e:
+            logger.warning("Neo4j 搜索失败: %s", e)
+            fallback = self._search_local_triples(query, limit, query_context=query_context, source_filter=source_filter)
+            multi_hop = self._resolve_multi_hop_query(
+                query_context,
+                fallback,
+                loader=None,
+                limit=limit,
+                source_filter=source_filter,
+            )
+            if multi_hop:
+                return {
+                    "graph_only": [],
+                    "final_result": multi_hop[:limit],
+                    "final_source": "graph",
+                }
+            diameter = self._apply_diameter_derivation_if_needed(query_context, fallback)
+            if diameter:
+                return {
+                    "graph_only": [],
+                    "final_result": diameter[:limit],
+                    "final_source": "graph",
+                }
+            if fallback:
+                return {
+                    "graph_only": [],
+                    "final_result": fallback,
+                    "final_source": "graph",
+                }
+            inferred = self._infer_structured_graph_answer(query_context) if allow_active_source else []
+            return {
+                "graph_only": [],
+                "final_result": inferred[:limit],
+                "final_source": "inferred" if inferred else "fallback",
+            }
+
+    def search_chroma(self, query: str, top_k=5, source_filter=None) -> list:
+        """在 Chroma 向量库中语义搜索"""
+        query = normalize_to_simplified(query).strip()
+        query_context = self._extract_query_context(query)
+        source_filter = normalize_source_filter(source_filter, fallback_source=self.source_name)
+        store = self._get_chroma_store()
+        if not store:
+            return self._search_local_narratives(query, top_k, query_context=query_context, source_filter=source_filter)
+        if hasattr(store, "has_persisted_store") and not store.has_persisted_store():
+            return self._search_local_narratives(query, top_k, query_context=query_context, source_filter=source_filter)
+        try:
+            stats = store.get_stats()
+            if stats.get('total', 0) <= 0:
+                return self._search_local_narratives(query, top_k, query_context=query_context, source_filter=source_filter)
+            results = store.search(query, top_k=top_k, query_context=query_context, source_filter=source_filter)
+            return results or self._search_local_narratives(query, top_k, query_context=query_context, source_filter=source_filter)
+        except Exception as e:
+            logger.warning("Chroma 搜索失败: %s", e)
+            return self._search_local_narratives(query, top_k, query_context=query_context, source_filter=source_filter)
+
+    @staticmethod
+    def _score_text(query: str, text: str, title: str = '') -> int:
+        """简单关键词评分，用于数据库不可用时的本地 JSON fallback。"""
+        query = normalize_to_simplified(query)
+        text = normalize_to_simplified(text)
+        title = normalize_to_simplified(title)
+        if not query or not text:
+            return 0
+        score = 0
+        if title == query:
+            score += 1000
+        elif title and (query in title or title in query):
+            score += 300
+        if query in text:
+            score += 10
+        for token in set(query):
+            if token.strip() and token in text:
+                score += 1
+        return score
+
+    @staticmethod
+    def _local_artifact_paths(source_filter: list, suffix: str) -> list[tuple[str, str]]:
+        paths = []
+        seen = set()
+        for source_name in source_filter:
+            namespace_dir = get_source_namespace_dir(TRIPLES_DIR, source_name)
+            pattern = os.path.join(namespace_dir, f"*_{suffix}.json")
+            for path in glob.glob(pattern):
+                if path in seen:
+                    continue
+                seen.add(path)
+                paths.append((source_name, path))
+        return paths
+
+    def _search_local_triples(self, query: str, limit=20, query_context: dict = None, source_filter=None) -> list:
+        """从 data/triples/*_triples.json 兜底检索关系。"""
+        from src.knowledge_graph.neo4j_loader import Neo4jLoader
+
+        query_context = query_context or self._extract_query_context(query)
+        source_filter = normalize_source_filter(source_filter, fallback_source=self.source_name)
+        results = []
+        for source_name, path in self._local_artifact_paths(source_filter, "triples"):
+            try:
+                with open(path, 'r', encoding='utf-8') as f:
+                    triples = json.load(f)
+            except Exception:
+                continue
+
+            page_title = os.path.basename(path)[:-len("_triples.json")]
+            candidate_triples = list(triples)
+            narrative_records = Neo4jLoader._load_narrative_records(path)
+            candidate_triples.extend(Neo4jLoader._derive_supplemental_graph_triples(page_title, narrative_records))
+
+            for triple in candidate_triples:
+                normalized = normalize_triple_record(triple)
+                resolved_source = normalized.get('source') or normalized.get('source_name') or source_name
+                if resolved_source not in source_filter:
+                    continue
+                subject = str(normalized.get('subject', ''))
+                relation = str(normalized.get('relation', ''))
+                raw = self._semantic_raw_context(normalized)
+                obj = Neo4jLoader._normalize_relation_object(relation, normalized.get('object', ''), raw=raw, subject=subject)
+                if not obj:
+                    obj = str(normalized.get('object', ''))
+                source = str(normalized.get('source_title', '')) or subject
+                score = self._score_local_triple_candidate(triple, query_context)
+                if score < 70:
+                    continue
+                results.append({
+                    'subject': subject,
+                    'relation': relation,
+                    'object': obj,
+                    'source': resolved_source,
+                    'source_name': normalized.get('source_name') or resolved_source,
+                    'source_title': source,
+                    'source_role': normalized.get('source_role', SOURCE_ROLE),
+                    'origin': normalized.get('origin', ''),
+                    'schema_version': get_source_schema_version(resolved_source),
+                    '_score': score,
+                })
+
+        if not results:
+            for triple in self._load_fixture_triples(source_filter):
+                normalized = normalize_triple_record(triple)
+                resolved_source = normalized.get('source') or normalized.get('source_name') or self.source_name
+                if resolved_source not in source_filter:
+                    continue
+                subject = str(normalized.get('subject', ''))
+                relation = str(normalized.get('relation', ''))
+                raw = self._semantic_raw_context(normalized)
+                obj = Neo4jLoader._normalize_relation_object(relation, normalized.get('object', ''), raw=raw, subject=subject)
+                if not obj:
+                    obj = str(normalized.get('object', ''))
+                source = str(normalized.get('source_title', '')) or subject
+                score = self._score_local_triple_candidate(normalized, query_context)
+                if score < 70:
+                    continue
+                results.append({
+                    'subject': subject,
+                    'relation': relation,
+                    'object': obj,
+                    'source': resolved_source,
+                    'source_name': normalized.get('source_name') or resolved_source,
+                    'source_title': source,
+                    'source_role': normalized.get('source_role', SOURCE_ROLE),
+                    'origin': normalized.get('origin', ''),
+                    'schema_version': get_source_schema_version(resolved_source),
+                    '_score': score,
+                })
+
+        if not results and len(source_filter) == 1:
+            primary = query_context.get("primary_entity", "")
+            host = self._infer_satellite_host(primary)
+            relation_hints = query_context.get("relation_hints", [])
+            relation = "ORBITS" if "ORBITS" in relation_hints else "PART_OF" if "PART_OF" in relation_hints else ""
+            if host and relation:
+                obj = host if relation == "ORBITS" else f"{host}系统"
+                results.append({
+                    'subject': primary,
+                    'relation': relation,
+                    'object': obj,
+                    'source': source_filter[0],
+                    'source_name': source_filter[0],
+                    'source_title': primary,
+                    'source_role': SOURCE_ROLE,
+                    'origin': ORIGIN_INTERNAL_LINK,
+                    'schema_version': get_source_schema_version(source_filter[0]),
+                    '_score': 100,
+                })
+
+        results.sort(key=lambda item: item.pop('_score'), reverse=True)
+        return results[:limit]
+
+    def _search_local_narratives(self, query: str, top_k=5, query_context: dict = None, source_filter=None) -> list:
+        """从 data/triples/*_narratives.json 兜底检索叙事片段。"""
+        import glob
+        query_context = query_context or self._extract_query_context(query)
+        source_filter = normalize_source_filter(source_filter, fallback_source=self.source_name)
+        candidates = []
+        for source_name, path in self._local_artifact_paths(source_filter, "narratives"):
+            try:
+                with open(path, 'r', encoding='utf-8') as f:
+                    narratives = json.load(f)
+            except Exception:
+                continue
+
+            for nar in narratives:
+                normalized = normalize_narrative_record(nar)
+                resolved_source = normalized.get('source') or normalized.get('source_name') or source_name
+                if resolved_source not in source_filter:
+                    continue
+                content = str(normalized.get('content', ''))
+                page_title = str(normalized.get('page_title', ''))
+                section = str(normalized.get('section', ''))
+                keywords = normalized.get('keywords', [])
+                score = self._score_local_narrative_candidate(normalized, query_context)
+                if score < 70:
+                    continue
+                candidates.append({
+                    'content': content[:200] + '...' if len(content) > 200 else content,
+                    'score': min(1.0, score / 180.0),
+                    'page_title': page_title,
+                    'section': section,
+                    'keywords': ','.join(keywords) if isinstance(keywords, list) else str(keywords),
+                    'source': resolved_source,
+                    'source_name': normalized.get('source_name') or resolved_source,
+                    'source_title': normalized.get('source_title', page_title),
+                    'source_role': normalized.get('source_role', SOURCE_ROLE),
+                    'origin': normalized.get('origin', ''),
+                    'schema_version': get_source_schema_version(resolved_source),
+                    '_score': score,
+                })
+
+        if not candidates:
+            for nar in self._load_fixture_narratives(source_filter):
+                normalized = normalize_narrative_record(nar)
+                resolved_source = normalized.get('source') or normalized.get('source_name') or self.source_name
+                if resolved_source not in source_filter:
+                    continue
+                content = str(normalized.get('content', ''))
+                page_title = str(normalized.get('page_title', ''))
+                section = str(normalized.get('section', ''))
+                keywords = normalized.get('keywords', [])
+                score = self._score_local_narrative_candidate(normalized, query_context)
+                if score < 70:
+                    continue
+                candidates.append({
+                    'content': content[:200] + '...' if len(content) > 200 else content,
+                    'score': min(1.0, score / 180.0),
+                    'page_title': page_title,
+                    'section': section,
+                    'keywords': ','.join(keywords) if isinstance(keywords, list) else str(keywords),
+                    'source': resolved_source,
+                    'source_name': normalized.get('source_name') or resolved_source,
+                    'source_title': normalized.get('source_title', page_title),
+                    'source_role': normalized.get('source_role', SOURCE_ROLE),
+                    'origin': normalized.get('origin', ''),
+                    'schema_version': get_source_schema_version(resolved_source),
+                    '_score': score,
+                })
+
+        candidates.sort(key=lambda item: item.pop('_score'), reverse=True)
+        for index, item in enumerate(candidates[:top_k], 1):
+            item['rank'] = index
+        return candidates[:top_k]
+
+    @staticmethod
+    def _fixture_bundle_paths_for_source(source_name: str) -> list[str]:
+        normalized = str(source_name or "").strip()
+        if normalized == "wikidata":
+            return [os.path.join(BASE_DIR, "data", "source_fixtures", "wikidata", "solar_system_fixture.json")]
+        if normalized == "nasa":
+            return [os.path.join(BASE_DIR, "data", "source_fixtures", "nasa", "query_fixture.json")]
+        if normalized == "esa":
+            return [os.path.join(BASE_DIR, "data", "source_fixtures", "esa", "smoke_fixture.json")]
+        return []
+
+    def _load_fixture_triples(self, source_filter=None) -> list:
+        triples = []
+        for source_name in normalize_source_filter(source_filter, fallback_source=self.source_name):
+            for path in self._fixture_bundle_paths_for_source(source_name):
+                if not os.path.exists(path):
+                    continue
+                try:
+                    with open(path, "r", encoding="utf-8") as handle:
+                        payload = json.load(handle)
+                except Exception:
+                    continue
+                for record in payload.get("records", []):
+                    title = str(record.get("title", "")).strip()
+                    for triple in record.get("triples", []):
+                        item = dict(triple)
+                        item.setdefault("subject", title)
+                        item.setdefault("source", source_name)
+                        item.setdefault("source_name", source_name)
+                        item.setdefault("source_role", SOURCE_ROLE)
+                        item.setdefault("origin", ORIGIN_INTERNAL_LINK)
+                        item.setdefault("source_title", title)
+                        item.setdefault("schema_version", get_source_schema_version(source_name))
+                        triples.append(item)
+        return triples
+
+    def _load_fixture_narratives(self, source_filter=None) -> list:
+        narratives = []
+        for source_name in normalize_source_filter(source_filter, fallback_source=self.source_name):
+            if source_name != "nasa":
+                continue
+            for path in self._fixture_bundle_paths_for_source(source_name):
+                if not os.path.exists(path):
+                    continue
+                try:
+                    with open(path, "r", encoding="utf-8") as handle:
+                        payload = json.load(handle)
+                except Exception:
+                    continue
+                for record in payload.get("records", []):
+                    title = str(record.get("title", "")).strip()
+                    for narrative in record.get("narratives", []):
+                        item = dict(narrative)
+                        item.setdefault("page_title", title)
+                        item.setdefault("source", source_name)
+                        item.setdefault("source_name", source_name)
+                        item.setdefault("source_role", SOURCE_ROLE)
+                        item.setdefault("origin", ORIGIN_INTERNAL_LINK)
+                        item.setdefault("source_title", title)
+                        item.setdefault("schema_version", get_source_schema_version(source_name))
+                        narratives.append(item)
+        return narratives
+
+    @classmethod
+    def _source_display_name(cls, source_name: str) -> str:
+        return cls.SOURCE_DISPLAY_NAMES.get(str(source_name or "").strip(), str(source_name or "").strip())
+
+    def _is_auto_source(self) -> bool:
+        return str(self.source_name or "").strip() == self.AUTO_SOURCE_NAME
+
+    def _search_single_source_bundle(self, source_name: str, query: str) -> tuple[list, list]:
+        source_agent = self if self.source_name == source_name else LLMAgent(source_name=source_name)
+        try:
+            return (
+                source_agent.search_neo4j(query, source_filter=[source_name]),
+                source_agent.search_chroma(query, source_filter=[source_name]),
+            )
+        finally:
+            if source_agent is not self:
+                source_agent.close()
+
+    @staticmethod
+    def _flatten_results_by_source(results_by_source: Dict[str, List[dict]], ordered_sources: List[str]) -> List[dict]:
+        flattened = []
+        for source_name in ordered_sources:
+            flattened.extend(list(results_by_source.get(source_name, [])))
+        return flattened
+
+    @classmethod
+    def _authority_order_for_intent(cls, intent: str) -> List[str]:
+        return list(cls.INTENT_AUTHORITY_ORDER.get(str(intent or "").strip(), cls.INTENT_AUTHORITY_ORDER["uncertain"]))
+
+    @classmethod
+    def _authority_order_for_relation(cls, relation: str, intent: str) -> List[str]:
+        return list(cls.RELATION_AUTHORITY_ORDER.get(str(relation or "").strip(), cls._authority_order_for_intent(intent)))
+
+    @staticmethod
+    def _authority_rank_map(order: List[str]) -> Dict[str, int]:
+        return {source_name: index for index, source_name in enumerate(order)}
+
+    @classmethod
+    def _sort_sources_by_authority(cls, sources: List[str], order: List[str]) -> List[str]:
+        rank_map = cls._authority_rank_map(order)
+        return sorted(
+            {str(source or "").strip() for source in sources if str(source or "").strip()},
+            key=lambda source_name: (rank_map.get(source_name, len(rank_map) + 1), source_name),
+        )
+
+    @classmethod
+    def _pick_authority_source(cls, sources: List[str], order: List[str]) -> str:
+        ranked = cls._sort_sources_by_authority(sources, order)
+        return ranked[0] if ranked else ""
+
+    @staticmethod
+    def _normalized_object_key(record: dict) -> str:
+        return normalize_to_simplified(str(record.get("object", "")).strip())
+
+    @classmethod
+    def _semantic_raw_context(cls, normalized: dict) -> str:
+        raw = normalize_to_simplified(str(normalized.get("raw", "")).strip())
+        if raw:
+            return raw
+        relation = normalize_to_simplified(str(normalized.get("relation", "")).strip())
+        source_field = normalize_to_simplified(
+            str(
+                normalized.get("source_field")
+                or normalized.get("table_field")
+                or normalized.get("property_id")
+                or ""
+            ).strip()
+        )
+        obj = normalize_to_simplified(str(normalized.get("object", "")).strip())
+        relation_hint = cls.RELATION_RAW_HINTS.get(relation, relation)
+        return " ".join(part for part in (source_field, relation_hint, obj) if part)
+
+    def _intent_authority_source(self, routing_trace: Dict[str, object], selected_sources: List[str]) -> str:
+        order = self._authority_order_for_intent(str(routing_trace.get("intent", "")))
+        return self._pick_authority_source(selected_sources, order)
+
+    def _group_graph_records(
+        self,
+        records: List[dict],
+        routing_trace: Dict[str, object],
+    ) -> tuple[List[dict], Dict[str, str], List[dict], Dict[str, int]]:
+        intent = str(routing_trace.get("intent", ""))
+        fusion_report = fuse_cross_source_records(list(records or []))
+        summary = dict(fusion_report.get("summary", {}))
+        relation_groups: Dict[tuple, List[dict]] = {}
+        for record in fusion_report.get("fused_records", []):
+            subject = str(record.get("subject", "")).strip()
+            relation = str(record.get("relation", "")).strip()
+            if not subject or not relation:
+                continue
+            relation_groups.setdefault((subject, relation), []).append(dict(record))
+        review_by_key = {
+            (str(item.get("subject", "")).strip(), str(item.get("relation", "")).strip()): dict(item)
+            for item in fusion_report.get("review_candidates", [])
+        }
+
+        authority_by_relation: Dict[str, str] = {}
+        fused_records: List[dict] = []
+        conflicts: List[dict] = []
+
+        for (subject, relation), group_records in relation_groups.items():
+            order = self._authority_order_for_relation(relation, intent)
+            provider_pool = []
+            for record in group_records:
+                provider_pool.extend(record.get("sources", []) or [record.get("source_name") or record.get("source")])
+            authority_source = self._pick_authority_source(provider_pool, order)
+            authority_by_relation[relation] = authority_source
+            rank_map = self._authority_rank_map(order)
+
+            review_candidate = review_by_key.get((subject, relation))
+            conflicting = bool(review_candidate)
+            if conflicting:
+                conflicts.append({
+                    "subject": subject,
+                    "relation": relation,
+                    "authority_source": authority_source,
+                    "values": list(review_candidate.get("values", [])),
+                })
+
+            grouped_entries = []
+            for record in group_records:
+                providers = self._sort_sources_by_authority(
+                    list(record.get("sources", []) or [record.get("source_name") or record.get("source")]),
+                    order,
+                )
+                best_source = providers[0] if providers else str(record.get("source_name") or record.get("source") or "").strip()
+                grouped_entries.append((rank_map.get(best_source, len(rank_map) + 1), dict(record), providers))
+
+            grouped_entries.sort(key=lambda item: item[0])
+            next_rank = len(fused_records) + 1
+            for index, (_, best_record, providers) in enumerate(grouped_entries):
+                fused = dict(best_record)
+                fused["source"] = str(providers[0] if providers else best_record.get("source_name") or best_record.get("source") or "")
+                fused["source_name"] = fused["source"]
+                fused["merged_sources"] = providers
+                fused["authority_source"] = authority_source
+                fused["is_authority_source"] = fused["source_name"] == authority_source
+                if conflicting:
+                    fused["conflict_group_id"] = f"{subject}:{relation}"
+                else:
+                    fused["conflict_group_id"] = ""
+                fused["rank"] = next_rank + index
+                fused_records.append(fused)
+
+        return fused_records, authority_by_relation, conflicts, summary
+
+    def _sort_chroma_results(
+        self,
+        results: List[dict],
+        routing_trace: Dict[str, object],
+    ) -> List[dict]:
+        order = self._authority_order_for_intent(str(routing_trace.get("intent", "")))
+        rank_map = self._authority_rank_map(order)
+        sorted_results = sorted(
+            [dict(item) for item in results],
+            key=lambda item: (
+                rank_map.get(str(item.get("source_name") or item.get("source") or "").strip(), len(rank_map) + 1),
+                -(float(item.get("score", 0.0) or 0.0)),
+            ),
+        )
+        for index, item in enumerate(sorted_results, 1):
+            source_name = str(item.get("source_name") or item.get("source") or "").strip()
+            item["source"] = source_name
+            item["source_name"] = source_name
+            item["rank"] = index
+        return sorted_results
+
+    def _detect_conflicts(self, records: List[dict]) -> List[dict]:
+        grouped: Dict[tuple, Dict[str, List[str]]] = {}
+        for record in records:
+            subject = str(record.get("subject", "")).strip()
+            relation = str(record.get("relation", "")).strip()
+            obj = normalize_to_simplified(str(record.get("object", "")).strip())
+            source_name = str(record.get("source_name") or record.get("source") or "").strip()
+            if not subject or not relation or not obj or not source_name:
+                continue
+            grouped.setdefault((subject, relation), {}).setdefault(obj, []).append(source_name)
+
+        conflicts = []
+        for (subject, relation), values in grouped.items():
+            if len(values) <= 1:
+                continue
+            conflicts.append({
+                "subject": subject,
+                "relation": relation,
+                "values": [
+                    {"object": obj, "sources": sources}
+                    for obj, sources in values.items()
+                ],
+            })
+        return conflicts
+
+    def _build_source_trace(
+        self,
+        selected_sources: List[str],
+        source_result_counts: Dict[str, Dict[str, int]],
+        authority_source: str = "",
+    ) -> List[dict]:
+        return [
+            {
+                "source_name": source_name,
+                "neo4j_count": int(source_result_counts.get(source_name, {}).get("neo4j", 0)),
+                "chroma_count": int(source_result_counts.get(source_name, {}).get("chroma", 0)),
+                "is_authority_source": bool(authority_source) and source_name == authority_source,
+            }
+            for source_name in selected_sources
+        ]
+
+    @staticmethod
+    def _answer_relation_priority(query_context: dict) -> List[str]:
+        relation_hints = list(query_context.get("relation_hints", []) or [])
+        priority = [
+            relation
+            for relation in ("HAS_MASS", "HAS_RADIUS", "HAS_ATMOSPHERE")
+            if relation in relation_hints
+        ]
+        for relation in relation_hints:
+            if relation not in priority:
+                priority.append(relation)
+        return priority
+
+    def _fuse_auto_results(
+        self,
+        query: str,
+        *,
+        neo4j_by_source: Dict[str, List[dict]],
+        chroma_by_source: Dict[str, List[dict]],
+        routing_trace: Dict[str, object],
+    ) -> dict:
+        selected_sources = list(routing_trace.get("selected_sources", []))
+        raw_neo4j_results = self._flatten_results_by_source(neo4j_by_source, selected_sources)
+        raw_chroma_results = self._flatten_results_by_source(chroma_by_source, selected_sources)
+        source_result_counts = {
+            source_name: {
+                "neo4j": len(neo4j_by_source.get(source_name, [])),
+                "chroma": len(chroma_by_source.get(source_name, [])),
+            }
+            for source_name in selected_sources
+        }
+        neo4j_results, authority_by_relation, conflicts, fusion_summary = self._group_graph_records(raw_neo4j_results, routing_trace)
+        chroma_results = self._sort_chroma_results(raw_chroma_results, routing_trace)
+        authority_source = ""
+        query_context = self._extract_query_context(query)
+        for relation in self._answer_relation_priority(query_context):
+            if authority_by_relation.get(relation):
+                authority_source = authority_by_relation[relation]
+                break
+        if not authority_source and authority_by_relation:
+            authority_source = next(iter(authority_by_relation.values()))
+        if not authority_source:
+            authority_source = self._intent_authority_source(routing_trace, selected_sources)
+        for conflict in conflicts:
+            conflict["query"] = query
+            conflict["selected_sources"] = list(selected_sources)
+
+        source_names = "、".join(self._source_display_name(source_name) for source_name in selected_sources)
+        authority_label = self._source_display_name(authority_source) if authority_source else "未判定"
+        answer_prompt = f"回答中保留来源标注。来源：{source_names}。权威优先源：{authority_label}。"
+        if conflicts:
+            answer_prompt += " 如果数值或结构化事实有差异，请明确写出“不同来源存在差异”，不要静默覆盖。"
+
+        return {
+            "neo4j_results": neo4j_results,
+            "chroma_results": chroma_results,
+            "answer_prompt": answer_prompt,
+            "metadata": {
+                "query": query,
+                "selected_sources": selected_sources,
+                "routing_reason": str(routing_trace.get("routing_reason", "")),
+                "routing_trace": dict(routing_trace),
+                "source_result_counts": source_result_counts,
+                "fusion_mode": "peer_source_fusion",
+                "authority_policy_applied": True,
+                "authority_source": authority_source,
+                "authority_by_relation": authority_by_relation,
+                "conflict_detected": bool(conflicts),
+                "conflicts": conflicts,
+                "cross_source_fusion_summary": fusion_summary,
+                "source_trace": self._build_source_trace(selected_sources, source_result_counts, authority_source=authority_source),
+            },
+        }
+
+    def _build_manual_metadata(self, source_name: str, neo4j_results: list, chroma_results: list) -> dict:
+        counts = {
+            source_name: {
+                "neo4j": len(neo4j_results),
+                "chroma": len(chroma_results),
+            }
+        }
+        return {
+            "selected_sources": [source_name],
+            "routing_reason": "manual source selection",
+            "routing_trace": {
+                "selected_sources": [source_name],
+                "routing_reason": "manual source selection",
+                "fusion_mode": "single_source",
+            },
+            "source_result_counts": counts,
+            "fusion_mode": "single_source",
+            "authority_policy_applied": False,
+            "authority_source": source_name,
+            "authority_by_relation": {},
+            "conflict_detected": False,
+            "conflicts": [],
+            "source_trace": self._build_source_trace([source_name], counts, authority_source=source_name),
+        }
+
+    def _decorate_auto_answer(self, answer: str, metadata: dict) -> str:
+        text = str(answer or "").strip()
+        if not text or text.startswith("[错误]"):
+            return text
+        lines = [text]
+        if metadata.get("authority_source"):
+            lines.append(f"权威优先源：{self._source_display_name(metadata.get('authority_source'))}")
+        if metadata.get("conflict_detected"):
+            lines.append("不同来源存在差异，请结合各来源标注理解相关事实。")
+        lines.append(
+            "来源：" + "、".join(self._source_display_name(source_name) for source_name in metadata.get("selected_sources", []))
+        )
+        return "\n".join(lines)
+
+    def _ask_single_source(self, question: str, history: list = None, on_token: Callable[[str], None] = None) -> dict:
+        neo4j_results = []
+        chroma_results = []
+        search_errors = []
+        retrieval_wait_timeout = max(int(getattr(self, "timeout", 0) or 0), 30)
+
+        def search_neo4j_task():
+            nonlocal neo4j_results
+            try:
+                neo4j_results = self.search_neo4j(question)
+            except Exception as e:
+                search_errors.append(f"Neo4j检索: {e}")
+
+        def search_chroma_task():
+            nonlocal chroma_results
+            try:
+                chroma_results = self.search_chroma(question)
+            except Exception as e:
+                search_errors.append(f"Chroma检索: {e}")
+
+        threads = [
+            threading.Thread(target=search_neo4j_task, daemon=True),
+            threading.Thread(target=search_chroma_task, daemon=True),
+        ]
+        for thread in threads:
+            thread.start()
+        for thread in threads:
+            thread.join(timeout=retrieval_wait_timeout)
+
+        if search_errors:
+            logger.warning("检索告警: %s", "; ".join(search_errors))
+
+        answer = self.chat(
+            user_input=question,
+            neo4j_results=neo4j_results,
+            chroma_results=chroma_results,
+            history=history,
+            on_token=on_token,
+        )
+
+        return {
+            "answer": answer,
+            "neo4j_count": len(neo4j_results),
+            "chroma_count": len(chroma_results),
+            "neo4j_results": neo4j_results,
+            "chroma_results": chroma_results,
+            "metadata": self._build_manual_metadata(self.source_name, neo4j_results, chroma_results),
+        }
+
+    def _ask_auto(self, question: str, history: list = None, on_token: Callable[[str], None] = None) -> dict:
+        routing_trace = SourceRouter().route(question)
+        selected_sources = list(routing_trace.get("selected_sources", []))
+        neo4j_by_source: Dict[str, List[dict]] = {}
+        chroma_by_source: Dict[str, List[dict]] = {}
+        search_errors = []
+
+        for source_name in selected_sources:
+            try:
+                neo4j_results, chroma_results = self._search_single_source_bundle(source_name, question)
+                neo4j_by_source[source_name] = neo4j_results
+                chroma_by_source[source_name] = chroma_results
+            except Exception as e:
+                search_errors.append(f"{source_name}: {e}")
+                neo4j_by_source[source_name] = []
+                chroma_by_source[source_name] = []
+
+        if search_errors:
+            logger.warning("自动路由检索告警: %s", "; ".join(search_errors))
+
+        fused = self._fuse_auto_results(
+            question,
+            neo4j_by_source=neo4j_by_source,
+            chroma_by_source=chroma_by_source,
+            routing_trace=routing_trace,
+        )
+        fused["metadata"]["search_errors"] = list(search_errors)
+        answer = self.chat(
+            user_input=f"{question}\n\n补充要求：{fused['answer_prompt']}",
+            neo4j_results=fused["neo4j_results"],
+            chroma_results=fused["chroma_results"],
+            history=history,
+            on_token=on_token,
+        )
+        answer = self._decorate_auto_answer(answer, fused["metadata"])
+        return {
+            "answer": answer,
+            "neo4j_count": len(fused["neo4j_results"]),
+            "chroma_count": len(fused["chroma_results"]),
+            "neo4j_results": fused["neo4j_results"],
+            "chroma_results": fused["chroma_results"],
+            "metadata": fused["metadata"],
+        }
+
+    # ─── 流式响应解析（Ollama NDJSON + SSE 共用） ──────────
+
+    def _stream_ndjson(self, resp, on_token):
+        """解析 Ollama NDJSON 流式响应"""
+        full_response = ""
+        buffer = b""
+        while True:
+            chunk = resp.read(4096)
+            if not chunk:
+                break
+            buffer += chunk
+            while b"\n" in buffer:
+                line, buffer = buffer.split(b"\n", 1)
+                if line.strip():
+                    try:
+                        data = json.loads(line.decode('utf-8'))
+                        token = data.get("message", {}).get("content", "")
+                        if token:
+                            full_response += token
+                            on_token(token)
+                        if data.get("done"):
+                            return full_response
+                    except json.JSONDecodeError:
+                        continue
+        return full_response
+
+    def _stream_sse(self, resp, on_token):
+        """解析 OpenAI SSE 流式响应"""
+        full_response = ""
+        buffer = b""
+        while True:
+            chunk = resp.read(4096)
+            if not chunk:
+                break
+            buffer += chunk
+            while b"\n\n" in buffer:
+                part, buffer = buffer.split(b"\n\n", 1)
+                for line in part.split(b"\n"):
+                    if line.startswith(b"data: "):
+                        data_str = line[6:].decode('utf-8').strip()
+                        if data_str == "[DONE]":
+                            return full_response
+                        try:
+                            data = json.loads(data_str)
+                            choices = data.get("choices", [])
+                            if choices:
+                                delta = choices[0].get("delta", {})
+                                token = delta.get("content", "")
+                                if token:
+                                    full_response += token
+                                    on_token(token)
+                        except json.JSONDecodeError:
+                            continue
+        return full_response
+
+    # ─── LLM 对话调用 ────────────────────────────────────────
+
+    def chat(self, user_input: str,
+             neo4j_results: list = None,
+             chroma_results: list = None,
+             history: list = None,
+             on_token: Callable[[str], None] = None) -> str:
+        """
+        调用 LLM 进行对话（自动选择本地Ollama或远程API）
+        """
+        if history is None:
+            history = []
+
+        # 非流式模式无需预加载设置（流式模式下 chat 已缓存 settings）
+        self._load_settings()
+
+        # 构造系统提示词
+        system_prompt = self._build_system_prompt(neo4j_results, chroma_results)
+
+        # 构造消息列表
+        messages = [{"role": "system", "content": system_prompt}]
+        messages.extend(history)
+        messages.append({"role": "user", "content": user_input})
+
+        # 根据设置选择调用方式
+        if self.use_remote_api:
+            return self._call_remote_api(messages, on_token)
+        else:
+            return self._call_ollama(messages, on_token)
+
+    @staticmethod
+    def _graph_relation_label(relation: str) -> str:
+        mapping = {
+            "IS_A": "是",
+            "PART_OF": "属于",
+            "ORBITS": "绕行",
+            "LOCATED_IN": "位于",
+            "HAS_ATMOSPHERE": "大气成分",
+            "DISCOVERED_BY": "发现者",
+            "HAS_RADIUS": "半径",
+            "HAS_DIAMETER": "直径",
+            "HAS_MASS": "质量",
+        }
+        return mapping.get(str(relation or "").strip(), str(relation or "").strip())
+
+    @classmethod
+    def _graph_relation_priority(cls, relation: str) -> int:
+        priorities = {
+            "HAS_DIAMETER": 105,
+            "HAS_RADIUS": 100,
+            "HAS_MASS": 95,
+            "PART_OF": 85,
+            "ORBITS": 80,
+            "HAS_ATMOSPHERE": 70,
+            "LOCATED_IN": 60,
+            "IS_A": 50,
+            "DISCOVERED_BY": 40,
+        }
+        return priorities.get(str(relation or "").strip(), 0)
+
+    @classmethod
+    def _format_graph_fact(cls, record: dict) -> str:
+        subject = str(record.get('subject', '')).strip()
+        relation = str(record.get('relation', '')).strip()
+        obj = str(record.get('object', '')).strip()
+        if not subject or not relation or not obj:
+            return ''
+        templates = {
+            'IS_A': f'{subject}是{obj}',
+            'PART_OF': f'{subject}属于{obj}',
+            'ORBITS': f'{subject}绕{obj}运行',
+            'LOCATED_IN': f'{subject}位于{obj}',
+            'HAS_ATMOSPHERE': f'{subject}的大气成分包含{obj}',
+            'DISCOVERED_BY': f'{subject}由{obj}发现',
+            'HAS_RADIUS': f'{subject}的半径为{obj}',
+            'HAS_DIAMETER': f'{subject}的直径为{obj}',
+            'HAS_MASS': f'{subject}的质量为{obj}',
+        }
+        return templates.get(relation, f'{subject} {cls._graph_relation_label(relation)} {obj}')
+
+    @classmethod
+    def _select_graph_prompt_facts(cls, records: list, limit: Optional[int] = None) -> list:
+        ranked = []
+        seen = set()
+        for index, record in enumerate(records or []):
+            key = (
+                str(record.get('subject', '')).strip(),
+                str(record.get('relation', '')).strip(),
+                str(record.get('object', '')).strip(),
+            )
+            if key in seen:
+                continue
+            seen.add(key)
+            ranked.append((cls._graph_relation_priority(key[1]), index, record))
+        ranked.sort(key=lambda item: (-item[0], item[1]))
+        selected = [item[2] for item in ranked]
+        if limit is None:
+            return selected
+        return selected[:limit]
+
+    def _build_system_prompt(self, neo4j_results: list = None,
+                             chroma_results: list = None) -> str:
+        """构造更紧凑的检索提示词，减少 Qwen3 在思考阶段的 token 消耗。"""
+        parts = [
+            self.system_role,
+            "回答规则：仅基于检索结果直接回答，不复述检索过程，不展示思考过程。先给结论，最多6句；缺信息就明确说知识库暂无。",
+        ]
+
+        if neo4j_results:
+            parts.append("图谱要点:")
+            for r in self._select_graph_prompt_facts(neo4j_results, limit=None):
+                fact = self._format_graph_fact(r)
+                if fact:
+                    parts.append(f"- {fact}")
+
+        if chroma_results:
+            parts.append("语义要点:")
+            for r in chroma_results[:2]:
+                title = r.get('page_title', '未知')
+                section = r.get('section', '')
+                content = r.get('content', '')[:120]
+                summary = f"[{title}" + (f"/{section}" if section else "") + f"] {content}"
+                parts.append(summary)
+
+        parts.append("如果检索结果不足，请明确说明，不要编造。")
+        return "\n".join(parts)
+
+    @staticmethod
+    def _sanitize_final_answer(text: str) -> str:
+        value = normalize_to_simplified(str(text or "")).strip()
+        if not value:
+            return ""
+        if "</think>" in value:
+            value = value.split("</think>", 1)[-1].strip()
+        for marker in ("写回答：", "写回答:", "最终回答：", "最终回答:", "最终答案：", "最终答案:"):
+            if marker in value:
+                value = value.split(marker, 1)[-1].strip()
+        value = re.split(
+            r"\n\s*(检查是否|在输出中|用户说|输出句子|回答大纲|关键点|为了简洁|但要控制在|（这样|\(这样)",
+            value,
+            maxsplit=1,
+        )[0].strip()
+        lines = []
+        for line in value.splitlines():
+            stripped = line.strip()
+            if not stripped:
+                continue
+            if stripped.startswith(("写回答：", "写回答:", "回答大纲", "关键点", "但要控制在")):
+                continue
+            lines.append(stripped)
+        joined = "\n".join(lines).strip()
+        if not joined:
+            return ""
+        sentences = [item.strip() for item in re.split(r"(?<=[。！？!?])\s*", joined) if item.strip()]
+        if sentences:
+            return "".join(sentences[:6]).strip()
+        return joined
+    @classmethod
+    def _extract_answer_from_thinking(cls, thinking: str) -> str:
+        text = normalize_to_simplified(str(thinking or "")).strip()
+        if not text:
+            return ""
+        for marker in ("最终回答：", "最终回答:", "最终答案：", "最终答案:", "精简版：", "精简版:", "草拟回答：", "草拟回答:"):
+            if marker in text:
+                candidate = text.split(marker)[-1].strip()
+                candidate = re.split(r"\n\s*知识库中说|\n\s*但知识库中|\n\s*为了简洁|\n\s*回答大纲", candidate)[0].strip()
+                return cls._sanitize_final_answer(candidate)
+        return ""
+
+    def _build_concise_retry_messages(self, messages: list) -> list:
+        user_message = ""
+        for item in reversed(messages):
+            if item.get("role") == "user":
+                user_message = str(item.get("content", "")).strip()
+                break
+
+        context_chunks = []
+        for item in messages:
+            if item.get("role") != "system":
+                continue
+            content = str(item.get("content", "")).strip()
+            if not content:
+                continue
+            for line in content.splitlines():
+                stripped = line.strip()
+                if not stripped:
+                    continue
+                if stripped.startswith("-") or stripped.startswith("[") or stripped.startswith("图谱要点") or stripped.startswith("语义要点"):
+                    context_chunks.append(stripped)
+
+        retry_system = "你是太阳系知识助手。不要展示思考过程，只输出最终答案。优先引用检索里的数值和实体名，最多5句。"
+        retry_user_parts = []
+        if user_message:
+            retry_user_parts.append(f"问题：{user_message}")
+        if context_chunks:
+            retry_user_parts.append("检索要点：")
+            retry_user_parts.extend(context_chunks[:8])
+        retry_user_parts.append("请直接给最终回答，不要解释你的推理。")
+        return [
+            {"role": "system", "content": retry_system},
+            {"role": "user", "content": "\n".join(retry_user_parts)},
+        ]
+
+    def _extract_usable_ollama_content(self, data: dict) -> str:
+        message = data.get("message", {}) if isinstance(data, dict) else {}
+        content = str(message.get("content", "") or "").strip()
+        if content:
+            return self._sanitize_final_answer(content)
+        thinking = str(message.get("thinking", "") or "").strip()
+        return self._extract_answer_from_thinking(thinking)
+
+    def _call_ollama_nonstream(self, messages: list, allow_retry: bool = True) -> str:
+        url = f"{self.base_url}/api/chat"
+        payload = json.dumps({
+            "model": self.model,
+            "messages": messages,
+            "stream": False,
+            "options": {
+                "temperature": self.temperature,
+                "top_p": self.top_p,
+                "num_predict": self.max_tokens,
+                "think": False,
+            }
+        }).encode('utf-8')
+
+        req = urllib.request.Request(
+            url, data=payload,
+            headers={"Content-Type": "application/json"},
+            method="POST"
+        )
+        with urllib.request.urlopen(req, timeout=self.timeout) as resp:
+            data = json.loads(resp.read().decode())
+
+        content = self._extract_usable_ollama_content(data)
+        if content:
+            return content
+
+        if allow_retry:
+            logger.warning("Ollama 非流式正文为空，使用短提示词重试: model=%s", self.model)
+            retry_messages = self._build_concise_retry_messages(messages)
+            return self._call_ollama_nonstream(retry_messages, allow_retry=False)
+
+        return ""
+
+    def _call_ollama(self, messages: list,
+                     on_token: Optional[Callable[[str], None]] = None) -> str:
+        """调用本地 Ollama API (支持流式)"""
+        url = f"{self.base_url}/api/chat"
+        payload = json.dumps({
+            "model": self.model,
+            "messages": messages,
+            "stream": on_token is not None,
+            "options": {
+                "temperature": self.temperature,
+                "top_p": self.top_p,
+                "num_predict": self.max_tokens,
+                "think": False,
+            }
+        }).encode('utf-8')
+
+        req = urllib.request.Request(
+            url, data=payload,
+            headers={"Content-Type": "application/json"},
+            method="POST"
+        )
+
+        try:
+            if on_token:
+                with urllib.request.urlopen(req, timeout=self.timeout) as resp:
+                    streamed = self._stream_ndjson(resp, on_token)
+                if streamed.strip():
+                    return streamed
+                logger.warning("Ollama 流式返回为空，回退到非流式重试: model=%s", self.model)
+                return self._call_ollama_nonstream(messages)
+            else:
+                return self._call_ollama_nonstream(messages)
+        except urllib.error.HTTPError as e:
+            error_body = e.read().decode() if e.fp else str(e)
+            logger.error("Ollama API HTTP错误 %s: %s", e.code, error_body)
+            return f"[错误] Ollama API 返回 {e.code}: {error_body}"
+        except urllib.error.URLError as e:
+            logger.error("Ollama 连接失败: %s", e.reason)
+            return f"[错误] 无法连接到 Ollama 服务 ({e.reason})"
+        except Exception as e:
+            logger.exception("Ollama 调用异常")
+            return f"[错误] {str(e)}"
+
+    def _call_remote_api(self, messages: list,
+                         on_token: Optional[Callable[[str], None]] = None) -> str:
+        """调用远程 OpenAI 兼容 API (支持流式)"""
+        if not self.api_base or not self.api_key:
+            return "[错误] 远程API地址或密钥未配置，请在设置中填写。"
+
+        url = f"{self.api_base}/chat/completions"
+        payload = json.dumps({
+            "model": self.remote_model,
+            "messages": messages,
+            "stream": on_token is not None,
+            "temperature": self.temperature,
+            "top_p": self.top_p,
+            "max_tokens": self.max_tokens,
+        }).encode('utf-8')
+
+        req = urllib.request.Request(
+            url, data=payload,
+            headers={
+                "Content-Type": "application/json",
+                "Authorization": f"Bearer {self.api_key}",
+            },
+            method="POST"
+        )
+
+        try:
+            if on_token:
+                with urllib.request.urlopen(req, timeout=self.timeout) as resp:
+                    return self._stream_sse(resp, on_token)
+            else:
+                with urllib.request.urlopen(req, timeout=self.timeout) as resp:
+                    data = json.loads(resp.read().decode())
+                    choices = data.get("choices", [])
+                    if choices:
+                        return choices[0].get("message", {}).get("content", "")
+                    return "[错误] API 返回格式异常"
+        except urllib.error.HTTPError as e:
+            error_body = e.read().decode() if e.fp else str(e)
+            logger.error("远程API HTTP错误 %s: %s", e.code, error_body)
+            return f"[错误] 远程API返回 {e.code}: {error_body}"
+        except urllib.error.URLError as e:
+            logger.error("远程API连接失败: %s", e.reason)
+            return f"[错误] 无法连接到远程API ({e.reason})"
+        except Exception as e:
+            logger.exception("远程API调用异常")
+            return f"[错误] {str(e)}"
+
+    # ─── 一句话问答（自动检索 + 生成） ──────────────────
+
+    def ask(self, question: str,
+            history: list = None,
+            on_token: Callable[[str], None] = None) -> dict:
+        """
+        一键问答：自动执行知识检索 + LLM 生成
+        """
+        if self._is_auto_source():
+            return self._ask_auto(question, history=history, on_token=on_token)
+        return self._ask_single_source(question, history=history, on_token=on_token)
+
+    def close(self):
+        """释放资源"""
+        if self._neo4j_loader:
+            try:
+                self._neo4j_loader.close()
+            except Exception as e:
+                logger.warning("Neo4jLoader 关闭异常: %s", e)
+            self._neo4j_loader = None
+        if self._chroma_store:
+            try:
+                self._chroma_store.close()
+            except Exception as e:
+                logger.warning("ChromaStore 关闭异常: %s", e)
+        self._chroma_store = None

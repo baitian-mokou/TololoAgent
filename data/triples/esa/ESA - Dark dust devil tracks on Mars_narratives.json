@@ -1,0 +1,20 @@
+[
+  {
+    "section": "任务",
+    "content": "ESA - Dark dust devil tracks on Mars Science & Exploration Dark dust devil tracks on Mars 28/03/2019 7074 views 81 likes ESA / Science & Exploration / Space Science / Mars Express The winds of Mars are responsible for myriad features across the planet’s surface – including the dark dunes and wispy, filament-like streaks seen in this image from ESA’s Mars Express. The intriguing features shown here are ‘dust devil’ tracks: as the Sun heats up the martian ground during the day, vortices form that lift warm air from near the surface, whipping up dust as they do so, shaping and sculpting it into swirling, column-shaped, tornado-like whirlwinds (click here for videos of dust devils made by NASA's Mars rover Spirit). Context view These dust devils range across the entire planet, lifting the top,",
+    "keywords": [
+      "ESA - Dark dust devil tracks on Mars",
+      "ESA",
+      "太阳系任务",
+      "火星"
+    ],
+    "page_title": "ESA - Dark dust devil tracks on Mars",
+    "source": "esa",
+    "source_name": "esa",
+    "source_role": "primary",
+    "origin": "api",
+    "type": "embedding_chunk",
+    "schema_version": "esa_shadow_ready_v1",
+    "source_title": "ESA - Dark dust devil tracks on Mars"
+  }
+]

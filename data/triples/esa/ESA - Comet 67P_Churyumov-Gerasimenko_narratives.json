@@ -1,0 +1,21 @@
+[
+  {
+    "section": "任务",
+    "content": "ESA - Comet 67P/Churyumov-Gerasimenko Science & Exploration Comet 67P/Churyumov-Gerasimenko 138529 views 324 likes ESA / Science & Exploration / Space Science / Rosetta ESA's Rosetta mission chased down Comet 67P/Churyumov-Gerasimenko for ten years. The comet is a regular visitor to the inner Solar System, orbiting the Sun once every 6.5 years between the orbits of Jupiter and Earth. Like all comets, Churyumov-Gerasimenko is named after its discoverers. It was first observed in 1969, when several astronomers from Kiev visited the Alma-Ata Astrophysical Institute in Kazakhstan to conduct a survey of comets. On 20 September, Klim Churyumov was examining a photograph of comet 32P/Comas Solá, taken by Svetlana Gerasimenko, when he noticed another comet-like object. After returning to Kiev, he",
+    "keywords": [
+      "ESA - Comet 67P/Churyumov-Gerasimenko",
+      "ESA",
+      "太阳系任务",
+      "木星",
+      "彗星"
+    ],
+    "page_title": "ESA - Comet 67P/Churyumov-Gerasimenko",
+    "source": "esa",
+    "source_name": "esa",
+    "source_role": "primary",
+    "origin": "api",
+    "type": "embedding_chunk",
+    "schema_version": "esa_shadow_ready_v1",
+    "source_title": "ESA - Comet 67P/Churyumov-Gerasimenko"
+  }
+]

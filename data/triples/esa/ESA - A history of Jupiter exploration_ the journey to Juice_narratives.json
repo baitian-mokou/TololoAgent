@@ -1,0 +1,23 @@
+[
+  {
+    "section": "任务",
+    "content": "ESA - A history of Jupiter exploration: the journey to Juice Science & Exploration A history of Jupiter exploration: the journey to Juice 11471 views 21 likes ESA / Science & Exploration / Space Science / Juice ESA's Jupiter Icy Moons Explorer ( Juice ) is currently winging its way to Jupiter to explore the planet and its fascinating array of moons. We have explored Jupiter for decades via both passing spacecraft (flybys) and spacecraft positioned in orbit around the planet. Our exploration began in the 1970s with NASA’s Pioneer programme, and continues today with NASA’s Juno and Europa Clipper missions and ESA’s Juice . Past flybys The first spacecraft to explore Jupiter were part of NASA’s Pioneer programme in the 1970s. Pioneers 10 and 11 visited the gas giant in 1973 and 1974, followed",
+    "keywords": [
+      "ESA - A history of Jupiter exploration: the journey to Juice",
+      "ESA",
+      "太阳系任务",
+      "木星",
+      "木卫二",
+      "木卫三",
+      "木卫四"
+    ],
+    "page_title": "ESA - A history of Jupiter exploration: the journey to Juice",
+    "source": "esa",
+    "source_name": "esa",
+    "source_role": "primary",
+    "origin": "api",
+    "type": "embedding_chunk",
+    "schema_version": "esa_shadow_ready_v1",
+    "source_title": "ESA - A history of Jupiter exploration: the journey to Juice"
+  }
+]

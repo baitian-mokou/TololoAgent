@@ -1,0 +1,52 @@
+{
+  "record": {
+    "title": "火星",
+    "qid": "Q111",
+    "triples": [
+      {
+        "relation": "ORBITS",
+        "object": "太阳",
+        "property_id": "P397"
+      },
+      {
+        "relation": "PART_OF",
+        "object": "太阳系",
+        "property_id": "P361"
+      },
+      {
+        "relation": "LOCATED_IN",
+        "object": "太阳系",
+        "property_id": "P276"
+      },
+      {
+        "relation": "HAS_MASS",
+        "object": "6.4171e23 kg",
+        "property_id": "P2067"
+      },
+      {
+        "relation": "HAS_RADIUS",
+        "object": "3389.5 km",
+        "property_id": "P2120"
+      },
+      {
+        "relation": "HAS_ATMOSPHERE",
+        "object": "二氧化碳;氮气;氩气",
+        "property_id": "P2067"
+      }
+    ],
+    "narratives": [
+      {
+        "section": "大气",
+        "content": "根据 Wikidata fixture，火星大气以二氧化碳为主，并含有氮气、氩气以及微量氧气和水蒸气。",
+        "keywords": [
+          "火星",
+          "大气",
+          "二氧化碳",
+          "氮气",
+          "氩气"
+        ]
+      }
+    ]
+  },
+  "fixture_source": "solar_system_fixture.json"
+}

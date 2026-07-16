@@ -1,0 +1,21 @@
+[
+  {
+    "section": "任务",
+    "content": "ESA - Europe's comet chaser Science & Exploration Europe's comet chaser 128360 views 375 likes ESA / Science & Exploration / Space Science / Rosetta In November 1993, the International Rosetta Mission was approved as a Cornerstone Mission in ESA's Horizons 2000 Science Programme. Since then, scientists and engineers from all over Europe and the United States combined their talents to build an orbiter and a lander for this unique expedition to unravel the secrets of a mysterious 'mini' ice world – a comet. Initially scheduled for January 2003, the launch of Rosetta had been postponed due to a failure of an Ariane rocket in December 2002. The adventure began March 2004, when a European Ariane 5 rocket lifted off from Kourou in French Guiana. During a circuitous ten-year trek across the Solar",
+    "keywords": [
+      "ESA - Europe's comet chaser",
+      "ESA",
+      "太阳系任务",
+      "木星",
+      "彗星"
+    ],
+    "page_title": "ESA - Europe's comet chaser",
+    "source": "esa",
+    "source_name": "esa",
+    "source_role": "primary",
+    "origin": "api",
+    "type": "embedding_chunk",
+    "schema_version": "esa_shadow_ready_v1",
+    "source_title": "ESA - Europe's comet chaser"
+  }
+]

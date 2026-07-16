@@ -1,0 +1,197 @@
+{
+  "generated_at": "2026-06-28T03:41:12.780786+00:00",
+  "source": "source_conflict_audit_v4",
+  "apply_supported": false,
+  "candidates": [
+    {
+      "patch_id": "source_conflict_v4_001",
+      "action": "no_action_manual_review",
+      "target_source": "zh_wikipedia",
+      "target_file": "F:\\知识表示与处理结课作业\\第二次托洛洛测试 -重大进展\\data\\triples\\天王星_triples.json",
+      "target_record_hint": {
+        "subject": "天王星",
+        "relation": "HAS_MASS",
+        "object": "0.0013 × 10 25 kg"
+      },
+      "before": {
+        "values_by_source": {
+          "zh_wikipedia": [
+            "0.0013 × 10 25 kg"
+          ],
+          "wikidata": [
+            "8.6810e25 kg"
+          ]
+        }
+      },
+      "after": {
+        "proposal": "manual review; no automatic data change"
+      },
+      "rationale": "Values remain materially different after unit, alias, synonym, and measurement-kind checks.",
+      "confidence": 0.6,
+      "requires_human_approval": true
+    },
+    {
+      "patch_id": "source_conflict_v4_002",
+      "action": "add_measurement_kind",
+      "target_source": "zh_wikipedia",
+      "target_file": "F:\\知识表示与处理结课作业\\第二次托洛洛测试 -重大进展\\data\\triples\\天王星_triples.json",
+      "target_record_hint": {
+        "subject": "天王星",
+        "relation": "HAS_RADIUS",
+        "object": "4km"
+      },
+      "before": {
+        "values_by_source": {
+          "zh_wikipedia": [
+            "4km",
+            "20km"
+          ],
+          "wikidata": [
+            "25362 km"
+          ]
+        }
+      },
+      "after": {
+        "proposal": "annotate candidate measurement_kind only; do not mutate formal triples"
+      },
+      "rationale": "Radius records mix mean/equatorial/polar or unspecified radius kinds.",
+      "confidence": 0.78,
+      "requires_human_approval": true
+    },
+    {
+      "patch_id": "source_conflict_v4_003",
+      "action": "no_action_manual_review",
+      "target_source": "zh_wikipedia",
+      "target_file": "F:\\知识表示与处理结课作业\\第二次托洛洛测试 -重大进展\\data\\triples\\木卫二_triples.json",
+      "target_record_hint": {
+        "subject": "木卫二",
+        "relation": "HAS_MASS",
+        "object": "0.000 013 × 10 22 kg"
+      },
+      "before": {
+        "values_by_source": {
+          "zh_wikipedia": [
+            "0.000 013 × 10 22 kg"
+          ],
+          "wikidata": [
+            "4.7998e22 kg"
+          ]
+        }
+      },
+      "after": {
+        "proposal": "manual review; no automatic data change"
+      },
+      "rationale": "Values remain materially different after unit, alias, synonym, and measurement-kind checks.",
+      "confidence": 0.6,
+      "requires_human_approval": true
+    },
+    {
+      "patch_id": "source_conflict_v4_004",
+      "action": "no_action_manual_review",
+      "target_source": "zh_wikipedia",
+      "target_file": "F:\\知识表示与处理结课作业\\第二次托洛洛测试 -重大进展\\data\\triples\\木卫四_triples.json",
+      "target_record_hint": {
+        "subject": "木卫四",
+        "relation": "HAS_MASS",
+        "object": "0.000 137 × 10 23 kg"
+      },
+      "before": {
+        "values_by_source": {
+          "zh_wikipedia": [
+            "0.000 137 × 10 23 kg"
+          ],
+          "wikidata": [
+            "1.0759e23 kg"
+          ]
+        }
+      },
+      "after": {
+        "proposal": "manual review; no automatic data change"
+      },
+      "rationale": "Values remain materially different after unit, alias, synonym, and measurement-kind checks.",
+      "confidence": 0.6,
+      "requires_human_approval": true
+    },
+    {
+      "patch_id": "source_conflict_v4_005",
+      "action": "no_action_manual_review",
+      "target_source": "zh_wikipedia",
+      "target_file": "F:\\知识表示与处理结课作业\\第二次托洛洛测试 -重大进展\\data\\triples\\火卫一_triples.json",
+      "target_record_hint": {
+        "subject": "火卫一",
+        "relation": "HAS_MASS",
+        "object": "1.072 × 10 16 kg"
+      },
+      "before": {
+        "values_by_source": {
+          "zh_wikipedia": [
+            "1.072 × 10 16 kg"
+          ],
+          "wikidata": [
+            "1.0659e16 kg"
+          ]
+        }
+      },
+      "after": {
+        "proposal": "manual review; no automatic data change"
+      },
+      "rationale": "Mass values differ by less than 1%; likely precision/significant-figure or source granularity difference.",
+      "confidence": 0.76,
+      "requires_human_approval": true
+    },
+    {
+      "patch_id": "source_conflict_v4_006",
+      "action": "no_action_manual_review",
+      "target_source": "zh_wikipedia",
+      "target_file": "F:\\知识表示与处理结课作业\\第二次托洛洛测试 -重大进展\\data\\triples\\火卫一_triples.json",
+      "target_record_hint": {
+        "subject": "火卫一",
+        "relation": "HAS_RADIUS",
+        "object": "11.1km"
+      },
+      "before": {
+        "values_by_source": {
+          "zh_wikipedia": [
+            "11.1km"
+          ],
+          "wikidata": [
+            "11.2667 km"
+          ]
+        }
+      },
+      "after": {
+        "proposal": "manual review; no automatic data change"
+      },
+      "rationale": "Values remain materially different after unit, alias, synonym, and measurement-kind checks.",
+      "confidence": 0.6,
+      "requires_human_approval": true
+    },
+    {
+      "patch_id": "source_conflict_v4_007",
+      "action": "no_action_manual_review",
+      "target_source": "zh_wikipedia",
+      "target_file": "F:\\知识表示与处理结课作业\\第二次托洛洛测试 -重大进展\\data\\triples\\金星_triples.json",
+      "target_record_hint": {
+        "subject": "金星",
+        "relation": "HAS_RADIUS",
+        "object": "1.0km"
+      },
+      "before": {
+        "values_by_source": {
+          "zh_wikipedia": [
+            "1.0km"
+          ],
+          "wikidata": [
+            "6051.8 km"
+          ]
+        }
+      },
+      "after": {
+        "proposal": "manual review; no automatic data change"
+      },
+      "rationale": "Values remain materially different after unit, alias, synonym, and measurement-kind checks.",
+      "confidence": 0.6,
+      "requires_human_approval": true
+    }
+  ]
+}

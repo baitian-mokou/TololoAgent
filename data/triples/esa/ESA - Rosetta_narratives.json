@@ -1,0 +1,23 @@
+[
+  {
+    "section": "任务",
+    "content": "ESA - Rosetta Science & Exploration Rosetta ESA's comet-chaser The mission ESA's Rosetta mission was the first to rendezvous with a comet, the first to follow a comet on its orbit around the Sun, and the first to deploy a lander to a comet's surface. Comets are time capsules containing primitive material left over from the epoch when the Sun and its planets formed. By studying the gas, dust and structure of the nucleus and organic materials associated with Comet 67P/Churyumov-Gerasimenko, via both remote and in situ observations, the Rosetta mission taught us about the history and evolution of our Solar System. Rosetta is an ESA mission with contributions from its Member States and NASA. Rosetta’s Philae lander was provided by a consortium led by DLR, MPS, CNES and ASI. Launch: 2 March 200",
+    "keywords": [
+      "ESA - Rosetta",
+      "ESA",
+      "太阳系任务",
+      "彗星",
+      "火星"
+    ],
+    "page_title": "ESA - Rosetta",
+    "path": "任务",
+    "chunk_index": 0,
+    "source": "esa",
+    "source_name": "esa",
+    "source_role": "primary",
+    "source_title": "ESA - Rosetta",
+    "origin": "html_fallback",
+    "schema_version": "esa_shadow_ready_v1",
+    "type": "embedding_chunk"
+  }
+]

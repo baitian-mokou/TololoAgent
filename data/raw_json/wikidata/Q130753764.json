@@ -1,0 +1,68 @@
+{
+  "entities": {
+    "Q130753764": {
+      "type": "item",
+      "id": "Q130753764",
+      "labels": {
+        "zh": {
+          "language": "zh",
+          "value": "银河系核球"
+        },
+        "en": {
+          "language": "en",
+          "value": "nuclear bulge of the Milky Way"
+        }
+      },
+      "claims": {
+        "P31": [
+          {
+            "mainsnak": {
+              "snaktype": "value",
+              "property": "P31",
+              "hash": "a4a5cb47b2c5a45fb6d30b7275b0a202b8f20644",
+              "datavalue": {
+                "value": {
+                  "entity-type": "item",
+                  "numeric-id": 854155,
+                  "id": "Q854155"
+                },
+                "type": "wikibase-entityid"
+              },
+              "datatype": "wikibase-item"
+            },
+            "type": "statement",
+            "id": "Q130753764$ac8f7904-49a5-aec0-2dd5-17b456da2b88",
+            "rank": "normal"
+          }
+        ],
+        "P361": [
+          {
+            "mainsnak": {
+              "snaktype": "value",
+              "property": "P361",
+              "hash": "9e9cd14cfad336e5e221cb37cdd068b27581711a",
+              "datavalue": {
+                "value": {
+                  "entity-type": "item",
+                  "numeric-id": 321,
+                  "id": "Q321"
+                },
+                "type": "wikibase-entityid"
+              },
+              "datatype": "wikibase-item"
+            },
+            "type": "statement",
+            "id": "Q130753764$d1d9e183-42db-4f7c-f0c3-99b2b8d5755e",
+            "rank": "normal"
+          }
+        ]
+      }
+    }
+  },
+  "success": 1,
+  "preview_target": {
+    "entity": "Q130753764",
+    "qid": "Q130753764"
+  },
+  "fetched_at": "2026-06-28T15:30:11.740011+00:00"
+}

@@ -1,0 +1,72 @@
+{
+  "source": "nasa",
+  "raw_records_written": 4,
+  "processed_records_written": 4,
+  "triples_written": 11,
+  "narratives_written": 4,
+  "graph_written": true,
+  "chroma_written": true,
+  "crawled_urls": [
+    "https://nssdc.gsfc.nasa.gov/planetary/factsheet/earthfact.html",
+    "https://nssdc.gsfc.nasa.gov/planetary/factsheet/mercuryfact.html",
+    "https://nssdc.gsfc.nasa.gov/planetary/factsheet/marsfact.html",
+    "https://nssdc.gsfc.nasa.gov/planetary/factsheet/venusfact.html"
+  ],
+  "skipped_urls": [],
+  "errors": [],
+  "warnings": [
+    "nasa low coverage: retained 4 high-value fact pages under the current allowlist/candidate filter (requested limit=120)"
+  ],
+  "materialization_details": {
+    "graph": {
+      "cleared_items": 9,
+      "loaded_nodes": 12,
+      "loaded_relationships": 8,
+      "stats": {
+        "nodes": 324,
+        "rels": 457,
+        "labels": [
+          "Planet",
+          "Satellite",
+          "PlanetType",
+          "Star",
+          "DwarfPlanet",
+          "Asteroid",
+          "Comet",
+          "OrbitParameter",
+          "EnvironmentalFeature",
+          "Mission",
+          "Concept",
+          "CelestialBody",
+          "Galaxy"
+        ],
+        "rel_types": [
+          "围绕",
+          "拥有轨道参数",
+          "拥有环境特征",
+          "IS_A",
+          "DISCOVERED_BY",
+          "LOCATED_IN",
+          "ORBITS",
+          "PART_OF",
+          "HAS_RADIUS",
+          "HAS_MASS",
+          "HAS_ATMOSPHERE",
+          "OPERATED_BY",
+          "HAS_MISSION_TARGET"
+        ]
+      }
+    },
+    "chroma": {
+      "added_narratives": 4,
+      "stats": {
+        "total": 4,
+        "collections": [
+          "astronomy_narratives_nasa"
+        ]
+      }
+    }
+  },
+  "generated_at": "2026-07-04T02:52:02.283699+00:00",
+  "low_coverage_warning": "nasa low coverage: retained 4 high-value fact pages under the current allowlist/candidate filter (requested limit=120)"
+}

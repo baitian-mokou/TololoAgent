@@ -1,0 +1,20 @@
+[
+  {
+    "section": "任务",
+    "content": "ESA - Chasms on the flanks of a martian volcano Science & Exploration Chasms on the flanks of a martian volcano 09/05/2023 12455 views 172 likes ESA / Science & Exploration / Space Science / Mars Express Mars has some of the most impressive volcanoes in the Solar System. ESA’s Mars Express has now imaged the pitted, fissured flank of the planet’s second-tallest: Ascraeus Mons. This image comprises observations from Mars Express’ High Resolution Stereo Camera (HRSC) . Ascraeus Mons is the northernmost and tallest of three prominent volcanoes found in the Tharsis region of Mars , a volcanic plateau in Mars’ western hemisphere. It measures a towering 18 km in height but its slopes are gentle, with an average incline of 7 degrees. This slow climb is reflected in the volcano’s huge base diamete",
+    "keywords": [
+      "ESA - Chasms on the flanks of a martian volcano",
+      "ESA",
+      "太阳系任务",
+      "火星"
+    ],
+    "page_title": "ESA - Chasms on the flanks of a martian volcano",
+    "source": "esa",
+    "source_name": "esa",
+    "source_role": "primary",
+    "origin": "api",
+    "type": "embedding_chunk",
+    "schema_version": "esa_shadow_ready_v1",
+    "source_title": "ESA - Chasms on the flanks of a martian volcano"
+  }
+]

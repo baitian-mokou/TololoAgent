@@ -1,0 +1,112 @@
+{
+  "entities": {
+    "Q105976528": {
+      "type": "item",
+      "id": "Q105976528",
+      "labels": {
+        "en": {
+          "language": "en",
+          "value": "galactic plane of the Milky Way Galaxy"
+        }
+      },
+      "claims": {
+        "P31": [
+          {
+            "mainsnak": {
+              "snaktype": "value",
+              "property": "P31",
+              "hash": "f7b3f231a767b7b051e0970abc2ece329a5fb4b4",
+              "datavalue": {
+                "value": {
+                  "entity-type": "item",
+                  "numeric-id": 3239165,
+                  "id": "Q3239165"
+                },
+                "type": "wikibase-entityid"
+              },
+              "datatype": "wikibase-item"
+            },
+            "type": "statement",
+            "id": "Q105976528$ac8665c4-4a4e-3d2f-1109-1ab8a9246571",
+            "rank": "normal"
+          }
+        ],
+        "P361": [
+          {
+            "mainsnak": {
+              "snaktype": "value",
+              "property": "P361",
+              "hash": "9e9cd14cfad336e5e221cb37cdd068b27581711a",
+              "datavalue": {
+                "value": {
+                  "entity-type": "item",
+                  "numeric-id": 321,
+                  "id": "Q321"
+                },
+                "type": "wikibase-entityid"
+              },
+              "datatype": "wikibase-item"
+            },
+            "type": "statement",
+            "id": "Q105976528$3a0b330c-4382-220e-519b-ddb1585f2d36",
+            "rank": "normal"
+          }
+        ],
+        "P2583": [
+          {
+            "mainsnak": {
+              "snaktype": "value",
+              "property": "P2583",
+              "hash": "53a653120b2cefbd44720f4c4853b39b370420e5",
+              "datavalue": {
+                "value": {
+                  "amount": "+20.5",
+                  "unit": "http://www.wikidata.org/entity/Q12129",
+                  "upperBound": "+24.0",
+                  "lowerBound": "+17.0"
+                },
+                "type": "quantity"
+              },
+              "datatype": "quantity"
+            },
+            "type": "statement",
+            "id": "Q105976528$21fcc8e8-4f79-5226-f3c9-59e5f912a3f6",
+            "rank": "normal",
+            "references": [
+              {
+                "hash": "c67b2a65c7ba477c9f0445f4c08048a586548f12",
+                "snaks": {
+                  "P248": [
+                    {
+                      "snaktype": "value",
+                      "property": "P248",
+                      "hash": "eb7411e447a45482a761c4b4d4451263776f4890",
+                      "datavalue": {
+                        "value": {
+                          "entity-type": "item",
+                          "numeric-id": 105976649,
+                          "id": "Q105976649"
+                        },
+                        "type": "wikibase-entityid"
+                      },
+                      "datatype": "wikibase-item"
+                    }
+                  ]
+                },
+                "snaks-order": [
+                  "P248"
+                ]
+              }
+            ]
+          }
+        ]
+      }
+    }
+  },
+  "success": 1,
+  "preview_target": {
+    "entity": "Q105976528",
+    "qid": "Q105976528"
+  },
+  "fetched_at": "2026-06-28T15:30:13.964666+00:00"
+}

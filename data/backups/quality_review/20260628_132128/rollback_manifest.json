@@ -1,0 +1,17 @@
+{
+  "created_at": "2026-06-28T05:21:28.750423+00:00",
+  "backup_dir": "F:\\知识表示与处理结课作业\\第二次托洛洛测试 -重大进展\\data\\backups\\quality_review\\20260628_132128",
+  "entries": [
+    {
+      "original_path": "F:\\知识表示与处理结课作业\\第二次托洛洛测试 -重大进展\\data\\triples\\天王星_triples.json",
+      "backup_path": "F:\\知识表示与处理结课作业\\第二次托洛洛测试 -重大进展\\data\\backups\\quality_review\\20260628_132128\\天王星_triples.json",
+      "original_sha256": "8897cd2dbee44310fc4ba1587ddad1262dee394cde0a4c35627aad88b32584ea",
+      "patch_ids": [
+        "source_conflict_v4_002"
+      ],
+      "restore_instruction": "Copy backup_path back to original_path to roll back this file."
+    }
+  ],
+  "chroma_written": false,
+  "neo4j_written": false
+}

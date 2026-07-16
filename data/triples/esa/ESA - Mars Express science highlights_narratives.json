@@ -1,0 +1,23 @@
+[
+  {
+    "section": "任务",
+    "content": "ESA - Mars Express science highlights Science & Exploration Mars Express science highlights 55549 views 190 likes ESA / Science & Exploration / Space Science / Mars Express Mars Express has provided an unprecedented breadth and depth of information about Mars, from providing the most complete map of the chemical composition of the atmosphere, to tracing the history of water across the globe. Mars Express in numbers, as of 2023 Some of the key results include: Producing global maps tracing the planet’s geologic activity, water, volcanism and minerals . Providing enough data to construct thousands of 3D images of the surface . Studying immense volcanoes , canyons , polar ice caps , and ancient impact craters . Probing the sub-surface with radar , detecting subsurface layers of water ice and",
+    "keywords": [
+      "ESA - Mars Express science highlights",
+      "ESA",
+      "太阳系任务",
+      "火星",
+      "月球"
+    ],
+    "page_title": "ESA - Mars Express science highlights",
+    "path": "任务",
+    "chunk_index": 0,
+    "source": "esa",
+    "source_name": "esa",
+    "source_role": "primary",
+    "source_title": "ESA - Mars Express science highlights",
+    "origin": "html_fallback",
+    "schema_version": "esa_shadow_ready_v1",
+    "type": "embedding_chunk"
+  }
+]

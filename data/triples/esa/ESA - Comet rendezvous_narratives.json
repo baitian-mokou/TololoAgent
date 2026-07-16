@@ -1,0 +1,20 @@
+[
+  {
+    "section": "任务",
+    "content": "ESA - Comet rendezvous Science & Exploration Comet rendezvous 71584 views 231 likes ESA / Science & Exploration / Space Science / Rosetta The most difficult phase of the Rosetta mission was the final rendezvous with the fast-moving comet. After the braking manoeuvres in May–August 2014, the priority was to edge closer to the nucleus, starting from about 100 km at arrival on 6 August. Since that took place before Rosetta's cameras had imaged the comet in any great detail, accurate calculations of Comet 67P/Churyumov-Gerasimenko's orbit, based on ground-based observations, were essential. The first spacecraft images subsequently improved the calculations of the comet’s position and orbit, as well as its size, shape and rotation. Comet approach (January – August 2014) The spacecraft woke up f",
+    "keywords": [
+      "ESA - Comet rendezvous",
+      "ESA",
+      "太阳系任务",
+      "彗星"
+    ],
+    "page_title": "ESA - Comet rendezvous",
+    "source": "esa",
+    "source_name": "esa",
+    "source_role": "primary",
+    "origin": "api",
+    "type": "embedding_chunk",
+    "schema_version": "esa_shadow_ready_v1",
+    "source_title": "ESA - Comet rendezvous"
+  }
+]

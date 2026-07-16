@@ -1,0 +1,21 @@
+[
+  {
+    "section": "任务",
+    "content": "ESA - Earth and Moon seen from Mars Science & Exploration Earth and Moon seen from Mars 12/07/2023 68481 views 323 likes ESA / Science & Exploration / Space Science / Mars Express You are on Mars, looking back at your home planet Earth. How do you feel? Look again over several weeks and – with the aid of binoculars – you’ll see a little white dot orbiting around a bigger dot. That’s our Moon, orbiting Earth. This is certainly not the most impressive image you’ve ever seen of Earth and the Moon from a space exploration mission, but this simple image from ESA’s Mars Express orbiter still manages to capture that poignant ‘Pale Blue Dot’ feeling. Earth was first described as a pale blue dot by scientist and communicator Carl Sagan, inspired by a humbling 1990 image captured by NASA’s Voyager 1",
+    "keywords": [
+      "ESA - Earth and Moon seen from Mars",
+      "ESA",
+      "太阳系任务",
+      "火星",
+      "月球"
+    ],
+    "page_title": "ESA - Earth and Moon seen from Mars",
+    "source": "esa",
+    "source_name": "esa",
+    "source_role": "primary",
+    "origin": "api",
+    "type": "embedding_chunk",
+    "schema_version": "esa_shadow_ready_v1",
+    "source_title": "ESA - Earth and Moon seen from Mars"
+  }
+]

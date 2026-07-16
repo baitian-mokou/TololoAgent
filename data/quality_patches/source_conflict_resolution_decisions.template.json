@@ -1,0 +1,116 @@
+{
+  "schema_version": "source_conflict_resolution_decisions_v1",
+  "source": "source_conflict_audit_v4",
+  "candidate_path": "data/quality_patches/source_conflict_resolution_candidates.json",
+  "decision_policy": {
+    "no_patch_is_approved_by_default": true,
+    "formal_data_write_allowed": false,
+    "requires_human_approval": true
+  },
+  "decisions": [
+    {
+      "patch_id": "source_conflict_v4_001",
+      "subject": "天王星",
+      "relation": "HAS_MASS",
+      "classification": "true_value_conflict",
+      "recommended_decision": "defer_needs_external_source",
+      "human_decision": "pending",
+      "human_reason": "",
+      "approved_action": null,
+      "safe_to_apply": false,
+      "reviewed_by": "",
+      "reviewed_at": ""
+    },
+    {
+      "patch_id": "source_conflict_v4_002",
+      "subject": "天王星",
+      "relation": "HAS_RADIUS",
+      "classification": "measurement_kind_mismatch",
+      "recommended_decision": "approve_measurement_kind_only",
+      "human_decision": "pending",
+      "human_reason": "",
+      "approved_action": null,
+      "safe_to_apply": false,
+      "reviewed_by": "",
+      "reviewed_at": ""
+    },
+    {
+      "patch_id": "source_conflict_v4_003",
+      "subject": "月球",
+      "relation": "ORBITS",
+      "classification": "true_value_conflict",
+      "recommended_decision": "defer_needs_ontology_design",
+      "human_decision": "pending",
+      "human_reason": "",
+      "approved_action": null,
+      "safe_to_apply": false,
+      "reviewed_by": "",
+      "reviewed_at": ""
+    },
+    {
+      "patch_id": "source_conflict_v4_004",
+      "subject": "木卫二",
+      "relation": "HAS_MASS",
+      "classification": "true_value_conflict",
+      "recommended_decision": "defer_needs_external_source",
+      "human_decision": "pending",
+      "human_reason": "",
+      "approved_action": null,
+      "safe_to_apply": false,
+      "reviewed_by": "",
+      "reviewed_at": ""
+    },
+    {
+      "patch_id": "source_conflict_v4_005",
+      "subject": "木卫四",
+      "relation": "HAS_MASS",
+      "classification": "true_value_conflict",
+      "recommended_decision": "defer_needs_external_source",
+      "human_decision": "pending",
+      "human_reason": "",
+      "approved_action": null,
+      "safe_to_apply": false,
+      "reviewed_by": "",
+      "reviewed_at": ""
+    },
+    {
+      "patch_id": "source_conflict_v4_006",
+      "subject": "火卫一",
+      "relation": "HAS_MASS",
+      "classification": "source_granularity_mismatch",
+      "recommended_decision": "no_action",
+      "human_decision": "pending",
+      "human_reason": "",
+      "approved_action": null,
+      "safe_to_apply": false,
+      "reviewed_by": "",
+      "reviewed_at": ""
+    },
+    {
+      "patch_id": "source_conflict_v4_007",
+      "subject": "火卫一",
+      "relation": "HAS_RADIUS",
+      "classification": "true_value_conflict",
+      "recommended_decision": "defer_needs_external_source",
+      "human_decision": "pending",
+      "human_reason": "",
+      "approved_action": null,
+      "safe_to_apply": false,
+      "reviewed_by": "",
+      "reviewed_at": ""
+    },
+    {
+      "patch_id": "source_conflict_v4_008",
+      "subject": "金星",
+      "relation": "HAS_RADIUS",
+      "classification": "true_value_conflict",
+      "recommended_decision": "defer_needs_external_source",
+      "human_decision": "pending",
+      "human_reason": "",
+      "approved_action": null,
+      "safe_to_apply": false,
+      "reviewed_by": "",
+      "reviewed_at": ""
+    }
+  ]
+}

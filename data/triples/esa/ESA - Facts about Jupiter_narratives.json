@@ -1,0 +1,23 @@
+[
+  {
+    "section": "任务",
+    "content": "ESA - Facts about Jupiter Science & Exploration Facts about Jupiter 77758 views 147 likes ESA / Science & Exploration / Space Science / Juice Quick-look facts about Jupiter: the largest gas giant in the Solar System Diameter: 142 984 km (11 times that of Earth) Mass and volume: Jupiter is more than twice as massive as all other Solar System planets combined, and 318 times as massive as Earth. 1321 Earths could fit within a Jupiter-sized sphere. Surface area: Just under 61.5 billion square kilometres (312 times that of Earth) Gravity: 24.79 m/s 2 (2.5 times that of Earth) Density: 1.326 kg/m 3 (0.24 times that of Earth) Average distance from the Sun: 5.2 times the Earth-Sun distance Length of day: 9.93 hours Length of year: 11.86 Earth years Average temperature: Approximately -110°C at an a",
+    "keywords": [
+      "ESA - Facts about Jupiter",
+      "ESA",
+      "太阳系任务",
+      "木星",
+      "木卫二",
+      "木卫三",
+      "木卫四"
+    ],
+    "page_title": "ESA - Facts about Jupiter",
+    "source": "esa",
+    "source_name": "esa",
+    "source_role": "primary",
+    "origin": "api",
+    "type": "embedding_chunk",
+    "schema_version": "esa_shadow_ready_v1",
+    "source_title": "ESA - Facts about Jupiter"
+  }
+]

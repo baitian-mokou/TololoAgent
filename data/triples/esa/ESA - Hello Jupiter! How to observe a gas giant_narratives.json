@@ -1,0 +1,23 @@
+[
+  {
+    "section": "任务",
+    "content": "ESA - Hello Jupiter! How to observe a gas giant Science & Exploration Hello Jupiter! How to observe a gas giant 36167 views 129 likes ESA / Science & Exploration / Space Science / Juice As ESA’s Jupiter Icy Moons Explorer ( Juice ) prepares to explore the Jupiter system, find out how you too can observe the giant planet and its largest moons. Finding Jupiter with the naked eye When our ancient ancestors looked up at the sky, they saw a brilliant yellowish-white dot. It shone oddly steadily compared to the twinkling stars, and found refuge in a different constellation every year. Named ‘Jupiter’ by the Romans, what we now know to be a planet can be spotted by modern-day humans from our own gardens. All you need is a clear night sky, your eyes and, if you would like more detail, binoculars o",
+    "keywords": [
+      "ESA - Hello Jupiter! How to observe a gas giant",
+      "ESA",
+      "太阳系任务",
+      "木星",
+      "木卫二",
+      "木卫三",
+      "木卫四"
+    ],
+    "page_title": "ESA - Hello Jupiter! How to observe a gas giant",
+    "source": "esa",
+    "source_name": "esa",
+    "source_role": "primary",
+    "origin": "api",
+    "type": "embedding_chunk",
+    "schema_version": "esa_shadow_ready_v1",
+    "source_title": "ESA - Hello Jupiter! How to observe a gas giant"
+  }
+]

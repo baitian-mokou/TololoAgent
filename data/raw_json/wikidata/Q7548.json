@@ -1,0 +1,50 @@
+{
+  "record": {
+    "title": "火卫二",
+    "qid": "Q7548",
+    "triples": [
+      {
+        "relation": "ORBITS",
+        "object": "火星",
+        "property_id": "P397"
+      },
+      {
+        "relation": "PART_OF",
+        "object": "火星系统",
+        "property_id": "P361"
+      },
+      {
+        "relation": "LOCATED_IN",
+        "object": "火星系统",
+        "property_id": "P276"
+      },
+      {
+        "relation": "DISCOVERED_BY",
+        "object": "阿萨夫·霍尔",
+        "property_id": "P61"
+      },
+      {
+        "relation": "HAS_MASS",
+        "object": "1.4762e15 kg",
+        "property_id": "P2067"
+      },
+      {
+        "relation": "HAS_RADIUS",
+        "object": "6.2 km",
+        "property_id": "P2120"
+      }
+    ],
+    "narratives": [
+      {
+        "section": "发现",
+        "content": "火卫二 fixture 记录其属于火星系统，发现者同样为阿萨夫·霍尔。",
+        "keywords": [
+          "火卫二",
+          "火星",
+          "发现者"
+        ]
+      }
+    ]
+  },
+  "fixture_source": "solar_system_fixture.json"
+}

@@ -1,0 +1,29 @@
+[
+  {
+    "relation": "PART_OF",
+    "object": "Q321",
+    "property_id": "P361",
+    "source_record_id": "Q105976528:P361:Q105976528$3a0b330c-4382-220e-519b-ddb1585f2d36",
+    "source_url": "https://www.wikidata.org/wiki/Q105976528",
+    "source_license": "CC0-1.0",
+    "license_hint": "CC0-1.0",
+    "fetched_at": "2026-06-28T15:30:13.964666+00:00",
+    "raw_value": {
+      "entity-type": "item",
+      "numeric-id": 321,
+      "id": "Q321"
+    },
+    "normalized_value": "Q321",
+    "unit": "",
+    "confidence": 0.85,
+    "subject": "galactic plane of the Milky Way Galaxy",
+    "source": "wikidata",
+    "source_name": "wikidata",
+    "source_role": "primary",
+    "source_title": "galactic plane of the Milky Way Galaxy",
+    "origin": "api",
+    "schema_version": "wikidata_shadow_ready_v1",
+    "type": "triple_candidate",
+    "raw": ""
+  }
+]

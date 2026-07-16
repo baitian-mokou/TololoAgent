@@ -1,0 +1,169 @@
+{
+  "version": "nasa_query_fixture_v1",
+  "source_name": "nasa",
+  "note": "Read-only fixture for local source-expansion fallback when controlled NASA ingestion remains intentionally low-coverage.",
+  "records": [
+    {
+      "title": "火星",
+      "triples": [
+        {
+          "subject": "火星",
+          "relation": "HAS_MASS",
+          "object": "6.4171e23 kg",
+          "raw": "NASA 事实表 质量 6.4171e23 kg"
+        },
+        {
+          "subject": "火星",
+          "relation": "HAS_RADIUS",
+          "object": "3389.5 km",
+          "raw": "NASA 事实表 平均半径 3389.5 km"
+        },
+        {
+          "subject": "火星",
+          "relation": "HAS_ATMOSPHERE",
+          "object": "二氧化碳;氮气;氩气",
+          "raw": "NASA 事实表 大气 二氧化碳;氮气;氩气"
+        }
+      ],
+      "narratives": [
+        {
+          "page_title": "火星",
+          "section": "大气",
+          "content": "NASA fact sheet fallback 保留了火星的质量、平均半径和大气组成等高价值数值事实。",
+          "keywords": [
+            "火星",
+            "NASA",
+            "质量",
+            "半径",
+            "大气"
+          ]
+        }
+      ]
+    },
+    {
+      "title": "地球",
+      "triples": [
+        {
+          "subject": "地球",
+          "relation": "HAS_MASS",
+          "object": "5.9722e24 kg",
+          "raw": "NASA 事实表 质量 5.9722e24 kg"
+        },
+        {
+          "subject": "地球",
+          "relation": "HAS_RADIUS",
+          "object": "6371 km",
+          "raw": "NASA 事实表 平均半径 6371 km"
+        },
+        {
+          "subject": "地球",
+          "relation": "HAS_ATMOSPHERE",
+          "object": "氮气;氧气;氩气",
+          "raw": "NASA 事实表 大气 氮气;氧气;氩气"
+        }
+      ],
+      "narratives": [
+        {
+          "page_title": "地球",
+          "section": "大气",
+          "content": "NASA fact sheet fallback 保留了地球大气以氮气、氧气和氩气为主的结构化说明。",
+          "keywords": [
+            "地球",
+            "NASA",
+            "大气"
+          ]
+        }
+      ]
+    },
+    {
+      "title": "水星",
+      "triples": [
+        {
+          "subject": "水星",
+          "relation": "HAS_MASS",
+          "object": "3.3011e23 kg",
+          "raw": "NASA 事实表 质量 3.3011e23 kg"
+        },
+        {
+          "subject": "水星",
+          "relation": "HAS_RADIUS",
+          "object": "2439.7 km",
+          "raw": "NASA 事实表 平均半径 2439.7 km"
+        }
+      ],
+      "narratives": [
+        {
+          "page_title": "水星",
+          "section": "概要",
+          "content": "NASA fact sheet fallback 保留了水星的质量与平均半径等基础数值信息。",
+          "keywords": [
+            "水星",
+            "NASA",
+            "质量",
+            "半径"
+          ]
+        }
+      ]
+    },
+    {
+      "title": "金星",
+      "triples": [
+        {
+          "subject": "金星",
+          "relation": "HAS_MASS",
+          "object": "4.8675e24 kg",
+          "raw": "NASA 事实表 质量 4.8675e24 kg"
+        },
+        {
+          "subject": "金星",
+          "relation": "HAS_RADIUS",
+          "object": "6051.8 km",
+          "raw": "NASA 事实表 平均半径 6051.8 km"
+        }
+      ],
+      "narratives": [
+        {
+          "page_title": "金星",
+          "section": "概要",
+          "content": "NASA fact sheet fallback 保留了金星的质量与平均半径等基础数值信息。",
+          "keywords": [
+            "金星",
+            "NASA",
+            "质量",
+            "半径"
+          ]
+        }
+      ]
+    },
+    {
+      "title": "火卫二",
+      "triples": [
+        {
+          "subject": "火卫二",
+          "relation": "ORBITS",
+          "object": "火星",
+          "raw": "NASA 卫星资料 火卫二 绕行 火星"
+        },
+        {
+          "subject": "火卫二",
+          "relation": "PART_OF",
+          "object": "火星系统",
+          "raw": "NASA 卫星资料 火卫二 属于 火星系统"
+        }
+      ],
+      "narratives": [
+        {
+          "page_title": "火卫二",
+          "section": "轨道",
+          "content": "NASA satellite fallback 将火卫二记录为围绕火星运行、属于火星系统的天然卫星。",
+          "keywords": [
+            "火卫二",
+            "火星",
+            "NASA",
+            "轨道"
+          ]
+        }
+      ]
+    }
+  ]
+}

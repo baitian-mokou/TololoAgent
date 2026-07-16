@@ -1,0 +1,22 @@
+[
+  {
+    "section": "任务",
+    "content": "ESA - Mars Express mission team Science & Exploration Mars Express mission team 6306 views 8 likes ESA / Science & Exploration / Space Science Mission Manager : Patrick Martin – based at ESA's European Space Astronomy Centre (ESAC), Spain Project Scientist : Colin Wilson – based at ESA's European Space Research and Technology Centre (ESTEC), the Netherlands Instrument principal investigators Instrument Acronym Principal investigator High-Resolution Stereo Camera HRSC T. Roatsch, Institute of Planetary Research, German Aerospace Center (DLR), Germany Observatoire pour la Minéralogie, l'Eau, les Glaces et l'Activité OMEGA J. Carter, Institut d’Astrophysique Spatiale (IAS) and Laboratoire d’Astrophysique de Marseille (LAM), France Planetary Fourier Spectrometer PFS M. Giuranna, Instituto Nazi",
+    "keywords": [
+      "ESA - Mars Express mission team",
+      "ESA",
+      "太阳系任务",
+      "火星"
+    ],
+    "page_title": "ESA - Mars Express mission team",
+    "path": "任务",
+    "chunk_index": 0,
+    "source": "esa",
+    "source_name": "esa",
+    "source_role": "primary",
+    "source_title": "ESA - Mars Express mission team",
+    "origin": "html_fallback",
+    "schema_version": "esa_shadow_ready_v1",
+    "type": "embedding_chunk"
+  }
+]

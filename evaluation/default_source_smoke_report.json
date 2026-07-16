@@ -1,0 +1,148 @@
+{
+  "active_source": "zh_wikipedia",
+  "disabled_shadow_sources": [
+    "wikidata",
+    "nasa",
+    "esa"
+  ],
+  "passed": true,
+  "errors": [],
+  "checks": {
+    "source_registry": [
+      {
+        "name": "active_source_is_zh_wikipedia",
+        "passed": true,
+        "expected": "zh_wikipedia",
+        "actual": "zh_wikipedia"
+      },
+      {
+        "name": "wikidata_registry_disabled",
+        "passed": true,
+        "expected": "disabled",
+        "actual": "disabled"
+      },
+      {
+        "name": "nasa_registry_disabled",
+        "passed": true,
+        "expected": "disabled",
+        "actual": "disabled"
+      },
+      {
+        "name": "esa_registry_disabled",
+        "passed": true,
+        "expected": "disabled",
+        "actual": "disabled"
+      }
+    ],
+    "default_queries": [
+      {
+        "name": "default_structured_does_not_return_shadow_source",
+        "passed": true,
+        "query": "火卫一绕谁公转",
+        "source_filter": null,
+        "actual_path": "graph",
+        "returned_sources": [
+          "zh_wikipedia"
+        ],
+        "record_count": 1
+      },
+      {
+        "name": "default_narrative_does_not_return_shadow_source",
+        "passed": true,
+        "query": "火星大气成分",
+        "source_filter": null,
+        "actual_path": "chroma_or_fallback",
+        "returned_sources": [
+          "zh_wikipedia"
+        ],
+        "record_count": 5
+      }
+    ],
+    "explicit_filter_isolation": [
+      {
+        "name": "explicit_wikidata_structured_does_not_pollute_default",
+        "passed": true,
+        "query": "火卫一绕谁公转",
+        "explicit_source_filter": [
+          "wikidata"
+        ],
+        "explicit_record_count": 0,
+        "default_sources_after_explicit": [
+          "zh_wikipedia"
+        ],
+        "default_record_count_after_explicit": 1
+      },
+      {
+        "name": "explicit_wikidata_narrative_does_not_pollute_default",
+        "passed": true,
+        "query": "火星大气成分",
+        "explicit_source_filter": [
+          "wikidata"
+        ],
+        "explicit_record_count": 1,
+        "default_sources_after_explicit": [
+          "zh_wikipedia"
+        ],
+        "default_record_count_after_explicit": 5
+      },
+      {
+        "name": "explicit_nasa_structured_does_not_pollute_default",
+        "passed": true,
+        "query": "火卫一绕谁公转",
+        "explicit_source_filter": [
+          "nasa"
+        ],
+        "explicit_record_count": 0,
+        "default_sources_after_explicit": [
+          "zh_wikipedia"
+        ],
+        "default_record_count_after_explicit": 1
+      },
+      {
+        "name": "explicit_nasa_narrative_does_not_pollute_default",
+        "passed": true,
+        "query": "火星大气成分",
+        "explicit_source_filter": [
+          "nasa"
+        ],
+        "explicit_record_count": 1,
+        "default_sources_after_explicit": [
+          "zh_wikipedia"
+        ],
+        "default_record_count_after_explicit": 5
+      },
+      {
+        "name": "explicit_esa_structured_does_not_pollute_default",
+        "passed": true,
+        "query": "火卫一绕谁公转",
+        "explicit_source_filter": [
+          "esa"
+        ],
+        "explicit_record_count": 0,
+        "default_sources_after_explicit": [
+          "zh_wikipedia"
+        ],
+        "default_record_count_after_explicit": 1
+      },
+      {
+        "name": "explicit_esa_narrative_does_not_pollute_default",
+        "passed": true,
+        "query": "火星大气成分",
+        "explicit_source_filter": [
+          "esa"
+        ],
+        "explicit_record_count": 1,
+        "default_sources_after_explicit": [
+          "zh_wikipedia"
+        ],
+        "default_record_count_after_explicit": 5
+      }
+    ],
+    "settings_key_hygiene": {
+      "name": "settings_has_no_real_sk_api_key",
+      "passed": true,
+      "expected": "no literal sk-* API key; ${TOLOLO_REMOTE_API_KEY} is allowed",
+      "actual": "clean"
+    }
+  }
+}

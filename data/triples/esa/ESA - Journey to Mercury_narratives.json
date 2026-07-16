@@ -1,0 +1,21 @@
+[
+  {
+    "section": "任务",
+    "content": "ESA - Journey to Mercury Science & Exploration Journey to Mercury 16171 views 60 likes ESA / Science & Exploration / Space Science / BepiColombo BepiColombo was launched on an Ariane 5 from Europe’s Spaceport in Kourou, French Guiana. It will use the gravity of Earth, Venus and Mercury in combination with the thrust provided by electric propulsion, to reach Mercury. The Mercury Planetary Orbiter (MPO) and the Mercury Magnetospheric Orbiter (MMO, or Mio) will voyage to Mercury together as a single composite spacecraft, with the Mercury Transfer Module (MTM) providing power and propulsion. A big challenge for the mission is the Sun’s enormous gravity, which makes it difficult to place a spacecraft into a stable orbit around Mercury – even more energy is needed than sending a mission to Pluto",
+    "keywords": [
+      "ESA - Journey to Mercury",
+      "ESA",
+      "太阳系任务",
+      "水星",
+      "金星"
+    ],
+    "page_title": "ESA - Journey to Mercury",
+    "source": "esa",
+    "source_name": "esa",
+    "source_role": "primary",
+    "origin": "api",
+    "type": "embedding_chunk",
+    "schema_version": "esa_shadow_ready_v1",
+    "source_title": "ESA - Journey to Mercury"
+  }
+]

@@ -1,0 +1,20 @@
+[
+  {
+    "section": "任务",
+    "content": "ESA - Christmas craterscape Science & Exploration Christmas craterscape 22/12/2022 7412 views 150 likes ESA / Science & Exploration / Space Science / Mars Express This beautifully crisp icy scene with a swirling ribbon of rusty red and white striped terrain connecting two large craters wraps up the year on Mars. Perspective view into icy layered crater The High Resolution Stereo Imaging camera on board ESA’s Mars Express captured this frosty scene in the Ultimi Scopuli region near the south pole of Mars on 19 May 2022. While it may look like a winter wonderland, it was southern hemisphere spring at the time and ice was starting to retreat. Dark dunes are peeking through the frost and elevated terrain appears ice-free. Two large impact craters draw the eye, their interiors striped with alte",
+    "keywords": [
+      "ESA - Christmas craterscape",
+      "ESA",
+      "太阳系任务",
+      "火星"
+    ],
+    "page_title": "ESA - Christmas craterscape",
+    "source": "esa",
+    "source_name": "esa",
+    "source_role": "primary",
+    "origin": "api",
+    "type": "embedding_chunk",
+    "schema_version": "esa_shadow_ready_v1",
+    "source_title": "ESA - Christmas craterscape"
+  }
+]

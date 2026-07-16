@@ -1,0 +1,32 @@
+[
+  {
+    "relation": "OPERATED_BY",
+    "object": "ESA",
+    "source_url": "https://www.esa.int/Science_Exploration/Space_Science/Rosetta/Comet_rendezvous",
+    "source_field": "live_page",
+    "subject": "ESA - Comet rendezvous",
+    "raw": "live_page OPERATED_BY ESA",
+    "source": "esa",
+    "source_name": "esa",
+    "source_role": "primary",
+    "origin": "api",
+    "type": "triple_candidate",
+    "schema_version": "esa_shadow_ready_v1",
+    "source_title": "ESA - Comet rendezvous"
+  },
+  {
+    "relation": "HAS_MISSION_TARGET",
+    "object": "彗星",
+    "source_url": "https://www.esa.int/Science_Exploration/Space_Science/Rosetta/Comet_rendezvous",
+    "source_field": "live_page",
+    "subject": "ESA - Comet rendezvous",
+    "raw": "live_page HAS_MISSION_TARGET 彗星",
+    "source": "esa",
+    "source_name": "esa",
+    "source_role": "primary",
+    "origin": "api",
+    "type": "triple_candidate",
+    "schema_version": "esa_shadow_ready_v1",
+    "source_title": "ESA - Comet rendezvous"
+  }
+]

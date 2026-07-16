@@ -1,0 +1,20 @@
+[
+  {
+    "section": "任务",
+    "content": "ESA - Geography of Mars Science & Exploration Geography of Mars 51907 views 237 likes ESA / Science & Exploration / Space Science / Mars Express Although Mars is a small planet – its radius is just a little over half of Earth's – we now know that it boasts scenery on a scale that makes Mount Everest and the Grand Canyon seem unimpressive by comparison. Running from the eastern flanks of the rise, roughly along the equator, is Valles Marineris . This is a split in the Martian crust 4000 kilometres long (about a fifth of the distance around the whole of Mars), up to 600 kilometres wide and seven kilometres deep. The Grand Canyon is a mere 450 kilometres long, up to 29 kilometres wide and 1.6 kilometres deep. Then there is the Hellas Basin in the southern hemisphere, which is an enormous impa",
+    "keywords": [
+      "ESA - Geography of Mars",
+      "ESA",
+      "太阳系任务",
+      "火星"
+    ],
+    "page_title": "ESA - Geography of Mars",
+    "source": "esa",
+    "source_name": "esa",
+    "source_role": "primary",
+    "origin": "api",
+    "type": "embedding_chunk",
+    "schema_version": "esa_shadow_ready_v1",
+    "source_title": "ESA - Geography of Mars"
+  }
+]

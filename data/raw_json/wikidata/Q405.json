@@ -1,0 +1,50 @@
+{
+  "record": {
+    "title": "月球",
+    "qid": "Q405",
+    "triples": [
+      {
+        "relation": "ORBITS",
+        "object": "地球",
+        "property_id": "P397"
+      },
+      {
+        "relation": "PART_OF",
+        "object": "地球系统",
+        "property_id": "P361"
+      },
+      {
+        "relation": "LOCATED_IN",
+        "object": "地球系统",
+        "property_id": "P276"
+      },
+      {
+        "relation": "HAS_MASS",
+        "object": "7.342e22 kg",
+        "property_id": "P2067"
+      },
+      {
+        "relation": "HAS_RADIUS",
+        "object": "1737.4 km",
+        "property_id": "P2120"
+      },
+      {
+        "relation": "HAS_ATMOSPHERE",
+        "object": "极稀薄外逸层",
+        "property_id": "P2067"
+      }
+    ],
+    "narratives": [
+      {
+        "section": "轨道",
+        "content": "月球在 fixture 中作为地球系统成员记录，结构化事实指出其绕地球运行。",
+        "keywords": [
+          "月球",
+          "地球",
+          "轨道"
+        ]
+      }
+    ]
+  },
+  "fixture_source": "solar_system_fixture.json"
+}

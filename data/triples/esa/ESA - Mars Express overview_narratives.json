@@ -1,0 +1,25 @@
+[
+  {
+    "section": "任务",
+    "content": "ESA - Mars Express overview Mars Express Jezero Crater delta Stereo-1 channel image of Phobos Ancient northern ocean on Mars Residual water ice in Vastitas Borealis Crater Science & Exploration Mars Express overview 39981 views ESA / Science & Exploration / Space Science / Mars Express Mars Express in orbit around Mars Launch : 2 June 2003 (on a Soyuz/Fregat launcher at Baikonur, Kazakhstan). Status: In operation around Mars Objective To study the martian atmosphere and climate, the planet’s structure, its mineralogy and its geology, and to search for traces of water. Mission Mars Express is Europe’s first mission to the Red Planet. It carries eight instruments and deployed a lander, Beagle 2. The lander was lost during its attempt to reach the planet’s surface but the orbiter continues it",
+    "keywords": [
+      "ESA - Mars Express overview",
+      "ESA",
+      "太阳系任务",
+      "彗星",
+      "火星",
+      "金星",
+      "月球"
+    ],
+    "page_title": "ESA - Mars Express overview",
+    "path": "任务",
+    "chunk_index": 0,
+    "source": "esa",
+    "source_name": "esa",
+    "source_role": "primary",
+    "source_title": "ESA - Mars Express overview",
+    "origin": "html_fallback",
+    "schema_version": "esa_shadow_ready_v1",
+    "type": "embedding_chunk"
+  }
+]

@@ -1,0 +1,118 @@
+{
+  "schema_version": "source_conflict_resolution_decisions_v1",
+  "source": "source_conflict_audit_v4",
+  "candidate_path": "data/quality_patches/source_conflict_resolution_candidates.json",
+  "decision_policy": {
+    "no_patch_is_approved_by_default": false,
+    "formal_data_write_allowed": false,
+    "requires_human_approval": true,
+    "draft_only": true,
+    "note": "Codex recommended draft. This file validates decision structure but does not apply patches."
+  },
+  "decisions": [
+    {
+      "patch_id": "source_conflict_v4_001",
+      "subject": "天王星",
+      "relation": "HAS_MASS",
+      "classification": "true_value_conflict",
+      "recommended_decision": "defer_needs_external_source",
+      "human_decision": "deferred",
+      "human_reason": "需要外部权威来源核验质量数值，本轮不修改正式数据。",
+      "approved_action": null,
+      "safe_to_apply": false,
+      "reviewed_by": "codex_recommended_draft",
+      "reviewed_at": "2026-06-27"
+    },
+    {
+      "patch_id": "source_conflict_v4_002",
+      "subject": "天王星",
+      "relation": "HAS_RADIUS",
+      "classification": "measurement_kind_mismatch",
+      "recommended_decision": "approve_measurement_kind_only",
+      "human_decision": "approved",
+      "human_reason": "仅批准添加 measurement_kind 元数据标注，不修改半径事实值。",
+      "approved_action": "add_measurement_kind",
+      "safe_to_apply": true,
+      "reviewed_by": "codex_recommended_draft",
+      "reviewed_at": "2026-06-27"
+    },
+    {
+      "patch_id": "source_conflict_v4_003",
+      "subject": "月球",
+      "relation": "ORBITS",
+      "classification": "true_value_conflict",
+      "recommended_decision": "defer_needs_ontology_design",
+      "human_decision": "deferred",
+      "human_reason": "ORBITS 关系需要更细的 ontology 规则，本轮不修改正式数据。",
+      "approved_action": null,
+      "safe_to_apply": false,
+      "reviewed_by": "codex_recommended_draft",
+      "reviewed_at": "2026-06-27"
+    },
+    {
+      "patch_id": "source_conflict_v4_004",
+      "subject": "木卫二",
+      "relation": "HAS_MASS",
+      "classification": "true_value_conflict",
+      "recommended_decision": "defer_needs_external_source",
+      "human_decision": "deferred",
+      "human_reason": "需要外部权威来源核验卫星质量数值，本轮不修改正式数据。",
+      "approved_action": null,
+      "safe_to_apply": false,
+      "reviewed_by": "codex_recommended_draft",
+      "reviewed_at": "2026-06-27"
+    },
+    {
+      "patch_id": "source_conflict_v4_005",
+      "subject": "木卫四",
+      "relation": "HAS_MASS",
+      "classification": "true_value_conflict",
+      "recommended_decision": "defer_needs_external_source",
+      "human_decision": "deferred",
+      "human_reason": "需要外部权威来源核验卫星质量数值，本轮不修改正式数据。",
+      "approved_action": null,
+      "safe_to_apply": false,
+      "reviewed_by": "codex_recommended_draft",
+      "reviewed_at": "2026-06-27"
+    },
+    {
+      "patch_id": "source_conflict_v4_006",
+      "subject": "火卫一",
+      "relation": "HAS_MASS",
+      "classification": "source_granularity_mismatch",
+      "recommended_decision": "no_action",
+      "human_decision": "rejected",
+      "human_reason": "两个来源质量值差异小于 1%，更像精度或来源粒度差异，本轮不需要修复。",
+      "approved_action": null,
+      "safe_to_apply": false,
+      "reviewed_by": "codex_recommended_draft",
+      "reviewed_at": "2026-06-27"
+    },
+    {
+      "patch_id": "source_conflict_v4_007",
+      "subject": "火卫一",
+      "relation": "HAS_RADIUS",
+      "classification": "true_value_conflict",
+      "recommended_decision": "defer_needs_external_source",
+      "human_decision": "deferred",
+      "human_reason": "需要外部权威来源确认半径口径和有效数字，本轮不修改正式数据。",
+      "approved_action": null,
+      "safe_to_apply": false,
+      "reviewed_by": "codex_recommended_draft",
+      "reviewed_at": "2026-06-27"
+    },
+    {
+      "patch_id": "source_conflict_v4_008",
+      "subject": "金星",
+      "relation": "HAS_RADIUS",
+      "classification": "true_value_conflict",
+      "recommended_decision": "defer_needs_external_source",
+      "human_decision": "deferred",
+      "human_reason": "金星半径差异很大，疑似抽取错误但需要外部权威来源确认，本轮不修改正式数据。",
+      "approved_action": null,
+      "safe_to_apply": false,
+      "reviewed_by": "codex_recommended_draft",
+      "reviewed_at": "2026-06-27"
+    }
+  ]
+}

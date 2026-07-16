@@ -1,0 +1,21 @@
+[
+  {
+    "section": "任务",
+    "content": "ESA - Gaia spots possible moons around hundreds of asteroids Science & Exploration Gaia spots possible moons around hundreds of asteroids 08/08/2024 9254 views 65 likes ESA / Science & Exploration / Space Science / Gaia ESA’s star-surveying Gaia mission has again proven to be a formidable asteroid explorer, spotting potential moons around more than 350 asteroids not known to have a companion. Previously, Gaia had explored asteroids known to have moons — so-called ‘binary asteroids’ — and confirmed that the telltale signs of these tiny moons show up in the telescope’s ultra-accurate astrometric data . But this new finding proves that Gaia can conduct ‘blind’ searches to discover completely new candidates, too. Gaia spots possible moons around hundreds of asteroids “Binary asteroids are diff",
+    "keywords": [
+      "ESA - Gaia spots possible moons around hundreds of asteroids",
+      "ESA",
+      "太阳系任务",
+      "太阳",
+      "月球"
+    ],
+    "page_title": "ESA - Gaia spots possible moons around hundreds of asteroids",
+    "source": "esa",
+    "source_name": "esa",
+    "source_role": "primary",
+    "origin": "api",
+    "type": "embedding_chunk",
+    "schema_version": "esa_shadow_ready_v1",
+    "source_title": "ESA - Gaia spots possible moons around hundreds of asteroids"
+  }
+]

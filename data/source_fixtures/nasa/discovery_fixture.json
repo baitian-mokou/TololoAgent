@@ -1,0 +1,22 @@
+{
+  "records": [
+    {
+      "title": "水星",
+      "source_url": "https://nssdc.gsfc.nasa.gov/planetary/factsheet/mercuryfact.html",
+      "html": "<table><tr><th>Field</th><th>Mercury</th></tr><tr><td>Mass (10^24 kg)</td><td>0.33010</td></tr><tr><td>Mean radius (km)</td><td>2439.7</td></tr><tr><td>Distance from Sun (10^6 km)</td><td>57.9</td></tr></table>",
+      "fetched_at": "2026-06-28T00:00:00+00:00"
+    },
+    {
+      "title": "金星",
+      "source_url": "https://nssdc.gsfc.nasa.gov/planetary/factsheet/venusfact.html",
+      "html": "<table><tr><th>Field</th><th>Venus</th></tr><tr><td>Mass (10^24 kg)</td><td>4.8673</td></tr><tr><td>Mean radius (km)</td><td>6051.8</td></tr><tr><td>Atmospheric composition</td><td>Carbon dioxide; Nitrogen</td></tr></table>",
+      "fetched_at": "2026-06-28T00:00:00+00:00"
+    },
+    {
+      "title": "地球",
+      "source_url": "https://nssdc.gsfc.nasa.gov/planetary/factsheet/earthfact.html",
+      "html": "<table><tr><th>Field</th><th>Earth</th></tr><tr><td>Mass (10^24 kg)</td><td>5.9722</td></tr><tr><td>Mean radius (km)</td><td>6371.0</td></tr><tr><td>Atmospheric composition</td><td>Nitrogen; Oxygen; Argon</td></tr></table>",
+      "fetched_at": "2026-06-28T00:00:00+00:00"
+    }
+  ]
+}

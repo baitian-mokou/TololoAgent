@@ -1,0 +1,22 @@
+[
+  {
+    "section": "任务",
+    "content": "ESA - Mercury Magnetospheric Orbiter Science & Exploration Mercury Magnetospheric Orbiter 8040 views 31 likes ESA / Science & Exploration / Space Science / BepiColombo JAXA’s Mercury Magnetospheric Orbiter (also known as Mio) is one of two spacecraft making up the BepiColombo mission to Mercury, the other being ESA's Mercury Planetary Orbiter ( MPO ). Mio will operate from a 9.3-hour elliptical polar orbit that will take it between 590 and 11 640 km above the planet’s surface. The spacecraft's main body is an octagonal prism measuring 1.1 m in height and 1.8 m in diameter. Two 5-metre-long masts stick out its sides, as well as four 15-metre antennas. Mio stabilises itself by spinning, making 15 rotations per minute with its spin axis 90° to the Sun. This also distributes the Sun's heat ove",
+    "keywords": [
+      "ESA - Mercury Magnetospheric Orbiter",
+      "ESA",
+      "太阳系任务",
+      "水星"
+    ],
+    "page_title": "ESA - Mercury Magnetospheric Orbiter",
+    "path": "任务",
+    "chunk_index": 0,
+    "source": "esa",
+    "source_name": "esa",
+    "source_role": "primary",
+    "source_title": "ESA - Mercury Magnetospheric Orbiter",
+    "origin": "html_fallback",
+    "schema_version": "esa_shadow_ready_v1",
+    "type": "embedding_chunk"
+  }
+]

@@ -1,0 +1,23 @@
+[
+  {
+    "section": "任务",
+    "content": "ESA - Second helpings of Mercury Science & Exploration Second helpings of Mercury 24/06/2022 116895 views 95 likes ESA / Science & Exploration / Space Science / BepiColombo The ESA/JAXA BepiColombo mission has made its second gravity assist of planet Mercury, capturing new close-up images as it steers closer towards Mercury orbit in 2025. The closest approach took place at 09:44 UTC (11:44 CEST) on 23 June 2022, about 200 km above the planet’s surface. Images from the spacecraft’s three monitoring cameras (MCAM), along with scientific data from a number of instruments, were collected during the encounter. The MCAM images, which provide black-and-white snapshots in 1024 x 1024 pixel resolution, were downloaded over the course of yesterday afternoon, and a selection is presented here (click",
+    "keywords": [
+      "ESA - Second helpings of Mercury",
+      "ESA",
+      "太阳系任务",
+      "水星",
+      "金星"
+    ],
+    "page_title": "ESA - Second helpings of Mercury",
+    "path": "任务",
+    "chunk_index": 0,
+    "source": "esa",
+    "source_name": "esa",
+    "source_role": "primary",
+    "source_title": "ESA - Second helpings of Mercury",
+    "origin": "html_fallback",
+    "schema_version": "esa_shadow_ready_v1",
+    "type": "embedding_chunk"
+  }
+]

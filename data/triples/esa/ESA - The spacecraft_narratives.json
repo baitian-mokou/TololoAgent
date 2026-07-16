@@ -1,0 +1,23 @@
+[
+  {
+    "section": "任务",
+    "content": "ESA - The spacecraft Science & Exploration The spacecraft 20179 views 37 likes ESA / Science & Exploration / Space Science / Mars Express Spacecraft facts Spacecraft bus dimensions 1.5 x 1.8 x 1.4 m Thrust of main spacecraft engine 400 N Attitude thrusters 8 at 10 N each Propellant tanks volume 2x270 = 540 litres Pointing accuracy Better than 0.5° Solar array area 11.42 m² Lithium batteries 3 at 22.5 Amp hours each (at launch) Mars Express spacecraft Propulsion Most of the energy needed to propel Mars Express from Earth to Mars was provided by the three-stage Soyuz/Fregat launcher. The Fregat upper stage separated from the spacecraft after placing it on a Mars-bound trajectory. The spacecraft used its on board means of propulsion solely for orbit corrections and to slow the spacecraft down",
+    "keywords": [
+      "ESA - The spacecraft",
+      "ESA",
+      "太阳系任务",
+      "火星",
+      "月球"
+    ],
+    "page_title": "ESA - The spacecraft",
+    "path": "任务",
+    "chunk_index": 0,
+    "source": "esa",
+    "source_name": "esa",
+    "source_role": "primary",
+    "source_title": "ESA - The spacecraft",
+    "origin": "html_fallback",
+    "schema_version": "esa_shadow_ready_v1",
+    "type": "embedding_chunk"
+  }
+]

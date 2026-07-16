@@ -1,0 +1,438 @@
+{
+  "source_name": "wikidata",
+  "source_schema_version": "wikidata_shadow_ready_v1",
+  "source_role": "primary",
+  "namespace_status": "shadow_only",
+  "mode": "offline",
+  "materialization_mode": "offline_wikidata_fixture_v1",
+  "cutover_ready": false,
+  "raw_dir": "F:\\知识表示与处理结课作业\\第二次托洛洛测试 -重大进展\\data\\raw_json\\wikidata",
+  "triples_dir": "F:\\知识表示与处理结课作业\\第二次托洛洛测试 -重大进展\\data\\triples\\wikidata",
+  "raw_files": [
+    "F:\\知识表示与处理结课作业\\第二次托洛洛测试 -重大进展\\data\\raw_json\\wikidata\\solar_system_fixture.json"
+  ],
+  "triple_files": [
+    "F:\\知识表示与处理结课作业\\第二次托洛洛测试 -重大进展\\data\\triples\\wikidata\\冥卫一_triples.json",
+    "F:\\知识表示与处理结课作业\\第二次托洛洛测试 -重大进展\\data\\triples\\wikidata\\冥王星_triples.json",
+    "F:\\知识表示与处理结课作业\\第二次托洛洛测试 -重大进展\\data\\triples\\wikidata\\土卫二_triples.json",
+    "F:\\知识表示与处理结课作业\\第二次托洛洛测试 -重大进展\\data\\triples\\wikidata\\土卫六_triples.json",
+    "F:\\知识表示与处理结课作业\\第二次托洛洛测试 -重大进展\\data\\triples\\wikidata\\土星_triples.json",
+    "F:\\知识表示与处理结课作业\\第二次托洛洛测试 -重大进展\\data\\triples\\wikidata\\地球_triples.json",
+    "F:\\知识表示与处理结课作业\\第二次托洛洛测试 -重大进展\\data\\triples\\wikidata\\天王星_triples.json",
+    "F:\\知识表示与处理结课作业\\第二次托洛洛测试 -重大进展\\data\\triples\\wikidata\\太阳_triples.json",
+    "F:\\知识表示与处理结课作业\\第二次托洛洛测试 -重大进展\\data\\triples\\wikidata\\妊神星_triples.json",
+    "F:\\知识表示与处理结课作业\\第二次托洛洛测试 -重大进展\\data\\triples\\wikidata\\月球_triples.json",
+    "F:\\知识表示与处理结课作业\\第二次托洛洛测试 -重大进展\\data\\triples\\wikidata\\木卫一_triples.json",
+    "F:\\知识表示与处理结课作业\\第二次托洛洛测试 -重大进展\\data\\triples\\wikidata\\木卫三_triples.json",
+    "F:\\知识表示与处理结课作业\\第二次托洛洛测试 -重大进展\\data\\triples\\wikidata\\木卫二_triples.json",
+    "F:\\知识表示与处理结课作业\\第二次托洛洛测试 -重大进展\\data\\triples\\wikidata\\木卫四_triples.json",
+    "F:\\知识表示与处理结课作业\\第二次托洛洛测试 -重大进展\\data\\triples\\wikidata\\木星_triples.json",
+    "F:\\知识表示与处理结课作业\\第二次托洛洛测试 -重大进展\\data\\triples\\wikidata\\水星_triples.json",
+    "F:\\知识表示与处理结课作业\\第二次托洛洛测试 -重大进展\\data\\triples\\wikidata\\海卫一_triples.json",
+    "F:\\知识表示与处理结课作业\\第二次托洛洛测试 -重大进展\\data\\triples\\wikidata\\海王星_triples.json",
+    "F:\\知识表示与处理结课作业\\第二次托洛洛测试 -重大进展\\data\\triples\\wikidata\\火卫一_triples.json",
+    "F:\\知识表示与处理结课作业\\第二次托洛洛测试 -重大进展\\data\\triples\\wikidata\\火卫二_triples.json",
+    "F:\\知识表示与处理结课作业\\第二次托洛洛测试 -重大进展\\data\\triples\\wikidata\\火星_triples.json",
+    "F:\\知识表示与处理结课作业\\第二次托洛洛测试 -重大进展\\data\\triples\\wikidata\\灶神星_triples.json",
+    "F:\\知识表示与处理结课作业\\第二次托洛洛测试 -重大进展\\data\\triples\\wikidata\\谷神星_triples.json",
+    "F:\\知识表示与处理结课作业\\第二次托洛洛测试 -重大进展\\data\\triples\\wikidata\\金星_triples.json",
+    "F:\\知识表示与处理结课作业\\第二次托洛洛测试 -重大进展\\data\\triples\\wikidata\\阋神星_triples.json",
+    "F:\\知识表示与处理结课作业\\第二次托洛洛测试 -重大进展\\data\\triples\\wikidata\\鸟神星_triples.json"
+  ],
+  "narrative_files": [
+    "F:\\知识表示与处理结课作业\\第二次托洛洛测试 -重大进展\\data\\triples\\wikidata\\冥卫一_narratives.json",
+    "F:\\知识表示与处理结课作业\\第二次托洛洛测试 -重大进展\\data\\triples\\wikidata\\冥王星_narratives.json",
+    "F:\\知识表示与处理结课作业\\第二次托洛洛测试 -重大进展\\data\\triples\\wikidata\\土卫二_narratives.json",
+    "F:\\知识表示与处理结课作业\\第二次托洛洛测试 -重大进展\\data\\triples\\wikidata\\土卫六_narratives.json",
+    "F:\\知识表示与处理结课作业\\第二次托洛洛测试 -重大进展\\data\\triples\\wikidata\\土星_narratives.json",
+    "F:\\知识表示与处理结课作业\\第二次托洛洛测试 -重大进展\\data\\triples\\wikidata\\地球_narratives.json",
+    "F:\\知识表示与处理结课作业\\第二次托洛洛测试 -重大进展\\data\\triples\\wikidata\\天王星_narratives.json",
+    "F:\\知识表示与处理结课作业\\第二次托洛洛测试 -重大进展\\data\\triples\\wikidata\\太阳_narratives.json",
+    "F:\\知识表示与处理结课作业\\第二次托洛洛测试 -重大进展\\data\\triples\\wikidata\\妊神星_narratives.json",
+    "F:\\知识表示与处理结课作业\\第二次托洛洛测试 -重大进展\\data\\triples\\wikidata\\月球_narratives.json",
+    "F:\\知识表示与处理结课作业\\第二次托洛洛测试 -重大进展\\data\\triples\\wikidata\\木卫一_narratives.json",
+    "F:\\知识表示与处理结课作业\\第二次托洛洛测试 -重大进展\\data\\triples\\wikidata\\木卫三_narratives.json",
+    "F:\\知识表示与处理结课作业\\第二次托洛洛测试 -重大进展\\data\\triples\\wikidata\\木卫二_narratives.json",
+    "F:\\知识表示与处理结课作业\\第二次托洛洛测试 -重大进展\\data\\triples\\wikidata\\木卫四_narratives.json",
+    "F:\\知识表示与处理结课作业\\第二次托洛洛测试 -重大进展\\data\\triples\\wikidata\\木星_narratives.json",
+    "F:\\知识表示与处理结课作业\\第二次托洛洛测试 -重大进展\\data\\triples\\wikidata\\水星_narratives.json",
+    "F:\\知识表示与处理结课作业\\第二次托洛洛测试 -重大进展\\data\\triples\\wikidata\\海卫一_narratives.json",
+    "F:\\知识表示与处理结课作业\\第二次托洛洛测试 -重大进展\\data\\triples\\wikidata\\海王星_narratives.json",
+    "F:\\知识表示与处理结课作业\\第二次托洛洛测试 -重大进展\\data\\triples\\wikidata\\火卫一_narratives.json",
+    "F:\\知识表示与处理结课作业\\第二次托洛洛测试 -重大进展\\data\\triples\\wikidata\\火卫二_narratives.json",
+    "F:\\知识表示与处理结课作业\\第二次托洛洛测试 -重大进展\\data\\triples\\wikidata\\火星_narratives.json",
+    "F:\\知识表示与处理结课作业\\第二次托洛洛测试 -重大进展\\data\\triples\\wikidata\\灶神星_narratives.json",
+    "F:\\知识表示与处理结课作业\\第二次托洛洛测试 -重大进展\\data\\triples\\wikidata\\谷神星_narratives.json",
+    "F:\\知识表示与处理结课作业\\第二次托洛洛测试 -重大进展\\data\\triples\\wikidata\\金星_narratives.json",
+    "F:\\知识表示与处理结课作业\\第二次托洛洛测试 -重大进展\\data\\triples\\wikidata\\阋神星_narratives.json",
+    "F:\\知识表示与处理结课作业\\第二次托洛洛测试 -重大进展\\data\\triples\\wikidata\\鸟神星_narratives.json"
+  ],
+  "pipeline": {
+    "total_triples": 157,
+    "total_narratives": 26,
+    "total_files": 26,
+    "pipeline": "wikidata_source_adapter_v1",
+    "source_schema_version": "wikidata_shadow_ready_v1",
+    "materialization_mode": "offline_wikidata_fixture_v1",
+    "mode": "offline",
+    "official_namespace_written": true,
+    "cutover_ready": false,
+    "time": "2026-06-28T06:01:05.668422+00:00"
+  },
+  "metadata_contract": {
+    "passed": true,
+    "checked_records": 183,
+    "break_count": 0,
+    "breaks": []
+  },
+  "graph": {
+    "loaded_nodes": 107,
+    "loaded_relationships": 148,
+    "stats": {
+      "nodes": 290,
+      "rels": 470,
+      "labels": [
+        "Planet",
+        "Satellite",
+        "PlanetType",
+        "Star",
+        "DwarfPlanet",
+        "Asteroid",
+        "Comet",
+        "OrbitParameter",
+        "EnvironmentalFeature",
+        "Mission",
+        "Concept",
+        "CelestialBody",
+        "Galaxy"
+      ],
+      "rel_types": [
+        "围绕",
+        "拥有轨道参数",
+        "拥有环境特征",
+        "IS_A",
+        "DISCOVERED_BY",
+        "LOCATED_IN",
+        "ORBITS",
+        "PART_OF",
+        "HAS_RADIUS",
+        "HAS_MASS",
+        "HAS_ATMOSPHERE"
+      ]
+    }
+  },
+  "chroma": {
+    "added_narratives": 7,
+    "stats": {
+      "total": 7,
+      "collections": [
+        "astronomy_narratives_wikidata"
+      ]
+    }
+  },
+  "probes": {
+    "graph_query": "火卫一绕谁公转",
+    "graph_final_source": "fallback",
+    "graph_final_result_count": 1,
+    "graph_final_results": [
+      {
+        "subject": "火卫一",
+        "relation": "ORBITS",
+        "object": "火星",
+        "source": "wikidata",
+        "source_name": "wikidata",
+        "source_title": "火卫一",
+        "source_role": "primary",
+        "origin": "api",
+        "schema_version": "wikidata_shadow_ready_v1"
+      }
+    ],
+    "narrative_query": "火星大气成分",
+    "narrative_result_count": 1,
+    "narrative_results": [
+      {
+        "content": "根据 Wikidata fixture，火星大气以二氧化碳为主，并含有氮气、氩气以及微量氧气和水蒸气。",
+        "score": 1.0,
+        "page_title": "火星",
+        "section": "大气",
+        "keywords": "火星,大气,二氧化碳,氮气,氩气",
+        "chunk_id": "wikidata_火星_00",
+        "source": "wikidata",
+        "source_name": "wikidata",
+        "source_title": "火星",
+        "source_role": "primary",
+        "origin": "api",
+        "schema_version": "wikidata_shadow_ready_v1",
+        "rank": 1
+      }
+    ]
+  },
+  "fetch": {
+    "requested_mode": "offline",
+    "effective_mode": "offline",
+    "status": "ok",
+    "error": ""
+  },
+  "preview": {
+    "record_count": 26,
+    "sample_records": [
+      {
+        "title": "太阳",
+        "qid": "Q525",
+        "triples": [
+          {
+            "relation": "LOCATED_IN",
+            "object": "太阳系",
+            "property_id": "P361"
+          },
+          {
+            "relation": "PART_OF",
+            "object": "太阳系",
+            "property_id": "P361"
+          },
+          {
+            "relation": "HAS_MASS",
+            "object": "1.9885e30 kg",
+            "property_id": "P2067"
+          },
+          {
+            "relation": "HAS_RADIUS",
+            "object": "695700 km",
+            "property_id": "P2120"
+          },
+          {
+            "relation": "HAS_ATMOSPHERE",
+            "object": "氢;氦",
+            "property_id": "P2067"
+          }
+        ],
+        "narratives": [
+          {
+            "section": "Wikidata 摘要",
+            "content": "Wikidata fixture 将太阳登记为太阳系的中心恒星，并保留质量、半径和主要成分等结构化事实。",
+            "keywords": [
+              "太阳",
+              "太阳系",
+              "质量",
+              "半径"
+            ]
+          }
+        ]
+      },
+      {
+        "title": "水星",
+        "qid": "Q308",
+        "triples": [
+          {
+            "relation": "ORBITS",
+            "object": "太阳",
+            "property_id": "P397"
+          },
+          {
+            "relation": "PART_OF",
+            "object": "太阳系",
+            "property_id": "P361"
+          },
+          {
+            "relation": "HAS_MASS",
+            "object": "3.3011e23 kg",
+            "property_id": "P2067"
+          },
+          {
+            "relation": "HAS_RADIUS",
+            "object": "2439.7 km",
+            "property_id": "P2120"
+          },
+          {
+            "relation": "HAS_ATMOSPHERE",
+            "object": "稀薄外逸层",
+            "property_id": "P2067"
+          }
+        ],
+        "narratives": [
+          {
+            "section": "轨道",
+            "content": "水星在 Wikidata fixture 中作为太阳系行星处理，轨道主星为太阳，并带有半径和质量数值。",
+            "keywords": [
+              "水星",
+              "轨道",
+              "太阳"
+            ]
+          }
+        ]
+      },
+      {
+        "title": "金星",
+        "qid": "Q313",
+        "triples": [
+          {
+            "relation": "ORBITS",
+            "object": "太阳",
+            "property_id": "P397"
+          },
+          {
+            "relation": "PART_OF",
+            "object": "太阳系",
+            "property_id": "P361"
+          },
+          {
+            "relation": "LOCATED_IN",
+            "object": "太阳系",
+            "property_id": "P276"
+          },
+          {
+            "relation": "HAS_MASS",
+            "object": "4.8675e24 kg",
+            "property_id": "P2067"
+          },
+          {
+            "relation": "HAS_RADIUS",
+            "object": "6051.8 km",
+            "property_id": "P2120"
+          },
+          {
+            "relation": "HAS_ATMOSPHERE",
+            "object": "二氧化碳;氮气",
+            "property_id": "P2067"
+          }
+        ],
+        "narratives": [
+          {
+            "section": "大气",
+            "content": "金星的 fixture 记录突出其以二氧化碳为主的大气，并保留与太阳系成员关系相关的事实。",
+            "keywords": [
+              "金星",
+              "大气",
+              "二氧化碳"
+            ]
+          }
+        ]
+      },
+      {
+        "title": "地球",
+        "qid": "Q2",
+        "triples": [
+          {
+            "relation": "ORBITS",
+            "object": "太阳",
+            "property_id": "P397"
+          },
+          {
+            "relation": "PART_OF",
+            "object": "太阳系",
+            "property_id": "P361"
+          },
+          {
+            "relation": "LOCATED_IN",
+            "object": "太阳系",
+            "property_id": "P276"
+          },
+          {
+            "relation": "HAS_MASS",
+            "object": "5.97237e24 kg",
+            "property_id": "P2067"
+          },
+          {
+            "relation": "HAS_RADIUS",
+            "object": "6371 km",
+            "property_id": "P2120"
+          },
+          {
+            "relation": "HAS_ATMOSPHERE",
+            "object": "氮气;氧气;氩气",
+            "property_id": "P2067"
+          }
+        ],
+        "narratives": [
+          {
+            "section": "大气",
+            "content": "地球 fixture 记录包括氮气、氧气和氩气等大气成分，也声明地球绕太阳运行。",
+            "keywords": [
+              "地球",
+              "大气",
+              "太阳"
+            ]
+          }
+        ]
+      },
+      {
+        "title": "月球",
+        "qid": "Q405",
+        "triples": [
+          {
+            "relation": "ORBITS",
+            "object": "地球",
+            "property_id": "P397"
+          },
+          {
+            "relation": "PART_OF",
+            "object": "地球系统",
+            "property_id": "P361"
+          },
+          {
+            "relation": "LOCATED_IN",
+            "object": "地球系统",
+            "property_id": "P276"
+          },
+          {
+            "relation": "HAS_MASS",
+            "object": "7.342e22 kg",
+            "property_id": "P2067"
+          },
+          {
+            "relation": "HAS_RADIUS",
+            "object": "1737.4 km",
+            "property_id": "P2120"
+          },
+          {
+            "relation": "HAS_ATMOSPHERE",
+            "object": "极稀薄外逸层",
+            "property_id": "P2067"
+          }
+        ],
+        "narratives": [
+          {
+            "section": "轨道",
+            "content": "月球在 fixture 中作为地球系统成员记录，结构化事实指出其绕地球运行。",
+            "keywords": [
+              "月球",
+              "地球",
+              "轨道"
+            ]
+          }
+        ]
+      }
+    ],
+    "official_triples_written": true,
+    "official_chroma_written": true,
+    "official_neo4j_written": true
+  },
+  "readiness_gate": {
+    "passed": true,
+    "cutover_ready": false,
+    "reason": "shadow namespace is auditable; active-source cutover remains disabled"
+  },
+  "materialization": {
+    "timestamp_utc": "2026-06-28T06:01:22.573764+00:00",
+    "output_path": "F:\\知识表示与处理结课作业\\第二次托洛洛测试 -重大进展\\evaluation\\source_expansion\\wikidata\\wikidata_materialization_report.json"
+  },
+  "raw_copy_status": {
+    "written": true,
+    "path": "F:\\知识表示与处理结课作业\\第二次托洛洛测试 -重大进展\\data\\raw_json\\wikidata\\solar_system_fixture.json",
+    "error": ""
+  },
+  "live_preview": {
+    "target_entity": "火星",
+    "supported_relations": [
+      "DISCOVERED_BY",
+      "HAS_ATMOSPHERE",
+      "HAS_MASS",
+      "HAS_RADIUS",
+      "LOCATED_IN",
+      "ORBITS",
+      "PART_OF"
+    ],
+    "api": "https://www.wikidata.org/w/api.php",
+    "license_hint": "CC0-1.0"
+  }
+}

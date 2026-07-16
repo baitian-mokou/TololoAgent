@@ -1,0 +1,47 @@
+[
+  {
+    "relation": "OPERATED_BY",
+    "object": "ESA",
+    "source_url": "https://www.esa.int/Science_Exploration/Space_Science/Mars_Express/At_the_foot_of_the_Red_Planet_s_giant_volcano",
+    "source_field": "live_page",
+    "subject": "ESA - At the foot of the Red Planet’s giant volcano",
+    "raw": "live_page OPERATED_BY ESA",
+    "source": "esa",
+    "source_name": "esa",
+    "source_role": "primary",
+    "origin": "api",
+    "type": "triple_candidate",
+    "schema_version": "esa_shadow_ready_v1",
+    "source_title": "ESA - At the foot of the Red Planet’s giant volcano"
+  },
+  {
+    "relation": "HAS_MISSION_TARGET",
+    "object": "火星",
+    "source_url": "https://www.esa.int/Science_Exploration/Space_Science/Mars_Express/At_the_foot_of_the_Red_Planet_s_giant_volcano",
+    "source_field": "live_page",
+    "subject": "ESA - At the foot of the Red Planet’s giant volcano",
+    "raw": "live_page HAS_MISSION_TARGET 火星",
+    "source": "esa",
+    "source_name": "esa",
+    "source_role": "primary",
+    "origin": "api",
+    "type": "triple_candidate",
+    "schema_version": "esa_shadow_ready_v1",
+    "source_title": "ESA - At the foot of the Red Planet’s giant volcano"
+  },
+  {
+    "relation": "HAS_MISSION_TARGET",
+    "object": "彗星",
+    "source_url": "https://www.esa.int/Science_Exploration/Space_Science/Mars_Express/At_the_foot_of_the_Red_Planet_s_giant_volcano",
+    "source_field": "live_page",
+    "subject": "ESA - At the foot of the Red Planet’s giant volcano",
+    "raw": "live_page HAS_MISSION_TARGET 彗星",
+    "source": "esa",
+    "source_name": "esa",
+    "source_role": "primary",
+    "origin": "api",
+    "type": "triple_candidate",
+    "schema_version": "esa_shadow_ready_v1",
+    "source_title": "ESA - At the foot of the Red Planet’s giant volcano"
+  }
+]

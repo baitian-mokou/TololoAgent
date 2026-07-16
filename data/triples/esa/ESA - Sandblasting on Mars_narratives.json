@@ -1,0 +1,22 @@
+[
+  {
+    "section": "任务",
+    "content": "ESA - Sandblasting on Mars Science & Exploration Sandblasting on Mars 07/01/2026 4424 views 67 likes ESA / Science & Exploration / Space Science / Mars Express Martian winds can have quite an impact. ESA’s Mars Express has spotted them whipping up sand grains and acting as a cosmic sandblaster, carving out intriguing grooves near Mars’s equator. The ridges, mounds, or columns left standing when the surrounding ground is eroded away are technically known as yardangs , and are common on Mars. They’re evidence of powerful martian winds acting as a cosmic sandblaster, pulling sand grains into the air and sculpting grooves in the surface that extend across tens of kilometres. Mars Express sees sandblasted wind sculptures near Eumenides Dorsum These strongly erosive, sand-laden winds dig into so",
+    "keywords": [
+      "ESA - Sandblasting on Mars",
+      "ESA",
+      "太阳系任务",
+      "火星"
+    ],
+    "page_title": "ESA - Sandblasting on Mars",
+    "path": "任务",
+    "chunk_index": 0,
+    "source": "esa",
+    "source_name": "esa",
+    "source_role": "primary",
+    "source_title": "ESA - Sandblasting on Mars",
+    "origin": "html_fallback",
+    "schema_version": "esa_shadow_ready_v1",
+    "type": "embedding_chunk"
+  }
+]

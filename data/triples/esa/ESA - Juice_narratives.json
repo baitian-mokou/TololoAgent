@@ -1,0 +1,25 @@
+[
+  {
+    "section": "任务",
+    "content": "ESA - Juice Science & Exploration Juice Jupiter Icy Moons Explorer The mission ESA’s Jupiter Icy Moons Explorer, Juice, will make detailed observations of the giant gas planet and its three large ocean-bearing moons – Ganymede, Callisto and Europa – with a suite of remote sensing, geophysical and in situ instruments. The mission will characterise these moons as both planetary objects and possible habitats, explore Jupiter’s complex environment in depth, and study the wider Jupiter system as an archetype for gas giants across the Universe. The journey Launch : 14 April 2023 Launch location: Europe's Spaceport in French Guiana Launch vehicle: Ariane 5 Flybys en route : August 2024 Lunar-Earth, August 2025 Venus, September 2026 Earth, January 2029 Earth Arrival at Jupiter: July 2031 10 instru",
+    "keywords": [
+      "ESA - Juice",
+      "ESA",
+      "太阳系任务",
+      "木星",
+      "木卫二",
+      "木卫三",
+      "木卫四"
+    ],
+    "page_title": "ESA - Juice",
+    "path": "任务",
+    "chunk_index": 0,
+    "source": "esa",
+    "source_name": "esa",
+    "source_role": "primary",
+    "source_title": "ESA - Juice",
+    "origin": "html_fallback",
+    "schema_version": "esa_shadow_ready_v1",
+    "type": "embedding_chunk"
+  }
+]

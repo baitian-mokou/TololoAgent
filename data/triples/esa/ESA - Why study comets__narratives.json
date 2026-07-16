@@ -1,0 +1,23 @@
+[
+  {
+    "section": "任务",
+    "content": "ESA - Why study comets? Science & Exploration Why study comets? 42304 views 101 likes ESA / Science & Exploration / Space Science / Rosetta Comets are the most primitive objects in the Solar System. Many scientists think that they have kept a record of the physical and chemical processes that occurred during the early stages of the evolution of our Sun and Solar System. The abundance of volatile material in comets makes them particularly important and extraordinary objects. This characteristic demonstrates that comets were formed at large distances from the Sun and have been preserved at low temperatures since their formation. Cometary material therefore represents the closest we can get to the conditions that occurred when the Sun and our Solar System were born. Anatomy of a comet - Infog",
+    "keywords": [
+      "ESA - Why study comets?",
+      "ESA",
+      "太阳系任务",
+      "木星",
+      "彗星"
+    ],
+    "page_title": "ESA - Why study comets?",
+    "path": "任务",
+    "chunk_index": 0,
+    "source": "esa",
+    "source_name": "esa",
+    "source_role": "primary",
+    "source_title": "ESA - Why study comets?",
+    "origin": "html_fallback",
+    "schema_version": "esa_shadow_ready_v1",
+    "type": "embedding_chunk"
+  }
+]

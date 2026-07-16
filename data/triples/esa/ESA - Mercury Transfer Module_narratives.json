@@ -1,0 +1,23 @@
+[
+  {
+    "section": "任务",
+    "content": "ESA - Mercury Transfer Module Science & Exploration Mercury Transfer Module 8651 views 34 likes ESA / Science & Exploration / Space Science / BepiColombo This ESA-built Mercury Transfer Module (MTM) is carrying BepiColombo's two orbiters – ESA’s Mercury Planetary Orbiter (MPO) and JAXA’s Mercury Magnetospheric Orbiter (MMO, or Mio) – to Mercury using solar-electric propulsion. MTM’s ion thrusters are used during the cruise phase for delivering the two spacecraft to Mercury. The high performance of the propulsion system, in terms of the amount of fuel the thrusters require, is critical. Inert xenon gas is fed in to the thrusters, where electrons are first stripped off the xenon atoms. The resulting electrically charged atoms, referred to as ions, are then focused and ejected out of the thru",
+    "keywords": [
+      "ESA - Mercury Transfer Module",
+      "ESA",
+      "太阳系任务",
+      "水星",
+      "金星"
+    ],
+    "page_title": "ESA - Mercury Transfer Module",
+    "path": "任务",
+    "chunk_index": 0,
+    "source": "esa",
+    "source_name": "esa",
+    "source_role": "primary",
+    "source_title": "ESA - Mercury Transfer Module",
+    "origin": "html_fallback",
+    "schema_version": "esa_shadow_ready_v1",
+    "type": "embedding_chunk"
+  }
+]

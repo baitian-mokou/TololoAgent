@@ -1,0 +1,55 @@
+{
+  "record": {
+    "title": "天王星",
+    "qid": "Q324",
+    "triples": [
+      {
+        "relation": "ORBITS",
+        "object": "太阳",
+        "property_id": "P397"
+      },
+      {
+        "relation": "PART_OF",
+        "object": "太阳系",
+        "property_id": "P361"
+      },
+      {
+        "relation": "LOCATED_IN",
+        "object": "太阳系",
+        "property_id": "P276"
+      },
+      {
+        "relation": "DISCOVERED_BY",
+        "object": "威廉·赫歇尔",
+        "property_id": "P61"
+      },
+      {
+        "relation": "HAS_MASS",
+        "object": "8.6810e25 kg",
+        "property_id": "P2067"
+      },
+      {
+        "relation": "HAS_RADIUS",
+        "object": "25362 km",
+        "property_id": "P2120"
+      },
+      {
+        "relation": "HAS_ATMOSPHERE",
+        "object": "氢;氦;甲烷",
+        "property_id": "P2067"
+      }
+    ],
+    "narratives": [
+      {
+        "section": "发现",
+        "content": "天王星 fixture 记录发现者威廉·赫歇尔，并将甲烷列为大气成分之一。",
+        "keywords": [
+          "天王星",
+          "发现者",
+          "甲烷"
+        ]
+      }
+    ]
+  },
+  "fixture_source": "solar_system_fixture.json"
+}

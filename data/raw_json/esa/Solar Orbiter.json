@@ -1,0 +1,42 @@
+{
+  "record": {
+    "title": "Solar Orbiter",
+    "triples": [
+      {
+        "subject": "Solar Orbiter",
+        "relation": "ORBITS",
+        "object": "太阳",
+        "pattern": "esa_smoke_fixture",
+        "raw": "ESA smoke fixture: Solar Orbiter orbits the Sun."
+      },
+      {
+        "subject": "Solar Orbiter",
+        "relation": "OPERATED_BY",
+        "object": "ESA",
+        "pattern": "esa_smoke_fixture",
+        "raw": "ESA operates Solar Orbiter."
+      },
+      {
+        "subject": "Solar Orbiter",
+        "relation": "HAS_MISSION_TARGET",
+        "object": "太阳",
+        "pattern": "esa_smoke_fixture",
+        "raw": "Solar Orbiter targets the Sun."
+      }
+    ],
+    "narratives": [
+      {
+        "page_title": "Solar Orbiter",
+        "section": "任务",
+        "content": "ESA fixture 将 Solar Orbiter 记录为沿太阳轨道工作的 ESA 任务，目标直指太阳及其日球层环境。",
+        "keywords": [
+          "ESA",
+          "Solar Orbiter",
+          "太阳",
+          "任务"
+        ]
+      }
+    ]
+  },
+  "fixture_source": "smoke_fixture.json"
+}

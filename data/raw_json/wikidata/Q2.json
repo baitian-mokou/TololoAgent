@@ -1,0 +1,50 @@
+{
+  "record": {
+    "title": "地球",
+    "qid": "Q2",
+    "triples": [
+      {
+        "relation": "ORBITS",
+        "object": "太阳",
+        "property_id": "P397"
+      },
+      {
+        "relation": "PART_OF",
+        "object": "太阳系",
+        "property_id": "P361"
+      },
+      {
+        "relation": "LOCATED_IN",
+        "object": "太阳系",
+        "property_id": "P276"
+      },
+      {
+        "relation": "HAS_MASS",
+        "object": "5.97237e24 kg",
+        "property_id": "P2067"
+      },
+      {
+        "relation": "HAS_RADIUS",
+        "object": "6371 km",
+        "property_id": "P2120"
+      },
+      {
+        "relation": "HAS_ATMOSPHERE",
+        "object": "氮气;氧气;氩气",
+        "property_id": "P2067"
+      }
+    ],
+    "narratives": [
+      {
+        "section": "大气",
+        "content": "地球 fixture 记录包括氮气、氧气和氩气等大气成分，也声明地球绕太阳运行。",
+        "keywords": [
+          "地球",
+          "大气",
+          "太阳"
+        ]
+      }
+    ]
+  },
+  "fixture_source": "solar_system_fixture.json"
+}

@@ -1,0 +1,55 @@
+{
+  "record": {
+    "title": "海王星",
+    "qid": "Q332",
+    "triples": [
+      {
+        "relation": "ORBITS",
+        "object": "太阳",
+        "property_id": "P397"
+      },
+      {
+        "relation": "PART_OF",
+        "object": "太阳系",
+        "property_id": "P361"
+      },
+      {
+        "relation": "LOCATED_IN",
+        "object": "太阳系",
+        "property_id": "P276"
+      },
+      {
+        "relation": "DISCOVERED_BY",
+        "object": "约翰·伽勒",
+        "property_id": "P61"
+      },
+      {
+        "relation": "HAS_MASS",
+        "object": "1.02413e26 kg",
+        "property_id": "P2067"
+      },
+      {
+        "relation": "HAS_RADIUS",
+        "object": "24622 km",
+        "property_id": "P2120"
+      },
+      {
+        "relation": "HAS_ATMOSPHERE",
+        "object": "氢;氦;甲烷",
+        "property_id": "P2067"
+      }
+    ],
+    "narratives": [
+      {
+        "section": "发现",
+        "content": "海王星 fixture 保留发现者、甲烷大气以及太阳系成员关系，适合冲突和路由评测。",
+        "keywords": [
+          "海王星",
+          "发现者",
+          "太阳系"
+        ]
+      }
+    ]
+  },
+  "fixture_source": "solar_system_fixture.json"
+}

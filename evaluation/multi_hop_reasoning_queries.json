@@ -1,0 +1,220 @@
+{
+  "version": "multi_hop_reasoning_gold_set_v1",
+  "base_dataset": "data/presentation_exports/solar_system_triples_merged.json",
+  "active_source": "zh_wikipedia",
+  "query_count": 20,
+  "queries": [
+    {
+      "id": "mh_001_moon_orbits_earth_location",
+      "question": "月球绕行的天体位于哪个天体系统中？",
+      "expected_answer": "太阳系",
+      "reasoning_chain": "月球 ORBITS 地球；地球 LOCATED_IN 太阳系。",
+      "supporting_triples": [
+        {"subject": "月球", "relation": "ORBITS", "object": "地球"},
+        {"subject": "地球", "relation": "LOCATED_IN", "object": "太阳系"}
+      ]
+    },
+    {
+      "id": "mh_002_phobos_parent_type",
+      "question": "火卫一绕行的天体在数据集中被标注为什么特殊类型？",
+      "expected_answer": "沙漠行星",
+      "reasoning_chain": "火卫一 ORBITS 火星；火星 IS_A 沙漠行星。",
+      "supporting_triples": [
+        {"subject": "火卫一", "relation": "ORBITS", "object": "火星"},
+        {"subject": "火星", "relation": "IS_A", "object": "沙漠行星"}
+      ]
+    },
+    {
+      "id": "mh_003_phobos_parent_mass",
+      "question": "火卫一绕行的行星质量是多少？",
+      "expected_answer": "6.4169 × 10 23 kg",
+      "reasoning_chain": "火卫一 ORBITS 火星；火星 HAS_MASS 6.4169 × 10 23 kg。",
+      "supporting_triples": [
+        {"subject": "火卫一", "relation": "ORBITS", "object": "火星"},
+        {"subject": "火星", "relation": "HAS_MASS", "object": "6.4169 × 10 23 kg"}
+      ]
+    },
+    {
+      "id": "mh_004_io_group_system",
+      "question": "木卫一所属的卫星群属于哪个系统？",
+      "expected_answer": "木星系统",
+      "reasoning_chain": "木卫一 PART_OF 伽利略卫星；伽利略卫星 PART_OF 木星系统。",
+      "supporting_triples": [
+        {"subject": "木卫一", "relation": "PART_OF", "object": "伽利略卫星"},
+        {"subject": "伽利略卫星", "relation": "PART_OF", "object": "木星系统"}
+      ]
+    },
+    {
+      "id": "mh_005_io_group_location",
+      "question": "木卫一所属的伽利略卫星位于哪里？",
+      "expected_answer": "太阳系",
+      "reasoning_chain": "木卫一 PART_OF 伽利略卫星；伽利略卫星 LOCATED_IN 太阳系。",
+      "supporting_triples": [
+        {"subject": "木卫一", "relation": "PART_OF", "object": "伽利略卫星"},
+        {"subject": "伽利略卫星", "relation": "LOCATED_IN", "object": "太阳系"}
+      ]
+    },
+    {
+      "id": "mh_006_europa_group_type",
+      "question": "木卫二所属的伽利略卫星是什么类型？",
+      "expected_answer": "天然卫星群",
+      "reasoning_chain": "木卫二 PART_OF 伽利略卫星；伽利略卫星 IS_A 天然卫星群。",
+      "supporting_triples": [
+        {"subject": "木卫二", "relation": "PART_OF", "object": "伽利略卫星"},
+        {"subject": "伽利略卫星", "relation": "IS_A", "object": "天然卫星群"}
+      ]
+    },
+    {
+      "id": "mh_007_callisto_parent_mass",
+      "question": "木卫四绕行的行星质量是多少？",
+      "expected_answer": "1.8981 × 10 27 kg",
+      "reasoning_chain": "木卫四 ORBITS 木星；木星 HAS_MASS 1.8981 × 10 27 kg。",
+      "supporting_triples": [
+        {"subject": "木卫四", "relation": "ORBITS", "object": "木星"},
+        {"subject": "木星", "relation": "HAS_MASS", "object": "1.8981 × 10 27 kg"}
+      ]
+    },
+    {
+      "id": "mh_008_callisto_parent_atmosphere",
+      "question": "木卫四绕行的行星大气成分有哪些？",
+      "expected_answer": ["氢", "氦", "氨", "甲烷"],
+      "reasoning_chain": "木卫四 ORBITS 木星；木星 HAS_ATMOSPHERE 氢/氦/氨/甲烷。",
+      "supporting_triples": [
+        {"subject": "木卫四", "relation": "ORBITS", "object": "木星"},
+        {"subject": "木星", "relation": "HAS_ATMOSPHERE", "object": "氢"},
+        {"subject": "木星", "relation": "HAS_ATMOSPHERE", "object": "氦"},
+        {"subject": "木星", "relation": "HAS_ATMOSPHERE", "object": "氨"},
+        {"subject": "木星", "relation": "HAS_ATMOSPHERE", "object": "甲烷"}
+      ]
+    },
+    {
+      "id": "mh_009_mimas_parent_type",
+      "question": "土卫一绕行的天体被标注为什么类型？",
+      "expected_answer": ["外行星", "行星"],
+      "reasoning_chain": "土卫一 ORBITS 土星；土星 IS_A 外行星/行星。",
+      "supporting_triples": [
+        {"subject": "土卫一", "relation": "ORBITS", "object": "土星"},
+        {"subject": "土星", "relation": "IS_A", "object": "外行星"},
+        {"subject": "土星", "relation": "IS_A", "object": "行星"}
+      ]
+    },
+    {
+      "id": "mh_010_titan_parent_mass",
+      "question": "土卫六绕行的行星质量是多少？",
+      "expected_answer": "5.6846 × 10 26 kg",
+      "reasoning_chain": "土卫六 ORBITS 土星；土星 HAS_MASS 5.6846 × 10 26 kg。",
+      "supporting_triples": [
+        {"subject": "土卫六", "relation": "ORBITS", "object": "土星"},
+        {"subject": "土星", "relation": "HAS_MASS", "object": "5.6846 × 10 26 kg"}
+      ]
+    },
+    {
+      "id": "mh_011_titan_discoverer_and_system",
+      "question": "土卫六由谁发现，并且属于哪个系统？",
+      "expected_answer": {"discoverer": "克里斯蒂安·惠更斯", "system": "土星系统"},
+      "reasoning_chain": "土卫六 DISCOVERED_BY 克里斯蒂安·惠更斯；土卫六 PART_OF 土星系统。",
+      "supporting_triples": [
+        {"subject": "土卫六", "relation": "DISCOVERED_BY", "object": "克里斯蒂安·惠更斯"},
+        {"subject": "土卫六", "relation": "PART_OF", "object": "土星系统"}
+      ]
+    },
+    {
+      "id": "mh_012_cassini_saturn_moons",
+      "question": "哪些属于土星系统的卫星由乔瓦尼·多梅尼科·卡西尼发现？",
+      "expected_answer": ["土卫四", "土卫五", "土卫八"],
+      "reasoning_chain": "筛选 DISCOVERED_BY 乔瓦尼·多梅尼科·卡西尼，且 PART_OF 土星系统的实体。",
+      "supporting_triples": [
+        {"subject": "土卫四", "relation": "DISCOVERED_BY", "object": "乔瓦尼·多梅尼科·卡西尼"},
+        {"subject": "土卫四", "relation": "PART_OF", "object": "土星系统"},
+        {"subject": "土卫五", "relation": "DISCOVERED_BY", "object": "乔瓦尼·多梅尼科·卡西尼"},
+        {"subject": "土卫五", "relation": "PART_OF", "object": "土星系统"},
+        {"subject": "土卫八", "relation": "DISCOVERED_BY", "object": "乔瓦尼·多梅尼科·卡西尼"},
+        {"subject": "土卫八", "relation": "PART_OF", "object": "土星系统"}
+      ]
+    },
+    {
+      "id": "mh_013_herschel_saturn_moon_orbits",
+      "question": "威廉·赫歇尔发现的土星卫星绕谁公转？",
+      "expected_answer": "土星",
+      "reasoning_chain": "土卫一 DISCOVERED_BY 威廉·赫歇尔；土卫一 ORBITS 土星。",
+      "supporting_triples": [
+        {"subject": "土卫一", "relation": "DISCOVERED_BY", "object": "威廉·赫歇尔"},
+        {"subject": "土卫一", "relation": "ORBITS", "object": "土星"}
+      ]
+    },
+    {
+      "id": "mh_014_herschel_uranus_moon_system",
+      "question": "威廉·赫歇尔发现的天王星卫星属于哪个系统？",
+      "expected_answer": "天王星系统",
+      "reasoning_chain": "天卫四 DISCOVERED_BY 威廉·赫歇尔；天卫四 PART_OF 天王星系统。",
+      "supporting_triples": [
+        {"subject": "天卫四", "relation": "DISCOVERED_BY", "object": "威廉·赫歇尔"},
+        {"subject": "天卫四", "relation": "PART_OF", "object": "天王星系统"}
+      ]
+    },
+    {
+      "id": "mh_015_titania_parent_atmosphere",
+      "question": "天卫四绕行的行星大气成分有哪些？",
+      "expected_answer": ["氢", "氦", "甲烷"],
+      "reasoning_chain": "天卫四 ORBITS 天王星；天王星 HAS_ATMOSPHERE 氢/氦/甲烷。",
+      "supporting_triples": [
+        {"subject": "天卫四", "relation": "ORBITS", "object": "天王星"},
+        {"subject": "天王星", "relation": "HAS_ATMOSPHERE", "object": "氢"},
+        {"subject": "天王星", "relation": "HAS_ATMOSPHERE", "object": "氦"},
+        {"subject": "天王星", "relation": "HAS_ATMOSPHERE", "object": "甲烷"}
+      ]
+    },
+    {
+      "id": "mh_016_oberon_parent_mass",
+      "question": "天卫五绕行的行星质量是多少？",
+      "expected_answer": "8.6810 × 10 25 kg",
+      "reasoning_chain": "天卫五 ORBITS 天王星；天王星 HAS_MASS 8.6810 × 10 25 kg。",
+      "supporting_triples": [
+        {"subject": "天卫五", "relation": "ORBITS", "object": "天王星"},
+        {"subject": "天王星", "relation": "HAS_MASS", "object": "8.6810 × 10 25 kg"}
+      ]
+    },
+    {
+      "id": "mh_017_charon_parent_type",
+      "question": "冥卫一绕行的天体是什么类型？",
+      "expected_answer": "矮行星",
+      "reasoning_chain": "冥卫一 ORBITS 冥王星；冥王星 IS_A 矮行星。",
+      "supporting_triples": [
+        {"subject": "冥卫一", "relation": "ORBITS", "object": "冥王星"},
+        {"subject": "冥王星", "relation": "IS_A", "object": "矮行星"}
+      ]
+    },
+    {
+      "id": "mh_018_charon_parent_atmosphere",
+      "question": "冥卫一绕行的天体大气成分有哪些？",
+      "expected_answer": ["一氧化碳", "氮", "甲烷"],
+      "reasoning_chain": "冥卫一 ORBITS 冥王星；冥王星 HAS_ATMOSPHERE 一氧化碳/氮/甲烷。",
+      "supporting_triples": [
+        {"subject": "冥卫一", "relation": "ORBITS", "object": "冥王星"},
+        {"subject": "冥王星", "relation": "HAS_ATMOSPHERE", "object": "一氧化碳"},
+        {"subject": "冥王星", "relation": "HAS_ATMOSPHERE", "object": "氮"},
+        {"subject": "冥王星", "relation": "HAS_ATMOSPHERE", "object": "甲烷"}
+      ]
+    },
+    {
+      "id": "mh_019_terrestrial_planet_orbits_sun",
+      "question": "哪个绕太阳公转的实体在数据集中被标注为类地行星？",
+      "expected_answer": "金星",
+      "reasoning_chain": "金星 ORBITS 太阳；金星 IS_A 类地行星。",
+      "supporting_triples": [
+        {"subject": "金星", "relation": "ORBITS", "object": "太阳"},
+        {"subject": "金星", "relation": "IS_A", "object": "类地行星"}
+      ]
+    },
+    {
+      "id": "mh_020_exosphere_planet_orbits_sun",
+      "question": "哪个绕太阳公转的实体的大气被标注为稀薄外逸层？",
+      "expected_answer": "水星",
+      "reasoning_chain": "水星 ORBITS 太阳；水星 HAS_ATMOSPHERE 稀薄外逸层。",
+      "supporting_triples": [
+        {"subject": "水星", "relation": "ORBITS", "object": "太阳"},
+        {"subject": "水星", "relation": "HAS_ATMOSPHERE", "object": "稀薄外逸层"}
+      ]
+    }
+  ]
+}

@@ -1,0 +1,23 @@
+[
+  {
+    "section": "任务",
+    "content": "ESA - Jupiter and its complex surroundings: What will Juice reveal? Science & Exploration Jupiter and its complex surroundings: What will Juice reveal? 10252 views 31 likes ESA / Science & Exploration / Space Science / Juice As the name suggests, a strong focus of ESA’s Jupiter Icy Moons Explorer (Juice) mission is to explore the subsurface oceans of Jupiter’s icy moons . But an investigation into how life-friendly worlds form around gas giants would be incomplete without also studying Jupiter itself, its turbulent atmosphere, its enormous magnetic field, and the dusty rings and myriad smaller moons that also orbit the planet. Jupiter’s atmosphere Magnetic environment Volcanic Io and Jupiter’s invisible rings Juice will build upon discoveries made with NASA’s Galileo and Juno missions to r",
+    "keywords": [
+      "ESA - Jupiter and its complex surroundings: What will Juice reveal?",
+      "ESA",
+      "太阳系任务",
+      "木星",
+      "木卫二",
+      "木卫三",
+      "木卫四"
+    ],
+    "page_title": "ESA - Jupiter and its complex surroundings: What will Juice reveal?",
+    "source": "esa",
+    "source_name": "esa",
+    "source_role": "primary",
+    "origin": "api",
+    "type": "embedding_chunk",
+    "schema_version": "esa_shadow_ready_v1",
+    "source_title": "ESA - Jupiter and its complex surroundings: What will Juice reveal?"
+  }
+]

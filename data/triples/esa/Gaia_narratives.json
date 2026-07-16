@@ -1,0 +1,21 @@
+[
+  {
+    "page_title": "Gaia",
+    "section": "任务",
+    "content": "ESA fixture 将 Gaia 记录为由 ESA 运营、沿太阳轨道工作并服务于银河系恒星测量的任务样例。",
+    "keywords": [
+      "ESA",
+      "Gaia",
+      "太阳",
+      "银河系",
+      "任务"
+    ],
+    "source": "esa",
+    "source_name": "esa",
+    "source_role": "primary",
+    "origin": "api",
+    "type": "embedding_chunk",
+    "schema_version": "esa_shadow_ready_v1",
+    "source_title": "Gaia"
+  }
+]

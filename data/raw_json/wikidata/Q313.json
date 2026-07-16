@@ -1,0 +1,50 @@
+{
+  "record": {
+    "title": "金星",
+    "qid": "Q313",
+    "triples": [
+      {
+        "relation": "ORBITS",
+        "object": "太阳",
+        "property_id": "P397"
+      },
+      {
+        "relation": "PART_OF",
+        "object": "太阳系",
+        "property_id": "P361"
+      },
+      {
+        "relation": "LOCATED_IN",
+        "object": "太阳系",
+        "property_id": "P276"
+      },
+      {
+        "relation": "HAS_MASS",
+        "object": "4.8675e24 kg",
+        "property_id": "P2067"
+      },
+      {
+        "relation": "HAS_RADIUS",
+        "object": "6051.8 km",
+        "property_id": "P2120"
+      },
+      {
+        "relation": "HAS_ATMOSPHERE",
+        "object": "二氧化碳;氮气",
+        "property_id": "P2067"
+      }
+    ],
+    "narratives": [
+      {
+        "section": "大气",
+        "content": "金星的 fixture 记录突出其以二氧化碳为主的大气，并保留与太阳系成员关系相关的事实。",
+        "keywords": [
+          "金星",
+          "大气",
+          "二氧化碳"
+        ]
+      }
+    ]
+  },
+  "fixture_source": "solar_system_fixture.json"
+}

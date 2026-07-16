@@ -1,0 +1,23 @@
+[
+  {
+    "section": "任务",
+    "content": "ESA - ESA’s Mars Express unravels mystery of martian moon using 'fake' flybys Science & Exploration ESA’s Mars Express unravels mystery of martian moon using 'fake' flybys 02/12/2021 8593 views 99 likes ESA / Science & Exploration / Space Science / Mars Express By performing a series of real and 'fake' flybys, ESA’s Mars Express has revealed how Mars’ largest moon, Phobos, interacts with the solar wind of charged particles thrown out by the Sun – and spotted an elusive process that has only been seen at Phobos once before. The solar wind streams out from our star, filling the Solar System with energetic particles. Earth’s Moon reflects these particles continuously, and the same ‘backscattering’ is expected at Mars’ moon Phobos given the similarities between the two (both are rocky, lack a",
+    "keywords": [
+      "ESA - ESA’s Mars Express unravels mystery of martian moon using 'fake' flybys",
+      "ESA",
+      "太阳系任务",
+      "木星",
+      "火星",
+      "月球",
+      "水星"
+    ],
+    "page_title": "ESA - ESA’s Mars Express unravels mystery of martian moon using 'fake' flybys",
+    "source": "esa",
+    "source_name": "esa",
+    "source_role": "primary",
+    "origin": "api",
+    "type": "embedding_chunk",
+    "schema_version": "esa_shadow_ready_v1",
+    "source_title": "ESA - ESA’s Mars Express unravels mystery of martian moon using 'fake' flybys"
+  }
+]

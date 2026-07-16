@@ -1,0 +1,21 @@
+[
+  {
+    "section": "Wikidata live preview",
+    "content": "Wikidata live preview parsed 2 candidate facts for Milky Way Galactic pole.",
+    "keywords": [
+      "Milky Way Galactic pole",
+      "Q98840910",
+      "Wikidata"
+    ],
+    "page_title": "Milky Way Galactic pole",
+    "path": "Wikidata live preview",
+    "chunk_index": 0,
+    "source": "wikidata",
+    "source_name": "wikidata",
+    "source_role": "primary",
+    "source_title": "Milky Way Galactic pole",
+    "origin": "api",
+    "schema_version": "wikidata_shadow_ready_v1",
+    "type": "embedding_chunk"
+  }
+]

@@ -1,0 +1,22 @@
+[
+  {
+    "section": "任务",
+    "content": "ESA - Mercury Planetary Orbiter Science & Exploration Mercury Planetary Orbiter 9897 views 44 likes ESA / Science & Exploration / Space Science / BepiColombo ESA’s Mercury Planetary Orbiter (MPO) is one of two spacecraft making up the BepiColombo mission to Mercury, the other being JAXA's Mercury Magnetospheric Orbiter ( Mio ). MPO will operate from a 2.3-hour polar orbit at an altitude of 480 x 1500 km above the planet’s surface. The main body of the spacecraft measures 2.4 x 2.2 x 1.7 m and its radiator is 3.7 m wide. The deployed solar wing spans 7.5 m. Mercury Planetary Orbiter's science instruments The orbiter comprises a suite of 11 science experiments: MPO’s science instruments BepiColombo Laser Altimeter (BELA): Characterising and measuring the topography and surface morphology of",
+    "keywords": [
+      "ESA - Mercury Planetary Orbiter",
+      "ESA",
+      "太阳系任务",
+      "水星"
+    ],
+    "page_title": "ESA - Mercury Planetary Orbiter",
+    "path": "任务",
+    "chunk_index": 0,
+    "source": "esa",
+    "source_name": "esa",
+    "source_role": "primary",
+    "source_title": "ESA - Mercury Planetary Orbiter",
+    "origin": "html_fallback",
+    "schema_version": "esa_shadow_ready_v1",
+    "type": "embedding_chunk"
+  }
+]

@@ -1,0 +1,22 @@
+[
+  {
+    "section": "任务",
+    "content": "ESA - Science on the surface of a comet Science & Exploration Science on the surface of a comet 30/07/2015 58865 views 224 likes ESA / Science & Exploration / Space Science / Rosetta Complex molecules that could be key building blocks of life, the daily rise and fall of temperature, and an assessment of the surface properties and internal structure of the comet are just some of the highlights of the first scientific analysis of the data returned by Rosetta’s lander Philae last November. Early results from Philae’s first suite of scientific observations of Comet 67P/Churyumov­-Gerasimenko were published today in a special edition of the journal Science . CIVA camera 4 view Data were obtained during the lander’s seven-hour descent to its first touchdown at the Agilkia landing site, which the",
+    "keywords": [
+      "ESA - Science on the surface of a comet",
+      "ESA",
+      "太阳系任务",
+      "彗星"
+    ],
+    "page_title": "ESA - Science on the surface of a comet",
+    "path": "任务",
+    "chunk_index": 0,
+    "source": "esa",
+    "source_name": "esa",
+    "source_role": "primary",
+    "source_title": "ESA - Science on the surface of a comet",
+    "origin": "html_fallback",
+    "schema_version": "esa_shadow_ready_v1",
+    "type": "embedding_chunk"
+  }
+]

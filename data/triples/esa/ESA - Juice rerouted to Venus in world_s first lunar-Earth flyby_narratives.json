@@ -1,0 +1,23 @@
+[
+  {
+    "section": "任务",
+    "content": "ESA - Juice rerouted to Venus in world’s first lunar-Earth flyby Science & Exploration Juice rerouted to Venus in world’s first lunar-Earth flyby 21/08/2024 44068 views 111 likes ESA / Science & Exploration / Space Science / Juice ESA’s Jupiter Icy Moons Explorer (Juice) has successfully completed a world-first lunar-Earth flyby, using the gravity of Earth to send it Venus-bound, on a shortcut to Jupiter through the inner Solar System. The closest approach to the Moon was at 23:15 CEST (21:15 UTC) on 19 August, guiding Juice towards a closest approach to Earth just over 24 hours later at 23:56 CEST (21:56 UTC) on 20 August. As Juice flew just 6840 km above Southeast Asia and the Pacific Ocean, it snapped a series of images with its onboard monitoring cameras , and collected scientific data",
+    "keywords": [
+      "ESA - Juice rerouted to Venus in world’s first lunar-Earth flyby",
+      "ESA",
+      "太阳系任务",
+      "木星",
+      "木卫二",
+      "木卫三",
+      "木卫四"
+    ],
+    "page_title": "ESA - Juice rerouted to Venus in world’s first lunar-Earth flyby",
+    "source": "esa",
+    "source_name": "esa",
+    "source_role": "primary",
+    "origin": "api",
+    "type": "embedding_chunk",
+    "schema_version": "esa_shadow_ready_v1",
+    "source_title": "ESA - Juice rerouted to Venus in world’s first lunar-Earth flyby"
+  }
+]

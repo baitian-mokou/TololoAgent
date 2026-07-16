@@ -1,0 +1,20 @@
+[
+  {
+    "section": "任务",
+    "content": "ESA - 20 years of Mars Express: Mars as never seen before Science & Exploration 20 years of Mars Express: Mars as never seen before 02/06/2023 49791 views 391 likes ESA / Science & Exploration / Space Science / Mars Express A new mosaic of Mars marks 20 years since the launch of ESA's Mars Express , and reveals the planet’s colour and composition in spectacular detail. The mosaic was created using data from Mars Express’s High Resolution Stereo Camera (HRSC) . HRSC normally photographs Mars’s surface from an altitude of about 300 km – the closest the spacecraft gets to Mars in its elliptical orbit – with the resulting images covering areas about 50 km across. However, the mosaic presented here uses a slightly different approach. To view the planet more widely, HRSC gathered 90 images at hi",
+    "keywords": [
+      "ESA - 20 years of Mars Express: Mars as never seen before",
+      "ESA",
+      "太阳系任务",
+      "火星"
+    ],
+    "page_title": "ESA - 20 years of Mars Express: Mars as never seen before",
+    "source": "esa",
+    "source_name": "esa",
+    "source_role": "primary",
+    "origin": "api",
+    "type": "embedding_chunk",
+    "schema_version": "esa_shadow_ready_v1",
+    "source_title": "ESA - 20 years of Mars Express: Mars as never seen before"
+  }
+]

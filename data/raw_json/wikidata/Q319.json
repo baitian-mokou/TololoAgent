@@ -1,0 +1,51 @@
+{
+  "record": {
+    "title": "木星",
+    "qid": "Q319",
+    "triples": [
+      {
+        "relation": "ORBITS",
+        "object": "太阳",
+        "property_id": "P397"
+      },
+      {
+        "relation": "PART_OF",
+        "object": "太阳系",
+        "property_id": "P361"
+      },
+      {
+        "relation": "LOCATED_IN",
+        "object": "太阳系",
+        "property_id": "P276"
+      },
+      {
+        "relation": "HAS_MASS",
+        "object": "1.8982e27 kg",
+        "property_id": "P2067"
+      },
+      {
+        "relation": "HAS_RADIUS",
+        "object": "69911 km",
+        "property_id": "P2120"
+      },
+      {
+        "relation": "HAS_ATMOSPHERE",
+        "object": "氢;氦;甲烷;氨",
+        "property_id": "P2067"
+      }
+    ],
+    "narratives": [
+      {
+        "section": "大气",
+        "content": "木星 fixture 将氢和氦列为主要大气成分，并保留质量、半径与绕太阳运行事实。",
+        "keywords": [
+          "木星",
+          "大气",
+          "氢",
+          "氦"
+        ]
+      }
+    ]
+  },
+  "fixture_source": "solar_system_fixture.json"
+}

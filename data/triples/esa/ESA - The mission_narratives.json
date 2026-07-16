@@ -1,0 +1,22 @@
+[
+  {
+    "section": "任务",
+    "content": "ESA - The mission Science & Exploration The mission 29697 views 56 likes ESA / Science & Exploration / Space Science / Mars Express Mars Express set off on 2 June 2003. At this time of year the positions of Earth and Mars made for the shortest possible route, a condition that occurs once every 26 months. The intrepid spacecraft began its six-month journey from the Baikonur launch site in Kazakhstan on board a Russian Soyuz/Fregat launcher. Having escaped Earth's pull, Mars Express was sent on course for the Red Planet, cruising at a velocity of 10 800 kilometres an hour, relative to Earth. Six days before arrival on 25 December 2003, Mars Express ejected the Beagle 2 lander which was to have made its own way to the correct landing site on the surface. The orbiter successfully entered Marti",
+    "keywords": [
+      "ESA - The mission",
+      "ESA",
+      "太阳系任务",
+      "火星"
+    ],
+    "page_title": "ESA - The mission",
+    "path": "任务",
+    "chunk_index": 0,
+    "source": "esa",
+    "source_name": "esa",
+    "source_role": "primary",
+    "source_title": "ESA - The mission",
+    "origin": "html_fallback",
+    "schema_version": "esa_shadow_ready_v1",
+    "type": "embedding_chunk"
+  }
+]

@@ -1,0 +1,23 @@
+[
+  {
+    "section": "任务",
+    "content": "ESA - BepiColombo’s first views of Mercury Science & Exploration BepiColombo’s first views of Mercury 02/10/2021 68157 views 173 likes ESA / Science & Exploration / Space Science / BepiColombo The ESA/JAXA BepiColombo mission has captured its first views of its destination planet Mercury as it swooped past in a close gravity assist flyby last night. The closest approach took place at 23:34 UTC on 1 October at an altitude of 199 km from the planet’s surface. Images from the spacecraft’s monitoring cameras, along with scientific data from a number of instruments, were collected during the encounter. The images were already downloaded over the course of Saturday morning, and a selection of first impressions are presented here. “The flyby was flawless from the spacecraft point of view, and it’",
+    "keywords": [
+      "ESA - BepiColombo’s first views of Mercury",
+      "ESA",
+      "太阳系任务",
+      "水星",
+      "月球",
+      "金星",
+      "彗星"
+    ],
+    "page_title": "ESA - BepiColombo’s first views of Mercury",
+    "source": "esa",
+    "source_name": "esa",
+    "source_role": "primary",
+    "origin": "api",
+    "type": "embedding_chunk",
+    "schema_version": "esa_shadow_ready_v1",
+    "source_title": "ESA - BepiColombo’s first views of Mercury"
+  }
+]

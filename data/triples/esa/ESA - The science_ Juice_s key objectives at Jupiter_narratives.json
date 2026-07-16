@@ -1,0 +1,25 @@
+[
+  {
+    "section": "任务",
+    "content": "ESA - The science: Juice’s key objectives at Jupiter Science & Exploration The science: Juice’s key objectives at Jupiter 5904 views 8 likes ESA / Science & Exploration / Space Science / Juice ESA’s Jupiter Icy Moons Explorer ( Juice ) is currently en route to the outer Solar System to study the intriguing Jupiter system. Juice has a number of key science objectives, from exploring Jupiter’s three large ocean-bearing moons to probing the planet’s complex atmosphere and magnetic environment. Juice will work to unravel the history of our planetary neighbour, revealing how it formed, how it has evolved, and if life could ever have arisen somewhere within the Jupiter system. What science will Juice explore? Juice’s overarching theme is the emergence of habitable worlds around gas giants. The m",
+    "keywords": [
+      "ESA - The science: Juice’s key objectives at Jupiter",
+      "ESA",
+      "太阳系任务",
+      "木星",
+      "木卫二",
+      "木卫三",
+      "木卫四"
+    ],
+    "page_title": "ESA - The science: Juice’s key objectives at Jupiter",
+    "path": "任务",
+    "chunk_index": 0,
+    "source": "esa",
+    "source_name": "esa",
+    "source_role": "primary",
+    "source_title": "ESA - The science: Juice’s key objectives at Jupiter",
+    "origin": "html_fallback",
+    "schema_version": "esa_shadow_ready_v1",
+    "type": "embedding_chunk"
+  }
+]

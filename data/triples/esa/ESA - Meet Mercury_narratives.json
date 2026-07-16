@@ -1,0 +1,23 @@
+[
+  {
+    "section": "任务",
+    "content": "ESA - Meet Mercury Science & Exploration Meet Mercury 32657 views 74 likes ESA / Science & Exploration / Space Science / BepiColombo Among the four inner Solar System planets, Mercury is the smallest and very dense, its vast iron core dominating its internal structure. As the closest planet to the Sun it experiences extreme temperature variations at its surface, from about +430ºC, down to –180ºC. It has permanently shadowed regions at its poles that never see sunlight and thus enables ice to exist on its floor. Mercury’s ancient, cratered surface shows signs of past volcanic and tectonic activity, and is heavily weathered by the harsh space environment. Quick look Mercury facts Facts about planet Mercury Mercury's interior Diameter: 4879 km (0.38 Earths, or 1.40 Moons) Surface area: 74.8 m",
+    "keywords": [
+      "ESA - Meet Mercury",
+      "ESA",
+      "太阳系任务",
+      "水星",
+      "月球"
+    ],
+    "page_title": "ESA - Meet Mercury",
+    "path": "任务",
+    "chunk_index": 0,
+    "source": "esa",
+    "source_name": "esa",
+    "source_role": "primary",
+    "source_title": "ESA - Meet Mercury",
+    "origin": "html_fallback",
+    "schema_version": "esa_shadow_ready_v1",
+    "type": "embedding_chunk"
+  }
+]

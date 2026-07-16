@@ -1,0 +1,55 @@
+{
+  "record": {
+    "title": "冥王星",
+    "qid": "Q339",
+    "triples": [
+      {
+        "relation": "ORBITS",
+        "object": "太阳",
+        "property_id": "P397"
+      },
+      {
+        "relation": "PART_OF",
+        "object": "柯伊伯带",
+        "property_id": "P361"
+      },
+      {
+        "relation": "LOCATED_IN",
+        "object": "柯伊伯带",
+        "property_id": "P276"
+      },
+      {
+        "relation": "DISCOVERED_BY",
+        "object": "克莱德·汤博",
+        "property_id": "P61"
+      },
+      {
+        "relation": "HAS_MASS",
+        "object": "1.303e22 kg",
+        "property_id": "P2067"
+      },
+      {
+        "relation": "HAS_RADIUS",
+        "object": "1188.3 km",
+        "property_id": "P2120"
+      },
+      {
+        "relation": "HAS_ATMOSPHERE",
+        "object": "氮气;甲烷;一氧化碳",
+        "property_id": "P2067"
+      }
+    ],
+    "narratives": [
+      {
+        "section": "分类",
+        "content": "冥王星 fixture 记录其属于柯伊伯带，并保留克莱德·汤博作为发现者。",
+        "keywords": [
+          "冥王星",
+          "柯伊伯带",
+          "发现者"
+        ]
+      }
+    ]
+  },
+  "fixture_source": "solar_system_fixture.json"
+}

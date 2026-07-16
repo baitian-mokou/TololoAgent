@@ -1,0 +1,23 @@
+[
+  {
+    "section": "任务",
+    "content": "ESA - The surprising comet Science & Exploration The surprising comet 26/09/2016 15894 views 57 likes ESA / Science & Exploration / Space Science / Rosetta As Rosetta began homing in on Comet 67P/Churyumov–Gerasimenko in the weeks leading up to its arrival in August 2014, it became very clear that this was no ordinary comet. But its striking shape was only just the beginning of the comet’s surprises. After more than two years spent living with the comet, Rosetta scientists reflect on some of the mission’s unexpected discoveries, the mysteries solved and the new questions raised. “Rosetta has completely changed our picture of comets,” says Eberhard Grün, an interdisciplinary scientist working on the Rosetta mission at the Max Planck Institute for Nuclear Physics in Heidelberg, Germany. “Pre",
+    "keywords": [
+      "ESA - The surprising comet",
+      "ESA",
+      "太阳系任务",
+      "彗星",
+      "月球"
+    ],
+    "page_title": "ESA - The surprising comet",
+    "path": "任务",
+    "chunk_index": 0,
+    "source": "esa",
+    "source_name": "esa",
+    "source_role": "primary",
+    "source_title": "ESA - The surprising comet",
+    "origin": "html_fallback",
+    "schema_version": "esa_shadow_ready_v1",
+    "type": "embedding_chunk"
+  }
+]

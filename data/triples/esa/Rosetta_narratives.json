@@ -1,0 +1,20 @@
+[
+  {
+    "page_title": "Rosetta",
+    "section": "任务",
+    "content": "ESA fixture 将 Rosetta 记录为由 ESA 运营、以彗星为主要任务目标的代表性深空任务。",
+    "keywords": [
+      "ESA",
+      "Rosetta",
+      "彗星",
+      "任务"
+    ],
+    "source": "esa",
+    "source_name": "esa",
+    "source_role": "primary",
+    "origin": "api",
+    "type": "embedding_chunk",
+    "schema_version": "esa_shadow_ready_v1",
+    "source_title": "Rosetta"
+  }
+]

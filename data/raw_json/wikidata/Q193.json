@@ -1,0 +1,50 @@
+{
+  "record": {
+    "title": "土星",
+    "qid": "Q193",
+    "triples": [
+      {
+        "relation": "ORBITS",
+        "object": "太阳",
+        "property_id": "P397"
+      },
+      {
+        "relation": "PART_OF",
+        "object": "太阳系",
+        "property_id": "P361"
+      },
+      {
+        "relation": "LOCATED_IN",
+        "object": "太阳系",
+        "property_id": "P276"
+      },
+      {
+        "relation": "HAS_MASS",
+        "object": "5.6834e26 kg",
+        "property_id": "P2067"
+      },
+      {
+        "relation": "HAS_RADIUS",
+        "object": "58232 km",
+        "property_id": "P2120"
+      },
+      {
+        "relation": "HAS_ATMOSPHERE",
+        "object": "氢;氦;甲烷",
+        "property_id": "P2067"
+      }
+    ],
+    "narratives": [
+      {
+        "section": "大气",
+        "content": "土星 fixture 中的大气成分以氢和氦为主，也保留质量和半径数值。",
+        "keywords": [
+          "土星",
+          "大气",
+          "质量"
+        ]
+      }
+    ]
+  },
+  "fixture_source": "solar_system_fixture.json"
+}

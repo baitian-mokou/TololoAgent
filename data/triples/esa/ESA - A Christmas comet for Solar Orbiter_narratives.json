@@ -1,0 +1,23 @@
+[
+  {
+    "section": "任务",
+    "content": "ESA - A Christmas comet for Solar Orbiter Science & Exploration A Christmas comet for Solar Orbiter 21/12/2021 12723 views 136 likes ESA / Science & Exploration / Space Science / Solar Orbiter Comet Leonard, a mass of space dust, rock and ice about a kilometre across is heading for a close pass of the Sun on 3 January, and the ESA/NASA Solar Orbiter spacecraft has been watching its evolution over the last days. The Solar Orbiter Heliospheric Imager (SoloHI) captured an animated sequence of images 17-19 December that shows comet Leonard streaking diagonally across the field of view with the Milky Way as a stunning backdrop. Venus and Mercury are also visible in the top right, Venus appearing brighter and moving from left to right. The comet is currently on its inbound journey around the Sun",
+    "keywords": [
+      "ESA - A Christmas comet for Solar Orbiter",
+      "ESA",
+      "太阳系任务",
+      "太阳",
+      "水星",
+      "金星",
+      "彗星"
+    ],
+    "page_title": "ESA - A Christmas comet for Solar Orbiter",
+    "source": "esa",
+    "source_name": "esa",
+    "source_role": "primary",
+    "origin": "api",
+    "type": "embedding_chunk",
+    "schema_version": "esa_shadow_ready_v1",
+    "source_title": "ESA - A Christmas comet for Solar Orbiter"
+  }
+]

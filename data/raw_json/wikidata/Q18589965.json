@@ -1,0 +1,358 @@
+{
+  "entities": {
+    "Q18589965": {
+      "type": "item",
+      "id": "Q18589965",
+      "labels": {
+        "zh": {
+          "language": "zh",
+          "value": "地月系"
+        },
+        "zh-hans": {
+          "language": "zh-hans",
+          "value": "地月系"
+        },
+        "en": {
+          "language": "en",
+          "value": "Earth-Moon system"
+        }
+      },
+      "claims": {
+        "P527": [
+          {
+            "mainsnak": {
+              "snaktype": "value",
+              "property": "P527",
+              "hash": "a8304939585afc2c81696246ccc3acc02cecc73a",
+              "datavalue": {
+                "value": {
+                  "entity-type": "item",
+                  "numeric-id": 2,
+                  "id": "Q2"
+                },
+                "type": "wikibase-entityid"
+              },
+              "datatype": "wikibase-item"
+            },
+            "type": "statement",
+            "id": "Q18589965$4D6B21E4-AC28-4B16-9969-DAD3635CA7FB",
+            "rank": "normal"
+          },
+          {
+            "mainsnak": {
+              "snaktype": "value",
+              "property": "P527",
+              "hash": "c5ff51486202c1fe6ebcebb6ef726c47301c54ec",
+              "datavalue": {
+                "value": {
+                  "entity-type": "item",
+                  "numeric-id": 405,
+                  "id": "Q405"
+                },
+                "type": "wikibase-entityid"
+              },
+              "datatype": "wikibase-item"
+            },
+            "type": "statement",
+            "id": "Q18589965$7F5382C7-DA12-479A-9B24-1D3CD74CB6EA",
+            "rank": "normal"
+          }
+        ],
+        "P361": [
+          {
+            "mainsnak": {
+              "snaktype": "value",
+              "property": "P361",
+              "hash": "f9c654bd548c482d9ca5f80d957fdd04cfced068",
+              "datavalue": {
+                "value": {
+                  "entity-type": "item",
+                  "numeric-id": 7879772,
+                  "id": "Q7879772"
+                },
+                "type": "wikibase-entityid"
+              },
+              "datatype": "wikibase-item"
+            },
+            "type": "statement",
+            "id": "Q18589965$9935EC3A-AEF5-4E59-98F5-76F410438CF1",
+            "rank": "normal"
+          }
+        ],
+        "P31": [
+          {
+            "mainsnak": {
+              "snaktype": "value",
+              "property": "P31",
+              "hash": "fd88753928fc266417b7dc13ad385cecc52435a9",
+              "datavalue": {
+                "value": {
+                  "entity-type": "item",
+                  "numeric-id": 15053549,
+                  "id": "Q15053549"
+                },
+                "type": "wikibase-entityid"
+              },
+              "datatype": "wikibase-item"
+            },
+            "type": "statement",
+            "id": "Q18589965$9A36F055-3A27-45DB-9169-DB185B72F327",
+            "rank": "normal"
+          },
+          {
+            "mainsnak": {
+              "snaktype": "value",
+              "property": "P31",
+              "hash": "4643d8d35bab437c618b0bb7d47e3a920670e0b3",
+              "datavalue": {
+                "value": {
+                  "entity-type": "item",
+                  "numeric-id": 29431432,
+                  "id": "Q29431432"
+                },
+                "type": "wikibase-entityid"
+              },
+              "datatype": "wikibase-item"
+            },
+            "type": "statement",
+            "id": "Q18589965$ca9701a1-409d-da8b-f111-b5a87b36b5b9",
+            "rank": "normal"
+          },
+          {
+            "mainsnak": {
+              "snaktype": "value",
+              "property": "P31",
+              "hash": "8154714a1c6ae755c359d0a720d74a14c17fa9a4",
+              "datavalue": {
+                "value": {
+                  "entity-type": "item",
+                  "numeric-id": 669420,
+                  "id": "Q669420"
+                },
+                "type": "wikibase-entityid"
+              },
+              "datatype": "wikibase-item"
+            },
+            "type": "statement",
+            "qualifiers": {
+              "P3680": [
+                {
+                  "snaktype": "value",
+                  "property": "P3680",
+                  "hash": "bcb9a3ff1476fded3532902a5c91b77294c7ee54",
+                  "datavalue": {
+                    "value": {
+                      "entity-type": "item",
+                      "numeric-id": 34981,
+                      "id": "Q34981"
+                    },
+                    "type": "wikibase-entityid"
+                  },
+                  "datatype": "wikibase-item"
+                }
+              ]
+            },
+            "qualifiers-order": [
+              "P3680"
+            ],
+            "id": "Q18589965$5ac47c85-4e33-b930-1554-6356ac1c06f8",
+            "rank": "normal"
+          }
+        ],
+        "P276": [
+          {
+            "mainsnak": {
+              "snaktype": "value",
+              "property": "P276",
+              "hash": "4ae269dd492746cce0c2242de95e9b31180f75a6",
+              "datavalue": {
+                "value": {
+                  "entity-type": "item",
+                  "numeric-id": 7879772,
+                  "id": "Q7879772"
+                },
+                "type": "wikibase-entityid"
+              },
+              "datatype": "wikibase-item"
+            },
+            "type": "statement",
+            "id": "Q18589965$e660c9fd-490b-4457-9309-0fd59a94333a",
+            "rank": "normal"
+          }
+        ],
+        "P1417": [
+          {
+            "mainsnak": {
+              "snaktype": "value",
+              "property": "P1417",
+              "hash": "0d3073e4ff2c6b0f0113846815d6ea43d00db041",
+              "datavalue": {
+                "value": "topic/Earth-Moon-system",
+                "type": "string"
+              },
+              "datatype": "external-id"
+            },
+            "type": "statement",
+            "qualifiers": {
+              "P1810": [
+                {
+                  "snaktype": "value",
+                  "property": "P1810",
+                  "hash": "efd73f326a3f6fd57b405411942c7fb0ccf83424",
+                  "datavalue": {
+                    "value": "Earth-Moon system",
+                    "type": "string"
+                  },
+                  "datatype": "string"
+                }
+              ]
+            },
+            "qualifiers-order": [
+              "P1810"
+            ],
+            "id": "Q18589965$0A997A52-B43A-4621-AE2B-8CA4A9F213D9",
+            "rank": "normal"
+          }
+        ],
+        "P4466": [
+          {
+            "mainsnak": {
+              "snaktype": "value",
+              "property": "P4466",
+              "hash": "c9e44b41503b64ff05ef981f4aacd4c340871db0",
+              "datavalue": {
+                "value": "436",
+                "type": "string"
+              },
+              "datatype": "external-id"
+            },
+            "type": "statement",
+            "id": "Q18589965$8FECBC58-6BC8-4C7B-8921-5D64B6FFC134",
+            "rank": "normal"
+          }
+        ],
+        "P2671": [
+          {
+            "mainsnak": {
+              "snaktype": "value",
+              "property": "P2671",
+              "hash": "a26f0a53a0ea3b85fcd795f01c9234a2ea9617b6",
+              "datavalue": {
+                "value": "/g/11b6hm5rt0",
+                "type": "string"
+              },
+              "datatype": "external-id"
+            },
+            "type": "statement",
+            "id": "Q18589965$786532C1-18C5-403C-923C-7F4738076C78",
+            "rank": "normal"
+          }
+        ],
+        "P443": [
+          {
+            "mainsnak": {
+              "snaktype": "value",
+              "property": "P443",
+              "hash": "bc63873557fa10c89bf928b3994b6353d509ac29",
+              "datavalue": {
+                "value": "LL-Q9027 (swe)-Moonhouse-systemet Jorden–Månen.wav",
+                "type": "string"
+              },
+              "datatype": "commonsMedia"
+            },
+            "type": "statement",
+            "qualifiers": {
+              "P407": [
+                {
+                  "snaktype": "value",
+                  "property": "P407",
+                  "hash": "e41efcf0acaa18ea8fca63b87e2e0c24618f5664",
+                  "datavalue": {
+                    "value": {
+                      "entity-type": "item",
+                      "numeric-id": 9027,
+                      "id": "Q9027"
+                    },
+                    "type": "wikibase-entityid"
+                  },
+                  "datatype": "wikibase-item"
+                }
+              ]
+            },
+            "qualifiers-order": [
+              "P407"
+            ],
+            "id": "Q18589965$1f0baee1-f297-4697-86b1-fb89cf3198fd",
+            "rank": "normal",
+            "references": [
+              {
+                "hash": "68e4c0b7f329ed4b1eef948dfb015cdb620edbd7",
+                "snaks": {
+                  "P854": [
+                    {
+                      "snaktype": "value",
+                      "property": "P854",
+                      "hash": "fd84f3c985b1e0d6e0fc57ed5cf93d25feb03c71",
+                      "datavalue": {
+                        "value": "https://lingualibre.org/wiki/Q586698",
+                        "type": "string"
+                      },
+                      "datatype": "url"
+                    }
+                  ]
+                },
+                "snaks-order": [
+                  "P854"
+                ]
+              }
+            ]
+          }
+        ],
+        "P373": [
+          {
+            "mainsnak": {
+              "snaktype": "value",
+              "property": "P373",
+              "hash": "6f02a70f0dbbe44a6ce19955165b8f6242b3fedd",
+              "datavalue": {
+                "value": "Earth-Moon system",
+                "type": "string"
+              },
+              "datatype": "string"
+            },
+            "type": "statement",
+            "id": "Q18589965$05665361-09af-42c6-8d5f-87daafd0c894",
+            "rank": "normal"
+          }
+        ],
+        "P2670": [
+          {
+            "mainsnak": {
+              "snaktype": "value",
+              "property": "P2670",
+              "hash": "80a7939a106e9efe39ad5af824d7b33eb5fe983c",
+              "datavalue": {
+                "value": {
+                  "entity-type": "item",
+                  "numeric-id": 15053549,
+                  "id": "Q15053549"
+                },
+                "type": "wikibase-entityid"
+              },
+              "datatype": "wikibase-item"
+            },
+            "type": "statement",
+            "id": "Q18589965$41295A04-2905-4C50-B334-BB90C0E99390",
+            "rank": "normal"
+          }
+        ]
+      }
+    }
+  },
+  "success": 1,
+  "preview_target": {
+    "entity": "Q18589965",
+    "qid": "Q18589965"
+  },
+  "fetched_at": "2026-06-28T15:30:01.868039+00:00"
+}

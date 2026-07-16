@@ -1,0 +1,240 @@
+{
+  "generated_at": "2026-06-28T05:21:28.752015+00:00",
+  "dry_run": false,
+  "apply": true,
+  "apply_metadata_only": false,
+  "allow_value_change": true,
+  "apply_value_changes": true,
+  "deduplicate_value_change": true,
+  "backup_dir": "F:\\知识表示与处理结课作业\\第二次托洛洛测试 -重大进展\\data\\backups\\quality_review\\20260628_132128",
+  "rollback_manifest": {
+    "created_at": "2026-06-28T05:21:28.750423+00:00",
+    "backup_dir": "F:\\知识表示与处理结课作业\\第二次托洛洛测试 -重大进展\\data\\backups\\quality_review\\20260628_132128",
+    "entries": [
+      {
+        "original_path": "F:\\知识表示与处理结课作业\\第二次托洛洛测试 -重大进展\\data\\triples\\天王星_triples.json",
+        "backup_path": "F:\\知识表示与处理结课作业\\第二次托洛洛测试 -重大进展\\data\\backups\\quality_review\\20260628_132128\\天王星_triples.json",
+        "original_sha256": "8897cd2dbee44310fc4ba1587ddad1262dee394cde0a4c35627aad88b32584ea",
+        "patch_ids": [
+          "source_conflict_v4_002"
+        ],
+        "restore_instruction": "Copy backup_path back to original_path to roll back this file."
+      }
+    ],
+    "chroma_written": false,
+    "neo4j_written": false,
+    "path": "F:\\知识表示与处理结课作业\\第二次托洛洛测试 -重大进展\\data\\backups\\quality_review\\20260628_132128\\rollback_manifest.json"
+  },
+  "decisions_path": "F:\\知识表示与处理结课作业\\第二次托洛洛测试 -重大进展\\data\\quality_review\\quality_review_decisions.json",
+  "queue_path": "F:\\知识表示与处理结课作业\\第二次托洛洛测试 -重大进展\\data\\quality_review\\quality_review_queue.json",
+  "approved_count": 1,
+  "applied_count": 1,
+  "skipped_count": 7,
+  "apply_plan": [
+    {
+      "review_id": "qr_source_conflict_v4_002",
+      "patch_id": "source_conflict_v4_002",
+      "change_type": "revision_value_change",
+      "original_change_type": "metadata_only",
+      "risk_level": "low",
+      "target_file": "F:\\知识表示与处理结课作业\\第二次托洛洛测试 -重大进展\\data\\triples\\天王星_triples.json",
+      "current_value": [
+        "4km",
+        "20km"
+      ],
+      "proposed_value": "25362 km",
+      "revision_status": "validated",
+      "user_proposed_value": "25362",
+      "requires_explicit_value_change": true,
+      "matched_records": [
+        {
+          "index": 0,
+          "subject": "天王星",
+          "relation": "HAS_RADIUS",
+          "object": "4km"
+        },
+        {
+          "index": 1,
+          "subject": "天王星",
+          "relation": "HAS_RADIUS",
+          "object": "20km"
+        }
+      ],
+      "matched_record_count": 2,
+      "changed_records": [
+        {
+          "index": 0,
+          "before": {
+            "subject": "天王星",
+            "relation": "HAS_RADIUS",
+            "object": "4km"
+          },
+          "after": {
+            "subject": "天王星",
+            "relation": "HAS_RADIUS",
+            "object": "25362 km"
+          }
+        },
+        {
+          "index": 1,
+          "before": {
+            "subject": "天王星",
+            "relation": "HAS_RADIUS",
+            "object": "20km"
+          },
+          "after": {
+            "subject": "天王星",
+            "relation": "HAS_RADIUS",
+            "object": "25362 km"
+          }
+        },
+        {
+          "index": 1,
+          "before": {
+            "subject": "天王星",
+            "relation": "HAS_RADIUS",
+            "object": "20km"
+          },
+          "after": null
+        }
+      ],
+      "dedup_enabled": true,
+      "deduplicated_records": [
+        {
+          "index": 1,
+          "subject": "天王星",
+          "relation": "HAS_RADIUS",
+          "removed_object": "20km",
+          "kept_index": 0,
+          "kept_object": "25362 km"
+        }
+      ],
+      "status": "applied",
+      "blocked_by_default": false,
+      "would_create_duplicate": true,
+      "duplicate_candidate_count": 2,
+      "duplicate_after_value": "25362 km",
+      "duplicate_policy": "block_apply_until_dedup_decision",
+      "recommended_next_action": "require_human_dedup_decision"
+    }
+  ],
+  "revision_proposals": [
+    {
+      "review_id": "qr_source_conflict_v4_002",
+      "patch_id": "source_conflict_v4_002",
+      "subject": "天王星",
+      "relation": "HAS_RADIUS",
+      "risk_level": "low",
+      "revision_status": "validated",
+      "original_value": [
+        "4km",
+        "20km"
+      ],
+      "system_proposed_value": null,
+      "user_proposed_value": "25362 km",
+      "user_revision_reason": "wikidata: 25362 km",
+      "user_evidence_note": "wikidata: 25362 km，不认为zh_wikipedia: 4km、20km是正确的。",
+      "user_evidence_url": "无",
+      "requires_explicit_value_change": true,
+      "status": "revision_preview_only"
+    }
+  ],
+  "matched_records": [
+    {
+      "index": 0,
+      "subject": "天王星",
+      "relation": "HAS_RADIUS",
+      "object": "4km"
+    },
+    {
+      "index": 1,
+      "subject": "天王星",
+      "relation": "HAS_RADIUS",
+      "object": "20km"
+    }
+  ],
+  "changed_records": [
+    {
+      "index": 0,
+      "before": {
+        "subject": "天王星",
+        "relation": "HAS_RADIUS",
+        "object": "4km"
+      },
+      "after": {
+        "subject": "天王星",
+        "relation": "HAS_RADIUS",
+        "object": "25362 km"
+      }
+    },
+    {
+      "index": 1,
+      "before": {
+        "subject": "天王星",
+        "relation": "HAS_RADIUS",
+        "object": "20km"
+      },
+      "after": {
+        "subject": "天王星",
+        "relation": "HAS_RADIUS",
+        "object": "25362 km"
+      }
+    },
+    {
+      "index": 1,
+      "before": {
+        "subject": "天王星",
+        "relation": "HAS_RADIUS",
+        "object": "20km"
+      },
+      "after": null
+    }
+  ],
+  "deduplicated_records": [
+    {
+      "index": 1,
+      "subject": "天王星",
+      "relation": "HAS_RADIUS",
+      "removed_object": "20km",
+      "kept_index": 0,
+      "kept_object": "25362 km"
+    }
+  ],
+  "skipped_items": [
+    {
+      "patch_id": "source_conflict_v4_001",
+      "human_decision": "pending"
+    },
+    {
+      "patch_id": "source_conflict_v4_003",
+      "human_decision": "approved",
+      "reason": "revision already applied"
+    },
+    {
+      "patch_id": "source_conflict_v4_004",
+      "human_decision": "pending"
+    },
+    {
+      "patch_id": "source_conflict_v4_005",
+      "human_decision": "pending"
+    },
+    {
+      "patch_id": "source_conflict_v4_006",
+      "human_decision": "pending"
+    },
+    {
+      "patch_id": "source_conflict_v4_007",
+      "human_decision": "pending"
+    },
+    {
+      "patch_id": "source_conflict_v4_008",
+      "human_decision": "pending"
+    }
+  ],
+  "formal_values_changed": true,
+  "patches_applied": 1,
+  "formal_data_written": true,
+  "chroma_written": false,
+  "neo4j_written": false,
+  "errors": []
+}

@@ -1,0 +1,50 @@
+{
+  "record": {
+    "title": "谷神星",
+    "qid": "Q596",
+    "triples": [
+      {
+        "relation": "ORBITS",
+        "object": "太阳",
+        "property_id": "P397"
+      },
+      {
+        "relation": "PART_OF",
+        "object": "小行星带",
+        "property_id": "P361"
+      },
+      {
+        "relation": "LOCATED_IN",
+        "object": "小行星带",
+        "property_id": "P276"
+      },
+      {
+        "relation": "DISCOVERED_BY",
+        "object": "朱塞普·皮亚齐",
+        "property_id": "P61"
+      },
+      {
+        "relation": "HAS_MASS",
+        "object": "9.3835e20 kg",
+        "property_id": "P2067"
+      },
+      {
+        "relation": "HAS_RADIUS",
+        "object": "469.7 km",
+        "property_id": "P2120"
+      }
+    ],
+    "narratives": [
+      {
+        "section": "发现",
+        "content": "谷神星 fixture 记录其位于小行星带，发现者为朱塞普·皮亚齐。",
+        "keywords": [
+          "谷神星",
+          "小行星带",
+          "发现者"
+        ]
+      }
+    ]
+  },
+  "fixture_source": "solar_system_fixture.json"
+}

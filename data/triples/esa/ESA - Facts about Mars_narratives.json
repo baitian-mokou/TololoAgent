@@ -1,0 +1,21 @@
+[
+  {
+    "section": "任务",
+    "content": "ESA - Facts about Mars Science & Exploration Facts about Mars 28220 views 136 likes ESA / Science & Exploration / Space Science / Mars Express Quick-look facts about the Red Planet Diameter: 6794 km (about half the diameter of Earth) Surface area: 145 million sq km (about the same as Earth’s land area) Gravity: 3.711 m/s 2 (about one third of Earth’s gravity) Density: 3.93 g/cm 3 (Earth: 5.51 g/cm 3 ) Average distance from the Sun: 227 940 000 km (1.52 times that of Earth) Martian day (a ‘sol’): 24 hours 37 minutes Martian year: 669 sols or 687 Earth days Average temperature: –55ºC (from –133ºC at the winter pole to +27ºC during summer) Atmosphere: 95.32% carbon dioxide, 2.7% nitrogen, 1.6% argon, 0.13% oxygen Atmospheric pressure at the surface: 6.35 mbar (less than one hundredth of Earth",
+    "keywords": [
+      "ESA - Facts about Mars",
+      "ESA",
+      "太阳系任务",
+      "火星",
+      "月球"
+    ],
+    "page_title": "ESA - Facts about Mars",
+    "source": "esa",
+    "source_name": "esa",
+    "source_role": "primary",
+    "origin": "api",
+    "type": "embedding_chunk",
+    "schema_version": "esa_shadow_ready_v1",
+    "source_title": "ESA - Facts about Mars"
+  }
+]

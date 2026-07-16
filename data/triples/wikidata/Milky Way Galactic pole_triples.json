@@ -1,0 +1,56 @@
+[
+  {
+    "relation": "PART_OF",
+    "object": "Q321",
+    "property_id": "P361",
+    "source_record_id": "Q98840910:P361:Q98840910$9e1a3cd0-442f-f6ec-8b53-695d3ed44afa",
+    "source_url": "https://www.wikidata.org/wiki/Q98840910",
+    "source_license": "CC0-1.0",
+    "license_hint": "CC0-1.0",
+    "fetched_at": "2026-06-28T15:30:12.846701+00:00",
+    "raw_value": {
+      "entity-type": "item",
+      "numeric-id": 321,
+      "id": "Q321"
+    },
+    "normalized_value": "Q321",
+    "unit": "",
+    "confidence": 0.85,
+    "subject": "Milky Way Galactic pole",
+    "source": "wikidata",
+    "source_name": "wikidata",
+    "source_role": "primary",
+    "source_title": "Milky Way Galactic pole",
+    "origin": "api",
+    "schema_version": "wikidata_shadow_ready_v1",
+    "type": "triple_candidate",
+    "raw": ""
+  },
+  {
+    "relation": "PART_OF",
+    "object": "Q385487",
+    "property_id": "P361",
+    "source_record_id": "Q98840910:P361:Q98840910$cec7c22c-4272-7aad-67d5-02a6eef8c5a1",
+    "source_url": "https://www.wikidata.org/wiki/Q98840910",
+    "source_license": "CC0-1.0",
+    "license_hint": "CC0-1.0",
+    "fetched_at": "2026-06-28T15:30:12.846701+00:00",
+    "raw_value": {
+      "entity-type": "item",
+      "numeric-id": 385487,
+      "id": "Q385487"
+    },
+    "normalized_value": "Q385487",
+    "unit": "",
+    "confidence": 0.85,
+    "subject": "Milky Way Galactic pole",
+    "source": "wikidata",
+    "source_name": "wikidata",
+    "source_role": "primary",
+    "source_title": "Milky Way Galactic pole",
+    "origin": "api",
+    "schema_version": "wikidata_shadow_ready_v1",
+    "type": "triple_candidate",
+    "raw": ""
+  }
+]

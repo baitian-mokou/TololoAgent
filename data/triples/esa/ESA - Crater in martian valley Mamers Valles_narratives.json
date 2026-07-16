@@ -1,0 +1,20 @@
+[
+  {
+    "section": "任务",
+    "content": "ESA - Crater in martian valley Mamers Valles Science & Exploration Crater in martian valley Mamers Valles 16/05/2008 3072 views 5 likes ESA / Science & Exploration / Space Science / Mars Express The High-Resolution Stereo Camera (HRSC) onboard the ESA spacecraft Mars Express obtained images of a region at the end of Mamers Valles, a long, winding valley. The focus is on a circular depression that contains a crater. Mamers Valles context map The data was obtained on 5 August 2006 with a ground resolution of approximately 14 m/pixel. The images are centred at approximately 39° north and 17° east on the planet. Mamers Valles perspective view The circular depression seen in the images is approximately 30 km wide and 1400 m deep. It lies at the south-eastern end of Mamers Valles. Mamers Valles",
+    "keywords": [
+      "ESA - Crater in martian valley Mamers Valles",
+      "ESA",
+      "太阳系任务",
+      "火星"
+    ],
+    "page_title": "ESA - Crater in martian valley Mamers Valles",
+    "source": "esa",
+    "source_name": "esa",
+    "source_role": "primary",
+    "origin": "api",
+    "type": "embedding_chunk",
+    "schema_version": "esa_shadow_ready_v1",
+    "source_title": "ESA - Crater in martian valley Mamers Valles"
+  }
+]
