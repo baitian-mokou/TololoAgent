@@ -1,0 +1,452 @@
+{
+  "phase": "Phase 86",
+  "mode": "nasa_metadata_repair_preview",
+  "generated_at": "2026-07-22T16:03:02.292513+00:00",
+  "root_cause": "Phase82 NASA preview rows had URL/text but blank title/id, so Phase83 rejected them as missing_source_metadata.",
+  "repair_rules": [
+    "only Phase82 NASA fetched rows",
+    "no live fetch",
+    "derive title from existing title or text_excerpt heading",
+    "require URL and title",
+    "rerun Phase83 normalize gate"
+  ],
+  "phase82_nasa_succeeded": 16,
+  "phase83_nasa_rejected": 16,
+  "nasa_succeeded_phase82": 16,
+  "repaired_count": 16,
+  "passed_normalize_gate": 16,
+  "remaining_failures": 0,
+  "repaired_candidates": [
+    {
+      "source": "nasa",
+      "source_id": "nasa",
+      "title": "NASA Space Science Data Coordinated Archive Status",
+      "id": "NASA Space Science Data Coordinated Archive Status",
+      "url": "https://nssdc.gsfc.nasa.gov/planetary/factsheet",
+      "source_url": "https://nssdc.gsfc.nasa.gov/planetary/factsheet",
+      "entity_id": "",
+      "schema_version": "phase86_nasa_metadata_repair_preview_v1",
+      "repair_reason": "phase82_succeeded_missing_title_metadata",
+      "reason": "phase81_review_needed_official",
+      "fetched": true,
+      "status": "metadata_repaired_preview",
+      "text_excerpt": "NASA Space Science Data Coordinated Archive Status - NASA Explore Search News & Events News & Events News Releases Recently Published Video Series on NASA+ Podcasts & Audio Blogs Newsletters Social Media Media Resources Events Upcoming Launches & Landings Virtual Guest Program Multimedia Multimedia NASA+ Images NASA Live NASA Apps Podcasts Image of the Day e-Books 3D Resources Interactives STEM Multimedia NASA Brand & Usage Guidelines NASA+ Search Suggested Searches Climate Change Artemis Expedition 64 Mars perseverance SpaceX Crew-2 International Space Station View All Topics A-Z Home Missions Humans in Space Earth The Solar System The Universe Science Aeronautics Technology Learning Resources About NASA Español News & Events Multimedia NASA+ Featured 2 min read NASA-Funded Study Shows How Controlled Burns Help Sequoias Survive Wildfires article 2 days ago 5 min read NASA Study Finds Ne",
+      "quality_flags": {
+        "allowlisted": true,
+        "has_excerpt": true,
+        "evaluation_only": true,
+        "metadata_repaired": true
+      },
+      "provenance": {
+        "phase82_status": "http_200",
+        "phase82_url": "https://nssdc.gsfc.nasa.gov/planetary/factsheet",
+        "phase86_rule": "title_from_existing_excerpt_or_existing_title"
+      }
+    },
+    {
+      "source": "nasa",
+      "source_id": "nasa",
+      "title": "Solar System Exploration",
+      "id": "Solar System Exploration",
+      "url": "https://science.nasa.gov/solar-system",
+      "source_url": "https://science.nasa.gov/solar-system",
+      "entity_id": "",
+      "schema_version": "phase86_nasa_metadata_repair_preview_v1",
+      "repair_reason": "phase82_succeeded_missing_title_metadata",
+      "reason": "phase81_review_needed_official",
+      "fetched": true,
+      "status": "metadata_repaired_preview",
+      "text_excerpt": "Solar System Exploration Explore Search News & Events News & Events Recently Published Video Series on NASA+ Podcasts & Audio Blogs Newsletters Social Media Media Resources Multimedia Multimedia NASA+ Images NASA Live NASA Apps Podcasts Image of the Day e-Books 3D Resources Interactives STEM Multimedia NASA Brand & Usage Guidelines NASA+ Search Suggested Searches Climate Change Artemis Expedition 64 Mars perseverance SpaceX Crew-2 International Space Station View All Topics A-Z Home Missions Humans in Space Earth The Solar System The Universe Science Aeronautics Technology Learning Resources About NASA Español News & Events Multimedia NASA+ Highlights 2 min read NASA-Funded Study Shows How Controlled Burns Help Sequoias Survive Wildfires article 2 days ago 5 min read NASA Study Finds Near-Earth Asteroid Is Actually Comet article 6 days ago 3 min read What’s Up: July 2026 Skywatching Tips",
+      "quality_flags": {
+        "allowlisted": true,
+        "has_excerpt": true,
+        "evaluation_only": true,
+        "metadata_repaired": true
+      },
+      "provenance": {
+        "phase82_status": "http_200",
+        "phase82_url": "https://science.nasa.gov/solar-system",
+        "phase86_rule": "title_from_existing_excerpt_or_existing_title"
+      }
+    },
+    {
+      "source": "nasa",
+      "source_id": "nasa",
+      "title": "About the Planets",
+      "id": "About the Planets",
+      "url": "https://science.nasa.gov/solar-system/planets",
+      "source_url": "https://science.nasa.gov/solar-system/planets",
+      "entity_id": "",
+      "schema_version": "phase86_nasa_metadata_repair_preview_v1",
+      "repair_reason": "phase82_succeeded_missing_title_metadata",
+      "reason": "phase81_review_needed_official",
+      "fetched": true,
+      "status": "metadata_repaired_preview",
+      "text_excerpt": "About the Planets Explore Search News & Events News & Events Recently Published Video Series on NASA+ Podcasts & Audio Blogs Newsletters Social Media Media Resources Multimedia Multimedia NASA+ Images NASA Live NASA Apps Podcasts Image of the Day e-Books 3D Resources Interactives STEM Multimedia NASA Brand & Usage Guidelines NASA+ Search Suggested Searches Climate Change Artemis Expedition 64 Mars perseverance SpaceX Crew-2 International Space Station View All Topics A-Z Home Missions Humans in Space Earth The Solar System The Universe Science Aeronautics Technology Learning Resources About NASA Español News & Events Multimedia NASA+ Highlights 2 min read NASA-Funded Study Shows How Controlled Burns Help Sequoias Survive Wildfires article 2 days ago 5 min read NASA Study Finds Near-Earth Asteroid Is Actually Comet article 6 days ago 3 min read What’s Up: July 2026 Skywatching Tips from N",
+      "quality_flags": {
+        "allowlisted": true,
+        "has_excerpt": true,
+        "evaluation_only": true,
+        "metadata_repaired": true
+      },
+      "provenance": {
+        "phase82_status": "http_200",
+        "phase82_url": "https://science.nasa.gov/solar-system/planets",
+        "phase86_rule": "title_from_existing_excerpt_or_existing_title"
+      }
+    },
+    {
+      "source": "nasa",
+      "source_id": "nasa",
+      "title": "Moons",
+      "id": "Moons",
+      "url": "https://science.nasa.gov/solar-system/moons",
+      "source_url": "https://science.nasa.gov/solar-system/moons",
+      "entity_id": "",
+      "schema_version": "phase86_nasa_metadata_repair_preview_v1",
+      "repair_reason": "phase82_succeeded_missing_title_metadata",
+      "reason": "phase81_review_needed_official",
+      "fetched": true,
+      "status": "metadata_repaired_preview",
+      "text_excerpt": "Moons Explore Search News & Events News & Events Recently Published Video Series on NASA+ Podcasts & Audio Blogs Newsletters Social Media Media Resources Multimedia Multimedia NASA+ Images NASA Live NASA Apps Podcasts Image of the Day e-Books 3D Resources Interactives STEM Multimedia NASA Brand & Usage Guidelines NASA+ Search Suggested Searches Climate Change Artemis Expedition 64 Mars perseverance SpaceX Crew-2 International Space Station View All Topics A-Z Home Missions Humans in Space Earth The Solar System The Universe Science Aeronautics Technology Learning Resources About NASA Español News & Events Multimedia NASA+ Highlights 2 min read NASA-Funded Study Shows How Controlled Burns Help Sequoias Survive Wildfires article 2 days ago 5 min read NASA Study Finds Near-Earth Asteroid Is Actually Comet article 6 days ago 3 min read What’s Up: July 2026 Skywatching Tips from NASA article ",
+      "quality_flags": {
+        "allowlisted": true,
+        "has_excerpt": true,
+        "evaluation_only": true,
+        "metadata_repaired": true
+      },
+      "provenance": {
+        "phase82_status": "http_200",
+        "phase82_url": "https://science.nasa.gov/solar-system/moons",
+        "phase86_rule": "title_from_existing_excerpt_or_existing_title"
+      }
+    },
+    {
+      "source": "nasa",
+      "source_id": "nasa",
+      "title": "Asteroids",
+      "id": "Asteroids",
+      "url": "https://science.nasa.gov/solar-system/asteroids",
+      "source_url": "https://science.nasa.gov/solar-system/asteroids",
+      "entity_id": "",
+      "schema_version": "phase86_nasa_metadata_repair_preview_v1",
+      "repair_reason": "phase82_succeeded_missing_title_metadata",
+      "reason": "phase81_review_needed_official",
+      "fetched": true,
+      "status": "metadata_repaired_preview",
+      "text_excerpt": "Asteroids Explore Search News & Events News & Events Recently Published Video Series on NASA+ Podcasts & Audio Blogs Newsletters Social Media Media Resources Multimedia Multimedia NASA+ Images NASA Live NASA Apps Podcasts Image of the Day e-Books 3D Resources Interactives STEM Multimedia NASA Brand & Usage Guidelines NASA+ Search Suggested Searches Climate Change Artemis Expedition 64 Mars perseverance SpaceX Crew-2 International Space Station View All Topics A-Z Home Missions Humans in Space Earth The Solar System The Universe Science Aeronautics Technology Learning Resources About NASA Español News & Events Multimedia NASA+ Highlights 2 min read NASA-Funded Study Shows How Controlled Burns Help Sequoias Survive Wildfires article 2 days ago 5 min read NASA Study Finds Near-Earth Asteroid Is Actually Comet article 6 days ago 3 min read What’s Up: July 2026 Skywatching Tips from NASA arti",
+      "quality_flags": {
+        "allowlisted": true,
+        "has_excerpt": true,
+        "evaluation_only": true,
+        "metadata_repaired": true
+      },
+      "provenance": {
+        "phase82_status": "http_200",
+        "phase82_url": "https://science.nasa.gov/solar-system/asteroids",
+        "phase86_rule": "title_from_existing_excerpt_or_existing_title"
+      }
+    },
+    {
+      "source": "nasa",
+      "source_id": "nasa",
+      "title": "Comets",
+      "id": "Comets",
+      "url": "https://science.nasa.gov/solar-system/comets",
+      "source_url": "https://science.nasa.gov/solar-system/comets",
+      "entity_id": "",
+      "schema_version": "phase86_nasa_metadata_repair_preview_v1",
+      "repair_reason": "phase82_succeeded_missing_title_metadata",
+      "reason": "phase81_review_needed_official",
+      "fetched": true,
+      "status": "metadata_repaired_preview",
+      "text_excerpt": "Comets Explore Search News & Events News & Events Recently Published Video Series on NASA+ Podcasts & Audio Blogs Newsletters Social Media Media Resources Multimedia Multimedia NASA+ Images NASA Live NASA Apps Podcasts Image of the Day e-Books 3D Resources Interactives STEM Multimedia NASA Brand & Usage Guidelines NASA+ Search Suggested Searches Climate Change Artemis Expedition 64 Mars perseverance SpaceX Crew-2 International Space Station View All Topics A-Z Home Missions Humans in Space Earth The Solar System The Universe Science Aeronautics Technology Learning Resources About NASA Español News & Events Multimedia NASA+ Highlights 2 min read NASA-Funded Study Shows How Controlled Burns Help Sequoias Survive Wildfires article 2 days ago 5 min read NASA Study Finds Near-Earth Asteroid Is Actually Comet article 6 days ago 3 min read What’s Up: July 2026 Skywatching Tips from NASA article",
+      "quality_flags": {
+        "allowlisted": true,
+        "has_excerpt": true,
+        "evaluation_only": true,
+        "metadata_repaired": true
+      },
+      "provenance": {
+        "phase82_status": "http_200",
+        "phase82_url": "https://science.nasa.gov/solar-system/comets",
+        "phase86_rule": "title_from_existing_excerpt_or_existing_title"
+      }
+    },
+    {
+      "source": "nasa",
+      "source_id": "nasa",
+      "title": "Science Missions",
+      "id": "Science Missions",
+      "url": "https://science.nasa.gov/mission",
+      "source_url": "https://science.nasa.gov/mission",
+      "entity_id": "",
+      "schema_version": "phase86_nasa_metadata_repair_preview_v1",
+      "repair_reason": "phase82_succeeded_missing_title_metadata",
+      "reason": "phase81_review_needed_official",
+      "fetched": true,
+      "status": "metadata_repaired_preview",
+      "text_excerpt": "Science Missions - NASA Science Explore Search News & Events News & Events Recently Published Video Series on NASA+ Podcasts & Audio Blogs Newsletters Social Media Media Resources Multimedia Multimedia NASA+ Images NASA Live NASA Apps Podcasts Image of the Day e-Books 3D Resources Interactives STEM Multimedia NASA Brand & Usage Guidelines NASA+ Search Suggested Searches Climate Change Artemis Expedition 64 Mars perseverance SpaceX Crew-2 International Space Station View All Topics A-Z Home Missions Humans in Space Earth The Solar System The Universe Science Aeronautics Technology Learning Resources About NASA Español News & Events Multimedia NASA+ Highlights 2 min read NASA-Funded Study Shows How Controlled Burns Help Sequoias Survive Wildfires article 2 days ago 5 min read NASA Study Finds Near-Earth Asteroid Is Actually Comet article 6 days ago 3 min read What’s Up: July 2026 Skywatchi",
+      "quality_flags": {
+        "allowlisted": true,
+        "has_excerpt": true,
+        "evaluation_only": true,
+        "metadata_repaired": true
+      },
+      "provenance": {
+        "phase82_status": "http_200",
+        "phase82_url": "https://science.nasa.gov/mission",
+        "phase86_rule": "title_from_existing_excerpt_or_existing_title"
+      }
+    },
+    {
+      "source": "nasa",
+      "source_id": "nasa",
+      "title": "Juno",
+      "id": "Juno",
+      "url": "https://science.nasa.gov/mission/juno",
+      "source_url": "https://science.nasa.gov/mission/juno",
+      "entity_id": "",
+      "schema_version": "phase86_nasa_metadata_repair_preview_v1",
+      "repair_reason": "phase82_succeeded_missing_title_metadata",
+      "reason": "phase81_review_needed_official",
+      "fetched": true,
+      "status": "metadata_repaired_preview",
+      "text_excerpt": "Juno - NASA Science Explore Search News & Events News & Events Recently Published Video Series on NASA+ Podcasts & Audio Blogs Newsletters Social Media Media Resources Multimedia Multimedia NASA+ Images NASA Live NASA Apps Podcasts Image of the Day e-Books 3D Resources Interactives STEM Multimedia NASA Brand & Usage Guidelines NASA+ Search Suggested Searches Climate Change Artemis Expedition 64 Mars perseverance SpaceX Crew-2 International Space Station View All Topics A-Z Home Missions Humans in Space Earth The Solar System The Universe Science Aeronautics Technology Learning Resources About NASA Español News & Events Multimedia NASA+ Highlights 2 min read NASA-Funded Study Shows How Controlled Burns Help Sequoias Survive Wildfires article 2 days ago 5 min read NASA Study Finds Near-Earth Asteroid Is Actually Comet article 6 days ago 3 min read What’s Up: July 2026 Skywatching Tips from",
+      "quality_flags": {
+        "allowlisted": true,
+        "has_excerpt": true,
+        "evaluation_only": true,
+        "metadata_repaired": true
+      },
+      "provenance": {
+        "phase82_status": "http_200",
+        "phase82_url": "https://science.nasa.gov/mission/juno",
+        "phase86_rule": "title_from_existing_excerpt_or_existing_title"
+      }
+    },
+    {
+      "source": "nasa",
+      "source_id": "nasa",
+      "title": "Cassini-Huygens",
+      "id": "Cassini-Huygens",
+      "url": "https://science.nasa.gov/mission/cassini",
+      "source_url": "https://science.nasa.gov/mission/cassini",
+      "entity_id": "",
+      "schema_version": "phase86_nasa_metadata_repair_preview_v1",
+      "repair_reason": "phase82_succeeded_missing_title_metadata",
+      "reason": "phase81_review_needed_official",
+      "fetched": true,
+      "status": "metadata_repaired_preview",
+      "text_excerpt": "Cassini-Huygens - NASA Science Explore Search News & Events News & Events Recently Published Video Series on NASA+ Podcasts & Audio Blogs Newsletters Social Media Media Resources Multimedia Multimedia NASA+ Images NASA Live NASA Apps Podcasts Image of the Day e-Books 3D Resources Interactives STEM Multimedia NASA Brand & Usage Guidelines NASA+ Search Suggested Searches Climate Change Artemis Expedition 64 Mars perseverance SpaceX Crew-2 International Space Station View All Topics A-Z Home Missions Humans in Space Earth The Solar System The Universe Science Aeronautics Technology Learning Resources About NASA Español News & Events Multimedia NASA+ Highlights 2 min read NASA-Funded Study Shows How Controlled Burns Help Sequoias Survive Wildfires article 2 days ago 5 min read NASA Study Finds Near-Earth Asteroid Is Actually Comet article 6 days ago 3 min read What’s Up: July 2026 Skywatchin",
+      "quality_flags": {
+        "allowlisted": true,
+        "has_excerpt": true,
+        "evaluation_only": true,
+        "metadata_repaired": true
+      },
+      "provenance": {
+        "phase82_status": "http_200",
+        "phase82_url": "https://science.nasa.gov/mission/cassini",
+        "phase86_rule": "title_from_existing_excerpt_or_existing_title"
+      }
+    },
+    {
+      "source": "nasa",
+      "source_id": "nasa",
+      "title": "Voyager",
+      "id": "Voyager",
+      "url": "https://science.nasa.gov/mission/voyager",
+      "source_url": "https://science.nasa.gov/mission/voyager",
+      "entity_id": "",
+      "schema_version": "phase86_nasa_metadata_repair_preview_v1",
+      "repair_reason": "phase82_succeeded_missing_title_metadata",
+      "reason": "phase81_review_needed_official",
+      "fetched": true,
+      "status": "metadata_repaired_preview",
+      "text_excerpt": "Voyager - NASA Science Explore Search News & Events News & Events Recently Published Video Series on NASA+ Podcasts & Audio Blogs Newsletters Social Media Media Resources Multimedia Multimedia NASA+ Images NASA Live NASA Apps Podcasts Image of the Day e-Books 3D Resources Interactives STEM Multimedia NASA Brand & Usage Guidelines NASA+ Search Suggested Searches Climate Change Artemis Expedition 64 Mars perseverance SpaceX Crew-2 International Space Station View All Topics A-Z Home Missions Humans in Space Earth The Solar System The Universe Science Aeronautics Technology Learning Resources About NASA Español News & Events Multimedia NASA+ Highlights 2 min read NASA-Funded Study Shows How Controlled Burns Help Sequoias Survive Wildfires article 2 days ago 5 min read NASA Study Finds Near-Earth Asteroid Is Actually Comet article 6 days ago 3 min read What’s Up: July 2026 Skywatching Tips f",
+      "quality_flags": {
+        "allowlisted": true,
+        "has_excerpt": true,
+        "evaluation_only": true,
+        "metadata_repaired": true
+      },
+      "provenance": {
+        "phase82_status": "http_200",
+        "phase82_url": "https://science.nasa.gov/mission/voyager",
+        "phase86_rule": "title_from_existing_excerpt_or_existing_title"
+      }
+    },
+    {
+      "source": "nasa",
+      "source_id": "nasa",
+      "title": "New Horizons",
+      "id": "New Horizons",
+      "url": "https://science.nasa.gov/mission/new-horizons",
+      "source_url": "https://science.nasa.gov/mission/new-horizons",
+      "entity_id": "",
+      "schema_version": "phase86_nasa_metadata_repair_preview_v1",
+      "repair_reason": "phase82_succeeded_missing_title_metadata",
+      "reason": "phase81_review_needed_official",
+      "fetched": true,
+      "status": "metadata_repaired_preview",
+      "text_excerpt": "New Horizons Explore Search News & Events News & Events Recently Published Video Series on NASA+ Podcasts & Audio Blogs Newsletters Social Media Media Resources Multimedia Multimedia NASA+ Images NASA Live NASA Apps Podcasts Image of the Day e-Books 3D Resources Interactives STEM Multimedia NASA Brand & Usage Guidelines NASA+ Search Suggested Searches Climate Change Artemis Expedition 64 Mars perseverance SpaceX Crew-2 International Space Station View All Topics A-Z Home Missions Humans in Space Earth The Solar System The Universe Science Aeronautics Technology Learning Resources About NASA Español News & Events Multimedia NASA+ Highlights 2 min read NASA-Funded Study Shows How Controlled Burns Help Sequoias Survive Wildfires article 2 days ago 5 min read NASA Study Finds Near-Earth Asteroid Is Actually Comet article 6 days ago 3 min read What’s Up: July 2026 Skywatching Tips from NASA a",
+      "quality_flags": {
+        "allowlisted": true,
+        "has_excerpt": true,
+        "evaluation_only": true,
+        "metadata_repaired": true
+      },
+      "provenance": {
+        "phase82_status": "http_200",
+        "phase82_url": "https://science.nasa.gov/mission/new-horizons",
+        "phase86_rule": "title_from_existing_excerpt_or_existing_title"
+      }
+    },
+    {
+      "source": "nasa",
+      "source_id": "nasa",
+      "title": "Mars 2020: Perseverance Rover",
+      "id": "Mars 2020: Perseverance Rover",
+      "url": "https://science.nasa.gov/mission/mars-2020-perseverance",
+      "source_url": "https://science.nasa.gov/mission/mars-2020-perseverance",
+      "entity_id": "",
+      "schema_version": "phase86_nasa_metadata_repair_preview_v1",
+      "repair_reason": "phase82_succeeded_missing_title_metadata",
+      "reason": "phase81_review_needed_official",
+      "fetched": true,
+      "status": "metadata_repaired_preview",
+      "text_excerpt": "Mars 2020: Perseverance Rover - NASA Science Explore Search News & Events News & Events Recently Published Video Series on NASA+ Podcasts & Audio Blogs Newsletters Social Media Media Resources Multimedia Multimedia NASA+ Images NASA Live NASA Apps Podcasts Image of the Day e-Books 3D Resources Interactives STEM Multimedia NASA Brand & Usage Guidelines NASA+ Search Suggested Searches Climate Change Artemis Expedition 64 Mars perseverance SpaceX Crew-2 International Space Station View All Topics A-Z Home Missions Humans in Space Earth The Solar System The Universe Science Aeronautics Technology Learning Resources About NASA Español News & Events Multimedia NASA+ Highlights 2 min read NASA-Funded Study Shows How Controlled Burns Help Sequoias Survive Wildfires article 2 days ago 5 min read NASA Study Finds Near-Earth Asteroid Is Actually Comet article 6 days ago 3 min read What’s Up: July 2",
+      "quality_flags": {
+        "allowlisted": true,
+        "has_excerpt": true,
+        "evaluation_only": true,
+        "metadata_repaired": true
+      },
+      "provenance": {
+        "phase82_status": "http_200",
+        "phase82_url": "https://science.nasa.gov/mission/mars-2020-perseverance",
+        "phase86_rule": "title_from_existing_excerpt_or_existing_title"
+      }
+    },
+    {
+      "source": "nasa",
+      "source_id": "nasa",
+      "title": "About the Planets",
+      "id": "About the Planets",
+      "url": "https://solarsystem.nasa.gov/planets/overview",
+      "source_url": "https://solarsystem.nasa.gov/planets/overview",
+      "entity_id": "",
+      "schema_version": "phase86_nasa_metadata_repair_preview_v1",
+      "repair_reason": "phase82_succeeded_missing_title_metadata",
+      "reason": "phase81_review_needed_official",
+      "fetched": true,
+      "status": "metadata_repaired_preview",
+      "text_excerpt": "About the Planets Explore Search News & Events News & Events Recently Published Video Series on NASA+ Podcasts & Audio Blogs Newsletters Social Media Media Resources Multimedia Multimedia NASA+ Images NASA Live NASA Apps Podcasts Image of the Day e-Books 3D Resources Interactives STEM Multimedia NASA Brand & Usage Guidelines NASA+ Search Suggested Searches Climate Change Artemis Expedition 64 Mars perseverance SpaceX Crew-2 International Space Station View All Topics A-Z Home Missions Humans in Space Earth The Solar System The Universe Science Aeronautics Technology Learning Resources About NASA Español News & Events Multimedia NASA+ Highlights 2 min read NASA-Funded Study Shows How Controlled Burns Help Sequoias Survive Wildfires article 2 days ago 5 min read NASA Study Finds Near-Earth Asteroid Is Actually Comet article 6 days ago 3 min read What’s Up: July 2026 Skywatching Tips from N",
+      "quality_flags": {
+        "allowlisted": true,
+        "has_excerpt": true,
+        "evaluation_only": true,
+        "metadata_repaired": true
+      },
+      "provenance": {
+        "phase82_status": "http_200",
+        "phase82_url": "https://solarsystem.nasa.gov/planets/overview",
+        "phase86_rule": "title_from_existing_excerpt_or_existing_title"
+      }
+    },
+    {
+      "source": "nasa",
+      "source_id": "nasa",
+      "title": "Moons",
+      "id": "Moons",
+      "url": "https://solarsystem.nasa.gov/moons/overview",
+      "source_url": "https://solarsystem.nasa.gov/moons/overview",
+      "entity_id": "",
+      "schema_version": "phase86_nasa_metadata_repair_preview_v1",
+      "repair_reason": "phase82_succeeded_missing_title_metadata",
+      "reason": "phase81_review_needed_official",
+      "fetched": true,
+      "status": "metadata_repaired_preview",
+      "text_excerpt": "Moons Explore Search News & Events News & Events Recently Published Video Series on NASA+ Podcasts & Audio Blogs Newsletters Social Media Media Resources Multimedia Multimedia NASA+ Images NASA Live NASA Apps Podcasts Image of the Day e-Books 3D Resources Interactives STEM Multimedia NASA Brand & Usage Guidelines NASA+ Search Suggested Searches Climate Change Artemis Expedition 64 Mars perseverance SpaceX Crew-2 International Space Station View All Topics A-Z Home Missions Humans in Space Earth The Solar System The Universe Science Aeronautics Technology Learning Resources About NASA Español News & Events Multimedia NASA+ Highlights 2 min read NASA-Funded Study Shows How Controlled Burns Help Sequoias Survive Wildfires article 2 days ago 5 min read NASA Study Finds Near-Earth Asteroid Is Actually Comet article 6 days ago 3 min read What’s Up: July 2026 Skywatching Tips from NASA article ",
+      "quality_flags": {
+        "allowlisted": true,
+        "has_excerpt": true,
+        "evaluation_only": true,
+        "metadata_repaired": true
+      },
+      "provenance": {
+        "phase82_status": "http_200",
+        "phase82_url": "https://solarsystem.nasa.gov/moons/overview",
+        "phase86_rule": "title_from_existing_excerpt_or_existing_title"
+      }
+    },
+    {
+      "source": "nasa",
+      "source_id": "nasa",
+      "title": "Asteroids, Comets, and Meteors",
+      "id": "Asteroids, Comets, and Meteors",
+      "url": "https://solarsystem.nasa.gov/asteroids-comets-and-meteors/overview",
+      "source_url": "https://solarsystem.nasa.gov/asteroids-comets-and-meteors/overview",
+      "entity_id": "",
+      "schema_version": "phase86_nasa_metadata_repair_preview_v1",
+      "repair_reason": "phase82_succeeded_missing_title_metadata",
+      "reason": "phase81_review_needed_official",
+      "fetched": true,
+      "status": "metadata_repaired_preview",
+      "text_excerpt": "Asteroids, Comets, and Meteors Explore Search News & Events News & Events Recently Published Video Series on NASA+ Podcasts & Audio Blogs Newsletters Social Media Media Resources Multimedia Multimedia NASA+ Images NASA Live NASA Apps Podcasts Image of the Day e-Books 3D Resources Interactives STEM Multimedia NASA Brand & Usage Guidelines NASA+ Search Suggested Searches Climate Change Artemis Expedition 64 Mars perseverance SpaceX Crew-2 International Space Station View All Topics A-Z Home Missions Humans in Space Earth The Solar System The Universe Science Aeronautics Technology Learning Resources About NASA Español News & Events Multimedia NASA+ Highlights 2 min read NASA-Funded Study Shows How Controlled Burns Help Sequoias Survive Wildfires article 2 days ago 5 min read NASA Study Finds Near-Earth Asteroid Is Actually Comet article 6 days ago 3 min read What’s Up: July 2026 Skywatchin",
+      "quality_flags": {
+        "allowlisted": true,
+        "has_excerpt": true,
+        "evaluation_only": true,
+        "metadata_repaired": true
+      },
+      "provenance": {
+        "phase82_status": "http_200",
+        "phase82_url": "https://solarsystem.nasa.gov/asteroids-comets-and-meteors/overview",
+        "phase86_rule": "title_from_existing_excerpt_or_existing_title"
+      }
+    },
+    {
+      "source": "nasa",
+      "source_id": "nasa",
+      "title": "Science Missions",
+      "id": "Science Missions",
+      "url": "https://solarsystem.nasa.gov/missions",
+      "source_url": "https://solarsystem.nasa.gov/missions",
+      "entity_id": "",
+      "schema_version": "phase86_nasa_metadata_repair_preview_v1",
+      "repair_reason": "phase82_succeeded_missing_title_metadata",
+      "reason": "phase81_review_needed_official",
+      "fetched": true,
+      "status": "metadata_repaired_preview",
+      "text_excerpt": "Science Missions - NASA Science Explore Search News & Events News & Events Recently Published Video Series on NASA+ Podcasts & Audio Blogs Newsletters Social Media Media Resources Multimedia Multimedia NASA+ Images NASA Live NASA Apps Podcasts Image of the Day e-Books 3D Resources Interactives STEM Multimedia NASA Brand & Usage Guidelines NASA+ Search Suggested Searches Climate Change Artemis Expedition 64 Mars perseverance SpaceX Crew-2 International Space Station View All Topics A-Z Home Missions Humans in Space Earth The Solar System The Universe Science Aeronautics Technology Learning Resources About NASA Español News & Events Multimedia NASA+ Highlights 2 min read NASA-Funded Study Shows How Controlled Burns Help Sequoias Survive Wildfires article 2 days ago 5 min read NASA Study Finds Near-Earth Asteroid Is Actually Comet article 6 days ago 3 min read What’s Up: July 2026 Skywatchi",
+      "quality_flags": {
+        "allowlisted": true,
+        "has_excerpt": true,
+        "evaluation_only": true,
+        "metadata_repaired": true
+      },
+      "provenance": {
+        "phase82_status": "http_200",
+        "phase82_url": "https://solarsystem.nasa.gov/missions",
+        "phase86_rule": "title_from_existing_excerpt_or_existing_title"
+      }
+    }
+  ],
+  "remaining_failure_records": [],
+  "sufficient_to_rebuild_pending_package": true,
+  "formal_raw_write": false,
+  "formal_default_triples_write": false,
+  "chroma_write": false,
+  "neo4j_write": false,
+  "clear_source_ingestion_outputs_called": false,
+  "active_source": "zh_wikipedia",
+  "active_source_unchanged": true,
+  "registry": {
+    "zh_wikipedia": "active",
+    "nasa": "disabled",
+    "esa": "disabled",
+    "wikidata": "disabled"
+  }
+}
