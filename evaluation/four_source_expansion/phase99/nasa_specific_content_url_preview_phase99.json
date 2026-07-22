@@ -1,0 +1,275 @@
+{
+  "phase": "Phase 99",
+  "mode": "nasa_specific_content_url_preview",
+  "generated_at": "2026-07-22T18:28:54.085339+00:00",
+  "url_limit": 10,
+  "selected_urls": [
+    "https://science.nasa.gov/mission/juno/",
+    "https://science.nasa.gov/mission/cassini/",
+    "https://science.nasa.gov/mission/voyager/",
+    "https://science.nasa.gov/mission/new-horizons/",
+    "https://science.nasa.gov/mission/mars-2020-perseverance/",
+    "https://science.nasa.gov/solar-system/planets/mars/facts/",
+    "https://science.nasa.gov/solar-system/planets/jupiter/facts/",
+    "https://science.nasa.gov/solar-system/planets/saturn/facts/",
+    "https://science.nasa.gov/solar-system/planets/uranus/facts/",
+    "https://science.nasa.gov/solar-system/planets/neptune/facts/"
+  ],
+  "attempted": 10,
+  "succeeded": 5,
+  "strong_accepted": 0,
+  "thin_accepted": 1,
+  "rejected": 4,
+  "failed": 5,
+  "live_fetch_used": true,
+  "raw_previews": [
+    {
+      "source": "nasa",
+      "source_id": "nasa",
+      "url": "https://science.nasa.gov/mission/juno/",
+      "title": "Juno",
+      "fetch_status": "http_200",
+      "status_code": 200,
+      "review_status": "thin_evidence_review_candidate",
+      "extraction_method": "meta_description",
+      "body_excerpt": "NASA's Juno spacecraft has explored Jupiter, its moons, and rings since 2016, gathering breakthrough science and breathtaking imagery.",
+      "reject_reason": "meta_only_thin_evidence",
+      "quality_flags": [
+        "specific_content_url",
+        "method:meta_description"
+      ],
+      "provenance": {
+        "phase": "Phase99",
+        "live_fetch_evaluation_only": true,
+        "source_url": "https://science.nasa.gov/mission/juno/"
+      },
+      "triples": [
+        {
+          "subject": "Juno",
+          "predicate": "SOURCE_URL",
+          "object": "https://science.nasa.gov/mission/juno/"
+        },
+        {
+          "subject": "Juno",
+          "predicate": "HAS_REVIEW_TEXT",
+          "object": "NASA's Juno spacecraft has explored Jupiter, its moons, and rings since 2016, gathering breakthrough science and breathtaking imagery."
+        }
+      ]
+    },
+    {
+      "source": "nasa",
+      "source_id": "nasa",
+      "url": "https://science.nasa.gov/mission/cassini/",
+      "title": "Cassini",
+      "fetch_status": "http_200",
+      "status_code": 200,
+      "review_status": "rejected_for_review",
+      "extraction_method": "",
+      "body_excerpt": "",
+      "reject_reason": "no_reviewable_body",
+      "quality_flags": [
+        "specific_content_url",
+        "method:"
+      ],
+      "provenance": {
+        "phase": "Phase99",
+        "live_fetch_evaluation_only": true,
+        "source_url": "https://science.nasa.gov/mission/cassini/"
+      },
+      "triples": []
+    },
+    {
+      "source": "nasa",
+      "source_id": "nasa",
+      "url": "https://science.nasa.gov/mission/voyager/",
+      "title": "Voyager",
+      "fetch_status": "http_200",
+      "status_code": 200,
+      "review_status": "rejected_for_review",
+      "extraction_method": "",
+      "body_excerpt": "",
+      "reject_reason": "no_reviewable_body",
+      "quality_flags": [
+        "specific_content_url",
+        "method:"
+      ],
+      "provenance": {
+        "phase": "Phase99",
+        "live_fetch_evaluation_only": true,
+        "source_url": "https://science.nasa.gov/mission/voyager/"
+      },
+      "triples": []
+    },
+    {
+      "source": "nasa",
+      "source_id": "nasa",
+      "url": "https://science.nasa.gov/mission/new-horizons/",
+      "title": "New Horizons",
+      "fetch_status": "http_200",
+      "status_code": 200,
+      "review_status": "rejected_for_review",
+      "extraction_method": "",
+      "body_excerpt": "",
+      "reject_reason": "no_reviewable_body",
+      "quality_flags": [
+        "specific_content_url",
+        "method:"
+      ],
+      "provenance": {
+        "phase": "Phase99",
+        "live_fetch_evaluation_only": true,
+        "source_url": "https://science.nasa.gov/mission/new-horizons/"
+      },
+      "triples": []
+    },
+    {
+      "source": "nasa",
+      "source_id": "nasa",
+      "url": "https://science.nasa.gov/mission/mars-2020-perseverance/",
+      "title": "Mars 2020 Perseverance",
+      "fetch_status": "http_200",
+      "status_code": 200,
+      "review_status": "rejected_for_review",
+      "extraction_method": "",
+      "body_excerpt": "",
+      "reject_reason": "no_reviewable_body",
+      "quality_flags": [
+        "specific_content_url",
+        "method:"
+      ],
+      "provenance": {
+        "phase": "Phase99",
+        "live_fetch_evaluation_only": true,
+        "source_url": "https://science.nasa.gov/mission/mars-2020-perseverance/"
+      },
+      "triples": []
+    },
+    {
+      "source": "nasa",
+      "source_id": "nasa",
+      "url": "https://science.nasa.gov/solar-system/planets/mars/facts/",
+      "title": "Facts",
+      "fetch_status": "failed",
+      "status_code": 404,
+      "review_status": "failed",
+      "extraction_method": "",
+      "body_excerpt": "",
+      "reject_reason": "HTTP Error 404: Not Found",
+      "quality_flags": [
+        "specific_content_url",
+        "method:"
+      ],
+      "provenance": {
+        "phase": "Phase99",
+        "live_fetch_evaluation_only": true,
+        "source_url": "https://science.nasa.gov/solar-system/planets/mars/facts/"
+      },
+      "triples": []
+    },
+    {
+      "source": "nasa",
+      "source_id": "nasa",
+      "url": "https://science.nasa.gov/solar-system/planets/jupiter/facts/",
+      "title": "Facts",
+      "fetch_status": "failed",
+      "status_code": 404,
+      "review_status": "failed",
+      "extraction_method": "",
+      "body_excerpt": "",
+      "reject_reason": "HTTP Error 404: Not Found",
+      "quality_flags": [
+        "specific_content_url",
+        "method:"
+      ],
+      "provenance": {
+        "phase": "Phase99",
+        "live_fetch_evaluation_only": true,
+        "source_url": "https://science.nasa.gov/solar-system/planets/jupiter/facts/"
+      },
+      "triples": []
+    },
+    {
+      "source": "nasa",
+      "source_id": "nasa",
+      "url": "https://science.nasa.gov/solar-system/planets/saturn/facts/",
+      "title": "Facts",
+      "fetch_status": "failed",
+      "status_code": 404,
+      "review_status": "failed",
+      "extraction_method": "",
+      "body_excerpt": "",
+      "reject_reason": "HTTP Error 404: Not Found",
+      "quality_flags": [
+        "specific_content_url",
+        "method:"
+      ],
+      "provenance": {
+        "phase": "Phase99",
+        "live_fetch_evaluation_only": true,
+        "source_url": "https://science.nasa.gov/solar-system/planets/saturn/facts/"
+      },
+      "triples": []
+    },
+    {
+      "source": "nasa",
+      "source_id": "nasa",
+      "url": "https://science.nasa.gov/solar-system/planets/uranus/facts/",
+      "title": "Facts",
+      "fetch_status": "failed",
+      "status_code": 404,
+      "review_status": "failed",
+      "extraction_method": "",
+      "body_excerpt": "",
+      "reject_reason": "HTTP Error 404: Not Found",
+      "quality_flags": [
+        "specific_content_url",
+        "method:"
+      ],
+      "provenance": {
+        "phase": "Phase99",
+        "live_fetch_evaluation_only": true,
+        "source_url": "https://science.nasa.gov/solar-system/planets/uranus/facts/"
+      },
+      "triples": []
+    },
+    {
+      "source": "nasa",
+      "source_id": "nasa",
+      "url": "https://science.nasa.gov/solar-system/planets/neptune/facts/",
+      "title": "Facts",
+      "fetch_status": "failed",
+      "status_code": 404,
+      "review_status": "failed",
+      "extraction_method": "",
+      "body_excerpt": "",
+      "reject_reason": "HTTP Error 404: Not Found",
+      "quality_flags": [
+        "specific_content_url",
+        "method:"
+      ],
+      "provenance": {
+        "phase": "Phase99",
+        "live_fetch_evaluation_only": true,
+        "source_url": "https://science.nasa.gov/solar-system/planets/neptune/facts/"
+      },
+      "triples": []
+    }
+  ],
+  "quality_verdict": "nasa_specific_content_needs_more_specific_sources",
+  "production_ready": false,
+  "apply_approved": false,
+  "ingest_approved": false,
+  "formal_raw_write": false,
+  "formal_default_triples_write": false,
+  "chroma_write": false,
+  "neo4j_write": false,
+  "clear_source_ingestion_outputs_called": false,
+  "active_source": "zh_wikipedia",
+  "active_source_unchanged": true,
+  "registry": {
+    "zh_wikipedia": "active",
+    "nasa": "disabled",
+    "esa": "disabled",
+    "wikidata": "disabled"
+  }
+}
