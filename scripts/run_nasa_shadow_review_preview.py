@@ -16,10 +16,13 @@ from src.agent.nasa_shadow_review import SOURCE_ID, run_nasa_shadow_review_previ
 
 
 def output_allowed(path: Path, *, allow_docs: bool = False) -> bool:
-    parts = list(path.resolve().parts)
-    return any(parts[i : i + 2] == ["evaluation", "four_source_expansion"] for i in range(len(parts) - 1)) or (
-        allow_docs and "docs" in parts
-    )
+    resolved = path.resolve()
+    try:
+        relative = resolved.relative_to(ROOT)
+    except ValueError:
+        return False
+    parts = relative.parts
+    return parts[:2] == ("evaluation", "four_source_expansion") or (allow_docs and parts[:1] == ("docs",))
 
 
 def write_json(path: Path, payload: Dict[str, Any]) -> None:

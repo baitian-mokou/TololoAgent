@@ -35,32 +35,44 @@ class RunNasaShadowReviewPreviewTests(unittest.TestCase):
         with tempfile.TemporaryDirectory() as temp:
             root = Path(temp)
             shadow, eval_path = self.make_shadow_and_eval(root)
-            out_json = root / "evaluation" / "four_source_expansion" / "out.json"
-            code = module.main(["--shadow-dir", str(shadow), "--eval-report-json", str(eval_path), "--out-json", str(out_json)])
-            self.assertEqual(code, 2)
-            report = json.loads(out_json.read_text(encoding="utf-8"))
-            self.assertEqual(report["blocked_reason"], "review_only_flag_required")
+            out_json = ROOT / "evaluation" / "four_source_expansion" / "_tmp_phase66_missing_flag_test.json"
+            out_md = ROOT / "docs" / "_tmp_phase66_missing_flag_test.md"
+            try:
+                code = module.main(["--shadow-dir", str(shadow), "--eval-report-json", str(eval_path), "--out-json", str(out_json), "--out-md", str(out_md)])
+                self.assertEqual(code, 2)
+                report = json.loads(out_json.read_text(encoding="utf-8"))
+                self.assertEqual(report["blocked_reason"], "review_only_flag_required")
+            finally:
+                out_json.unlink(missing_ok=True)
+                out_md.unlink(missing_ok=True)
 
     def test_review_flag_returns_mapping(self):
         module = load_script()
         with tempfile.TemporaryDirectory() as temp:
             root = Path(temp)
             shadow, eval_path = self.make_shadow_and_eval(root)
-            out_json = root / "evaluation" / "four_source_expansion" / "out.json"
-            code = module.main(["--review-only", "--shadow-dir", str(shadow), "--eval-report-json", str(eval_path), "--out-json", str(out_json)])
-            self.assertEqual(code, 0)
-            report = json.loads(out_json.read_text(encoding="utf-8"))
-            self.assertTrue(report["ready"])
-            self.assertEqual(report["mapping_count"], 1)
-            self.assertFalse((root / "data" / "triples").exists())
+            out_json = ROOT / "evaluation" / "four_source_expansion" / "_tmp_phase66_review_flag_test.json"
+            out_md = ROOT / "docs" / "_tmp_phase66_review_flag_test.md"
+            try:
+                code = module.main(["--review-only", "--shadow-dir", str(shadow), "--eval-report-json", str(eval_path), "--out-json", str(out_json), "--out-md", str(out_md)])
+                self.assertEqual(code, 0)
+                report = json.loads(out_json.read_text(encoding="utf-8"))
+                self.assertTrue(report["ready"])
+                self.assertEqual(report["mapping_count"], 1)
+                self.assertFalse((root / "data" / "triples").exists())
+            finally:
+                out_json.unlink(missing_ok=True)
+                out_md.unlink(missing_ok=True)
 
     def test_output_paths_restricted(self):
         module = load_script()
         with tempfile.TemporaryDirectory() as temp:
-            root = Path(temp)
-            self.assertTrue(module.output_allowed(root / "evaluation" / "four_source_expansion" / "x.json"))
-            self.assertTrue(module.output_allowed(root / "docs" / "x.md", allow_docs=True))
-            self.assertFalse(module.output_allowed(root / "data" / "x.json"))
+            outside = Path(temp)
+            self.assertTrue(module.output_allowed(ROOT / "evaluation" / "four_source_expansion" / "x.json"))
+            self.assertTrue(module.output_allowed(ROOT / "docs" / "x.md", allow_docs=True))
+            self.assertFalse(module.output_allowed(ROOT / "data" / "x.json"))
+            self.assertFalse(module.output_allowed(outside / "evaluation" / "four_source_expansion" / "x.json"))
+            self.assertFalse(module.output_allowed(outside / "docs" / "x.md", allow_docs=True))
 
 
 if __name__ == "__main__":
