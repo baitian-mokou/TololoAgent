@@ -1,0 +1,505 @@
+{
+  "phase": "Phase 74",
+  "mode": "wikidata_controlled_source_assessment_preview",
+  "generated_at": "2026-07-22T13:29:18.454354+00:00",
+  "source_id": "wikidata",
+  "selected": 47,
+  "accepted_for_package": 25,
+  "review_needed": 22,
+  "rejected": 0,
+  "failed": 0,
+  "duplicates_excluded": 0,
+  "prior_bad_excluded": 0,
+  "candidate_statuses": [
+    {
+      "status": "accepted_for_package",
+      "reason": "local_entity_raw_has_triples_and_narratives",
+      "qid": "Q525",
+      "title": "太阳",
+      "url": "https://www.wikidata.org/wiki/Q525",
+      "has_local_raw": true,
+      "has_local_materialized_pair": true,
+      "raw_path": "data\\raw_json\\wikidata\\Q525.json"
+    },
+    {
+      "status": "accepted_for_package",
+      "reason": "local_materialized_preview_exists",
+      "qid": "Q308",
+      "title": "水星",
+      "url": "https://www.wikidata.org/wiki/Q308",
+      "has_local_raw": false,
+      "has_local_materialized_pair": true,
+      "raw_path": ""
+    },
+    {
+      "status": "accepted_for_package",
+      "reason": "local_materialized_preview_exists",
+      "qid": "Q313",
+      "title": "金星",
+      "url": "https://www.wikidata.org/wiki/Q313",
+      "has_local_raw": false,
+      "has_local_materialized_pair": true,
+      "raw_path": ""
+    },
+    {
+      "status": "accepted_for_package",
+      "reason": "local_entity_raw_has_triples_and_narratives",
+      "qid": "Q2",
+      "title": "地球",
+      "url": "https://www.wikidata.org/wiki/Q2",
+      "has_local_raw": true,
+      "has_local_materialized_pair": true,
+      "raw_path": "data\\raw_json\\wikidata\\Q2.json"
+    },
+    {
+      "status": "accepted_for_package",
+      "reason": "local_materialized_preview_exists",
+      "qid": "Q405",
+      "title": "月球",
+      "url": "https://www.wikidata.org/wiki/Q405",
+      "has_local_raw": false,
+      "has_local_materialized_pair": true,
+      "raw_path": ""
+    },
+    {
+      "status": "accepted_for_package",
+      "reason": "local_entity_raw_has_triples_and_narratives",
+      "qid": "Q111",
+      "title": "火星",
+      "url": "https://www.wikidata.org/wiki/Q111",
+      "has_local_raw": true,
+      "has_local_materialized_pair": true,
+      "raw_path": "data\\raw_json\\wikidata\\Q111.json"
+    },
+    {
+      "status": "accepted_for_package",
+      "reason": "local_materialized_preview_exists",
+      "qid": "Q319",
+      "title": "木星",
+      "url": "https://www.wikidata.org/wiki/Q319",
+      "has_local_raw": false,
+      "has_local_materialized_pair": true,
+      "raw_path": ""
+    },
+    {
+      "status": "accepted_for_package",
+      "reason": "local_materialized_preview_exists",
+      "qid": "Q193",
+      "title": "土星",
+      "url": "https://www.wikidata.org/wiki/Q193",
+      "has_local_raw": false,
+      "has_local_materialized_pair": true,
+      "raw_path": ""
+    },
+    {
+      "status": "accepted_for_package",
+      "reason": "local_materialized_preview_exists",
+      "qid": "Q324",
+      "title": "天王星",
+      "url": "https://www.wikidata.org/wiki/Q324",
+      "has_local_raw": false,
+      "has_local_materialized_pair": true,
+      "raw_path": ""
+    },
+    {
+      "status": "accepted_for_package",
+      "reason": "local_materialized_preview_exists",
+      "qid": "Q332",
+      "title": "海王星",
+      "url": "https://www.wikidata.org/wiki/Q332",
+      "has_local_raw": false,
+      "has_local_materialized_pair": true,
+      "raw_path": ""
+    },
+    {
+      "status": "accepted_for_package",
+      "reason": "local_materialized_preview_exists",
+      "qid": "Q339",
+      "title": "冥王星",
+      "url": "https://www.wikidata.org/wiki/Q339",
+      "has_local_raw": false,
+      "has_local_materialized_pair": true,
+      "raw_path": ""
+    },
+    {
+      "status": "accepted_for_package",
+      "reason": "local_materialized_preview_exists",
+      "qid": "Q596",
+      "title": "谷神星",
+      "url": "https://www.wikidata.org/wiki/Q596",
+      "has_local_raw": false,
+      "has_local_materialized_pair": true,
+      "raw_path": ""
+    },
+    {
+      "status": "accepted_for_package",
+      "reason": "local_materialized_preview_exists",
+      "qid": "Q611",
+      "title": "阋神星",
+      "url": "https://www.wikidata.org/wiki/Q611",
+      "has_local_raw": false,
+      "has_local_materialized_pair": true,
+      "raw_path": ""
+    },
+    {
+      "status": "accepted_for_package",
+      "reason": "local_materialized_preview_exists",
+      "qid": "Q601",
+      "title": "妊神星",
+      "url": "https://www.wikidata.org/wiki/Q601",
+      "has_local_raw": false,
+      "has_local_materialized_pair": true,
+      "raw_path": ""
+    },
+    {
+      "status": "accepted_for_package",
+      "reason": "local_materialized_preview_exists",
+      "qid": "Q604",
+      "title": "鸟神星",
+      "url": "https://www.wikidata.org/wiki/Q604",
+      "has_local_raw": false,
+      "has_local_materialized_pair": true,
+      "raw_path": ""
+    },
+    {
+      "status": "accepted_for_package",
+      "reason": "local_materialized_preview_exists",
+      "qid": "Q3030",
+      "title": "灶神星",
+      "url": "https://www.wikidata.org/wiki/Q3030",
+      "has_local_raw": false,
+      "has_local_materialized_pair": true,
+      "raw_path": ""
+    },
+    {
+      "status": "review_needed",
+      "reason": "local_raw_missing_preview_only",
+      "qid": "Q3002",
+      "title": "帕拉斯",
+      "url": "https://www.wikidata.org/wiki/Q3002",
+      "has_local_raw": false,
+      "has_local_materialized_pair": false,
+      "raw_path": ""
+    },
+    {
+      "status": "review_needed",
+      "reason": "local_raw_missing_preview_only",
+      "qid": "Q3009",
+      "title": "朱诺",
+      "url": "https://www.wikidata.org/wiki/Q3009",
+      "has_local_raw": false,
+      "has_local_materialized_pair": false,
+      "raw_path": ""
+    },
+    {
+      "status": "review_needed",
+      "reason": "local_raw_missing_preview_only",
+      "qid": "Q16711",
+      "title": "爱神星",
+      "url": "https://www.wikidata.org/wiki/Q16711",
+      "has_local_raw": false,
+      "has_local_materialized_pair": false,
+      "raw_path": ""
+    },
+    {
+      "status": "review_needed",
+      "reason": "local_raw_missing_preview_only",
+      "qid": "Q11558",
+      "title": "贝努",
+      "url": "https://www.wikidata.org/wiki/Q11558",
+      "has_local_raw": false,
+      "has_local_materialized_pair": false,
+      "raw_path": ""
+    },
+    {
+      "status": "accepted_for_package",
+      "reason": "local_materialized_preview_exists",
+      "qid": "Q3123",
+      "title": "木卫一",
+      "url": "https://www.wikidata.org/wiki/Q3123",
+      "has_local_raw": false,
+      "has_local_materialized_pair": true,
+      "raw_path": ""
+    },
+    {
+      "status": "accepted_for_package",
+      "reason": "local_materialized_preview_exists",
+      "qid": "Q3143",
+      "title": "木卫二",
+      "url": "https://www.wikidata.org/wiki/Q3143",
+      "has_local_raw": false,
+      "has_local_materialized_pair": true,
+      "raw_path": ""
+    },
+    {
+      "status": "accepted_for_package",
+      "reason": "local_materialized_preview_exists",
+      "qid": "Q3169",
+      "title": "木卫三",
+      "url": "https://www.wikidata.org/wiki/Q3169",
+      "has_local_raw": false,
+      "has_local_materialized_pair": true,
+      "raw_path": ""
+    },
+    {
+      "status": "accepted_for_package",
+      "reason": "local_materialized_preview_exists",
+      "qid": "Q3134",
+      "title": "木卫四",
+      "url": "https://www.wikidata.org/wiki/Q3134",
+      "has_local_raw": false,
+      "has_local_materialized_pair": true,
+      "raw_path": ""
+    },
+    {
+      "status": "accepted_for_package",
+      "reason": "local_materialized_preview_exists",
+      "qid": "Q2565",
+      "title": "土卫六",
+      "url": "https://www.wikidata.org/wiki/Q2565",
+      "has_local_raw": false,
+      "has_local_materialized_pair": true,
+      "raw_path": ""
+    },
+    {
+      "status": "accepted_for_package",
+      "reason": "local_materialized_preview_exists",
+      "qid": "Q3303",
+      "title": "土卫二",
+      "url": "https://www.wikidata.org/wiki/Q3303",
+      "has_local_raw": false,
+      "has_local_materialized_pair": true,
+      "raw_path": ""
+    },
+    {
+      "status": "accepted_for_package",
+      "reason": "local_materialized_preview_exists",
+      "qid": "Q3359",
+      "title": "海卫一",
+      "url": "https://www.wikidata.org/wiki/Q3359",
+      "has_local_raw": false,
+      "has_local_materialized_pair": true,
+      "raw_path": ""
+    },
+    {
+      "status": "accepted_for_package",
+      "reason": "local_materialized_preview_exists",
+      "qid": "Q7547",
+      "title": "火卫一",
+      "url": "https://www.wikidata.org/wiki/Q7547",
+      "has_local_raw": false,
+      "has_local_materialized_pair": true,
+      "raw_path": ""
+    },
+    {
+      "status": "accepted_for_package",
+      "reason": "local_materialized_preview_exists",
+      "qid": "Q7548",
+      "title": "火卫二",
+      "url": "https://www.wikidata.org/wiki/Q7548",
+      "has_local_raw": false,
+      "has_local_materialized_pair": true,
+      "raw_path": ""
+    },
+    {
+      "status": "review_needed",
+      "reason": "local_raw_missing_preview_only",
+      "qid": "Q544",
+      "title": "太阳系",
+      "url": "https://www.wikidata.org/wiki/Q544",
+      "has_local_raw": false,
+      "has_local_materialized_pair": false,
+      "raw_path": ""
+    },
+    {
+      "status": "review_needed",
+      "reason": "local_raw_missing_preview_only",
+      "qid": "Q2179",
+      "title": "小行星带",
+      "url": "https://www.wikidata.org/wiki/Q2179",
+      "has_local_raw": false,
+      "has_local_materialized_pair": false,
+      "raw_path": ""
+    },
+    {
+      "status": "review_needed",
+      "reason": "local_raw_missing_preview_only",
+      "qid": "Q427",
+      "title": "柯伊伯带",
+      "url": "https://www.wikidata.org/wiki/Q427",
+      "has_local_raw": false,
+      "has_local_materialized_pair": false,
+      "raw_path": ""
+    },
+    {
+      "status": "review_needed",
+      "reason": "local_raw_missing_preview_only",
+      "qid": "Q40864",
+      "title": "奥尔特云",
+      "url": "https://www.wikidata.org/wiki/Q40864",
+      "has_local_raw": false,
+      "has_local_materialized_pair": false,
+      "raw_path": ""
+    },
+    {
+      "status": "review_needed",
+      "reason": "local_raw_missing_preview_only",
+      "qid": "Q48469",
+      "title": "旅行者1号",
+      "url": "https://www.wikidata.org/wiki/Q48469",
+      "has_local_raw": false,
+      "has_local_materialized_pair": false,
+      "raw_path": ""
+    },
+    {
+      "status": "review_needed",
+      "reason": "local_raw_missing_preview_only",
+      "qid": "Q48475",
+      "title": "旅行者2号",
+      "url": "https://www.wikidata.org/wiki/Q48475",
+      "has_local_raw": false,
+      "has_local_materialized_pair": false,
+      "raw_path": ""
+    },
+    {
+      "status": "review_needed",
+      "reason": "local_raw_missing_preview_only",
+      "qid": "Q165585",
+      "title": "卡西尼-惠更斯号",
+      "url": "https://www.wikidata.org/wiki/Q165585",
+      "has_local_raw": false,
+      "has_local_materialized_pair": false,
+      "raw_path": ""
+    },
+    {
+      "status": "review_needed",
+      "reason": "local_raw_missing_preview_only",
+      "qid": "Q48461",
+      "title": "新视野号",
+      "url": "https://www.wikidata.org/wiki/Q48461",
+      "has_local_raw": false,
+      "has_local_materialized_pair": false,
+      "raw_path": ""
+    },
+    {
+      "status": "review_needed",
+      "reason": "local_raw_missing_preview_only",
+      "qid": "Q87749354",
+      "title": "毅力号",
+      "url": "https://www.wikidata.org/wiki/Q87749354",
+      "has_local_raw": false,
+      "has_local_materialized_pair": false,
+      "raw_path": ""
+    },
+    {
+      "status": "review_needed",
+      "reason": "local_raw_missing_preview_only",
+      "qid": "Q193538",
+      "title": "机遇号",
+      "url": "https://www.wikidata.org/wiki/Q193538",
+      "has_local_raw": false,
+      "has_local_materialized_pair": false,
+      "raw_path": ""
+    },
+    {
+      "status": "review_needed",
+      "reason": "local_raw_missing_preview_only",
+      "qid": "Q176276",
+      "title": "勇气号",
+      "url": "https://www.wikidata.org/wiki/Q176276",
+      "has_local_raw": false,
+      "has_local_materialized_pair": false,
+      "raw_path": ""
+    },
+    {
+      "status": "review_needed",
+      "reason": "local_raw_missing_preview_only",
+      "qid": "Q1770537",
+      "title": "旅居者号",
+      "url": "https://www.wikidata.org/wiki/Q1770537",
+      "has_local_raw": false,
+      "has_local_materialized_pair": false,
+      "raw_path": ""
+    },
+    {
+      "status": "review_needed",
+      "reason": "local_raw_missing_preview_only",
+      "qid": "Q105425030",
+      "title": "伽利略号",
+      "url": "https://www.wikidata.org/wiki/Q105425030",
+      "has_local_raw": false,
+      "has_local_materialized_pair": false,
+      "raw_path": ""
+    },
+    {
+      "status": "review_needed",
+      "reason": "local_raw_missing_preview_only",
+      "qid": "Q59131",
+      "title": "水手10号",
+      "url": "https://www.wikidata.org/wiki/Q59131",
+      "has_local_raw": false,
+      "has_local_materialized_pair": false,
+      "raw_path": ""
+    },
+    {
+      "status": "review_needed",
+      "reason": "local_raw_missing_preview_only",
+      "qid": "Q59103",
+      "title": "先锋10号",
+      "url": "https://www.wikidata.org/wiki/Q59103",
+      "has_local_raw": false,
+      "has_local_materialized_pair": false,
+      "raw_path": ""
+    },
+    {
+      "status": "review_needed",
+      "reason": "local_raw_missing_preview_only",
+      "qid": "Q59113",
+      "title": "先锋11号",
+      "url": "https://www.wikidata.org/wiki/Q59113",
+      "has_local_raw": false,
+      "has_local_materialized_pair": false,
+      "raw_path": ""
+    },
+    {
+      "status": "review_needed",
+      "reason": "local_raw_missing_preview_only",
+      "qid": "Q604428",
+      "title": "奥西里斯-REx",
+      "url": "https://www.wikidata.org/wiki/Q604428",
+      "has_local_raw": false,
+      "has_local_materialized_pair": false,
+      "raw_path": ""
+    },
+    {
+      "status": "review_needed",
+      "reason": "local_raw_missing_preview_only",
+      "qid": "",
+      "title": "",
+      "url": "https://www.wikidata.org/wiki/Wikidata:WikiProject_Astronomy",
+      "has_local_raw": false,
+      "has_local_materialized_pair": false,
+      "raw_path": ""
+    }
+  ],
+  "reason_counts": {
+    "local_entity_raw_has_triples_and_narratives": 3,
+    "local_materialized_preview_exists": 22,
+    "local_raw_missing_preview_only": 22
+  },
+  "recommended_next_package_size": 25,
+  "network_attempted": false,
+  "formal_raw_write": false,
+  "formal_triples_write": false,
+  "formal_narratives_write": false,
+  "chroma_write": false,
+  "neo4j_write": false,
+  "active_source": "zh_wikipedia",
+  "registry": {
+    "zh_wikipedia": "active",
+    "nasa": "disabled",
+    "esa": "disabled",
+    "wikidata": "disabled"
+  },
+  "active_source_unchanged": true
+}
