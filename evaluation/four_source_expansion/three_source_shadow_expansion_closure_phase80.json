@@ -1,0 +1,60 @@
+{
+  "phase": "Phase 80",
+  "mode": "three_source_shadow_expansion_closure",
+  "ready_for_review": true,
+  "branches": {
+    "nasa": {
+      "branch": "next/nasa-shadow-apply-guarded-2",
+      "latest_pushed_commit": "a23d8ee36286ac1a49981027c89cc0937b89ea79",
+      "local_shadow_counts": {
+        "items": 72,
+        "triples": 288,
+        "narratives": 288
+      },
+      "readiness_eval": "10/10",
+      "explicit_review_only_cli": "scripts/run_nasa_shadow_review_preview.py"
+    },
+    "esa": {
+      "branch": "next/esa-shadow-controlled-preview",
+      "latest_pushed_commit": "698b5a0d1e73bb5b11634b56ae0ace18eea5aff5",
+      "local_shadow_counts": {
+        "items": 18,
+        "triples": 70,
+        "narratives": 71
+      },
+      "readiness_eval": "10/10",
+      "explicit_review_only_cli": "scripts/run_esa_shadow_review_preview.py"
+    },
+    "wikidata": {
+      "branch": "next/wikidata-shadow-controlled-preview",
+      "latest_pushed_commit": "5e1ec5a75f0a6eed966c9f4ab03d508a1d2797fd",
+      "local_shadow_counts": {
+        "items": 25,
+        "triples": 151,
+        "narratives": 25
+      },
+      "readiness_eval": "10/10",
+      "explicit_review_only_cli": "scripts/run_wikidata_shadow_review_preview.py"
+    }
+  },
+  "source_boundary": {
+    "active_source": "zh_wikipedia",
+    "nasa": "disabled",
+    "esa": "disabled",
+    "wikidata": "disabled",
+    "formal_default_triples_write": false,
+    "chroma_write": false,
+    "neo4j_write": false,
+    "shadow_data_committed": false
+  },
+  "remaining_risks": [
+    "shadow artifacts remain local and must be rebuilt or verified before another workstation reviews them",
+    "review-only CLIs are not wired into GUI or default query paths",
+    "Chroma shadow indexing has not been dry-run validated"
+  ],
+  "next_options": [
+    "GUI review-only integration with explicit flag and ready-report guard",
+    "Chroma shadow dry-run against local shadow artifacts without default index writes",
+    "broader source filtering system before expanding more sources"
+  ]
+}
