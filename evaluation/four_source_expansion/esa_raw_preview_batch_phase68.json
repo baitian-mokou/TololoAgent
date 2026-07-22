@@ -1,0 +1,273 @@
+{
+  "phase": "Phase 68",
+  "mode": "esa_evaluation_only_raw_preview",
+  "generated_at": "2026-07-22T12:41:09.161928+00:00",
+  "source_id": "esa",
+  "limit": 16,
+  "selected": 16,
+  "attempted": 16,
+  "accepted_for_package": 9,
+  "rejected": 4,
+  "failed": 3,
+  "duplicate_excluded": 0,
+  "invalid_excluded": 0,
+  "candidate_statuses": [
+    {
+      "status": "failed",
+      "reason": "HTTPError",
+      "url": "https://www.esa.int/science_exploration/space_science/hera",
+      "title": ""
+    },
+    {
+      "status": "failed",
+      "reason": "HTTPError",
+      "url": "https://www.esa.int/science_exploration/space_science/what_is_the_solar_system",
+      "title": ""
+    },
+    {
+      "status": "rejected",
+      "reason": "quality_review_needed",
+      "title": "ESA - Exploring space",
+      "url": "https://www.esa.int/science_exploration/space_science/exploring_space",
+      "quality_score": 45,
+      "quality_triage": "review_needed",
+      "quality_reasons": [
+        "official or academic domain",
+        "science keyword hits=12",
+        "mission page signal",
+        "high link density",
+        "news/update signal in body/navigation",
+        "media/gallery signal in body/navigation",
+        "protected official science/fact/mission page floor"
+      ],
+      "raw_preview_path": "evaluation\\four_source_expansion\\esa_raw_preview_batch_phase68\\raw_preview_by_item\\03_ESA - Exploring space.json"
+    },
+    {
+      "status": "rejected",
+      "reason": "quality_review_needed",
+      "title": "ESA - Science & Exploration",
+      "url": "https://www.esa.int/science_exploration",
+      "quality_score": 45,
+      "quality_triage": "review_needed",
+      "quality_reasons": [
+        "official or academic domain",
+        "science keyword hits=6",
+        "mission page signal",
+        "high link density",
+        "news/update signal in body/navigation",
+        "media/gallery signal in body/navigation",
+        "protected official science/fact/mission page floor"
+      ],
+      "raw_preview_path": "evaluation\\four_source_expansion\\esa_raw_preview_batch_phase68\\raw_preview_by_item\\04_ESA - Science & Exploration.json"
+    },
+    {
+      "status": "accepted_for_package",
+      "reason": "quality_accepted",
+      "title": "ESA - Expedition Sound podcast series",
+      "url": "https://www.esa.int/science_exploration/space_science/expedition_sound_podcast_series",
+      "quality_score": 64,
+      "quality_triage": "accepted",
+      "quality_reasons": [
+        "official or academic domain",
+        "science keyword hits=8",
+        "mission page signal",
+        "media/gallery signal in body/navigation"
+      ],
+      "raw_preview_path": "evaluation\\four_source_expansion\\esa_raw_preview_batch_phase68\\raw_preview_by_item\\05_ESA - Expedition Sound podcast series.json"
+    },
+    {
+      "status": "rejected",
+      "reason": "quality_exploratory",
+      "title": "ESA - Metallic waves on ancient Mars",
+      "url": "https://www.esa.int/science_exploration/space_science/mars_express/metallic_waves_on_ancient_mars",
+      "quality_score": 50,
+      "quality_triage": "exploratory",
+      "quality_reasons": [
+        "official or academic domain",
+        "science keyword hits=10",
+        "mission page signal",
+        "news/update signal",
+        "media/gallery signal in body/navigation"
+      ],
+      "raw_preview_path": "evaluation\\four_source_expansion\\esa_raw_preview_batch_phase68\\raw_preview_by_item\\06_ESA - Metallic waves on ancient Mars.json"
+    },
+    {
+      "status": "accepted_for_package",
+      "reason": "quality_accepted",
+      "title": "ESA - Webb reveals millions of stars in nearby galaxy",
+      "url": "https://www.esa.int/science_exploration/space_science/webb/webb_reveals_millions_of_stars_in_nearby_galaxy",
+      "quality_score": 60,
+      "quality_triage": "accepted",
+      "quality_reasons": [
+        "official or academic domain",
+        "science keyword hits=16",
+        "mission page signal",
+        "news/update signal in body/navigation",
+        "media/gallery signal in body/navigation"
+      ],
+      "raw_preview_path": "evaluation\\four_source_expansion\\esa_raw_preview_batch_phase68\\raw_preview_by_item\\07_ESA - Webb reveals millions of stars in nearby galaxy.json"
+    },
+    {
+      "status": "accepted_for_package",
+      "reason": "quality_accepted",
+      "title": "ESA - Euclid discovers the most ancient quasar in the Universe",
+      "url": "https://www.esa.int/science_exploration/space_science/euclid/euclid_discovers_the_most_ancient_quasar_in_the_universe",
+      "quality_score": 77,
+      "quality_triage": "accepted",
+      "quality_reasons": [
+        "official or academic domain",
+        "science keyword hits=9",
+        "mission page signal",
+        "reference signal present",
+        "publication/abstract signal",
+        "news/update signal in body/navigation",
+        "media/gallery signal in body/navigation"
+      ],
+      "raw_preview_path": "evaluation\\four_source_expansion\\esa_raw_preview_batch_phase68\\raw_preview_by_item\\08_ESA - Euclid discovers the most ancient quasar in the Universe.json"
+    },
+    {
+      "status": "accepted_for_package",
+      "reason": "quality_accepted",
+      "title": "ESA - Webb studies how a planet survived the death of its star",
+      "url": "https://www.esa.int/science_exploration/space_science/webb/webb_studies_how_a_planet_survived_the_death_of_its_star",
+      "quality_score": 87,
+      "quality_triage": "accepted",
+      "quality_reasons": [
+        "official or academic domain",
+        "science keyword hits=15",
+        "fact or overview page signal",
+        "mission page signal",
+        "publication/abstract signal",
+        "news/update signal in body/navigation",
+        "media/gallery signal in body/navigation"
+      ],
+      "raw_preview_path": "evaluation\\four_source_expansion\\esa_raw_preview_batch_phase68\\raw_preview_by_item\\09_ESA - Webb studies how a planet survived the death of its star.json"
+    },
+    {
+      "status": "accepted_for_package",
+      "reason": "quality_accepted",
+      "title": "ESA - Space Science - Archive",
+      "url": "https://www.esa.int/science_exploration/space_science/(archive)/0",
+      "quality_score": 60,
+      "quality_triage": "accepted",
+      "quality_reasons": [
+        "official or academic domain",
+        "science keyword hits=14",
+        "mission page signal",
+        "news/update signal in body/navigation",
+        "media/gallery signal in body/navigation"
+      ],
+      "raw_preview_path": "evaluation\\four_source_expansion\\esa_raw_preview_batch_phase68\\raw_preview_by_item\\10_ESA - Space Science - Archive.json"
+    },
+    {
+      "status": "rejected",
+      "reason": "quality_review_needed",
+      "title": "ESA - Exoplanets",
+      "url": "https://www.esa.int/science_exploration/space_science/exoplanets",
+      "quality_score": 45,
+      "quality_triage": "review_needed",
+      "quality_reasons": [
+        "official or academic domain",
+        "science keyword hits=5",
+        "mission page signal",
+        "high link density",
+        "media/gallery signal in body/navigation",
+        "protected official science/fact/mission page floor"
+      ],
+      "raw_preview_path": "evaluation\\four_source_expansion\\esa_raw_preview_batch_phase68\\raw_preview_by_item\\11_ESA - Exoplanets.json"
+    },
+    {
+      "status": "failed",
+      "reason": "URLError",
+      "url": "https://www.esa.int/science_exploration/space_science/cheops",
+      "title": ""
+    },
+    {
+      "status": "accepted_for_package",
+      "reason": "quality_accepted",
+      "title": "ESA - Plato",
+      "url": "https://www.esa.int/science_exploration/space_science/plato",
+      "quality_score": 75,
+      "quality_triage": "accepted",
+      "quality_reasons": [
+        "official or academic domain",
+        "science keyword hits=9",
+        "fact or overview page signal",
+        "mission page signal",
+        "news/update signal in body/navigation",
+        "media/gallery signal in body/navigation"
+      ],
+      "raw_preview_path": "evaluation\\four_source_expansion\\esa_raw_preview_batch_phase68\\raw_preview_by_item\\13_ESA - Plato.json"
+    },
+    {
+      "status": "accepted_for_package",
+      "reason": "quality_accepted",
+      "title": "ESA - Mission navigator",
+      "url": "https://www.esa.int/science_exploration/space_science/mission_navigator",
+      "quality_score": 85,
+      "quality_triage": "accepted",
+      "quality_reasons": [
+        "official or academic domain",
+        "science keyword hits=11",
+        "fact or overview page signal",
+        "mission page signal",
+        "table evidence present",
+        "high link density",
+        "news/update signal in body/navigation"
+      ],
+      "raw_preview_path": "evaluation\\four_source_expansion\\esa_raw_preview_batch_phase68\\raw_preview_by_item\\14_ESA - Mission navigator.json"
+    },
+    {
+      "status": "accepted_for_package",
+      "reason": "quality_accepted",
+      "title": "ESA - About Space Science",
+      "url": "https://www.esa.int/science_exploration/space_science/about_space_science",
+      "quality_score": 65,
+      "quality_triage": "accepted",
+      "quality_reasons": [
+        "official or academic domain",
+        "science keyword hits=17",
+        "mission page signal",
+        "news/update signal in body/navigation"
+      ],
+      "raw_preview_path": "evaluation\\four_source_expansion\\esa_raw_preview_batch_phase68\\raw_preview_by_item\\15_ESA - About Space Science.json"
+    },
+    {
+      "status": "accepted_for_package",
+      "reason": "quality_accepted",
+      "title": "ESA - ESA's 'Cosmic Vision'",
+      "url": "https://www.esa.int/science_exploration/space_science/esa_s_cosmic_vision",
+      "quality_score": 64,
+      "quality_triage": "accepted",
+      "quality_reasons": [
+        "official or academic domain",
+        "science keyword hits=23",
+        "mission page signal",
+        "publication/abstract signal",
+        "news/update signal in body/navigation",
+        "media/gallery signal in body/navigation"
+      ],
+      "raw_preview_path": "evaluation\\four_source_expansion\\esa_raw_preview_batch_phase68\\raw_preview_by_item\\16_ESA - ESA's 'Cosmic Vision'.json"
+    }
+  ],
+  "rejected_reason_counts": {
+    "quality_review_needed": 3,
+    "quality_exploratory": 1
+  },
+  "recommended_next_package_size": 9,
+  "out_dir": "evaluation\\four_source_expansion\\esa_raw_preview_batch_phase68",
+  "network_attempted": true,
+  "formal_raw_write": false,
+  "formal_triples_write": false,
+  "formal_narratives_write": false,
+  "chroma_write": false,
+  "neo4j_write": false,
+  "active_source": "zh_wikipedia",
+  "registry": {
+    "zh_wikipedia": "active",
+    "nasa": "disabled",
+    "esa": "disabled",
+    "wikidata": "disabled"
+  },
+  "active_source_unchanged": true
+}
