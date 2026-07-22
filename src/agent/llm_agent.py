@@ -48,6 +48,7 @@ class LLMAgent:
     }
     RELATION_AUTHORITY_ORDER = {
         "HAS_RADIUS": ["nasa", "wikidata", "zh_wikipedia", "esa"],
+        "HAS_DIAMETER": ["nasa", "wikidata", "zh_wikipedia", "esa"],
         "HAS_MASS": ["nasa", "wikidata", "zh_wikipedia", "esa"],
         "HAS_ATMOSPHERE": ["nasa", "zh_wikipedia", "wikidata", "esa"],
         "ORBITS": ["wikidata", "nasa", "zh_wikipedia", "esa"],
@@ -340,6 +341,7 @@ class LLMAgent:
         obj = Neo4jLoader._normalize_relation_object(relation, normalized.get("object", ""), raw=raw, subject=subject)
         source_title = self._normalize_entity_name(normalized.get("source_title", ""))
         primary = query_context.get("primary_entity", "")
+        query_text = query_context.get("query", "")
         entities = [self._normalize_entity_name(item) for item in query_context.get("entities", []) if item]
         topic_terms = query_context.get("topic_terms", [])
         relation_hints = query_context.get("relation_hints", [])
@@ -369,11 +371,17 @@ class LLMAgent:
         strict_relation_query = (
             primary
             and len(relation_hints) == 1
-            and relation_hints[0] in {"ORBITS", "DISCOVERED_BY", "HAS_ATMOSPHERE", "LOCATED_IN", "PART_OF", "HAS_RADIUS", "HAS_MASS"}
+            and relation_hints[0] in {"ORBITS", "DISCOVERED_BY", "HAS_ATMOSPHERE", "LOCATED_IN", "PART_OF", "HAS_RADIUS", "HAS_MASS", "IS_A"}
         )
 
         if strict_relation_query:
-            if subject != primary or relation != relation_hints[0]:
+            if relation != relation_hints[0]:
+                return -1
+            if subject == primary:
+                score += 120
+            elif subject in entities:
+                score += 95
+            else:
                 return -1
         elif entities:
             if subject == primary:
@@ -387,6 +395,9 @@ class LLMAgent:
                 score += 120
             else:
                 return -1
+
+        if query_text.startswith(subject):
+            score += 45
 
         if relation_hints:
             if relation in relation_hints:
@@ -488,6 +499,376 @@ class LLMAgent:
 
         return []
 
+    @staticmethod
+    def _presentation_export_triples_path() -> str:
+        return os.path.join(BASE_DIR, "data", "presentation_exports", "solar_system_triples_merged.json")
+
+    def _load_multi_hop_fact_records(self, source_filter=None) -> list:
+        """Load the compact presentation fact set used as a deterministic multi-hop mirror."""
+        source_filter = normalize_source_filter(source_filter, fallback_source=self.source_name)
+        records = []
+        path = self._presentation_export_triples_path()
+        if not os.path.exists(path):
+            return records
+        try:
+            with open(path, "r", encoding="utf-8") as handle:
+                payload = json.load(handle)
+        except Exception:
+            return records
+        if isinstance(payload, dict):
+            payload = payload.get("records") or payload.get("triples") or []
+
+        for triple in payload:
+            normalized = normalize_triple_record(triple)
+            source_name = normalized.get("source") or normalized.get("source_name") or ACTIVE_SOURCE
+            if source_name not in source_filter:
+                continue
+            subject = self._normalize_entity_name(normalized.get("subject", ""))
+            relation = normalize_to_simplified(str(normalized.get("relation", "")).strip())
+            obj = normalize_to_simplified(str(normalized.get("object", "")).strip())
+            if not subject or not relation or not obj:
+                continue
+            records.append({
+                "subject": subject,
+                "relation": relation,
+                "object": obj,
+                "source": source_name,
+                "source_name": normalized.get("source_name") or source_name,
+                "source_title": normalized.get("source_title") or subject,
+                "source_role": normalized.get("source_role", SOURCE_ROLE),
+                "origin": normalized.get("origin", ""),
+                "schema_version": normalized.get("schema_version") or get_source_schema_version(source_name),
+            })
+        return records
+
+    @staticmethod
+    def _dedupe_fact_records(records: list) -> list:
+        deduped = []
+        seen = set()
+        for record in records or []:
+            key = (record.get("subject"), record.get("relation"), record.get("object"), record.get("source_name") or record.get("source"))
+            if key in seen:
+                continue
+            seen.add(key)
+            deduped.append(record)
+        return deduped
+
+    def _query_entity_relation(
+        self,
+        entity: str,
+        target_relations: list,
+        query_context: dict,
+        *,
+        loader=None,
+        limit: int = 20,
+        source_filter=None,
+    ) -> list:
+        if not entity or not target_relations:
+            return []
+
+        source_filter = normalize_source_filter(source_filter, fallback_source=self.source_name)
+        entity_context = dict(query_context)
+        entity_context["entities"] = [entity]
+        entity_context["primary_entity"] = entity
+        entity_context["relation_hints"] = list(dict.fromkeys(target_relations))
+        entity_context["topic_terms"] = [
+            term for term in query_context.get("topic_terms", [])
+            if term not in {"绕", "绕行", "公转", "轨道", "行星", "天体", "卫星", "所属", "数据", "集中", "标注"}
+        ]
+
+        resolved = []
+        if loader and getattr(loader, "driver", None):
+            try:
+                resolved = loader.search_graph(entity_context, limit=limit, source_filter=source_filter)
+            except Exception as exc:
+                logger.warning("多跳实体关系查询失败: %s", exc)
+        if not resolved:
+            resolved = self._search_local_triples(
+                entity_context.get("query", ""),
+                limit=limit,
+                query_context=entity_context,
+                source_filter=source_filter,
+            )
+        if not resolved:
+            resolved = [
+                record for record in self._load_multi_hop_fact_records(source_filter)
+                if record.get("subject") == entity and record.get("relation") in target_relations
+            ]
+
+        filtered = [
+            record for record in resolved
+            if record.get("subject") == entity and record.get("relation") in target_relations
+        ]
+        diameter_records = self._apply_diameter_derivation_if_needed(query_context, filtered)
+        if diameter_records:
+            return diameter_records[:limit]
+        return filtered[:limit]
+
+    @staticmethod
+    def _asks_for_diameter(query_context: dict) -> bool:
+        return (
+            "diameter" in query_context.get("topic_intents", [])
+            or "直径" in normalize_to_simplified(str(query_context.get("query", "") or ""))
+        )
+
+    @staticmethod
+    def _derive_diameter_record(radius_record: dict) -> dict:
+        obj = normalize_to_simplified(str(radius_record.get("object", "")).strip())
+        match = re.search(r"([0-9][0-9,]*(?:\.\d+)?)\s*(km|千米|公里)", obj, re.IGNORECASE)
+        if not match:
+            return {}
+        radius = float(match.group(1).replace(",", ""))
+        unit = "km" if match.group(2).lower() == "km" else match.group(2)
+        diameter = radius * 2
+        diameter_text = f"{diameter:,.1f} {unit}"
+        derived = dict(radius_record)
+        derived["relation"] = "HAS_DIAMETER"
+        derived["object"] = f"{diameter_text}（由半径 {radius_record.get('object')} × 2 计算）"
+        derived["origin"] = radius_record.get("origin") or ORIGIN_INTERNAL_LINK
+        return derived
+
+    @classmethod
+    def _derive_diameter_records_if_needed(cls, query_context: dict, records: list) -> list:
+        if not cls._asks_for_diameter(query_context):
+            return []
+        derived = []
+        for record in records or []:
+            if record.get("relation") != "HAS_RADIUS":
+                continue
+            diameter = cls._derive_diameter_record(record)
+            if diameter:
+                derived.append(diameter)
+        return derived
+
+    @classmethod
+    def _apply_diameter_derivation_if_needed(cls, query_context: dict, records: list) -> list:
+        derived = cls._derive_diameter_records_if_needed(query_context, records)
+        if not derived:
+            return []
+        non_radius = [record for record in records or [] if record.get("relation") != "HAS_RADIUS"]
+        return derived + non_radius
+
+    @staticmethod
+    def _asks_for_orbit_host_parameter(query_context: dict, target_relation: str) -> bool:
+        query = normalize_to_simplified(str(query_context.get("query", "") or ""))
+        relation_hints = query_context.get("relation_hints", [])
+        if "ORBITS" not in relation_hints or target_relation not in relation_hints:
+            return False
+        host_markers = (
+            "绕行的行星", "公转的行星", "环绕的行星", "绕着的行星", "绕著的行星",
+            "绕行的天体", "公转的天体", "环绕的天体", "绕着的天体", "绕著的天体",
+            "母行星", "主行星",
+        )
+        if any(marker in query for marker in host_markers):
+            return True
+        if "绕行" in query and "行星" in query:
+            return True
+        if "公转" in query and "行星" in query:
+            return True
+        if "的行星" in query or "所属行星" in query or "所属的行星" in query:
+            return True
+        if target_relation in {"IS_A", "HAS_ATMOSPHERE"} and ("绕行" in query or "公转" in query) and "天体" in query:
+            return True
+        return False
+
+    def _resolve_orbit_host_parameter(
+        self,
+        query_context: dict,
+        records: list,
+        *,
+        loader=None,
+        limit: int = 20,
+        source_filter=None,
+    ) -> list:
+        target_relations = [
+            relation
+            for relation in ("HAS_MASS", "HAS_RADIUS", "HAS_ATMOSPHERE", "IS_A")
+            if self._asks_for_orbit_host_parameter(query_context, relation)
+        ]
+        primary = query_context.get("primary_entity", "")
+        if not primary or not target_relations:
+            return []
+
+        host = ""
+        for record in records or []:
+            if record.get("subject") == primary and record.get("relation") == "ORBITS":
+                host = str(record.get("object") or "").strip()
+                break
+        if not host:
+            host = self._infer_satellite_host(primary)
+        if not host:
+            return []
+
+        return self._query_entity_relation(
+            host,
+            target_relations,
+            query_context,
+            loader=loader,
+            limit=limit,
+            source_filter=source_filter,
+        )
+
+    def _resolve_named_multi_hop_entity(
+        self,
+        query_context: dict,
+        *,
+        loader=None,
+        limit: int = 20,
+        source_filter=None,
+    ) -> list:
+        relation_hints = [item for item in query_context.get("relation_hints", []) if item in {"IS_A", "LOCATED_IN", "PART_OF"}]
+        if not relation_hints:
+            return []
+
+        query = query_context.get("query", "")
+        for entity in query_context.get("entities", []):
+            normalized = self._normalize_entity_name(entity)
+            if not normalized:
+                continue
+            if normalized and normalized in query and normalized.endswith(("卫星", "系统", "群")):
+                resolved = self._query_entity_relation(
+                    normalized,
+                    relation_hints,
+                    query_context,
+                    loader=loader,
+                    limit=limit,
+                    source_filter=source_filter,
+                )
+                if resolved:
+                    return resolved[:limit]
+        return []
+
+    def _resolve_reverse_multi_hop_query(self, query_context: dict, *, limit: int = 20, source_filter=None) -> list:
+        query = normalize_to_simplified(str(query_context.get("query", "") or ""))
+        if not query:
+            return []
+        facts = self._dedupe_fact_records(self._load_multi_hop_fact_records(source_filter))
+        if not facts:
+            return []
+
+        by_subject = {}
+        for record in facts:
+            by_subject.setdefault(record.get("subject"), []).append(record)
+
+        def has_fact(subject: str, relation: str, obj: str = "") -> bool:
+            for record in by_subject.get(subject, []):
+                if record.get("relation") != relation:
+                    continue
+                if not obj or record.get("object") == obj:
+                    return True
+            return False
+
+        def records_for(subject: str, relation: str, obj: str = "") -> list:
+            return [
+                record for record in by_subject.get(subject, [])
+                if record.get("relation") == relation and (not obj or record.get("object") == obj)
+            ]
+
+        discoverers = sorted({
+            record.get("object") for record in facts
+            if record.get("relation") == "DISCOVERED_BY" and record.get("object") in query
+        }, key=len, reverse=True)
+        systems = sorted({
+            record.get("object") for record in facts
+            if record.get("relation") in {"PART_OF", "LOCATED_IN"} and record.get("object") in query
+        }, key=len, reverse=True)
+
+        if discoverers and systems and "属于" in query and "发现" in query:
+            discoverer = discoverers[0]
+            system = systems[0]
+            subjects = [
+                subject for subject in by_subject
+                if has_fact(subject, "DISCOVERED_BY", discoverer) and has_fact(subject, "PART_OF", system)
+            ]
+            results = []
+            for subject in sorted(subjects):
+                results.extend(records_for(subject, "DISCOVERED_BY", discoverer))
+                results.extend(records_for(subject, "PART_OF", system))
+            return self._dedupe_fact_records(results)[:limit]
+
+        if discoverers and "发现" in query:
+            discoverer = discoverers[0]
+            if "绕" in query or "公转" in query:
+                target_relation = "ORBITS"
+            elif "属于" in query or "系统" in query:
+                target_relation = "PART_OF"
+            else:
+                target_relation = ""
+            if target_relation:
+                host_hint = ""
+                if "土星卫星" in query:
+                    host_hint = "土星"
+                elif "天王星卫星" in query:
+                    host_hint = "天王星"
+                elif "木星卫星" in query:
+                    host_hint = "木星"
+                elif "火星卫星" in query:
+                    host_hint = "火星"
+                results = []
+                for subject in sorted(by_subject):
+                    if not has_fact(subject, "DISCOVERED_BY", discoverer):
+                        continue
+                    if host_hint:
+                        if target_relation == "ORBITS" and not has_fact(subject, "ORBITS", host_hint):
+                            continue
+                        if target_relation == "PART_OF" and not has_fact(subject, "PART_OF", f"{host_hint}系统"):
+                            continue
+                    results.extend(records_for(subject, target_relation))
+                if results:
+                    return self._dedupe_fact_records(results)[:limit]
+
+        if ("绕太阳" in query or "太阳公转" in query) and "哪个" in query:
+            target_relation = "HAS_ATMOSPHERE" if "大气" in query else "IS_A"
+            target_objects = sorted({
+                record.get("object") for record in facts
+                if record.get("relation") == target_relation and record.get("object") in query
+            }, key=len, reverse=True)
+            if target_objects:
+                target_obj = target_objects[0]
+                results = []
+                for subject in sorted(by_subject):
+                    if has_fact(subject, "ORBITS", "太阳") and has_fact(subject, target_relation, target_obj):
+                        results.extend(records_for(subject, target_relation, target_obj))
+                if results:
+                    return self._dedupe_fact_records(results)[:limit]
+
+        return []
+
+    def _resolve_multi_hop_query(
+        self,
+        query_context: dict,
+        records: list,
+        *,
+        loader=None,
+        limit: int = 20,
+        source_filter=None,
+    ) -> list:
+        resolvers = (
+            lambda: self._resolve_orbit_host_parameter(
+                query_context,
+                records,
+                loader=loader,
+                limit=limit,
+                source_filter=source_filter,
+            ),
+            lambda: self._resolve_named_multi_hop_entity(
+                query_context,
+                loader=loader,
+                limit=limit,
+                source_filter=source_filter,
+            ),
+            lambda: self._resolve_reverse_multi_hop_query(
+                query_context,
+                limit=limit,
+                source_filter=source_filter,
+            ),
+        )
+        for resolve in resolvers:
+            resolved = resolve()
+            if resolved:
+                return resolved[:limit]
+        return []
+
     def _score_local_narrative_candidate(self, narrative: dict, query_context: dict) -> int:
         page_title = self._normalize_entity_name(narrative.get("page_title", ""))
         section = normalize_to_simplified(str(narrative.get("section", "")).strip())
@@ -586,6 +967,12 @@ class LLMAgent:
         source_filter = normalize_source_filter(source_filter, fallback_source=self.source_name)
         allow_active_source = ACTIVE_SOURCE in source_filter
         if not allow_active_source:
+            if self.source_name not in source_filter:
+                return {
+                    "graph_only": [],
+                    "final_result": [],
+                    "final_source": "fallback",
+                }
             fallback = self._search_local_triples(query, limit, query_context=query_context, source_filter=source_filter)
             return {
                 "graph_only": [],
@@ -595,19 +982,78 @@ class LLMAgent:
         loader = self._get_neo4j_loader()
         if not loader or not loader.driver:
             fallback = self._search_local_triples(query, limit, query_context=query_context, source_filter=source_filter)
+            multi_hop = self._resolve_multi_hop_query(
+                query_context,
+                fallback,
+                loader=None,
+                limit=limit,
+                source_filter=source_filter,
+            )
+            if multi_hop:
+                return {
+                    "graph_only": [],
+                    "final_result": multi_hop[:limit],
+                    "final_source": "graph",
+                }
+            diameter = self._apply_diameter_derivation_if_needed(query_context, fallback)
+            if diameter:
+                return {
+                    "graph_only": [],
+                    "final_result": diameter[:limit],
+                    "final_source": "graph",
+                }
+            if fallback:
+                return {
+                    "graph_only": [],
+                    "final_result": fallback,
+                    "final_source": "graph",
+                }
             inferred = self._infer_structured_graph_answer(query_context) if allow_active_source else []
-            final = inferred[:limit] if inferred else fallback
             return {
                 "graph_only": [],
-                "final_result": final,
+                "final_result": inferred[:limit],
                 "final_source": "inferred" if inferred else "fallback",
             }
         try:
             records = loader.search_graph(query_context, limit=limit, source_filter=source_filter)
+            multi_hop = self._resolve_multi_hop_query(
+                query_context,
+                records,
+                loader=loader,
+                limit=limit,
+                source_filter=source_filter,
+            )
+            if multi_hop:
+                return {
+                    "graph_only": records[:limit],
+                    "final_result": multi_hop[:limit],
+                    "final_source": "graph",
+                }
+            diameter = self._apply_diameter_derivation_if_needed(query_context, records)
+            if diameter:
+                return {
+                    "graph_only": records[:limit],
+                    "final_result": diameter[:limit],
+                    "final_source": "graph",
+                }
             if records:
                 return {
                     "graph_only": records[:limit],
                     "final_result": records[:limit],
+                    "final_source": "graph",
+                }
+            fallback = self._search_local_triples(query, limit, query_context=query_context, source_filter=source_filter)
+            if fallback:
+                diameter = self._apply_diameter_derivation_if_needed(query_context, fallback)
+                if diameter:
+                    return {
+                        "graph_only": [],
+                        "final_result": diameter[:limit],
+                        "final_source": "graph",
+                    }
+                return {
+                    "graph_only": [],
+                    "final_result": fallback,
                     "final_source": "graph",
                 }
             inferred = self._infer_structured_graph_answer(query_context) if allow_active_source else []
@@ -617,7 +1063,6 @@ class LLMAgent:
                     "final_result": inferred[:limit],
                     "final_source": "inferred",
                 }
-            fallback = self._search_local_triples(query, limit, query_context=query_context, source_filter=source_filter)
             return {
                 "graph_only": [],
                 "final_result": fallback,
@@ -626,11 +1071,36 @@ class LLMAgent:
         except Exception as e:
             logger.warning("Neo4j 搜索失败: %s", e)
             fallback = self._search_local_triples(query, limit, query_context=query_context, source_filter=source_filter)
+            multi_hop = self._resolve_multi_hop_query(
+                query_context,
+                fallback,
+                loader=None,
+                limit=limit,
+                source_filter=source_filter,
+            )
+            if multi_hop:
+                return {
+                    "graph_only": [],
+                    "final_result": multi_hop[:limit],
+                    "final_source": "graph",
+                }
+            diameter = self._apply_diameter_derivation_if_needed(query_context, fallback)
+            if diameter:
+                return {
+                    "graph_only": [],
+                    "final_result": diameter[:limit],
+                    "final_source": "graph",
+                }
+            if fallback:
+                return {
+                    "graph_only": [],
+                    "final_result": fallback,
+                    "final_source": "graph",
+                }
             inferred = self._infer_structured_graph_answer(query_context) if allow_active_source else []
-            final = inferred[:limit] if inferred else fallback
             return {
                 "graph_only": [],
-                "final_result": final,
+                "final_result": inferred[:limit],
                 "final_source": "inferred" if inferred else "fallback",
             }
 
@@ -674,6 +1144,20 @@ class LLMAgent:
                 score += 1
         return score
 
+    @staticmethod
+    def _local_artifact_paths(source_filter: list, suffix: str) -> list[tuple[str, str]]:
+        paths = []
+        seen = set()
+        for source_name in source_filter:
+            namespace_dir = get_source_namespace_dir(TRIPLES_DIR, source_name)
+            pattern = os.path.join(namespace_dir, f"*_{suffix}.json")
+            for path in glob.glob(pattern):
+                if path in seen:
+                    continue
+                seen.add(path)
+                paths.append((source_name, path))
+        return paths
+
     def _search_local_triples(self, query: str, limit=20, query_context: dict = None, source_filter=None) -> list:
         """从 data/triples/*_triples.json 兜底检索关系。"""
         from src.knowledge_graph.neo4j_loader import Neo4jLoader
@@ -681,7 +1165,7 @@ class LLMAgent:
         query_context = query_context or self._extract_query_context(query)
         source_filter = normalize_source_filter(source_filter, fallback_source=self.source_name)
         results = []
-        for path in glob.glob(os.path.join(self.triples_dir, '*_triples.json')):
+        for source_name, path in self._local_artifact_paths(source_filter, "triples"):
             try:
                 with open(path, 'r', encoding='utf-8') as f:
                     triples = json.load(f)
@@ -695,7 +1179,7 @@ class LLMAgent:
 
             for triple in candidate_triples:
                 normalized = normalize_triple_record(triple)
-                resolved_source = normalized.get('source') or normalized.get('source_name') or self.source_name
+                resolved_source = normalized.get('source') or normalized.get('source_name') or source_name
                 if resolved_source not in source_filter:
                     continue
                 subject = str(normalized.get('subject', ''))
@@ -750,6 +1234,26 @@ class LLMAgent:
                     '_score': score,
                 })
 
+        if not results and len(source_filter) == 1:
+            primary = query_context.get("primary_entity", "")
+            host = self._infer_satellite_host(primary)
+            relation_hints = query_context.get("relation_hints", [])
+            relation = "ORBITS" if "ORBITS" in relation_hints else "PART_OF" if "PART_OF" in relation_hints else ""
+            if host and relation:
+                obj = host if relation == "ORBITS" else f"{host}系统"
+                results.append({
+                    'subject': primary,
+                    'relation': relation,
+                    'object': obj,
+                    'source': source_filter[0],
+                    'source_name': source_filter[0],
+                    'source_title': primary,
+                    'source_role': SOURCE_ROLE,
+                    'origin': ORIGIN_INTERNAL_LINK,
+                    'schema_version': get_source_schema_version(source_filter[0]),
+                    '_score': 100,
+                })
+
         results.sort(key=lambda item: item.pop('_score'), reverse=True)
         return results[:limit]
 
@@ -759,7 +1263,7 @@ class LLMAgent:
         query_context = query_context or self._extract_query_context(query)
         source_filter = normalize_source_filter(source_filter, fallback_source=self.source_name)
         candidates = []
-        for path in glob.glob(os.path.join(self.triples_dir, '*_narratives.json')):
+        for source_name, path in self._local_artifact_paths(source_filter, "narratives"):
             try:
                 with open(path, 'r', encoding='utf-8') as f:
                     narratives = json.load(f)
@@ -768,7 +1272,7 @@ class LLMAgent:
 
             for nar in narratives:
                 normalized = normalize_narrative_record(nar)
-                resolved_source = normalized.get('source') or normalized.get('source_name') or self.source_name
+                resolved_source = normalized.get('source') or normalized.get('source_name') or source_name
                 if resolved_source not in source_filter:
                     continue
                 content = str(normalized.get('content', ''))
@@ -829,6 +1333,8 @@ class LLMAgent:
     @staticmethod
     def _fixture_bundle_paths_for_source(source_name: str) -> list[str]:
         normalized = str(source_name or "").strip()
+        if normalized == "wikidata":
+            return [os.path.join(BASE_DIR, "data", "source_fixtures", "wikidata", "solar_system_fixture.json")]
         if normalized == "nasa":
             return [os.path.join(BASE_DIR, "data", "source_fixtures", "nasa", "query_fixture.json")]
         if normalized == "esa":
@@ -1095,6 +1601,19 @@ class LLMAgent:
             for source_name in selected_sources
         ]
 
+    @staticmethod
+    def _answer_relation_priority(query_context: dict) -> List[str]:
+        relation_hints = list(query_context.get("relation_hints", []) or [])
+        priority = [
+            relation
+            for relation in ("HAS_MASS", "HAS_RADIUS", "HAS_ATMOSPHERE")
+            if relation in relation_hints
+        ]
+        for relation in relation_hints:
+            if relation not in priority:
+                priority.append(relation)
+        return priority
+
     def _fuse_auto_results(
         self,
         query: str,
@@ -1116,7 +1635,12 @@ class LLMAgent:
         neo4j_results, authority_by_relation, conflicts, fusion_summary = self._group_graph_records(raw_neo4j_results, routing_trace)
         chroma_results = self._sort_chroma_results(raw_chroma_results, routing_trace)
         authority_source = ""
-        if authority_by_relation:
+        query_context = self._extract_query_context(query)
+        for relation in self._answer_relation_priority(query_context):
+            if authority_by_relation.get(relation):
+                authority_source = authority_by_relation[relation]
+                break
+        if not authority_source and authority_by_relation:
             authority_source = next(iter(authority_by_relation.values()))
         if not authority_source:
             authority_source = self._intent_authority_source(routing_trace, selected_sources)
@@ -1378,6 +1902,7 @@ class LLMAgent:
             "HAS_ATMOSPHERE": "大气成分",
             "DISCOVERED_BY": "发现者",
             "HAS_RADIUS": "半径",
+            "HAS_DIAMETER": "直径",
             "HAS_MASS": "质量",
         }
         return mapping.get(str(relation or "").strip(), str(relation or "").strip())
@@ -1385,6 +1910,7 @@ class LLMAgent:
     @classmethod
     def _graph_relation_priority(cls, relation: str) -> int:
         priorities = {
+            "HAS_DIAMETER": 105,
             "HAS_RADIUS": 100,
             "HAS_MASS": 95,
             "PART_OF": 85,
@@ -1411,6 +1937,7 @@ class LLMAgent:
             'HAS_ATMOSPHERE': f'{subject}的大气成分包含{obj}',
             'DISCOVERED_BY': f'{subject}由{obj}发现',
             'HAS_RADIUS': f'{subject}的半径为{obj}',
+            'HAS_DIAMETER': f'{subject}的直径为{obj}',
             'HAS_MASS': f'{subject}的质量为{obj}',
         }
         return templates.get(relation, f'{subject} {cls._graph_relation_label(relation)} {obj}')
@@ -1689,4 +2216,9 @@ class LLMAgent:
             except Exception as e:
                 logger.warning("Neo4jLoader 关闭异常: %s", e)
             self._neo4j_loader = None
+        if self._chroma_store:
+            try:
+                self._chroma_store.close()
+            except Exception as e:
+                logger.warning("ChromaStore 关闭异常: %s", e)
         self._chroma_store = None

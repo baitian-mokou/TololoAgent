@@ -1,0 +1,22 @@
+{
+  "source_name": "journal_publisher_candidate",
+  "source_mode": "publisher",
+  "allowed_domains": ["journal.example.org"],
+  "seed_urls": ["https://journal.example.org/articles/planetary-atmospheres-review"],
+  "include_path_keywords": ["article", "abstract", "journal", "doi", "research"],
+  "exclude_path_keywords": ["subscribe", "login", "authors", "guidelines", "privacy", "search"],
+  "max_depth": 0,
+  "max_pages_per_run": 10,
+  "max_discovery_fetch_pages": 0,
+  "crawl_delay": 1.0,
+  "topic_taxonomy": ["planetary_science", "atmosphere", "journal", "abstract"],
+  "quality_gate": {
+    "accepted_min_score": 80,
+    "review_min_score": 45,
+    "allow_exploratory": true,
+    "skip_rejected_allowed": false
+  },
+  "quality_notes": "Publisher pages need conservative review because abstracts, paywalls and catalog pages mix together.",
+  "fixture_candidates": "tests/fixtures/source_quality/journal_publisher_candidate_candidates.json",
+  "notes": "Unregistered Phase 28 candidate. Sandbox only."
+}

@@ -1,0 +1,41 @@
+{
+  "schema_version": 1,
+  "sources": [
+    {
+      "source_id": "noaa_climate_candidate",
+      "review_decision": "approved_for_small_batch",
+      "reviewer_notes": "示例回填：NOAA-style fixture 中 fact/data page 可用，rejected search 噪声符合预期；仅用于计划预览，不代表已执行抓取。",
+      "approved_sample_size": 8
+    },
+    {
+      "source_id": "data_portal_candidate",
+      "review_decision": "approved_for_small_batch",
+      "reviewer_notes": "示例回填：dataset metadata page 有 table/reference 信号，login 噪声被拒绝；仅用于计划预览。",
+      "approved_sample_size": 8
+    },
+    {
+      "source_id": "university_lab_candidate",
+      "review_decision": "pending",
+      "reviewer_notes": "需要人工抽样实验室项目页和 publication abstract，确认是否适合进入小批量。",
+      "approved_sample_size": 0
+    },
+    {
+      "source_id": "arxiv_preprint_candidate",
+      "review_decision": "pending",
+      "reviewer_notes": "预印本元数据应先设计 paper-specific gate；本阶段不接 API。",
+      "approved_sample_size": 0
+    },
+    {
+      "source_id": "journal_publisher_candidate",
+      "review_decision": "pending",
+      "reviewer_notes": "publisher landing、abstract、author guideline 混杂，需人工抽样判断。",
+      "approved_sample_size": 0
+    },
+    {
+      "source_id": "museum_observatory_candidate",
+      "review_decision": "pending",
+      "reviewer_notes": "教育内容可能有用，但 generic_unknown 需要更保守抽样。",
+      "approved_sample_size": 0
+    }
+  ]
+}

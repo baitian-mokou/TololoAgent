@@ -15,6 +15,8 @@ from scripts.ingest_solar_system_sources import (
     _build_zh_record_from_raw_payload,
     _build_zh_records,
     _load_source_state,
+    _materialize_shadow_namespace,
+    _nasa_record_from_payload,
     _save_source_state,
     _source_raw_record_paths,
     clear_source_ingestion_outputs,
@@ -92,6 +94,40 @@ class IngestSolarSystemSourcesTests(unittest.TestCase):
             self.assertEqual(report["raw_records_written"], 1)
             self.assertEqual(report["triples_written"], 1)
             self.assertEqual(report["narratives_written"], 1)
+
+    def test_ingest_removes_stale_processed_files_before_writing_current_records(self):
+        with tempfile.TemporaryDirectory() as tmpdir:
+            root = Path(tmpdir)
+            raw_root = root / "data" / "raw_json"
+            triples_root = root / "data" / "triples"
+            evaluation_root = root / "evaluation" / "ingestion"
+            stale_dir = triples_root / "esa"
+            stale_dir.mkdir(parents=True)
+            (stale_dir / "旧任务_triples.json").write_text("[]", encoding="utf-8")
+            (stale_dir / "旧任务_narratives.json").write_text("[]", encoding="utf-8")
+
+            ingest_records_for_source(
+                source_name="esa",
+                records=[{
+                    "raw_id": "juice",
+                    "raw_payload": {"title": "JUICE"},
+                    "title": "JUICE",
+                    "triples": [{"subject": "JUICE", "relation": "HAS_MISSION_TARGET", "object": "木星"}],
+                    "narratives": [{"section": "任务", "content": "JUICE 探测木星。"}],
+                    "source_url": "https://www.esa.int/Science_Exploration/Space_Science/Juice",
+                }],
+                base_dir=str(root),
+                raw_root=str(raw_root),
+                triples_root=str(triples_root),
+                evaluation_root=str(evaluation_root),
+                materialize_graph=False,
+                materialize_chroma=False,
+            )
+
+            self.assertFalse((stale_dir / "旧任务_triples.json").exists())
+            self.assertFalse((stale_dir / "旧任务_narratives.json").exists())
+            self.assertEqual(len(list(stale_dir.glob("*_triples.json"))), 1)
+            self.assertEqual(len(list(stale_dir.glob("*_narratives.json"))), 1)
 
     def test_ingest_report_preserves_requested_source_label(self):
         with tempfile.TemporaryDirectory() as tmpdir:
@@ -280,6 +316,24 @@ class IngestSolarSystemSourcesTests(unittest.TestCase):
         self.assertEqual(errors, [])
         self.assertEqual(skipped, [])
 
+    def test_nasa_mars_maintenance_page_uses_strict_table_fallback(self):
+        from src.source_adapters.nasa import NasaPipelineAdapter
+
+        record = _nasa_record_from_payload(
+            NasaPipelineAdapter(timeout=1),
+            {
+                "title": "火星",
+                "source_url": "https://nssdc.gsfc.nasa.gov/planetary/factsheet/marsfact.html",
+                "html": "<html><title>NASA Space Science Data Coordinated Archive Status - NASA</title><body>temporarily offline for maintenance</body></html>",
+                "fetched_at": "2026-01-01T00:00:00+00:00",
+            },
+        )
+
+        by_relation = {item["relation"]: item["object"] for item in record["triples"]}
+        self.assertEqual(by_relation["HAS_MASS"], "6.4171e23 kg")
+        self.assertEqual(by_relation["HAS_RADIUS"], "3389.5 km")
+        self.assertIn("HAS_ATMOSPHERE", by_relation)
+
     def test_build_zh_record_from_raw_payload_extracts_venus_radius_from_html(self):
         payload = {
             "title": "金星",
@@ -424,7 +478,10 @@ class IngestSolarSystemSourcesTests(unittest.TestCase):
             ),
         ]
 
-        with patch("scripts.ingest_solar_system_sources._discover_esa_candidate_pages", return_value=(candidate_pages, candidate_pages)), patch(
+        with patch("scripts.ingest_solar_system_sources._load_first_existing_json", return_value={"records": []}), patch(
+            "scripts.ingest_solar_system_sources._discover_esa_candidate_pages",
+            return_value=(candidate_pages, candidate_pages),
+        ), patch(
             "scripts.ingest_solar_system_sources._source_raw_record_paths",
             return_value=[],
         ):
@@ -432,6 +489,45 @@ class IngestSolarSystemSourcesTests(unittest.TestCase):
 
         self.assertEqual(len(records), 2)
         self.assertEqual(set(record["title"] for record in records), {"JUICE", "Mars Express"})
+        self.assertEqual(errors, [])
+        self.assertEqual(skipped, [])
+        self.assertEqual(warnings, [])
+
+    def test_esa_records_prioritize_core_fixture_before_raw_pages(self):
+        config = ControlledSourceConfig(
+            source_name="esa",
+            allowed_domains=("www.esa.int", "esa.int"),
+            seed_items=[
+                {
+                    "title": "SMART-1",
+                    "url": "https://www.esa.int/Science_Exploration/Space_Science/SMART-1",
+                    "targets": ["月球"],
+                }
+            ],
+        )
+        fixture_payload = {
+            "records": [{
+                "title": "SMART-1",
+                "triples": [{"subject": "SMART-1", "relation": "ORBITS", "object": "月球"}],
+                "narratives": [{"section": "任务", "content": "SMART-1 绕月球运行。"}],
+            }]
+        }
+        raw_payload = {
+            "title": "ESA - Facts about Mars",
+            "url": "https://www.esa.int/Science_Exploration/Space_Science/Mars_Express/Facts_about_Mars",
+            "html": "<html><head><title>ESA - Facts about Mars</title></head><body>Mars Express studies Mars.</body></html>",
+        }
+
+        with patch("scripts.ingest_solar_system_sources.source_config_for", return_value=config), patch(
+            "scripts.ingest_solar_system_sources._load_first_existing_json",
+            return_value=fixture_payload,
+        ), patch("scripts.ingest_solar_system_sources._source_raw_record_paths", return_value=[Path("raw_mars.json")]), patch(
+            "scripts.ingest_solar_system_sources.load_json",
+            return_value=raw_payload,
+        ):
+            records, warnings, errors, skipped = _build_esa_records(limit=1, mode="offline")
+
+        self.assertEqual([record["title"] for record in records], ["SMART-1"])
         self.assertEqual(errors, [])
         self.assertEqual(skipped, [])
         self.assertEqual(warnings, [])
@@ -578,6 +674,45 @@ class IngestSolarSystemSourcesTests(unittest.TestCase):
             self.assertGreaterEqual(len(report["deleted"]["directories"]), 2)
             self.assertEqual(len(report["deleted"]["files"]), 1)
             self.assertEqual(report["runtime_managed"]["chroma_dir"], str(chroma_root / "nasa"))
+
+    def test_materialize_shadow_namespace_replaces_existing_graph_namespace(self):
+        calls = []
+
+        class FakeLoader:
+            driver = object()
+
+            def __init__(self, source_name):
+                self.source_name = source_name
+
+            def clear_source_namespace(self, source_name):
+                calls.append(("clear", source_name))
+                return 3
+
+            def load_all_triples(self, triples_dir=None):
+                calls.append(("load", triples_dir))
+                return 2, 1
+
+            def get_stats(self):
+                return {"nodes": 2, "rels": 1}
+
+            def close(self):
+                calls.append(("close", self.source_name))
+
+        with patch("scripts.ingest_solar_system_sources.Neo4jLoader", FakeLoader), patch(
+            "scripts.ingest_solar_system_sources._can_materialize_chroma",
+            return_value=False,
+        ):
+            graph_written, chroma_written, details, warnings, errors = _materialize_shadow_namespace(
+                "nasa",
+                "triples/nasa",
+            )
+
+        self.assertTrue(graph_written)
+        self.assertFalse(chroma_written)
+        self.assertEqual(calls[:2], [("clear", "nasa"), ("load", "triples/nasa")])
+        self.assertEqual(details["graph"]["cleared_items"], 3)
+        self.assertEqual(errors, [])
+        self.assertTrue(any("embedding model cache" in warning for warning in warnings))
 
 
 if __name__ == "__main__":

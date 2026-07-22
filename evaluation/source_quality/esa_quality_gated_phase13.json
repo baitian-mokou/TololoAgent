@@ -1,0 +1,182 @@
+{
+  "source": "esa",
+  "source_name": "esa",
+  "mode": "manifest_frontier_raw_only",
+  "generated_at": "2026-07-21T16:52:15.159449+00:00",
+  "frontier_accepted_count": 8,
+  "requested_limit": 4,
+  "fetched_count": 4,
+  "skipped_count": 0,
+  "failed_count": 0,
+  "raw_root": "F:\\知识表示与处理结课作业\\TololoAgent\\evaluation\\source_quality\\phase13_raw\\gated\\esa",
+  "items": [
+    {
+      "url": "https://www.esa.int/Science_Exploration/Space_Science",
+      "status": "fetched",
+      "reason": "ok",
+      "title": "ESA - Space Science",
+      "text_length": 3391,
+      "saved_path": "F:\\知识表示与处理结课作业\\TololoAgent\\evaluation\\source_quality\\phase13_raw\\gated\\esa\\https_www.esa.int_Science_Exploration_Space_Science.json",
+      "quality_score": 75,
+      "quality_triage": "accepted",
+      "quality_labels": [
+        "official_source",
+        "science_topic",
+        "fact_page",
+        "mission_page",
+        "navigation_noise"
+      ],
+      "quality_reasons": [
+        "official or academic domain",
+        "science keyword hits=11",
+        "fact or overview page signal",
+        "mission page signal",
+        "news/update signal in body/navigation",
+        "media/gallery signal in body/navigation"
+      ],
+      "quality_metrics": {
+        "text_length": 3391,
+        "link_density_estimate": 19.168,
+        "table_count": 0,
+        "science_keyword_hits": 11,
+        "blocked_keyword_hits": 6,
+        "news_keyword_hits": 3,
+        "path_media_keyword_hits": 0,
+        "body_media_keyword_hits": 6,
+        "path_news_keyword_hits": 0,
+        "body_news_keyword_hits": 3,
+        "reference_keyword_hits": 0
+      }
+    },
+    {
+      "url": "https://www.esa.int/Science_Exploration/Space_Science/Juice",
+      "status": "fetched",
+      "reason": "ok",
+      "title": "ESA - Juice",
+      "text_length": 4847,
+      "saved_path": "F:\\知识表示与处理结课作业\\TololoAgent\\evaluation\\source_quality\\phase13_raw\\gated\\esa\\https_www.esa.int_Science_Exploration_Space_Science_Juice.json",
+      "quality_score": 75,
+      "quality_triage": "accepted",
+      "quality_labels": [
+        "official_source",
+        "science_topic",
+        "fact_page",
+        "mission_page",
+        "navigation_noise"
+      ],
+      "quality_reasons": [
+        "official or academic domain",
+        "science keyword hits=13",
+        "fact or overview page signal",
+        "mission page signal",
+        "news/update signal in body/navigation",
+        "media/gallery signal in body/navigation"
+      ],
+      "quality_metrics": {
+        "text_length": 4847,
+        "link_density_estimate": 15.886,
+        "table_count": 0,
+        "science_keyword_hits": 13,
+        "blocked_keyword_hits": 6,
+        "news_keyword_hits": 2,
+        "path_media_keyword_hits": 0,
+        "body_media_keyword_hits": 6,
+        "path_news_keyword_hits": 0,
+        "body_news_keyword_hits": 2,
+        "reference_keyword_hits": 0
+      }
+    },
+    {
+      "url": "https://www.esa.int/Science_Exploration/Space_Science/Rosetta",
+      "status": "fetched",
+      "reason": "ok",
+      "title": "ESA - Rosetta",
+      "text_length": 4421,
+      "saved_path": "F:\\知识表示与处理结课作业\\TololoAgent\\evaluation\\source_quality\\phase13_raw\\gated\\esa\\https_www.esa.int_Science_Exploration_Space_Science_Rosetta.json",
+      "quality_score": 75,
+      "quality_triage": "accepted",
+      "quality_labels": [
+        "official_source",
+        "science_topic",
+        "fact_page",
+        "mission_page",
+        "navigation_noise"
+      ],
+      "quality_reasons": [
+        "official or academic domain",
+        "science keyword hits=11",
+        "fact or overview page signal",
+        "mission page signal",
+        "news/update signal in body/navigation",
+        "media/gallery signal in body/navigation"
+      ],
+      "quality_metrics": {
+        "text_length": 4421,
+        "link_density_estimate": 16.512,
+        "table_count": 0,
+        "science_keyword_hits": 11,
+        "blocked_keyword_hits": 6,
+        "news_keyword_hits": 3,
+        "path_media_keyword_hits": 0,
+        "body_media_keyword_hits": 6,
+        "path_news_keyword_hits": 0,
+        "body_news_keyword_hits": 3,
+        "reference_keyword_hits": 0
+      }
+    },
+    {
+      "url": "https://www.esa.int/Science_Exploration/Space_Science/Gaia",
+      "status": "fetched",
+      "reason": "ok",
+      "title": "ESA - Gaia",
+      "text_length": 4834,
+      "saved_path": "F:\\知识表示与处理结课作业\\TololoAgent\\evaluation\\source_quality\\phase13_raw\\gated\\esa\\https_www.esa.int_Science_Exploration_Space_Science_Gaia.json",
+      "quality_score": 71,
+      "quality_triage": "accepted",
+      "quality_labels": [
+        "official_source",
+        "science_topic",
+        "fact_page",
+        "mission_page",
+        "navigation_noise"
+      ],
+      "quality_reasons": [
+        "official or academic domain",
+        "science keyword hits=7",
+        "fact or overview page signal",
+        "mission page signal",
+        "news/update signal in body/navigation",
+        "media/gallery signal in body/navigation"
+      ],
+      "quality_metrics": {
+        "text_length": 4834,
+        "link_density_estimate": 15.308,
+        "table_count": 0,
+        "science_keyword_hits": 7,
+        "blocked_keyword_hits": 6,
+        "news_keyword_hits": 3,
+        "path_media_keyword_hits": 0,
+        "body_media_keyword_hits": 6,
+        "path_news_keyword_hits": 0,
+        "body_news_keyword_hits": 3,
+        "reference_keyword_hits": 0
+      }
+    }
+  ],
+  "quality_summary": {
+    "total": 4,
+    "triage_counts": {
+      "accepted": 4
+    },
+    "top_reasons": {
+      "official or academic domain": 4,
+      "fact or overview page signal": 4,
+      "mission page signal": 4,
+      "news/update signal in body/navigation": 4,
+      "media/gallery signal in body/navigation": 4,
+      "science keyword hits=11": 2,
+      "science keyword hits=13": 1,
+      "science keyword hits=7": 1
+    }
+  }
+}

@@ -1,0 +1,67 @@
+{
+  "schema_version": 1,
+  "purpose": "Catalog of unregistered science site candidates for sandbox-only screening.",
+  "candidate_sites": [
+    {
+      "source_id": "noaa_climate_candidate",
+      "type": "government science agency",
+      "example_domain": "climate.gov",
+      "source_mode": "official_science",
+      "screening_goal": "Climate fact pages and datasets; reject policy/search/gallery noise."
+    },
+    {
+      "source_id": "usgs_hazards_candidate",
+      "type": "government science agency",
+      "example_domain": "usgs.gov",
+      "source_mode": "official_science",
+      "screening_goal": "Earth science hazard facts and data pages."
+    },
+    {
+      "source_id": "university_lab_candidate",
+      "type": "university lab / research center",
+      "example_domain": "example.edu",
+      "source_mode": "academic",
+      "screening_goal": "Research project and lab overview pages before crawl approval."
+    },
+    {
+      "source_id": "arxiv_preprint_candidate",
+      "type": "paper/preprint metadata",
+      "example_domain": "arxiv.org",
+      "source_mode": "academic",
+      "screening_goal": "Abstract metadata pages, not API ingestion."
+    },
+    {
+      "source_id": "journal_publisher_candidate",
+      "type": "academic publisher / journal landing",
+      "example_domain": "journal.example.org",
+      "source_mode": "publisher",
+      "screening_goal": "Article abstracts and journal landing pages with conservative review."
+    },
+    {
+      "source_id": "museum_observatory_candidate",
+      "type": "museum / observatory / science education",
+      "example_domain": "observatory.example.org",
+      "source_mode": "generic_unknown",
+      "screening_goal": "Education pages may be useful, but require manual review."
+    },
+    {
+      "source_id": "data_portal_candidate",
+      "type": "standards/data portal",
+      "example_domain": "data.example.gov",
+      "source_mode": "official_science",
+      "screening_goal": "Dataset landing pages with references and tables."
+    },
+    {
+      "source_id": "nih_health_candidate",
+      "type": "government biomedical science",
+      "example_domain": "nih.gov",
+      "source_mode": "official_science",
+      "screening_goal": "Biomedical fact pages; candidate only until domain scope is reviewed."
+    }
+  ],
+  "safety_notes": [
+    "Catalog only; not a Manifest 2.0 source.",
+    "Do not register these candidates before manual review.",
+    "Phase 28 uses local fixtures only and network=false."
+  ]
+}

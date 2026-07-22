@@ -1,12 +1,14 @@
+# Local-only settings and logs
 settings.local.json
 error.log
-__pycache__/
-*.pyc
 
 # Python / test caches
+__pycache__/
+*.pyc
 .pytest_cache/
 .mypy_cache/
 .ruff_cache/
+.cache/
 *.pyo
 *.pyd
 
@@ -14,9 +16,11 @@ __pycache__/
 venv/
 .venv/
 env/
+ENV/
 
 # Local model and runtime artifacts
 models/
+ollama/
 *.pid
 *.log
 *.out.txt
@@ -24,7 +28,12 @@ models/
 
 # Local databases and generated vector indexes
 data/chroma_db/
+data/chroma/
+data/**/chroma_db/
 data/chroma_db.broken.*/
+data/chroma_db.broken*/
+data/**/chroma_db.broken*/
+chroma.sqlite3
 *.sqlite
 *.sqlite3
 *.db
@@ -35,6 +44,3 @@ data/chroma_db.broken.*/
 *.bak
 tmp_*.json
 evaluation/**/tmp_*.json
-
-# Local-only settings/secrets
-settings.local.json

@@ -1,0 +1,66 @@
+{
+  "mode": "approved_small_batch_plan_preview",
+  "generated_at": "2026-07-22T02:28:57.135492+00:00",
+  "review_summary_json": "2026-07-22T02:28:46.048169+00:00",
+  "execution_status": "not_run",
+  "network": false,
+  "formal_pipeline_write": false,
+  "summary": {
+    "approved_sources": 2,
+    "plan_items": 2
+  },
+  "items": [
+    {
+      "source_id": "data_portal_candidate",
+      "approved_sample_size": 8,
+      "candidate_count": 3,
+      "selected_candidate_urls": [
+        "https://data.example.gov/datasets/solar-irradiance",
+        "https://data.example.gov/catalog/earth-science",
+        "https://data.example.gov/login"
+      ],
+      "selected_candidate_titles": [
+        "Solar Irradiance Dataset Metadata",
+        "Earth Science Data Catalog",
+        "Data Portal Login"
+      ],
+      "quality_guard_required": true,
+      "network_required_for_future_run": true,
+      "execution_status": "not_run",
+      "blocked_until": "manual command",
+      "reviewer_notes": "示例回填：dataset metadata page 有 table/reference 信号，login 噪声被拒绝；仅用于计划预览。",
+      "source_summary": {
+        "accepted": 1,
+        "review_needed": 1,
+        "exploratory": 0,
+        "rejected": 1
+      }
+    },
+    {
+      "source_id": "noaa_climate_candidate",
+      "approved_sample_size": 8,
+      "candidate_count": 3,
+      "selected_candidate_urls": [
+        "https://www.climate.gov/climate-and-energy/topics/climate-change",
+        "https://www.climate.gov/news/features/new-seasonal-outlook",
+        "https://www.climate.gov/search?query=climate"
+      ],
+      "selected_candidate_titles": [
+        "Climate Change: Global Temperature Indicators",
+        "Seasonal Climate Outlook News",
+        "Search results"
+      ],
+      "quality_guard_required": true,
+      "network_required_for_future_run": true,
+      "execution_status": "not_run",
+      "blocked_until": "manual command",
+      "reviewer_notes": "示例回填：NOAA-style fixture 中 fact/data page 可用，rejected search 噪声符合预期；仅用于计划预览，不代表已执行抓取。",
+      "source_summary": {
+        "accepted": 1,
+        "review_needed": 0,
+        "exploratory": 1,
+        "rejected": 1
+      }
+    }
+  ]
+}

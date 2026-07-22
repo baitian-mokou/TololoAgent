@@ -1,0 +1,17 @@
+[
+  {
+    "url": "https://data.example.gov/datasets/solar-irradiance",
+    "title": "Solar Irradiance Dataset Metadata",
+    "html": "<html><body><h1>Solar Irradiance Dataset</h1><table><tr><th>Variable</th><td>solar irradiance</td></tr><tr><th>Coverage</th><td>Earth observation</td></tr></table><p>Official dataset metadata includes science references, source, standard fields, measurements, atmosphere context and citation guidance.</p></body></html>"
+  },
+  {
+    "url": "https://data.example.gov/catalog/earth-science",
+    "title": "Earth Science Data Catalog",
+    "text": "Catalog page for climate, solar, atmosphere and Earth science datasets. It has useful metadata but should be sampled before ingest."
+  },
+  {
+    "url": "https://data.example.gov/login",
+    "title": "Data Portal Login",
+    "text": "Sign in to manage API keys and account settings."
+  }
+]

@@ -1,0 +1,17 @@
+[
+  {
+    "url": "https://observatory.example.org/education/solar-system/planets",
+    "title": "Planets of the Solar System",
+    "text": "This education page explains planet orbit, moon, asteroid, comet, atmosphere, mass, radius, diameter, telescope observations and references for astronomy learners."
+  },
+  {
+    "url": "https://observatory.example.org/news/new-telescope-night",
+    "title": "New Telescope Night",
+    "text": "News about a public telescope event with astronomy demonstrations and brief science context."
+  },
+  {
+    "url": "https://observatory.example.org/gallery/nebula-images",
+    "title": "Nebula Image Gallery",
+    "text": "A gallery of images and videos for visitors."
+  }
+]

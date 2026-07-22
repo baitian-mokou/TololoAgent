@@ -1,0 +1,3533 @@
+{
+  "source_name": "esa",
+  "generated_at": "2026-07-21T16:52:07.687527+00:00",
+  "network_access": true,
+  "limit": 8,
+  "accepted_count": 8,
+  "skipped_count": 537,
+  "discovery_fetches": 8,
+  "limit_reached": true,
+  "manifest": {
+    "allowed_domains": [
+      "www.esa.int",
+      "esa.int"
+    ],
+    "max_depth": 2,
+    "max_pages_per_run": 150,
+    "max_discovery_fetch_pages": 25,
+    "crawl_delay": 0.6,
+    "notes": "Phase 2 manifest-driven preview and raw-only ingestion. ESA discovery stays within science/mission pages."
+  },
+  "accepted": [
+    {
+      "kind": "url",
+      "url": "https://www.esa.int/Science_Exploration/Space_Science",
+      "depth": 0,
+      "reason": "accepted",
+      "quality_input": "metadata_only",
+      "quality_score": 0,
+      "quality_triage": "review_needed",
+      "quality_labels": [
+        "official_source",
+        "science_topic",
+        "short_text"
+      ],
+      "quality_reasons": [
+        "official or academic domain",
+        "science keyword hits=1",
+        "very short text"
+      ],
+      "quality_metrics": {
+        "text_length": 0,
+        "link_density_estimate": 0.0,
+        "table_count": 0,
+        "science_keyword_hits": 1,
+        "blocked_keyword_hits": 0,
+        "news_keyword_hits": 0,
+        "path_media_keyword_hits": 0,
+        "body_media_keyword_hits": 0,
+        "path_news_keyword_hits": 0,
+        "body_news_keyword_hits": 0,
+        "reference_keyword_hits": 0
+      }
+    },
+    {
+      "kind": "url",
+      "url": "https://www.esa.int/Science_Exploration/Space_Science/Juice",
+      "depth": 0,
+      "reason": "accepted",
+      "quality_input": "metadata_only",
+      "quality_score": 45,
+      "quality_triage": "review_needed",
+      "quality_labels": [
+        "official_source",
+        "science_topic",
+        "mission_page",
+        "short_text"
+      ],
+      "quality_reasons": [
+        "official or academic domain",
+        "science keyword hits=1",
+        "mission page signal",
+        "very short text",
+        "protected official science/fact/mission page floor"
+      ],
+      "quality_metrics": {
+        "text_length": 0,
+        "link_density_estimate": 0.0,
+        "table_count": 0,
+        "science_keyword_hits": 1,
+        "blocked_keyword_hits": 0,
+        "news_keyword_hits": 0,
+        "path_media_keyword_hits": 0,
+        "body_media_keyword_hits": 0,
+        "path_news_keyword_hits": 0,
+        "body_news_keyword_hits": 0,
+        "reference_keyword_hits": 0
+      }
+    },
+    {
+      "kind": "url",
+      "url": "https://www.esa.int/Science_Exploration/Space_Science/Rosetta",
+      "depth": 0,
+      "reason": "accepted",
+      "quality_input": "metadata_only",
+      "quality_score": 45,
+      "quality_triage": "review_needed",
+      "quality_labels": [
+        "official_source",
+        "science_topic",
+        "mission_page",
+        "short_text"
+      ],
+      "quality_reasons": [
+        "official or academic domain",
+        "science keyword hits=1",
+        "mission page signal",
+        "very short text",
+        "protected official science/fact/mission page floor"
+      ],
+      "quality_metrics": {
+        "text_length": 0,
+        "link_density_estimate": 0.0,
+        "table_count": 0,
+        "science_keyword_hits": 1,
+        "blocked_keyword_hits": 0,
+        "news_keyword_hits": 0,
+        "path_media_keyword_hits": 0,
+        "body_media_keyword_hits": 0,
+        "path_news_keyword_hits": 0,
+        "body_news_keyword_hits": 0,
+        "reference_keyword_hits": 0
+      }
+    },
+    {
+      "kind": "url",
+      "url": "https://www.esa.int/Science_Exploration/Space_Science/Gaia",
+      "depth": 0,
+      "reason": "accepted",
+      "quality_input": "metadata_only",
+      "quality_score": 0,
+      "quality_triage": "review_needed",
+      "quality_labels": [
+        "official_source",
+        "science_topic",
+        "short_text"
+      ],
+      "quality_reasons": [
+        "official or academic domain",
+        "science keyword hits=1",
+        "very short text"
+      ],
+      "quality_metrics": {
+        "text_length": 0,
+        "link_density_estimate": 0.0,
+        "table_count": 0,
+        "science_keyword_hits": 1,
+        "blocked_keyword_hits": 0,
+        "news_keyword_hits": 0,
+        "path_media_keyword_hits": 0,
+        "body_media_keyword_hits": 0,
+        "path_news_keyword_hits": 0,
+        "body_news_keyword_hits": 0,
+        "reference_keyword_hits": 0
+      }
+    },
+    {
+      "kind": "url",
+      "url": "https://www.esa.int/Science_Exploration/Space_Science/Solar_Orbiter",
+      "depth": 0,
+      "reason": "accepted",
+      "quality_input": "metadata_only",
+      "quality_score": 45,
+      "quality_triage": "review_needed",
+      "quality_labels": [
+        "official_source",
+        "science_topic",
+        "mission_page",
+        "short_text"
+      ],
+      "quality_reasons": [
+        "official or academic domain",
+        "science keyword hits=3",
+        "mission page signal",
+        "very short text",
+        "protected official science/fact/mission page floor"
+      ],
+      "quality_metrics": {
+        "text_length": 0,
+        "link_density_estimate": 0.0,
+        "table_count": 0,
+        "science_keyword_hits": 3,
+        "blocked_keyword_hits": 0,
+        "news_keyword_hits": 0,
+        "path_media_keyword_hits": 0,
+        "body_media_keyword_hits": 0,
+        "path_news_keyword_hits": 0,
+        "body_news_keyword_hits": 0,
+        "reference_keyword_hits": 0
+      }
+    },
+    {
+      "kind": "url",
+      "url": "https://www.esa.int/Science_Exploration/Space_Science/Mars_Express",
+      "depth": 0,
+      "reason": "accepted",
+      "quality_input": "metadata_only",
+      "quality_score": 0,
+      "quality_triage": "exploratory",
+      "quality_labels": [
+        "official_source",
+        "science_topic",
+        "short_text",
+        "news_page"
+      ],
+      "quality_reasons": [
+        "official or academic domain",
+        "science keyword hits=2",
+        "very short text",
+        "news/update signal"
+      ],
+      "quality_metrics": {
+        "text_length": 0,
+        "link_density_estimate": 0.0,
+        "table_count": 0,
+        "science_keyword_hits": 2,
+        "blocked_keyword_hits": 0,
+        "news_keyword_hits": 1,
+        "path_media_keyword_hits": 0,
+        "body_media_keyword_hits": 0,
+        "path_news_keyword_hits": 1,
+        "body_news_keyword_hits": 0,
+        "reference_keyword_hits": 0
+      }
+    },
+    {
+      "kind": "url",
+      "url": "https://www.esa.int/Science_Exploration/Space_Science/Venus_Express",
+      "depth": 0,
+      "reason": "accepted",
+      "quality_input": "metadata_only",
+      "quality_score": 0,
+      "quality_triage": "exploratory",
+      "quality_labels": [
+        "official_source",
+        "science_topic",
+        "short_text",
+        "news_page"
+      ],
+      "quality_reasons": [
+        "official or academic domain",
+        "science keyword hits=2",
+        "very short text",
+        "news/update signal"
+      ],
+      "quality_metrics": {
+        "text_length": 0,
+        "link_density_estimate": 0.0,
+        "table_count": 0,
+        "science_keyword_hits": 2,
+        "blocked_keyword_hits": 0,
+        "news_keyword_hits": 1,
+        "path_media_keyword_hits": 0,
+        "body_media_keyword_hits": 0,
+        "path_news_keyword_hits": 1,
+        "body_news_keyword_hits": 0,
+        "reference_keyword_hits": 0
+      }
+    },
+    {
+      "kind": "url",
+      "url": "https://www.esa.int/Science_Exploration/Space_Science/SMART-1",
+      "depth": 0,
+      "reason": "accepted",
+      "quality_input": "metadata_only",
+      "quality_score": 0,
+      "quality_triage": "review_needed",
+      "quality_labels": [
+        "official_source",
+        "science_topic",
+        "short_text"
+      ],
+      "quality_reasons": [
+        "official or academic domain",
+        "science keyword hits=1",
+        "very short text"
+      ],
+      "quality_metrics": {
+        "text_length": 0,
+        "link_density_estimate": 0.0,
+        "table_count": 0,
+        "science_keyword_hits": 1,
+        "blocked_keyword_hits": 0,
+        "news_keyword_hits": 0,
+        "path_media_keyword_hits": 0,
+        "body_media_keyword_hits": 0,
+        "path_news_keyword_hits": 0,
+        "body_news_keyword_hits": 0,
+        "reference_keyword_hits": 0
+      }
+    }
+  ],
+  "skipped": [
+    {
+      "kind": "url",
+      "url": "https://www.esa.int/Science_Exploration/Space_Science/BepiColombo",
+      "depth": 0,
+      "reason": "limit_reached"
+    },
+    {
+      "kind": "url",
+      "url": "https://www.esa.int/Science_Exploration/Space_Science/Euclid",
+      "depth": 0,
+      "reason": "limit_reached"
+    },
+    {
+      "kind": "url",
+      "url": "https://www.esa.int/Science_Exploration/Space_Science/Hera",
+      "depth": 0,
+      "reason": "limit_reached"
+    },
+    {
+      "kind": "url",
+      "url": "https://www.esa.int/Science_Exploration/Space_Science/ExoMars",
+      "depth": 0,
+      "reason": "limit_reached"
+    },
+    {
+      "kind": "url",
+      "url": "https://www.esa.int/Science_Exploration/Space_Science/Cluster",
+      "depth": 0,
+      "reason": "limit_reached"
+    },
+    {
+      "kind": "url",
+      "url": "https://www.esa.int/Science_Exploration/Space_Science/Hubble",
+      "depth": 0,
+      "reason": "limit_reached"
+    },
+    {
+      "kind": "url",
+      "url": "https://www.esa.int/Science_Exploration/Space_Science/Webb",
+      "depth": 0,
+      "reason": "limit_reached"
+    },
+    {
+      "kind": "url",
+      "url": "https://www.esa.int/Science_Exploration/Space_Science/What_is_the_Solar_System",
+      "depth": 0,
+      "reason": "limit_reached"
+    },
+    {
+      "kind": "url",
+      "url": "https://www.esa.int/Science_Exploration/Space_Science/Exploring_space",
+      "depth": 0,
+      "reason": "limit_reached"
+    },
+    {
+      "kind": "url",
+      "url": "https://www.esa.int/",
+      "depth": 1,
+      "reason": "missing_include_keyword"
+    },
+    {
+      "kind": "url",
+      "url": "https://www.esa.int/Science_Exploration",
+      "depth": 1,
+      "reason": "limit_reached"
+    },
+    {
+      "kind": "url",
+      "url": "https://www.esa.int/ESA_Multimedia/Images/2026/07/Plato_s_electronics_ready_for_space",
+      "depth": 1,
+      "reason": "excluded_path"
+    },
+    {
+      "kind": "url",
+      "url": "https://www.esa.int/ESA_Multimedia/Images/2026/07/ESA_s_Mars_Express_meets_NASA_s_Psyche",
+      "depth": 1,
+      "reason": "excluded_path"
+    },
+    {
+      "kind": "url",
+      "url": "https://www.esa.int/Science_Exploration/Space_Science/Expedition_Sound_podcast_series",
+      "depth": 1,
+      "reason": "limit_reached"
+    },
+    {
+      "kind": "url",
+      "url": "https://www.esa.int/ESA_Multimedia/Videos/2026/07/Replay_of_the_online_media_briefing_on_the_total_solar_eclipse",
+      "depth": 1,
+      "reason": "excluded_path"
+    },
+    {
+      "kind": "url",
+      "url": "https://www.esa.int/Science_Exploration/Space_Science/Mars_Express/Metallic_waves_on_ancient_Mars",
+      "depth": 1,
+      "reason": "limit_reached"
+    },
+    {
+      "kind": "url",
+      "url": "https://www.esa.int/Science_Exploration/Space_Science/Webb/Webb_reveals_millions_of_stars_in_nearby_galaxy",
+      "depth": 1,
+      "reason": "limit_reached"
+    },
+    {
+      "kind": "url",
+      "url": "https://www.esa.int/Science_Exploration/Space_Science/Euclid/Euclid_discovers_the_most_ancient_quasar_in_the_Universe",
+      "depth": 1,
+      "reason": "limit_reached"
+    },
+    {
+      "kind": "url",
+      "url": "https://www.esa.int/Science_Exploration/Space_Science/Webb/Webb_studies_how_a_planet_survived_the_death_of_its_star",
+      "depth": 1,
+      "reason": "limit_reached"
+    },
+    {
+      "kind": "url",
+      "url": "https://www.esa.int/ESA_Multimedia/Videos/2026/06/Thousands_of_planets_are_hidden_in_this_photo",
+      "depth": 1,
+      "reason": "excluded_path"
+    },
+    {
+      "kind": "url",
+      "url": "https://www.esa.int/ESA_Multimedia/Videos/2026/06/Solar_eclipse_myth_vs_fact",
+      "depth": 1,
+      "reason": "excluded_path"
+    },
+    {
+      "kind": "url",
+      "url": "https://www.esa.int/ESA_Multimedia/Images/2026/06/Smile_reaches_science_orbit",
+      "depth": 1,
+      "reason": "excluded_path"
+    },
+    {
+      "kind": "url",
+      "url": "https://www.esa.int/ESA_Multimedia/Videos/2026/06/ESA_s_Euclid_captures_the_Milky_Way_s_crowded_heart",
+      "depth": 1,
+      "reason": "excluded_path"
+    },
+    {
+      "kind": "url",
+      "url": "https://www.esa.int/ESA_Multimedia/Videos/2026/06/How_Europe_studies_the_Sun",
+      "depth": 1,
+      "reason": "excluded_path"
+    },
+    {
+      "kind": "url",
+      "url": "https://www.esa.int/ESA_Multimedia/Images/2026/06/Webb_unveils_young_stars_across_every_stage_of_formation",
+      "depth": 1,
+      "reason": "excluded_path"
+    },
+    {
+      "kind": "url",
+      "url": "https://www.esa.int/ESA_Multimedia/Images/2026/06/Webb_sniffs_methane_from_interstellar_Comet_3I_ATLAS",
+      "depth": 1,
+      "reason": "excluded_path"
+    },
+    {
+      "kind": "url",
+      "url": "https://www.esa.int/Science_Exploration/Space_Science/(archive)/0",
+      "depth": 1,
+      "reason": "limit_reached"
+    },
+    {
+      "kind": "url",
+      "url": "https://www.esa.int/ESA_Multimedia/Images/2019/02/ESA_s_science_fleet_of_Solar_System_explorers",
+      "depth": 1,
+      "reason": "excluded_path"
+    },
+    {
+      "kind": "url",
+      "url": "https://www.esa.int/ESA_Multimedia/Images/2019/02/ESA_s_science_fleet_of_cosmic_observers",
+      "depth": 1,
+      "reason": "excluded_path"
+    },
+    {
+      "kind": "url",
+      "url": "https://www.esa.int/Science_Exploration/Space_Science/Exoplanets",
+      "depth": 1,
+      "reason": "limit_reached"
+    },
+    {
+      "kind": "url",
+      "url": "https://www.esa.int/Science_Exploration/Space_Science/Expedition_Sound_podcast_series",
+      "depth": 1,
+      "reason": "duplicate"
+    },
+    {
+      "kind": "url",
+      "url": "https://www.esa.int/Science_Exploration/Space_Science/Juice",
+      "depth": 1,
+      "reason": "duplicate"
+    },
+    {
+      "kind": "url",
+      "url": "https://www.esa.int/Science_Exploration/Space_Science/Euclid",
+      "depth": 1,
+      "reason": "duplicate"
+    },
+    {
+      "kind": "url",
+      "url": "https://www.esa.int/Science_Exploration/Space_Science/Webb",
+      "depth": 1,
+      "reason": "duplicate"
+    },
+    {
+      "kind": "url",
+      "url": "https://www.esa.int/Science_Exploration/Space_Science/Solar_Orbiter",
+      "depth": 1,
+      "reason": "duplicate"
+    },
+    {
+      "kind": "url",
+      "url": "https://www.esa.int/Science_Exploration/Space_Science/Cheops",
+      "depth": 1,
+      "reason": "limit_reached"
+    },
+    {
+      "kind": "url",
+      "url": "https://www.esa.int/Science_Exploration/Space_Science/BepiColombo",
+      "depth": 1,
+      "reason": "duplicate"
+    },
+    {
+      "kind": "url",
+      "url": "https://www.esa.int/Science_Exploration/Space_Science/Gaia",
+      "depth": 1,
+      "reason": "duplicate"
+    },
+    {
+      "kind": "url",
+      "url": "https://www.esa.int/Science_Exploration/Space_Science/Mars_Express",
+      "depth": 1,
+      "reason": "duplicate"
+    },
+    {
+      "kind": "url",
+      "url": "https://www.esa.int/Science_Exploration/Space_Science/Plato",
+      "depth": 1,
+      "reason": "limit_reached"
+    },
+    {
+      "kind": "url",
+      "url": "https://www.esa.int/Science_Exploration/Space_Science/Rosetta",
+      "depth": 1,
+      "reason": "duplicate"
+    },
+    {
+      "kind": "url",
+      "url": "http://spacetelescope.org",
+      "depth": 1,
+      "reason": "domain_not_allowed"
+    },
+    {
+      "kind": "url",
+      "url": "https://www.esa.int/Science_Exploration/Space_Science/Mission_navigator",
+      "depth": 1,
+      "reason": "limit_reached"
+    },
+    {
+      "kind": "url",
+      "url": "https://www.esa.int/Science_Exploration/Space_Science/About_Space_Science",
+      "depth": 1,
+      "reason": "limit_reached"
+    },
+    {
+      "kind": "url",
+      "url": "https://www.esa.int/Science_Exploration/Space_Science/ESA_s_Cosmic_Vision",
+      "depth": 1,
+      "reason": "limit_reached"
+    },
+    {
+      "kind": "url",
+      "url": "https://www.esa.int/Science_Exploration/Space_Science/Mission_navigator",
+      "depth": 1,
+      "reason": "duplicate"
+    },
+    {
+      "kind": "url",
+      "url": "https://www.esa.int/ESA_Multimedia/Images/2019/02/ESA_s_science_fleet_of_Solar_System_explorers",
+      "depth": 1,
+      "reason": "duplicate"
+    },
+    {
+      "kind": "url",
+      "url": "https://www.esa.int/ESA_Multimedia/Images/2019/02/ESA_s_science_fleet_of_cosmic_observers",
+      "depth": 1,
+      "reason": "duplicate"
+    },
+    {
+      "kind": "url",
+      "url": "http://www.esa.int/For_Media",
+      "depth": 1,
+      "reason": "missing_include_keyword"
+    },
+    {
+      "kind": "url",
+      "url": "https://www.cosmos.esa.int/",
+      "depth": 1,
+      "reason": "missing_include_keyword"
+    },
+    {
+      "kind": "url",
+      "url": "https://www.esa.int/Education",
+      "depth": 1,
+      "reason": "missing_include_keyword"
+    },
+    {
+      "kind": "url",
+      "url": "http://www.esa.int/esaKIDSen/",
+      "depth": 1,
+      "reason": "missing_include_keyword"
+    },
+    {
+      "kind": "url",
+      "url": "https://www.esa.int/Science_Exploration/Space_Science/Space_science_from_home_resources_for_children_and_adults",
+      "depth": 1,
+      "reason": "limit_reached"
+    },
+    {
+      "kind": "url",
+      "url": "http://www.esa.int/Our_Activities/Space_Science/A",
+      "depth": 1,
+      "reason": "limit_reached"
+    },
+    {
+      "kind": "url",
+      "url": "http://www.esa.int/ESA_Multimedia/Directorates/Space_Science/(result_type)/images",
+      "depth": 1,
+      "reason": "excluded_path"
+    },
+    {
+      "kind": "url",
+      "url": "http://www.esa.int/ESA_Multimedia/Directorates/Space_Science/(result_type)/videos",
+      "depth": 1,
+      "reason": "excluded_path"
+    },
+    {
+      "kind": "url",
+      "url": "https://www.esa.int/Science_Exploration/Space_Science/Expedition_Sound_podcast_series",
+      "depth": 1,
+      "reason": "duplicate"
+    },
+    {
+      "kind": "url",
+      "url": "https://www.esa.int/Science_Exploration/Space_Science/Sounds_from_space",
+      "depth": 1,
+      "reason": "limit_reached"
+    },
+    {
+      "kind": "url",
+      "url": "https://bsky.app/profile/science.esa.int",
+      "depth": 1,
+      "reason": "domain_not_allowed"
+    },
+    {
+      "kind": "url",
+      "url": "https://www.linkedin.com/showcase/esascience/",
+      "depth": 1,
+      "reason": "domain_not_allowed"
+    },
+    {
+      "kind": "url",
+      "url": "https://twitter.com/esascience",
+      "depth": 1,
+      "reason": "domain_not_allowed"
+    },
+    {
+      "kind": "url",
+      "url": "https://www.esa.int/Services/Frequently_asked_questions",
+      "depth": 1,
+      "reason": "missing_include_keyword"
+    },
+    {
+      "kind": "url",
+      "url": "https://www.esa.int/Services/Contacts",
+      "depth": 1,
+      "reason": "missing_include_keyword"
+    },
+    {
+      "kind": "url",
+      "url": "https://www.esa.int/Services/Terms_and_conditions",
+      "depth": 1,
+      "reason": "missing_include_keyword"
+    },
+    {
+      "kind": "url",
+      "url": "https://www.esa.int/Services/Privacy_notice",
+      "depth": 1,
+      "reason": "missing_include_keyword"
+    },
+    {
+      "kind": "url",
+      "url": "https://www.esa.int/About_Us/Careers_at_ESA",
+      "depth": 1,
+      "reason": "excluded_path"
+    },
+    {
+      "kind": "url",
+      "url": "https://www.esa.int/Services/Email_updates",
+      "depth": 1,
+      "reason": "missing_include_keyword"
+    },
+    {
+      "kind": "url",
+      "url": "https://bsky.app/profile/esa.int",
+      "depth": 1,
+      "reason": "domain_not_allowed"
+    },
+    {
+      "kind": "url",
+      "url": "https://www.facebook.com/EuropeanSpaceAgency",
+      "depth": 1,
+      "reason": "domain_not_allowed"
+    },
+    {
+      "kind": "url",
+      "url": "https://www.instagram.com/europeanspaceagency/",
+      "depth": 1,
+      "reason": "domain_not_allowed"
+    },
+    {
+      "kind": "url",
+      "url": "https://www.linkedin.com/company/european-space-agency/",
+      "depth": 1,
+      "reason": "domain_not_allowed"
+    },
+    {
+      "kind": "url",
+      "url": "https://www.pinterest.com/EuropeanSpaceAgency/",
+      "depth": 1,
+      "reason": "domain_not_allowed"
+    },
+    {
+      "kind": "url",
+      "url": "https://twitter.com/esa",
+      "depth": 1,
+      "reason": "domain_not_allowed"
+    },
+    {
+      "kind": "url",
+      "url": "https://www.youtube.com/user/ESA",
+      "depth": 1,
+      "reason": "domain_not_allowed"
+    },
+    {
+      "kind": "url",
+      "url": "https://www.esa.int/",
+      "depth": 1,
+      "reason": "duplicate"
+    },
+    {
+      "kind": "url",
+      "url": "https://www.esa.int/Science_Exploration",
+      "depth": 1,
+      "reason": "duplicate"
+    },
+    {
+      "kind": "url",
+      "url": "https://www.esa.int/Science_Exploration/Space_Science/Juice/ESA_s_Juice_lifts_off_on_quest_to_discover_secrets_of_Jupiter_s_icy_moons",
+      "depth": 1,
+      "reason": "limit_reached"
+    },
+    {
+      "kind": "url",
+      "url": "https://www.esa.int/ESA_Multimedia/Images/2024/07/Juice_s_journey_to_Jupiter_the_lunar-Earth_flyby",
+      "depth": 1,
+      "reason": "excluded_path"
+    },
+    {
+      "kind": "url",
+      "url": "https://www.esa.int/ESA_Multimedia/Images/2022/12/Juice_s_science_instruments",
+      "depth": 1,
+      "reason": "excluded_path"
+    },
+    {
+      "kind": "url",
+      "url": "https://www.esa.int/Science_Exploration/Space_Science/Juice/Five_things_Juice_has_revealed_about_Comet_3I_ATLAS",
+      "depth": 1,
+      "reason": "limit_reached"
+    },
+    {
+      "kind": "url",
+      "url": "https://www.esa.int/Enabling_Support/Operations/A_rare_encounter_How_Juice_came_to_observe_3I_ATLAS",
+      "depth": 1,
+      "reason": "limit_reached"
+    },
+    {
+      "kind": "url",
+      "url": "https://www.esa.int/ESA_Multimedia/Images/2026/02/First_glimpse_of_Comet_3I_ATLAS_from_Juice_science_camera",
+      "depth": 1,
+      "reason": "excluded_path"
+    },
+    {
+      "kind": "url",
+      "url": "https://www.esa.int/ESA_Multimedia/Sets/The_journey_of_Juice",
+      "depth": 1,
+      "reason": "excluded_path"
+    },
+    {
+      "kind": "url",
+      "url": "https://www.esa.int/ESA_Multimedia/Videos/2025/12/The_journey_of_Juice_episode_2",
+      "depth": 1,
+      "reason": "excluded_path"
+    },
+    {
+      "kind": "url",
+      "url": "https://www.esa.int/ESA_Multimedia/Images/2025/12/Comet_3I_ATLAS_shows_activity_in_Juice_navigation_camera_teaser",
+      "depth": 1,
+      "reason": "excluded_path"
+    },
+    {
+      "kind": "url",
+      "url": "https://www.esa.int/Enabling_Support/Operations/Juice_team_resolves_anomaly_on_approach_to_Venus",
+      "depth": 1,
+      "reason": "limit_reached"
+    },
+    {
+      "kind": "url",
+      "url": "https://www.esa.int/Science_Exploration/Space_Science/Juice/New_Apollo_Earthrise_view_shows_Juice_s_RIME_working_well",
+      "depth": 1,
+      "reason": "limit_reached"
+    },
+    {
+      "kind": "url",
+      "url": "https://www.esa.int/About_Us/Business_with_ESA/ESA_recognition_for_excellent_space_companies",
+      "depth": 1,
+      "reason": "excluded_path"
+    },
+    {
+      "kind": "url",
+      "url": "https://www.esa.int/ESA_Multimedia/Images/2024/10/Juice_images_the_cloud_of_charged_particles_around_Earth",
+      "depth": 1,
+      "reason": "excluded_path"
+    },
+    {
+      "kind": "url",
+      "url": "https://www.esa.int/ESA_Multimedia/Videos/2024/09/The_journey_of_Juice_episode_1",
+      "depth": 1,
+      "reason": "excluded_path"
+    },
+    {
+      "kind": "url",
+      "url": "https://www.esa.int/ESA_Multimedia/Images/2024/09/Juice_snaps_an_Earth_Moon_portrait",
+      "depth": 1,
+      "reason": "excluded_path"
+    },
+    {
+      "kind": "url",
+      "url": "https://www.esa.int/ESA_Multimedia/Images/2024/09/Juice_s_flight_through_Earth_s_radiation_belts",
+      "depth": 1,
+      "reason": "excluded_path"
+    },
+    {
+      "kind": "url",
+      "url": "https://www.esa.int/ESA_Multimedia/Videos/2024/08/Listen_to_Juice_s_flyby_of_Earth",
+      "depth": 1,
+      "reason": "excluded_path"
+    },
+    {
+      "kind": "url",
+      "url": "https://www.esa.int/ESA_Multimedia/Videos/2024/08/Juice_s_lunar-Earth_flyby_the_movie",
+      "depth": 1,
+      "reason": "excluded_path"
+    },
+    {
+      "kind": "url",
+      "url": "https://www.esa.int/Science_Exploration/Space_Science/Juice/(archive)/0",
+      "depth": 1,
+      "reason": "limit_reached"
+    },
+    {
+      "kind": "url",
+      "url": "https://www.esa.int/Science_Exploration/Space_Science/Juice/Spotlight_on_Ganymede_Juice_s_primary_target",
+      "depth": 1,
+      "reason": "limit_reached"
+    },
+    {
+      "kind": "url",
+      "url": "https://www.esa.int/Science_Exploration/Space_Science/Juice/A_history_of_Jupiter_exploration_the_journey_to_Juice",
+      "depth": 1,
+      "reason": "limit_reached"
+    },
+    {
+      "kind": "url",
+      "url": "https://www.esa.int/Science_Exploration/Space_Science/Juice/Hello_Jupiter!_How_to_observe_a_gas_giant",
+      "depth": 1,
+      "reason": "limit_reached"
+    },
+    {
+      "kind": "url",
+      "url": "https://www.esa.int/Science_Exploration/Space_Science/Juice/Jupiter_and_its_complex_surroundings_What_will_Juice_reveal",
+      "depth": 1,
+      "reason": "limit_reached"
+    },
+    {
+      "kind": "url",
+      "url": "https://www.esa.int/Science_Exploration/Space_Science/Juice/Juice_factsheet",
+      "depth": 1,
+      "reason": "limit_reached"
+    },
+    {
+      "kind": "url",
+      "url": "https://www.esa.int/Science_Exploration/Space_Science/Juice/Juice_launch_kit",
+      "depth": 1,
+      "reason": "limit_reached"
+    },
+    {
+      "kind": "url",
+      "url": "https://www.esa.int/ESA_Multimedia/Sets/Juice_cinematic_animations/(result_type)/videos/",
+      "depth": 1,
+      "reason": "excluded_path"
+    },
+    {
+      "kind": "url",
+      "url": "https://www.esa.int/Science_Exploration/Space_Science/Juice/Where_is_Juice_now",
+      "depth": 1,
+      "reason": "limit_reached"
+    },
+    {
+      "kind": "url",
+      "url": "https://sci.esa.int/web/juice/journal-archive",
+      "depth": 1,
+      "reason": "limit_reached"
+    },
+    {
+      "kind": "url",
+      "url": "https://www.esa.int/ESA_Multimedia/Sets/The_making_of_JUICE",
+      "depth": 1,
+      "reason": "excluded_path"
+    },
+    {
+      "kind": "url",
+      "url": "https://www.esa.int/ESA_Multimedia/Sets/The_journey_of_Juice",
+      "depth": 1,
+      "reason": "duplicate"
+    },
+    {
+      "kind": "url",
+      "url": "https://www.esa.int/Science_Exploration/Space_Science/Juice/Space_Juice_recipe_book",
+      "depth": 1,
+      "reason": "limit_reached"
+    },
+    {
+      "kind": "url",
+      "url": "https://www.esa.int/Science_Exploration/Space_Science/Juice/The_science_Juice_s_key_objectives_at_Jupiter",
+      "depth": 1,
+      "reason": "limit_reached"
+    },
+    {
+      "kind": "url",
+      "url": "https://www.esa.int/ESA_Multimedia/Images/2022/12/Juice_s_science_instruments",
+      "depth": 1,
+      "reason": "duplicate"
+    },
+    {
+      "kind": "url",
+      "url": "https://www.esa.int/Science_Exploration/Space_Science/Juice/Juice_spacecraft_specs",
+      "depth": 1,
+      "reason": "limit_reached"
+    },
+    {
+      "kind": "url",
+      "url": "https://www.esa.int/ESA_Multimedia/Images/2022/12/Juice_launch_and_deployment_timeline",
+      "depth": 1,
+      "reason": "excluded_path"
+    },
+    {
+      "kind": "url",
+      "url": "https://www.esa.int/ESA_Multimedia/Images/2022/12/Juice_s_journey_to_Jupiter",
+      "depth": 1,
+      "reason": "excluded_path"
+    },
+    {
+      "kind": "url",
+      "url": "https://www.esa.int/Science_Exploration/Space_Science/Juice/Jupiter_s_secrets_Top_five_mysteries_Juice_will_solve",
+      "depth": 1,
+      "reason": "limit_reached"
+    },
+    {
+      "kind": "url",
+      "url": "https://www.esa.int/ESA_Multimedia/Images/2023/03/Juice_an_international_endeavour",
+      "depth": 1,
+      "reason": "excluded_path"
+    },
+    {
+      "kind": "url",
+      "url": "https://www.esa.int/ESA_Multimedia/Images/2022/12/Operating_in_an_extreme_environment",
+      "depth": 1,
+      "reason": "excluded_path"
+    },
+    {
+      "kind": "url",
+      "url": "https://www.esa.int/Science_Exploration/Space_Science/Juice/Frequently_Asked_Questions",
+      "depth": 1,
+      "reason": "limit_reached"
+    },
+    {
+      "kind": "url",
+      "url": "https://www.esa.int/Science_Exploration/Space_Science/Juice/Facts_about_Jupiter",
+      "depth": 1,
+      "reason": "limit_reached"
+    },
+    {
+      "kind": "url",
+      "url": "https://www.esa.int/Science_Exploration/Space_Science/Juice/A_history_of_Jupiter_exploration_the_journey_to_Juice",
+      "depth": 1,
+      "reason": "duplicate"
+    },
+    {
+      "kind": "url",
+      "url": "https://www.esa.int/Science_Exploration/Space_Science/Juice/The_moons_of_Jupiter_What_will_Juice_discover",
+      "depth": 1,
+      "reason": "limit_reached"
+    },
+    {
+      "kind": "url",
+      "url": "https://www.esa.int/Science_Exploration/Space_Science/Juice/Spotlight_on_Ganymede_Juice_s_primary_target",
+      "depth": 1,
+      "reason": "duplicate"
+    },
+    {
+      "kind": "url",
+      "url": "https://www.esa.int/Science_Exploration/Space_Science/Juice/Jupiter_and_its_complex_surroundings_What_will_Juice_reveal",
+      "depth": 1,
+      "reason": "duplicate"
+    },
+    {
+      "kind": "url",
+      "url": "https://www.esa.int/ESA_Multimedia/Videos/2021/07/The_orbits_of_the_Galilean_moons",
+      "depth": 1,
+      "reason": "excluded_path"
+    },
+    {
+      "kind": "url",
+      "url": "https://www.esa.int/ESA_Multimedia/Videos/2021/07/Jupiter_s_magnetic_environment",
+      "depth": 1,
+      "reason": "excluded_path"
+    },
+    {
+      "kind": "url",
+      "url": "https://www.esa.int/ESA_Multimedia/Videos/2021/07/Inside_the_Galilean_moons",
+      "depth": 1,
+      "reason": "excluded_path"
+    },
+    {
+      "kind": "url",
+      "url": "https://www.esa.int/ESA_Multimedia/Search?SearchText=juice&result_type=images",
+      "depth": 1,
+      "reason": "excluded_path"
+    },
+    {
+      "kind": "url",
+      "url": "https://www.esa.int/ESA_Multimedia/Search?SearchText=Juice&result_type=videos",
+      "depth": 1,
+      "reason": "excluded_path"
+    },
+    {
+      "kind": "url",
+      "url": "https://giphy.com/europeanspaceagency/juice",
+      "depth": 1,
+      "reason": "domain_not_allowed"
+    },
+    {
+      "kind": "url",
+      "url": "https://scifleet.esa.int/model/juice/",
+      "depth": 1,
+      "reason": "limit_reached"
+    },
+    {
+      "kind": "url",
+      "url": "https://www.esa.int/ESA_Multimedia/Images/2022/07/Juice_mission_poster",
+      "depth": 1,
+      "reason": "excluded_path"
+    },
+    {
+      "kind": "url",
+      "url": "https://www.esa.int/Science_Exploration/Space_Science/Juice/Juice_wallpapers",
+      "depth": 1,
+      "reason": "limit_reached"
+    },
+    {
+      "kind": "url",
+      "url": "https://www.esa.int/About_Us/Exhibitions/Ready-to-use_material/Juice_mission",
+      "depth": 1,
+      "reason": "excluded_path"
+    },
+    {
+      "kind": "url",
+      "url": "https://twitter.com/ESA_JUICE",
+      "depth": 1,
+      "reason": "domain_not_allowed"
+    },
+    {
+      "kind": "url",
+      "url": "https://twitter.com/ESAJuiceBar",
+      "depth": 1,
+      "reason": "domain_not_allowed"
+    },
+    {
+      "kind": "url",
+      "url": "https://bsky.app/profile/science.esa.int",
+      "depth": 1,
+      "reason": "duplicate"
+    },
+    {
+      "kind": "url",
+      "url": "https://www.linkedin.com/showcase/esascience/",
+      "depth": 1,
+      "reason": "duplicate"
+    },
+    {
+      "kind": "url",
+      "url": "https://twitter.com/esascience",
+      "depth": 1,
+      "reason": "duplicate"
+    },
+    {
+      "kind": "url",
+      "url": "https://www.esa.int/Services/Frequently_asked_questions",
+      "depth": 1,
+      "reason": "duplicate"
+    },
+    {
+      "kind": "url",
+      "url": "https://www.esa.int/Services/Contacts",
+      "depth": 1,
+      "reason": "duplicate"
+    },
+    {
+      "kind": "url",
+      "url": "https://www.esa.int/Services/Terms_and_conditions",
+      "depth": 1,
+      "reason": "duplicate"
+    },
+    {
+      "kind": "url",
+      "url": "https://www.esa.int/Services/Privacy_notice",
+      "depth": 1,
+      "reason": "duplicate"
+    },
+    {
+      "kind": "url",
+      "url": "https://www.esa.int/About_Us/Careers_at_ESA",
+      "depth": 1,
+      "reason": "duplicate"
+    },
+    {
+      "kind": "url",
+      "url": "https://www.esa.int/Services/Email_updates",
+      "depth": 1,
+      "reason": "duplicate"
+    },
+    {
+      "kind": "url",
+      "url": "https://bsky.app/profile/esa.int",
+      "depth": 1,
+      "reason": "duplicate"
+    },
+    {
+      "kind": "url",
+      "url": "https://www.facebook.com/EuropeanSpaceAgency",
+      "depth": 1,
+      "reason": "duplicate"
+    },
+    {
+      "kind": "url",
+      "url": "https://www.instagram.com/europeanspaceagency/",
+      "depth": 1,
+      "reason": "duplicate"
+    },
+    {
+      "kind": "url",
+      "url": "https://www.linkedin.com/company/european-space-agency/",
+      "depth": 1,
+      "reason": "duplicate"
+    },
+    {
+      "kind": "url",
+      "url": "https://www.pinterest.com/EuropeanSpaceAgency/",
+      "depth": 1,
+      "reason": "duplicate"
+    },
+    {
+      "kind": "url",
+      "url": "https://twitter.com/esa",
+      "depth": 1,
+      "reason": "duplicate"
+    },
+    {
+      "kind": "url",
+      "url": "https://www.youtube.com/user/ESA",
+      "depth": 1,
+      "reason": "duplicate"
+    },
+    {
+      "kind": "url",
+      "url": "https://www.esa.int/",
+      "depth": 1,
+      "reason": "duplicate"
+    },
+    {
+      "kind": "url",
+      "url": "https://www.esa.int/Science_Exploration",
+      "depth": 1,
+      "reason": "duplicate"
+    },
+    {
+      "kind": "url",
+      "url": "https://blogs.esa.int/10-years-since-rosetta/",
+      "depth": 1,
+      "reason": "limit_reached"
+    },
+    {
+      "kind": "url",
+      "url": "https://www.esa.int/ESA_Multimedia/Images/2024/11/Philae_s_firsts",
+      "depth": 1,
+      "reason": "excluded_path"
+    },
+    {
+      "kind": "url",
+      "url": "https://www.esa.int/ESA_Multimedia/Videos/2024/11/How_we_made_history_by_landing_on_a_comet",
+      "depth": 1,
+      "reason": "excluded_path"
+    },
+    {
+      "kind": "url",
+      "url": "https://www.esa.int/Science_Exploration/Space_Science/Rosetta/Philae_s_extraordinary_comet_landing_relived",
+      "depth": 1,
+      "reason": "limit_reached"
+    },
+    {
+      "kind": "url",
+      "url": "https://www.esa.int/Science_Exploration/Space_Science/Rosetta/Rosetta_s_legacy_how_were_you_inspired",
+      "depth": 1,
+      "reason": "limit_reached"
+    },
+    {
+      "kind": "url",
+      "url": "https://www.esa.int/Science_Exploration/Space_Science/Rosetta/Rosetta_and_beyond_tales_of_a_mission_that_left_a_mark",
+      "depth": 1,
+      "reason": "limit_reached"
+    },
+    {
+      "kind": "url",
+      "url": "https://www.esa.int/Enabling_Support/Preparing_for_the_Future/Space_for_Earth/Spot_the_difference_to_help_reveal_Rosetta_image_secrets",
+      "depth": 1,
+      "reason": "limit_reached"
+    },
+    {
+      "kind": "url",
+      "url": "https://www.esa.int/ESA_Multimedia/Images/2020/10/How_Philae_left_its_mark_during_touchdown_two",
+      "depth": 1,
+      "reason": "excluded_path"
+    },
+    {
+      "kind": "url",
+      "url": "https://www.esa.int/ESA_Multimedia/Videos/2020/10/Philae_s_dance_at_touchdown_two",
+      "depth": 1,
+      "reason": "excluded_path"
+    },
+    {
+      "kind": "url",
+      "url": "https://www.esa.int/ESA_Multimedia/Images/2020/10/A_light_shining_in_the_darkness",
+      "depth": 1,
+      "reason": "excluded_path"
+    },
+    {
+      "kind": "url",
+      "url": "https://www.esa.int/ESA_Multimedia/Images/2020/10/Philae_creates_eye_of_the_skull",
+      "depth": 1,
+      "reason": "excluded_path"
+    },
+    {
+      "kind": "url",
+      "url": "https://www.esa.int/Science_Exploration/Space_Science/Rosetta/Philae_s_second_touchdown_site_discovered_at_skull-top_ridge",
+      "depth": 1,
+      "reason": "limit_reached"
+    },
+    {
+      "kind": "url",
+      "url": "https://www.esa.int/ESA_Multimedia/Images/2020/10/Skull_rock_annotated",
+      "depth": 1,
+      "reason": "excluded_path"
+    },
+    {
+      "kind": "url",
+      "url": "https://www.esa.int/ESA_Multimedia/Videos/2019/11/Rosetta_s_ongoing_science",
+      "depth": 1,
+      "reason": "excluded_path"
+    },
+    {
+      "kind": "url",
+      "url": "https://www.esa.int/ESA_Multimedia/Videos/2018/06/Rosetta_s_final_images",
+      "depth": 1,
+      "reason": "excluded_path"
+    },
+    {
+      "kind": "url",
+      "url": "https://www.esa.int/Science_Exploration/Space_Science/Rosetta/(archive)/0",
+      "depth": 1,
+      "reason": "limit_reached"
+    },
+    {
+      "kind": "url",
+      "url": "https://www.esa.int/ESA_Multimedia/Videos/2017/09/Rosetta_s_ever-changing_view_of_a_comet",
+      "depth": 1,
+      "reason": "excluded_path"
+    },
+    {
+      "kind": "url",
+      "url": "https://www.esa.int/Science_Exploration/Space_Science/Rosetta/Rosetta_overview3",
+      "depth": 1,
+      "reason": "limit_reached"
+    },
+    {
+      "kind": "url",
+      "url": "https://www.esa.int/Science_Exploration/Space_Science/Rosetta/Rosetta_factsheet",
+      "depth": 1,
+      "reason": "limit_reached"
+    },
+    {
+      "kind": "url",
+      "url": "http://blogs.esa.int/rosetta/",
+      "depth": 1,
+      "reason": "limit_reached"
+    },
+    {
+      "kind": "url",
+      "url": "http://www.esa.int/Education/Teach_with_Rosetta/",
+      "depth": 1,
+      "reason": "limit_reached"
+    },
+    {
+      "kind": "url",
+      "url": "http://sci.esa.int/rosetta",
+      "depth": 1,
+      "reason": "limit_reached"
+    },
+    {
+      "kind": "url",
+      "url": "https://www.esa.int/Science_Exploration/Space_Science/Rosetta/Europe_s_comet_chaser",
+      "depth": 1,
+      "reason": "limit_reached"
+    },
+    {
+      "kind": "url",
+      "url": "https://www.esa.int/Science_Exploration/Space_Science/Rosetta/Why_Rosetta",
+      "depth": 1,
+      "reason": "limit_reached"
+    },
+    {
+      "kind": "url",
+      "url": "https://www.esa.int/Science_Exploration/Space_Science/History_of_cometary_missions",
+      "depth": 1,
+      "reason": "limit_reached"
+    },
+    {
+      "kind": "url",
+      "url": "https://www.esa.int/Science_Exploration/Space_Science/Rosetta/Why_study_comets",
+      "depth": 1,
+      "reason": "limit_reached"
+    },
+    {
+      "kind": "url",
+      "url": "https://www.esa.int/Science_Exploration/Space_Science/Rosetta/How_many_comets_are_there",
+      "depth": 1,
+      "reason": "limit_reached"
+    },
+    {
+      "kind": "url",
+      "url": "https://www.esa.int/Science_Exploration/Space_Science/Rosetta/Where_life_began",
+      "depth": 1,
+      "reason": "limit_reached"
+    },
+    {
+      "kind": "url",
+      "url": "https://www.esa.int/Science_Exploration/Space_Science/Rosetta/Debris_of_the_Solar_System_Asteroids",
+      "depth": 1,
+      "reason": "limit_reached"
+    },
+    {
+      "kind": "url",
+      "url": "https://www.esa.int/Science_Exploration/Space_Science/Rosetta/The_Rosetta_orbiter",
+      "depth": 1,
+      "reason": "limit_reached"
+    },
+    {
+      "kind": "url",
+      "url": "https://www.esa.int/Science_Exploration/Space_Science/Rosetta/Orbiter_Instruments",
+      "depth": 1,
+      "reason": "limit_reached"
+    },
+    {
+      "kind": "url",
+      "url": "https://www.esa.int/Science_Exploration/Space_Science/Rosetta/The_Rosetta_lander",
+      "depth": 1,
+      "reason": "limit_reached"
+    },
+    {
+      "kind": "url",
+      "url": "https://www.esa.int/Science_Exploration/Space_Science/Rosetta/Lander_Instruments",
+      "depth": 1,
+      "reason": "limit_reached"
+    },
+    {
+      "kind": "url",
+      "url": "https://www.esa.int/Science_Exploration/Space_Science/Rosetta/The_long_trek",
+      "depth": 1,
+      "reason": "limit_reached"
+    },
+    {
+      "kind": "url",
+      "url": "https://www.esa.int/Science_Exploration/Space_Science/Rosetta/Life_and_survival_in_deep_space",
+      "depth": 1,
+      "reason": "limit_reached"
+    },
+    {
+      "kind": "url",
+      "url": "https://www.esa.int/Science_Exploration/Space_Science/Rosetta/Long-distance_communication",
+      "depth": 1,
+      "reason": "limit_reached"
+    },
+    {
+      "kind": "url",
+      "url": "https://www.esa.int/Science_Exploration/Space_Science/Rosetta/The_Rosetta_ground_segment",
+      "depth": 1,
+      "reason": "limit_reached"
+    },
+    {
+      "kind": "url",
+      "url": "https://www.esa.int/Science_Exploration/Space_Science/Rosetta/Comet_67P_Churyumov-Gerasimenko",
+      "depth": 1,
+      "reason": "limit_reached"
+    },
+    {
+      "kind": "url",
+      "url": "https://www.esa.int/Science_Exploration/Space_Science/Rosetta/Comet_rendezvous",
+      "depth": 1,
+      "reason": "limit_reached"
+    },
+    {
+      "kind": "url",
+      "url": "https://www.esa.int/Science_Exploration/Space_Science/Rosetta/The_surprising_comet",
+      "depth": 1,
+      "reason": "limit_reached"
+    },
+    {
+      "kind": "url",
+      "url": "https://www.esa.int/Science_Exploration/Space_Science/Rosetta/Getting_to_know_Rosetta_s_comet",
+      "depth": 1,
+      "reason": "limit_reached"
+    },
+    {
+      "kind": "url",
+      "url": "https://www.esa.int/Science_Exploration/Space_Science/Rosetta/Science_on_the_surface_of_a_comet",
+      "depth": 1,
+      "reason": "limit_reached"
+    },
+    {
+      "kind": "url",
+      "url": "http://sci.esa.int/where_is_rosetta/",
+      "depth": 1,
+      "reason": "limit_reached"
+    },
+    {
+      "kind": "url",
+      "url": "http://sci.esa.int/comet-viewer/",
+      "depth": 1,
+      "reason": "missing_include_keyword"
+    },
+    {
+      "kind": "url",
+      "url": "https://www.esa.int/ESA_Multimedia/Missions/Rosetta/(result_type)/images",
+      "depth": 1,
+      "reason": "excluded_path"
+    },
+    {
+      "kind": "url",
+      "url": "https://www.esa.int/ESA_Multimedia/Missions/Rosetta/(result_type)/videos",
+      "depth": 1,
+      "reason": "excluded_path"
+    },
+    {
+      "kind": "url",
+      "url": "http://www.esa.int/spaceinimages/Images/2015/06/Living_with_a_comet_poster",
+      "depth": 1,
+      "reason": "excluded_path"
+    },
+    {
+      "kind": "url",
+      "url": "https://esamultimedia.esa.int/multimedia/publications/BR-321/",
+      "depth": 1,
+      "reason": "missing_include_keyword"
+    },
+    {
+      "kind": "url",
+      "url": "http://www.esa.int/About_Us/Exhibitions/Rosetta_rendezvous_with_a_comet",
+      "depth": 1,
+      "reason": "excluded_path"
+    },
+    {
+      "kind": "url",
+      "url": "https://www.esa.int/Science_Exploration/Space_Science/Rosetta/Frequently_asked_questions",
+      "depth": 1,
+      "reason": "limit_reached"
+    },
+    {
+      "kind": "url",
+      "url": "https://www.esa.int/Science_Exploration/Space_Science/Rosetta/Rosetta_s_grand_finale_frequently_asked_questions",
+      "depth": 1,
+      "reason": "limit_reached"
+    },
+    {
+      "kind": "url",
+      "url": "https://twitter.com/esa_rosetta",
+      "depth": 1,
+      "reason": "domain_not_allowed"
+    },
+    {
+      "kind": "url",
+      "url": "http://www.flickr.com/photos/europeanspaceagency/sets/72157638315605535/",
+      "depth": 1,
+      "reason": "domain_not_allowed"
+    },
+    {
+      "kind": "url",
+      "url": "http://www.youtube.com/playlist?list=PLbyvawxScNbtAhH8vHAYl-pyEirPi-4Ad",
+      "depth": 1,
+      "reason": "domain_not_allowed"
+    },
+    {
+      "kind": "url",
+      "url": "https://www.facebook.com/RosettaMission/",
+      "depth": 1,
+      "reason": "domain_not_allowed"
+    },
+    {
+      "kind": "url",
+      "url": "https://bsky.app/profile/science.esa.int",
+      "depth": 1,
+      "reason": "duplicate"
+    },
+    {
+      "kind": "url",
+      "url": "https://www.linkedin.com/showcase/esascience/",
+      "depth": 1,
+      "reason": "duplicate"
+    },
+    {
+      "kind": "url",
+      "url": "https://www.esa.int/Services/Frequently_asked_questions",
+      "depth": 1,
+      "reason": "duplicate"
+    },
+    {
+      "kind": "url",
+      "url": "https://www.esa.int/Services/Contacts",
+      "depth": 1,
+      "reason": "duplicate"
+    },
+    {
+      "kind": "url",
+      "url": "https://www.esa.int/Services/Terms_and_conditions",
+      "depth": 1,
+      "reason": "duplicate"
+    },
+    {
+      "kind": "url",
+      "url": "https://www.esa.int/Services/Privacy_notice",
+      "depth": 1,
+      "reason": "duplicate"
+    },
+    {
+      "kind": "url",
+      "url": "https://www.esa.int/About_Us/Careers_at_ESA",
+      "depth": 1,
+      "reason": "duplicate"
+    },
+    {
+      "kind": "url",
+      "url": "https://www.esa.int/Services/Email_updates",
+      "depth": 1,
+      "reason": "duplicate"
+    },
+    {
+      "kind": "url",
+      "url": "https://bsky.app/profile/esa.int",
+      "depth": 1,
+      "reason": "duplicate"
+    },
+    {
+      "kind": "url",
+      "url": "https://www.facebook.com/EuropeanSpaceAgency",
+      "depth": 1,
+      "reason": "duplicate"
+    },
+    {
+      "kind": "url",
+      "url": "https://www.instagram.com/europeanspaceagency/",
+      "depth": 1,
+      "reason": "duplicate"
+    },
+    {
+      "kind": "url",
+      "url": "https://www.linkedin.com/company/european-space-agency/",
+      "depth": 1,
+      "reason": "duplicate"
+    },
+    {
+      "kind": "url",
+      "url": "https://www.pinterest.com/EuropeanSpaceAgency/",
+      "depth": 1,
+      "reason": "duplicate"
+    },
+    {
+      "kind": "url",
+      "url": "https://twitter.com/esa",
+      "depth": 1,
+      "reason": "duplicate"
+    },
+    {
+      "kind": "url",
+      "url": "https://www.youtube.com/user/ESA",
+      "depth": 1,
+      "reason": "duplicate"
+    },
+    {
+      "kind": "url",
+      "url": "https://www.esa.int/",
+      "depth": 1,
+      "reason": "duplicate"
+    },
+    {
+      "kind": "url",
+      "url": "https://www.esa.int/Science_Exploration",
+      "depth": 1,
+      "reason": "duplicate"
+    },
+    {
+      "kind": "url",
+      "url": "https://www.cosmos.esa.int/web/gaia/data-release-4",
+      "depth": 1,
+      "reason": "limit_reached"
+    },
+    {
+      "kind": "url",
+      "url": "https://www.esa.int/ESA_Multimedia/Images/2025/03/Gaia_s_multi-dimensional_Milky_Way_poster",
+      "depth": 1,
+      "reason": "excluded_path"
+    },
+    {
+      "kind": "url",
+      "url": "https://www.esa.int/ESA_Multimedia/Images/2025/12/Gaia_finds_hints_of_planets_in_baby_star_systems",
+      "depth": 1,
+      "reason": "excluded_path"
+    },
+    {
+      "kind": "url",
+      "url": "https://www.esa.int/Science_Exploration/Space_Science/Gaia/Gaia_discovers_our_galaxy_s_great_wave",
+      "depth": 1,
+      "reason": "limit_reached"
+    },
+    {
+      "kind": "url",
+      "url": "https://www.esa.int/ESA_Multimedia/Videos/2025/09/The_most_accurate_3D_map_of_stellar_nurseries_in_the_Milky_Way",
+      "depth": 1,
+      "reason": "excluded_path"
+    },
+    {
+      "kind": "url",
+      "url": "https://www.esa.int/Science_Exploration/Space_Science/Gaia/Fly_through_Gaia_s_3D_map_of_stellar_nurseries",
+      "depth": 1,
+      "reason": "limit_reached"
+    },
+    {
+      "kind": "url",
+      "url": "https://www.esa.int/Science_Exploration/Space_Science/Gaia/Gaia_proves_our_skies_are_filled_with_chains_of_starry_gatherings",
+      "depth": 1,
+      "reason": "limit_reached"
+    },
+    {
+      "kind": "url",
+      "url": "https://www.esa.int/ESA_Multimedia/Images/2025/05/You_can_t_judge_a_star_by_its_protoplanetary_disc",
+      "depth": 1,
+      "reason": "excluded_path"
+    },
+    {
+      "kind": "url",
+      "url": "https://www.esa.int/Science_Exploration/Space_Science/Hubble_and_Gaia_revisit_fate_of_our_galaxy",
+      "depth": 1,
+      "reason": "limit_reached"
+    },
+    {
+      "kind": "url",
+      "url": "https://www.esa.int/Science_Exploration/Space_Science/Gaia/Gaia_spots_odd_family_of_stars_desperate_to_leave_home",
+      "depth": 1,
+      "reason": "limit_reached"
+    },
+    {
+      "kind": "url",
+      "url": "https://www.esa.int/ESA_Multimedia/Videos/2025/03/Gaia_Rewriting_the_story_of_the_Milky_Way",
+      "depth": 1,
+      "reason": "excluded_path"
+    },
+    {
+      "kind": "url",
+      "url": "https://www.esa.int/ESA_Multimedia/Videos/2025/03/ESA_s_Gaia_spacecraft_leaves_for_retirement_orbit",
+      "depth": 1,
+      "reason": "excluded_path"
+    },
+    {
+      "kind": "url",
+      "url": "https://www.esa.int/ESA_Multimedia/Videos/2025/02/ESA_s_Gaia_finds_a_mysterious_planet_and_brown_dwarf",
+      "depth": 1,
+      "reason": "excluded_path"
+    },
+    {
+      "kind": "url",
+      "url": "https://www.esa.int/ESA_Multimedia/Images/2025/01/Sky-scanning_complete_for_Gaia",
+      "depth": 1,
+      "reason": "excluded_path"
+    },
+    {
+      "kind": "url",
+      "url": "https://www.esa.int/ESA_Multimedia/Images/2025/01/The_best_Milky_Way_map_by_Gaia_edge-on",
+      "depth": 1,
+      "reason": "excluded_path"
+    },
+    {
+      "kind": "url",
+      "url": "https://www.esa.int/ESA_Multimedia/Videos/2025/01/The_best_Milky_Way_animation_by_Gaia",
+      "depth": 1,
+      "reason": "excluded_path"
+    },
+    {
+      "kind": "url",
+      "url": "https://www.esa.int/Science_Exploration/Space_Science/Gaia/(archive)/0",
+      "depth": 1,
+      "reason": "limit_reached"
+    },
+    {
+      "kind": "url",
+      "url": "https://www.esa.int/ESA_Multimedia/Images/2016/09/Anatomy_of_the_Milky_Way",
+      "depth": 1,
+      "reason": "excluded_path"
+    },
+    {
+      "kind": "url",
+      "url": "https://www.esa.int/ESA_Multimedia/Images/2020/12/Interactive_map_of_the_sky_from_Gaia_s_Early_Data_Release_3",
+      "depth": 1,
+      "reason": "excluded_path"
+    },
+    {
+      "kind": "url",
+      "url": "https://www.esa.int/Science_Exploration/Space_Science/Gaia/Gaia_overview",
+      "depth": 1,
+      "reason": "limit_reached"
+    },
+    {
+      "kind": "url",
+      "url": "https://www.esa.int/Science_Exploration/Space_Science/Gaia/Gaia_factsheet",
+      "depth": 1,
+      "reason": "limit_reached"
+    },
+    {
+      "kind": "url",
+      "url": "https://www.esa.int/Science_Exploration/Space_Science/Gaia/How_does_Gaia_study_the_Milky_Way",
+      "depth": 1,
+      "reason": "limit_reached"
+    },
+    {
+      "kind": "url",
+      "url": "https://www.esa.int/Science_Exploration/Space_Science/Gaia/Gaia_s_decade_of_discoveries_unravelling_the_intricacies_of_our_galaxy",
+      "depth": 1,
+      "reason": "limit_reached"
+    },
+    {
+      "kind": "url",
+      "url": "https://www.esa.int/ESA_Multimedia/Images/2025/02/Gaia_s_Milky_Way_map_poster",
+      "depth": 1,
+      "reason": "excluded_path"
+    },
+    {
+      "kind": "url",
+      "url": "https://www.esa.int/ESA_Multimedia/Images/2025/03/Gaia_s_multi-dimensional_Milky_Way_poster",
+      "depth": 1,
+      "reason": "duplicate"
+    },
+    {
+      "kind": "url",
+      "url": "https://www.esa.int/ESA_Multimedia/Videos/2025/01/The_best_Milky_Way_animation_by_Gaia",
+      "depth": 1,
+      "reason": "duplicate"
+    },
+    {
+      "kind": "url",
+      "url": "https://www.esa.int/Science_Exploration/Space_Science/Gaia/Last_starlight_for_ground-breaking_Gaia",
+      "depth": 1,
+      "reason": "limit_reached"
+    },
+    {
+      "kind": "url",
+      "url": "https://www.esa.int/Science_Exploration/Space_Science/Gaia/Five_fascinating_Gaia_revelations_about_the_Milky_Way",
+      "depth": 1,
+      "reason": "limit_reached"
+    },
+    {
+      "kind": "url",
+      "url": "https://www.esa.int/Science_Exploration/Space_Science/Gaia/Sailing_among_the_stars_Gaia_s_role_in_discovering_distant_worlds",
+      "depth": 1,
+      "reason": "limit_reached"
+    },
+    {
+      "kind": "url",
+      "url": "https://www.esa.int/Science_Exploration/Space_Science/Gaia/Why_was_it_so_difficult_to_study_the_Milky_Way_before_Gaia",
+      "depth": 1,
+      "reason": "limit_reached"
+    },
+    {
+      "kind": "url",
+      "url": "https://www.esa.int/Science_Exploration/Space_Science/Gaia/Gaia_data_release_3_media_kit",
+      "depth": 1,
+      "reason": "limit_reached"
+    },
+    {
+      "kind": "url",
+      "url": "https://cosmos.esa.int/web/gaia",
+      "depth": 1,
+      "reason": "limit_reached"
+    },
+    {
+      "kind": "url",
+      "url": "https://www.esa.int/Science_Exploration/Space_Science/Gaia/Science_objectives",
+      "depth": 1,
+      "reason": "limit_reached"
+    },
+    {
+      "kind": "url",
+      "url": "https://www.esa.int/Science_Exploration/Space_Science/Gaia/The_legend_of_Gaia",
+      "depth": 1,
+      "reason": "limit_reached"
+    },
+    {
+      "kind": "url",
+      "url": "https://www.esa.int/Science_Exploration/Space_Science/Gaia/Guide_to_our_galaxy",
+      "depth": 1,
+      "reason": "limit_reached"
+    },
+    {
+      "kind": "url",
+      "url": "https://www.esa.int/Science_Exploration/Space_Science/Gaia/Cosmic_distances",
+      "depth": 1,
+      "reason": "limit_reached"
+    },
+    {
+      "kind": "url",
+      "url": "https://www.esa.int/Science_Exploration/Space_Science/Gaia/Parallax",
+      "depth": 1,
+      "reason": "limit_reached"
+    },
+    {
+      "kind": "url",
+      "url": "https://www.esa.int/Science_Exploration/Space_Science/Gaia/Spectroscopy",
+      "depth": 1,
+      "reason": "limit_reached"
+    },
+    {
+      "kind": "url",
+      "url": "https://www.esa.int/Science_Exploration/Space_Science/Gaia/Radial_velocity",
+      "depth": 1,
+      "reason": "limit_reached"
+    },
+    {
+      "kind": "url",
+      "url": "https://www.esa.int/Science_Exploration/Space_Science/Gaia/Proper_motion",
+      "depth": 1,
+      "reason": "limit_reached"
+    },
+    {
+      "kind": "url",
+      "url": "https://www.esa.int/Science_Exploration/Space_Science/Gaia/Spacecraft_overview",
+      "depth": 1,
+      "reason": "limit_reached"
+    },
+    {
+      "kind": "url",
+      "url": "https://www.esa.int/Science_Exploration/Space_Science/Gaia/Telescopes",
+      "depth": 1,
+      "reason": "limit_reached"
+    },
+    {
+      "kind": "url",
+      "url": "https://www.esa.int/Science_Exploration/Space_Science/Gaia/Science_instruments",
+      "depth": 1,
+      "reason": "limit_reached"
+    },
+    {
+      "kind": "url",
+      "url": "https://www.esa.int/Science_Exploration/Space_Science/Gaia/Service_module",
+      "depth": 1,
+      "reason": "limit_reached"
+    },
+    {
+      "kind": "url",
+      "url": "https://www.esa.int/Science_Exploration/Space_Science/Gaia/Journey_to_orbit",
+      "depth": 1,
+      "reason": "limit_reached"
+    },
+    {
+      "kind": "url",
+      "url": "https://www.esa.int/Science_Exploration/Space_Science/Gaia/Spinning_in_space",
+      "depth": 1,
+      "reason": "limit_reached"
+    },
+    {
+      "kind": "url",
+      "url": "https://www.esa.int/Science_Exploration/Space_Science/Gaia/Who_operates_Gaia",
+      "depth": 1,
+      "reason": "limit_reached"
+    },
+    {
+      "kind": "url",
+      "url": "http://www.esa.int/ESA_Multimedia/Search?SearchText=gaia&result_type=images",
+      "depth": 1,
+      "reason": "excluded_path"
+    },
+    {
+      "kind": "url",
+      "url": "http://www.esa.int/ESA_Multimedia/Search?SearchText=gaia&result_type=videos",
+      "depth": 1,
+      "reason": "excluded_path"
+    },
+    {
+      "kind": "url",
+      "url": "https://giphy.com/europeanspaceagency/gaia-mission",
+      "depth": 1,
+      "reason": "domain_not_allowed"
+    },
+    {
+      "kind": "url",
+      "url": "http://spaceinimages.esa.int/Images/2013/06/Gaia_mission_poster",
+      "depth": 1,
+      "reason": "excluded_path"
+    },
+    {
+      "kind": "url",
+      "url": "https://twitter.com/ESAGaia",
+      "depth": 1,
+      "reason": "domain_not_allowed"
+    },
+    {
+      "kind": "url",
+      "url": "https://www.facebook.com/ESAGaiaMission",
+      "depth": 1,
+      "reason": "domain_not_allowed"
+    },
+    {
+      "kind": "url",
+      "url": "https://www.youtube.com/@esagaiamission2542",
+      "depth": 1,
+      "reason": "domain_not_allowed"
+    },
+    {
+      "kind": "url",
+      "url": "https://bsky.app/profile/science.esa.int",
+      "depth": 1,
+      "reason": "duplicate"
+    },
+    {
+      "kind": "url",
+      "url": "https://www.linkedin.com/showcase/esascience/",
+      "depth": 1,
+      "reason": "duplicate"
+    },
+    {
+      "kind": "url",
+      "url": "https://twitter.com/esascience",
+      "depth": 1,
+      "reason": "duplicate"
+    },
+    {
+      "kind": "url",
+      "url": "https://www.esa.int/Services/Frequently_asked_questions",
+      "depth": 1,
+      "reason": "duplicate"
+    },
+    {
+      "kind": "url",
+      "url": "https://www.esa.int/Services/Contacts",
+      "depth": 1,
+      "reason": "duplicate"
+    },
+    {
+      "kind": "url",
+      "url": "https://www.esa.int/Services/Terms_and_conditions",
+      "depth": 1,
+      "reason": "duplicate"
+    },
+    {
+      "kind": "url",
+      "url": "https://www.esa.int/Services/Privacy_notice",
+      "depth": 1,
+      "reason": "duplicate"
+    },
+    {
+      "kind": "url",
+      "url": "https://www.esa.int/About_Us/Careers_at_ESA",
+      "depth": 1,
+      "reason": "duplicate"
+    },
+    {
+      "kind": "url",
+      "url": "https://www.esa.int/Services/Email_updates",
+      "depth": 1,
+      "reason": "duplicate"
+    },
+    {
+      "kind": "url",
+      "url": "https://bsky.app/profile/esa.int",
+      "depth": 1,
+      "reason": "duplicate"
+    },
+    {
+      "kind": "url",
+      "url": "https://www.facebook.com/EuropeanSpaceAgency",
+      "depth": 1,
+      "reason": "duplicate"
+    },
+    {
+      "kind": "url",
+      "url": "https://www.instagram.com/europeanspaceagency/",
+      "depth": 1,
+      "reason": "duplicate"
+    },
+    {
+      "kind": "url",
+      "url": "https://www.linkedin.com/company/european-space-agency/",
+      "depth": 1,
+      "reason": "duplicate"
+    },
+    {
+      "kind": "url",
+      "url": "https://www.pinterest.com/EuropeanSpaceAgency/",
+      "depth": 1,
+      "reason": "duplicate"
+    },
+    {
+      "kind": "url",
+      "url": "https://twitter.com/esa",
+      "depth": 1,
+      "reason": "duplicate"
+    },
+    {
+      "kind": "url",
+      "url": "https://www.youtube.com/user/ESA",
+      "depth": 1,
+      "reason": "duplicate"
+    },
+    {
+      "kind": "url",
+      "url": "https://www.esa.int/",
+      "depth": 1,
+      "reason": "duplicate"
+    },
+    {
+      "kind": "url",
+      "url": "https://www.esa.int/Science_Exploration",
+      "depth": 1,
+      "reason": "duplicate"
+    },
+    {
+      "kind": "url",
+      "url": "https://www.esa.int/ESA_Multimedia/Images/2020/01/Solar_Orbiter_Operating_in_extreme_environments",
+      "depth": 1,
+      "reason": "excluded_path"
+    },
+    {
+      "kind": "url",
+      "url": "https://www.esa.int/ESA_Multimedia/Images/2020/01/Solar_Orbiter_s_instruments",
+      "depth": 1,
+      "reason": "excluded_path"
+    },
+    {
+      "kind": "url",
+      "url": "https://www.esa.int/Science_Exploration/Space_Science/Solar_Orbiter/Where_is_Solar_Orbiter_Track_ESA_s_Sun_explorer",
+      "depth": 1,
+      "reason": "limit_reached"
+    },
+    {
+      "kind": "url",
+      "url": "https://www.esa.int/ESA_Multimedia/Images/2020/01/Solar_Orbiter_journey_around_the_Sun",
+      "depth": 1,
+      "reason": "excluded_path"
+    },
+    {
+      "kind": "url",
+      "url": "https://www.esa.int/Science_Exploration/Space_Science/Solar_Orbiter/Magnetic_avalanches_power_solar_flares_finds_Solar_Orbiter",
+      "depth": 1,
+      "reason": "limit_reached"
+    },
+    {
+      "kind": "url",
+      "url": "https://www.esa.int/ESA_Multimedia/Videos/2026/01/Magnetic_avalanche_in_action",
+      "depth": 1,
+      "reason": "excluded_path"
+    },
+    {
+      "kind": "url",
+      "url": "https://www.esa.int/Space_Safety/Space_weather/Lessons_from_the_November_2025_solar_storm",
+      "depth": 1,
+      "reason": "missing_include_keyword"
+    },
+    {
+      "kind": "url",
+      "url": "https://www.esa.int/ESA_Multimedia/Videos/2025/11/A_solar_prominence_hovers_over_the_Sun",
+      "depth": 1,
+      "reason": "excluded_path"
+    },
+    {
+      "kind": "url",
+      "url": "https://www.esa.int/Science_Exploration/Space_Science/Solar_Orbiter/Double_trouble_Solar_Orbiter_traces_superfast_electrons_back_to_Sun",
+      "depth": 1,
+      "reason": "limit_reached"
+    },
+    {
+      "kind": "url",
+      "url": "https://www.esa.int/Science_Exploration/Space_Science/Solar_Orbiter/Solar_Orbiter_gets_world-first_views_of_the_Sun_s_poles",
+      "depth": 1,
+      "reason": "limit_reached"
+    },
+    {
+      "kind": "url",
+      "url": "https://www.esa.int/ESA_Multimedia/Videos/2025/06/Solar_Orbiter_gets_world-first_views_of_the_Sun_s_south_pole",
+      "depth": 1,
+      "reason": "excluded_path"
+    },
+    {
+      "kind": "url",
+      "url": "https://www.esa.int/ESA_Multimedia/Images/2025/06/Why_Solar_Orbiter_is_angling_towards_the_Sun_s_poles",
+      "depth": 1,
+      "reason": "excluded_path"
+    },
+    {
+      "kind": "url",
+      "url": "https://www.esa.int/ESA_Multimedia/Images/2025/04/Solar_Orbiter_s_widest_high-res_view_of_the_Sun",
+      "depth": 1,
+      "reason": "excluded_path"
+    },
+    {
+      "kind": "url",
+      "url": "https://www.esa.int/ESA_Multimedia/Videos/2025/03/Watch_wind_whirl_from_the_Sun",
+      "depth": 1,
+      "reason": "excluded_path"
+    },
+    {
+      "kind": "url",
+      "url": "https://www.esa.int/Science_Exploration/Space_Science/Solar_Orbiter/Catch_solar_bursts_in_new_citizen_science_project",
+      "depth": 1,
+      "reason": "limit_reached"
+    },
+    {
+      "kind": "url",
+      "url": "https://www.esa.int/ESA_Multimedia/Videos/2025/03/Solar_Orbiter_spots_a_solar_flare",
+      "depth": 1,
+      "reason": "excluded_path"
+    },
+    {
+      "kind": "url",
+      "url": "https://www.esa.int/ESA_Multimedia/Images/2025/02/Celebrating_Solar_Orbiter_and_the_women_behind_the_mission",
+      "depth": 1,
+      "reason": "excluded_path"
+    },
+    {
+      "kind": "url",
+      "url": "https://www.esa.int/ESA_Multimedia/Images/2024/02/Sun_s_surprising_activity_surge_in_Solar_Orbiter_snapshot",
+      "depth": 1,
+      "reason": "excluded_path"
+    },
+    {
+      "kind": "url",
+      "url": "https://www.esa.int/ESA_Multimedia/Images/2023/10/Small-scale_magnetism_leads_to_large-scale_solar_atmosphere",
+      "depth": 1,
+      "reason": "excluded_path"
+    },
+    {
+      "kind": "url",
+      "url": "https://www.esa.int/Science_Exploration/Space_Science/Solar_Orbiter/(archive)/0",
+      "depth": 1,
+      "reason": "limit_reached"
+    },
+    {
+      "kind": "url",
+      "url": "https://www.esa.int/ESA_Multimedia/Videos/2025/06/Solar_Orbiter_gets_world-first_views_of_the_Sun_s_south_pole",
+      "depth": 1,
+      "reason": "duplicate"
+    },
+    {
+      "kind": "url",
+      "url": "https://www.esa.int/ESA_Multimedia/Images/2025/04/Solar_Orbiter_s_widest_high-res_view_of_the_Sun",
+      "depth": 1,
+      "reason": "duplicate"
+    },
+    {
+      "kind": "url",
+      "url": "https://www.esa.int/Science_Exploration/Space_Science/Solar_Orbiter/Where_is_Solar_Orbiter_Track_ESA_s_Sun_explorer",
+      "depth": 1,
+      "reason": "duplicate"
+    },
+    {
+      "kind": "url",
+      "url": "https://www.esa.int/Science_Exploration/Space_Science/Solar_Orbiter/Why_we_need_Solar_Orbiter",
+      "depth": 1,
+      "reason": "limit_reached"
+    },
+    {
+      "kind": "url",
+      "url": "https://www.esa.int/Science_Exploration/Space_Science/Solar_Orbiter/Solar_Orbiter_factsheet",
+      "depth": 1,
+      "reason": "limit_reached"
+    },
+    {
+      "kind": "url",
+      "url": "https://www.esa.int/Science_Exploration/Space_Science/Solar_Orbiter/Solar_Orbiter_launch_media_kit",
+      "depth": 1,
+      "reason": "limit_reached"
+    },
+    {
+      "kind": "url",
+      "url": "https://www.esa.int/ESA_Multimedia/Videos/2020/01/What_is_Solar_Orbiter",
+      "depth": 1,
+      "reason": "excluded_path"
+    },
+    {
+      "kind": "url",
+      "url": "https://www.esa.int/Science_Exploration/Space_Science/Solar_Orbiter/Where_is_Solar_Orbiter_Track_ESA_s_Sun_explorer",
+      "depth": 1,
+      "reason": "duplicate"
+    },
+    {
+      "kind": "url",
+      "url": "https://www.esa.int/Science_Exploration/Space_Science/Solar_Orbiter/Solar_Orbiter_perihelia_and_flybys",
+      "depth": 1,
+      "reason": "limit_reached"
+    },
+    {
+      "kind": "url",
+      "url": "https://www.esa.int/Science_Exploration/Space_Science/Solar_Orbiter/Sun_secrets_for_Solar_Orbiter_to_explore",
+      "depth": 1,
+      "reason": "limit_reached"
+    },
+    {
+      "kind": "url",
+      "url": "https://www.esa.int/Science_Exploration/Space_Science/Solar_Orbiter/The_closest_camera_to_the_Sun",
+      "depth": 1,
+      "reason": "limit_reached"
+    },
+    {
+      "kind": "url",
+      "url": "https://www.esa.int/Science_Exploration/Space_Science/Solar_Orbiter/How_to_get_the_best_view_of_the_Sun",
+      "depth": 1,
+      "reason": "limit_reached"
+    },
+    {
+      "kind": "url",
+      "url": "https://www.esa.int/Science_Exploration/Space_Science/Solar_Orbiter/Why_we_need_Solar_Orbiter",
+      "depth": 1,
+      "reason": "duplicate"
+    },
+    {
+      "kind": "url",
+      "url": "https://www.esa.int/Science_Exploration/Space_Science/Solar_Orbiter/Technical_challenges_of_flying_close_to_the_Sun",
+      "depth": 1,
+      "reason": "limit_reached"
+    },
+    {
+      "kind": "url",
+      "url": "https://www.esa.int/Science_Exploration/Space_Science/Solar_Orbiter/The_dawn_of_multipoint_solar_science",
+      "depth": 1,
+      "reason": "limit_reached"
+    },
+    {
+      "kind": "url",
+      "url": "https://www.esa.int/ESA_Multimedia/Images/2020/01/Solar_Orbiter_s_instruments",
+      "depth": 1,
+      "reason": "duplicate"
+    },
+    {
+      "kind": "url",
+      "url": "https://www.esa.int/Science_Exploration/Space_Science/Solar_Orbiter/Launching_and_operating_Solar_Orbiter",
+      "depth": 1,
+      "reason": "limit_reached"
+    },
+    {
+      "kind": "url",
+      "url": "https://www.esa.int/ESA_Multimedia/Images/2019/10/Solar_Orbiter_industry_and_science_partners",
+      "depth": 1,
+      "reason": "excluded_path"
+    },
+    {
+      "kind": "url",
+      "url": "https://www.esa.int/Science_Exploration/Space_Science/Solar_Orbiter/Teamwork_with_Parker_Solar_Probe",
+      "depth": 1,
+      "reason": "limit_reached"
+    },
+    {
+      "kind": "url",
+      "url": "https://www.esa.int/Science_Exploration/Space_Science/The_Sun",
+      "depth": 1,
+      "reason": "limit_reached"
+    },
+    {
+      "kind": "url",
+      "url": "https://www.esa.int/Science_Exploration/Space_Science/Solar_Orbiter/Living_with_a_star",
+      "depth": 1,
+      "reason": "limit_reached"
+    },
+    {
+      "kind": "url",
+      "url": "https://www.esa.int/ESA_Multimedia/Images/2020/01/Anatomy_of_the_Sun",
+      "depth": 1,
+      "reason": "excluded_path"
+    },
+    {
+      "kind": "url",
+      "url": "https://www.esa.int/Science_Exploration/Space_Science/The_solar_cycle_a_heartbeat_of_stellar_energy",
+      "depth": 1,
+      "reason": "limit_reached"
+    },
+    {
+      "kind": "url",
+      "url": "https://www.esa.int/ESA_Multimedia/Images/2020/01/Missions_studying_the_Sun",
+      "depth": 1,
+      "reason": "excluded_path"
+    },
+    {
+      "kind": "url",
+      "url": "http://www.esa.int/ESA_Multimedia/Search?SearchText=solar%2Borbiter&result_type=images",
+      "depth": 1,
+      "reason": "excluded_path"
+    },
+    {
+      "kind": "url",
+      "url": "http://www.esa.int/ESA_Multimedia/Search?SearchText=solar%2Borbiter&result_type=videos",
+      "depth": 1,
+      "reason": "excluded_path"
+    },
+    {
+      "kind": "url",
+      "url": "https://www.esa.int/ESA_Multimedia/Sets/Solar_Orbiter_s_full_Sun_views/(result_type)/images",
+      "depth": 1,
+      "reason": "excluded_path"
+    },
+    {
+      "kind": "url",
+      "url": "https://soundcloud.com/esa/sets/voices-of-the-sun-a-solar-sonification-journey",
+      "depth": 1,
+      "reason": "domain_not_allowed"
+    },
+    {
+      "kind": "url",
+      "url": "https://giphy.com/europeanspaceagency/solar-orbiter",
+      "depth": 1,
+      "reason": "domain_not_allowed"
+    },
+    {
+      "kind": "url",
+      "url": "https://www.flickr.com/photos/esa_solarorbiter/albums",
+      "depth": 1,
+      "reason": "domain_not_allowed"
+    },
+    {
+      "kind": "url",
+      "url": "https://bsky.app/profile/science.esa.int",
+      "depth": 1,
+      "reason": "duplicate"
+    },
+    {
+      "kind": "url",
+      "url": "https://www.linkedin.com/showcase/esascience/",
+      "depth": 1,
+      "reason": "duplicate"
+    },
+    {
+      "kind": "url",
+      "url": "https://twitter.com/esascience",
+      "depth": 1,
+      "reason": "duplicate"
+    },
+    {
+      "kind": "url",
+      "url": "https://www.esa.int/Services/Frequently_asked_questions",
+      "depth": 1,
+      "reason": "duplicate"
+    },
+    {
+      "kind": "url",
+      "url": "https://www.esa.int/Services/Contacts",
+      "depth": 1,
+      "reason": "duplicate"
+    },
+    {
+      "kind": "url",
+      "url": "https://www.esa.int/Services/Terms_and_conditions",
+      "depth": 1,
+      "reason": "duplicate"
+    },
+    {
+      "kind": "url",
+      "url": "https://www.esa.int/Services/Privacy_notice",
+      "depth": 1,
+      "reason": "duplicate"
+    },
+    {
+      "kind": "url",
+      "url": "https://www.esa.int/About_Us/Careers_at_ESA",
+      "depth": 1,
+      "reason": "duplicate"
+    },
+    {
+      "kind": "url",
+      "url": "https://www.esa.int/Services/Email_updates",
+      "depth": 1,
+      "reason": "duplicate"
+    },
+    {
+      "kind": "url",
+      "url": "https://bsky.app/profile/esa.int",
+      "depth": 1,
+      "reason": "duplicate"
+    },
+    {
+      "kind": "url",
+      "url": "https://www.facebook.com/EuropeanSpaceAgency",
+      "depth": 1,
+      "reason": "duplicate"
+    },
+    {
+      "kind": "url",
+      "url": "https://www.instagram.com/europeanspaceagency/",
+      "depth": 1,
+      "reason": "duplicate"
+    },
+    {
+      "kind": "url",
+      "url": "https://www.linkedin.com/company/european-space-agency/",
+      "depth": 1,
+      "reason": "duplicate"
+    },
+    {
+      "kind": "url",
+      "url": "https://www.pinterest.com/EuropeanSpaceAgency/",
+      "depth": 1,
+      "reason": "duplicate"
+    },
+    {
+      "kind": "url",
+      "url": "https://twitter.com/esa",
+      "depth": 1,
+      "reason": "duplicate"
+    },
+    {
+      "kind": "url",
+      "url": "https://www.youtube.com/user/ESA",
+      "depth": 1,
+      "reason": "duplicate"
+    },
+    {
+      "kind": "url",
+      "url": "https://www.esa.int/",
+      "depth": 1,
+      "reason": "duplicate"
+    },
+    {
+      "kind": "url",
+      "url": "https://www.esa.int/Science_Exploration",
+      "depth": 1,
+      "reason": "duplicate"
+    },
+    {
+      "kind": "url",
+      "url": "https://www.esa.int/ESA_Multimedia/Missions/Mars_Express/(result_type)/images",
+      "depth": 1,
+      "reason": "excluded_path"
+    },
+    {
+      "kind": "url",
+      "url": "https://www.esa.int/Science_Exploration/Space_Science/Mars_Express/Mars_Express_orbiter_instruments",
+      "depth": 1,
+      "reason": "limit_reached"
+    },
+    {
+      "kind": "url",
+      "url": "https://www.esa.int/Science_Exploration/Space_Science/Mars_Express/The_spacecraft",
+      "depth": 1,
+      "reason": "limit_reached"
+    },
+    {
+      "kind": "url",
+      "url": "https://www.esa.int/ESA_Multimedia/Images/2023/05/20_years_and_counting_Mars_Express_in_numbers",
+      "depth": 1,
+      "reason": "excluded_path"
+    },
+    {
+      "kind": "url",
+      "url": "https://www.esa.int/ESA_Multimedia/Images/2026/07/ESA_s_Mars_Express_meets_NASA_s_Psyche",
+      "depth": 1,
+      "reason": "duplicate"
+    },
+    {
+      "kind": "url",
+      "url": "https://www.esa.int/Science_Exploration/Space_Science/Mars_Express/Metallic_waves_on_ancient_Mars",
+      "depth": 1,
+      "reason": "duplicate"
+    },
+    {
+      "kind": "url",
+      "url": "https://www.esa.int/Science_Exploration/Space_Science/Mars_Express/Dozens_of_dust_devils_hidden_in_plain_sight",
+      "depth": 1,
+      "reason": "limit_reached"
+    },
+    {
+      "kind": "url",
+      "url": "https://www.esa.int/Science_Exploration/Human_and_Robotic_Exploration/ExoMars_rover_targets_vast_bed_of_clay_in_search_for_life",
+      "depth": 1,
+      "reason": "limit_reached"
+    },
+    {
+      "kind": "url",
+      "url": "https://www.esa.int/Science_Exploration/Space_Science/Mars_Express/Waterworn_chaos_on_Mars",
+      "depth": 1,
+      "reason": "limit_reached"
+    },
+    {
+      "kind": "url",
+      "url": "https://www.esa.int/Science_Exploration/Space_Science/Mars_Express/Ash_creeps_across_Mars",
+      "depth": 1,
+      "reason": "limit_reached"
+    },
+    {
+      "kind": "url",
+      "url": "https://www.esa.int/ESA_Multimedia/Videos/2025/10/Fly_over_Xanthe_Terra_with_Mars_Express",
+      "depth": 1,
+      "reason": "excluded_path"
+    },
+    {
+      "kind": "url",
+      "url": "https://www.esa.int/ESA_Multimedia/Videos/2024/11/Fly_around_Ares_Vallis_on_Mars",
+      "depth": 1,
+      "reason": "excluded_path"
+    },
+    {
+      "kind": "url",
+      "url": "https://www.esa.int/ESA_Multimedia/Videos/2024/05/Fly_across_Nili_Fossae_with_ESA_s_Mars_Express",
+      "depth": 1,
+      "reason": "excluded_path"
+    },
+    {
+      "kind": "url",
+      "url": "https://www.esa.int/ESA_Multimedia/Images/2024/02/Sand_dunes_meet_stacked_ice_at_Mars_s_north_pole",
+      "depth": 1,
+      "reason": "excluded_path"
+    },
+    {
+      "kind": "url",
+      "url": "https://www.esa.int/ESA_Multimedia/Images/2024/01/Return_to_the_labyrinth",
+      "depth": 1,
+      "reason": "excluded_path"
+    },
+    {
+      "kind": "url",
+      "url": "https://www.esa.int/ESA_Multimedia/Videos/2023/10/Fly_across_Mars_s_labyrinth_of_night_with_Mars_Express",
+      "depth": 1,
+      "reason": "excluded_path"
+    },
+    {
+      "kind": "url",
+      "url": "https://www.esa.int/ESA_Multimedia/Images/2023/05/20_years_and_counting_Mars_Express_in_numbers",
+      "depth": 1,
+      "reason": "duplicate"
+    },
+    {
+      "kind": "url",
+      "url": "https://www.esa.int/ESA_Multimedia/Images/2023/05/Close-up_of_Valles_Marineris_from_global_Mars_colour_mosaic_annotated",
+      "depth": 1,
+      "reason": "excluded_path"
+    },
+    {
+      "kind": "url",
+      "url": "https://www.esa.int/ESA_Multimedia/Videos/2023/03/Journey_through_Jezero",
+      "depth": 1,
+      "reason": "excluded_path"
+    },
+    {
+      "kind": "url",
+      "url": "https://www.esa.int/Science_Exploration/Space_Science/Mars_Express/(archive)/0",
+      "depth": 1,
+      "reason": "limit_reached"
+    },
+    {
+      "kind": "url",
+      "url": "https://www.esa.int/ESA_Multimedia/Images/2023/05/Global_Mars_in_colour",
+      "depth": 1,
+      "reason": "excluded_path"
+    },
+    {
+      "kind": "url",
+      "url": "https://www.esa.int/ESA_Multimedia/Images/2022/07/Ius_and_Tithonium_Chasmata_on_Mars",
+      "depth": 1,
+      "reason": "excluded_path"
+    },
+    {
+      "kind": "url",
+      "url": "https://www.esa.int/ESA_Multimedia/Images/2022/03/Utopia_Planitia_on_Mars",
+      "depth": 1,
+      "reason": "excluded_path"
+    },
+    {
+      "kind": "url",
+      "url": "https://www.esa.int/ESA_Multimedia/Images/2022/12/Perspective_view_along_icy_layered_ridge",
+      "depth": 1,
+      "reason": "excluded_path"
+    },
+    {
+      "kind": "url",
+      "url": "https://www.esa.int/ESA_Multimedia/Videos/2025/10/Fly_over_Xanthe_Terra_with_Mars_Express",
+      "depth": 1,
+      "reason": "duplicate"
+    },
+    {
+      "kind": "url",
+      "url": "https://www.esa.int/Science_Exploration/Space_Science/Mars_Express/Mars_Express_overview2",
+      "depth": 1,
+      "reason": "limit_reached"
+    },
+    {
+      "kind": "url",
+      "url": "https://www.esa.int/Science_Exploration/Space_Science/Mars_Express/Mars_Express_science_highlights",
+      "depth": 1,
+      "reason": "limit_reached"
+    },
+    {
+      "kind": "url",
+      "url": "http://sci.esa.int/marsexpress",
+      "depth": 1,
+      "reason": "missing_include_keyword"
+    },
+    {
+      "kind": "url",
+      "url": "https://www.esa.int/Science_Exploration/Space_Science/Mars_Express/Mars_Express_orbiter_instruments",
+      "depth": 1,
+      "reason": "duplicate"
+    },
+    {
+      "kind": "url",
+      "url": "https://www.esa.int/Science_Exploration/Space_Science/Mars_Express/The_mission",
+      "depth": 1,
+      "reason": "limit_reached"
+    },
+    {
+      "kind": "url",
+      "url": "https://www.esa.int/Science_Exploration/Space_Science/Mars_Express/The_spacecraft",
+      "depth": 1,
+      "reason": "duplicate"
+    },
+    {
+      "kind": "url",
+      "url": "https://www.esa.int/Science_Exploration/Space_Science/Mars_Express/The_launcher",
+      "depth": 1,
+      "reason": "limit_reached"
+    },
+    {
+      "kind": "url",
+      "url": "https://www.esa.int/Science_Exploration/Space_Science/Mars_Express/Mars_Express_Frequently_Asked_Questions_FAQs",
+      "depth": 1,
+      "reason": "limit_reached"
+    },
+    {
+      "kind": "url",
+      "url": "https://www.esa.int/Science_Exploration/Space_Science/Mars_Express/Geography_of_Mars",
+      "depth": 1,
+      "reason": "limit_reached"
+    },
+    {
+      "kind": "url",
+      "url": "https://www.esa.int/Science_Exploration/Space_Science/Mars_Express/Was_there_water_on_early_Mars",
+      "depth": 1,
+      "reason": "limit_reached"
+    },
+    {
+      "kind": "url",
+      "url": "https://www.esa.int/Science_Exploration/Space_Science/Mars_Express/Facts_about_Mars",
+      "depth": 1,
+      "reason": "limit_reached"
+    },
+    {
+      "kind": "url",
+      "url": "https://www.esa.int/Science_Exploration/Space_Science/Mars_Express/Europe_reclaims_a_stake_in_Mars_exploration",
+      "depth": 1,
+      "reason": "limit_reached"
+    },
+    {
+      "kind": "url",
+      "url": "https://www.esa.int/Science_Exploration/Space_Science/Mars_Express/International_collaboration",
+      "depth": 1,
+      "reason": "limit_reached"
+    },
+    {
+      "kind": "url",
+      "url": "https://www.esa.int/Science_Exploration/Space_Science/Mars_Express_mission_team",
+      "depth": 1,
+      "reason": "limit_reached"
+    },
+    {
+      "kind": "url",
+      "url": "https://www.esa.int/Science_Exploration/Space_Science/Mars_Express/Industry",
+      "depth": 1,
+      "reason": "limit_reached"
+    },
+    {
+      "kind": "url",
+      "url": "http://www.esa.int/ESA_Multimedia/Search?SearchText=Mars+Express&result_type=images",
+      "depth": 1,
+      "reason": "excluded_path"
+    },
+    {
+      "kind": "url",
+      "url": "http://www.esa.int/esa-mmg/mmg.pl?mission=Mars+Express&type=V",
+      "depth": 1,
+      "reason": "missing_include_keyword"
+    },
+    {
+      "kind": "url",
+      "url": "https://www.flickr.com/photos/esa_marswebcam/",
+      "depth": 1,
+      "reason": "domain_not_allowed"
+    },
+    {
+      "kind": "url",
+      "url": "https://maps.planet.fu-berlin.de/pr/",
+      "depth": 1,
+      "reason": "domain_not_allowed"
+    },
+    {
+      "kind": "url",
+      "url": "https://bsky.app/profile/science.esa.int",
+      "depth": 1,
+      "reason": "duplicate"
+    },
+    {
+      "kind": "url",
+      "url": "https://www.linkedin.com/showcase/esascience/",
+      "depth": 1,
+      "reason": "duplicate"
+    },
+    {
+      "kind": "url",
+      "url": "https://twitter.com/esascience",
+      "depth": 1,
+      "reason": "duplicate"
+    },
+    {
+      "kind": "url",
+      "url": "https://twitter.com/esamarswebcam",
+      "depth": 1,
+      "reason": "domain_not_allowed"
+    },
+    {
+      "kind": "url",
+      "url": "https://www.esa.int/Services/Frequently_asked_questions",
+      "depth": 1,
+      "reason": "duplicate"
+    },
+    {
+      "kind": "url",
+      "url": "https://www.esa.int/Services/Contacts",
+      "depth": 1,
+      "reason": "duplicate"
+    },
+    {
+      "kind": "url",
+      "url": "https://www.esa.int/Services/Terms_and_conditions",
+      "depth": 1,
+      "reason": "duplicate"
+    },
+    {
+      "kind": "url",
+      "url": "https://www.esa.int/Services/Privacy_notice",
+      "depth": 1,
+      "reason": "duplicate"
+    },
+    {
+      "kind": "url",
+      "url": "https://www.esa.int/About_Us/Careers_at_ESA",
+      "depth": 1,
+      "reason": "duplicate"
+    },
+    {
+      "kind": "url",
+      "url": "https://www.esa.int/Services/Email_updates",
+      "depth": 1,
+      "reason": "duplicate"
+    },
+    {
+      "kind": "url",
+      "url": "https://bsky.app/profile/esa.int",
+      "depth": 1,
+      "reason": "duplicate"
+    },
+    {
+      "kind": "url",
+      "url": "https://www.facebook.com/EuropeanSpaceAgency",
+      "depth": 1,
+      "reason": "duplicate"
+    },
+    {
+      "kind": "url",
+      "url": "https://www.instagram.com/europeanspaceagency/",
+      "depth": 1,
+      "reason": "duplicate"
+    },
+    {
+      "kind": "url",
+      "url": "https://www.linkedin.com/company/european-space-agency/",
+      "depth": 1,
+      "reason": "duplicate"
+    },
+    {
+      "kind": "url",
+      "url": "https://www.pinterest.com/EuropeanSpaceAgency/",
+      "depth": 1,
+      "reason": "duplicate"
+    },
+    {
+      "kind": "url",
+      "url": "https://twitter.com/esa",
+      "depth": 1,
+      "reason": "duplicate"
+    },
+    {
+      "kind": "url",
+      "url": "https://www.youtube.com/user/ESA",
+      "depth": 1,
+      "reason": "duplicate"
+    },
+    {
+      "kind": "url",
+      "url": "https://www.esa.int/",
+      "depth": 1,
+      "reason": "duplicate"
+    },
+    {
+      "kind": "url",
+      "url": "https://www.esa.int/Science_Exploration",
+      "depth": 1,
+      "reason": "duplicate"
+    },
+    {
+      "kind": "url",
+      "url": "https://www.esa.int/Science_Exploration/Space_Science/Venus_Express/Orbiter_instruments",
+      "depth": 1,
+      "reason": "limit_reached"
+    },
+    {
+      "kind": "url",
+      "url": "https://www.esa.int/Science_Exploration/Space_Science/Venus_Express/The_spacecraft",
+      "depth": 1,
+      "reason": "limit_reached"
+    },
+    {
+      "kind": "url",
+      "url": "https://www.esa.int/Enabling_Support/Operations/Venus_Express_operations",
+      "depth": 1,
+      "reason": "limit_reached"
+    },
+    {
+      "kind": "url",
+      "url": "https://www.esa.int/Science_Exploration/Space_Science/Tracking_a_solar_eruption_through_the_Solar_System",
+      "depth": 1,
+      "reason": "limit_reached"
+    },
+    {
+      "kind": "url",
+      "url": "https://www.esa.int/Science_Exploration/Space_Science/Venus_Express/Venus_has_potential_but_not_for_water",
+      "depth": 1,
+      "reason": "limit_reached"
+    },
+    {
+      "kind": "url",
+      "url": "https://www.esa.int/ESA_Multimedia/Images/2015/11/Destination_Venus",
+      "depth": 1,
+      "reason": "excluded_path"
+    },
+    {
+      "kind": "url",
+      "url": "https://www.esa.int/Science_Exploration/Space_Science/Venus_Express/Hot_lava_flows_discovered_on_Venus",
+      "depth": 1,
+      "reason": "limit_reached"
+    },
+    {
+      "kind": "url",
+      "url": "https://www.esa.int/Science_Exploration/Space_Science/Venus_Express/Venus_Express_goes_gently_into_the_night",
+      "depth": 1,
+      "reason": "limit_reached"
+    },
+    {
+      "kind": "url",
+      "url": "https://www.esa.int/Science_Exploration/Space_Science/Venus_Express/Venus_Express_up_above_the_clouds_so_high",
+      "depth": 1,
+      "reason": "limit_reached"
+    },
+    {
+      "kind": "url",
+      "url": "https://www.esa.int/ESA_Multimedia/Images/2014/05/Venus_Express_aerobraking",
+      "depth": 1,
+      "reason": "excluded_path"
+    },
+    {
+      "kind": "url",
+      "url": "https://www.esa.int/ESA_Multimedia/Images/2014/05/Venus_Express_aerobraking2",
+      "depth": 1,
+      "reason": "excluded_path"
+    },
+    {
+      "kind": "url",
+      "url": "https://www.esa.int/ESA_Multimedia/Images/2012/10/Venus_cloud_tops2",
+      "depth": 1,
+      "reason": "excluded_path"
+    },
+    {
+      "kind": "url",
+      "url": "https://www.esa.int/ESA_Multimedia/Images/2008/12/Venus_in_the_ultraviolet_and_the_infrared",
+      "depth": 1,
+      "reason": "excluded_path"
+    },
+    {
+      "kind": "url",
+      "url": "https://www.esa.int/Science_Exploration/Space_Science/Venus_Express/(archive)/0",
+      "depth": 1,
+      "reason": "limit_reached"
+    },
+    {
+      "kind": "url",
+      "url": "https://www.esa.int/ESA_Multimedia/Images/2015/11/Destination_Venus",
+      "depth": 1,
+      "reason": "duplicate"
+    },
+    {
+      "kind": "url",
+      "url": "https://www.esa.int/ESA_Multimedia/Images/2006/06/Double_vortex_at_Venus_South_pole",
+      "depth": 1,
+      "reason": "excluded_path"
+    },
+    {
+      "kind": "url",
+      "url": "https://www.esa.int/ESA_Multimedia/Images/2012/10/Venus_cloud_tops2",
+      "depth": 1,
+      "reason": "duplicate"
+    },
+    {
+      "kind": "url",
+      "url": "https://www.esa.int/Science_Exploration/Space_Science/Venus_Express/Venus_Express_overview3",
+      "depth": 1,
+      "reason": "limit_reached"
+    },
+    {
+      "kind": "url",
+      "url": "https://www.esa.int/Science_Exploration/Space_Science/Venus_Express/Venus_Express_science_highlights",
+      "depth": 1,
+      "reason": "limit_reached"
+    },
+    {
+      "kind": "url",
+      "url": "https://www.esa.int/Science_Exploration/Space_Science/Venus_Express/The_spacecraft",
+      "depth": 1,
+      "reason": "duplicate"
+    },
+    {
+      "kind": "url",
+      "url": "https://www.esa.int/Science_Exploration/Space_Science/Venus_Express/Orbiter_instruments",
+      "depth": 1,
+      "reason": "duplicate"
+    },
+    {
+      "kind": "url",
+      "url": "https://www.esa.int/Science_Exploration/Space_Science/Venus_Express/Tribute_to_the_cryptic_planet",
+      "depth": 1,
+      "reason": "limit_reached"
+    },
+    {
+      "kind": "url",
+      "url": "https://www.esa.int/Science_Exploration/Space_Science/Venus_Express/Penetrating_an_impenetrable_world",
+      "depth": 1,
+      "reason": "limit_reached"
+    },
+    {
+      "kind": "url",
+      "url": "https://www.esa.int/Science_Exploration/Space_Science/Envision/Past_missions_to_Venus",
+      "depth": 1,
+      "reason": "limit_reached"
+    },
+    {
+      "kind": "url",
+      "url": "https://www.esa.int/Science_Exploration/Space_Science/Venus_Express/Venus_Express_overview3",
+      "depth": 1,
+      "reason": "duplicate"
+    },
+    {
+      "kind": "url",
+      "url": "https://www.esa.int/Science_Exploration/Space_Science/Venus_Express/Venus_Express_science_highlights",
+      "depth": 1,
+      "reason": "duplicate"
+    },
+    {
+      "kind": "url",
+      "url": "https://www.esa.int/Science_Exploration/Space_Science/Venus_Express/The_spacecraft",
+      "depth": 1,
+      "reason": "duplicate"
+    },
+    {
+      "kind": "url",
+      "url": "https://www.esa.int/Science_Exploration/Space_Science/Venus_Express/Orbiter_instruments",
+      "depth": 1,
+      "reason": "duplicate"
+    },
+    {
+      "kind": "url",
+      "url": "https://www.esa.int/Science_Exploration/Space_Science/Venus_Express/The_launcher",
+      "depth": 1,
+      "reason": "limit_reached"
+    },
+    {
+      "kind": "url",
+      "url": "https://www.esa.int/Enabling_Support/Operations/Venus_Express_operations",
+      "depth": 1,
+      "reason": "duplicate"
+    },
+    {
+      "kind": "url",
+      "url": "http://sci.esa.int/venusexpress",
+      "depth": 1,
+      "reason": "missing_include_keyword"
+    },
+    {
+      "kind": "url",
+      "url": "https://www.esa.int/Science_Exploration/Space_Science/Venus_Express/Venus_Express_Frequently_Asked_Questions_FAQs",
+      "depth": 1,
+      "reason": "limit_reached"
+    },
+    {
+      "kind": "url",
+      "url": "https://www.esa.int/Science_Exploration/Space_Science/Venus_Express/Venusian_geography",
+      "depth": 1,
+      "reason": "limit_reached"
+    },
+    {
+      "kind": "url",
+      "url": "https://www.esa.int/Science_Exploration/Space_Science/Venus_Express/Venus_s_surface",
+      "depth": 1,
+      "reason": "limit_reached"
+    },
+    {
+      "kind": "url",
+      "url": "https://www.esa.int/Science_Exploration/Space_Science/Venus_Express/Acid_clouds_and_lightning",
+      "depth": 1,
+      "reason": "limit_reached"
+    },
+    {
+      "kind": "url",
+      "url": "https://www.esa.int/Science_Exploration/Space_Science/Venus_Express/Greenhouse_effect_clouds_and_winds",
+      "depth": 1,
+      "reason": "limit_reached"
+    },
+    {
+      "kind": "url",
+      "url": "https://www.esa.int/Science_Exploration/Space_Science/Venus_Express/Venus_compared_to_Earth",
+      "depth": 1,
+      "reason": "limit_reached"
+    },
+    {
+      "kind": "url",
+      "url": "https://www.esa.int/Science_Exploration/Space_Science/Venus_Express/International_collaboration",
+      "depth": 1,
+      "reason": "limit_reached"
+    },
+    {
+      "kind": "url",
+      "url": "https://www.esa.int/Science_Exploration/Space_Science/Venus_Express/Project_Manager_An_interview_with_Don_McCoy",
+      "depth": 1,
+      "reason": "limit_reached"
+    },
+    {
+      "kind": "url",
+      "url": "https://www.esa.int/Science_Exploration/Space_Science/Venus_Express/Project_Scientist_An_interview_with_Haakan_Svedhem",
+      "depth": 1,
+      "reason": "limit_reached"
+    },
+    {
+      "kind": "url",
+      "url": "https://www.esa.int/Science_Exploration/Space_Science/Venus_Express/Launch_Campaign_Manager_An_interview_with_Michael_Witting",
+      "depth": 1,
+      "reason": "limit_reached"
+    },
+    {
+      "kind": "url",
+      "url": "https://www.esa.int/Enabling_Support/Operations/Spacecraft_Operations_Manager_An_interview_with_Andrea_Accomazzo",
+      "depth": 1,
+      "reason": "missing_include_keyword"
+    },
+    {
+      "kind": "url",
+      "url": "https://www.esa.int/Science_Exploration/Space_Science/Venus_Express/Venus_Express_Flight_Control_Team",
+      "depth": 1,
+      "reason": "limit_reached"
+    },
+    {
+      "kind": "url",
+      "url": "https://www.esa.int/Science_Exploration/Space_Science/Venus_Express/Principal_Investigators",
+      "depth": 1,
+      "reason": "limit_reached"
+    },
+    {
+      "kind": "url",
+      "url": "https://www.esa.int/ESA_Multimedia/Search?SearchText=Venus+Express&result_type=images",
+      "depth": 1,
+      "reason": "excluded_path"
+    },
+    {
+      "kind": "url",
+      "url": "http://www.esa.int/esa-mmg/mmg.pl?mission=Venus+Express&type=V",
+      "depth": 1,
+      "reason": "missing_include_keyword"
+    },
+    {
+      "kind": "url",
+      "url": "https://bsky.app/profile/science.esa.int",
+      "depth": 1,
+      "reason": "duplicate"
+    },
+    {
+      "kind": "url",
+      "url": "https://www.linkedin.com/showcase/esascience/",
+      "depth": 1,
+      "reason": "duplicate"
+    },
+    {
+      "kind": "url",
+      "url": "https://twitter.com/esascience",
+      "depth": 1,
+      "reason": "duplicate"
+    },
+    {
+      "kind": "url",
+      "url": "https://www.esa.int/Services/Frequently_asked_questions",
+      "depth": 1,
+      "reason": "duplicate"
+    },
+    {
+      "kind": "url",
+      "url": "https://www.esa.int/Services/Contacts",
+      "depth": 1,
+      "reason": "duplicate"
+    },
+    {
+      "kind": "url",
+      "url": "https://www.esa.int/Services/Terms_and_conditions",
+      "depth": 1,
+      "reason": "duplicate"
+    },
+    {
+      "kind": "url",
+      "url": "https://www.esa.int/Services/Privacy_notice",
+      "depth": 1,
+      "reason": "duplicate"
+    },
+    {
+      "kind": "url",
+      "url": "https://www.esa.int/About_Us/Careers_at_ESA",
+      "depth": 1,
+      "reason": "duplicate"
+    },
+    {
+      "kind": "url",
+      "url": "https://www.esa.int/Services/Email_updates",
+      "depth": 1,
+      "reason": "duplicate"
+    },
+    {
+      "kind": "url",
+      "url": "https://bsky.app/profile/esa.int",
+      "depth": 1,
+      "reason": "duplicate"
+    },
+    {
+      "kind": "url",
+      "url": "https://www.facebook.com/EuropeanSpaceAgency",
+      "depth": 1,
+      "reason": "duplicate"
+    },
+    {
+      "kind": "url",
+      "url": "https://www.instagram.com/europeanspaceagency/",
+      "depth": 1,
+      "reason": "duplicate"
+    },
+    {
+      "kind": "url",
+      "url": "https://www.linkedin.com/company/european-space-agency/",
+      "depth": 1,
+      "reason": "duplicate"
+    },
+    {
+      "kind": "url",
+      "url": "https://www.pinterest.com/EuropeanSpaceAgency/",
+      "depth": 1,
+      "reason": "duplicate"
+    },
+    {
+      "kind": "url",
+      "url": "https://twitter.com/esa",
+      "depth": 1,
+      "reason": "duplicate"
+    },
+    {
+      "kind": "url",
+      "url": "https://www.youtube.com/user/ESA",
+      "depth": 1,
+      "reason": "duplicate"
+    },
+    {
+      "kind": "url",
+      "url": "https://www.esa.int/",
+      "depth": 1,
+      "reason": "duplicate"
+    },
+    {
+      "kind": "url",
+      "url": "https://www.esa.int/Science_Exploration",
+      "depth": 1,
+      "reason": "duplicate"
+    },
+    {
+      "kind": "url",
+      "url": "https://www.esa.int/ESA_Multimedia/Videos/2020/04/Lunar_SMART-1_mission_in_VR",
+      "depth": 1,
+      "reason": "excluded_path"
+    },
+    {
+      "kind": "url",
+      "url": "https://www.esa.int/ESA_Multimedia/Images/2018/09/SMART-1_s_crash_site",
+      "depth": 1,
+      "reason": "excluded_path"
+    },
+    {
+      "kind": "url",
+      "url": "https://www.esa.int/ESA_Multimedia/Images/2005/07/Hadley_Rille_on_the_Moon_seen_by_SMART-1",
+      "depth": 1,
+      "reason": "excluded_path"
+    },
+    {
+      "kind": "url",
+      "url": "https://www.esa.int/ESA_Multimedia/Images/2016/02/SMART-1_views_a_cluster_of_the_Moon_s_craters",
+      "depth": 1,
+      "reason": "excluded_path"
+    },
+    {
+      "kind": "url",
+      "url": "https://www.esa.int/ESA_Multimedia/Images/2014/05/Annotated_lunar_south_pole_mosaic",
+      "depth": 1,
+      "reason": "excluded_path"
+    },
+    {
+      "kind": "url",
+      "url": "https://www.esa.int/Science_Exploration/Space_Science/SMART-1/Experience_a_virtual_journey_to_the_lunar_Peak_of_Eternal_Light",
+      "depth": 1,
+      "reason": "limit_reached"
+    },
+    {
+      "kind": "url",
+      "url": "https://www.esa.int/Science_Exploration/Space_Science/SMART-1/SMART-1_maps_Kaguya_lunar_impact",
+      "depth": 1,
+      "reason": "limit_reached"
+    },
+    {
+      "kind": "url",
+      "url": "https://www.esa.int/Science_Exploration/Space_Science/SMART-1/New_lunar_south_polar_maps_from_nobr_SMART-1_nobr",
+      "depth": 1,
+      "reason": "limit_reached"
+    },
+    {
+      "kind": "url",
+      "url": "https://www.esa.int/Science_Exploration/Space_Science/SMART-1/SMART-1_Travel_maps_of_the_lunar_north_pole",
+      "depth": 1,
+      "reason": "limit_reached"
+    },
+    {
+      "kind": "url",
+      "url": "https://www.esa.int/Science_Exploration/Space_Science/SMART-1/Chang_e_1_-_new_mission_to_Moon_lifts_off",
+      "depth": 1,
+      "reason": "limit_reached"
+    },
+    {
+      "kind": "url",
+      "url": "https://www.esa.int/ESA_Multimedia/Images/2006/10/SMART-1_view_of_Shackleton_crater_at_lunar_South_Pole",
+      "depth": 1,
+      "reason": "excluded_path"
+    },
+    {
+      "kind": "url",
+      "url": "https://www.esa.int/ESA_Multimedia/Videos/2006/10/Smart-1_Impact_on_the_Moon_so_far",
+      "depth": 1,
+      "reason": "excluded_path"
+    },
+    {
+      "kind": "url",
+      "url": "https://www.esa.int/ESA_Multimedia/Videos/2006/08/Smart-1_End_of_Mission_Review",
+      "depth": 1,
+      "reason": "excluded_path"
+    },
+    {
+      "kind": "url",
+      "url": "https://www.esa.int/ESA_Multimedia/Videos/2003/09/Smart-1_En_route_to_the_Moon",
+      "depth": 1,
+      "reason": "excluded_path"
+    },
+    {
+      "kind": "url",
+      "url": "https://www.esa.int/ESA_Multimedia/Videos/2003/03/Smart-1_Story_2-_Why_Go_to_the_Moon",
+      "depth": 1,
+      "reason": "excluded_path"
+    },
+    {
+      "kind": "url",
+      "url": "https://www.esa.int/Science_Exploration/Space_Science/SMART-1/(archive)/0",
+      "depth": 1,
+      "reason": "limit_reached"
+    },
+    {
+      "kind": "url",
+      "url": "https://www.esa.int/Science_Exploration/Space_Science/SMART-1/SMART-1_Impact_Frequently_Asked_Questions_FAQs",
+      "depth": 1,
+      "reason": "limit_reached"
+    },
+    {
+      "kind": "url",
+      "url": "https://www.esa.int/Science_Exploration/Space_Science/SMART-1/The_magic_of_ion_engines",
+      "depth": 1,
+      "reason": "limit_reached"
+    },
+    {
+      "kind": "url",
+      "url": "https://www.esa.int/Science_Exploration/Space_Science/SMART-1/The_SMART_way_to_travel",
+      "depth": 1,
+      "reason": "limit_reached"
+    },
+    {
+      "kind": "url",
+      "url": "https://www.esa.int/Science_Exploration/Space_Science/SMART-1/A_spiral_pathway_to_the_Moon",
+      "depth": 1,
+      "reason": "limit_reached"
+    },
+    {
+      "kind": "url",
+      "url": "https://www.esa.int/Science_Exploration/Space_Science/SMART-1/Masterpieces_of_miniaturisation",
+      "depth": 1,
+      "reason": "limit_reached"
+    },
+    {
+      "kind": "url",
+      "url": "https://www.esa.int/Science_Exploration/Space_Science/SMART-1/What_do_all_the_instruments_do",
+      "depth": 1,
+      "reason": "limit_reached"
+    },
+    {
+      "kind": "url",
+      "url": "https://www.esa.int/Science_Exploration/Space_Science/SMART-1/Welcome_to_the_double_planet",
+      "depth": 1,
+      "reason": "limit_reached"
+    },
+    {
+      "kind": "url",
+      "url": "https://www.esa.int/Science_Exploration/Space_Science/SMART-1/Lunar_science_-_still_plenty_left_to_do",
+      "depth": 1,
+      "reason": "limit_reached"
+    },
+    {
+      "kind": "url",
+      "url": "https://www.esa.int/Science_Exploration/Space_Science/SMART-1/Where_did_the_Moon_come_from",
+      "depth": 1,
+      "reason": "limit_reached"
+    },
+    {
+      "kind": "url",
+      "url": "https://www.esa.int/ESA_Multimedia/Search?SearchText=smart-1&result_type=images",
+      "depth": 1,
+      "reason": "excluded_path"
+    },
+    {
+      "kind": "url",
+      "url": "http://www.esa.int/esa-mmg/mmg.pl?mission=SMART-1&type=V",
+      "depth": 1,
+      "reason": "limit_reached"
+    },
+    {
+      "kind": "url",
+      "url": "https://esamultimedia.esa.int/images/smart_1/wallpaper_SMART1_002.jpg",
+      "depth": 1,
+      "reason": "excluded_path"
+    },
+    {
+      "kind": "url",
+      "url": "https://bsky.app/profile/science.esa.int",
+      "depth": 1,
+      "reason": "duplicate"
+    },
+    {
+      "kind": "url",
+      "url": "https://www.linkedin.com/showcase/esascience/",
+      "depth": 1,
+      "reason": "duplicate"
+    },
+    {
+      "kind": "url",
+      "url": "https://twitter.com/esascience",
+      "depth": 1,
+      "reason": "duplicate"
+    },
+    {
+      "kind": "url",
+      "url": "https://www.esa.int/Science_Exploration/Space_Science/SMART-1/SMART-1_overview",
+      "depth": 1,
+      "reason": "limit_reached"
+    },
+    {
+      "kind": "url",
+      "url": "https://www.esa.int/Science_Exploration/Space_Science/SMART-1/SMART-1_science_highlights",
+      "depth": 1,
+      "reason": "limit_reached"
+    },
+    {
+      "kind": "url",
+      "url": "http://sci.esa.int/smart-1",
+      "depth": 1,
+      "reason": "limit_reached"
+    },
+    {
+      "kind": "url",
+      "url": "https://www.esa.int/Services/Frequently_asked_questions",
+      "depth": 1,
+      "reason": "duplicate"
+    },
+    {
+      "kind": "url",
+      "url": "https://www.esa.int/Services/Contacts",
+      "depth": 1,
+      "reason": "duplicate"
+    },
+    {
+      "kind": "url",
+      "url": "https://www.esa.int/Services/Terms_and_conditions",
+      "depth": 1,
+      "reason": "duplicate"
+    },
+    {
+      "kind": "url",
+      "url": "https://www.esa.int/Services/Privacy_notice",
+      "depth": 1,
+      "reason": "duplicate"
+    },
+    {
+      "kind": "url",
+      "url": "https://www.esa.int/About_Us/Careers_at_ESA",
+      "depth": 1,
+      "reason": "duplicate"
+    },
+    {
+      "kind": "url",
+      "url": "https://www.esa.int/Services/Email_updates",
+      "depth": 1,
+      "reason": "duplicate"
+    },
+    {
+      "kind": "url",
+      "url": "https://bsky.app/profile/esa.int",
+      "depth": 1,
+      "reason": "duplicate"
+    },
+    {
+      "kind": "url",
+      "url": "https://www.facebook.com/EuropeanSpaceAgency",
+      "depth": 1,
+      "reason": "duplicate"
+    },
+    {
+      "kind": "url",
+      "url": "https://www.instagram.com/europeanspaceagency/",
+      "depth": 1,
+      "reason": "duplicate"
+    },
+    {
+      "kind": "url",
+      "url": "https://www.linkedin.com/company/european-space-agency/",
+      "depth": 1,
+      "reason": "duplicate"
+    },
+    {
+      "kind": "url",
+      "url": "https://www.pinterest.com/EuropeanSpaceAgency/",
+      "depth": 1,
+      "reason": "duplicate"
+    },
+    {
+      "kind": "url",
+      "url": "https://twitter.com/esa",
+      "depth": 1,
+      "reason": "duplicate"
+    },
+    {
+      "kind": "url",
+      "url": "https://www.youtube.com/user/ESA",
+      "depth": 1,
+      "reason": "duplicate"
+    }
+  ],
+  "quality_summary": {
+    "total": 8,
+    "triage_counts": {
+      "exploratory": 2,
+      "review_needed": 6
+    },
+    "top_reasons": {
+      "official or academic domain": 8,
+      "very short text": 8,
+      "science keyword hits=1": 5,
+      "mission page signal": 3,
+      "protected official science/fact/mission page floor": 3,
+      "science keyword hits=2": 2,
+      "news/update signal": 2,
+      "science keyword hits=3": 1
+    }
+  }
+}

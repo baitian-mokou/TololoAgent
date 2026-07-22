@@ -1,0 +1,137 @@
+{
+  "source_id": "official_science_example",
+  "registered": false,
+  "network": false,
+  "mode": "manifest_candidate_sandbox",
+  "generated_at": "2026-07-21T17:49:08.142197+00:00",
+  "manifest_path": "configs\\source_manifests\\examples\\official_science_example.json",
+  "fixture_candidates_path": "tests/fixtures/source_quality/official_science_example_candidates.json",
+  "manifest_validation": {
+    "passed": true,
+    "errors": [],
+    "warnings": []
+  },
+  "candidate_count": 4,
+  "triage_counts": {
+    "accepted": 2,
+    "rejected": 2
+  },
+  "top_reasons": {
+    "official or academic domain": 4,
+    "science keyword hits=11": 2,
+    "fact or overview page signal": 2,
+    "reference signal present": 2,
+    "short text": 2,
+    "very short text": 2,
+    "topic taxonomy hits=2": 1,
+    "table evidence present": 1,
+    "topic taxonomy hits=3": 1,
+    "mission page signal": 1
+  },
+  "safety_flags": {
+    "formal_pipeline_write": false,
+    "raw_json_write": false,
+    "triples_write": false,
+    "chroma_write": false,
+    "neo4j_write": false,
+    "network_disabled": true,
+    "unregistered_ingest_blocked": true,
+    "sandbox_report_only": true
+  },
+  "selected_candidate_snapshots": [
+    {
+      "index": 1,
+      "url": "https://agency.example.gov/solar-system/mars-fact-sheet",
+      "title": "Mars Fact Sheet",
+      "text_length": 0,
+      "html_length": 294,
+      "score": 86,
+      "triage": "accepted",
+      "labels": [
+        "official_source",
+        "topic_taxonomy_context",
+        "science_topic",
+        "fact_page",
+        "has_table",
+        "has_references",
+        "short_text"
+      ],
+      "reasons": [
+        "official or academic domain",
+        "topic taxonomy hits=2",
+        "science keyword hits=11",
+        "fact or overview page signal",
+        "table evidence present"
+      ]
+    },
+    {
+      "index": 2,
+      "url": "https://agency.example.gov/missions/jupiter-orbiter",
+      "title": "Jupiter Orbiter Mission Overview",
+      "text_length": 222,
+      "html_length": 0,
+      "score": 84,
+      "triage": "accepted",
+      "labels": [
+        "official_source",
+        "topic_taxonomy_context",
+        "science_topic",
+        "fact_page",
+        "mission_page",
+        "has_references",
+        "short_text"
+      ],
+      "reasons": [
+        "official or academic domain",
+        "topic taxonomy hits=3",
+        "science keyword hits=11",
+        "fact or overview page signal",
+        "mission page signal"
+      ]
+    },
+    {
+      "index": 3,
+      "url": "https://agency.example.gov/gallery/mars-images",
+      "title": "Mars image gallery",
+      "text_length": 28,
+      "html_length": 0,
+      "score": 0,
+      "triage": "rejected",
+      "labels": [
+        "official_source",
+        "science_topic",
+        "short_text",
+        "media_page"
+      ],
+      "reasons": [
+        "official or academic domain",
+        "science keyword hits=1",
+        "very short text",
+        "media/gallery signal"
+      ]
+    },
+    {
+      "index": 4,
+      "url": "https://agency.example.gov/privacy",
+      "title": "Privacy policy",
+      "text_length": 45,
+      "html_length": 0,
+      "score": 0,
+      "triage": "rejected",
+      "labels": [
+        "official_source",
+        "short_text",
+        "policy_page",
+        "low_signal"
+      ],
+      "reasons": [
+        "official or academic domain",
+        "very short text",
+        "blocked path/content signal",
+        "low science signal"
+      ]
+    }
+  ],
+  "frontier_skipped_count": 0,
+  "frontier_skipped": []
+}

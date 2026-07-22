@@ -1,0 +1,41 @@
+{
+  "schema_version": 1,
+  "sources": [
+    {
+      "source_id": "arxiv_preprint_candidate",
+      "review_decision": "pending",
+      "reviewer_notes": "",
+      "approved_sample_size": 0
+    },
+    {
+      "source_id": "data_portal_candidate",
+      "review_decision": "pending",
+      "reviewer_notes": "",
+      "approved_sample_size": 0
+    },
+    {
+      "source_id": "journal_publisher_candidate",
+      "review_decision": "pending",
+      "reviewer_notes": "",
+      "approved_sample_size": 0
+    },
+    {
+      "source_id": "museum_observatory_candidate",
+      "review_decision": "pending",
+      "reviewer_notes": "",
+      "approved_sample_size": 0
+    },
+    {
+      "source_id": "noaa_climate_candidate",
+      "review_decision": "pending",
+      "reviewer_notes": "",
+      "approved_sample_size": 0
+    },
+    {
+      "source_id": "university_lab_candidate",
+      "review_decision": "pending",
+      "reviewer_notes": "",
+      "approved_sample_size": 0
+    }
+  ]
+}

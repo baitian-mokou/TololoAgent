@@ -1,0 +1,22 @@
+[
+  {
+    "url": "https://agency.example.gov/solar-system/mars-fact-sheet",
+    "title": "Mars Fact Sheet",
+    "html": "<html><body><h1>Mars Fact Sheet</h1><table><tr><th>Mass</th><td>6.4e23 kg</td></tr><tr><th>Radius</th><td>3389 km</td></tr></table><p>Mars is a planet in the solar system with orbit, atmosphere, diameter, mass and radius data. Reference: official planetary science fact sheet.</p></body></html>"
+  },
+  {
+    "url": "https://agency.example.gov/missions/jupiter-orbiter",
+    "title": "Jupiter Orbiter Mission Overview",
+    "text": "The Jupiter Orbiter mission is a spacecraft mission studying Jupiter, moons, atmosphere, orbit, magnetosphere, planetary science objectives, instruments and datasets. References describe mission phases and science targets."
+  },
+  {
+    "url": "https://agency.example.gov/gallery/mars-images",
+    "title": "Mars image gallery",
+    "text": "Images and videos from Mars."
+  },
+  {
+    "url": "https://agency.example.gov/privacy",
+    "title": "Privacy policy",
+    "text": "This privacy page explains cookies and terms."
+  }
+]

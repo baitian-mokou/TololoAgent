@@ -1,0 +1,17 @@
+[
+  {
+    "url": "https://www.climate.gov/climate-and-energy/topics/climate-change",
+    "title": "Climate Change: Global Temperature Indicators",
+    "html": "<html><body><h1>Climate Change Indicators</h1><table><tr><th>Dataset</th><td>Global temperature anomaly</td></tr><tr><th>Reference period</th><td>20th century average</td></tr></table><p>This official science page explains climate, atmosphere, temperature, ocean, dataset, measurements, observations, trends and references for Earth science education.</p></body></html>"
+  },
+  {
+    "url": "https://www.climate.gov/news/features/new-seasonal-outlook",
+    "title": "Seasonal Climate Outlook News",
+    "text": "A science news update about climate outlook, atmosphere and ocean observations. The page summarizes recent measurements and links to official datasets for review."
+  },
+  {
+    "url": "https://www.climate.gov/search?query=climate",
+    "title": "Search results",
+    "text": "Search climate.gov results, filters, tags and navigation."
+  }
+]

@@ -244,7 +244,7 @@ class SettingsDialog:
         row_pwd = ttk.Frame(neo4j_frame)
         row_pwd.pack(fill="x", pady=2)
         ttk.Label(row_pwd, text=self.i18n.t("settings_neo4j_pwd"), width=12).pack(side="left")
-        self.neo4j_pwd_var = tk.StringVar(value=conn.get("neo4j_password", "12345678"))
+        self.neo4j_pwd_var = tk.StringVar(value=conn.get("neo4j_password", "${NEO4J_PASSWORD}"))
         self.neo4j_pwd_entry = ttk.Entry(row_pwd, textvariable=self.neo4j_pwd_var, width=40, show="*")
         self.neo4j_pwd_entry.pack(side="left", fill="x", expand=True, padx=2)
         self.neo4j_pwd_show = True

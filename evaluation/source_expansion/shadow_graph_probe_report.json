@@ -1,0 +1,290 @@
+{
+  "generated_at": "2026-07-21T16:05:27.733773+00:00",
+  "mode": "shadow_graph_probe_read_only",
+  "active_source": "zh_wikipedia",
+  "registry": {
+    "zh_wikipedia": "active",
+    "nasa": "disabled",
+    "esa": "disabled",
+    "wikidata": "disabled"
+  },
+  "connection": {
+    "ok": true,
+    "uri": "bolt://127.0.0.1:7687",
+    "user": "neo4j"
+  },
+  "sources": {
+    "nasa": {
+      "status": "ok",
+      "source": "nasa",
+      "schema_version": "nasa_shadow_ready_v1",
+      "node_count": 4,
+      "relationship_count": 3,
+      "relation_type_counts": {
+        "HAS_MASS": 3
+      },
+      "sample_edges": [
+        {
+          "subject": "Earth",
+          "relation": "HAS_MASS",
+          "object": "24 kg",
+          "source": "nasa",
+          "schema_version": "nasa_shadow_ready_v1",
+          "source_title": "地球",
+          "source_url": ""
+        },
+        {
+          "subject": "Mercury",
+          "relation": "HAS_MASS",
+          "object": "24 kg",
+          "source": "nasa",
+          "schema_version": "nasa_shadow_ready_v1",
+          "source_title": "水星",
+          "source_url": ""
+        },
+        {
+          "subject": "Venus",
+          "relation": "HAS_MASS",
+          "object": "24 kg",
+          "source": "nasa",
+          "schema_version": "nasa_shadow_ready_v1",
+          "source_title": "金星",
+          "source_url": ""
+        }
+      ],
+      "contract_checks": {
+        "passed": true,
+        "bad_source_count": 0,
+        "missing_metadata_count": 0,
+        "missing_schema_count": 0,
+        "sample_schema_mismatch_count": 0,
+        "active_source_unchanged": true,
+        "registry_unchanged": true
+      }
+    },
+    "esa": {
+      "status": "ok",
+      "source": "esa",
+      "schema_version": "esa_shadow_ready_v1",
+      "node_count": 42,
+      "relationship_count": 41,
+      "relation_type_counts": {
+        "OPERATED_BY": 41
+      },
+      "sample_edges": [
+        {
+          "subject": "A Christmas comet for Solar Orbiter",
+          "relation": "OPERATED_BY",
+          "object": "ESA",
+          "source": "esa",
+          "schema_version": "esa_shadow_ready_v1",
+          "source_title": "ESA - A Christmas comet for Solar Orbiter",
+          "source_url": ""
+        },
+        {
+          "subject": "A snaking scar on Mars",
+          "relation": "OPERATED_BY",
+          "object": "ESA",
+          "source": "esa",
+          "schema_version": "esa_shadow_ready_v1",
+          "source_title": "ESA - A snaking scar on Mars",
+          "source_url": ""
+        },
+        {
+          "subject": "Beagle-2 lander found on Mars",
+          "relation": "OPERATED_BY",
+          "object": "ESA",
+          "source": "esa",
+          "schema_version": "esa_shadow_ready_v1",
+          "source_title": "ESA - Beagle-2 lander found on Mars",
+          "source_url": ""
+        },
+        {
+          "subject": "Chaotic terrain in Ariadnes Colles",
+          "relation": "OPERATED_BY",
+          "object": "ESA",
+          "source": "esa",
+          "schema_version": "esa_shadow_ready_v1",
+          "source_title": "ESA - Chaotic terrain in Ariadnes Colles",
+          "source_url": ""
+        },
+        {
+          "subject": "Chaotic terrain in Iani Chaos",
+          "relation": "OPERATED_BY",
+          "object": "ESA",
+          "source": "esa",
+          "schema_version": "esa_shadow_ready_v1",
+          "source_title": "ESA - Chaotic terrain in Iani Chaos",
+          "source_url": ""
+        },
+        {
+          "subject": "Christmas craterscape",
+          "relation": "OPERATED_BY",
+          "object": "ESA",
+          "source": "esa",
+          "schema_version": "esa_shadow_ready_v1",
+          "source_title": "ESA - Christmas craterscape",
+          "source_url": ""
+        },
+        {
+          "subject": "Comet rendezvous",
+          "relation": "OPERATED_BY",
+          "object": "ESA",
+          "source": "esa",
+          "schema_version": "esa_shadow_ready_v1",
+          "source_title": "ESA - Comet rendezvous",
+          "source_url": ""
+        },
+        {
+          "subject": "Crater in martian valley Mamers Valles",
+          "relation": "OPERATED_BY",
+          "object": "ESA",
+          "source": "esa",
+          "schema_version": "esa_shadow_ready_v1",
+          "source_title": "ESA - Crater in martian valley Mamers Valles",
+          "source_url": ""
+        },
+        {
+          "subject": "Craters and cracks on Mars",
+          "relation": "OPERATED_BY",
+          "object": "ESA",
+          "source": "esa",
+          "schema_version": "esa_shadow_ready_v1",
+          "source_title": "ESA - Craters and cracks on Mars",
+          "source_url": ""
+        },
+        {
+          "subject": "Dark dust devil tracks on Mars",
+          "relation": "OPERATED_BY",
+          "object": "ESA",
+          "source": "esa",
+          "schema_version": "esa_shadow_ready_v1",
+          "source_title": "ESA - Dark dust devil tracks on Mars",
+          "source_url": ""
+        }
+      ],
+      "contract_checks": {
+        "passed": true,
+        "bad_source_count": 0,
+        "missing_metadata_count": 0,
+        "missing_schema_count": 0,
+        "sample_schema_mismatch_count": 0,
+        "active_source_unchanged": true,
+        "registry_unchanged": true
+      }
+    },
+    "wikidata": {
+      "status": "ok",
+      "source": "wikidata",
+      "schema_version": "wikidata_shadow_ready_v1",
+      "node_count": 13,
+      "relationship_count": 12,
+      "relation_type_counts": {
+        "LOCATED_IN": 8,
+        "ORBITS": 2,
+        "PART_OF": 2
+      },
+      "sample_edges": [
+        {
+          "subject": "冥王星",
+          "relation": "LOCATED_IN",
+          "object": "太阳系",
+          "source": "wikidata",
+          "schema_version": "wikidata_shadow_ready_v1",
+          "source_title": "冥王星",
+          "source_url": ""
+        },
+        {
+          "subject": "土星",
+          "relation": "LOCATED_IN",
+          "object": "太阳系",
+          "source": "wikidata",
+          "schema_version": "wikidata_shadow_ready_v1",
+          "source_title": "土星",
+          "source_url": ""
+        },
+        {
+          "subject": "地球",
+          "relation": "LOCATED_IN",
+          "object": "太阳系",
+          "source": "wikidata",
+          "schema_version": "wikidata_shadow_ready_v1",
+          "source_title": "地球",
+          "source_url": ""
+        },
+        {
+          "subject": "天王星",
+          "relation": "LOCATED_IN",
+          "object": "太阳系",
+          "source": "wikidata",
+          "schema_version": "wikidata_shadow_ready_v1",
+          "source_title": "天王星",
+          "source_url": ""
+        },
+        {
+          "subject": "木星",
+          "relation": "LOCATED_IN",
+          "object": "太阳系",
+          "source": "wikidata",
+          "schema_version": "wikidata_shadow_ready_v1",
+          "source_title": "木星",
+          "source_url": ""
+        },
+        {
+          "subject": "水星",
+          "relation": "LOCATED_IN",
+          "object": "太阳系",
+          "source": "wikidata",
+          "schema_version": "wikidata_shadow_ready_v1",
+          "source_title": "水星",
+          "source_url": ""
+        },
+        {
+          "subject": "海王星",
+          "relation": "LOCATED_IN",
+          "object": "太阳系",
+          "source": "wikidata",
+          "schema_version": "wikidata_shadow_ready_v1",
+          "source_title": "海王星",
+          "source_url": ""
+        },
+        {
+          "subject": "金星",
+          "relation": "LOCATED_IN",
+          "object": "太阳系",
+          "source": "wikidata",
+          "schema_version": "wikidata_shadow_ready_v1",
+          "source_title": "金星",
+          "source_url": ""
+        },
+        {
+          "subject": "土卫六",
+          "relation": "ORBITS",
+          "object": "土星",
+          "source": "wikidata",
+          "schema_version": "wikidata_shadow_ready_v1",
+          "source_title": "土卫六",
+          "source_url": ""
+        },
+        {
+          "subject": "海卫一",
+          "relation": "ORBITS",
+          "object": "海王星",
+          "source": "wikidata",
+          "schema_version": "wikidata_shadow_ready_v1",
+          "source_title": "海卫一",
+          "source_url": ""
+        }
+      ],
+      "contract_checks": {
+        "passed": true,
+        "bad_source_count": 0,
+        "missing_metadata_count": 0,
+        "missing_schema_count": 0,
+        "sample_schema_mismatch_count": 0,
+        "active_source_unchanged": true,
+        "registry_unchanged": true
+      }
+    }
+  }
+}

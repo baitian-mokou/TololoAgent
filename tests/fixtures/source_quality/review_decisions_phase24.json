@@ -1,0 +1,17 @@
+{
+  "schema_version": 1,
+  "sources": [
+    {
+      "source_id": "official_science_example",
+      "review_decision": "approved_for_small_batch",
+      "reviewer_notes": "Fixture review: accepted mission/fact samples look usable; rejected samples are expected gallery/privacy noise.",
+      "approved_sample_size": 12
+    },
+    {
+      "source_id": "generic_unknown_example",
+      "review_decision": "needs_manifest_fix",
+      "reviewer_notes": "Fixture review: too many search/tag/privacy samples; tighten include/exclude before any trial.",
+      "approved_sample_size": 0
+    }
+  ]
+}

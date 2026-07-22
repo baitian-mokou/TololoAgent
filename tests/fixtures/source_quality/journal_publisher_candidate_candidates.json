@@ -1,0 +1,17 @@
+[
+  {
+    "url": "https://journal.example.org/articles/planetary-atmospheres-review",
+    "title": "Review Article: Planetary Atmospheres",
+    "text": "Abstract. This journal article reviews atmosphere chemistry, planet radius, mass, orbit, telescope spectroscopy, methods, results, references, citation and DOI evidence."
+  },
+  {
+    "url": "https://journal.example.org/collections/solar-system-science",
+    "title": "Solar System Science Collection",
+    "text": "A journal collection landing page linking to planetary science papers, abstracts and research topics. It needs manual review before ingest."
+  },
+  {
+    "url": "https://journal.example.org/authors/guidelines",
+    "title": "Author Guidelines",
+    "text": "Instructions for manuscript submission, login, publication fees and account terms."
+  }
+]

@@ -1,0 +1,612 @@
+{
+  "source": "nasa",
+  "source_name": "nasa",
+  "mode": "manifest_frontier_raw_only",
+  "generated_at": "2026-07-21T16:57:30.813507+00:00",
+  "frontier_accepted_count": 30,
+  "requested_limit": 15,
+  "fetched_count": 14,
+  "skipped_count": 0,
+  "failed_count": 1,
+  "raw_root": "F:\\知识表示与处理结课作业\\TololoAgent\\evaluation\\source_quality\\phase15_raw\\baseline\\nasa",
+  "items": [
+    {
+      "url": "https://nssdc.gsfc.nasa.gov/planetary/factsheet/",
+      "status": "fetched",
+      "reason": "ok",
+      "title": "NASA Space Science Data Coordinated Archive Status - NASA",
+      "text_length": 7242,
+      "saved_path": "F:\\知识表示与处理结课作业\\TololoAgent\\evaluation\\source_quality\\phase15_raw\\baseline\\nasa\\https_nssdc.gsfc.nasa.gov_planetary_factsheet.json",
+      "quality_score": 60,
+      "quality_triage": "accepted",
+      "quality_labels": [
+        "official_source",
+        "science_topic",
+        "fact_page",
+        "mission_page",
+        "has_references",
+        "navigation_noise"
+      ],
+      "quality_reasons": [
+        "official or academic domain",
+        "science keyword hits=19",
+        "fact or overview page signal",
+        "mission page signal",
+        "reference signal present",
+        "high link density",
+        "news/update signal in body/navigation",
+        "media/gallery signal in body/navigation"
+      ],
+      "quality_metrics": {
+        "text_length": 7242,
+        "link_density_estimate": 34.383,
+        "table_count": 0,
+        "science_keyword_hits": 19,
+        "blocked_keyword_hits": 5,
+        "news_keyword_hits": 5,
+        "path_media_keyword_hits": 0,
+        "body_media_keyword_hits": 5,
+        "path_news_keyword_hits": 0,
+        "body_news_keyword_hits": 5,
+        "reference_keyword_hits": 1
+      }
+    },
+    {
+      "url": "https://nssdc.gsfc.nasa.gov/planetary/factsheet/mercuryfact.html",
+      "status": "fetched",
+      "reason": "ok",
+      "title": "NASA Space Science Data Coordinated Archive Status - NASA",
+      "text_length": 7242,
+      "saved_path": "F:\\知识表示与处理结课作业\\TololoAgent\\evaluation\\source_quality\\phase15_raw\\baseline\\nasa\\https_nssdc.gsfc.nasa.gov_planetary_factsheet_mercuryfact.html.json",
+      "quality_score": 60,
+      "quality_triage": "accepted",
+      "quality_labels": [
+        "official_source",
+        "science_topic",
+        "fact_page",
+        "mission_page",
+        "has_references",
+        "navigation_noise"
+      ],
+      "quality_reasons": [
+        "official or academic domain",
+        "science keyword hits=19",
+        "fact or overview page signal",
+        "mission page signal",
+        "reference signal present",
+        "high link density",
+        "news/update signal in body/navigation",
+        "media/gallery signal in body/navigation"
+      ],
+      "quality_metrics": {
+        "text_length": 7242,
+        "link_density_estimate": 34.383,
+        "table_count": 0,
+        "science_keyword_hits": 19,
+        "blocked_keyword_hits": 5,
+        "news_keyword_hits": 5,
+        "path_media_keyword_hits": 0,
+        "body_media_keyword_hits": 5,
+        "path_news_keyword_hits": 0,
+        "body_news_keyword_hits": 5,
+        "reference_keyword_hits": 1
+      }
+    },
+    {
+      "url": "https://nssdc.gsfc.nasa.gov/planetary/factsheet/venusfact.html",
+      "status": "fetched",
+      "reason": "ok",
+      "title": "NASA Space Science Data Coordinated Archive Status - NASA",
+      "text_length": 7242,
+      "saved_path": "F:\\知识表示与处理结课作业\\TololoAgent\\evaluation\\source_quality\\phase15_raw\\baseline\\nasa\\https_nssdc.gsfc.nasa.gov_planetary_factsheet_venusfact.html.json",
+      "quality_score": 60,
+      "quality_triage": "accepted",
+      "quality_labels": [
+        "official_source",
+        "science_topic",
+        "fact_page",
+        "mission_page",
+        "has_references",
+        "navigation_noise"
+      ],
+      "quality_reasons": [
+        "official or academic domain",
+        "science keyword hits=19",
+        "fact or overview page signal",
+        "mission page signal",
+        "reference signal present",
+        "high link density",
+        "news/update signal in body/navigation",
+        "media/gallery signal in body/navigation"
+      ],
+      "quality_metrics": {
+        "text_length": 7242,
+        "link_density_estimate": 34.383,
+        "table_count": 0,
+        "science_keyword_hits": 19,
+        "blocked_keyword_hits": 5,
+        "news_keyword_hits": 5,
+        "path_media_keyword_hits": 0,
+        "body_media_keyword_hits": 5,
+        "path_news_keyword_hits": 0,
+        "body_news_keyword_hits": 5,
+        "reference_keyword_hits": 1
+      }
+    },
+    {
+      "url": "https://nssdc.gsfc.nasa.gov/planetary/factsheet/earthfact.html",
+      "status": "fetched",
+      "reason": "ok",
+      "title": "NASA Space Science Data Coordinated Archive Status - NASA",
+      "text_length": 7242,
+      "saved_path": "F:\\知识表示与处理结课作业\\TololoAgent\\evaluation\\source_quality\\phase15_raw\\baseline\\nasa\\https_nssdc.gsfc.nasa.gov_planetary_factsheet_earthfact.html.json",
+      "quality_score": 60,
+      "quality_triage": "accepted",
+      "quality_labels": [
+        "official_source",
+        "science_topic",
+        "fact_page",
+        "mission_page",
+        "has_references",
+        "navigation_noise"
+      ],
+      "quality_reasons": [
+        "official or academic domain",
+        "science keyword hits=19",
+        "fact or overview page signal",
+        "mission page signal",
+        "reference signal present",
+        "high link density",
+        "news/update signal in body/navigation",
+        "media/gallery signal in body/navigation"
+      ],
+      "quality_metrics": {
+        "text_length": 7242,
+        "link_density_estimate": 34.383,
+        "table_count": 0,
+        "science_keyword_hits": 19,
+        "blocked_keyword_hits": 5,
+        "news_keyword_hits": 5,
+        "path_media_keyword_hits": 0,
+        "body_media_keyword_hits": 5,
+        "path_news_keyword_hits": 0,
+        "body_news_keyword_hits": 5,
+        "reference_keyword_hits": 1
+      }
+    },
+    {
+      "url": "https://nssdc.gsfc.nasa.gov/planetary/factsheet/marsfact.html",
+      "status": "fetched",
+      "reason": "ok",
+      "title": "NASA Space Science Data Coordinated Archive Status - NASA",
+      "text_length": 7242,
+      "saved_path": "F:\\知识表示与处理结课作业\\TololoAgent\\evaluation\\source_quality\\phase15_raw\\baseline\\nasa\\https_nssdc.gsfc.nasa.gov_planetary_factsheet_marsfact.html.json",
+      "quality_score": 60,
+      "quality_triage": "accepted",
+      "quality_labels": [
+        "official_source",
+        "science_topic",
+        "fact_page",
+        "mission_page",
+        "has_references",
+        "navigation_noise"
+      ],
+      "quality_reasons": [
+        "official or academic domain",
+        "science keyword hits=19",
+        "fact or overview page signal",
+        "mission page signal",
+        "reference signal present",
+        "high link density",
+        "news/update signal in body/navigation",
+        "media/gallery signal in body/navigation"
+      ],
+      "quality_metrics": {
+        "text_length": 7242,
+        "link_density_estimate": 34.383,
+        "table_count": 0,
+        "science_keyword_hits": 19,
+        "blocked_keyword_hits": 5,
+        "news_keyword_hits": 5,
+        "path_media_keyword_hits": 0,
+        "body_media_keyword_hits": 5,
+        "path_news_keyword_hits": 0,
+        "body_news_keyword_hits": 5,
+        "reference_keyword_hits": 1
+      }
+    },
+    {
+      "url": "https://nssdc.gsfc.nasa.gov/planetary/factsheet/jupiterfact.html",
+      "status": "fetched",
+      "reason": "ok",
+      "title": "NASA Space Science Data Coordinated Archive Status - NASA",
+      "text_length": 7242,
+      "saved_path": "F:\\知识表示与处理结课作业\\TololoAgent\\evaluation\\source_quality\\phase15_raw\\baseline\\nasa\\https_nssdc.gsfc.nasa.gov_planetary_factsheet_jupiterfact.html.json",
+      "quality_score": 60,
+      "quality_triage": "accepted",
+      "quality_labels": [
+        "official_source",
+        "science_topic",
+        "fact_page",
+        "mission_page",
+        "has_references",
+        "navigation_noise"
+      ],
+      "quality_reasons": [
+        "official or academic domain",
+        "science keyword hits=19",
+        "fact or overview page signal",
+        "mission page signal",
+        "reference signal present",
+        "high link density",
+        "news/update signal in body/navigation",
+        "media/gallery signal in body/navigation"
+      ],
+      "quality_metrics": {
+        "text_length": 7242,
+        "link_density_estimate": 34.383,
+        "table_count": 0,
+        "science_keyword_hits": 19,
+        "blocked_keyword_hits": 5,
+        "news_keyword_hits": 5,
+        "path_media_keyword_hits": 0,
+        "body_media_keyword_hits": 5,
+        "path_news_keyword_hits": 0,
+        "body_news_keyword_hits": 5,
+        "reference_keyword_hits": 1
+      }
+    },
+    {
+      "url": "https://nssdc.gsfc.nasa.gov/planetary/factsheet/saturnfact.html",
+      "status": "fetched",
+      "reason": "ok",
+      "title": "NASA Space Science Data Coordinated Archive Status - NASA",
+      "text_length": 7242,
+      "saved_path": "F:\\知识表示与处理结课作业\\TololoAgent\\evaluation\\source_quality\\phase15_raw\\baseline\\nasa\\https_nssdc.gsfc.nasa.gov_planetary_factsheet_saturnfact.html.json",
+      "quality_score": 60,
+      "quality_triage": "accepted",
+      "quality_labels": [
+        "official_source",
+        "science_topic",
+        "fact_page",
+        "mission_page",
+        "has_references",
+        "navigation_noise"
+      ],
+      "quality_reasons": [
+        "official or academic domain",
+        "science keyword hits=19",
+        "fact or overview page signal",
+        "mission page signal",
+        "reference signal present",
+        "high link density",
+        "news/update signal in body/navigation",
+        "media/gallery signal in body/navigation"
+      ],
+      "quality_metrics": {
+        "text_length": 7242,
+        "link_density_estimate": 34.383,
+        "table_count": 0,
+        "science_keyword_hits": 19,
+        "blocked_keyword_hits": 5,
+        "news_keyword_hits": 5,
+        "path_media_keyword_hits": 0,
+        "body_media_keyword_hits": 5,
+        "path_news_keyword_hits": 0,
+        "body_news_keyword_hits": 5,
+        "reference_keyword_hits": 1
+      }
+    },
+    {
+      "url": "https://nssdc.gsfc.nasa.gov/planetary/factsheet/uranusfact.html",
+      "status": "fetched",
+      "reason": "ok",
+      "title": "NASA Space Science Data Coordinated Archive Status - NASA",
+      "text_length": 7242,
+      "saved_path": "F:\\知识表示与处理结课作业\\TololoAgent\\evaluation\\source_quality\\phase15_raw\\baseline\\nasa\\https_nssdc.gsfc.nasa.gov_planetary_factsheet_uranusfact.html.json",
+      "quality_score": 60,
+      "quality_triage": "accepted",
+      "quality_labels": [
+        "official_source",
+        "science_topic",
+        "fact_page",
+        "mission_page",
+        "has_references",
+        "navigation_noise"
+      ],
+      "quality_reasons": [
+        "official or academic domain",
+        "science keyword hits=19",
+        "fact or overview page signal",
+        "mission page signal",
+        "reference signal present",
+        "high link density",
+        "news/update signal in body/navigation",
+        "media/gallery signal in body/navigation"
+      ],
+      "quality_metrics": {
+        "text_length": 7242,
+        "link_density_estimate": 34.383,
+        "table_count": 0,
+        "science_keyword_hits": 19,
+        "blocked_keyword_hits": 5,
+        "news_keyword_hits": 5,
+        "path_media_keyword_hits": 0,
+        "body_media_keyword_hits": 5,
+        "path_news_keyword_hits": 0,
+        "body_news_keyword_hits": 5,
+        "reference_keyword_hits": 1
+      }
+    },
+    {
+      "url": "https://nssdc.gsfc.nasa.gov/planetary/factsheet/neptunefact.html",
+      "status": "fetched",
+      "reason": "ok",
+      "title": "NASA Space Science Data Coordinated Archive Status - NASA",
+      "text_length": 7242,
+      "saved_path": "F:\\知识表示与处理结课作业\\TololoAgent\\evaluation\\source_quality\\phase15_raw\\baseline\\nasa\\https_nssdc.gsfc.nasa.gov_planetary_factsheet_neptunefact.html.json",
+      "quality_score": 60,
+      "quality_triage": "accepted",
+      "quality_labels": [
+        "official_source",
+        "science_topic",
+        "fact_page",
+        "mission_page",
+        "has_references",
+        "navigation_noise"
+      ],
+      "quality_reasons": [
+        "official or academic domain",
+        "science keyword hits=19",
+        "fact or overview page signal",
+        "mission page signal",
+        "reference signal present",
+        "high link density",
+        "news/update signal in body/navigation",
+        "media/gallery signal in body/navigation"
+      ],
+      "quality_metrics": {
+        "text_length": 7242,
+        "link_density_estimate": 34.383,
+        "table_count": 0,
+        "science_keyword_hits": 19,
+        "blocked_keyword_hits": 5,
+        "news_keyword_hits": 5,
+        "path_media_keyword_hits": 0,
+        "body_media_keyword_hits": 5,
+        "path_news_keyword_hits": 0,
+        "body_news_keyword_hits": 5,
+        "reference_keyword_hits": 1
+      }
+    },
+    {
+      "url": "https://nssdc.gsfc.nasa.gov/planetary/factsheet/moonfact.html",
+      "status": "fetched",
+      "reason": "ok",
+      "title": "NASA Space Science Data Coordinated Archive Status - NASA",
+      "text_length": 7242,
+      "saved_path": "F:\\知识表示与处理结课作业\\TololoAgent\\evaluation\\source_quality\\phase15_raw\\baseline\\nasa\\https_nssdc.gsfc.nasa.gov_planetary_factsheet_moonfact.html.json",
+      "quality_score": 60,
+      "quality_triage": "accepted",
+      "quality_labels": [
+        "official_source",
+        "science_topic",
+        "fact_page",
+        "mission_page",
+        "has_references",
+        "navigation_noise"
+      ],
+      "quality_reasons": [
+        "official or academic domain",
+        "science keyword hits=19",
+        "fact or overview page signal",
+        "mission page signal",
+        "reference signal present",
+        "high link density",
+        "news/update signal in body/navigation",
+        "media/gallery signal in body/navigation"
+      ],
+      "quality_metrics": {
+        "text_length": 7242,
+        "link_density_estimate": 34.383,
+        "table_count": 0,
+        "science_keyword_hits": 19,
+        "blocked_keyword_hits": 5,
+        "news_keyword_hits": 5,
+        "path_media_keyword_hits": 0,
+        "body_media_keyword_hits": 5,
+        "path_news_keyword_hits": 0,
+        "body_news_keyword_hits": 5,
+        "reference_keyword_hits": 1
+      }
+    },
+    {
+      "url": "https://science.nasa.gov/solar-system/",
+      "status": "fetched",
+      "reason": "ok",
+      "title": "Solar System Exploration",
+      "text_length": 15473,
+      "saved_path": "F:\\知识表示与处理结课作业\\TololoAgent\\evaluation\\source_quality\\phase15_raw\\baseline\\nasa\\https_science.nasa.gov_solar-system.json",
+      "quality_score": 60,
+      "quality_triage": "accepted",
+      "quality_labels": [
+        "official_source",
+        "science_topic",
+        "fact_page",
+        "mission_page",
+        "has_references",
+        "navigation_noise"
+      ],
+      "quality_reasons": [
+        "official or academic domain",
+        "science keyword hits=21",
+        "fact or overview page signal",
+        "mission page signal",
+        "reference signal present",
+        "high link density",
+        "news/update signal in body/navigation",
+        "media/gallery signal in body/navigation"
+      ],
+      "quality_metrics": {
+        "text_length": 15473,
+        "link_density_estimate": 21.586,
+        "table_count": 0,
+        "science_keyword_hits": 21,
+        "blocked_keyword_hits": 6,
+        "news_keyword_hits": 5,
+        "path_media_keyword_hits": 0,
+        "body_media_keyword_hits": 6,
+        "path_news_keyword_hits": 0,
+        "body_news_keyword_hits": 5,
+        "reference_keyword_hits": 1
+      }
+    },
+    {
+      "url": "https://science.nasa.gov/solar-system/planets/",
+      "status": "fetched",
+      "reason": "ok",
+      "title": "About the Planets Facebook logo Instagram logo",
+      "text_length": 10941,
+      "saved_path": "F:\\知识表示与处理结课作业\\TololoAgent\\evaluation\\source_quality\\phase15_raw\\baseline\\nasa\\https_science.nasa.gov_solar-system_planets.json",
+      "quality_score": 60,
+      "quality_triage": "accepted",
+      "quality_labels": [
+        "official_source",
+        "science_topic",
+        "fact_page",
+        "mission_page",
+        "has_references",
+        "navigation_noise"
+      ],
+      "quality_reasons": [
+        "official or academic domain",
+        "science keyword hits=19",
+        "fact or overview page signal",
+        "mission page signal",
+        "reference signal present",
+        "high link density",
+        "news/update signal in body/navigation",
+        "media/gallery signal in body/navigation"
+      ],
+      "quality_metrics": {
+        "text_length": 10941,
+        "link_density_estimate": 25.5,
+        "table_count": 0,
+        "science_keyword_hits": 19,
+        "blocked_keyword_hits": 6,
+        "news_keyword_hits": 4,
+        "path_media_keyword_hits": 0,
+        "body_media_keyword_hits": 6,
+        "path_news_keyword_hits": 0,
+        "body_news_keyword_hits": 4,
+        "reference_keyword_hits": 1
+      }
+    },
+    {
+      "url": "https://science.nasa.gov/solar-system/moons/",
+      "status": "fetched",
+      "reason": "ok",
+      "title": "Moons",
+      "text_length": 10237,
+      "saved_path": "F:\\知识表示与处理结课作业\\TololoAgent\\evaluation\\source_quality\\phase15_raw\\baseline\\nasa\\https_science.nasa.gov_solar-system_moons.json",
+      "quality_score": 60,
+      "quality_triage": "accepted",
+      "quality_labels": [
+        "official_source",
+        "science_topic",
+        "fact_page",
+        "mission_page",
+        "has_references",
+        "navigation_noise"
+      ],
+      "quality_reasons": [
+        "official or academic domain",
+        "science keyword hits=21",
+        "fact or overview page signal",
+        "mission page signal",
+        "reference signal present",
+        "high link density",
+        "news/update signal in body/navigation",
+        "media/gallery signal in body/navigation"
+      ],
+      "quality_metrics": {
+        "text_length": 10237,
+        "link_density_estimate": 26.766,
+        "table_count": 0,
+        "science_keyword_hits": 21,
+        "blocked_keyword_hits": 6,
+        "news_keyword_hits": 4,
+        "path_media_keyword_hits": 0,
+        "body_media_keyword_hits": 6,
+        "path_news_keyword_hits": 0,
+        "body_news_keyword_hits": 4,
+        "reference_keyword_hits": 1
+      }
+    },
+    {
+      "url": "https://science.nasa.gov/solar-system/dwarf-planets/",
+      "status": "failed",
+      "reason": "HTTPError",
+      "error": "HTTP Error 404: Not Found"
+    },
+    {
+      "url": "https://science.nasa.gov/solar-system/asteroids/",
+      "status": "fetched",
+      "reason": "ok",
+      "title": "Asteroids",
+      "text_length": 9557,
+      "saved_path": "F:\\知识表示与处理结课作业\\TololoAgent\\evaluation\\source_quality\\phase15_raw\\baseline\\nasa\\https_science.nasa.gov_solar-system_asteroids.json",
+      "quality_score": 60,
+      "quality_triage": "accepted",
+      "quality_labels": [
+        "official_source",
+        "science_topic",
+        "fact_page",
+        "mission_page",
+        "has_references",
+        "navigation_noise"
+      ],
+      "quality_reasons": [
+        "official or academic domain",
+        "science keyword hits=23",
+        "fact or overview page signal",
+        "mission page signal",
+        "reference signal present",
+        "high link density",
+        "news/update signal in body/navigation",
+        "media/gallery signal in body/navigation"
+      ],
+      "quality_metrics": {
+        "text_length": 9557,
+        "link_density_estimate": 29.507,
+        "table_count": 0,
+        "science_keyword_hits": 23,
+        "blocked_keyword_hits": 5,
+        "news_keyword_hits": 4,
+        "path_media_keyword_hits": 0,
+        "body_media_keyword_hits": 5,
+        "path_news_keyword_hits": 0,
+        "body_news_keyword_hits": 4,
+        "reference_keyword_hits": 1
+      }
+    }
+  ],
+  "quality_summary": {
+    "total": 14,
+    "triage_counts": {
+      "accepted": 14
+    },
+    "top_reasons": {
+      "official or academic domain": 14,
+      "fact or overview page signal": 14,
+      "mission page signal": 14,
+      "reference signal present": 14,
+      "high link density": 14,
+      "news/update signal in body/navigation": 14,
+      "media/gallery signal in body/navigation": 14,
+      "science keyword hits=19": 11,
+      "science keyword hits=21": 2,
+      "science keyword hits=23": 1
+    }
+  }
+}

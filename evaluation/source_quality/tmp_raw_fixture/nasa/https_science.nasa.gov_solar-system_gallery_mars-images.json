@@ -1,0 +1,14 @@
+{
+  "title": "Mars image gallery",
+  "source": "nasa",
+  "source_name": "nasa",
+  "source_record_id": "https://science.nasa.gov/solar-system/gallery/mars-images/",
+  "source_url": "https://science.nasa.gov/solar-system/gallery/mars-images/",
+  "url": "https://science.nasa.gov/solar-system/gallery/mars-images/",
+  "origin": "manifest_frontier",
+  "html": "<html><head><title>Mars image gallery</title></head><body><p>Images and videos from Mars gallery.</p></body></html>",
+  "text": "Images and videos from Mars gallery.",
+  "text_length": 36,
+  "fetched_at": "2026-07-21T16:35:32.377785+00:00",
+  "discovery_depth": 1
+}

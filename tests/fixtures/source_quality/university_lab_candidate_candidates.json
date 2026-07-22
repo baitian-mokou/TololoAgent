@@ -1,0 +1,17 @@
+[
+  {
+    "url": "https://astro.example.edu/lab/exoplanet-spectroscopy",
+    "title": "Exoplanet Spectroscopy Research Lab",
+    "text": "The university laboratory studies exoplanet atmosphere spectroscopy, telescope observations, planetary science, datasets, methods, results, references and publications. Research projects measure radius, orbit and atmospheric composition."
+  },
+  {
+    "url": "https://astro.example.edu/publications/planetary-atmospheres-abstract",
+    "title": "Abstract: Atmospheric Retrievals for Exoplanets",
+    "text": "Abstract. This paper reports telescope spectroscopy methods, results and citation data for exoplanet atmosphere research. DOI and references are listed for review."
+  },
+  {
+    "url": "https://astro.example.edu/events/open-house",
+    "title": "Lab Open House Event",
+    "text": "Join students for a campus event with tours, photos and brief astronomy demonstrations."
+  }
+]

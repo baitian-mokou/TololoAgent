@@ -79,7 +79,7 @@
         "explicit_source_filter": [
           "wikidata"
         ],
-        "explicit_record_count": 0,
+        "explicit_record_count": 5,
         "default_sources_after_explicit": [
           "zh_wikipedia"
         ],
@@ -105,7 +105,7 @@
         "explicit_source_filter": [
           "nasa"
         ],
-        "explicit_record_count": 1,
+        "explicit_record_count": 4,
         "default_sources_after_explicit": [
           "zh_wikipedia"
         ],
@@ -131,7 +131,7 @@
         "explicit_source_filter": [
           "esa"
         ],
-        "explicit_record_count": 0,
+        "explicit_record_count": 1,
         "default_sources_after_explicit": [
           "zh_wikipedia"
         ],

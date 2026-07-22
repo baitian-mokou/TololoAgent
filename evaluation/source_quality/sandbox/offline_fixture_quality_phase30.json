@@ -1,0 +1,328 @@
+{
+  "mode": "offline_fixture_quality_report",
+  "generated_at": "2026-07-22T02:33:24.644672+00:00",
+  "manifest_dir": "configs\\source_manifests\\candidates",
+  "fixture_dir": "tests\\fixtures\\source_quality",
+  "network": false,
+  "execution_status": "not_run",
+  "formal_pipeline_write": false,
+  "summary": {
+    "sources": 2,
+    "total_samples": 6,
+    "triage_counts": {
+      "accepted": 2,
+      "exploratory": 1,
+      "rejected": 2,
+      "review_needed": 1
+    }
+  },
+  "items": [
+    {
+      "source_id": "noaa_climate_candidate",
+      "source_mode": "official_science",
+      "registered": false,
+      "network": false,
+      "execution_status": "not_run",
+      "formal_pipeline_write": false,
+      "offline_fixture_only": true,
+      "manifest_path": "configs\\source_manifests\\candidates\\noaa_climate_candidate.json",
+      "fixture_path": "F:\\知识表示与处理结课作业\\TololoAgent\\tests\\fixtures\\source_quality\\noaa_climate_candidate_candidates.json",
+      "manifest_validation": {
+        "passed": true,
+        "errors": [],
+        "warnings": []
+      },
+      "sample_count": 3,
+      "triage_counts": {
+        "accepted": 1,
+        "exploratory": 1,
+        "rejected": 1
+      },
+      "top_reasons": {
+        "official or academic domain": 3,
+        "topic taxonomy hits=4": 2,
+        "science keyword hits=5": 2,
+        "short text": 2,
+        "table evidence present": 1,
+        "reference signal present": 1,
+        "news/update signal": 1,
+        "protected official science/fact/mission page floor": 1,
+        "topic taxonomy hits=1": 1,
+        "science keyword hits=1": 1
+      },
+      "warnings": [],
+      "samples": [
+        {
+          "index": 1,
+          "source_sample_type": "offline_fixture/manual_sample",
+          "url": "https://www.climate.gov/climate-and-energy/topics/climate-change",
+          "title": "Climate Change: Global Temperature Indicators",
+          "score": 70,
+          "triage": "accepted",
+          "labels": [
+            "official_source",
+            "topic_taxonomy_context",
+            "science_topic",
+            "has_table",
+            "has_references",
+            "short_text"
+          ],
+          "reasons": [
+            "official or academic domain",
+            "topic taxonomy hits=4",
+            "science keyword hits=5",
+            "table evidence present",
+            "reference signal present"
+          ],
+          "metrics": {
+            "text_length": 263,
+            "link_density_estimate": 0.0,
+            "table_count": 1,
+            "science_keyword_hits": 5,
+            "topic_taxonomy_hits": 4,
+            "blocked_keyword_hits": 0,
+            "news_keyword_hits": 0,
+            "path_media_keyword_hits": 0,
+            "body_media_keyword_hits": 0,
+            "path_news_keyword_hits": 0,
+            "body_news_keyword_hits": 0,
+            "reference_keyword_hits": 2,
+            "accepted_min_score": 65,
+            "review_min_score": 35,
+            "source_mode": "official_science"
+          }
+        },
+        {
+          "index": 2,
+          "source_sample_type": "offline_fixture/manual_sample",
+          "url": "https://www.climate.gov/news/features/new-seasonal-outlook",
+          "title": "Seasonal Climate Outlook News",
+          "score": 45,
+          "triage": "exploratory",
+          "labels": [
+            "official_source",
+            "topic_taxonomy_context",
+            "science_topic",
+            "short_text",
+            "news_page"
+          ],
+          "reasons": [
+            "official or academic domain",
+            "topic taxonomy hits=4",
+            "science keyword hits=5",
+            "short text",
+            "news/update signal"
+          ],
+          "metrics": {
+            "text_length": 162,
+            "link_density_estimate": 0.0,
+            "table_count": 0,
+            "science_keyword_hits": 5,
+            "topic_taxonomy_hits": 4,
+            "blocked_keyword_hits": 0,
+            "news_keyword_hits": 3,
+            "path_media_keyword_hits": 0,
+            "body_media_keyword_hits": 0,
+            "path_news_keyword_hits": 1,
+            "body_news_keyword_hits": 2,
+            "reference_keyword_hits": 0,
+            "accepted_min_score": 65,
+            "review_min_score": 35,
+            "source_mode": "official_science"
+          }
+        },
+        {
+          "index": 3,
+          "source_sample_type": "offline_fixture/manual_sample",
+          "url": "https://www.climate.gov/search?query=climate",
+          "title": "Search results",
+          "score": 0,
+          "triage": "rejected",
+          "labels": [
+            "official_source",
+            "topic_taxonomy_context",
+            "science_topic",
+            "publication_page",
+            "short_text",
+            "search_page"
+          ],
+          "reasons": [
+            "official or academic domain",
+            "topic taxonomy hits=1",
+            "science keyword hits=1",
+            "publication/abstract signal",
+            "very short text"
+          ],
+          "metrics": {
+            "text_length": 57,
+            "link_density_estimate": 0.0,
+            "table_count": 0,
+            "science_keyword_hits": 1,
+            "topic_taxonomy_hits": 1,
+            "blocked_keyword_hits": 1,
+            "news_keyword_hits": 0,
+            "path_media_keyword_hits": 0,
+            "body_media_keyword_hits": 0,
+            "path_news_keyword_hits": 0,
+            "body_news_keyword_hits": 0,
+            "reference_keyword_hits": 0,
+            "accepted_min_score": 65,
+            "review_min_score": 35,
+            "source_mode": "official_science"
+          }
+        }
+      ]
+    },
+    {
+      "source_id": "data_portal_candidate",
+      "source_mode": "official_science",
+      "registered": false,
+      "network": false,
+      "execution_status": "not_run",
+      "formal_pipeline_write": false,
+      "offline_fixture_only": true,
+      "manifest_path": "configs\\source_manifests\\candidates\\data_portal_candidate.json",
+      "fixture_path": "F:\\知识表示与处理结课作业\\TololoAgent\\tests\\fixtures\\source_quality\\data_portal_candidate_candidates.json",
+      "manifest_validation": {
+        "passed": true,
+        "errors": [],
+        "warnings": []
+      },
+      "sample_count": 3,
+      "triage_counts": {
+        "accepted": 1,
+        "rejected": 1,
+        "review_needed": 1
+      },
+      "top_reasons": {
+        "official or academic domain": 3,
+        "short text": 2,
+        "topic taxonomy hits=4": 1,
+        "science keyword hits=6": 1,
+        "table evidence present": 1,
+        "reference signal present": 1,
+        "publication/abstract signal": 1,
+        "topic taxonomy hits=3": 1,
+        "science keyword hits=7": 1,
+        "protected official science/fact/mission page floor": 1
+      },
+      "warnings": [],
+      "samples": [
+        {
+          "index": 1,
+          "source_sample_type": "offline_fixture/manual_sample",
+          "url": "https://data.example.gov/datasets/solar-irradiance",
+          "title": "Solar Irradiance Dataset Metadata",
+          "score": 77,
+          "triage": "accepted",
+          "labels": [
+            "official_source",
+            "topic_taxonomy_context",
+            "science_topic",
+            "has_table",
+            "has_references",
+            "publication_page",
+            "short_text"
+          ],
+          "reasons": [
+            "official or academic domain",
+            "topic taxonomy hits=4",
+            "science keyword hits=6",
+            "table evidence present",
+            "reference signal present"
+          ],
+          "metrics": {
+            "text_length": 213,
+            "link_density_estimate": 0.0,
+            "table_count": 1,
+            "science_keyword_hits": 6,
+            "topic_taxonomy_hits": 4,
+            "blocked_keyword_hits": 0,
+            "news_keyword_hits": 0,
+            "path_media_keyword_hits": 0,
+            "body_media_keyword_hits": 0,
+            "path_news_keyword_hits": 0,
+            "body_news_keyword_hits": 0,
+            "reference_keyword_hits": 3,
+            "accepted_min_score": 70,
+            "review_min_score": 35,
+            "source_mode": "official_science"
+          }
+        },
+        {
+          "index": 2,
+          "source_sample_type": "offline_fixture/manual_sample",
+          "url": "https://data.example.gov/catalog/earth-science",
+          "title": "Earth Science Data Catalog",
+          "score": 45,
+          "triage": "review_needed",
+          "labels": [
+            "official_source",
+            "topic_taxonomy_context",
+            "science_topic",
+            "short_text"
+          ],
+          "reasons": [
+            "official or academic domain",
+            "topic taxonomy hits=3",
+            "science keyword hits=7",
+            "short text",
+            "protected official science/fact/mission page floor"
+          ],
+          "metrics": {
+            "text_length": 131,
+            "link_density_estimate": 0.0,
+            "table_count": 0,
+            "science_keyword_hits": 7,
+            "topic_taxonomy_hits": 3,
+            "blocked_keyword_hits": 0,
+            "news_keyword_hits": 0,
+            "path_media_keyword_hits": 0,
+            "body_media_keyword_hits": 0,
+            "path_news_keyword_hits": 0,
+            "body_news_keyword_hits": 0,
+            "reference_keyword_hits": 0,
+            "accepted_min_score": 70,
+            "review_min_score": 35,
+            "source_mode": "official_science"
+          }
+        },
+        {
+          "index": 3,
+          "source_sample_type": "offline_fixture/manual_sample",
+          "url": "https://data.example.gov/login",
+          "title": "Data Portal Login",
+          "score": 0,
+          "triage": "rejected",
+          "labels": [
+            "official_source",
+            "short_text",
+            "low_signal"
+          ],
+          "reasons": [
+            "official or academic domain",
+            "very short text",
+            "low science signal"
+          ],
+          "metrics": {
+            "text_length": 48,
+            "link_density_estimate": 0.0,
+            "table_count": 0,
+            "science_keyword_hits": 0,
+            "topic_taxonomy_hits": 0,
+            "blocked_keyword_hits": 0,
+            "news_keyword_hits": 0,
+            "path_media_keyword_hits": 0,
+            "body_media_keyword_hits": 0,
+            "path_news_keyword_hits": 0,
+            "body_news_keyword_hits": 0,
+            "reference_keyword_hits": 0,
+            "accepted_min_score": 70,
+            "review_min_score": 35,
+            "source_mode": "official_science"
+          }
+        }
+      ]
+    }
+  ]
+}

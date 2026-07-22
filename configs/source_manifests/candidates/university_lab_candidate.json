@@ -1,0 +1,22 @@
+{
+  "source_name": "university_lab_candidate",
+  "source_mode": "academic",
+  "allowed_domains": ["astro.example.edu", "research.example.edu"],
+  "seed_urls": ["https://astro.example.edu/lab/exoplanet-spectroscopy"],
+  "include_path_keywords": ["lab", "research", "project", "publication", "science"],
+  "exclude_path_keywords": ["events", "news", "people", "privacy", "search", "calendar"],
+  "max_depth": 1,
+  "max_pages_per_run": 20,
+  "max_discovery_fetch_pages": 0,
+  "crawl_delay": 1.0,
+  "topic_taxonomy": ["astronomy", "exoplanet", "spectroscopy", "research"],
+  "quality_gate": {
+    "accepted_min_score": 72,
+    "review_min_score": 40,
+    "allow_exploratory": true,
+    "skip_rejected_allowed": false
+  },
+  "quality_notes": "Academic lab pages are useful but should be manually sampled before any ingest.",
+  "fixture_candidates": "tests/fixtures/source_quality/university_lab_candidate_candidates.json",
+  "notes": "Unregistered Phase 28 candidate. Sandbox only."
+}

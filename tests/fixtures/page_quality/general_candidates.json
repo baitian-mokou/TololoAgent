@@ -1,0 +1,52 @@
+[
+  {
+    "url": "https://nssdc.gsfc.nasa.gov/planetary/factsheet/marsfact.html",
+    "title": "Mars Fact Sheet",
+    "html": "<html><body><h1>Mars Fact Sheet</h1><table><tr><th>Mass</th><td>0.64171 10^24 kg</td></tr><tr><th>Radius</th><td>3389.5 km</td></tr></table><p>Mars is a planet in the solar system with atmosphere, orbit, diameter, mass and mission data. Reference: NASA Planetary Fact Sheet.</p></body></html>"
+  },
+  {
+    "url": "https://astro.example.edu/research/planetary-lab",
+    "title": "Planetary Atmospheres Laboratory",
+    "text": "The university laboratory studies planetary atmospheres, Mars climate, telescope observations, orbital dynamics, spectroscopy, datasets, publications and student research projects. References include peer reviewed papers and NASA mission data."
+  },
+  {
+    "url": "https://arxiv.org/abs/2401.01234",
+    "title": "Abstract: Atmospheric escape from close-in exoplanets",
+    "text": "Abstract We present observations of exoplanet atmosphere escape using spectroscopy. The paper reports method, results, citations, references, DOI, and planetary science context."
+  },
+  {
+    "url": "https://www.space-example.com/solar-system/mars-guide",
+    "title": "Mars guide for beginners",
+    "text": "Mars is a planet in the solar system with atmosphere, moons, orbit and exploration history. This commercial science article is a readable overview with no references or data table."
+  },
+  {
+    "url": "https://science.example.org/rss/planetary-news",
+    "title": "Planetary science RSS feed",
+    "text": "Recent planetary science news items summarize Mars mission updates, Jupiter observations, astronomy research releases and links to source articles."
+  },
+  {
+    "url": "https://science.nasa.gov/gallery/mars-images/",
+    "title": "Mars image gallery",
+    "text": "Images and videos from Mars."
+  },
+  {
+    "url": "https://example.org/privacy",
+    "title": "Privacy Policy",
+    "text": "Privacy and cookie policy."
+  },
+  {
+    "url": "https://example.org/tags/mars",
+    "title": "Mars tag",
+    "text": "Tagged articles."
+  },
+  {
+    "url": "https://example.org/site-map",
+    "title": "Site navigation",
+    "html": "<a href='/a'>A</a><a href='/b'>B</a><a href='/c'>C</a><a href='/d'>D</a><a href='/e'>E</a><a href='/f'>F</a><a href='/g'>G</a><a href='/h'>H</a><a href='/i'>I</a><a href='/j'>J</a><a href='/k'>K</a><a href='/l'>L</a><a href='/m'>M</a><a href='/n'>N</a><a href='/o'>O</a><a href='/p'>P</a><a href='/q'>Q</a><a href='/r'>R</a><a href='/s'>S</a><a href='/t'>T</a><a href='/u'>U</a><a href='/v'>V</a><a href='/w'>W</a><a href='/x'>X</a><a href='/y'>Y</a><a href='/z'>Z</a><p>Mars planet science links.</p>"
+  },
+  {
+    "url": "https://example.org/planet/mars",
+    "title": "Mars",
+    "text": "Mars is a planet."
+  }
+]

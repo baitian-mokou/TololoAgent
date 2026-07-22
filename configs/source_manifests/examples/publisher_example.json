@@ -1,0 +1,22 @@
+{
+  "source_name": "publisher_example",
+  "source_mode": "publisher",
+  "allowed_domains": ["papers.example.org"],
+  "seed_urls": ["https://papers.example.org/abstract/planetary-atmospheres"],
+  "include_path_keywords": ["abstract", "paper", "journal", "planetary"],
+  "exclude_path_keywords": ["login", "subscribe", "metrics", "privacy", "/search", "/tag", "media"],
+  "max_depth": 1,
+  "max_pages_per_run": 20,
+  "max_discovery_fetch_pages": 0,
+  "crawl_delay": 1.0,
+  "topic_taxonomy": ["astronomy", "planetary_science", "publication", "abstract"],
+  "quality_gate": {
+    "accepted_min_score": 80,
+    "review_min_score": 35,
+    "allow_exploratory": true,
+    "skip_rejected_allowed": false
+  },
+  "quality_notes": "Publisher pages should keep abstracts/references but avoid login, metrics and marketing pages.",
+  "fixture_candidates": "tests/fixtures/source_quality/publisher_example_candidates.json",
+  "notes": "Example manifest only; verify licensing and robots before any real use."
+}

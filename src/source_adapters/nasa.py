@@ -222,22 +222,30 @@ class NasaPipelineAdapter(SourceAdapter):
                     fetched_at,
                     table_field="fallback_static_candidate",
                 ))
+        atmosphere = next((item.get("object") for item in triples if item.get("relation") == "HAS_ATMOSPHERE"), "")
+        narrative = {
+            "section": "NASA live preview",
+            "content": f"NASA live preview parsed {len(triples)} candidate facts from a public fact sheet for {title}.",
+            "keywords": [title, "NASA", "fact sheet"],
+        }
+        if atmosphere:
+            narrative = {
+                "section": "大气",
+                "content": f"{title} NASA fact sheet 记录的大气成分为 {atmosphere}，并解析出质量、半径等候选事实。",
+                "keywords": [title, "NASA", "fact sheet", "大气"],
+            }
         return {
             "title": title,
             "triples": triples,
-            "narratives": [{
-                "section": "NASA live preview",
-                "content": f"NASA live preview parsed {len(triples)} candidate facts from a public fact sheet for {title}.",
-                "keywords": [title, "NASA", "fact sheet"],
-            }],
+            "narratives": [narrative],
         }
 
     def _record_from_offline_raw(self, payload: Dict[str, Any], fetched_at: str) -> Dict[str, Any]:
         title = str(payload.get("title") or self.entity or "").strip()
         source_url = str(payload.get("url") or NASA_FACT_SHEETS["火星"]["url"])
         source_record_id = f"offline:{title or os.path.basename(source_url)}"
-        text = str(payload.get("text") or payload.get("raw_text") or payload.get("html") or "")
         html = str(payload.get("html") or "")
+        text = str(payload.get("text") or payload.get("raw_text") or (html_to_text(html) if html else ""))
         triples = []
         if html:
             triples.extend(
@@ -381,7 +389,8 @@ class NasaPipelineAdapter(SourceAdapter):
 
 
 def html_to_text(html: str) -> str:
-    without_tags = re.sub(r"<[^>]+>", " ", html)
+    without_noise = re.sub(r"<(script|style)\b[^>]*>.*?</\1>", " ", html, flags=re.IGNORECASE | re.DOTALL)
+    without_tags = re.sub(r"<[^>]+>", " ", without_noise)
     return re.sub(r"\s+", " ", unescape(without_tags)).strip()
 
 

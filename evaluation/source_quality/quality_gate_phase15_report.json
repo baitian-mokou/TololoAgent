@@ -1,0 +1,472 @@
+{
+  "mode": "phase15_quality_gate_trial",
+  "generated_at": "2026-07-21T16:58:51.167473+00:00",
+  "frontier_limit": 30,
+  "ingest_limit": 15,
+  "sources": {
+    "nasa": {
+      "source": "nasa",
+      "baseline": {
+        "fetched": 14,
+        "skipped": 0,
+        "skipped_quality_rejected": 0,
+        "failed": 1,
+        "triage_counts": {
+          "accepted": 14
+        }
+      },
+      "gated": {
+        "fetched": 14,
+        "skipped": 0,
+        "skipped_quality_rejected": 0,
+        "failed": 1,
+        "triage_counts": {
+          "accepted": 14
+        }
+      },
+      "rejected_samples": [],
+      "accepted_samples": [
+        {
+          "title": "NASA Space Science Data Coordinated Archive Status - NASA",
+          "url": "https://nssdc.gsfc.nasa.gov/planetary/factsheet/",
+          "status": "fetched",
+          "reason": "ok",
+          "score": 60,
+          "triage": "accepted",
+          "labels": [
+            "official_source",
+            "science_topic",
+            "fact_page",
+            "mission_page",
+            "has_references",
+            "navigation_noise"
+          ],
+          "reasons": [
+            "official or academic domain",
+            "science keyword hits=19",
+            "fact or overview page signal",
+            "mission page signal",
+            "reference signal present",
+            "high link density",
+            "news/update signal in body/navigation",
+            "media/gallery signal in body/navigation"
+          ],
+          "text_length": 7242
+        },
+        {
+          "title": "NASA Space Science Data Coordinated Archive Status - NASA",
+          "url": "https://nssdc.gsfc.nasa.gov/planetary/factsheet/mercuryfact.html",
+          "status": "fetched",
+          "reason": "ok",
+          "score": 60,
+          "triage": "accepted",
+          "labels": [
+            "official_source",
+            "science_topic",
+            "fact_page",
+            "mission_page",
+            "has_references",
+            "navigation_noise"
+          ],
+          "reasons": [
+            "official or academic domain",
+            "science keyword hits=19",
+            "fact or overview page signal",
+            "mission page signal",
+            "reference signal present",
+            "high link density",
+            "news/update signal in body/navigation",
+            "media/gallery signal in body/navigation"
+          ],
+          "text_length": 7242
+        },
+        {
+          "title": "NASA Space Science Data Coordinated Archive Status - NASA",
+          "url": "https://nssdc.gsfc.nasa.gov/planetary/factsheet/venusfact.html",
+          "status": "fetched",
+          "reason": "ok",
+          "score": 60,
+          "triage": "accepted",
+          "labels": [
+            "official_source",
+            "science_topic",
+            "fact_page",
+            "mission_page",
+            "has_references",
+            "navigation_noise"
+          ],
+          "reasons": [
+            "official or academic domain",
+            "science keyword hits=19",
+            "fact or overview page signal",
+            "mission page signal",
+            "reference signal present",
+            "high link density",
+            "news/update signal in body/navigation",
+            "media/gallery signal in body/navigation"
+          ],
+          "text_length": 7242
+        },
+        {
+          "title": "NASA Space Science Data Coordinated Archive Status - NASA",
+          "url": "https://nssdc.gsfc.nasa.gov/planetary/factsheet/earthfact.html",
+          "status": "fetched",
+          "reason": "ok",
+          "score": 60,
+          "triage": "accepted",
+          "labels": [
+            "official_source",
+            "science_topic",
+            "fact_page",
+            "mission_page",
+            "has_references",
+            "navigation_noise"
+          ],
+          "reasons": [
+            "official or academic domain",
+            "science keyword hits=19",
+            "fact or overview page signal",
+            "mission page signal",
+            "reference signal present",
+            "high link density",
+            "news/update signal in body/navigation",
+            "media/gallery signal in body/navigation"
+          ],
+          "text_length": 7242
+        },
+        {
+          "title": "NASA Space Science Data Coordinated Archive Status - NASA",
+          "url": "https://nssdc.gsfc.nasa.gov/planetary/factsheet/marsfact.html",
+          "status": "fetched",
+          "reason": "ok",
+          "score": 60,
+          "triage": "accepted",
+          "labels": [
+            "official_source",
+            "science_topic",
+            "fact_page",
+            "mission_page",
+            "has_references",
+            "navigation_noise"
+          ],
+          "reasons": [
+            "official or academic domain",
+            "science keyword hits=19",
+            "fact or overview page signal",
+            "mission page signal",
+            "reference signal present",
+            "high link density",
+            "news/update signal in body/navigation",
+            "media/gallery signal in body/navigation"
+          ],
+          "text_length": 7242
+        }
+      ],
+      "review_needed_samples": [],
+      "exploratory_samples": [],
+      "false_kill_risk": "low",
+      "false_kill_risk_reason": "no rejected samples in the trial",
+      "recommend_skip_rejected_for_small_batch": true,
+      "recommendation": "Use --quality-report --skip-rejected for explicit small-batch nasa/esa ingestion templates; inspect rejected_samples after each batch.",
+      "raw_overwrite_note": "trial raw is written under evaluation/source_quality/phase15_raw; same title/url may overwrite only prior trial files, not formal data/raw_json",
+      "frontier": {
+        "path": "F:\\知识表示与处理结课作业\\TololoAgent\\evaluation\\source_quality\\nasa_quality_frontier_phase15.json",
+        "accepted": 30,
+        "skipped": 6606,
+        "quality_summary": {
+          "total": 30,
+          "triage_counts": {
+            "review_needed": 30
+          },
+          "top_reasons": {
+            "official or academic domain": 30,
+            "very short text": 30,
+            "protected official science/fact/mission page floor": 23,
+            "science keyword hits=3": 15,
+            "fact or overview page signal": 13,
+            "mission page signal": 10,
+            "science keyword hits=2": 9,
+            "science keyword hits=4": 6
+          }
+        }
+      }
+    },
+    "esa": {
+      "source": "esa",
+      "baseline": {
+        "fetched": 14,
+        "skipped": 0,
+        "skipped_quality_rejected": 0,
+        "failed": 1,
+        "triage_counts": {
+          "accepted": 10,
+          "exploratory": 2,
+          "review_needed": 2
+        }
+      },
+      "gated": {
+        "fetched": 14,
+        "skipped": 0,
+        "skipped_quality_rejected": 0,
+        "failed": 1,
+        "triage_counts": {
+          "accepted": 10,
+          "exploratory": 2,
+          "review_needed": 2
+        }
+      },
+      "rejected_samples": [],
+      "accepted_samples": [
+        {
+          "title": "ESA - Space Science",
+          "url": "https://www.esa.int/Science_Exploration/Space_Science",
+          "status": "fetched",
+          "reason": "ok",
+          "score": 75,
+          "triage": "accepted",
+          "labels": [
+            "official_source",
+            "science_topic",
+            "fact_page",
+            "mission_page",
+            "navigation_noise"
+          ],
+          "reasons": [
+            "official or academic domain",
+            "science keyword hits=11",
+            "fact or overview page signal",
+            "mission page signal",
+            "news/update signal in body/navigation",
+            "media/gallery signal in body/navigation"
+          ],
+          "text_length": 3391
+        },
+        {
+          "title": "ESA - Juice",
+          "url": "https://www.esa.int/Science_Exploration/Space_Science/Juice",
+          "status": "fetched",
+          "reason": "ok",
+          "score": 75,
+          "triage": "accepted",
+          "labels": [
+            "official_source",
+            "science_topic",
+            "fact_page",
+            "mission_page",
+            "navigation_noise"
+          ],
+          "reasons": [
+            "official or academic domain",
+            "science keyword hits=13",
+            "fact or overview page signal",
+            "mission page signal",
+            "news/update signal in body/navigation",
+            "media/gallery signal in body/navigation"
+          ],
+          "text_length": 4847
+        },
+        {
+          "title": "ESA - Rosetta",
+          "url": "https://www.esa.int/Science_Exploration/Space_Science/Rosetta",
+          "status": "fetched",
+          "reason": "ok",
+          "score": 75,
+          "triage": "accepted",
+          "labels": [
+            "official_source",
+            "science_topic",
+            "fact_page",
+            "mission_page",
+            "navigation_noise"
+          ],
+          "reasons": [
+            "official or academic domain",
+            "science keyword hits=11",
+            "fact or overview page signal",
+            "mission page signal",
+            "news/update signal in body/navigation",
+            "media/gallery signal in body/navigation"
+          ],
+          "text_length": 4421
+        },
+        {
+          "title": "ESA - Gaia",
+          "url": "https://www.esa.int/Science_Exploration/Space_Science/Gaia",
+          "status": "fetched",
+          "reason": "ok",
+          "score": 71,
+          "triage": "accepted",
+          "labels": [
+            "official_source",
+            "science_topic",
+            "fact_page",
+            "mission_page",
+            "navigation_noise"
+          ],
+          "reasons": [
+            "official or academic domain",
+            "science keyword hits=7",
+            "fact or overview page signal",
+            "mission page signal",
+            "news/update signal in body/navigation",
+            "media/gallery signal in body/navigation"
+          ],
+          "text_length": 4834
+        },
+        {
+          "title": "ESA - Solar Orbiter",
+          "url": "https://www.esa.int/Science_Exploration/Space_Science/Solar_Orbiter",
+          "status": "fetched",
+          "reason": "ok",
+          "score": 74,
+          "triage": "accepted",
+          "labels": [
+            "official_source",
+            "science_topic",
+            "fact_page",
+            "mission_page",
+            "navigation_noise"
+          ],
+          "reasons": [
+            "official or academic domain",
+            "science keyword hits=8",
+            "fact or overview page signal",
+            "mission page signal",
+            "news/update signal in body/navigation",
+            "media/gallery signal in body/navigation"
+          ],
+          "text_length": 5010
+        }
+      ],
+      "review_needed_samples": [
+        {
+          "title": "ESA - SMART-1",
+          "url": "https://www.esa.int/Science_Exploration/Space_Science/SMART-1",
+          "status": "fetched",
+          "reason": "ok",
+          "score": 22,
+          "triage": "review_needed",
+          "labels": [
+            "official_source",
+            "science_topic",
+            "fact_page",
+            "mission_page",
+            "navigation_noise",
+            "news_page",
+            "media_page"
+          ],
+          "reasons": [
+            "official or academic domain",
+            "science keyword hits=4",
+            "fact or overview page signal",
+            "mission page signal",
+            "high link density",
+            "news/update signal in body/navigation",
+            "media/gallery signal in body/navigation"
+          ],
+          "text_length": 2361
+        },
+        {
+          "title": "ESA - kernel (1)",
+          "url": "https://www.esa.int/Science_Exploration/Space_Science/Hubble",
+          "status": "fetched",
+          "reason": "ok",
+          "score": 19,
+          "triage": "review_needed",
+          "labels": [
+            "official_source",
+            "science_topic",
+            "short_text"
+          ],
+          "reasons": [
+            "official or academic domain",
+            "science keyword hits=3",
+            "short text"
+          ],
+          "text_length": 167
+        }
+      ],
+      "exploratory_samples": [
+        {
+          "title": "ESA - Mars Express",
+          "url": "https://www.esa.int/Science_Exploration/Space_Science/Mars_Express",
+          "status": "fetched",
+          "reason": "ok",
+          "score": 65,
+          "triage": "exploratory",
+          "labels": [
+            "official_source",
+            "science_topic",
+            "fact_page",
+            "mission_page",
+            "news_page",
+            "navigation_noise"
+          ],
+          "reasons": [
+            "official or academic domain",
+            "science keyword hits=9",
+            "fact or overview page signal",
+            "mission page signal",
+            "news/update signal",
+            "media/gallery signal in body/navigation"
+          ],
+          "text_length": 3640
+        },
+        {
+          "title": "ESA - Venus Express",
+          "url": "https://www.esa.int/Science_Exploration/Space_Science/Venus_Express",
+          "status": "fetched",
+          "reason": "ok",
+          "score": 45,
+          "triage": "exploratory",
+          "labels": [
+            "official_source",
+            "science_topic",
+            "fact_page",
+            "mission_page",
+            "navigation_noise",
+            "news_page"
+          ],
+          "reasons": [
+            "official or academic domain",
+            "science keyword hits=11",
+            "fact or overview page signal",
+            "mission page signal",
+            "high link density",
+            "news/update signal",
+            "media/gallery signal in body/navigation"
+          ],
+          "text_length": 3032
+        }
+      ],
+      "false_kill_risk": "low",
+      "false_kill_risk_reason": "no rejected samples in the trial",
+      "recommend_skip_rejected_for_small_batch": true,
+      "recommendation": "Use --quality-report --skip-rejected for explicit small-batch nasa/esa ingestion templates; inspect rejected_samples after each batch.",
+      "raw_overwrite_note": "trial raw is written under evaluation/source_quality/phase15_raw; same title/url may overwrite only prior trial files, not formal data/raw_json",
+      "frontier": {
+        "path": "F:\\知识表示与处理结课作业\\TololoAgent\\evaluation\\source_quality\\esa_quality_frontier_phase15.json",
+        "accepted": 30,
+        "skipped": 1274,
+        "quality_summary": {
+          "total": 30,
+          "triage_counts": {
+            "exploratory": 3,
+            "review_needed": 27
+          },
+          "top_reasons": {
+            "official or academic domain": 30,
+            "very short text": 30,
+            "science keyword hits=1": 21,
+            "science keyword hits=2": 7,
+            "mission page signal": 4,
+            "protected official science/fact/mission page floor": 4,
+            "news/update signal": 3,
+            "science keyword hits=3": 2
+          }
+        }
+      }
+    }
+  },
+  "wikidata_note": "Wikidata is intentionally excluded from skip-rejected trial; use EntityData/raw-stage scoring instead of metadata-only web scoring."
+}

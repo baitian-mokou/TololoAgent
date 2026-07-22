@@ -1,5 +1,5 @@
 {
-  "version": "source_expansion_gold_set_v3",
+  "version": "source_expansion_gold_set_v3_phase3_manifest",
   "source_name": "nasa",
   "source_schema_version": "nasa_shadow_ready_v1",
   "source_purpose": "authoritative_fact_verification_and_numeric_supplement",
@@ -927,6 +927,398 @@
       "expected_section_any_of": [
         "大气"
       ]
+    },
+    {
+      "id": "nasa_manifest_narrative_01_nasa_space_science_data_coordinated_archive_stat",
+      "category": "narrative",
+      "query_kind": "narrative",
+      "query": "NASA Space Science Data Coordinated Archive Status - NASA 这页介绍了什么",
+      "expected_path": "fallback",
+      "allowed_final_sources": [
+        "fallback"
+      ],
+      "expected_top_k_hit": true,
+      "expected_result": {
+        "page_title": "NASA Space Science Data Coordinated Archive Status - NASA",
+        "section_any_of": [
+          "raw_chunk_1",
+          "raw_chunk_2"
+        ]
+      },
+      "source_filter": [
+        "nasa"
+      ],
+      "source_schema_version": "nasa_shadow_ready_v1",
+      "expected_page_title": "NASA Space Science Data Coordinated Archive Status - NASA",
+      "expected_section_any_of": [
+        "raw_chunk_1",
+        "raw_chunk_2"
+      ],
+      "eval_scope": "exploratory"
+    },
+    {
+      "id": "nasa_manifest_narrative_02_asteroids_comets_and_meteors",
+      "category": "narrative",
+      "query_kind": "narrative",
+      "query": "Asteroids, Comets, and Meteors 这页介绍了什么",
+      "expected_path": "fallback",
+      "allowed_final_sources": [
+        "fallback"
+      ],
+      "expected_top_k_hit": true,
+      "expected_result": {
+        "page_title": "Asteroids, Comets, and Meteors",
+        "section_any_of": [
+          "raw_chunk_1",
+          "raw_chunk_2"
+        ]
+      },
+      "source_filter": [
+        "nasa"
+      ],
+      "source_schema_version": "nasa_shadow_ready_v1",
+      "expected_page_title": "Asteroids, Comets, and Meteors",
+      "expected_section_any_of": [
+        "raw_chunk_1",
+        "raw_chunk_2"
+      ],
+      "eval_scope": "exploratory"
+    },
+    {
+      "id": "nasa_manifest_narrative_03_pluto_dwarf_planets",
+      "category": "narrative",
+      "query_kind": "narrative",
+      "query": "Pluto & Dwarf Planets 这页介绍了什么",
+      "expected_path": "fallback",
+      "allowed_final_sources": [
+        "fallback"
+      ],
+      "expected_top_k_hit": true,
+      "expected_result": {
+        "page_title": "Pluto & Dwarf Planets",
+        "section_any_of": [
+          "raw_chunk_1",
+          "raw_chunk_2"
+        ]
+      },
+      "source_filter": [
+        "nasa"
+      ],
+      "source_schema_version": "nasa_shadow_ready_v1",
+      "expected_page_title": "Pluto & Dwarf Planets",
+      "expected_section_any_of": [
+        "raw_chunk_1",
+        "raw_chunk_2"
+      ],
+      "eval_scope": "exploratory"
+    },
+    {
+      "id": "nasa_manifest_narrative_04_ceres_facts_nasa_science",
+      "category": "narrative",
+      "query_kind": "narrative",
+      "query": "Ceres: Facts - NASA Science 这页介绍了什么",
+      "expected_path": "fallback",
+      "allowed_final_sources": [
+        "fallback"
+      ],
+      "expected_top_k_hit": true,
+      "expected_result": {
+        "page_title": "Ceres: Facts - NASA Science",
+        "section_any_of": [
+          "raw_chunk_1",
+          "raw_chunk_2"
+        ]
+      },
+      "source_filter": [
+        "nasa"
+      ],
+      "source_schema_version": "nasa_shadow_ready_v1",
+      "expected_page_title": "Ceres: Facts - NASA Science",
+      "expected_section_any_of": [
+        "raw_chunk_1",
+        "raw_chunk_2"
+      ],
+      "eval_scope": "exploratory"
+    },
+    {
+      "id": "nasa_manifest_narrative_05_eris",
+      "category": "narrative",
+      "query_kind": "narrative",
+      "query": "Eris 这页介绍了什么",
+      "expected_path": "fallback",
+      "allowed_final_sources": [
+        "fallback"
+      ],
+      "expected_top_k_hit": true,
+      "expected_result": {
+        "page_title": "Eris",
+        "section_any_of": [
+          "raw_chunk_1",
+          "raw_chunk_2"
+        ]
+      },
+      "source_filter": [
+        "nasa"
+      ],
+      "source_schema_version": "nasa_shadow_ready_v1",
+      "expected_page_title": "Eris",
+      "expected_section_any_of": [
+        "raw_chunk_1",
+        "raw_chunk_2"
+      ],
+      "eval_scope": "exploratory"
+    },
+    {
+      "id": "nasa_manifest_narrative_06_haumea",
+      "category": "narrative",
+      "query_kind": "narrative",
+      "query": "Haumea 这页介绍了什么",
+      "expected_path": "fallback",
+      "allowed_final_sources": [
+        "fallback"
+      ],
+      "expected_top_k_hit": true,
+      "expected_result": {
+        "page_title": "Haumea",
+        "section_any_of": [
+          "raw_chunk_1",
+          "raw_chunk_2"
+        ]
+      },
+      "source_filter": [
+        "nasa"
+      ],
+      "source_schema_version": "nasa_shadow_ready_v1",
+      "expected_page_title": "Haumea",
+      "expected_section_any_of": [
+        "raw_chunk_1",
+        "raw_chunk_2"
+      ],
+      "eval_scope": "exploratory"
+    },
+    {
+      "id": "nasa_manifest_narrative_07_makemake",
+      "category": "narrative",
+      "query_kind": "narrative",
+      "query": "Makemake 这页介绍了什么",
+      "expected_path": "fallback",
+      "allowed_final_sources": [
+        "fallback"
+      ],
+      "expected_top_k_hit": true,
+      "expected_result": {
+        "page_title": "Makemake",
+        "section_any_of": [
+          "raw_chunk_1",
+          "raw_chunk_2"
+        ]
+      },
+      "source_filter": [
+        "nasa"
+      ],
+      "source_schema_version": "nasa_shadow_ready_v1",
+      "expected_page_title": "Makemake",
+      "expected_section_any_of": [
+        "raw_chunk_1",
+        "raw_chunk_2"
+      ],
+      "eval_scope": "exploratory"
+    },
+    {
+      "id": "nasa_manifest_narrative_08_pluto_facts_nasa_science",
+      "category": "narrative",
+      "query_kind": "narrative",
+      "query": "Pluto: Facts - NASA Science 这页介绍了什么",
+      "expected_path": "fallback",
+      "allowed_final_sources": [
+        "fallback"
+      ],
+      "expected_top_k_hit": true,
+      "expected_result": {
+        "page_title": "Pluto: Facts - NASA Science",
+        "section_any_of": [
+          "raw_chunk_1",
+          "raw_chunk_2"
+        ]
+      },
+      "source_filter": [
+        "nasa"
+      ],
+      "source_schema_version": "nasa_shadow_ready_v1",
+      "expected_page_title": "Pluto: Facts - NASA Science",
+      "expected_section_any_of": [
+        "raw_chunk_1",
+        "raw_chunk_2"
+      ],
+      "eval_scope": "exploratory"
+    },
+    {
+      "id": "nasa_manifest_structured_01_new_nasa_earth_missions_gear_up_to_start_science_operated_by",
+      "category": "structured",
+      "query_kind": "structured",
+      "query": "New NASA Earth Missions Gear Up to Start Science Flights由谁运营",
+      "expected_path": "fallback",
+      "allowed_final_sources": [
+        "fallback"
+      ],
+      "expected_top_k_hit": true,
+      "expected_result": {
+        "subject": "New NASA Earth Missions Gear Up to Start Science Flights",
+        "relation": "OPERATED_BY",
+        "object": "NASA"
+      },
+      "source_filter": [
+        "nasa"
+      ],
+      "source_schema_version": "nasa_shadow_ready_v1",
+      "eval_scope": "exploratory"
+    },
+    {
+      "id": "nasa_manifest_structured_02_science_missions_operated_by",
+      "category": "structured",
+      "query_kind": "structured",
+      "query": "Science Missions由谁运营",
+      "expected_path": "fallback",
+      "allowed_final_sources": [
+        "fallback"
+      ],
+      "expected_top_k_hit": true,
+      "expected_result": {
+        "subject": "Science Missions",
+        "relation": "OPERATED_BY",
+        "object": "NASA"
+      },
+      "source_filter": [
+        "nasa"
+      ],
+      "source_schema_version": "nasa_shadow_ready_v1",
+      "eval_scope": "exploratory"
+    },
+    {
+      "id": "nasa_manifest_structured_03_cassini_huygens_operated_by",
+      "category": "structured",
+      "query_kind": "structured",
+      "query": "Cassini-Huygens由谁运营",
+      "expected_path": "fallback",
+      "allowed_final_sources": [
+        "fallback"
+      ],
+      "expected_top_k_hit": true,
+      "expected_result": {
+        "subject": "Cassini-Huygens",
+        "relation": "OPERATED_BY",
+        "object": "NASA"
+      },
+      "source_filter": [
+        "nasa"
+      ],
+      "source_schema_version": "nasa_shadow_ready_v1",
+      "eval_scope": "exploratory"
+    },
+    {
+      "id": "nasa_manifest_structured_04_europa_clipper_operated_by",
+      "category": "structured",
+      "query_kind": "structured",
+      "query": "Europa Clipper由谁运营",
+      "expected_path": "fallback",
+      "allowed_final_sources": [
+        "fallback"
+      ],
+      "expected_top_k_hit": true,
+      "expected_result": {
+        "subject": "Europa Clipper",
+        "relation": "OPERATED_BY",
+        "object": "NASA"
+      },
+      "source_filter": [
+        "nasa"
+      ],
+      "source_schema_version": "nasa_shadow_ready_v1",
+      "eval_scope": "exploratory"
+    },
+    {
+      "id": "nasa_manifest_structured_05_europa_clipper_has_mission_target",
+      "category": "structured",
+      "query_kind": "structured",
+      "query": "Europa Clipper目标是什么",
+      "expected_path": "fallback",
+      "allowed_final_sources": [
+        "fallback"
+      ],
+      "expected_top_k_hit": true,
+      "expected_result": {
+        "subject": "Europa Clipper",
+        "relation": "HAS_MISSION_TARGET",
+        "object": "Jupiter"
+      },
+      "source_filter": [
+        "nasa"
+      ],
+      "source_schema_version": "nasa_shadow_ready_v1",
+      "eval_scope": "exploratory"
+    },
+    {
+      "id": "nasa_manifest_structured_06_hubble_space_telescope_operated_by",
+      "category": "structured",
+      "query_kind": "structured",
+      "query": "Hubble Space Telescope由谁运营",
+      "expected_path": "fallback",
+      "allowed_final_sources": [
+        "fallback"
+      ],
+      "expected_top_k_hit": true,
+      "expected_result": {
+        "subject": "Hubble Space Telescope",
+        "relation": "OPERATED_BY",
+        "object": "NASA"
+      },
+      "source_filter": [
+        "nasa"
+      ],
+      "source_schema_version": "nasa_shadow_ready_v1",
+      "eval_scope": "exploratory"
+    },
+    {
+      "id": "nasa_manifest_structured_07_juno_operated_by",
+      "category": "structured",
+      "query_kind": "structured",
+      "query": "Juno由谁运营",
+      "expected_path": "fallback",
+      "allowed_final_sources": [
+        "fallback"
+      ],
+      "expected_top_k_hit": true,
+      "expected_result": {
+        "subject": "Juno",
+        "relation": "OPERATED_BY",
+        "object": "NASA"
+      },
+      "source_filter": [
+        "nasa"
+      ],
+      "source_schema_version": "nasa_shadow_ready_v1",
+      "eval_scope": "exploratory"
+    },
+    {
+      "id": "nasa_manifest_structured_08_mars_2020_perseverance_rover_operated_by",
+      "category": "structured",
+      "query_kind": "structured",
+      "query": "Mars 2020: Perseverance Rover由谁运营",
+      "expected_path": "fallback",
+      "allowed_final_sources": [
+        "fallback"
+      ],
+      "expected_top_k_hit": true,
+      "expected_result": {
+        "subject": "Mars 2020: Perseverance Rover",
+        "relation": "OPERATED_BY",
+        "object": "NASA"
+      },
+      "source_filter": [
+        "nasa"
+      ],
+      "source_schema_version": "nasa_shadow_ready_v1",
+      "eval_scope": "exploratory"
     }
   ]
 }

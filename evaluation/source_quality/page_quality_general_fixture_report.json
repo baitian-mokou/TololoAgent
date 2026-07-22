@@ -1,0 +1,410 @@
+{
+  "source": "generic",
+  "mode": "local_page_quality_scoring",
+  "total": 10,
+  "triage_counts": {
+    "accepted": 1,
+    "exploratory": 1,
+    "rejected": 4,
+    "review_needed": 4
+  },
+  "top_reasons": {
+    "short text": 5,
+    "organization domain": 5,
+    "very short text": 5,
+    "reference signal present": 4,
+    "mission page signal": 3,
+    "official or academic domain": 2,
+    "fact or overview page signal": 2,
+    "academic or preprint domain": 2,
+    "publication/abstract signal": 2,
+    "science keyword hits=8": 2
+  },
+  "items": [
+    {
+      "index": 1,
+      "source": "generic",
+      "url": "https://nssdc.gsfc.nasa.gov/planetary/factsheet/marsfact.html",
+      "title": "Mars Fact Sheet",
+      "score": 95,
+      "triage": "accepted",
+      "labels": [
+        "official_source",
+        "science_topic",
+        "fact_page",
+        "mission_page",
+        "has_table",
+        "has_references",
+        "short_text"
+      ],
+      "reasons": [
+        "official or academic domain",
+        "science keyword hits=11",
+        "fact or overview page signal",
+        "mission page signal",
+        "table evidence present",
+        "reference signal present",
+        "short text"
+      ],
+      "metrics": {
+        "text_length": 186,
+        "link_density_estimate": 0.0,
+        "table_count": 1,
+        "science_keyword_hits": 11,
+        "topic_taxonomy_hits": 0,
+        "blocked_keyword_hits": 0,
+        "news_keyword_hits": 0,
+        "path_media_keyword_hits": 0,
+        "body_media_keyword_hits": 0,
+        "path_news_keyword_hits": 0,
+        "body_news_keyword_hits": 0,
+        "reference_keyword_hits": 1,
+        "accepted_min_score": 70,
+        "review_min_score": 45,
+        "source_mode": ""
+      }
+    },
+    {
+      "index": 2,
+      "source": "generic",
+      "url": "https://astro.example.edu/research/planetary-lab",
+      "title": "Planetary Atmospheres Laboratory",
+      "score": 62,
+      "triage": "review_needed",
+      "labels": [
+        "academic_source",
+        "science_topic",
+        "mission_page",
+        "has_references",
+        "publication_page",
+        "short_text"
+      ],
+      "reasons": [
+        "academic or preprint domain",
+        "science keyword hits=13",
+        "mission page signal",
+        "reference signal present",
+        "publication/abstract signal",
+        "short text"
+      ],
+      "metrics": {
+        "text_length": 243,
+        "link_density_estimate": 0.0,
+        "table_count": 0,
+        "science_keyword_hits": 13,
+        "topic_taxonomy_hits": 0,
+        "blocked_keyword_hits": 0,
+        "news_keyword_hits": 0,
+        "path_media_keyword_hits": 0,
+        "body_media_keyword_hits": 0,
+        "path_news_keyword_hits": 0,
+        "body_news_keyword_hits": 0,
+        "reference_keyword_hits": 2,
+        "accepted_min_score": 70,
+        "review_min_score": 45,
+        "source_mode": ""
+      }
+    },
+    {
+      "index": 3,
+      "source": "generic",
+      "url": "https://arxiv.org/abs/2401.01234",
+      "title": "Abstract: Atmospheric escape from close-in exoplanets",
+      "score": 51,
+      "triage": "review_needed",
+      "labels": [
+        "academic_source",
+        "science_topic",
+        "has_references",
+        "publication_page",
+        "short_text"
+      ],
+      "reasons": [
+        "academic or preprint domain",
+        "science keyword hits=6",
+        "reference signal present",
+        "publication/abstract signal",
+        "short text"
+      ],
+      "metrics": {
+        "text_length": 177,
+        "link_density_estimate": 0.0,
+        "table_count": 0,
+        "science_keyword_hits": 6,
+        "topic_taxonomy_hits": 0,
+        "blocked_keyword_hits": 0,
+        "news_keyword_hits": 0,
+        "path_media_keyword_hits": 0,
+        "body_media_keyword_hits": 0,
+        "path_news_keyword_hits": 0,
+        "body_news_keyword_hits": 0,
+        "reference_keyword_hits": 4,
+        "accepted_min_score": 70,
+        "review_min_score": 45,
+        "source_mode": ""
+      }
+    },
+    {
+      "index": 4,
+      "source": "generic",
+      "url": "https://www.space-example.com/solar-system/mars-guide",
+      "title": "Mars guide for beginners",
+      "score": 29,
+      "triage": "review_needed",
+      "labels": [
+        "commercial_or_unknown_source",
+        "science_topic",
+        "fact_page",
+        "has_references",
+        "short_text",
+        "news_page"
+      ],
+      "reasons": [
+        "science keyword hits=8",
+        "fact or overview page signal",
+        "reference signal present",
+        "short text",
+        "news/update signal in body/navigation"
+      ],
+      "metrics": {
+        "text_length": 180,
+        "link_density_estimate": 0.0,
+        "table_count": 0,
+        "science_keyword_hits": 8,
+        "topic_taxonomy_hits": 0,
+        "blocked_keyword_hits": 0,
+        "news_keyword_hits": 1,
+        "path_media_keyword_hits": 0,
+        "body_media_keyword_hits": 0,
+        "path_news_keyword_hits": 0,
+        "body_news_keyword_hits": 1,
+        "reference_keyword_hits": 2,
+        "accepted_min_score": 70,
+        "review_min_score": 45,
+        "source_mode": ""
+      }
+    },
+    {
+      "index": 5,
+      "source": "generic",
+      "url": "https://science.example.org/rss/planetary-news",
+      "title": "Planetary science RSS feed",
+      "score": 19,
+      "triage": "exploratory",
+      "labels": [
+        "organization_source",
+        "science_topic",
+        "mission_page",
+        "short_text",
+        "news_page"
+      ],
+      "reasons": [
+        "organization domain",
+        "science keyword hits=8",
+        "mission page signal",
+        "short text",
+        "news/update signal"
+      ],
+      "metrics": {
+        "text_length": 147,
+        "link_density_estimate": 0.0,
+        "table_count": 0,
+        "science_keyword_hits": 8,
+        "topic_taxonomy_hits": 0,
+        "blocked_keyword_hits": 0,
+        "news_keyword_hits": 4,
+        "path_media_keyword_hits": 0,
+        "body_media_keyword_hits": 0,
+        "path_news_keyword_hits": 1,
+        "body_news_keyword_hits": 3,
+        "reference_keyword_hits": 0,
+        "accepted_min_score": 70,
+        "review_min_score": 45,
+        "source_mode": ""
+      }
+    },
+    {
+      "index": 6,
+      "source": "generic",
+      "url": "https://science.nasa.gov/gallery/mars-images/",
+      "title": "Mars image gallery",
+      "score": 0,
+      "triage": "rejected",
+      "labels": [
+        "official_source",
+        "science_topic",
+        "short_text",
+        "media_page"
+      ],
+      "reasons": [
+        "official or academic domain",
+        "science keyword hits=2",
+        "very short text",
+        "media/gallery signal"
+      ],
+      "metrics": {
+        "text_length": 28,
+        "link_density_estimate": 0.0,
+        "table_count": 0,
+        "science_keyword_hits": 2,
+        "topic_taxonomy_hits": 0,
+        "blocked_keyword_hits": 7,
+        "news_keyword_hits": 0,
+        "path_media_keyword_hits": 3,
+        "body_media_keyword_hits": 4,
+        "path_news_keyword_hits": 0,
+        "body_news_keyword_hits": 0,
+        "reference_keyword_hits": 0,
+        "accepted_min_score": 70,
+        "review_min_score": 45,
+        "source_mode": ""
+      }
+    },
+    {
+      "index": 7,
+      "source": "generic",
+      "url": "https://example.org/privacy",
+      "title": "Privacy Policy",
+      "score": 0,
+      "triage": "rejected",
+      "labels": [
+        "organization_source",
+        "short_text",
+        "policy_page",
+        "low_signal"
+      ],
+      "reasons": [
+        "organization domain",
+        "very short text",
+        "blocked path/content signal",
+        "low science signal"
+      ],
+      "metrics": {
+        "text_length": 26,
+        "link_density_estimate": 0.0,
+        "table_count": 0,
+        "science_keyword_hits": 0,
+        "topic_taxonomy_hits": 0,
+        "blocked_keyword_hits": 1,
+        "news_keyword_hits": 0,
+        "path_media_keyword_hits": 0,
+        "body_media_keyword_hits": 0,
+        "path_news_keyword_hits": 0,
+        "body_news_keyword_hits": 0,
+        "reference_keyword_hits": 0,
+        "accepted_min_score": 70,
+        "review_min_score": 45,
+        "source_mode": ""
+      }
+    },
+    {
+      "index": 8,
+      "source": "generic",
+      "url": "https://example.org/tags/mars",
+      "title": "Mars tag",
+      "score": 0,
+      "triage": "rejected",
+      "labels": [
+        "organization_source",
+        "science_topic",
+        "short_text",
+        "policy_page"
+      ],
+      "reasons": [
+        "organization domain",
+        "science keyword hits=1",
+        "very short text",
+        "blocked path/content signal"
+      ],
+      "metrics": {
+        "text_length": 16,
+        "link_density_estimate": 0.0,
+        "table_count": 0,
+        "science_keyword_hits": 1,
+        "topic_taxonomy_hits": 0,
+        "blocked_keyword_hits": 1,
+        "news_keyword_hits": 0,
+        "path_media_keyword_hits": 0,
+        "body_media_keyword_hits": 0,
+        "path_news_keyword_hits": 0,
+        "body_news_keyword_hits": 0,
+        "reference_keyword_hits": 0,
+        "accepted_min_score": 70,
+        "review_min_score": 45,
+        "source_mode": ""
+      }
+    },
+    {
+      "index": 9,
+      "source": "generic",
+      "url": "https://example.org/site-map",
+      "title": "Site navigation",
+      "score": 0,
+      "triage": "rejected",
+      "labels": [
+        "organization_source",
+        "science_topic",
+        "short_text",
+        "navigation_noise"
+      ],
+      "reasons": [
+        "organization domain",
+        "science keyword hits=3",
+        "very short text",
+        "high link density"
+      ],
+      "metrics": {
+        "text_length": 78,
+        "link_density_estimate": 26.0,
+        "table_count": 0,
+        "science_keyword_hits": 3,
+        "topic_taxonomy_hits": 0,
+        "blocked_keyword_hits": 0,
+        "news_keyword_hits": 0,
+        "path_media_keyword_hits": 0,
+        "body_media_keyword_hits": 0,
+        "path_news_keyword_hits": 0,
+        "body_news_keyword_hits": 0,
+        "reference_keyword_hits": 0,
+        "accepted_min_score": 70,
+        "review_min_score": 45,
+        "source_mode": ""
+      }
+    },
+    {
+      "index": 10,
+      "source": "generic",
+      "url": "https://example.org/planet/mars",
+      "title": "Mars",
+      "score": 0,
+      "triage": "review_needed",
+      "labels": [
+        "organization_source",
+        "science_topic",
+        "short_text"
+      ],
+      "reasons": [
+        "organization domain",
+        "science keyword hits=2",
+        "very short text"
+      ],
+      "metrics": {
+        "text_length": 17,
+        "link_density_estimate": 0.0,
+        "table_count": 0,
+        "science_keyword_hits": 2,
+        "topic_taxonomy_hits": 0,
+        "blocked_keyword_hits": 0,
+        "news_keyword_hits": 0,
+        "path_media_keyword_hits": 0,
+        "body_media_keyword_hits": 0,
+        "path_news_keyword_hits": 0,
+        "body_news_keyword_hits": 0,
+        "reference_keyword_hits": 0,
+        "accepted_min_score": 70,
+        "review_min_score": 45,
+        "source_mode": ""
+      }
+    }
+  ]
+}

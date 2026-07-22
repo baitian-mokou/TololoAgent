@@ -1,0 +1,116 @@
+{
+  "source_id": "arxiv_preprint_candidate",
+  "registered": false,
+  "network": false,
+  "mode": "manifest_candidate_sandbox",
+  "generated_at": "2026-07-22T02:28:46.041276+00:00",
+  "manifest_path": "configs\\source_manifests\\candidates\\arxiv_preprint_candidate.json",
+  "fixture_candidates_path": "tests/fixtures/source_quality/arxiv_preprint_candidate_candidates.json",
+  "manifest_validation": {
+    "passed": true,
+    "errors": [],
+    "warnings": []
+  },
+  "candidate_count": 3,
+  "triage_counts": {
+    "rejected": 1,
+    "review_needed": 2
+  },
+  "top_reasons": {
+    "academic or preprint domain": 3,
+    "publication/abstract signal": 3,
+    "reference signal present": 2,
+    "short text": 2,
+    "topic taxonomy hits=3": 1,
+    "science keyword hits=9": 1,
+    "topic taxonomy hits=1": 1,
+    "science keyword hits=7": 1,
+    "science keyword hits=1": 1,
+    "very short text": 1
+  },
+  "safety_flags": {
+    "formal_pipeline_write": false,
+    "raw_json_write": false,
+    "triples_write": false,
+    "chroma_write": false,
+    "neo4j_write": false,
+    "network_disabled": true,
+    "unregistered_ingest_blocked": true,
+    "sandbox_report_only": true
+  },
+  "selected_candidate_snapshots": [
+    {
+      "index": 1,
+      "url": "https://arxiv.org/abs/2601.00001",
+      "title": "A Survey of Small Bodies in the Outer Solar System",
+      "text_length": 182,
+      "html_length": 0,
+      "score": 67,
+      "triage": "review_needed",
+      "labels": [
+        "academic_source",
+        "topic_taxonomy_context",
+        "science_topic",
+        "has_references",
+        "publication_page",
+        "short_text"
+      ],
+      "reasons": [
+        "academic or preprint domain",
+        "topic taxonomy hits=3",
+        "science keyword hits=9",
+        "reference signal present",
+        "publication/abstract signal"
+      ]
+    },
+    {
+      "index": 2,
+      "url": "https://arxiv.org/abs/2601.00002",
+      "title": "Exoplanet Atmosphere Retrieval with Telescope Spectroscopy",
+      "text_length": 142,
+      "html_length": 0,
+      "score": 57,
+      "triage": "review_needed",
+      "labels": [
+        "academic_source",
+        "topic_taxonomy_context",
+        "science_topic",
+        "has_references",
+        "publication_page",
+        "short_text"
+      ],
+      "reasons": [
+        "academic or preprint domain",
+        "topic taxonomy hits=1",
+        "science keyword hits=7",
+        "reference signal present",
+        "publication/abstract signal"
+      ]
+    },
+    {
+      "index": 3,
+      "url": "https://arxiv.org/search/?query=mars&searchtype=all",
+      "title": "arXiv Search",
+      "text_length": 31,
+      "html_length": 0,
+      "score": 45,
+      "triage": "rejected",
+      "labels": [
+        "academic_source",
+        "science_topic",
+        "publication_page",
+        "short_text",
+        "search_page"
+      ],
+      "reasons": [
+        "academic or preprint domain",
+        "science keyword hits=1",
+        "publication/abstract signal",
+        "very short text",
+        "blocked path/content signal"
+      ]
+    }
+  ],
+  "frontier_skipped_count": 0,
+  "frontier_skipped": []
+}

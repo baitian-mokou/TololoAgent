@@ -1,0 +1,67 @@
+Tololo Astronomy Knowledge Graph
+Copyright (c) 2026 项目作者/提交人。All rights reserved.
+
+本 NOTICE 用于说明项目代码、文档、数据产物、署名和外部来源的知识产权边界。
+本文件不是法律意见；它用于在课程提交和项目流转时保留清晰的权利声明。
+
+1. 著作权与署名声明
+
+除单独标注的第三方材料外，本项目中的手写源代码、脚本、测试、配置模板、
+说明文档、设计文档、展示材料和人工整理内容由项目作者/提交人完成并保留
+全部权利。具体作者、课程、学号和提交日期见 AUTHORSHIP.md 以及课程提交记录。
+
+任何接收、评阅、复制、归档或展示本项目的人，都应保留 LICENSE、NOTICE、
+AUTHORSHIP.md、PROVENANCE.md、README.md 和源文件中的署名、日期、路径、
+提交记录及来源说明，不得删除、遮盖、改写或弱化作者身份。
+
+2. 课程评阅有限授权
+
+作者仅授权课程教师、助教、学校教务或课程管理人员为本次课程作业评分、查重、
+归档、复核和教学管理目的接收、运行、检查和保存本项目。除上述课程评阅目的外，
+未经作者明确书面许可，不得复制、发布、公开展示、转授权、署名为他人作品、
+并入其他项目、用于论文/课题/竞赛/教材/课程案例/产品/商业服务，或用于数据集、
+模型训练和其他二次开发。
+
+3. Generated data and third-party source material
+
+本项目可能包含或生成来自第三方来源的知识记录、页面快照、三元组、叙事块、
+数据库文件、模型文件和依赖包。本项目的权利声明不会重新授权这些第三方材料；
+它们仍受各自来源的许可、使用条款、署名要求和权利边界约束。
+
+Known source families used by this project include:
+
+- Chinese Wikipedia / Wikimedia project text:
+  Wikimedia-hosted text is generally licensed under CC BY-SA 4.0 and GFDL,
+  with attribution requirements and possible page-specific terms. Reuse must
+  preserve required attribution and comply with the relevant Wikimedia page
+  history, footer, and Terms of Use.
+
+- Wikidata structured data:
+  Wikidata main/property/lexeme structured data is generally available under
+  CC0. Non-structured text on Wikidata pages may use different Wikimedia terms.
+
+- NASA source material:
+  NASA factual/public media material is generally usable under NASA media
+  usage guidelines, but NASA names, logos, insignia, endorsements, third-party
+  materials, and identifiable-person rights may be restricted. Do not imply
+  NASA review, sponsorship, or endorsement.
+
+- ESA source material:
+  ESA pages and media may be subject to ESA copyright notices, page-level
+  terms, and attribution requirements. Treat ESA material as third-party
+  content unless a specific file or source page states otherwise.
+
+4. Trademarks and names
+
+Names such as Wikipedia, Wikimedia, Wikidata, NASA, ESA, Neo4j, Chroma,
+Ollama, Python, and other product or organization names may be trademarks of
+their respective owners. This project does not grant trademark rights and does
+not imply affiliation, review, approval, or endorsement by those organizations.
+
+5. Operational note
+
+When redistributing this project with data, reports, screenshots, database
+dumps, model files, or generated triples/narratives, keep this NOTICE and
+verify the license and attribution requirements for each included external
+source. Any use outside the course evaluation scope requires the author's
+prior written permission and must preserve attribution.

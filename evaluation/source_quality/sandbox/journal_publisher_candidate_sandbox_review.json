@@ -1,0 +1,115 @@
+{
+  "source_id": "journal_publisher_candidate",
+  "registered": false,
+  "network": false,
+  "mode": "manifest_candidate_sandbox",
+  "generated_at": "2026-07-22T02:28:46.044187+00:00",
+  "manifest_path": "configs\\source_manifests\\candidates\\journal_publisher_candidate.json",
+  "fixture_candidates_path": "tests/fixtures/source_quality/journal_publisher_candidate_candidates.json",
+  "manifest_validation": {
+    "passed": true,
+    "errors": [],
+    "warnings": []
+  },
+  "candidate_count": 3,
+  "triage_counts": {
+    "review_needed": 3
+  },
+  "top_reasons": {
+    "organization domain": 3,
+    "publication/abstract signal": 3,
+    "short text": 3,
+    "topic taxonomy hits=4": 1,
+    "science keyword hits=8": 1,
+    "reference signal present": 1,
+    "topic taxonomy hits=3": 1,
+    "science keyword hits=6": 1,
+    "topic taxonomy hits=1": 1,
+    "science keyword hits=1": 1
+  },
+  "safety_flags": {
+    "formal_pipeline_write": false,
+    "raw_json_write": false,
+    "triples_write": false,
+    "chroma_write": false,
+    "neo4j_write": false,
+    "network_disabled": true,
+    "unregistered_ingest_blocked": true,
+    "sandbox_report_only": true
+  },
+  "selected_candidate_snapshots": [
+    {
+      "index": 1,
+      "url": "https://journal.example.org/articles/planetary-atmospheres-review",
+      "title": "Review Article: Planetary Atmospheres",
+      "text_length": 169,
+      "html_length": 0,
+      "score": 54,
+      "triage": "review_needed",
+      "labels": [
+        "organization_source",
+        "topic_taxonomy_context",
+        "science_topic",
+        "has_references",
+        "publication_page",
+        "short_text"
+      ],
+      "reasons": [
+        "organization domain",
+        "topic taxonomy hits=4",
+        "science keyword hits=8",
+        "reference signal present",
+        "publication/abstract signal"
+      ]
+    },
+    {
+      "index": 2,
+      "url": "https://journal.example.org/collections/solar-system-science",
+      "title": "Solar System Science Collection",
+      "text_length": 139,
+      "html_length": 0,
+      "score": 34,
+      "triage": "review_needed",
+      "labels": [
+        "organization_source",
+        "topic_taxonomy_context",
+        "science_topic",
+        "publication_page",
+        "short_text"
+      ],
+      "reasons": [
+        "organization domain",
+        "topic taxonomy hits=3",
+        "science keyword hits=6",
+        "publication/abstract signal",
+        "short text"
+      ]
+    },
+    {
+      "index": 3,
+      "url": "https://journal.example.org/authors/guidelines",
+      "title": "Author Guidelines",
+      "text_length": 82,
+      "html_length": 0,
+      "score": 20,
+      "triage": "review_needed",
+      "labels": [
+        "organization_source",
+        "topic_taxonomy_context",
+        "science_topic",
+        "mission_page",
+        "publication_page",
+        "short_text"
+      ],
+      "reasons": [
+        "organization domain",
+        "topic taxonomy hits=1",
+        "science keyword hits=1",
+        "mission page signal",
+        "publication/abstract signal"
+      ]
+    }
+  ],
+  "frontier_skipped_count": 0,
+  "frontier_skipped": []
+}

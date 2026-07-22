@@ -1,0 +1,17 @@
+{
+  "schema_version": 1,
+  "items": [
+    {
+      "source_id": "data_portal_candidate",
+      "approval_decision": "pending",
+      "reviewer_notes": "",
+      "approved_max_pages": 0
+    },
+    {
+      "source_id": "noaa_climate_candidate",
+      "approval_decision": "pending",
+      "reviewer_notes": "",
+      "approved_max_pages": 0
+    }
+  ]
+}

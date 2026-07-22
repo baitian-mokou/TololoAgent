@@ -1,0 +1,22 @@
+[
+  {
+    "url": "https://journal.example.org/articles/planetary-atmosphere-abstract",
+    "title": "Planetary Atmosphere Paper Abstract",
+    "text": "Abstract: this journal paper describes planetary atmosphere observations, Mars and Venus climate, method, results, DOI citation and references for astronomy and planetary science."
+  },
+  {
+    "url": "https://journal.example.org/articles/comet-orbit-dataset",
+    "title": "Comet Orbit Dataset Article",
+    "text": "This article landing page summarizes comet orbit datasets, telescope observations, asteroid comparison, methods, results and citation metadata. References and source data are provided."
+  },
+  {
+    "url": "https://journal.example.org/subscribe",
+    "title": "Subscribe",
+    "text": "Subscribe to newsletters and manage account access."
+  },
+  {
+    "url": "https://journal.example.org/catalog",
+    "title": "Journal catalog",
+    "text": "Browse journal catalog by subject, issue, author and metrics."
+  }
+]

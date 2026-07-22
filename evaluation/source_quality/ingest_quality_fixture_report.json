@@ -1,0 +1,101 @@
+{
+  "source": "nasa",
+  "source_name": "nasa",
+  "mode": "manifest_frontier_raw_only",
+  "generated_at": "2026-07-21T16:35:32.378396+00:00",
+  "frontier_accepted_count": 2,
+  "requested_limit": 2,
+  "fetched_count": 2,
+  "skipped_count": 0,
+  "failed_count": 0,
+  "raw_root": "evaluation\\source_quality\\tmp_raw_fixture\\nasa",
+  "items": [
+    {
+      "url": "https://science.nasa.gov/solar-system/planets/mars/",
+      "status": "fetched",
+      "reason": "ok",
+      "title": "Mars Fact Sheet",
+      "text_length": 91,
+      "saved_path": "evaluation\\source_quality\\tmp_raw_fixture\\nasa\\https_science.nasa.gov_solar-system_planets_mars.json",
+      "quality_score": 95,
+      "quality_triage": "accepted",
+      "quality_labels": [
+        "official_source",
+        "science_topic",
+        "fact_page",
+        "mission_page",
+        "has_table",
+        "has_references",
+        "short_text"
+      ],
+      "quality_reasons": [
+        "official or academic domain",
+        "science keyword hits=11",
+        "fact or overview page signal",
+        "mission page signal",
+        "table evidence present",
+        "reference signal present",
+        "short text"
+      ],
+      "quality_metrics": {
+        "text_length": 91,
+        "link_density_estimate": 0.0,
+        "table_count": 1,
+        "science_keyword_hits": 11,
+        "blocked_keyword_hits": 0,
+        "news_keyword_hits": 0,
+        "reference_keyword_hits": 1
+      }
+    },
+    {
+      "url": "https://science.nasa.gov/solar-system/gallery/mars-images/",
+      "status": "fetched",
+      "reason": "ok",
+      "title": "Mars image gallery",
+      "text_length": 36,
+      "saved_path": "evaluation\\source_quality\\tmp_raw_fixture\\nasa\\https_science.nasa.gov_solar-system_gallery_mars-images.json",
+      "quality_score": 0,
+      "quality_triage": "rejected",
+      "quality_labels": [
+        "official_source",
+        "science_topic",
+        "short_text",
+        "media_page"
+      ],
+      "quality_reasons": [
+        "official or academic domain",
+        "science keyword hits=4",
+        "very short text",
+        "media/gallery signal"
+      ],
+      "quality_metrics": {
+        "text_length": 36,
+        "link_density_estimate": 0.0,
+        "table_count": 0,
+        "science_keyword_hits": 4,
+        "blocked_keyword_hits": 5,
+        "news_keyword_hits": 0,
+        "reference_keyword_hits": 0
+      }
+    }
+  ],
+  "quality_summary": {
+    "total": 2,
+    "triage_counts": {
+      "accepted": 1,
+      "rejected": 1
+    },
+    "top_reasons": {
+      "official or academic domain": 2,
+      "science keyword hits=11": 1,
+      "fact or overview page signal": 1,
+      "mission page signal": 1,
+      "table evidence present": 1,
+      "reference signal present": 1,
+      "short text": 1,
+      "science keyword hits=4": 1,
+      "very short text": 1,
+      "media/gallery signal": 1
+    }
+  }
+}

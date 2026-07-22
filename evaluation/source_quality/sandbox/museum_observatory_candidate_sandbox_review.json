@@ -1,0 +1,113 @@
+{
+  "source_id": "museum_observatory_candidate",
+  "registered": false,
+  "network": false,
+  "mode": "manifest_candidate_sandbox",
+  "generated_at": "2026-07-22T02:28:46.045375+00:00",
+  "manifest_path": "configs\\source_manifests\\candidates\\museum_observatory_candidate.json",
+  "fixture_candidates_path": "tests/fixtures/source_quality/museum_observatory_candidate_candidates.json",
+  "manifest_validation": {
+    "passed": true,
+    "errors": [],
+    "warnings": []
+  },
+  "candidate_count": 3,
+  "triage_counts": {
+    "exploratory": 1,
+    "rejected": 1,
+    "review_needed": 1
+  },
+  "top_reasons": {
+    "organization domain": 3,
+    "short text": 2,
+    "topic taxonomy hits=4": 1,
+    "science keyword hits=13": 1,
+    "reference signal present": 1,
+    "topic taxonomy hits=2": 1,
+    "science keyword hits=3": 1,
+    "news/update signal": 1,
+    "very short text": 1,
+    "media/gallery signal": 1
+  },
+  "safety_flags": {
+    "formal_pipeline_write": false,
+    "raw_json_write": false,
+    "triples_write": false,
+    "chroma_write": false,
+    "neo4j_write": false,
+    "network_disabled": true,
+    "unregistered_ingest_blocked": true,
+    "sandbox_report_only": true
+  },
+  "selected_candidate_snapshots": [
+    {
+      "index": 1,
+      "url": "https://observatory.example.org/education/solar-system/planets",
+      "title": "Planets of the Solar System",
+      "text_length": 163,
+      "html_length": 0,
+      "score": 40,
+      "triage": "review_needed",
+      "labels": [
+        "organization_source",
+        "topic_taxonomy_context",
+        "science_topic",
+        "has_references",
+        "short_text"
+      ],
+      "reasons": [
+        "organization domain",
+        "topic taxonomy hits=4",
+        "science keyword hits=13",
+        "reference signal present",
+        "short text"
+      ]
+    },
+    {
+      "index": 2,
+      "url": "https://observatory.example.org/news/new-telescope-night",
+      "title": "New Telescope Night",
+      "text_length": 92,
+      "html_length": 0,
+      "score": 0,
+      "triage": "exploratory",
+      "labels": [
+        "organization_source",
+        "topic_taxonomy_context",
+        "science_topic",
+        "short_text",
+        "news_page"
+      ],
+      "reasons": [
+        "organization domain",
+        "topic taxonomy hits=2",
+        "science keyword hits=3",
+        "short text",
+        "news/update signal"
+      ]
+    },
+    {
+      "index": 3,
+      "url": "https://observatory.example.org/gallery/nebula-images",
+      "title": "Nebula Image Gallery",
+      "text_length": 44,
+      "html_length": 0,
+      "score": 0,
+      "triage": "rejected",
+      "labels": [
+        "organization_source",
+        "short_text",
+        "media_page",
+        "low_signal"
+      ],
+      "reasons": [
+        "organization domain",
+        "very short text",
+        "media/gallery signal",
+        "low science signal"
+      ]
+    }
+  ],
+  "frontier_skipped_count": 0,
+  "frontier_skipped": []
+}

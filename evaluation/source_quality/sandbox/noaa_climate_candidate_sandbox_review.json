@@ -1,0 +1,117 @@
+{
+  "source_id": "noaa_climate_candidate",
+  "registered": false,
+  "network": false,
+  "mode": "manifest_candidate_sandbox",
+  "generated_at": "2026-07-22T02:28:46.046526+00:00",
+  "manifest_path": "configs\\source_manifests\\candidates\\noaa_climate_candidate.json",
+  "fixture_candidates_path": "tests/fixtures/source_quality/noaa_climate_candidate_candidates.json",
+  "manifest_validation": {
+    "passed": true,
+    "errors": [],
+    "warnings": []
+  },
+  "candidate_count": 3,
+  "triage_counts": {
+    "accepted": 1,
+    "exploratory": 1,
+    "rejected": 1
+  },
+  "top_reasons": {
+    "official or academic domain": 3,
+    "topic taxonomy hits=4": 2,
+    "science keyword hits=5": 2,
+    "short text": 2,
+    "table evidence present": 1,
+    "reference signal present": 1,
+    "news/update signal": 1,
+    "protected official science/fact/mission page floor": 1,
+    "topic taxonomy hits=1": 1,
+    "science keyword hits=1": 1
+  },
+  "safety_flags": {
+    "formal_pipeline_write": false,
+    "raw_json_write": false,
+    "triples_write": false,
+    "chroma_write": false,
+    "neo4j_write": false,
+    "network_disabled": true,
+    "unregistered_ingest_blocked": true,
+    "sandbox_report_only": true
+  },
+  "selected_candidate_snapshots": [
+    {
+      "index": 1,
+      "url": "https://www.climate.gov/climate-and-energy/topics/climate-change",
+      "title": "Climate Change: Global Temperature Indicators",
+      "text_length": 0,
+      "html_length": 369,
+      "score": 70,
+      "triage": "accepted",
+      "labels": [
+        "official_source",
+        "topic_taxonomy_context",
+        "science_topic",
+        "has_table",
+        "has_references",
+        "short_text"
+      ],
+      "reasons": [
+        "official or academic domain",
+        "topic taxonomy hits=4",
+        "science keyword hits=5",
+        "table evidence present",
+        "reference signal present"
+      ]
+    },
+    {
+      "index": 2,
+      "url": "https://www.climate.gov/news/features/new-seasonal-outlook",
+      "title": "Seasonal Climate Outlook News",
+      "text_length": 162,
+      "html_length": 0,
+      "score": 45,
+      "triage": "exploratory",
+      "labels": [
+        "official_source",
+        "topic_taxonomy_context",
+        "science_topic",
+        "short_text",
+        "news_page"
+      ],
+      "reasons": [
+        "official or academic domain",
+        "topic taxonomy hits=4",
+        "science keyword hits=5",
+        "short text",
+        "news/update signal"
+      ]
+    },
+    {
+      "index": 3,
+      "url": "https://www.climate.gov/search?query=climate",
+      "title": "Search results",
+      "text_length": 57,
+      "html_length": 0,
+      "score": 0,
+      "triage": "rejected",
+      "labels": [
+        "official_source",
+        "topic_taxonomy_context",
+        "science_topic",
+        "publication_page",
+        "short_text",
+        "search_page"
+      ],
+      "reasons": [
+        "official or academic domain",
+        "topic taxonomy hits=1",
+        "science keyword hits=1",
+        "publication/abstract signal",
+        "very short text"
+      ]
+    }
+  ],
+  "frontier_skipped_count": 0,
+  "frontier_skipped": []
+}

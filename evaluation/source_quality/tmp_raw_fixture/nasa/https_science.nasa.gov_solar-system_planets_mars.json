@@ -1,0 +1,14 @@
+{
+  "title": "Mars Fact Sheet",
+  "source": "nasa",
+  "source_name": "nasa",
+  "source_record_id": "https://science.nasa.gov/solar-system/planets/mars/",
+  "source_url": "https://science.nasa.gov/solar-system/planets/mars/",
+  "url": "https://science.nasa.gov/solar-system/planets/mars/",
+  "origin": "manifest_frontier",
+  "html": "<html><head><title>Mars Fact Sheet</title></head><body><table><tr><th>Mass</th><td>0.64</td></tr></table><p>Mars planet solar system atmosphere orbit mass radius diameter mission reference.</p></body></html>",
+  "text": "Mass 0.64 Mars planet solar system atmosphere orbit mass radius diameter mission reference.",
+  "text_length": 91,
+  "fetched_at": "2026-07-21T16:35:32.375973+00:00",
+  "discovery_depth": 1
+}

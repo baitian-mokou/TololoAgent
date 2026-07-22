@@ -1,0 +1,22 @@
+[
+  {
+    "url": "https://nssdc.gsfc.nasa.gov/planetary/factsheet/marsfact.html",
+    "title": "Mars Fact Sheet",
+    "html": "<html><body><h1>Mars Fact Sheet</h1><table><tr><th>Mass</th><td>0.64171 10^24 kg</td></tr><tr><th>Radius</th><td>3389.5 km</td></tr></table><p>Mars is a planet in the solar system with atmosphere, orbit, diameter, mass and mission data. Reference: NASA Planetary Fact Sheet.</p></body></html>"
+  },
+  {
+    "url": "https://www.esa.int/Science_Exploration/Space_Science/Juice",
+    "title": "Juice mission overview",
+    "text": "Juice is an ESA spacecraft mission to Jupiter and its icy moons. The mission studies Ganymede, Europa, Callisto, orbit, instruments, science objectives and planetary environment."
+  },
+  {
+    "url": "https://science.example.edu/news/mars-water-update",
+    "title": "New Mars water research update",
+    "text": "Researchers report new observations about Mars water ice and planetary science. The article explains evidence, mission context, and links to research references."
+  },
+  {
+    "url": "https://science.nasa.gov/gallery/mars-images/",
+    "title": "Mars image gallery",
+    "text": "Images and videos from Mars."
+  }
+]

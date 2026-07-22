@@ -1,0 +1,91 @@
+{
+  "mode": "preview_network_probe_plan",
+  "generated_at": "2026-07-22T02:37:23.516698+00:00",
+  "execution_status": "not_run",
+  "network": false,
+  "formal_pipeline_write": false,
+  "summary": {
+    "plan_items": 2,
+    "status_counts": {
+      "planned": 2
+    }
+  },
+  "items": [
+    {
+      "source_id": "data_portal_candidate",
+      "approved_sample_size": 8,
+      "max_pages": 8,
+      "rate_limit_seconds": 1.0,
+      "allowed_domains": [
+        "data.example.gov"
+      ],
+      "seed_urls": [
+        "https://data.example.gov/datasets/solar-irradiance"
+      ],
+      "quality_gate_required": true,
+      "preview_only": true,
+      "execution_status": "not_run",
+      "network": false,
+      "formal_pipeline_write": false,
+      "requires_explicit_user_approval": true,
+      "probe_status": "planned",
+      "block_reasons": [],
+      "proposed_command": "NOT EXECUTED / PREVIEW ONLY: python scripts/preview_source_frontier.py --manifest configs/source_manifests/candidates/data_portal_candidate.json --fetch-links --quality-score --limit 8 --json-out evaluation/source_quality/sandbox/data_portal_candidate_preview_network_probe.json",
+      "expected_outputs": [
+        "evaluation/source_quality/sandbox/data_portal_candidate_preview_network_probe.json"
+      ],
+      "safety_guards": [
+        "NOT EXECUTED",
+        "PREVIEW ONLY",
+        "requires explicit user approval",
+        "max_pages <= 10",
+        "network=false in this plan",
+        "formal pipeline writes disabled"
+      ],
+      "offline_quality_summary": {
+        "accepted": 1,
+        "rejected": 1,
+        "review_needed": 1
+      }
+    },
+    {
+      "source_id": "noaa_climate_candidate",
+      "approved_sample_size": 8,
+      "max_pages": 8,
+      "rate_limit_seconds": 1.0,
+      "allowed_domains": [
+        "climate.gov",
+        "www.climate.gov",
+        "noaa.gov"
+      ],
+      "seed_urls": [
+        "https://www.climate.gov/climate-and-energy/topics/climate-change"
+      ],
+      "quality_gate_required": true,
+      "preview_only": true,
+      "execution_status": "not_run",
+      "network": false,
+      "formal_pipeline_write": false,
+      "requires_explicit_user_approval": true,
+      "probe_status": "planned",
+      "block_reasons": [],
+      "proposed_command": "NOT EXECUTED / PREVIEW ONLY: python scripts/preview_source_frontier.py --manifest configs/source_manifests/candidates/noaa_climate_candidate.json --fetch-links --quality-score --limit 8 --json-out evaluation/source_quality/sandbox/noaa_climate_candidate_preview_network_probe.json",
+      "expected_outputs": [
+        "evaluation/source_quality/sandbox/noaa_climate_candidate_preview_network_probe.json"
+      ],
+      "safety_guards": [
+        "NOT EXECUTED",
+        "PREVIEW ONLY",
+        "requires explicit user approval",
+        "max_pages <= 10",
+        "network=false in this plan",
+        "formal pipeline writes disabled"
+      ],
+      "offline_quality_summary": {
+        "accepted": 1,
+        "exploratory": 1,
+        "rejected": 1
+      }
+    }
+  ]
+}

@@ -5,45 +5,52 @@
 import sys
 import os
 import builtins
+from importlib.util import find_spec
 
 _base_dir = os.path.dirname(os.path.abspath(__file__))
 sys.path.insert(0, _base_dir)
 
-# ─── 自动修复依赖 ─────────────────────────────────
-# 如果 ttkbootstrap 未安装，自动 pip install
-_MISSING_DEPS = []
+# ─── 依赖检查 ─────────────────────────────────
+_REQUIRED_IMPORTS = {
+    "beautifulsoup4": "bs4",
+    "chromadb": "chromadb",
+    "huggingface-hub": "huggingface_hub",
+    "jieba": "jieba",
+    "neo4j": "neo4j",
+    "numpy": "numpy",
+    "opencc-python-reimplemented": "opencc",
+    "pillow": "PIL",
+    "pystray": "pystray",
+    "requests": "requests",
+    "sentence-transformers": "sentence_transformers",
+    "torch": "torch",
+    "ttkbootstrap": "ttkbootstrap",
+}
 
-try:
-    import ttkbootstrap
-except ImportError:
-    _MISSING_DEPS.append("ttkbootstrap")
 
-try:
-    import opencc
-except ImportError:
-    _MISSING_DEPS.append("opencc-python-reimplemented")
+def _missing_required_dependencies():
+    return [
+        package
+        for package, import_name in _REQUIRED_IMPORTS.items()
+        if find_spec(import_name) is None
+    ]
 
-try:
-    import pystray
-except ImportError:
-    _MISSING_DEPS.append("pystray")
 
-if _MISSING_DEPS:
-    import subprocess
-    print(f"[TololoAgent] 检测到缺少依赖: {_MISSING_DEPS}，正在自动安装...")
-    for dep in _MISSING_DEPS:
-        result = subprocess.run(
-            [sys.executable, "-m", "pip", "install", dep, "-q"],
-            capture_output=True, text=True
-        )
-        if result.returncode != 0:
-            print(f"[ERROR] 安装 {dep} 失败: {result.stderr}")
-            print(f"[INFO] 请手动运行: {sys.executable} -m pip install {dep}")
-            sys.exit(1)
-        else:
-            print(f"[OK] {dep} 安装成功")
-    # 重新导入
-    import ttkbootstrap
+def _exit_if_required_dependencies_missing():
+    missing = _missing_required_dependencies()
+    if not missing:
+        return
+
+    print("[TololoAgent] 缺少 Python 依赖，已停止启动。")
+    print("缺失包：")
+    for package in missing:
+        print(f"  - {package}")
+    print()
+    print("请先在项目目录运行：")
+    print("  python -m pip install -r requirements.txt")
+    print()
+    print("如果使用虚拟环境，请先激活 venv 后再执行安装命令。")
+    sys.exit(1)
 
 # ─── 全局修复 Windows 下打印中文的编码问题 ─────────────────
 _original_print = builtins.print
@@ -85,16 +92,20 @@ def _log_error(e):
         pass
 
 
-try:
-    from src.gui.main_window import run_gui as _run_gui
-except Exception as e:
-    _log_error(e)
-    raise
-
-
-if __name__ == "__main__":
+def main():
+    _exit_if_required_dependencies_missing()
     try:
-        _run_gui()
+        from src.gui.main_window import run_gui
     except Exception as e:
         _log_error(e)
         raise
+
+    try:
+        run_gui()
+    except Exception as e:
+        _log_error(e)
+        raise
+
+
+if __name__ == "__main__":
+    main()

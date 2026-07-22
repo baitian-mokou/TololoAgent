@@ -1,0 +1,22 @@
+[
+  {
+    "url": "https://science-blog.example.com/news/jupiter-moon-update",
+    "title": "Jupiter moon update",
+    "text": "A science news story about Jupiter moons, spacecraft observations, orbit and planetary research with links to references."
+  },
+  {
+    "url": "https://science-blog.example.com/search?q=mars",
+    "title": "Search results",
+    "text": "Search results, filters, tags and navigation links."
+  },
+  {
+    "url": "https://science-blog.example.com/tag/mars",
+    "title": "Mars tag archive",
+    "text": "Posts tagged Mars, planet, astronomy."
+  },
+  {
+    "url": "https://science-blog.example.com/privacy",
+    "title": "Privacy and cookie settings",
+    "text": "Privacy, cookies, advertising settings and account terms."
+  }
+]

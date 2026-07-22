@@ -1,0 +1,22 @@
+{
+  "source_name": "museum_observatory_candidate",
+  "source_mode": "generic_unknown",
+  "allowed_domains": ["observatory.example.org", "museum.example.org"],
+  "seed_urls": ["https://observatory.example.org/education/solar-system"],
+  "include_path_keywords": ["education", "observatory", "solar-system", "telescope", "exhibit"],
+  "exclude_path_keywords": ["tickets", "shop", "events", "gallery", "video", "privacy", "search"],
+  "max_depth": 1,
+  "max_pages_per_run": 20,
+  "max_discovery_fetch_pages": 0,
+  "crawl_delay": 1.0,
+  "topic_taxonomy": ["astronomy", "solar_system", "telescope", "education"],
+  "quality_gate": {
+    "accepted_min_score": 85,
+    "review_min_score": 45,
+    "allow_exploratory": true,
+    "skip_rejected_allowed": false
+  },
+  "quality_notes": "Education content can help retrieval, but generic_unknown should not auto-accept without strong evidence.",
+  "fixture_candidates": "tests/fixtures/source_quality/museum_observatory_candidate_candidates.json",
+  "notes": "Unregistered Phase 28 candidate. Sandbox only."
+}

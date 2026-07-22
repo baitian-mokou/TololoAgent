@@ -1,0 +1,185 @@
+{
+  "source": "generic",
+  "mode": "local_page_quality_scoring",
+  "total": 4,
+  "triage_counts": {
+    "accepted": 2,
+    "exploratory": 1,
+    "rejected": 1
+  },
+  "top_reasons": {
+    "official or academic domain": 3,
+    "mission page signal": 3,
+    "short text": 3,
+    "fact or overview page signal": 2,
+    "reference signal present": 2,
+    "science keyword hits=11": 1,
+    "table evidence present": 1,
+    "science keyword hits=8": 1,
+    "academic or preprint domain": 1,
+    "science keyword hits=6": 1
+  },
+  "items": [
+    {
+      "index": 1,
+      "source": "generic",
+      "url": "https://nssdc.gsfc.nasa.gov/planetary/factsheet/marsfact.html",
+      "title": "Mars Fact Sheet",
+      "score": 95,
+      "triage": "accepted",
+      "labels": [
+        "official_source",
+        "science_topic",
+        "fact_page",
+        "mission_page",
+        "has_table",
+        "has_references",
+        "short_text"
+      ],
+      "reasons": [
+        "official or academic domain",
+        "science keyword hits=11",
+        "fact or overview page signal",
+        "mission page signal",
+        "table evidence present",
+        "reference signal present",
+        "short text"
+      ],
+      "metrics": {
+        "text_length": 186,
+        "link_density_estimate": 0.0,
+        "table_count": 1,
+        "science_keyword_hits": 11,
+        "topic_taxonomy_hits": 0,
+        "blocked_keyword_hits": 0,
+        "news_keyword_hits": 0,
+        "path_media_keyword_hits": 0,
+        "body_media_keyword_hits": 0,
+        "path_news_keyword_hits": 0,
+        "body_news_keyword_hits": 0,
+        "reference_keyword_hits": 1,
+        "accepted_min_score": 70,
+        "review_min_score": 45,
+        "source_mode": ""
+      }
+    },
+    {
+      "index": 2,
+      "source": "generic",
+      "url": "https://www.esa.int/Science_Exploration/Space_Science/Juice",
+      "title": "Juice mission overview",
+      "score": 64,
+      "triage": "accepted",
+      "labels": [
+        "official_source",
+        "science_topic",
+        "fact_page",
+        "mission_page",
+        "short_text"
+      ],
+      "reasons": [
+        "official or academic domain",
+        "science keyword hits=8",
+        "fact or overview page signal",
+        "mission page signal",
+        "short text"
+      ],
+      "metrics": {
+        "text_length": 178,
+        "link_density_estimate": 0.0,
+        "table_count": 0,
+        "science_keyword_hits": 8,
+        "topic_taxonomy_hits": 0,
+        "blocked_keyword_hits": 0,
+        "news_keyword_hits": 0,
+        "path_media_keyword_hits": 0,
+        "body_media_keyword_hits": 0,
+        "path_news_keyword_hits": 0,
+        "body_news_keyword_hits": 0,
+        "reference_keyword_hits": 0,
+        "accepted_min_score": 70,
+        "review_min_score": 45,
+        "source_mode": ""
+      }
+    },
+    {
+      "index": 3,
+      "source": "generic",
+      "url": "https://science.example.edu/news/mars-water-update",
+      "title": "New Mars water research update",
+      "score": 45,
+      "triage": "exploratory",
+      "labels": [
+        "academic_source",
+        "science_topic",
+        "mission_page",
+        "has_references",
+        "short_text",
+        "news_page"
+      ],
+      "reasons": [
+        "academic or preprint domain",
+        "science keyword hits=6",
+        "mission page signal",
+        "reference signal present",
+        "short text",
+        "news/update signal",
+        "protected official science/fact/mission page floor"
+      ],
+      "metrics": {
+        "text_length": 161,
+        "link_density_estimate": 0.0,
+        "table_count": 0,
+        "science_keyword_hits": 6,
+        "topic_taxonomy_hits": 0,
+        "blocked_keyword_hits": 0,
+        "news_keyword_hits": 2,
+        "path_media_keyword_hits": 0,
+        "body_media_keyword_hits": 0,
+        "path_news_keyword_hits": 2,
+        "body_news_keyword_hits": 0,
+        "reference_keyword_hits": 2,
+        "accepted_min_score": 70,
+        "review_min_score": 45,
+        "source_mode": ""
+      }
+    },
+    {
+      "index": 4,
+      "source": "generic",
+      "url": "https://science.nasa.gov/gallery/mars-images/",
+      "title": "Mars image gallery",
+      "score": 0,
+      "triage": "rejected",
+      "labels": [
+        "official_source",
+        "science_topic",
+        "short_text",
+        "media_page"
+      ],
+      "reasons": [
+        "official or academic domain",
+        "science keyword hits=2",
+        "very short text",
+        "media/gallery signal"
+      ],
+      "metrics": {
+        "text_length": 28,
+        "link_density_estimate": 0.0,
+        "table_count": 0,
+        "science_keyword_hits": 2,
+        "topic_taxonomy_hits": 0,
+        "blocked_keyword_hits": 7,
+        "news_keyword_hits": 0,
+        "path_media_keyword_hits": 3,
+        "body_media_keyword_hits": 4,
+        "path_news_keyword_hits": 0,
+        "body_news_keyword_hits": 0,
+        "reference_keyword_hits": 0,
+        "accepted_min_score": 70,
+        "review_min_score": 45,
+        "source_mode": ""
+      }
+    }
+  ]
+}

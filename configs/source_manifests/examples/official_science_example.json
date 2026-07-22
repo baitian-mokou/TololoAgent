@@ -1,0 +1,22 @@
+{
+  "source_name": "official_science_example",
+  "source_mode": "official_science",
+  "allowed_domains": ["science-agency.example.int"],
+  "seed_urls": ["https://science-agency.example.int/space/mission/overview"],
+  "include_path_keywords": ["space", "mission", "science", "planetary"],
+  "exclude_path_keywords": ["newsroom", "media", "gallery", "video", "privacy", "/search", "/tag"],
+  "max_depth": 2,
+  "max_pages_per_run": 30,
+  "max_discovery_fetch_pages": 5,
+  "crawl_delay": 1.0,
+  "topic_taxonomy": ["astronomy", "space_science", "planetary_science", "mission"],
+  "quality_gate": {
+    "accepted_min_score": 65,
+    "review_min_score": 35,
+    "allow_exploratory": true,
+    "skip_rejected_allowed": true
+  },
+  "quality_notes": "Official science pages may use skip-rejected in explicit small batches after rejected samples are reviewed.",
+  "fixture_candidates": "tests/fixtures/source_quality/official_science_example_candidates.json",
+  "notes": "Example manifest only; replace domain and review robots/rate limits before real crawling."
+}

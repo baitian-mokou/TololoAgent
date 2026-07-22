@@ -1,0 +1,143 @@
+{
+  "source_id": "generic_unknown_example",
+  "registered": false,
+  "network": false,
+  "mode": "manifest_candidate_sandbox",
+  "generated_at": "2026-07-21T17:49:08.141026+00:00",
+  "manifest_path": "configs\\source_manifests\\examples\\generic_unknown_example.json",
+  "fixture_candidates_path": "tests/fixtures/source_quality/generic_unknown_example_candidates.json",
+  "manifest_validation": {
+    "passed": true,
+    "errors": [],
+    "warnings": []
+  },
+  "candidate_count": 4,
+  "triage_counts": {
+    "exploratory": 1,
+    "rejected": 3
+  },
+  "top_reasons": {
+    "news/update signal": 4,
+    "topic taxonomy hits=1": 3,
+    "very short text": 3,
+    "blocked path/content signal": 3,
+    "science keyword hits=8": 1,
+    "mission page signal": 1,
+    "reference signal present": 1,
+    "short text": 1,
+    "science keyword hits=2": 1,
+    "publication/abstract signal": 1
+  },
+  "safety_flags": {
+    "formal_pipeline_write": false,
+    "raw_json_write": false,
+    "triples_write": false,
+    "chroma_write": false,
+    "neo4j_write": false,
+    "network_disabled": true,
+    "unregistered_ingest_blocked": true,
+    "sandbox_report_only": true
+  },
+  "selected_candidate_snapshots": [
+    {
+      "index": 1,
+      "url": "https://science-blog.example.com/news/jupiter-moon-update",
+      "title": "Jupiter moon update",
+      "text_length": 121,
+      "html_length": 0,
+      "score": 27,
+      "triage": "exploratory",
+      "labels": [
+        "commercial_or_unknown_source",
+        "topic_taxonomy_context",
+        "science_topic",
+        "mission_page",
+        "has_references",
+        "short_text",
+        "news_page"
+      ],
+      "reasons": [
+        "topic taxonomy hits=1",
+        "science keyword hits=8",
+        "mission page signal",
+        "reference signal present",
+        "short text"
+      ]
+    },
+    {
+      "index": 2,
+      "url": "https://science-blog.example.com/search?q=mars",
+      "title": "Search results",
+      "text_length": 51,
+      "html_length": 0,
+      "score": 0,
+      "triage": "rejected",
+      "labels": [
+        "commercial_or_unknown_source",
+        "topic_taxonomy_context",
+        "science_topic",
+        "publication_page",
+        "short_text",
+        "news_page",
+        "search_page"
+      ],
+      "reasons": [
+        "topic taxonomy hits=1",
+        "science keyword hits=2",
+        "publication/abstract signal",
+        "very short text",
+        "news/update signal"
+      ]
+    },
+    {
+      "index": 3,
+      "url": "https://science-blog.example.com/tag/mars",
+      "title": "Mars tag archive",
+      "text_length": 37,
+      "html_length": 0,
+      "score": 0,
+      "triage": "rejected",
+      "labels": [
+        "commercial_or_unknown_source",
+        "topic_taxonomy_context",
+        "science_topic",
+        "short_text",
+        "news_page",
+        "policy_page"
+      ],
+      "reasons": [
+        "topic taxonomy hits=2",
+        "science keyword hits=4",
+        "very short text",
+        "news/update signal",
+        "blocked path/content signal"
+      ]
+    },
+    {
+      "index": 4,
+      "url": "https://science-blog.example.com/privacy",
+      "title": "Privacy and cookie settings",
+      "text_length": 57,
+      "html_length": 0,
+      "score": 0,
+      "triage": "rejected",
+      "labels": [
+        "commercial_or_unknown_source",
+        "topic_taxonomy_context",
+        "science_topic",
+        "short_text",
+        "news_page",
+        "policy_page"
+      ],
+      "reasons": [
+        "topic taxonomy hits=1",
+        "science keyword hits=1",
+        "very short text",
+        "news/update signal",
+        "blocked path/content signal"
+      ]
+    }
+  ],
+  "frontier_skipped_count": 0,
+  "frontier_skipped": []
+}

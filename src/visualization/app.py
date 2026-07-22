@@ -143,6 +143,7 @@ svg{display:block;width:100vw;height:100vh}
 #leg .d{width:12px;height:12px;border-radius:50%;margin-right:8px;flex-shrink:0}
 #tip{position:fixed;background:rgba(0,0,0,.9);color:#fff;padding:8px 12px;border-radius:4px;font-size:13px;display:none;z-index:100;max-width:360px;border:1px solid #4fc3f7;pointer-events:none;line-height:1.45}
 #load{position:fixed;top:50%;left:50%;transform:translate(-50%,-50%);color:#4fc3f7;font-size:18px;z-index:5}
+.edge-label{font-size:10px;fill:#b0bec5;stroke:none;pointer-events:none;text-anchor:middle;dominant-baseline:central;font-weight:400}
 </style></head>
 <body>
 <div id=h>
@@ -173,6 +174,10 @@ svg{display:block;width:100vw;height:100vh}
   <div class="grp check-row">
     <input type=checkbox id=showIsolated checked>
     <label for=showIsolated style="margin:0">显示孤立节点</label>
+  </div>
+  <div class="grp check-row">
+    <input type=checkbox id=showEdgeLabels checked>
+    <label for=showEdgeLabels style="margin:0">显示关系名称</label>
   </div>
   <div class=grp>
     <label>标签筛选</label>
@@ -215,7 +220,7 @@ svg{display:block;width:100vw;height:100vh}
 </div>
 <script src="https://d3js.org/d3.v7.min.js"></script>
 <script>
-var W=innerWidth,H=innerHeight,S=d3.select('#G'),g,sim,nd,lk;
+var W=innerWidth,H=innerHeight,S=d3.select('#G'),g,sim,nd,lk,elabel;
 var sourceData=null,graphData=null,lastTransform=d3.zoomIdentity,labelCounts={},maxDegree=0;
 
 var zoom=d3.zoom().scaleExtent([0.1,8]).on('zoom',function(e){
@@ -228,6 +233,11 @@ function initZoom(){
 }
 
 var C={Planet:'#4fc3f7',Star:'#ffd54f',Satellite:'#81c784',CelestialBody:'#64b5f6',Mission:'#ff8a65',Asteroid:'#a1887f',Comet:'#fff176',DwarfPlanet:'#ce93d8',Entity:'#78909c',Concept:'#ef9a9a',PlanetType:'#80cbc4',OrbitParameter:'#b39ddb',EnvironmentalFeature:'#ffcc80'};
+var R={IS_A:'是',PART_OF:'属于',ORBITS:'绕行',LOCATED_IN:'位于',HAS_ATMOSPHERE:'大气',DISCOVERED_BY:'发现者',HAS_RADIUS:'半径',HAS_DIAMETER:'直径',HAS_MASS:'质量',OPERATED_BY:'运营方',HAS_MISSION_TARGET:'任务目标'};
+
+function relLabel(rel){
+  return R[rel]||rel||'关系';
+}
 
 function getOpts(){
   return {
@@ -236,6 +246,7 @@ function getOpts(){
     nodeLimit: +document.getElementById('nodeLimit').value,
     relLimit: +document.getElementById('relLimit').value,
     showIsolated: document.getElementById('showIsolated').checked,
+    showEdgeLabels: document.getElementById('showEdgeLabels').checked,
     linkD: +document.getElementById('linkD').value,
     charge: +document.getElementById('charge').value,
     collide: +document.getElementById('collide').value,
@@ -269,6 +280,7 @@ function formatLimitLabel(id,total){
 function applyColors(opts){
   document.body.style.background=opts.bgClr;
   if(lk)lk.attr('stroke',opts.lineClr).attr('stroke-opacity',0.22);
+  if(elabel)elabel.style('fill',opts.textClr);
   if(nd){
     nd.selectAll('text').style('fill',opts.textClr);
     nd.selectAll('circle').attr('stroke',opts.strokeClr);
@@ -476,6 +488,23 @@ function renderGraph(d){
   lk=g.append('g').selectAll('line').data(d.l).join('line')
     .attr('stroke',opts.lineClr).attr('stroke-opacity',0.22).attr('stroke-width',1);
 
+  lk.on('mouseover',function(e,l){
+    var t=document.getElementById('tip');
+    t.style.display='block';
+    t.innerHTML='<b>'+relLabel(l.r)+'</b><br>'+l.source.nm+' → '+l.target.nm+'<br>关系类型: '+(l.r||'');
+  }).on('mousemove',function(e){
+    var t=document.getElementById('tip');
+    t.style.left=(e.clientX+15)+'px';
+    t.style.top=(e.clientY-10)+'px';
+  }).on('mouseout',function(){
+    document.getElementById('tip').style.display='none';
+  });
+
+  elabel=g.append('g').selectAll('text').data(d.l).join('text')
+    .attr('class','edge-label')
+    .style('display',opts.showEdgeLabels?'block':'none')
+    .text(function(l){return relLabel(l.r)});
+
   nd=g.append('g').selectAll('g').data(d.n).join('g')
     .call(d3.drag()
       .on('start',function(e,n){if(!e.active)sim.alphaTarget(0.25).restart();n.fx=n.x;n.fy=n.y})
@@ -511,6 +540,8 @@ function renderGraph(d){
       .attr('y1',function(d){return d.source.y})
       .attr('x2',function(d){return d.target.x})
       .attr('y2',function(d){return d.target.y});
+    elabel.attr('x',function(d){return (d.source.x+d.target.x)/2})
+      .attr('y',function(d){return (d.source.y+d.target.y)/2});
     nd.attr('transform',function(d){return 'translate('+d.x+','+d.y+')'});
   });
 
@@ -525,6 +556,7 @@ function resetFilters(){
   document.getElementById('nodeLimit').value=Math.max(1,sourceData.n.length);
   document.getElementById('relLimit').value=Math.max(1,sourceData.l.length);
   document.getElementById('showIsolated').checked=true;
+  document.getElementById('showEdgeLabels').checked=true;
   document.querySelectorAll('.label-filter').forEach(function(el){el.checked=true});
   updateLabels();
   buildFilteredGraph();

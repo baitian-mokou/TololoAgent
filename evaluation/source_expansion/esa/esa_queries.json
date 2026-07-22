@@ -1,5 +1,5 @@
 {
-  "version": "source_expansion_gold_set_v1",
+  "version": "source_expansion_gold_set_v1_phase3_manifest",
   "source_name": "esa",
   "source_schema_version": "esa_shadow_ready_v1",
   "top_k_default": 5,
@@ -210,6 +210,832 @@
       "expected_section_any_of": [
         "任务"
       ]
+    },
+    {
+      "id": "esa_manifest_narrative_01_esa_20_years_of_mars_express_mars_as_never_seen_",
+      "category": "narrative",
+      "query_kind": "narrative",
+      "query": "ESA - 20 years of Mars Express: Mars as never seen before 这页介绍了什么",
+      "expected_path": "fallback",
+      "allowed_final_sources": [
+        "fallback"
+      ],
+      "expected_top_k_hit": true,
+      "expected_result": {
+        "page_title": "ESA - 20 years of Mars Express: Mars as never seen before",
+        "section_any_of": [
+          "raw_chunk_1",
+          "raw_chunk_2"
+        ]
+      },
+      "source_filter": [
+        "esa"
+      ],
+      "source_schema_version": "esa_shadow_ready_v1",
+      "expected_page_title": "ESA - 20 years of Mars Express: Mars as never seen before",
+      "expected_section_any_of": [
+        "raw_chunk_1",
+        "raw_chunk_2"
+      ],
+      "eval_scope": "exploratory"
+    },
+    {
+      "id": "esa_manifest_narrative_02_esa_a_christmas_comet_for_solar_orbiter",
+      "category": "narrative",
+      "query_kind": "narrative",
+      "query": "ESA - A Christmas comet for Solar Orbiter 这页介绍了什么",
+      "expected_path": "fallback",
+      "allowed_final_sources": [
+        "fallback"
+      ],
+      "expected_top_k_hit": true,
+      "expected_result": {
+        "page_title": "ESA - A Christmas comet for Solar Orbiter",
+        "section_any_of": [
+          "raw_chunk_1",
+          "raw_chunk_2"
+        ]
+      },
+      "source_filter": [
+        "esa"
+      ],
+      "source_schema_version": "esa_shadow_ready_v1",
+      "expected_page_title": "ESA - A Christmas comet for Solar Orbiter",
+      "expected_section_any_of": [
+        "raw_chunk_1",
+        "raw_chunk_2"
+      ],
+      "eval_scope": "exploratory"
+    },
+    {
+      "id": "esa_manifest_narrative_03_esa_a_history_of_jupiter_exploration_the_journey",
+      "category": "narrative",
+      "query_kind": "narrative",
+      "query": "ESA - A history of Jupiter exploration: the journey to Juice 这页介绍了什么",
+      "expected_path": "fallback",
+      "allowed_final_sources": [
+        "fallback"
+      ],
+      "expected_top_k_hit": true,
+      "expected_result": {
+        "page_title": "ESA - A history of Jupiter exploration: the journey to Juice",
+        "section_any_of": [
+          "raw_chunk_1",
+          "raw_chunk_2"
+        ]
+      },
+      "source_filter": [
+        "esa"
+      ],
+      "source_schema_version": "esa_shadow_ready_v1",
+      "expected_page_title": "ESA - A history of Jupiter exploration: the journey to Juice",
+      "expected_section_any_of": [
+        "raw_chunk_1",
+        "raw_chunk_2"
+      ],
+      "eval_scope": "exploratory"
+    },
+    {
+      "id": "esa_manifest_narrative_04_esa_a_snaking_scar_on_mars",
+      "category": "narrative",
+      "query_kind": "narrative",
+      "query": "ESA - A snaking scar on Mars 这页介绍了什么",
+      "expected_path": "fallback",
+      "allowed_final_sources": [
+        "fallback"
+      ],
+      "expected_top_k_hit": true,
+      "expected_result": {
+        "page_title": "ESA - A snaking scar on Mars",
+        "section_any_of": [
+          "raw_chunk_1",
+          "raw_chunk_2"
+        ]
+      },
+      "source_filter": [
+        "esa"
+      ],
+      "source_schema_version": "esa_shadow_ready_v1",
+      "expected_page_title": "ESA - A snaking scar on Mars",
+      "expected_section_any_of": [
+        "raw_chunk_1",
+        "raw_chunk_2"
+      ],
+      "eval_scope": "exploratory"
+    },
+    {
+      "id": "esa_manifest_narrative_05_esa_at_the_foot_of_the_red_planet_s_giant_volcan",
+      "category": "narrative",
+      "query_kind": "narrative",
+      "query": "ESA - At the foot of the Red Planet’s giant volcano 这页介绍了什么",
+      "expected_path": "fallback",
+      "allowed_final_sources": [
+        "fallback"
+      ],
+      "expected_top_k_hit": true,
+      "expected_result": {
+        "page_title": "ESA - At the foot of the Red Planet’s giant volcano",
+        "section_any_of": [
+          "raw_chunk_1",
+          "raw_chunk_2"
+        ]
+      },
+      "source_filter": [
+        "esa"
+      ],
+      "source_schema_version": "esa_shadow_ready_v1",
+      "expected_page_title": "ESA - At the foot of the Red Planet’s giant volcano",
+      "expected_section_any_of": [
+        "raw_chunk_1",
+        "raw_chunk_2"
+      ],
+      "eval_scope": "exploratory"
+    },
+    {
+      "id": "esa_manifest_narrative_06_esa_beagle_2_lander_found_on_mars",
+      "category": "narrative",
+      "query_kind": "narrative",
+      "query": "ESA - Beagle-2 lander found on Mars 这页介绍了什么",
+      "expected_path": "fallback",
+      "allowed_final_sources": [
+        "fallback"
+      ],
+      "expected_top_k_hit": true,
+      "expected_result": {
+        "page_title": "ESA - Beagle-2 lander found on Mars",
+        "section_any_of": [
+          "raw_chunk_1",
+          "raw_chunk_2"
+        ]
+      },
+      "source_filter": [
+        "esa"
+      ],
+      "source_schema_version": "esa_shadow_ready_v1",
+      "expected_page_title": "ESA - Beagle-2 lander found on Mars",
+      "expected_section_any_of": [
+        "raw_chunk_1",
+        "raw_chunk_2"
+      ],
+      "eval_scope": "exploratory"
+    },
+    {
+      "id": "esa_manifest_narrative_07_esa_bepicolombo_blasts_off_to_investigate_mercur",
+      "category": "narrative",
+      "query_kind": "narrative",
+      "query": "ESA - BepiColombo blasts off to investigate Mercury’s mysteries 这页介绍了什么",
+      "expected_path": "fallback",
+      "allowed_final_sources": [
+        "fallback"
+      ],
+      "expected_top_k_hit": true,
+      "expected_result": {
+        "page_title": "ESA - BepiColombo blasts off to investigate Mercury’s mysteries",
+        "section_any_of": [
+          "raw_chunk_1",
+          "raw_chunk_2"
+        ]
+      },
+      "source_filter": [
+        "esa"
+      ],
+      "source_schema_version": "esa_shadow_ready_v1",
+      "expected_page_title": "ESA - BepiColombo blasts off to investigate Mercury’s mysteries",
+      "expected_section_any_of": [
+        "raw_chunk_1",
+        "raw_chunk_2"
+      ],
+      "eval_scope": "exploratory"
+    },
+    {
+      "id": "esa_manifest_narrative_08_esa_bepicolombo_reveals_mercury_in_a_new_light",
+      "category": "narrative",
+      "query_kind": "narrative",
+      "query": "ESA - BepiColombo reveals Mercury in a new light 这页介绍了什么",
+      "expected_path": "fallback",
+      "allowed_final_sources": [
+        "fallback"
+      ],
+      "expected_top_k_hit": true,
+      "expected_result": {
+        "page_title": "ESA - BepiColombo reveals Mercury in a new light",
+        "section_any_of": [
+          "raw_chunk_1",
+          "raw_chunk_2"
+        ]
+      },
+      "source_filter": [
+        "esa"
+      ],
+      "source_schema_version": "esa_shadow_ready_v1",
+      "expected_page_title": "ESA - BepiColombo reveals Mercury in a new light",
+      "expected_section_any_of": [
+        "raw_chunk_1",
+        "raw_chunk_2"
+      ],
+      "eval_scope": "exploratory"
+    },
+    {
+      "id": "esa_manifest_narrative_09_esa_bepicolombo_to_swing_by_mercury_for_the_sixt",
+      "category": "narrative",
+      "query_kind": "narrative",
+      "query": "ESA - BepiColombo to swing by Mercury for the sixth time 这页介绍了什么",
+      "expected_path": "fallback",
+      "allowed_final_sources": [
+        "fallback"
+      ],
+      "expected_top_k_hit": true,
+      "expected_result": {
+        "page_title": "ESA - BepiColombo to swing by Mercury for the sixth time",
+        "section_any_of": [
+          "raw_chunk_1",
+          "raw_chunk_2"
+        ]
+      },
+      "source_filter": [
+        "esa"
+      ],
+      "source_schema_version": "esa_shadow_ready_v1",
+      "expected_page_title": "ESA - BepiColombo to swing by Mercury for the sixth time",
+      "expected_section_any_of": [
+        "raw_chunk_1",
+        "raw_chunk_2"
+      ],
+      "eval_scope": "exploratory"
+    },
+    {
+      "id": "esa_manifest_narrative_10_esa_bepicolombo_s_first_views_of_mercury",
+      "category": "narrative",
+      "query_kind": "narrative",
+      "query": "ESA - BepiColombo’s first views of Mercury 这页介绍了什么",
+      "expected_path": "fallback",
+      "allowed_final_sources": [
+        "fallback"
+      ],
+      "expected_top_k_hit": true,
+      "expected_result": {
+        "page_title": "ESA - BepiColombo’s first views of Mercury",
+        "section_any_of": [
+          "raw_chunk_1",
+          "raw_chunk_2"
+        ]
+      },
+      "source_filter": [
+        "esa"
+      ],
+      "source_schema_version": "esa_shadow_ready_v1",
+      "expected_page_title": "ESA - BepiColombo’s first views of Mercury",
+      "expected_section_any_of": [
+        "raw_chunk_1",
+        "raw_chunk_2"
+      ],
+      "eval_scope": "exploratory"
+    },
+    {
+      "id": "esa_manifest_narrative_11_esa_buried_water_ice_at_mars_s_equator",
+      "category": "narrative",
+      "query_kind": "narrative",
+      "query": "ESA - Buried water ice at Mars's equator? 这页介绍了什么",
+      "expected_path": "fallback",
+      "allowed_final_sources": [
+        "fallback"
+      ],
+      "expected_top_k_hit": true,
+      "expected_result": {
+        "page_title": "ESA - Buried water ice at Mars's equator?",
+        "section_any_of": [
+          "raw_chunk_1",
+          "raw_chunk_2"
+        ]
+      },
+      "source_filter": [
+        "esa"
+      ],
+      "source_schema_version": "esa_shadow_ready_v1",
+      "expected_page_title": "ESA - Buried water ice at Mars's equator?",
+      "expected_section_any_of": [
+        "raw_chunk_1",
+        "raw_chunk_2"
+      ],
+      "eval_scope": "exploratory"
+    },
+    {
+      "id": "esa_manifest_narrative_12_esa_caution_martian_wind_at_work",
+      "category": "narrative",
+      "query_kind": "narrative",
+      "query": "ESA - Caution! Martian wind at work 这页介绍了什么",
+      "expected_path": "fallback",
+      "allowed_final_sources": [
+        "fallback"
+      ],
+      "expected_top_k_hit": true,
+      "expected_result": {
+        "page_title": "ESA - Caution! Martian wind at work",
+        "section_any_of": [
+          "raw_chunk_1",
+          "raw_chunk_2"
+        ]
+      },
+      "source_filter": [
+        "esa"
+      ],
+      "source_schema_version": "esa_shadow_ready_v1",
+      "expected_page_title": "ESA - Caution! Martian wind at work",
+      "expected_section_any_of": [
+        "raw_chunk_1",
+        "raw_chunk_2"
+      ],
+      "eval_scope": "exploratory"
+    },
+    {
+      "id": "esa_manifest_narrative_13_esa_chang_e_1_new_mission_to_moon_lifts_off",
+      "category": "narrative",
+      "query_kind": "narrative",
+      "query": "ESA - Chang'e 1 - new mission to Moon lifts off 这页介绍了什么",
+      "expected_path": "fallback",
+      "allowed_final_sources": [
+        "fallback"
+      ],
+      "expected_top_k_hit": true,
+      "expected_result": {
+        "page_title": "ESA - Chang'e 1 - new mission to Moon lifts off",
+        "section_any_of": [
+          "raw_chunk_1",
+          "raw_chunk_2"
+        ]
+      },
+      "source_filter": [
+        "esa"
+      ],
+      "source_schema_version": "esa_shadow_ready_v1",
+      "expected_page_title": "ESA - Chang'e 1 - new mission to Moon lifts off",
+      "expected_section_any_of": [
+        "raw_chunk_1",
+        "raw_chunk_2"
+      ],
+      "eval_scope": "exploratory"
+    },
+    {
+      "id": "esa_manifest_narrative_14_esa_chaotic_crust_contains_clues_to_mars_watery_",
+      "category": "narrative",
+      "query_kind": "narrative",
+      "query": "ESA - Chaotic crust contains clues to Mars’ watery past 这页介绍了什么",
+      "expected_path": "fallback",
+      "allowed_final_sources": [
+        "fallback"
+      ],
+      "expected_top_k_hit": true,
+      "expected_result": {
+        "page_title": "ESA - Chaotic crust contains clues to Mars’ watery past",
+        "section_any_of": [
+          "raw_chunk_1",
+          "raw_chunk_2"
+        ]
+      },
+      "source_filter": [
+        "esa"
+      ],
+      "source_schema_version": "esa_shadow_ready_v1",
+      "expected_page_title": "ESA - Chaotic crust contains clues to Mars’ watery past",
+      "expected_section_any_of": [
+        "raw_chunk_1",
+        "raw_chunk_2"
+      ],
+      "eval_scope": "exploratory"
+    },
+    {
+      "id": "esa_manifest_narrative_15_esa_chaotic_terrain_in_ariadnes_colles",
+      "category": "narrative",
+      "query_kind": "narrative",
+      "query": "ESA - Chaotic terrain in Ariadnes Colles 这页介绍了什么",
+      "expected_path": "fallback",
+      "allowed_final_sources": [
+        "fallback"
+      ],
+      "expected_top_k_hit": true,
+      "expected_result": {
+        "page_title": "ESA - Chaotic terrain in Ariadnes Colles",
+        "section_any_of": [
+          "raw_chunk_1",
+          "raw_chunk_2"
+        ]
+      },
+      "source_filter": [
+        "esa"
+      ],
+      "source_schema_version": "esa_shadow_ready_v1",
+      "expected_page_title": "ESA - Chaotic terrain in Ariadnes Colles",
+      "expected_section_any_of": [
+        "raw_chunk_1",
+        "raw_chunk_2"
+      ],
+      "eval_scope": "exploratory"
+    },
+    {
+      "id": "esa_manifest_narrative_16_esa_chaotic_terrain_in_iani_chaos",
+      "category": "narrative",
+      "query_kind": "narrative",
+      "query": "ESA - Chaotic terrain in Iani Chaos 这页介绍了什么",
+      "expected_path": "fallback",
+      "allowed_final_sources": [
+        "fallback"
+      ],
+      "expected_top_k_hit": true,
+      "expected_result": {
+        "page_title": "ESA - Chaotic terrain in Iani Chaos",
+        "section_any_of": [
+          "raw_chunk_1",
+          "raw_chunk_2"
+        ]
+      },
+      "source_filter": [
+        "esa"
+      ],
+      "source_schema_version": "esa_shadow_ready_v1",
+      "expected_page_title": "ESA - Chaotic terrain in Iani Chaos",
+      "expected_section_any_of": [
+        "raw_chunk_1",
+        "raw_chunk_2"
+      ],
+      "eval_scope": "exploratory"
+    },
+    {
+      "id": "esa_manifest_narrative_17_esa_chasms_on_the_flanks_of_a_martian_volcano",
+      "category": "narrative",
+      "query_kind": "narrative",
+      "query": "ESA - Chasms on the flanks of a martian volcano 这页介绍了什么",
+      "expected_path": "fallback",
+      "allowed_final_sources": [
+        "fallback"
+      ],
+      "expected_top_k_hit": true,
+      "expected_result": {
+        "page_title": "ESA - Chasms on the flanks of a martian volcano",
+        "section_any_of": [
+          "raw_chunk_1",
+          "raw_chunk_2"
+        ]
+      },
+      "source_filter": [
+        "esa"
+      ],
+      "source_schema_version": "esa_shadow_ready_v1",
+      "expected_page_title": "ESA - Chasms on the flanks of a martian volcano",
+      "expected_section_any_of": [
+        "raw_chunk_1",
+        "raw_chunk_2"
+      ],
+      "eval_scope": "exploratory"
+    },
+    {
+      "id": "esa_manifest_narrative_18_esa_christmas_craterscape",
+      "category": "narrative",
+      "query_kind": "narrative",
+      "query": "ESA - Christmas craterscape 这页介绍了什么",
+      "expected_path": "fallback",
+      "allowed_final_sources": [
+        "fallback"
+      ],
+      "expected_top_k_hit": true,
+      "expected_result": {
+        "page_title": "ESA - Christmas craterscape",
+        "section_any_of": [
+          "raw_chunk_1",
+          "raw_chunk_2"
+        ]
+      },
+      "source_filter": [
+        "esa"
+      ],
+      "source_schema_version": "esa_shadow_ready_v1",
+      "expected_page_title": "ESA - Christmas craterscape",
+      "expected_section_any_of": [
+        "raw_chunk_1",
+        "raw_chunk_2"
+      ],
+      "eval_scope": "exploratory"
+    },
+    {
+      "id": "esa_manifest_narrative_19_esa_comet_67p_churyumov_gerasimenko",
+      "category": "narrative",
+      "query_kind": "narrative",
+      "query": "ESA - Comet 67P/Churyumov-Gerasimenko 这页介绍了什么",
+      "expected_path": "fallback",
+      "allowed_final_sources": [
+        "fallback"
+      ],
+      "expected_top_k_hit": true,
+      "expected_result": {
+        "page_title": "ESA - Comet 67P/Churyumov-Gerasimenko",
+        "section_any_of": [
+          "raw_chunk_1",
+          "raw_chunk_2"
+        ]
+      },
+      "source_filter": [
+        "esa"
+      ],
+      "source_schema_version": "esa_shadow_ready_v1",
+      "expected_page_title": "ESA - Comet 67P/Churyumov-Gerasimenko",
+      "expected_section_any_of": [
+        "raw_chunk_1",
+        "raw_chunk_2"
+      ],
+      "eval_scope": "exploratory"
+    },
+    {
+      "id": "esa_manifest_narrative_20_esa_comet_rendezvous",
+      "category": "narrative",
+      "query_kind": "narrative",
+      "query": "ESA - Comet rendezvous 这页介绍了什么",
+      "expected_path": "fallback",
+      "allowed_final_sources": [
+        "fallback"
+      ],
+      "expected_top_k_hit": true,
+      "expected_result": {
+        "page_title": "ESA - Comet rendezvous",
+        "section_any_of": [
+          "raw_chunk_1",
+          "raw_chunk_2"
+        ]
+      },
+      "source_filter": [
+        "esa"
+      ],
+      "source_schema_version": "esa_shadow_ready_v1",
+      "expected_page_title": "ESA - Comet rendezvous",
+      "expected_section_any_of": [
+        "raw_chunk_1",
+        "raw_chunk_2"
+      ],
+      "eval_scope": "exploratory"
+    },
+    {
+      "id": "esa_manifest_narrative_21_esa_crater_in_martian_valley_mamers_valles",
+      "category": "narrative",
+      "query_kind": "narrative",
+      "query": "ESA - Crater in martian valley Mamers Valles 这页介绍了什么",
+      "expected_path": "fallback",
+      "allowed_final_sources": [
+        "fallback"
+      ],
+      "expected_top_k_hit": true,
+      "expected_result": {
+        "page_title": "ESA - Crater in martian valley Mamers Valles",
+        "section_any_of": [
+          "raw_chunk_1",
+          "raw_chunk_2"
+        ]
+      },
+      "source_filter": [
+        "esa"
+      ],
+      "source_schema_version": "esa_shadow_ready_v1",
+      "expected_page_title": "ESA - Crater in martian valley Mamers Valles",
+      "expected_section_any_of": [
+        "raw_chunk_1",
+        "raw_chunk_2"
+      ],
+      "eval_scope": "exploratory"
+    },
+    {
+      "id": "esa_manifest_narrative_22_esa_craters_and_cracks_on_mars",
+      "category": "narrative",
+      "query_kind": "narrative",
+      "query": "ESA - Craters and cracks on Mars 这页介绍了什么",
+      "expected_path": "fallback",
+      "allowed_final_sources": [
+        "fallback"
+      ],
+      "expected_top_k_hit": true,
+      "expected_result": {
+        "page_title": "ESA - Craters and cracks on Mars",
+        "section_any_of": [
+          "raw_chunk_1",
+          "raw_chunk_2"
+        ]
+      },
+      "source_filter": [
+        "esa"
+      ],
+      "source_schema_version": "esa_shadow_ready_v1",
+      "expected_page_title": "ESA - Craters and cracks on Mars",
+      "expected_section_any_of": [
+        "raw_chunk_1",
+        "raw_chunk_2"
+      ],
+      "eval_scope": "exploratory"
+    },
+    {
+      "id": "esa_manifest_structured_01_20_years_of_mars_express_mars_as_never_seen_befo_operated_by",
+      "category": "structured",
+      "query_kind": "structured",
+      "query": "20 years of Mars Express: Mars as never seen before由谁运营",
+      "expected_path": "fallback",
+      "allowed_final_sources": [
+        "fallback"
+      ],
+      "expected_top_k_hit": true,
+      "expected_result": {
+        "subject": "20 years of Mars Express: Mars as never seen before",
+        "relation": "OPERATED_BY",
+        "object": "ESA"
+      },
+      "source_filter": [
+        "esa"
+      ],
+      "source_schema_version": "esa_shadow_ready_v1",
+      "eval_scope": "exploratory"
+    },
+    {
+      "id": "esa_manifest_structured_02_20_years_of_mars_express_mars_as_never_seen_befo_has_mission_target",
+      "category": "structured",
+      "query_kind": "structured",
+      "query": "20 years of Mars Express: Mars as never seen before目标是什么",
+      "expected_path": "fallback",
+      "allowed_final_sources": [
+        "fallback"
+      ],
+      "expected_top_k_hit": true,
+      "expected_result": {
+        "subject": "20 years of Mars Express: Mars as never seen before",
+        "relation": "HAS_MISSION_TARGET",
+        "object": "Mars"
+      },
+      "source_filter": [
+        "esa"
+      ],
+      "source_schema_version": "esa_shadow_ready_v1",
+      "eval_scope": "exploratory"
+    },
+    {
+      "id": "esa_manifest_structured_03_a_christmas_comet_for_solar_orbiter_operated_by",
+      "category": "structured",
+      "query_kind": "structured",
+      "query": "A Christmas comet for Solar Orbiter由谁运营",
+      "expected_path": "fallback",
+      "allowed_final_sources": [
+        "fallback"
+      ],
+      "expected_top_k_hit": true,
+      "expected_result": {
+        "subject": "A Christmas comet for Solar Orbiter",
+        "relation": "OPERATED_BY",
+        "object": "ESA"
+      },
+      "source_filter": [
+        "esa"
+      ],
+      "source_schema_version": "esa_shadow_ready_v1",
+      "eval_scope": "exploratory"
+    },
+    {
+      "id": "esa_manifest_structured_04_a_christmas_comet_for_solar_orbiter_has_mission_target",
+      "category": "structured",
+      "query_kind": "structured",
+      "query": "A Christmas comet for Solar Orbiter目标是什么",
+      "expected_path": "fallback",
+      "allowed_final_sources": [
+        "fallback"
+      ],
+      "expected_top_k_hit": true,
+      "expected_result": {
+        "subject": "A Christmas comet for Solar Orbiter",
+        "relation": "HAS_MISSION_TARGET",
+        "object": "Sun"
+      },
+      "source_filter": [
+        "esa"
+      ],
+      "source_schema_version": "esa_shadow_ready_v1",
+      "eval_scope": "exploratory"
+    },
+    {
+      "id": "esa_manifest_structured_05_a_christmas_comet_for_solar_orbiter_has_mission_target",
+      "category": "structured",
+      "query_kind": "structured",
+      "query": "A Christmas comet for Solar Orbiter目标是什么",
+      "expected_path": "fallback",
+      "allowed_final_sources": [
+        "fallback"
+      ],
+      "expected_top_k_hit": true,
+      "expected_result": {
+        "subject": "A Christmas comet for Solar Orbiter",
+        "relation": "HAS_MISSION_TARGET",
+        "object": "Comet"
+      },
+      "source_filter": [
+        "esa"
+      ],
+      "source_schema_version": "esa_shadow_ready_v1",
+      "eval_scope": "exploratory"
+    },
+    {
+      "id": "esa_manifest_structured_06_a_history_of_jupiter_exploration_the_journey_to__operated_by",
+      "category": "structured",
+      "query_kind": "structured",
+      "query": "A history of Jupiter exploration: the journey to Juice由谁运营",
+      "expected_path": "fallback",
+      "allowed_final_sources": [
+        "fallback"
+      ],
+      "expected_top_k_hit": true,
+      "expected_result": {
+        "subject": "A history of Jupiter exploration: the journey to Juice",
+        "relation": "OPERATED_BY",
+        "object": "ESA"
+      },
+      "source_filter": [
+        "esa"
+      ],
+      "source_schema_version": "esa_shadow_ready_v1",
+      "eval_scope": "exploratory"
+    },
+    {
+      "id": "esa_manifest_structured_07_a_history_of_jupiter_exploration_the_journey_to__has_mission_target",
+      "category": "structured",
+      "query_kind": "structured",
+      "query": "A history of Jupiter exploration: the journey to Juice目标是什么",
+      "expected_path": "fallback",
+      "allowed_final_sources": [
+        "fallback"
+      ],
+      "expected_top_k_hit": true,
+      "expected_result": {
+        "subject": "A history of Jupiter exploration: the journey to Juice",
+        "relation": "HAS_MISSION_TARGET",
+        "object": "Jupiter"
+      },
+      "source_filter": [
+        "esa"
+      ],
+      "source_schema_version": "esa_shadow_ready_v1",
+      "eval_scope": "exploratory"
+    },
+    {
+      "id": "esa_manifest_structured_08_a_snaking_scar_on_mars_operated_by",
+      "category": "structured",
+      "query_kind": "structured",
+      "query": "A snaking scar on Mars由谁运营",
+      "expected_path": "fallback",
+      "allowed_final_sources": [
+        "fallback"
+      ],
+      "expected_top_k_hit": true,
+      "expected_result": {
+        "subject": "A snaking scar on Mars",
+        "relation": "OPERATED_BY",
+        "object": "ESA"
+      },
+      "source_filter": [
+        "esa"
+      ],
+      "source_schema_version": "esa_shadow_ready_v1",
+      "eval_scope": "exploratory"
+    },
+    {
+      "id": "esa_manifest_structured_09_a_snaking_scar_on_mars_has_mission_target",
+      "category": "structured",
+      "query_kind": "structured",
+      "query": "A snaking scar on Mars目标是什么",
+      "expected_path": "fallback",
+      "allowed_final_sources": [
+        "fallback"
+      ],
+      "expected_top_k_hit": true,
+      "expected_result": {
+        "subject": "A snaking scar on Mars",
+        "relation": "HAS_MISSION_TARGET",
+        "object": "Mars"
+      },
+      "source_filter": [
+        "esa"
+      ],
+      "source_schema_version": "esa_shadow_ready_v1",
+      "eval_scope": "exploratory"
+    },
+    {
+      "id": "esa_manifest_structured_10_at_the_foot_of_the_red_planet_s_giant_volcano_operated_by",
+      "category": "structured",
+      "query_kind": "structured",
+      "query": "At the foot of the Red Planet’s giant volcano由谁运营",
+      "expected_path": "fallback",
+      "allowed_final_sources": [
+        "fallback"
+      ],
+      "expected_top_k_hit": true,
+      "expected_result": {
+        "subject": "At the foot of the Red Planet’s giant volcano",
+        "relation": "OPERATED_BY",
+        "object": "ESA"
+      },
+      "source_filter": [
+        "esa"
+      ],
+      "source_schema_version": "esa_shadow_ready_v1",
+      "eval_scope": "exploratory"
     }
   ]
 }

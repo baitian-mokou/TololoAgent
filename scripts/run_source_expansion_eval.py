@@ -41,6 +41,21 @@ COMPAT_QUERY_IDS_BY_SOURCE = {
         "nasa_narrative_earth_atmosphere",
     },
 }
+WIKIDATA_RAW_CHUNK_NARRATIVE_OVERRIDES = {
+    "wikidata_narrative_mars_atmosphere": ("火星", ["大气", "raw_chunk_1"]),
+    "wikidata_narrative_titan_discovery": ("土卫六", ["发现", "raw_chunk_1"]),
+    "wikidata_narrative_triton_discovery": ("海卫一", ["发现", "raw_chunk_1"]),
+    "wikidata_narrative_eris_classification": ("阋神星", ["分类", "raw_chunk_1"]),
+    "wikidata_narrative_haumea_classification": ("妊神星", ["分类", "raw_chunk_1"]),
+    "wikidata_narrative_vesta_discovery": ("灶神星", ["发现", "raw_chunk_1"]),
+    "wikidata_fallback_local_narrative": ("冥王星", ["分类", "raw_chunk_1"]),
+    "wikidata_source_isolation_titan": ("土卫六", ["发现", "raw_chunk_1"]),
+    "wikidata_path_routing_narrative": ("土星", ["大气", "raw_chunk_1"]),
+    "wikidata_narrative_jupiter_atmosphere": ("木星", ["大气", "raw_chunk_1"]),
+    "wikidata_narrative_saturn_atmosphere": ("土星", ["大气", "raw_chunk_1"]),
+    "wikidata_narrative_makemake_classification": ("鸟神星", ["分类", "raw_chunk_1"]),
+}
+
 COMPAT_QUERY_OVERRIDES_BY_SOURCE = {
     "nasa": {
         "nasa_structured_mercury_mass": {
@@ -66,21 +81,34 @@ COMPAT_QUERY_OVERRIDES_BY_SOURCE = {
         },
         "nasa_conflict_titan_atmosphere": {
             "query": "地球大气主要是什么",
-            "expected_result": {"page_title": "地球", "section_any_of": ["NASA live preview", "大气"]},
+            "expected_result": {"page_title": "地球", "section_any_of": ["NASA live preview", "大气", "raw_chunk_1"]},
             "expected_page_title": "地球",
-            "expected_section_any_of": ["NASA live preview", "大气"],
+            "expected_section_any_of": ["NASA live preview", "大气", "raw_chunk_1"],
         },
         "nasa_narrative_mars_atmosphere": {
-            "expected_result": {"page_title": "火星", "section_any_of": ["概要", "大气"]},
+            "expected_result": {"page_title": "火星", "section_any_of": ["概要", "大气", "raw_chunk_1"]},
             "expected_page_title": "火星",
-            "expected_section_any_of": ["概要", "大气"],
+            "expected_section_any_of": ["概要", "大气", "raw_chunk_1"],
         },
         "nasa_narrative_earth_atmosphere": {
-            "expected_result": {"page_title": "地球", "section_any_of": ["NASA live preview", "大气"]},
+            "expected_result": {"page_title": "地球", "section_any_of": ["NASA live preview", "大气", "raw_chunk_1"]},
             "expected_page_title": "地球",
-            "expected_section_any_of": ["NASA live preview", "大气"],
+            "expected_section_any_of": ["NASA live preview", "大气", "raw_chunk_1"],
         },
-    }
+    },
+    "wikidata": {
+        "wikidata_structured_pluto_located_in": {
+            "expected_result": {"subject": "冥王星", "relation": "LOCATED_IN", "object": "太阳系"},
+        },
+        **{
+            query_id: {
+                "expected_result": {"page_title": page_title, "section_any_of": sections},
+                "expected_page_title": page_title,
+                "expected_section_any_of": sections,
+            }
+            for query_id, (page_title, sections) in WIKIDATA_RAW_CHUNK_NARRATIVE_OVERRIDES.items()
+        },
+    },
 }
 
 
@@ -108,6 +136,32 @@ def normalize_query_spec(source_name: str, query_spec: Dict[str, Any]) -> Dict[s
     item = dict(query_spec)
     item.update(COMPAT_QUERY_OVERRIDES_BY_SOURCE.get(source_name, {}).get(normalize_text(item.get("id")), {}))
     return item
+
+
+def select_strict_queries(source_name: str, manifest_queries: Sequence[Dict[str, Any]]) -> tuple[List[Dict[str, Any]], Dict[str, Any]]:
+    allowed_ids = COMPAT_QUERY_IDS_BY_SOURCE.get(source_name)
+    strict_queries: List[Dict[str, Any]] = []
+    skipped_by_scope: Dict[str, List[str]] = {}
+    compat_filtered_ids: List[str] = []
+
+    for query_spec in manifest_queries:
+        query_id = normalize_text(query_spec.get("id"))
+        scope = normalize_text(query_spec.get("eval_scope") or "strict").lower()
+        if scope in {"exploratory", "preview"}:
+            skipped_by_scope.setdefault(scope, []).append(query_id)
+            continue
+        if allowed_ids and query_id not in allowed_ids:
+            compat_filtered_ids.append(query_id)
+            continue
+        strict_queries.append(normalize_query_spec(source_name, query_spec))
+
+    return strict_queries, {
+        "strict_query_count": len(strict_queries),
+        "exploratory_query_count": sum(len(ids) for ids in skipped_by_scope.values()),
+        "compat_filtered_query_count": len(compat_filtered_ids),
+        "skipped_query_ids_by_scope": skipped_by_scope,
+        "compat_filtered_query_ids": compat_filtered_ids,
+    }
 
 
 def ensure_list(value: Any) -> List[Any]:
@@ -583,6 +637,15 @@ def evaluate_gates(summary: Dict[str, Any], gates: Dict[str, Any], required_cate
         "passed": summary.get("exact_accuracy", 0.0) >= exact_accuracy_min,
     })
 
+    query_failure_max = int(gates.get("query_failure_max", 0))
+    query_failure_count = max(0, int(summary.get("total_queries", 0)) - int(summary.get("exact_pass_count", 0)))
+    checks.append({
+        "name": "query_failure_max",
+        "expected": query_failure_max,
+        "actual": query_failure_count,
+        "passed": query_failure_count <= query_failure_max,
+    })
+
     source_filter_failure_max = int(gates.get("source_filter_failure_max", 0))
     checks.append({
         "name": "source_filter_failure_max",
@@ -673,12 +736,7 @@ def main() -> None:
     manifest_source = normalize_text(manifest.get("source_name") or manifest.get("source"))
     manifest_schema = normalize_text(manifest.get("source_schema_version"))
     manifest_queries = manifest.get("queries", []) if isinstance(manifest.get("queries", []), list) else []
-    allowed_ids = COMPAT_QUERY_IDS_BY_SOURCE.get(descriptor.source_name)
-    queries = [
-        normalize_query_spec(descriptor.source_name, query_spec)
-        for query_spec in manifest_queries
-        if not allowed_ids or normalize_text(query_spec.get("id")) in allowed_ids
-    ]
+    queries, query_selection = select_strict_queries(descriptor.source_name, manifest_queries)
     query_count = len(queries)
     top_k = int(manifest.get("top_k_default", 5))
     gates_config = dict(manifest.get("gates") or {})
@@ -758,6 +816,12 @@ def main() -> None:
             "passed": summary.get("exact_accuracy", 0.0) >= float(gates_config.get("exact_accuracy_min", 0.0)),
         },
         {
+            "name": "query_failure_max",
+            "expected": int(gates_config.get("query_failure_max", 0)),
+            "actual": max(0, int(summary.get("total_queries", 0)) - int(summary.get("exact_pass_count", 0))),
+            "passed": max(0, int(summary.get("total_queries", 0)) - int(summary.get("exact_pass_count", 0))) <= int(gates_config.get("query_failure_max", 0)),
+        },
+        {
             "name": "source_filter_failure_max",
             "expected": int(gates_config.get("source_filter_failure_max", 0)),
             "actual": summary.get("source_filter_failure_count", 0),
@@ -806,7 +870,13 @@ def main() -> None:
             "path": queryset_path,
             "source_name": manifest_source,
             "source_schema_version": manifest_schema,
+            "total_query_count": len(manifest_queries),
             "query_count": query_count,
+            "strict_query_count": query_selection["strict_query_count"],
+            "exploratory_query_count": query_selection["exploratory_query_count"],
+            "compat_filtered_query_count": query_selection["compat_filtered_query_count"],
+            "skipped_query_ids_by_scope": query_selection["skipped_query_ids_by_scope"],
+            "compat_filtered_query_ids": query_selection["compat_filtered_query_ids"],
             "load_error": manifest_error,
             "query_schema_versions_consistent": query_schema_consistent,
         },

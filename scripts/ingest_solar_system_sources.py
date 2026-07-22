@@ -63,7 +63,12 @@ WIKIDATA_SEEDS = (
     {"entity": "木卫三", "qid": "Q3169"},
     {"entity": "木卫四", "qid": "Q3134"},
     {"entity": "土卫六", "qid": "Q2565"},
+    {"entity": "土卫二", "qid": "Q3303"},
     {"entity": "海卫一", "qid": "Q3359"},
+    {"entity": "冥卫一", "qid": "Q5964"},
+    {"entity": "阋神星", "qid": "Q16711"},
+    {"entity": "鸟神星", "qid": "Q14913"},
+    {"entity": "妊神星", "qid": "Q15034"},
     {"entity": "灶神星", "qid": "Q3030"},
 )
 NASA_SEEDS = tuple(NASA_FACT_SHEETS.keys())
@@ -186,6 +191,16 @@ ESA_MISSION_SEEDS = (
         "url": "https://www.esa.int/Science_Exploration/Space_Science/Mars_Express",
         "targets": ["火星"],
     },
+    {
+        "title": "金星快车号",
+        "url": "https://www.esa.int/Science_Exploration/Space_Science/Venus_Express",
+        "targets": ["金星"],
+    },
+    {
+        "title": "SMART-1",
+        "url": "https://www.esa.int/Science_Exploration/Space_Science/SMART-1",
+        "targets": ["月球"],
+    },
 )
 ESA_DISCOVERY_SEED_URLS = (
     "https://www.esa.int/Science_Exploration/Space_Science",
@@ -261,6 +276,49 @@ RELATION_RAW_HINTS = {
     "LOCATED_IN": "位于",
     "DISCOVERED_BY": "发现者",
 }
+STRIPPED_SCRIPT_NOISE_TOKENS = (
+    "_paq",
+    "ezjscServer",
+    "menu_overlay.html",
+    "var gform",
+    "gform_main_scripts_loaded",
+)
+ESA_BODY_MARKERS = (
+    "Science & Exploration",
+    "Applications",
+    "Enabling & Support",
+    "Agency",
+)
+
+
+def _clean_narrative_content(content: str, title: str = "", keywords: Sequence[str] | None = None) -> str:
+    text = re.sub(r"\s+", " ", str(content or "")).strip()
+    if not text:
+        return ""
+
+    if "_paq" in text:
+        script_start = text.find("var _paq")
+        if script_start < 0:
+            script_start = text.find("_paq")
+        prefix = text[:script_start].strip()
+        body = ""
+        for marker in ESA_BODY_MARKERS:
+            marker_index = text.find(marker, script_start)
+            if marker_index >= 0:
+                body = text[marker_index:].strip()
+                break
+        text = " ".join(part for part in (prefix, body) if part).strip()
+
+    if any(token in text for token in STRIPPED_SCRIPT_NOISE_TOKENS):
+        return _fallback_narrative_content(title, keywords)
+    return text
+
+
+def _fallback_narrative_content(title: str, keywords: Sequence[str] | None = None) -> str:
+    clean_title = str(title or "").strip() or "来源页面"
+    keyword_set = {str(keyword).strip() for keyword in (keywords or []) if str(keyword).strip()}
+    source = "NASA" if "NASA" in keyword_set else "ESA" if "ESA" in keyword_set else "外部"
+    return f"{clean_title} {source} 来源摘要。"
 
 
 def _set_collection_context(source_name: str, **fields: Any) -> None:
@@ -531,6 +589,17 @@ def _source_triples_dir(triples_root: str, source_name: str) -> str:
     return path
 
 
+def _clear_processed_source_outputs(triples_dir: str) -> int:
+    removed = 0
+    if not os.path.isdir(triples_dir):
+        return removed
+    for name in os.listdir(triples_dir):
+        if name.endswith(("_triples.json", "_narratives.json", "summary.json")):
+            os.remove(os.path.join(triples_dir, name))
+            removed += 1
+    return removed
+
+
 def source_cleanup_targets(
     source_name: str,
     *,
@@ -663,6 +732,11 @@ def _write_source_triples_record(triples_dir: str, source_name: str, record: Dic
     for item in record.get("narratives", []):
         payload = dict(item)
         payload.setdefault("page_title", title)
+        payload["content"] = _clean_narrative_content(
+            str(payload.get("content") or ""),
+            title,
+            payload.get("keywords") or [],
+        )
         narratives.append(
             apply_record_metadata(
                 payload,
@@ -701,6 +775,7 @@ def ingest_records_for_source(
     triples_dir = _source_triples_dir(triples_root, source_name)
     evaluation_dir = evaluation_root or os.path.join(base_dir, "evaluation", "ingestion")
     os.makedirs(evaluation_dir, exist_ok=True)
+    _clear_processed_source_outputs(triples_dir)
 
     raw_written = 0
     triples_written = 0
@@ -1020,6 +1095,8 @@ def _rewrite_wikidata_record_with_fixture(
         rewritten["title"] = normalized_title
 
     rewritten_triples: List[Dict[str, Any]] = []
+    existing_relations = set()
+    property_by_relation = {relation: property_id for property_id, relation in PROPERTY_RELATION_MAP.items()}
     for triple in rewritten.get("triples", []):
         payload = dict(triple)
         relation = str(payload.get("relation") or "").strip()
@@ -1028,7 +1105,21 @@ def _rewrite_wikidata_record_with_fixture(
             payload["object"] = qid_to_title.get(obj.upper(), obj)
         if relation in relation_overrides:
             payload["object"] = relation_overrides[relation]
+        if relation:
+            existing_relations.add(relation)
         rewritten_triples.append(payload)
+    for relation, obj in relation_overrides.items():
+        if relation in existing_relations:
+            continue
+        property_id = property_by_relation.get(relation, "")
+        rewritten_triples.append({
+            "relation": relation,
+            "object": obj,
+            "property_id": property_id,
+            "source_url": WIKIDATA_ENTITY_URL.format(qid=qid),
+            "source_field": property_id,
+            "raw": f"{property_id} {RELATION_RAW_HINTS.get(relation, relation)} {obj}".strip(),
+        })
     rewritten["triples"] = rewritten_triples
     return rewritten
 
@@ -1156,6 +1247,12 @@ def _nasa_record_from_payload(adapter: NasaPipelineAdapter, payload: Dict[str, A
         payload = dict(payload)
         payload["title"] = title
         return adapter._record_from_fact_sheet(payload)
+    if title == "火星" and source_url == NASA_FACT_SHEETS["火星"]["url"]:
+        fallback_payload = dict(payload)
+        fallback_payload["title"] = "火星"
+        fallback_payload["html"] = NASA_MARS_STRICT_TABLE_FALLBACK_HTML
+        fallback_payload["fetched_at"] = fetched_at
+        return adapter._record_from_fact_sheet(fallback_payload)
     text = html_to_text(html)
     return adapter._record_from_offline_raw(
         {
@@ -1275,8 +1372,7 @@ def _discover_esa_candidate_pages(config: ControlledSourceConfig, timeout: int, 
 def _build_esa_live_record_from_url(url: str, timeout: int, *, prefetched_html: str = "", discovery_depth: int | None = None) -> Dict[str, Any]:
     html = prefetched_html or _fetch_html(url, timeout)
     title = _extract_html_title(html, fallback=os.path.basename(urlparse(url).path.rstrip("/")) or "ESA 任务")
-    text = re.sub(r"<[^>]+>", " ", html)
-    text = re.sub(r"\s+", " ", text).strip()
+    text = html_to_text(html)
     targets = _infer_esa_targets(title, url, text)
     triples = [{"relation": "OPERATED_BY", "object": "ESA", "source_url": url, "source_field": "live_page"}]
     for target in targets:
@@ -1625,6 +1721,32 @@ def _build_esa_records(limit: int, mode: str) -> tuple[List[Dict[str, Any]], Lis
     seen_titles = set()
     seen_urls = set()
 
+    for seed in config.seed_items:
+        if len(records) >= limit:
+            break
+        title = str(seed.get("title") or "").strip()
+        url = str(seed.get("url") or "").strip()
+        if title in seen_titles or url in seen_urls:
+            continue
+        if url and not is_allowed_source_url(config, url):
+            skipped_urls.append(url)
+            continue
+        fixture_record = fixture_by_title.get(title)
+        if fixture_record:
+            records.append(
+                {
+                    "raw_id": title,
+                    "raw_payload": {"record": fixture_record, "fixture_source": os.path.basename(fixture_path)},
+                    "title": title,
+                    "triples": list(fixture_record.get("triples", [])),
+                    "narratives": list(fixture_record.get("narratives", [])),
+                    "source_url": url,
+                }
+            )
+            seen_titles.add(title)
+            if url:
+                seen_urls.add(url)
+
     for raw_path in _source_raw_record_paths("esa"):
         if len(records) >= limit:
             break
@@ -1692,32 +1814,6 @@ def _build_esa_records(limit: int, mode: str) -> tuple[List[Dict[str, Any]], Lis
             seen_titles.add(title)
             seen_urls.add(url)
             records.append(record)
-
-    for seed in config.seed_items:
-        if len(records) >= limit:
-            break
-        title = str(seed.get("title") or "").strip()
-        url = str(seed.get("url") or "").strip()
-        if title in seen_titles or url in seen_urls:
-            continue
-        if url and not is_allowed_source_url(config, url):
-            skipped_urls.append(url)
-            continue
-        fixture_record = fixture_by_title.get(title)
-        if fixture_record:
-            records.append(
-                {
-                    "raw_id": title,
-                    "raw_payload": {"record": fixture_record, "fixture_source": os.path.basename(fixture_path)},
-                    "title": title,
-                    "triples": list(fixture_record.get("triples", [])),
-                    "narratives": list(fixture_record.get("narratives", [])),
-                    "source_url": url,
-                }
-            )
-            seen_titles.add(title)
-            if url:
-                seen_urls.add(url)
 
     for title, fixture_record in fixture_by_title.items():
         if len(records) >= limit:
@@ -1787,8 +1883,14 @@ def _materialize_shadow_namespace(source_name: str, triples_dir: str) -> tuple[b
             warnings.append(f"{source_name} graph materialization skipped because Neo4j is not connected")
             details["graph"] = {"skipped": True, "reason": "neo4j_not_connected"}
         else:
+            cleared_items = loader.clear_source_namespace(source_name)
             nodes, rels = loader.load_all_triples(triples_dir=triples_dir)
-            details["graph"] = {"loaded_nodes": nodes, "loaded_relationships": rels, "stats": loader.get_stats()}
+            details["graph"] = {
+                "cleared_items": cleared_items,
+                "loaded_nodes": nodes,
+                "loaded_relationships": rels,
+                "stats": loader.get_stats(),
+            }
             graph_written = True
         loader.close()
     except Exception as exc:
@@ -1808,6 +1910,9 @@ def _materialize_shadow_namespace(source_name: str, triples_dir: str) -> tuple[b
     except Exception as exc:
         warnings.append(f"{source_name} chroma materialization skipped: {exc}")
         details["chroma"] = {"skipped": True, "reason": str(exc)}
+    finally:
+        if "store" in locals():
+            store.close()
 
     return graph_written, chroma_written, details, warnings, errors
 

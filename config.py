@@ -37,15 +37,13 @@ for d in [DATA_DIR, RAW_JSON_DIR, TRIPLES_DIR]:
 # Neo4j 配置
 NEO4J_URI = os.getenv("NEO4J_URI", "bolt://127.0.0.1:7687")
 NEO4J_USER = os.getenv("NEO4J_USER", "neo4j")
-NEO4J_PASSWORD = os.getenv("NEO4J_PASSWORD", "12345678")
+NEO4J_PASSWORD = os.getenv("NEO4J_PASSWORD", "")
 
 # Ollama 配置
 OLLAMA_BASE_URL = "http://localhost:11434"
 OLLAMA_MODEL = "qwen3:4b"
 OLLAMA_TIMEOUT = 60
-OLLAMA_MODELS_DIR = os.path.join(BASE_DIR, "models", "ollama")
-# 设置Ollama模型目录为项目本地目录（便于分发）
-os.environ.setdefault("OLLAMA_MODELS", OLLAMA_MODELS_DIR)
+OLLAMA_MODELS_DIR = os.getenv("OLLAMA_MODELS", "")
 
 # Flask 可视化服务
 FLASK_HOST = "127.0.0.1"

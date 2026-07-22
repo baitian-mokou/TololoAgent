@@ -57,6 +57,28 @@ class GuiSourceSelectionTests(unittest.TestCase):
 
         factory.assert_called_once_with(source_name="esa")
 
+    def test_source_status_text_includes_shadow_counts_for_selected_source(self):
+        tab = self._make_tab("nasa")
+        tab._source_status_cache = {
+            "nasa": {
+                "triple_count": 32,
+                "narrative_count": 259,
+                "strict_gate_passed": True,
+                "chroma_shadow_count": 15,
+                "last_probe_status": "ok",
+                "last_probe_relationship_count": 3,
+            }
+        }
+
+        text = tab._source_status_text()
+
+        self.assertIn("当前数据源：nasa", text)
+        self.assertIn("triples 32", text)
+        self.assertIn("narratives 259", text)
+        self.assertIn("gate OK", text)
+        self.assertIn("Chroma 15", text)
+        self.assertIn("Neo4j 3", text)
+
     def test_crawl_tab_exposes_four_source_buttons_and_debug_all_button(self):
         self.assertEqual(CrawlTab.SOURCE_BUTTON_ORDER, ("zh_wikipedia", "wikidata", "nasa", "esa"))
         self.assertEqual(CrawlTab.CLEANUP_SOURCE_ORDER, CrawlTab.SOURCE_BUTTON_ORDER)

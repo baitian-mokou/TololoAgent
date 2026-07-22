@@ -1,0 +1,169 @@
+{
+  "mode": "sandbox_candidate_review_summary",
+  "generated_at": "2026-07-21T17:45:25.930325+00:00",
+  "manifest_dir": "configs\\source_manifests\\examples",
+  "sandbox_dir": "evaluation\\source_quality\\sandbox",
+  "network": false,
+  "summary": {
+    "sources": 4,
+    "recommendation_counts": {
+      "manual_sample_first": 2,
+      "needs_manifest_fix": 1,
+      "ready_for_small_batch": 1
+    }
+  },
+  "items": [
+    {
+      "source_id": "academic_example",
+      "source_mode": "academic",
+      "registered": false,
+      "network": false,
+      "candidate_count": 4,
+      "accepted": 0,
+      "review_needed": 2,
+      "exploratory": 1,
+      "rejected": 1,
+      "skipped": 0,
+      "top_reasons": {
+        "academic or preprint domain": 4,
+        "short text": 3,
+        "reference signal present": 2,
+        "publication/abstract signal": 2,
+        "topic taxonomy hits=4": 1,
+        "science keyword hits=12": 1,
+        "topic taxonomy hits=1": 1,
+        "science keyword hits=7": 1,
+        "topic taxonomy hits=2": 1,
+        "science keyword hits=3": 1
+      },
+      "manifest_validation": {
+        "passed": true,
+        "errors": [],
+        "warnings": []
+      },
+      "sandbox_report": "evaluation\\source_quality\\sandbox\\academic_example_sandbox_review.json",
+      "reviewer_notes": "",
+      "approved_sample_size": 0,
+      "recommendation": "manual_sample_first",
+      "review_decision": "pending",
+      "review_required": true,
+      "sample_size_recommended": "5-10",
+      "reviewer_notes_template": "人工抽样 review_needed/exploratory/rejected，确认是否调整 manifest。",
+      "next_action": "manual sample 5-10 candidates before ingest"
+    },
+    {
+      "source_id": "generic_unknown_example",
+      "source_mode": "generic_unknown",
+      "registered": false,
+      "network": false,
+      "candidate_count": 4,
+      "accepted": 0,
+      "review_needed": 0,
+      "exploratory": 1,
+      "rejected": 3,
+      "skipped": 0,
+      "top_reasons": {
+        "news/update signal": 4,
+        "topic taxonomy hits=1": 3,
+        "very short text": 3,
+        "blocked path/content signal": 3,
+        "science keyword hits=8": 1,
+        "mission page signal": 1,
+        "reference signal present": 1,
+        "short text": 1,
+        "science keyword hits=2": 1,
+        "publication/abstract signal": 1
+      },
+      "manifest_validation": {
+        "passed": true,
+        "errors": [],
+        "warnings": []
+      },
+      "sandbox_report": "evaluation\\source_quality\\sandbox\\generic_unknown_example_sandbox_review.json",
+      "reviewer_notes": "",
+      "approved_sample_size": 0,
+      "recommendation": "needs_manifest_fix",
+      "review_decision": "needs_manifest_fix",
+      "review_required": true,
+      "sample_size_recommended": 0,
+      "reviewer_notes_template": "修正 manifest include/exclude/domain 后重新生成 sandbox review。",
+      "next_action": "fix manifest before any ingest trial"
+    },
+    {
+      "source_id": "official_science_example",
+      "source_mode": "official_science",
+      "registered": false,
+      "network": false,
+      "candidate_count": 4,
+      "accepted": 2,
+      "review_needed": 0,
+      "exploratory": 0,
+      "rejected": 2,
+      "skipped": 0,
+      "top_reasons": {
+        "official or academic domain": 4,
+        "science keyword hits=11": 2,
+        "fact or overview page signal": 2,
+        "reference signal present": 2,
+        "short text": 2,
+        "very short text": 2,
+        "topic taxonomy hits=2": 1,
+        "table evidence present": 1,
+        "topic taxonomy hits=3": 1,
+        "mission page signal": 1
+      },
+      "manifest_validation": {
+        "passed": true,
+        "errors": [],
+        "warnings": []
+      },
+      "sandbox_report": "evaluation\\source_quality\\sandbox\\official_science_example_sandbox_review.json",
+      "reviewer_notes": "",
+      "approved_sample_size": 0,
+      "recommendation": "ready_for_small_batch",
+      "review_decision": "pending",
+      "review_required": true,
+      "sample_size_recommended": "10-20",
+      "reviewer_notes_template": "人工确认 accepted/rejected samples 后再批准小批量抓取。",
+      "next_action": "manual approve 10-20 samples before ingest"
+    },
+    {
+      "source_id": "publisher_example",
+      "source_mode": "publisher",
+      "registered": false,
+      "network": false,
+      "candidate_count": 4,
+      "accepted": 0,
+      "review_needed": 2,
+      "exploratory": 0,
+      "rejected": 2,
+      "skipped": 0,
+      "top_reasons": {
+        "organization domain": 4,
+        "publication/abstract signal": 4,
+        "reference signal present": 2,
+        "short text": 2,
+        "very short text": 2,
+        "low science signal": 2,
+        "topic taxonomy hits=3": 1,
+        "science keyword hits=8": 1,
+        "science keyword hits=6": 1,
+        "news/update signal in body/navigation": 1
+      },
+      "manifest_validation": {
+        "passed": true,
+        "errors": [],
+        "warnings": []
+      },
+      "sandbox_report": "evaluation\\source_quality\\sandbox\\publisher_example_sandbox_review.json",
+      "reviewer_notes": "",
+      "approved_sample_size": 0,
+      "recommendation": "manual_sample_first",
+      "review_decision": "pending",
+      "review_required": true,
+      "sample_size_recommended": "5-10",
+      "reviewer_notes_template": "人工抽样 review_needed/exploratory/rejected，确认是否调整 manifest。",
+      "next_action": "manual sample 5-10 candidates before ingest"
+    }
+  ]
+}

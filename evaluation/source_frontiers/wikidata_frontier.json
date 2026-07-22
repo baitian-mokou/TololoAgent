@@ -1,0 +1,398 @@
+{
+  "source_name": "wikidata",
+  "generated_at": "2026-07-21T06:56:02.555953+00:00",
+  "network_access": true,
+  "limit": 120,
+  "accepted_count": 47,
+  "skipped_count": 0,
+  "discovery_fetches": 0,
+  "limit_reached": false,
+  "manifest": {
+    "allowed_domains": [
+      "www.wikidata.org",
+      "wikidata.org"
+    ],
+    "max_depth": 1,
+    "max_pages_per_run": 120,
+    "max_discovery_fetch_pages": 0,
+    "crawl_delay": 0.3,
+    "notes": "Phase 2 uses entity IDs and Special:EntityData JSON for raw-only ingestion; avoid treating Wikidata as ordinary web crawl."
+  },
+  "accepted": [
+    {
+      "kind": "entity",
+      "url": "https://www.wikidata.org/wiki/Q525",
+      "depth": 0,
+      "reason": "accepted",
+      "entity": "太阳",
+      "qid": "Q525"
+    },
+    {
+      "kind": "entity",
+      "url": "https://www.wikidata.org/wiki/Q308",
+      "depth": 0,
+      "reason": "accepted",
+      "entity": "水星",
+      "qid": "Q308"
+    },
+    {
+      "kind": "entity",
+      "url": "https://www.wikidata.org/wiki/Q313",
+      "depth": 0,
+      "reason": "accepted",
+      "entity": "金星",
+      "qid": "Q313"
+    },
+    {
+      "kind": "entity",
+      "url": "https://www.wikidata.org/wiki/Q2",
+      "depth": 0,
+      "reason": "accepted",
+      "entity": "地球",
+      "qid": "Q2"
+    },
+    {
+      "kind": "entity",
+      "url": "https://www.wikidata.org/wiki/Q405",
+      "depth": 0,
+      "reason": "accepted",
+      "entity": "月球",
+      "qid": "Q405"
+    },
+    {
+      "kind": "entity",
+      "url": "https://www.wikidata.org/wiki/Q111",
+      "depth": 0,
+      "reason": "accepted",
+      "entity": "火星",
+      "qid": "Q111"
+    },
+    {
+      "kind": "entity",
+      "url": "https://www.wikidata.org/wiki/Q319",
+      "depth": 0,
+      "reason": "accepted",
+      "entity": "木星",
+      "qid": "Q319"
+    },
+    {
+      "kind": "entity",
+      "url": "https://www.wikidata.org/wiki/Q193",
+      "depth": 0,
+      "reason": "accepted",
+      "entity": "土星",
+      "qid": "Q193"
+    },
+    {
+      "kind": "entity",
+      "url": "https://www.wikidata.org/wiki/Q324",
+      "depth": 0,
+      "reason": "accepted",
+      "entity": "天王星",
+      "qid": "Q324"
+    },
+    {
+      "kind": "entity",
+      "url": "https://www.wikidata.org/wiki/Q332",
+      "depth": 0,
+      "reason": "accepted",
+      "entity": "海王星",
+      "qid": "Q332"
+    },
+    {
+      "kind": "entity",
+      "url": "https://www.wikidata.org/wiki/Q339",
+      "depth": 0,
+      "reason": "accepted",
+      "entity": "冥王星",
+      "qid": "Q339"
+    },
+    {
+      "kind": "entity",
+      "url": "https://www.wikidata.org/wiki/Q596",
+      "depth": 0,
+      "reason": "accepted",
+      "entity": "谷神星",
+      "qid": "Q596"
+    },
+    {
+      "kind": "entity",
+      "url": "https://www.wikidata.org/wiki/Q611",
+      "depth": 0,
+      "reason": "accepted",
+      "entity": "阋神星",
+      "qid": "Q611"
+    },
+    {
+      "kind": "entity",
+      "url": "https://www.wikidata.org/wiki/Q601",
+      "depth": 0,
+      "reason": "accepted",
+      "entity": "妊神星",
+      "qid": "Q601"
+    },
+    {
+      "kind": "entity",
+      "url": "https://www.wikidata.org/wiki/Q604",
+      "depth": 0,
+      "reason": "accepted",
+      "entity": "鸟神星",
+      "qid": "Q604"
+    },
+    {
+      "kind": "entity",
+      "url": "https://www.wikidata.org/wiki/Q3030",
+      "depth": 0,
+      "reason": "accepted",
+      "entity": "灶神星",
+      "qid": "Q3030"
+    },
+    {
+      "kind": "entity",
+      "url": "https://www.wikidata.org/wiki/Q3002",
+      "depth": 0,
+      "reason": "accepted",
+      "entity": "帕拉斯",
+      "qid": "Q3002"
+    },
+    {
+      "kind": "entity",
+      "url": "https://www.wikidata.org/wiki/Q3009",
+      "depth": 0,
+      "reason": "accepted",
+      "entity": "朱诺",
+      "qid": "Q3009"
+    },
+    {
+      "kind": "entity",
+      "url": "https://www.wikidata.org/wiki/Q16711",
+      "depth": 0,
+      "reason": "accepted",
+      "entity": "爱神星",
+      "qid": "Q16711"
+    },
+    {
+      "kind": "entity",
+      "url": "https://www.wikidata.org/wiki/Q11558",
+      "depth": 0,
+      "reason": "accepted",
+      "entity": "贝努",
+      "qid": "Q11558"
+    },
+    {
+      "kind": "entity",
+      "url": "https://www.wikidata.org/wiki/Q3123",
+      "depth": 0,
+      "reason": "accepted",
+      "entity": "木卫一",
+      "qid": "Q3123"
+    },
+    {
+      "kind": "entity",
+      "url": "https://www.wikidata.org/wiki/Q3143",
+      "depth": 0,
+      "reason": "accepted",
+      "entity": "木卫二",
+      "qid": "Q3143"
+    },
+    {
+      "kind": "entity",
+      "url": "https://www.wikidata.org/wiki/Q3169",
+      "depth": 0,
+      "reason": "accepted",
+      "entity": "木卫三",
+      "qid": "Q3169"
+    },
+    {
+      "kind": "entity",
+      "url": "https://www.wikidata.org/wiki/Q3134",
+      "depth": 0,
+      "reason": "accepted",
+      "entity": "木卫四",
+      "qid": "Q3134"
+    },
+    {
+      "kind": "entity",
+      "url": "https://www.wikidata.org/wiki/Q2565",
+      "depth": 0,
+      "reason": "accepted",
+      "entity": "土卫六",
+      "qid": "Q2565"
+    },
+    {
+      "kind": "entity",
+      "url": "https://www.wikidata.org/wiki/Q3303",
+      "depth": 0,
+      "reason": "accepted",
+      "entity": "土卫二",
+      "qid": "Q3303"
+    },
+    {
+      "kind": "entity",
+      "url": "https://www.wikidata.org/wiki/Q3359",
+      "depth": 0,
+      "reason": "accepted",
+      "entity": "海卫一",
+      "qid": "Q3359"
+    },
+    {
+      "kind": "entity",
+      "url": "https://www.wikidata.org/wiki/Q7547",
+      "depth": 0,
+      "reason": "accepted",
+      "entity": "火卫一",
+      "qid": "Q7547"
+    },
+    {
+      "kind": "entity",
+      "url": "https://www.wikidata.org/wiki/Q7548",
+      "depth": 0,
+      "reason": "accepted",
+      "entity": "火卫二",
+      "qid": "Q7548"
+    },
+    {
+      "kind": "entity",
+      "url": "https://www.wikidata.org/wiki/Q544",
+      "depth": 0,
+      "reason": "accepted",
+      "entity": "太阳系",
+      "qid": "Q544"
+    },
+    {
+      "kind": "entity",
+      "url": "https://www.wikidata.org/wiki/Q2179",
+      "depth": 0,
+      "reason": "accepted",
+      "entity": "小行星带",
+      "qid": "Q2179"
+    },
+    {
+      "kind": "entity",
+      "url": "https://www.wikidata.org/wiki/Q427",
+      "depth": 0,
+      "reason": "accepted",
+      "entity": "柯伊伯带",
+      "qid": "Q427"
+    },
+    {
+      "kind": "entity",
+      "url": "https://www.wikidata.org/wiki/Q40864",
+      "depth": 0,
+      "reason": "accepted",
+      "entity": "奥尔特云",
+      "qid": "Q40864"
+    },
+    {
+      "kind": "entity",
+      "url": "https://www.wikidata.org/wiki/Q48469",
+      "depth": 0,
+      "reason": "accepted",
+      "entity": "旅行者1号",
+      "qid": "Q48469"
+    },
+    {
+      "kind": "entity",
+      "url": "https://www.wikidata.org/wiki/Q48475",
+      "depth": 0,
+      "reason": "accepted",
+      "entity": "旅行者2号",
+      "qid": "Q48475"
+    },
+    {
+      "kind": "entity",
+      "url": "https://www.wikidata.org/wiki/Q165585",
+      "depth": 0,
+      "reason": "accepted",
+      "entity": "卡西尼-惠更斯号",
+      "qid": "Q165585"
+    },
+    {
+      "kind": "entity",
+      "url": "https://www.wikidata.org/wiki/Q48461",
+      "depth": 0,
+      "reason": "accepted",
+      "entity": "新视野号",
+      "qid": "Q48461"
+    },
+    {
+      "kind": "entity",
+      "url": "https://www.wikidata.org/wiki/Q87749354",
+      "depth": 0,
+      "reason": "accepted",
+      "entity": "毅力号",
+      "qid": "Q87749354"
+    },
+    {
+      "kind": "entity",
+      "url": "https://www.wikidata.org/wiki/Q193538",
+      "depth": 0,
+      "reason": "accepted",
+      "entity": "机遇号",
+      "qid": "Q193538"
+    },
+    {
+      "kind": "entity",
+      "url": "https://www.wikidata.org/wiki/Q176276",
+      "depth": 0,
+      "reason": "accepted",
+      "entity": "勇气号",
+      "qid": "Q176276"
+    },
+    {
+      "kind": "entity",
+      "url": "https://www.wikidata.org/wiki/Q1770537",
+      "depth": 0,
+      "reason": "accepted",
+      "entity": "旅居者号",
+      "qid": "Q1770537"
+    },
+    {
+      "kind": "entity",
+      "url": "https://www.wikidata.org/wiki/Q105425030",
+      "depth": 0,
+      "reason": "accepted",
+      "entity": "伽利略号",
+      "qid": "Q105425030"
+    },
+    {
+      "kind": "entity",
+      "url": "https://www.wikidata.org/wiki/Q59131",
+      "depth": 0,
+      "reason": "accepted",
+      "entity": "水手10号",
+      "qid": "Q59131"
+    },
+    {
+      "kind": "entity",
+      "url": "https://www.wikidata.org/wiki/Q59103",
+      "depth": 0,
+      "reason": "accepted",
+      "entity": "先锋10号",
+      "qid": "Q59103"
+    },
+    {
+      "kind": "entity",
+      "url": "https://www.wikidata.org/wiki/Q59113",
+      "depth": 0,
+      "reason": "accepted",
+      "entity": "先锋11号",
+      "qid": "Q59113"
+    },
+    {
+      "kind": "entity",
+      "url": "https://www.wikidata.org/wiki/Q604428",
+      "depth": 0,
+      "reason": "accepted",
+      "entity": "奥西里斯-REx",
+      "qid": "Q604428"
+    },
+    {
+      "kind": "url",
+      "url": "https://www.wikidata.org/wiki/Wikidata:WikiProject_Astronomy",
+      "depth": 0,
+      "reason": "accepted"
+    }
+  ],
+  "skipped": []
+}

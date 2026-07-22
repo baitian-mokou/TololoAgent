@@ -1,0 +1,17 @@
+{
+  "schema_version": 1,
+  "items": [
+    {
+      "source_id": "noaa_climate_candidate",
+      "approval_decision": "approved_for_preview_probe",
+      "reviewer_notes": "示例签收：允许未来人工手动运行 preview-only 网络探测，最多 5 页；本文件不触发执行。",
+      "approved_max_pages": 5
+    },
+    {
+      "source_id": "data_portal_candidate",
+      "approval_decision": "pending",
+      "reviewer_notes": "示例签收：数据门户仍需确认真实域名和数据许可，暂不批准。",
+      "approved_max_pages": 0
+    }
+  ]
+}

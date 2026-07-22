@@ -34,6 +34,10 @@ _SOLAR_LUMINOSITY_TOPIC_HINTS = (
 _BUILTIN_ENTITY_TITLES = {
     "太阳", "水星", "金星", "地球", "月球", "火星", "木星", "土星", "天王星", "海王星",
     "冥王星", "谷神星", "火卫一", "火卫二", "木卫一", "木卫二", "木卫三", "木卫四",
+    "土卫一", "土卫二", "土卫三", "土卫四", "土卫五", "土卫六", "土卫七", "土卫八",
+    "天卫一", "天卫二", "天卫三", "天卫四", "天卫五", "海卫一", "冥卫一",
+    "地球系统", "火星系统", "木星系统", "土星系统", "天王星系统", "海王星系统", "冥王星系统",
+    "伽利略卫星",
 }
 
 
@@ -215,24 +219,41 @@ def build_query_context(
         _append_unique(topic_terms, token)
 
     relation_hints = []
-    if any(token in normalized for token in ("绕谁", "绕", "公转", "环绕", "轨道")):
+    if any(token in normalized for token in ("绕谁", "绕", "公转", "环绕", "轨道", "的卫星", "的行星", "所属行星", "所属的行星")):
         relation_hints.append("ORBITS")
-    if any(token in normalized for token in ("谁发现", "发现者", "发现了")):
+    if any(token in normalized for token in ("谁发现", "发现者", "发现了", "发现的", "由")) and "发现" in normalized:
         relation_hints.append("DISCOVERED_BY")
     if any(token in normalized for token in ("大气", "大气层", "气压")):
         relation_hints.append("HAS_ATMOSPHERE")
-    if any(token in normalized for token in ("在哪里", "位于哪里", "在哪", "位于", "位在")) or re.search(r"在.+中", normalized) or re.search(r"位于.+内", normalized):
+    explicit_location = any(token in normalized for token in ("在哪里", "位于哪里", "在哪", "位于", "位在"))
+    location_pattern = (
+        (re.search(r"在.+中", normalized) or re.search(r"位于.+内", normalized))
+        and "数据集中" not in normalized
+    )
+    if explicit_location or location_pattern:
         relation_hints.append("LOCATED_IN")
     if "属于什么系统" in normalized:
         relation_hints.append("PART_OF")
-    elif "属于什么" in normalized or "属于哪里" in normalized or "属于哪" in normalized or "属于哪类" in normalized or "是一部分" in normalized:
+    elif (
+        "属于什么" in normalized
+        or "属于哪里" in normalized
+        or "属于哪" in normalized
+        or "属于哪类" in normalized
+        or "属于" in normalized and "还是" in normalized
+        or "是一部分" in normalized
+    ):
         relation_hints.append("PART_OF")
     if "半径" in normalized:
         relation_hints.append("HAS_RADIUS")
+    if "直径" in normalized:
+        relation_hints.append("HAS_RADIUS")
+        topic_intents.append("diameter")
     if "质量" in normalized:
         relation_hints.append("HAS_MASS")
     if "有多大" in normalized or "多大" in normalized:
         relation_hints.extend(["HAS_RADIUS", "HAS_MASS"])
+    if any(token in normalized for token in ("是什么类型", "什么类型", "特殊类型", "被标注为", "标注为", "类型")):
+        relation_hints.append("IS_A")
 
     return {
         "query": normalized,

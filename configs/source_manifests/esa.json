@@ -1,0 +1,39 @@
+{
+  "source_name": "esa",
+  "source_mode": "official_science",
+  "allowed_domains": ["www.esa.int", "esa.int"],
+  "seed_urls": [
+    "https://www.esa.int/Science_Exploration/Space_Science",
+    "https://www.esa.int/Science_Exploration/Space_Science/Juice",
+    "https://www.esa.int/Science_Exploration/Space_Science/Rosetta",
+    "https://www.esa.int/Science_Exploration/Space_Science/Gaia",
+    "https://www.esa.int/Science_Exploration/Space_Science/Solar_Orbiter",
+    "https://www.esa.int/Science_Exploration/Space_Science/Mars_Express",
+    "https://www.esa.int/Science_Exploration/Space_Science/Venus_Express",
+    "https://www.esa.int/Science_Exploration/Space_Science/SMART-1",
+    "https://www.esa.int/Science_Exploration/Space_Science/BepiColombo",
+    "https://www.esa.int/Science_Exploration/Space_Science/Euclid",
+    "https://www.esa.int/Science_Exploration/Space_Science/Hera",
+    "https://www.esa.int/Science_Exploration/Space_Science/ExoMars",
+    "https://www.esa.int/Science_Exploration/Space_Science/Cluster",
+    "https://www.esa.int/Science_Exploration/Space_Science/Hubble",
+    "https://www.esa.int/Science_Exploration/Space_Science/Webb",
+    "https://www.esa.int/Science_Exploration/Space_Science/What_is_the_Solar_System",
+    "https://www.esa.int/Science_Exploration/Space_Science/Exploring_space"
+  ],
+  "include_path_keywords": ["Science_Exploration", "Space_Science", "Juice", "Rosetta", "Gaia", "Solar_Orbiter", "Mars_Express", "Venus_Express", "SMART-1", "BepiColombo", "Euclid", "Hera", "ExoMars", "Cluster", "Hubble", "Webb", "Solar_System", "Exploring_space", "Facts_about"],
+  "exclude_path_keywords": ["/Newsroom/", "/news/", "/gallery/", "/images/", "/video/", "/videos/", "/media/", "/mediakit/", "/Kids/", "/Space_in_Member_States/", "/ESA_Multimedia/", "/Events/", "/Applications/", "/About_Us/", "/Search", "?search", "search=", ".pdf"],
+  "max_depth": 2,
+  "max_pages_per_run": 150,
+  "max_discovery_fetch_pages": 25,
+  "crawl_delay": 0.6,
+  "topic_taxonomy": ["astronomy", "space_science", "planetary_science", "solar_system", "mission"],
+  "quality_gate": {
+    "accepted_min_score": 65,
+    "review_min_score": 35,
+    "allow_exploratory": true,
+    "skip_rejected_allowed": true
+  },
+  "quality_notes": "Official ESA science and mission pages may use --quality-report --skip-rejected in explicit small batches after reviewing rejected samples.",
+  "notes": "Phase 2 manifest-driven preview and raw-only ingestion. ESA discovery stays within science/mission pages."
+}

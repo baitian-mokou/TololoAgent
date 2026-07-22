@@ -1,0 +1,29 @@
+{
+  "schema_version": 1,
+  "sources": [
+    {
+      "source_id": "academic_example",
+      "review_decision": "pending",
+      "reviewer_notes": "",
+      "approved_sample_size": 0
+    },
+    {
+      "source_id": "generic_unknown_example",
+      "review_decision": "needs_manifest_fix",
+      "reviewer_notes": "",
+      "approved_sample_size": 0
+    },
+    {
+      "source_id": "official_science_example",
+      "review_decision": "pending",
+      "reviewer_notes": "",
+      "approved_sample_size": 0
+    },
+    {
+      "source_id": "publisher_example",
+      "review_decision": "pending",
+      "reviewer_notes": "",
+      "approved_sample_size": 0
+    }
+  ]
+}

@@ -1,0 +1,95 @@
+{
+  "mode": "network_probe_approval_decisions",
+  "generated_at": "2026-07-22T02:47:04.102854+00:00",
+  "approval_status": "approved_for_manual_preview",
+  "execution_status": "not_run",
+  "network": false,
+  "formal_pipeline_write": false,
+  "summary": {
+    "items": 2,
+    "decision_counts": {
+      "approved_for_preview_probe": 1,
+      "pending": 1
+    }
+  },
+  "items": [
+    {
+      "source_id": "data_portal_candidate",
+      "allowed_domains": [
+        "data.example.gov"
+      ],
+      "seed_urls": [
+        "https://data.example.gov/datasets/solar-irradiance"
+      ],
+      "max_pages": 8,
+      "rate_limit_seconds": 1.0,
+      "quality_gate_required": true,
+      "preview_only": true,
+      "approval_status": "pending_user_approval",
+      "execution_status": "not_run",
+      "network": false,
+      "formal_pipeline_write": false,
+      "preview_command": "NOT EXECUTED / PREVIEW ONLY: python scripts/preview_source_frontier.py --manifest configs/source_manifests/candidates/data_portal_candidate.json --fetch-links --quality-score --limit 8 --json-out evaluation/source_quality/sandbox/data_portal_candidate_preview_network_probe.json",
+      "checklist": [
+        "confirm_domains match the intended candidate source",
+        "confirm rate limit is acceptable before any future network preview",
+        "confirm_output_path stays under evaluation/source_quality/sandbox",
+        "confirm no formal write to data/raw_json, triples, Chroma, or Neo4j",
+        "confirm_quality_gate remains enabled for preview-only results"
+      ],
+      "risks": [
+        "future preview command would use network if manually run",
+        "seed pages may link to off-topic pages even under allowed domains",
+        "quality scoring still needs rejected-sample review after preview"
+      ],
+      "expected_report_paths": [
+        "evaluation/source_quality/sandbox/data_portal_candidate_preview_network_probe.json"
+      ],
+      "source_probe_status": "planned",
+      "approval_decision": "pending",
+      "reviewer_notes": "示例签收：数据门户仍需确认真实域名和数据许可，暂不批准。",
+      "approved_max_pages": 0,
+      "next_action": "wait for reviewer decision; do not run preview command"
+    },
+    {
+      "source_id": "noaa_climate_candidate",
+      "allowed_domains": [
+        "climate.gov",
+        "www.climate.gov",
+        "noaa.gov"
+      ],
+      "seed_urls": [
+        "https://www.climate.gov/climate-and-energy/topics/climate-change"
+      ],
+      "max_pages": 8,
+      "rate_limit_seconds": 1.0,
+      "quality_gate_required": true,
+      "preview_only": true,
+      "approval_status": "approved_for_manual_preview",
+      "execution_status": "not_run",
+      "network": false,
+      "formal_pipeline_write": false,
+      "preview_command": "NOT EXECUTED / PREVIEW ONLY: python scripts/preview_source_frontier.py --manifest configs/source_manifests/candidates/noaa_climate_candidate.json --fetch-links --quality-score --limit 8 --json-out evaluation/source_quality/sandbox/noaa_climate_candidate_preview_network_probe.json",
+      "checklist": [
+        "confirm_domains match the intended candidate source",
+        "confirm rate limit is acceptable before any future network preview",
+        "confirm_output_path stays under evaluation/source_quality/sandbox",
+        "confirm no formal write to data/raw_json, triples, Chroma, or Neo4j",
+        "confirm_quality_gate remains enabled for preview-only results"
+      ],
+      "risks": [
+        "future preview command would use network if manually run",
+        "seed pages may link to off-topic pages even under allowed domains",
+        "quality scoring still needs rejected-sample review after preview"
+      ],
+      "expected_report_paths": [
+        "evaluation/source_quality/sandbox/noaa_climate_candidate_preview_network_probe.json"
+      ],
+      "source_probe_status": "planned",
+      "approval_decision": "approved_for_preview_probe",
+      "reviewer_notes": "示例签收：允许未来人工手动运行 preview-only 网络探测，最多 5 页；本文件不触发执行。",
+      "approved_max_pages": 5,
+      "next_action": "manual operator may run preview-only command later; this report does not execute network"
+    }
+  ]
+}

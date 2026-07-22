@@ -1,5 +1,5 @@
 {
-  "version": "source_expansion_gold_set_v3",
+  "version": "source_expansion_gold_set_v3_phase3_manifest",
   "source_name": "wikidata",
   "source_schema_version": "wikidata_shadow_ready_v1",
   "approval_mode": "owner-approved exception",
@@ -1026,6 +1026,398 @@
       "expected_section_any_of": [
         "分类"
       ]
+    },
+    {
+      "id": "wikidata_manifest_narrative_01_item",
+      "category": "narrative",
+      "query_kind": "narrative",
+      "query": "“伽利略”号木星探测器 这页介绍了什么",
+      "expected_path": "fallback",
+      "allowed_final_sources": [
+        "fallback"
+      ],
+      "expected_top_k_hit": true,
+      "expected_result": {
+        "page_title": "“伽利略”号木星探测器",
+        "section_any_of": [
+          "raw_chunk_1",
+          "raw_chunk_2"
+        ]
+      },
+      "source_filter": [
+        "wikidata"
+      ],
+      "source_schema_version": "wikidata_shadow_ready_v1",
+      "expected_page_title": "“伽利略”号木星探测器",
+      "expected_section_any_of": [
+        "raw_chunk_1",
+        "raw_chunk_2"
+      ],
+      "eval_scope": "exploratory"
+    },
+    {
+      "id": "wikidata_manifest_narrative_02_item",
+      "category": "narrative",
+      "query_kind": "narrative",
+      "query": "火星 这页介绍了什么",
+      "expected_path": "fallback",
+      "allowed_final_sources": [
+        "fallback"
+      ],
+      "expected_top_k_hit": true,
+      "expected_result": {
+        "page_title": "火星",
+        "section_any_of": [
+          "raw_chunk_1",
+          "raw_chunk_2"
+        ]
+      },
+      "source_filter": [
+        "wikidata"
+      ],
+      "source_schema_version": "wikidata_shadow_ready_v1",
+      "expected_page_title": "火星",
+      "expected_section_any_of": [
+        "raw_chunk_1",
+        "raw_chunk_2"
+      ],
+      "eval_scope": "exploratory"
+    },
+    {
+      "id": "wikidata_manifest_narrative_03_101955",
+      "category": "narrative",
+      "query_kind": "narrative",
+      "query": "小行星101955 这页介绍了什么",
+      "expected_path": "fallback",
+      "allowed_final_sources": [
+        "fallback"
+      ],
+      "expected_top_k_hit": true,
+      "expected_result": {
+        "page_title": "小行星101955",
+        "section_any_of": [
+          "raw_chunk_1",
+          "raw_chunk_2"
+        ]
+      },
+      "source_filter": [
+        "wikidata"
+      ],
+      "source_schema_version": "wikidata_shadow_ready_v1",
+      "expected_page_title": "小行星101955",
+      "expected_section_any_of": [
+        "raw_chunk_1",
+        "raw_chunk_2"
+      ],
+      "eval_scope": "exploratory"
+    },
+    {
+      "id": "wikidata_manifest_narrative_04_item",
+      "category": "narrative",
+      "query_kind": "narrative",
+      "query": "卡西尼－惠更斯号 这页介绍了什么",
+      "expected_path": "fallback",
+      "allowed_final_sources": [
+        "fallback"
+      ],
+      "expected_top_k_hit": true,
+      "expected_result": {
+        "page_title": "卡西尼－惠更斯号",
+        "section_any_of": [
+          "raw_chunk_1",
+          "raw_chunk_2"
+        ]
+      },
+      "source_filter": [
+        "wikidata"
+      ],
+      "source_schema_version": "wikidata_shadow_ready_v1",
+      "expected_page_title": "卡西尼－惠更斯号",
+      "expected_section_any_of": [
+        "raw_chunk_1",
+        "raw_chunk_2"
+      ],
+      "eval_scope": "exploratory"
+    },
+    {
+      "id": "wikidata_manifest_narrative_05_item",
+      "category": "narrative",
+      "query_kind": "narrative",
+      "query": "爱神星 这页介绍了什么",
+      "expected_path": "fallback",
+      "allowed_final_sources": [
+        "fallback"
+      ],
+      "expected_top_k_hit": true,
+      "expected_result": {
+        "page_title": "爱神星",
+        "section_any_of": [
+          "raw_chunk_1",
+          "raw_chunk_2"
+        ]
+      },
+      "source_filter": [
+        "wikidata"
+      ],
+      "source_schema_version": "wikidata_shadow_ready_v1",
+      "expected_page_title": "爱神星",
+      "expected_section_any_of": [
+        "raw_chunk_1",
+        "raw_chunk_2"
+      ],
+      "eval_scope": "exploratory"
+    },
+    {
+      "id": "wikidata_manifest_narrative_06_item",
+      "category": "narrative",
+      "query_kind": "narrative",
+      "query": "勇气号火星探测器 这页介绍了什么",
+      "expected_path": "fallback",
+      "allowed_final_sources": [
+        "fallback"
+      ],
+      "expected_top_k_hit": true,
+      "expected_result": {
+        "page_title": "勇气号火星探测器",
+        "section_any_of": [
+          "raw_chunk_1",
+          "raw_chunk_2"
+        ]
+      },
+      "source_filter": [
+        "wikidata"
+      ],
+      "source_schema_version": "wikidata_shadow_ready_v1",
+      "expected_page_title": "勇气号火星探测器",
+      "expected_section_any_of": [
+        "raw_chunk_1",
+        "raw_chunk_2"
+      ],
+      "eval_scope": "exploratory"
+    },
+    {
+      "id": "wikidata_manifest_narrative_07_item",
+      "category": "narrative",
+      "query_kind": "narrative",
+      "query": "逗留者號 这页介绍了什么",
+      "expected_path": "fallback",
+      "allowed_final_sources": [
+        "fallback"
+      ],
+      "expected_top_k_hit": true,
+      "expected_result": {
+        "page_title": "逗留者號",
+        "section_any_of": [
+          "raw_chunk_1",
+          "raw_chunk_2"
+        ]
+      },
+      "source_filter": [
+        "wikidata"
+      ],
+      "source_schema_version": "wikidata_shadow_ready_v1",
+      "expected_page_title": "逗留者號",
+      "expected_section_any_of": [
+        "raw_chunk_1",
+        "raw_chunk_2"
+      ],
+      "eval_scope": "exploratory"
+    },
+    {
+      "id": "wikidata_manifest_narrative_08_item",
+      "category": "narrative",
+      "query_kind": "narrative",
+      "query": "土星 这页介绍了什么",
+      "expected_path": "fallback",
+      "allowed_final_sources": [
+        "fallback"
+      ],
+      "expected_top_k_hit": true,
+      "expected_result": {
+        "page_title": "土星",
+        "section_any_of": [
+          "raw_chunk_1",
+          "raw_chunk_2"
+        ]
+      },
+      "source_filter": [
+        "wikidata"
+      ],
+      "source_schema_version": "wikidata_shadow_ready_v1",
+      "expected_page_title": "土星",
+      "expected_section_any_of": [
+        "raw_chunk_1",
+        "raw_chunk_2"
+      ],
+      "eval_scope": "exploratory"
+    },
+    {
+      "id": "wikidata_manifest_structured_01_item_has_mass",
+      "category": "structured",
+      "query_kind": "structured",
+      "query": "“伽利略”号木星探测器质量是多少",
+      "expected_path": "fallback",
+      "allowed_final_sources": [
+        "fallback"
+      ],
+      "expected_top_k_hit": true,
+      "expected_result": {
+        "subject": "“伽利略”号木星探测器",
+        "relation": "HAS_MASS",
+        "object": "2223 Q11570"
+      },
+      "source_filter": [
+        "wikidata"
+      ],
+      "source_schema_version": "wikidata_shadow_ready_v1",
+      "eval_scope": "exploratory"
+    },
+    {
+      "id": "wikidata_manifest_structured_02_item_has_mass",
+      "category": "structured",
+      "query_kind": "structured",
+      "query": "“伽利略”号木星探测器质量是多少",
+      "expected_path": "fallback",
+      "allowed_final_sources": [
+        "fallback"
+      ],
+      "expected_top_k_hit": true,
+      "expected_result": {
+        "subject": "“伽利略”号木星探测器",
+        "relation": "HAS_MASS",
+        "object": "1298 Q11570"
+      },
+      "source_filter": [
+        "wikidata"
+      ],
+      "source_schema_version": "wikidata_shadow_ready_v1",
+      "eval_scope": "exploratory"
+    },
+    {
+      "id": "wikidata_manifest_structured_03_item_has_mass",
+      "category": "structured",
+      "query_kind": "structured",
+      "query": "火星质量是多少",
+      "expected_path": "fallback",
+      "allowed_final_sources": [
+        "fallback"
+      ],
+      "expected_top_k_hit": true,
+      "expected_result": {
+        "subject": "火星",
+        "relation": "HAS_MASS",
+        "object": "641.691 Q613726"
+      },
+      "source_filter": [
+        "wikidata"
+      ],
+      "source_schema_version": "wikidata_shadow_ready_v1",
+      "eval_scope": "exploratory"
+    },
+    {
+      "id": "wikidata_manifest_structured_04_item_has_radius",
+      "category": "structured",
+      "query_kind": "structured",
+      "query": "火星半径是多少",
+      "expected_path": "fallback",
+      "allowed_final_sources": [
+        "fallback"
+      ],
+      "expected_top_k_hit": true,
+      "expected_result": {
+        "subject": "火星",
+        "relation": "HAS_RADIUS",
+        "object": "3389.50 Q828224"
+      },
+      "source_filter": [
+        "wikidata"
+      ],
+      "source_schema_version": "wikidata_shadow_ready_v1",
+      "eval_scope": "exploratory"
+    },
+    {
+      "id": "wikidata_manifest_structured_05_item_has_radius",
+      "category": "structured",
+      "query_kind": "structured",
+      "query": "火星半径是多少",
+      "expected_path": "fallback",
+      "allowed_final_sources": [
+        "fallback"
+      ],
+      "expected_top_k_hit": true,
+      "expected_result": {
+        "subject": "火星",
+        "relation": "HAS_RADIUS",
+        "object": "3396.19 Q828224"
+      },
+      "source_filter": [
+        "wikidata"
+      ],
+      "source_schema_version": "wikidata_shadow_ready_v1",
+      "eval_scope": "exploratory"
+    },
+    {
+      "id": "wikidata_manifest_structured_06_item_has_radius",
+      "category": "structured",
+      "query_kind": "structured",
+      "query": "火星半径是多少",
+      "expected_path": "fallback",
+      "allowed_final_sources": [
+        "fallback"
+      ],
+      "expected_top_k_hit": true,
+      "expected_result": {
+        "subject": "火星",
+        "relation": "HAS_RADIUS",
+        "object": "3379.2 Q828224"
+      },
+      "source_filter": [
+        "wikidata"
+      ],
+      "source_schema_version": "wikidata_shadow_ready_v1",
+      "eval_scope": "exploratory"
+    },
+    {
+      "id": "wikidata_manifest_structured_07_101955_has_mass",
+      "category": "structured",
+      "query_kind": "structured",
+      "query": "小行星101955质量是多少",
+      "expected_path": "fallback",
+      "allowed_final_sources": [
+        "fallback"
+      ],
+      "expected_top_k_hit": true,
+      "expected_result": {
+        "subject": "小行星101955",
+        "relation": "HAS_MASS",
+        "object": "73290000000 Q11570"
+      },
+      "source_filter": [
+        "wikidata"
+      ],
+      "source_schema_version": "wikidata_shadow_ready_v1",
+      "eval_scope": "exploratory"
+    },
+    {
+      "id": "wikidata_manifest_structured_08_item_has_mass",
+      "category": "structured",
+      "query_kind": "structured",
+      "query": "卡西尼－惠更斯号质量是多少",
+      "expected_path": "fallback",
+      "allowed_final_sources": [
+        "fallback"
+      ],
+      "expected_top_k_hit": true,
+      "expected_result": {
+        "subject": "卡西尼－惠更斯号",
+        "relation": "HAS_MASS",
+        "object": "5712 Q11570"
+      },
+      "source_filter": [
+        "wikidata"
+      ],
+      "source_schema_version": "wikidata_shadow_ready_v1",
+      "eval_scope": "exploratory"
     }
   ]
 }

@@ -1,0 +1,22 @@
+{
+  "source_name": "generic_unknown_example",
+  "source_mode": "generic_unknown",
+  "allowed_domains": ["science-blog.example.com"],
+  "seed_urls": ["https://science-blog.example.com/solar-system/mars-guide"],
+  "include_path_keywords": ["science", "solar-system", "planet", "mars"],
+  "exclude_path_keywords": ["ads", "shop", "sponsor", "privacy", "/search", "/tag", "gallery", "video"],
+  "max_depth": 1,
+  "max_pages_per_run": 10,
+  "max_discovery_fetch_pages": 0,
+  "crawl_delay": 1.5,
+  "topic_taxonomy": ["astronomy", "planetary_science", "solar_system"],
+  "quality_gate": {
+    "accepted_min_score": 90,
+    "review_min_score": 30,
+    "allow_exploratory": true,
+    "skip_rejected_allowed": false
+  },
+  "quality_notes": "Unknown or commercial science pages should not become accepted without strong evidence and manual sampling.",
+  "fixture_candidates": "tests/fixtures/source_quality/generic_unknown_example_candidates.json",
+  "notes": "Example manifest only; keep unknown sources review-first."
+}

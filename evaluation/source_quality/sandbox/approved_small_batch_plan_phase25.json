@@ -1,0 +1,42 @@
+{
+  "mode": "approved_small_batch_plan_preview",
+  "generated_at": "2026-07-21T17:49:19.271628+00:00",
+  "review_summary_json": "2026-07-21T17:49:08.143772+00:00",
+  "execution_status": "not_run",
+  "network": false,
+  "formal_pipeline_write": false,
+  "summary": {
+    "approved_sources": 1,
+    "plan_items": 1
+  },
+  "items": [
+    {
+      "source_id": "official_science_example",
+      "approved_sample_size": 12,
+      "candidate_count": 4,
+      "selected_candidate_urls": [
+        "https://agency.example.gov/solar-system/mars-fact-sheet",
+        "https://agency.example.gov/missions/jupiter-orbiter",
+        "https://agency.example.gov/gallery/mars-images",
+        "https://agency.example.gov/privacy"
+      ],
+      "selected_candidate_titles": [
+        "Mars Fact Sheet",
+        "Jupiter Orbiter Mission Overview",
+        "Mars image gallery",
+        "Privacy policy"
+      ],
+      "quality_guard_required": true,
+      "network_required_for_future_run": true,
+      "execution_status": "not_run",
+      "blocked_until": "manual command",
+      "reviewer_notes": "Fixture review: accepted mission/fact samples look usable; rejected samples are expected gallery/privacy noise.",
+      "source_summary": {
+        "accepted": 2,
+        "review_needed": 0,
+        "exploratory": 0,
+        "rejected": 2
+      }
+    }
+  ]
+}

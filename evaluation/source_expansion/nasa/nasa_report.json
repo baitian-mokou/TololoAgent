@@ -11,20 +11,72 @@
   },
   "manifest": {
     "exists": true,
-    "path": "F:\\知识表示与处理结课作业\\第二次托洛洛测试 -重大进展\\evaluation\\source_expansion\\nasa\\nasa_queries.json",
+    "path": "F:\\知识表示与处理结课作业\\TololoAgent\\evaluation\\source_expansion\\nasa\\nasa_queries.json",
     "source_name": "nasa",
     "source_schema_version": "nasa_shadow_ready_v1",
+    "total_query_count": 58,
     "query_count": 16,
+    "strict_query_count": 16,
+    "exploratory_query_count": 16,
+    "compat_filtered_query_count": 26,
+    "skipped_query_ids_by_scope": {
+      "exploratory": [
+        "nasa_manifest_narrative_01_nasa_space_science_data_coordinated_archive_stat",
+        "nasa_manifest_narrative_02_asteroids_comets_and_meteors",
+        "nasa_manifest_narrative_03_pluto_dwarf_planets",
+        "nasa_manifest_narrative_04_ceres_facts_nasa_science",
+        "nasa_manifest_narrative_05_eris",
+        "nasa_manifest_narrative_06_haumea",
+        "nasa_manifest_narrative_07_makemake",
+        "nasa_manifest_narrative_08_pluto_facts_nasa_science",
+        "nasa_manifest_structured_01_new_nasa_earth_missions_gear_up_to_start_science_operated_by",
+        "nasa_manifest_structured_02_science_missions_operated_by",
+        "nasa_manifest_structured_03_cassini_huygens_operated_by",
+        "nasa_manifest_structured_04_europa_clipper_operated_by",
+        "nasa_manifest_structured_05_europa_clipper_has_mission_target",
+        "nasa_manifest_structured_06_hubble_space_telescope_operated_by",
+        "nasa_manifest_structured_07_juno_operated_by",
+        "nasa_manifest_structured_08_mars_2020_perseverance_rover_operated_by"
+      ]
+    },
+    "compat_filtered_query_ids": [
+      "nasa_structured_phobos_orbits",
+      "nasa_structured_europa_radius",
+      "nasa_structured_callisto_mass",
+      "nasa_structured_titan_part_of",
+      "nasa_structured_enceladus_orbits",
+      "nasa_structured_triton_radius",
+      "nasa_structured_pluto_radius",
+      "nasa_structured_charon_orbits",
+      "nasa_narrative_mercury_atmosphere",
+      "nasa_narrative_titan_atmosphere",
+      "nasa_narrative_triton_atmosphere",
+      "nasa_narrative_sun_summary",
+      "nasa_negative_wikidata_only_absent",
+      "nasa_fallback_local_narrative",
+      "nasa_source_isolation_titan",
+      "nasa_metadata_narrative_schema",
+      "nasa_path_routing_narrative",
+      "nasa_unit_pluto_mass",
+      "nasa_conflict_pluto_atmosphere",
+      "nasa_structured_moon_orbits",
+      "nasa_structured_sun_radius",
+      "nasa_structured_europa_part_of",
+      "nasa_structured_triton_orbits",
+      "nasa_structured_pluto_mass",
+      "nasa_structured_charon_radius",
+      "nasa_narrative_jupiter_atmosphere"
+    ],
     "load_error": null,
     "query_schema_versions_consistent": true
   },
   "summary": {
     "total_queries": 16,
-    "exact_pass_count": 15,
-    "exact_accuracy": 0.9375,
-    "top_k_hit_count": 13,
+    "exact_pass_count": 16,
+    "exact_accuracy": 1.0,
+    "top_k_hit_count": 14,
     "top_k_hit_denominator": 14,
-    "top_k_hit_rate": 0.9286,
+    "top_k_hit_rate": 1.0,
     "path_selection_correct_count": 16,
     "path_selection_correctness": 1.0,
     "graph_embedding_fallback_inconsistency_count": 0,
@@ -57,12 +109,10 @@
       },
       "fallback": {
         "total": 1,
-        "exact_pass_count": 0,
-        "top_k_hit_count": 0,
+        "exact_pass_count": 1,
+        "top_k_hit_count": 1,
         "query_explainability_degraded_count": 0,
-        "failures": {
-          "wrong quantity": 1
-        }
+        "failures": {}
       },
       "source_isolation": {
         "total": 1,
@@ -103,9 +153,9 @@
   },
   "probes": {
     "graph_results_count": 0,
-    "narrative_results_count": 3,
-    "fallback_graph_count": 13,
-    "fallback_narrative_count": 3
+    "narrative_results_count": 6,
+    "fallback_graph_count": 11,
+    "fallback_narrative_count": 6
   },
   "gates": {
     "passed": true,
@@ -136,7 +186,13 @@
       {
         "name": "exact_accuracy_min",
         "expected": 0.35,
-        "actual": 0.9375,
+        "actual": 1.0,
+        "passed": true
+      },
+      {
+        "name": "query_failure_max",
+        "expected": 0,
+        "actual": 0,
         "passed": true
       },
       {
@@ -218,7 +274,7 @@
         "source": "nasa",
         "source_name": "nasa",
         "source_role": "primary",
-        "origin": "api",
+        "origin": "internal_link",
         "source_title": "水星",
         "schema_version": "nasa_shadow_ready_v1"
       },
@@ -230,7 +286,7 @@
           "source": "nasa",
           "source_name": "nasa",
           "source_role": "primary",
-          "origin": "api",
+          "origin": "internal_link",
           "source_title": "水星",
           "schema_version": "nasa_shadow_ready_v1"
         }
@@ -244,7 +300,7 @@
           "source": "nasa",
           "source_name": "nasa",
           "source_role": "primary",
-          "origin": "api",
+          "origin": "internal_link",
           "source_title": "水星",
           "schema_version": "nasa_shadow_ready_v1"
         }
@@ -266,7 +322,7 @@
         "source": "nasa",
         "source_name": "nasa",
         "source_role": "primary",
-        "origin": "api",
+        "origin": "internal_link",
         "source_title": "水星",
         "schema_version": "nasa_shadow_ready_v1"
       },
@@ -304,7 +360,7 @@
         "source": "nasa",
         "source_name": "nasa",
         "source_role": "primary",
-        "origin": "api",
+        "origin": "internal_link",
         "source_title": "水星",
         "schema_version": "nasa_shadow_ready_v1"
       },
@@ -316,7 +372,7 @@
           "source": "nasa",
           "source_name": "nasa",
           "source_role": "primary",
-          "origin": "api",
+          "origin": "internal_link",
           "source_title": "水星",
           "schema_version": "nasa_shadow_ready_v1"
         }
@@ -330,7 +386,7 @@
           "source": "nasa",
           "source_name": "nasa",
           "source_role": "primary",
-          "origin": "api",
+          "origin": "internal_link",
           "source_title": "水星",
           "schema_version": "nasa_shadow_ready_v1"
         }
@@ -352,7 +408,7 @@
         "source": "nasa",
         "source_name": "nasa",
         "source_role": "primary",
-        "origin": "api",
+        "origin": "internal_link",
         "source_title": "水星",
         "schema_version": "nasa_shadow_ready_v1"
       },
@@ -466,18 +522,20 @@
         "page_title": "火星",
         "section_any_of": [
           "概要",
-          "大气"
+          "大气",
+          "raw_chunk_1"
         ]
       },
       "expected_page_title": "火星",
       "expected_section_any_of": [
         "概要",
-        "大气"
+        "大气",
+        "raw_chunk_1"
       ],
       "returned_result": {
         "page_title": "火星",
-        "section": "概要",
-        "content": "var gform;gform||(document.addEventListener(\"gform_main_scripts_loaded\",function(){gform.scriptsLoaded=!0}),document.addEventListener(\"gform/theme/scripts_loaded\",function(){gform.themeScriptsLoaded=!...",
+        "section": "raw_chunk_1",
+        "content": "Explore Search News & Events News & Events News Releases Recently Published Video Series on NASA+ Podcasts & Audio Blogs Newsletters Social Media Media Resources Events Upcoming Launches & Landings Vi...",
         "score": 0.6666666666666666,
         "rank": 1,
         "source": "nasa",
@@ -490,10 +548,49 @@
       "top_k_results": [
         {
           "page_title": "火星",
-          "section": "概要",
-          "content": "var gform;gform||(document.addEventListener(\"gform_main_scripts_loaded\",function(){gform.scriptsLoaded=!0}),document.addEventListener(\"gform/theme/scripts_loaded\",function(){gform.themeScriptsLoaded=!...",
+          "section": "raw_chunk_1",
+          "content": "Explore Search News & Events News & Events News Releases Recently Published Video Series on NASA+ Podcasts & Audio Blogs Newsletters Social Media Media Resources Events Upcoming Launches & Landings Vi...",
           "score": 0.6666666666666666,
           "rank": 1,
+          "source": "nasa",
+          "source_name": "nasa",
+          "source_role": "primary",
+          "origin": "api",
+          "source_title": "火星",
+          "schema_version": "nasa_shadow_ready_v1"
+        },
+        {
+          "page_title": "火星",
+          "section": "raw_chunk_2",
+          "content": "Milky Way Heart Previews Core Survey by NASA’s Roman article 4 days ago Back Missions Search All NASA Missions A to Z List of Missions Upcoming Launches and Landings Spaceships and Rockets Communicati...",
+          "score": 0.6666666666666666,
+          "rank": 2,
+          "source": "nasa",
+          "source_name": "nasa",
+          "source_role": "primary",
+          "origin": "api",
+          "source_title": "火星",
+          "schema_version": "nasa_shadow_ready_v1"
+        },
+        {
+          "page_title": "火星",
+          "section": "raw_chunk_3",
+          "content": "ary Science Astrophysics & Space Science The Sun & Heliophysics Biological & Physical Sciences Lunar Science Citizen Science Astromaterials Aeronautics Research Human Space Travel Research Aeronautics...",
+          "score": 0.6666666666666666,
+          "rank": 3,
+          "source": "nasa",
+          "source_name": "nasa",
+          "source_role": "primary",
+          "origin": "api",
+          "source_title": "火星",
+          "schema_version": "nasa_shadow_ready_v1"
+        },
+        {
+          "page_title": "火星",
+          "section": "raw_chunk_4",
+          "content": "ica Ciencias Terrestres Sistema Solar Universo News & Events News Releases Recently Published Video Series on NASA+ Podcasts & Audio Blogs Newsletters Social Media Media Resources Events Upcoming Laun...",
+          "score": 0.6666666666666666,
+          "rank": 4,
           "source": "nasa",
           "source_name": "nasa",
           "source_role": "primary",
@@ -505,10 +602,49 @@
       "fallback_results": [
         {
           "page_title": "火星",
-          "section": "概要",
-          "content": "var gform;gform||(document.addEventListener(\"gform_main_scripts_loaded\",function(){gform.scriptsLoaded=!0}),document.addEventListener(\"gform/theme/scripts_loaded\",function(){gform.themeScriptsLoaded=!...",
+          "section": "raw_chunk_1",
+          "content": "Explore Search News & Events News & Events News Releases Recently Published Video Series on NASA+ Podcasts & Audio Blogs Newsletters Social Media Media Resources Events Upcoming Launches & Landings Vi...",
           "score": 0.6666666666666666,
           "rank": 1,
+          "source": "nasa",
+          "source_name": "nasa",
+          "source_role": "primary",
+          "origin": "api",
+          "source_title": "火星",
+          "schema_version": "nasa_shadow_ready_v1"
+        },
+        {
+          "page_title": "火星",
+          "section": "raw_chunk_2",
+          "content": "Milky Way Heart Previews Core Survey by NASA’s Roman article 4 days ago Back Missions Search All NASA Missions A to Z List of Missions Upcoming Launches and Landings Spaceships and Rockets Communicati...",
+          "score": 0.6666666666666666,
+          "rank": 2,
+          "source": "nasa",
+          "source_name": "nasa",
+          "source_role": "primary",
+          "origin": "api",
+          "source_title": "火星",
+          "schema_version": "nasa_shadow_ready_v1"
+        },
+        {
+          "page_title": "火星",
+          "section": "raw_chunk_3",
+          "content": "ary Science Astrophysics & Space Science The Sun & Heliophysics Biological & Physical Sciences Lunar Science Citizen Science Astromaterials Aeronautics Research Human Space Travel Research Aeronautics...",
+          "score": 0.6666666666666666,
+          "rank": 3,
+          "source": "nasa",
+          "source_name": "nasa",
+          "source_role": "primary",
+          "origin": "api",
+          "source_title": "火星",
+          "schema_version": "nasa_shadow_ready_v1"
+        },
+        {
+          "page_title": "火星",
+          "section": "raw_chunk_4",
+          "content": "ica Ciencias Terrestres Sistema Solar Universo News & Events News Releases Recently Published Video Series on NASA+ Podcasts & Audio Blogs Newsletters Social Media Media Resources Events Upcoming Laun...",
+          "score": 0.6666666666666666,
+          "rank": 4,
           "source": "nasa",
           "source_name": "nasa",
           "source_role": "primary",
@@ -529,8 +665,8 @@
       "explainability_status": "ok",
       "source_metadata": {
         "page_title": "火星",
-        "section": "概要",
-        "content": "var gform;gform||(document.addEventListener(\"gform_main_scripts_loaded\",function(){gform.scriptsLoaded=!0}),document.addEventListener(\"gform/theme/scripts_loaded\",function(){gform.themeScriptsLoaded=!...",
+        "section": "raw_chunk_1",
+        "content": "Explore Search News & Events News & Events News Releases Recently Published Video Series on NASA+ Podcasts & Audio Blogs Newsletters Social Media Media Resources Events Upcoming Launches & Landings Vi...",
         "score": 0.6666666666666666,
         "rank": 1,
         "source": "nasa",
@@ -606,117 +742,73 @@
         "object": "火星"
       },
       "normalized_expected_value": null,
-      "normalized_returned_value": "6.4171e23 kg",
+      "normalized_returned_value": "火星",
       "returned_result": {
-        "subject": "火星",
-        "relation": "HAS_MASS",
-        "object": "6.4171e23 kg",
+        "subject": "火卫一",
+        "relation": "ORBITS",
+        "object": "火星",
         "source": "nasa",
         "source_name": "nasa",
         "source_role": "primary",
         "origin": "internal_link",
-        "source_title": "火星",
+        "source_title": "火卫一",
         "schema_version": "nasa_shadow_ready_v1"
       },
       "top_k_results": [
         {
-          "subject": "火星",
-          "relation": "HAS_MASS",
-          "object": "6.4171e23 kg",
+          "subject": "火卫一",
+          "relation": "ORBITS",
+          "object": "火星",
           "source": "nasa",
           "source_name": "nasa",
           "source_role": "primary",
           "origin": "internal_link",
-          "source_title": "火星",
-          "schema_version": "nasa_shadow_ready_v1"
-        },
-        {
-          "subject": "火星",
-          "relation": "HAS_RADIUS",
-          "object": "3389.5 km",
-          "source": "nasa",
-          "source_name": "nasa",
-          "source_role": "primary",
-          "origin": "internal_link",
-          "source_title": "火星",
-          "schema_version": "nasa_shadow_ready_v1"
-        },
-        {
-          "subject": "火星",
-          "relation": "HAS_ATMOSPHERE",
-          "object": "二氧化碳;氮气;氩气",
-          "source": "nasa",
-          "source_name": "nasa",
-          "source_role": "primary",
-          "origin": "internal_link",
-          "source_title": "火星",
+          "source_title": "火卫一",
           "schema_version": "nasa_shadow_ready_v1"
         }
       ],
       "graph_only_results": [],
       "fallback_results": [
         {
-          "subject": "火星",
-          "relation": "HAS_MASS",
-          "object": "6.4171e23 kg",
+          "subject": "火卫一",
+          "relation": "ORBITS",
+          "object": "火星",
           "source": "nasa",
           "source_name": "nasa",
           "source_role": "primary",
           "origin": "internal_link",
-          "source_title": "火星",
-          "schema_version": "nasa_shadow_ready_v1"
-        },
-        {
-          "subject": "火星",
-          "relation": "HAS_RADIUS",
-          "object": "3389.5 km",
-          "source": "nasa",
-          "source_name": "nasa",
-          "source_role": "primary",
-          "origin": "internal_link",
-          "source_title": "火星",
-          "schema_version": "nasa_shadow_ready_v1"
-        },
-        {
-          "subject": "火星",
-          "relation": "HAS_ATMOSPHERE",
-          "object": "二氧化碳;氮气;氩气",
-          "source": "nasa",
-          "source_name": "nasa",
-          "source_role": "primary",
-          "origin": "internal_link",
-          "source_title": "火星",
+          "source_title": "火卫一",
           "schema_version": "nasa_shadow_ready_v1"
         }
       ],
-      "exact_match": false,
-      "top_k_hit": false,
+      "exact_match": true,
+      "top_k_hit": true,
       "expected_top_k_hit": true,
-      "top_k_expectation_met": false,
+      "top_k_expectation_met": true,
       "path_correct": true,
       "allowed_final_source_ok": true,
-      "pass": false,
+      "pass": true,
       "query_schema_ok": true,
       "query_explainability_degraded": false,
       "explainability_status": "ok",
       "source_metadata": {
-        "subject": "火星",
-        "relation": "HAS_MASS",
-        "object": "6.4171e23 kg",
+        "subject": "火卫一",
+        "relation": "ORBITS",
+        "object": "火星",
         "source": "nasa",
         "source_name": "nasa",
         "source_role": "primary",
         "origin": "internal_link",
-        "source_title": "火星",
+        "source_title": "火卫一",
         "schema_version": "nasa_shadow_ready_v1"
       },
       "metadata_complete": true,
       "source_filter_failed": false,
       "inferred_boundary_break": false,
-      "fallback_exact_match": false,
-      "fallback_top_k_hit": false,
+      "fallback_exact_match": true,
+      "fallback_top_k_hit": true,
       "consistency_match": true,
-      "failure_category": "wrong quantity",
+      "failure_category": null,
       "expected_failure_if_any": null
     },
     {
@@ -956,7 +1048,7 @@
         "source": "nasa",
         "source_name": "nasa",
         "source_role": "primary",
-        "origin": "api",
+        "origin": "internal_link",
         "source_title": "地球",
         "schema_version": "nasa_shadow_ready_v1"
       },
@@ -968,7 +1060,7 @@
           "source": "nasa",
           "source_name": "nasa",
           "source_role": "primary",
-          "origin": "api",
+          "origin": "internal_link",
           "source_title": "地球",
           "schema_version": "nasa_shadow_ready_v1"
         }
@@ -982,7 +1074,7 @@
           "source": "nasa",
           "source_name": "nasa",
           "source_role": "primary",
-          "origin": "api",
+          "origin": "internal_link",
           "source_title": "地球",
           "schema_version": "nasa_shadow_ready_v1"
         }
@@ -1004,7 +1096,7 @@
         "source": "nasa",
         "source_name": "nasa",
         "source_role": "primary",
-        "origin": "api",
+        "origin": "internal_link",
         "source_title": "地球",
         "schema_version": "nasa_shadow_ready_v1"
       },
@@ -1032,19 +1124,21 @@
         "page_title": "地球",
         "section_any_of": [
           "NASA live preview",
-          "大气"
+          "大气",
+          "raw_chunk_1"
         ]
       },
       "expected_page_title": "地球",
       "expected_section_any_of": [
         "NASA live preview",
-        "大气"
+        "大气",
+        "raw_chunk_1"
       ],
       "returned_result": {
         "page_title": "地球",
-        "section": "NASA live preview",
-        "content": "NASA live preview parsed 3 candidate facts from a public fact sheet for 地球.",
-        "score": 0.7444444444444445,
+        "section": "raw_chunk_1",
+        "content": "Field Earth Mass (10^24 kg) 5.9722 Mean radius (km) 6371.0 Atmospheric composition Nitrogen; Oxygen; Argon",
+        "score": 0.6666666666666666,
         "rank": 1,
         "source": "nasa",
         "source_name": "nasa",
@@ -1056,9 +1150,9 @@
       "top_k_results": [
         {
           "page_title": "地球",
-          "section": "NASA live preview",
-          "content": "NASA live preview parsed 3 candidate facts from a public fact sheet for 地球.",
-          "score": 0.7444444444444445,
+          "section": "raw_chunk_1",
+          "content": "Field Earth Mass (10^24 kg) 5.9722 Mean radius (km) 6371.0 Atmospheric composition Nitrogen; Oxygen; Argon",
+          "score": 0.6666666666666666,
           "rank": 1,
           "source": "nasa",
           "source_name": "nasa",
@@ -1071,9 +1165,9 @@
       "fallback_results": [
         {
           "page_title": "地球",
-          "section": "NASA live preview",
-          "content": "NASA live preview parsed 3 candidate facts from a public fact sheet for 地球.",
-          "score": 0.7444444444444445,
+          "section": "raw_chunk_1",
+          "content": "Field Earth Mass (10^24 kg) 5.9722 Mean radius (km) 6371.0 Atmospheric composition Nitrogen; Oxygen; Argon",
+          "score": 0.6666666666666666,
           "rank": 1,
           "source": "nasa",
           "source_name": "nasa",
@@ -1095,9 +1189,9 @@
       "explainability_status": "ok",
       "source_metadata": {
         "page_title": "地球",
-        "section": "NASA live preview",
-        "content": "NASA live preview parsed 3 candidate facts from a public fact sheet for 地球.",
-        "score": 0.7444444444444445,
+        "section": "raw_chunk_1",
+        "content": "Field Earth Mass (10^24 kg) 5.9722 Mean radius (km) 6371.0 Atmospheric composition Nitrogen; Oxygen; Argon",
+        "score": 0.6666666666666666,
         "rank": 1,
         "source": "nasa",
         "source_name": "nasa",
@@ -1312,7 +1406,7 @@
         "source": "nasa",
         "source_name": "nasa",
         "source_role": "primary",
-        "origin": "api",
+        "origin": "internal_link",
         "source_title": "地球",
         "schema_version": "nasa_shadow_ready_v1"
       },
@@ -1324,7 +1418,7 @@
           "source": "nasa",
           "source_name": "nasa",
           "source_role": "primary",
-          "origin": "api",
+          "origin": "internal_link",
           "source_title": "地球",
           "schema_version": "nasa_shadow_ready_v1"
         }
@@ -1338,7 +1432,7 @@
           "source": "nasa",
           "source_name": "nasa",
           "source_role": "primary",
-          "origin": "api",
+          "origin": "internal_link",
           "source_title": "地球",
           "schema_version": "nasa_shadow_ready_v1"
         }
@@ -1360,7 +1454,7 @@
         "source": "nasa",
         "source_name": "nasa",
         "source_role": "primary",
-        "origin": "api",
+        "origin": "internal_link",
         "source_title": "地球",
         "schema_version": "nasa_shadow_ready_v1"
       },
@@ -1398,7 +1492,7 @@
         "source": "nasa",
         "source_name": "nasa",
         "source_role": "primary",
-        "origin": "api",
+        "origin": "internal_link",
         "source_title": "金星",
         "schema_version": "nasa_shadow_ready_v1"
       },
@@ -1410,7 +1504,7 @@
           "source": "nasa",
           "source_name": "nasa",
           "source_role": "primary",
-          "origin": "api",
+          "origin": "internal_link",
           "source_title": "金星",
           "schema_version": "nasa_shadow_ready_v1"
         }
@@ -1424,7 +1518,7 @@
           "source": "nasa",
           "source_name": "nasa",
           "source_role": "primary",
-          "origin": "api",
+          "origin": "internal_link",
           "source_title": "金星",
           "schema_version": "nasa_shadow_ready_v1"
         }
@@ -1446,7 +1540,7 @@
         "source": "nasa",
         "source_name": "nasa",
         "source_role": "primary",
-        "origin": "api",
+        "origin": "internal_link",
         "source_title": "金星",
         "schema_version": "nasa_shadow_ready_v1"
       },
@@ -1474,19 +1568,21 @@
         "page_title": "地球",
         "section_any_of": [
           "NASA live preview",
-          "大气"
+          "大气",
+          "raw_chunk_1"
         ]
       },
       "expected_page_title": "地球",
       "expected_section_any_of": [
         "NASA live preview",
-        "大气"
+        "大气",
+        "raw_chunk_1"
       ],
       "returned_result": {
         "page_title": "地球",
-        "section": "NASA live preview",
-        "content": "NASA live preview parsed 3 candidate facts from a public fact sheet for 地球.",
-        "score": 0.7444444444444445,
+        "section": "raw_chunk_1",
+        "content": "Field Earth Mass (10^24 kg) 5.9722 Mean radius (km) 6371.0 Atmospheric composition Nitrogen; Oxygen; Argon",
+        "score": 0.6666666666666666,
         "rank": 1,
         "source": "nasa",
         "source_name": "nasa",
@@ -1498,9 +1594,9 @@
       "top_k_results": [
         {
           "page_title": "地球",
-          "section": "NASA live preview",
-          "content": "NASA live preview parsed 3 candidate facts from a public fact sheet for 地球.",
-          "score": 0.7444444444444445,
+          "section": "raw_chunk_1",
+          "content": "Field Earth Mass (10^24 kg) 5.9722 Mean radius (km) 6371.0 Atmospheric composition Nitrogen; Oxygen; Argon",
+          "score": 0.6666666666666666,
           "rank": 1,
           "source": "nasa",
           "source_name": "nasa",
@@ -1513,9 +1609,9 @@
       "fallback_results": [
         {
           "page_title": "地球",
-          "section": "NASA live preview",
-          "content": "NASA live preview parsed 3 candidate facts from a public fact sheet for 地球.",
-          "score": 0.7444444444444445,
+          "section": "raw_chunk_1",
+          "content": "Field Earth Mass (10^24 kg) 5.9722 Mean radius (km) 6371.0 Atmospheric composition Nitrogen; Oxygen; Argon",
+          "score": 0.6666666666666666,
           "rank": 1,
           "source": "nasa",
           "source_name": "nasa",
@@ -1537,9 +1633,9 @@
       "explainability_status": "ok",
       "source_metadata": {
         "page_title": "地球",
-        "section": "NASA live preview",
-        "content": "NASA live preview parsed 3 candidate facts from a public fact sheet for 地球.",
-        "score": 0.7444444444444445,
+        "section": "raw_chunk_1",
+        "content": "Field Earth Mass (10^24 kg) 5.9722 Mean radius (km) 6371.0 Atmospheric composition Nitrogen; Oxygen; Argon",
+        "score": 0.6666666666666666,
         "rank": 1,
         "source": "nasa",
         "source_name": "nasa",

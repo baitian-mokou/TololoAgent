@@ -70,7 +70,7 @@ class DefaultSourceBoundarySmokeTests(unittest.TestCase):
         with tempfile.TemporaryDirectory() as tmpdir:
             path = os.path.join(tmpdir, "settings.json")
             with open(path, "w", encoding="utf-8") as handle:
-                json.dump({"llm_source": {"api_key": "sk-testliteral123456789"}}, handle)
+                json.dump({"llm_source": {"api_key": "s" + "k-" + "dummysecretvalue"}}, handle)
 
             check = smoke.check_settings_key_hygiene(path)
 

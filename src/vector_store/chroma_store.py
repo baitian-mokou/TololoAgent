@@ -24,6 +24,14 @@ from src.source_control import (
     get_source_schema_version,
     normalize_source_filter,
 )
+from src.ingestion_checkpoint import (
+    checkpoint_has_current_file,
+    checkpoint_path,
+    load_checkpoint,
+    mark_file_processed,
+    remove_checkpoint,
+    save_checkpoint,
+)
 
 
 class LocalBGEEmbedder:
@@ -102,6 +110,8 @@ class LocalBGEEmbedder:
 
     def get_sentence_embedding_dimension(self) -> int:
         self._load_model()
+        if hasattr(self.model, "get_embedding_dimension"):
+            return int(self.model.get_embedding_dimension())
         return int(self.model.get_sentence_embedding_dimension())
 
 
@@ -127,6 +137,13 @@ class ChromaStore:
 
     def has_persisted_store(self) -> bool:
         return os.path.exists(os.path.join(self.persist_dir, "chroma.sqlite3"))
+
+    def close(self):
+        """释放 Chroma 客户端，避免 Windows 上 sqlite 文件锁残留。"""
+        if self.client is not None and hasattr(self.client, "close"):
+            self.client.close()
+        self.collection = None
+        self.client = None
 
     def _init_embedding(self):
         """延迟加载嵌入模型。"""
@@ -177,6 +194,35 @@ class ChromaStore:
                 "hnsw segment writer",
             )
         )
+
+    @staticmethod
+    def _is_collection_missing_error(exc: Exception) -> bool:
+        message = str(exc).lower()
+        return "collection" in message and "does not exist" in message
+
+    def _get_or_create_collection(self, collection_name: Optional[str] = None):
+        collection_name = collection_name or self._collection_name
+        if self.client is None:
+            self._init_chroma()
+        if self.client is None:
+            return None
+        if hasattr(self.client, "get_or_create_collection"):
+            return self.client.get_or_create_collection(
+                collection_name,
+                metadata=self._collection_metadata(),
+            )
+        try:
+            return self.client.get_collection(collection_name)
+        except Exception:
+            return self.client.create_collection(
+                collection_name,
+                metadata=self._collection_metadata(),
+            )
+
+    def _refresh_collection_handle(self, reason: str):
+        print(f"[Chroma] 集合句柄失效，重新获取集合后重试: {reason}")
+        self.collection = self._get_or_create_collection(self._collection_name)
+        return self.collection
 
     def _quarantine_persist_dir(self) -> Optional[str]:
         """把损坏的 Chroma 持久化目录隔离出来，便于重新初始化。"""
@@ -553,6 +599,15 @@ class ChromaStore:
             )
             return len(documents)
         except Exception as e:
+            if self._is_collection_missing_error(e):
+                self._refresh_collection_handle("添加文档时集合不存在")
+                self.collection.add(
+                    documents=documents,
+                    metadatas=list(metadatas),
+                    ids=list(ids),
+                    embeddings=embeddings,
+                )
+                return len(documents)
             if self._is_hnsw_index_error(e):
                 self._recover_chroma_store(e, "添加文档时写入失败")
                 self.collection.add(
@@ -564,6 +619,36 @@ class ChromaStore:
                 return len(documents)
             raise
 
+    def _existing_document_ids(self, ids: Sequence[str]) -> set:
+        if not ids or self.collection is None:
+            return set()
+        try:
+            result = self.collection.get(ids=list(ids))
+        except Exception as e:
+            if self._is_collection_missing_error(e):
+                self._refresh_collection_handle("检查已有向量时集合不存在")
+                result = self.collection.get(ids=list(ids))
+            else:
+                raise
+        return {str(doc_id) for doc_id in result.get("ids", [])}
+
+    def _filter_existing_documents(self, documents: Sequence[str], metadatas: Sequence[dict], ids: Sequence[str]):
+        existing_ids = self._existing_document_ids(ids)
+        if not existing_ids:
+            return list(documents), list(metadatas), list(ids), 0
+        kept_documents = []
+        kept_metadatas = []
+        kept_ids = []
+        skipped = 0
+        for document, metadata, doc_id in zip(documents, metadatas, ids):
+            if str(doc_id) in existing_ids:
+                skipped += 1
+                continue
+            kept_documents.append(document)
+            kept_metadatas.append(metadata)
+            kept_ids.append(doc_id)
+        return kept_documents, kept_metadatas, kept_ids, skipped
+
     def delete(self, ids=None, where=None, where_document=None):
         """兼容接口：删除文档。"""
         self._init_chroma()
@@ -574,13 +659,23 @@ class ChromaStore:
             self.collection.delete(ids=ids, where=where, where_document=where_document)
             return 1
         except Exception as e:
+            if self._is_collection_missing_error(e):
+                self._refresh_collection_handle("删除文档时集合不存在")
+                self.collection.delete(ids=ids, where=where, where_document=where_document)
+                return 1
             if self._is_hnsw_index_error(e):
                 self._recover_chroma_store(e, "删除文档时读取失败")
                 self.collection.delete(ids=ids, where=where, where_document=where_document)
                 return 1
             raise
 
-    def load_all_narratives(self, narratives_dir=None, replace_existing: bool = False):
+    def load_all_narratives(
+        self,
+        narratives_dir=None,
+        replace_existing: bool = False,
+        resume: bool = False,
+        skip_existing: bool = False,
+    ):
         """加载所有叙事 JSON 文件到 Chroma。"""
         try:
             self.initialize()
@@ -592,33 +687,50 @@ class ChromaStore:
                 raise
 
         narratives_dir = narratives_dir or self.triples_dir
+        source_name = getattr(self, "source_name", ACTIVE_SOURCE)
+        checkpoint_kind = "chroma_narratives"
+        resume_path = checkpoint_path(checkpoint_kind, source_name, narratives_dir)
+        checkpoint = load_checkpoint(resume_path, checkpoint_kind) if resume else {"processed": {}}
+        processed = checkpoint.get("processed", {})
+        has_resume_state = bool(processed)
+
         if replace_existing:
-            removed = self.clear_database()
-            print(f"[Chroma] 对齐当前 canonical narratives，已清理旧集合 {removed} 条记录")
-        nar_files = glob.glob(os.path.join(narratives_dir, "*_narratives.json"))
+            if resume and has_resume_state:
+                print(f"[Chroma] 检测到续入进度，保留现有集合并继续: {resume_path}")
+            else:
+                if resume:
+                    remove_checkpoint(resume_path)
+                    processed = {}
+                removed = self.clear_database()
+                print(f"[Chroma] 对齐当前 canonical narratives，已清理旧集合 {removed} 条记录")
+        nar_files = sorted(glob.glob(os.path.join(narratives_dir, "*_narratives.json")))
         print(f"[Chroma] 发现 {len(nar_files)} 个叙事文件")
 
         total_added = 0
         total_skipped = 0
+        failed_files = 0
 
         for filepath in nar_files:
+            fname = os.path.basename(filepath)
+            if resume and checkpoint_has_current_file(checkpoint, filepath):
+                print(f"[Chroma] 跳过已续入文件: {fname}")
+                continue
+
             try:
                 with open(filepath, "r", encoding="utf-8") as f:
                     narratives = json.load(f)
             except Exception:
-                continue
-
-            if not narratives:
+                failed_files += 1
                 continue
 
             texts = []
             metadatas = []
             ids = []
 
-            for nar in narratives:
+            for nar in narratives or []:
                 nar = normalize_narrative_record(nar)
                 content = nar.get("content", "")
-                if not content or len(content) < 50:
+                if not content or len(content) < 10:
                     continue
 
                 chunk_id = nar.get("chunk_id", "")
@@ -642,6 +754,8 @@ class ChromaStore:
                 })
                 ids.append(chunk_id)
 
+            file_added = 0
+            file_failed = False
             if texts:
                 try:
                     batch_size = 50
@@ -649,38 +763,72 @@ class ChromaStore:
                         batch_texts = texts[i:i + batch_size]
                         batch_metadatas = metadatas[i:i + batch_size]
                         batch_ids = ids[i:i + batch_size]
+                        if skip_existing:
+                            batch_texts, batch_metadatas, batch_ids, skipped = self._filter_existing_documents(
+                                batch_texts,
+                                batch_metadatas,
+                                batch_ids,
+                            )
+                            total_skipped += skipped
+                            if not batch_texts:
+                                continue
                         added = self.add_document(
                             documents=batch_texts,
                             metadatas=batch_metadatas,
                             ids=batch_ids,
                         )
                         total_added += added
+                        file_added += added
                 except Exception as e:
                     if "dimension" in str(e).lower():
                         print(f"  [Chroma] 旧集合维度不兼容，准备重建后重试: {e}")
+                        if resume:
+                            remove_checkpoint(resume_path)
                         self._recreate_collection()
                         total_added = 0
                         total_skipped = 0
                         return self.load_all_narratives(
                             narratives_dir=narratives_dir,
                             replace_existing=replace_existing,
+                            resume=False,
+                            skip_existing=False,
                         )
                     if self._is_hnsw_index_error(e):
                         print(f"  [Chroma] 检测到持久化索引异常，准备隔离后全量重试: {e}")
+                        if resume:
+                            remove_checkpoint(resume_path)
                         self._rebuild_persist_store()
                         total_added = 0
                         total_skipped = 0
                         return self.load_all_narratives(
                             narratives_dir=narratives_dir,
                             replace_existing=False,
+                            resume=False,
+                            skip_existing=False,
                         )
                     print(f"  添加失败: {e}")
                     total_skipped += len(texts)
+                    failed_files += 1
+                    file_failed = True
 
-            fname = os.path.basename(filepath)
-            print(f"[Chroma] {fname}: +{len(texts)} 条 (跳过{total_skipped})")
+            if resume and not file_failed:
+                mark_file_processed(processed, filepath)
+                checkpoint["processed"] = processed
+                save_checkpoint(resume_path, checkpoint_kind, source_name, narratives_dir, processed)
 
-        count = self.collection.count()
+            print(f"[Chroma] {fname}: +{file_added} 条 (跳过{total_skipped})")
+
+        if resume and failed_files == 0:
+            remove_checkpoint(resume_path)
+
+        try:
+            count = self.collection.count()
+        except Exception as e:
+            if self._is_collection_missing_error(e):
+                self._refresh_collection_handle("统计导入结果时集合不存在")
+                count = self.collection.count()
+            else:
+                raise
         print(f"\n[Chroma] 导入完成！集合总计 {count} 条记录")
         return total_added
 

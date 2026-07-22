@@ -1,0 +1,136 @@
+{
+  "source_id": "academic_example",
+  "registered": false,
+  "network": false,
+  "mode": "manifest_candidate_sandbox",
+  "generated_at": "2026-07-21T17:49:08.139834+00:00",
+  "manifest_path": "configs\\source_manifests\\examples\\academic_example.json",
+  "fixture_candidates_path": "tests/fixtures/source_quality/academic_example_candidates.json",
+  "manifest_validation": {
+    "passed": true,
+    "errors": [],
+    "warnings": []
+  },
+  "candidate_count": 4,
+  "triage_counts": {
+    "exploratory": 1,
+    "rejected": 1,
+    "review_needed": 2
+  },
+  "top_reasons": {
+    "academic or preprint domain": 4,
+    "short text": 3,
+    "reference signal present": 2,
+    "publication/abstract signal": 2,
+    "topic taxonomy hits=4": 1,
+    "science keyword hits=12": 1,
+    "topic taxonomy hits=1": 1,
+    "science keyword hits=7": 1,
+    "topic taxonomy hits=2": 1,
+    "science keyword hits=3": 1
+  },
+  "safety_flags": {
+    "formal_pipeline_write": false,
+    "raw_json_write": false,
+    "triples_write": false,
+    "chroma_write": false,
+    "neo4j_write": false,
+    "network_disabled": true,
+    "unregistered_ingest_blocked": true,
+    "sandbox_report_only": true
+  },
+  "selected_candidate_snapshots": [
+    {
+      "index": 1,
+      "url": "https://astro.example.edu/research/planetary-lab/mars-spectroscopy",
+      "title": "Planetary Spectroscopy Laboratory Project",
+      "text_length": 211,
+      "html_length": 0,
+      "score": 65,
+      "triage": "review_needed",
+      "labels": [
+        "academic_source",
+        "topic_taxonomy_context",
+        "science_topic",
+        "has_references",
+        "publication_page",
+        "short_text"
+      ],
+      "reasons": [
+        "academic or preprint domain",
+        "topic taxonomy hits=4",
+        "science keyword hits=12",
+        "reference signal present",
+        "publication/abstract signal"
+      ]
+    },
+    {
+      "index": 2,
+      "url": "https://astro.example.edu/papers/exoplanet-atmosphere-abstract",
+      "title": "Exoplanet Atmosphere Abstract",
+      "text_length": 182,
+      "html_length": 0,
+      "score": 57,
+      "triage": "review_needed",
+      "labels": [
+        "academic_source",
+        "topic_taxonomy_context",
+        "science_topic",
+        "has_references",
+        "publication_page",
+        "short_text"
+      ],
+      "reasons": [
+        "academic or preprint domain",
+        "topic taxonomy hits=1",
+        "science keyword hits=7",
+        "reference signal present",
+        "publication/abstract signal"
+      ]
+    },
+    {
+      "index": 3,
+      "url": "https://astro.example.edu/news/lab-open-day",
+      "title": "Lab open day news",
+      "text_length": 99,
+      "html_length": 0,
+      "score": 8,
+      "triage": "exploratory",
+      "labels": [
+        "academic_source",
+        "topic_taxonomy_context",
+        "science_topic",
+        "short_text",
+        "news_page"
+      ],
+      "reasons": [
+        "academic or preprint domain",
+        "topic taxonomy hits=2",
+        "science keyword hits=3",
+        "short text",
+        "news/update signal"
+      ]
+    },
+    {
+      "index": 4,
+      "url": "https://astro.example.edu/people",
+      "title": "People index",
+      "text_length": 31,
+      "html_length": 0,
+      "score": 0,
+      "triage": "rejected",
+      "labels": [
+        "academic_source",
+        "short_text",
+        "low_signal"
+      ],
+      "reasons": [
+        "academic or preprint domain",
+        "very short text",
+        "low science signal"
+      ]
+    }
+  ],
+  "frontier_skipped_count": 0,
+  "frontier_skipped": []
+}

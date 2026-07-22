@@ -3,7 +3,6 @@ import importlib.util
 import io
 import json
 import os
-import shutil
 import sys
 import tempfile
 import types
@@ -24,6 +23,55 @@ def load_module():
 
 
 class RunSourceExpansionEvalTests(unittest.TestCase):
+    def test_manifest_queries_can_be_marked_exploratory_outside_strict_gate(self):
+        module = load_module()
+        queries = [
+            {
+                "id": "nasa_structured_mercury_mass",
+                "query": "水星质量",
+                "source_schema_version": "nasa_shadow_ready_v1",
+            },
+            {
+                "id": "nasa_manifest_narrative_01_mercury",
+                "query": "NASA 水星页面摘要",
+                "eval_scope": "exploratory",
+                "source_schema_version": "nasa_shadow_ready_v1",
+            },
+        ]
+
+        strict, scoped_out = module.select_strict_queries("nasa", queries)
+
+        self.assertEqual([item["id"] for item in strict], ["nasa_structured_mercury_mass"])
+        self.assertEqual(scoped_out["exploratory_query_count"], 1)
+        self.assertEqual(scoped_out["compat_filtered_query_count"], 0)
+        self.assertEqual(scoped_out["skipped_query_ids_by_scope"]["exploratory"], ["nasa_manifest_narrative_01_mercury"])
+
+    def test_nasa_compat_narrative_sections_accept_manifest_raw_chunks(self):
+        module = load_module()
+
+        normalized = module.normalize_query_spec(
+            "nasa",
+            {
+                "id": "nasa_narrative_mars_atmosphere",
+                "expected_result": {"page_title": "火星", "section_any_of": ["概要", "大气"]},
+            },
+        )
+
+        self.assertIn("raw_chunk_1", normalized["expected_result"]["section_any_of"])
+
+    def test_wikidata_compat_narrative_sections_accept_manifest_raw_chunks(self):
+        module = load_module()
+
+        normalized = module.normalize_query_spec(
+            "wikidata",
+            {
+                "id": "wikidata_narrative_titan_discovery",
+                "expected_result": {"page_title": "土卫六", "section_any_of": ["发现"]},
+            },
+        )
+
+        self.assertIn("raw_chunk_1", normalized["expected_result"]["section_any_of"])
+
     def test_empty_queryset_skips_agent_and_chroma_initialization(self):
         module = load_module()
         counts = {"agent": 0, "chroma": 0}
@@ -359,44 +407,73 @@ class RunSourceExpansionEvalTests(unittest.TestCase):
         self.assertEqual(counts["graph"], 0)
         self.assertEqual(counts["chroma"], 0)
 
+    def test_gate_fails_when_any_query_fails_even_if_accuracy_threshold_passes(self):
+        module = load_module()
+        summary = {
+            "exact_accuracy": 0.9,
+            "exact_pass_count": 9,
+            "total_queries": 10,
+            "source_filter_failure_count": 0,
+            "metadata_contract_break_count": 0,
+            "inferred_boundary_break_count": 0,
+            "query_explainability_degraded_count": 0,
+            "category_breakdown": {"structured": {"total": 10}},
+        }
+
+        gates = module.evaluate_gates(
+            summary,
+            {
+                "exact_accuracy_min": 0.65,
+                "source_filter_failure_max": 0,
+                "metadata_contract_break_max": 0,
+                "inferred_boundary_break_max": 0,
+                "query_explainability_degraded_max": 0,
+            },
+            ["structured"],
+        )
+
+        self.assertFalse(gates["passed"])
+        self.assertIn("query_failure_max", {check["name"] for check in gates["checks"]})
+
     def test_search_chroma_does_not_create_disabled_namespace_when_store_is_not_materialized(self):
         from src.agent.llm_agent import LLMAgent
+        import src.vector_store.chroma_store as chroma_module
 
-        chroma_dir = ROOT / "data" / "chroma_db" / "esa"
-        if chroma_dir.exists():
-            shutil.rmtree(chroma_dir)
+        with tempfile.TemporaryDirectory() as tmpdir:
+            original_base_dir = chroma_module.BASE_DIR
+            chroma_module.BASE_DIR = tmpdir
+            chroma_dir = Path(tmpdir) / "data" / "chroma_db" / "esa"
+            agent = LLMAgent(source_name="esa")
+            calls = {"local": 0}
 
-        agent = LLMAgent(source_name="esa")
-        calls = {"local": 0}
+            def fake_local_search(query, top_k=5, query_context=None, source_filter=None):
+                calls["local"] += 1
+                return [{
+                    "page_title": "火星",
+                    "section": "大气",
+                    "content": "local fallback",
+                    "score": 1.0,
+                    "rank": 1,
+                    "source": "esa",
+                    "source_name": "esa",
+                    "source_role": "primary",
+                    "origin": "api",
+                    "source_title": "火星",
+                    "schema_version": "esa_shadow_ready_v1",
+                }]
 
-        def fake_local_search(query, top_k=5, query_context=None, source_filter=None):
-            calls["local"] += 1
-            return [{
-                "page_title": "火星",
-                "section": "大气",
-                "content": "local fallback",
-                "score": 1.0,
-                "rank": 1,
-                "source": "esa",
-                "source_name": "esa",
-                "source_role": "primary",
-                "origin": "api",
-                "source_title": "火星",
-                "schema_version": "esa_shadow_ready_v1",
-            }]
+            original_local = agent._search_local_narratives
+            agent._search_local_narratives = fake_local_search
+            try:
+                results = agent.search_chroma("火星大气成分", source_filter=["esa"])
+            finally:
+                agent._search_local_narratives = original_local
+                agent.close()
+                chroma_module.BASE_DIR = original_base_dir
 
-        original_local = agent._search_local_narratives
-        agent._search_local_narratives = fake_local_search
-        try:
-            results = agent.search_chroma("火星大气成分", source_filter=["esa"])
-        finally:
-            agent._search_local_narratives = original_local
-            if chroma_dir.exists():
-                shutil.rmtree(chroma_dir)
-
-        self.assertEqual(calls["local"], 1)
-        self.assertFalse(chroma_dir.exists())
-        self.assertEqual(results[0]["source_name"], "esa")
+            self.assertEqual(calls["local"], 1)
+            self.assertFalse(chroma_dir.exists())
+            self.assertEqual(results[0]["source_name"], "esa")
 
 
 if __name__ == "__main__":

@@ -48,6 +48,172 @@ class QueryRetrievalAndOllamaFallbackTests(unittest.TestCase):
             triple_results,
         )
 
+    def test_orbit_host_mass_question_resolves_parent_parameter(self):
+        agent = LLMAgent()
+        query = "火卫一绕行的行星质量是多少"
+        context = build_query_context(query)
+
+        results = agent._resolve_orbit_host_parameter(
+            context,
+            [{"subject": "火卫一", "relation": "ORBITS", "object": "火星", "source": "zh_wikipedia"}],
+            loader=None,
+            limit=5,
+            source_filter=["zh_wikipedia"],
+        )
+
+        self.assertEqual(results[0]["subject"], "火星")
+        self.assertEqual(results[0]["relation"], "HAS_MASS")
+        self.assertEqual(results[0]["object"], "6.4169 × 10 23 kg")
+
+    def test_orbit_host_type_question_resolves_parent_type(self):
+        agent = LLMAgent()
+        query = "火卫一绕行的天体在数据集中被标注为什么特殊类型？"
+        context = build_query_context(query)
+
+        results = agent._resolve_multi_hop_query(
+            context,
+            [{"subject": "火卫一", "relation": "ORBITS", "object": "火星", "source": "zh_wikipedia"}],
+            loader=None,
+            limit=5,
+            source_filter=["zh_wikipedia"],
+        )
+
+        self.assertEqual(results[0]["subject"], "火星")
+        self.assertEqual(results[0]["relation"], "IS_A")
+        self.assertEqual(results[0]["object"], "沙漠行星")
+
+    def test_orbit_host_atmosphere_accepts_celestial_body_wording(self):
+        agent = LLMAgent()
+        query = "冥卫一绕行的天体大气成分有哪些？"
+        context = build_query_context(query)
+
+        results = agent._resolve_multi_hop_query(
+            context,
+            [{"subject": "冥卫一", "relation": "ORBITS", "object": "冥王星", "source": "zh_wikipedia"}],
+            loader=None,
+            limit=10,
+            source_filter=["zh_wikipedia"],
+        )
+
+        objects = {item["object"] for item in results}
+        self.assertIn("氮", objects)
+        self.assertIn("甲烷", objects)
+        self.assertIn("一氧化碳", objects)
+
+    def test_named_group_relation_resolves_second_hop(self):
+        agent = LLMAgent()
+        query = "木卫二所属的伽利略卫星是什么类型？"
+        context = build_query_context(query)
+
+        results = agent._resolve_multi_hop_query(
+            context,
+            [],
+            loader=None,
+            limit=5,
+            source_filter=["zh_wikipedia"],
+        )
+
+        self.assertEqual(results[0]["subject"], "伽利略卫星")
+        self.assertEqual(results[0]["relation"], "IS_A")
+        self.assertEqual(results[0]["object"], "天然卫星群")
+
+    def test_reverse_discoverer_and_system_filter(self):
+        agent = LLMAgent()
+        query = "哪些属于土星系统的卫星由乔瓦尼·多梅尼科·卡西尼发现？"
+        context = build_query_context(query)
+
+        results = agent._resolve_multi_hop_query(
+            context,
+            [],
+            loader=None,
+            limit=10,
+            source_filter=["zh_wikipedia"],
+        )
+
+        subjects = {item["subject"] for item in results}
+        self.assertTrue({"土卫四", "土卫五", "土卫八"}.issubset(subjects), results)
+
+    def test_reverse_discoverer_then_orbit_relation(self):
+        agent = LLMAgent()
+        query = "威廉·赫歇尔发现的土星卫星绕谁公转？"
+        context = build_query_context(query)
+
+        results = agent._resolve_multi_hop_query(
+            context,
+            [],
+            loader=None,
+            limit=5,
+            source_filter=["zh_wikipedia"],
+        )
+
+        self.assertEqual(results[0]["subject"], "土卫一")
+        self.assertEqual(results[0]["relation"], "ORBITS")
+        self.assertEqual(results[0]["object"], "土星")
+
+    def test_reverse_orbits_sun_and_type_filter(self):
+        agent = LLMAgent()
+        query = "哪个绕太阳公转的实体在数据集中被标注为类地行星？"
+        context = build_query_context(query)
+
+        results = agent._resolve_multi_hop_query(
+            context,
+            [],
+            loader=None,
+            limit=5,
+            source_filter=["zh_wikipedia"],
+        )
+
+        self.assertEqual(results[0]["subject"], "金星")
+        self.assertEqual(results[0]["relation"], "IS_A")
+        self.assertEqual(results[0]["object"], "类地行星")
+
+    def test_moon_host_diameter_question_derives_earth_diameter(self):
+        agent = LLMAgent()
+        query = "月亮的行星的直径"
+        context = agent._extract_query_context(query)
+
+        self.assertEqual(context["primary_entity"], "月球")
+        self.assertIn("ORBITS", context["relation_hints"])
+        self.assertIn("HAS_RADIUS", context["relation_hints"])
+        self.assertIn("diameter", context["topic_intents"])
+
+        results = agent._resolve_multi_hop_query(
+            context,
+            [{"subject": "月球", "relation": "ORBITS", "object": "地球", "source": "zh_wikipedia"}],
+            loader=None,
+            limit=5,
+            source_filter=["zh_wikipedia"],
+        )
+
+        self.assertEqual(results[0]["subject"], "地球")
+        self.assertEqual(results[0]["relation"], "HAS_DIAMETER")
+        self.assertIn("12,742.0 km", results[0]["object"])
+        self.assertIn("由半径", results[0]["object"])
+
+    def test_moon_host_diameter_and_mass_question_keeps_both_parameters(self):
+        agent = LLMAgent()
+        query = "月亮所属行星的直径与质量"
+        context = agent._extract_query_context(query)
+
+        self.assertEqual(context["primary_entity"], "月球")
+        self.assertIn("ORBITS", context["relation_hints"])
+        self.assertIn("HAS_RADIUS", context["relation_hints"])
+        self.assertIn("HAS_MASS", context["relation_hints"])
+
+        results = agent._resolve_multi_hop_query(
+            context,
+            [{"subject": "月球", "relation": "ORBITS", "object": "地球", "source": "zh_wikipedia"}],
+            loader=None,
+            limit=5,
+            source_filter=["zh_wikipedia"],
+        )
+
+        facts = {(item["subject"], item["relation"]) for item in results}
+        self.assertIn(("地球", "HAS_DIAMETER"), facts)
+        self.assertIn(("地球", "HAS_MASS"), facts)
+        self.assertTrue(any("12,742.0 km" in item["object"] for item in results), results)
+        self.assertTrue(any(item["object"].startswith("5.972") for item in results), results)
+
     def test_ollama_stream_empty_falls_back_to_non_stream(self):
         agent = LLMAgent()
         streamed_lines = (

@@ -23,6 +23,14 @@ from src.source_control import (
     get_source_schema_version,
     normalize_source_filter,
 )
+from src.ingestion_checkpoint import (
+    checkpoint_has_current_file,
+    checkpoint_path,
+    load_checkpoint,
+    mark_file_processed,
+    remove_checkpoint,
+    save_checkpoint,
+)
 
 
 class Neo4jLoader:
@@ -37,6 +45,8 @@ class Neo4jLoader:
         "HAS_ATMOSPHERE",
         "HAS_RADIUS",
         "HAS_MASS",
+        "OPERATED_BY",
+        "HAS_MISSION_TARGET",
     }
 
     ENTITY_HINTS = {
@@ -46,7 +56,7 @@ class Neo4jLoader:
     }
 
     ORBIT_HOST_ENTITIES = {
-        "太阳", "水星", "金星", "地球", "火星", "木星", "土星", "天王星", "海王星", "冥王星",
+        "太阳", "水星", "金星", "地球", "火星", "木星", "土星", "天王星", "海王星", "冥王星", "月球",
     }
 
     LOCATION_ENTITIES = {
@@ -100,6 +110,7 @@ class Neo4jLoader:
         "冥卫": "冥王星",
     }
     SOLAR_SYSTEM_BODIES = ORBIT_HOST_ENTITIES | {"月球"}
+    MISSION_OPERATORS = {"ESA"}
 
     def __init__(self, uri=None, user=None, password=None, source_name=None):
         self.uri = uri or NEO4J_URI
@@ -157,7 +168,7 @@ class Neo4jLoader:
             '星系': 'Galaxy', '小行星': 'Asteroid', '彗星': 'Comet',
             '卫星': 'Satellite',
         }
-        if relation in ('被探测', '被发现', '探测'):
+        if relation in ('被探测', '被发现', '探测', 'OPERATED_BY', 'HAS_MISSION_TARGET'):
             return 'Mission'
         for keyword, label in celestial_keywords.items():
             if keyword in subject_name:
@@ -397,7 +408,7 @@ class Neo4jLoader:
             return False
         return relation_hints[0] in {
             "ORBITS", "DISCOVERED_BY", "HAS_ATMOSPHERE",
-            "LOCATED_IN", "PART_OF", "HAS_RADIUS", "HAS_MASS",
+            "LOCATED_IN", "PART_OF", "HAS_RADIUS", "HAS_MASS", "IS_A",
         }
 
     @staticmethod
@@ -441,7 +452,7 @@ class Neo4jLoader:
             return True
         if "#" in value:
             return False
-        return bool(re.fullmatch(r"[\u4e00-\u9fffA-Za-z0-9·_\-()]{2,40}", value))
+        return bool(re.fullmatch(r"[\u4e00-\u9fffA-Za-z0-9·_\-() ]{2,40}", value))
 
     @classmethod
     def _is_valid_discoverer(cls, text: str) -> bool:
@@ -558,6 +569,27 @@ class Neo4jLoader:
             numeric = cls._parse_canonical_quantity_value(value, relation)
             return numeric is not None and numeric > 0
         return False
+
+    @classmethod
+    def _is_valid_mission_operator(cls, text: str) -> bool:
+        return cls._normalize_object_text(text) in cls.MISSION_OPERATORS
+
+    @classmethod
+    def _is_valid_mission_target(cls, text: str) -> bool:
+        value = cls._normalize_object_text(text)
+        if not value or cls._is_noisy_fragment(value):
+            return False
+        anchor = cls._extract_anchor_entity(value)
+        if anchor:
+            return anchor in cls.KNOWN_ANCHOR_ENTITIES or anchor in cls.ENTITY_HINTS or anchor in cls.LOCATION_ENTITIES
+        if len(value) > 24 or "的" in value:
+            return False
+        return (
+            value in cls.KNOWN_ANCHOR_ENTITIES
+            or value in cls.ENTITY_HINTS
+            or value in cls.LOCATION_ENTITIES
+            or any(value.endswith(suffix) for suffix in cls.TYPE_SUFFIXES)
+        )
 
     @staticmethod
     def _strip_extract_markers(text: str) -> str:
@@ -767,6 +799,12 @@ class Neo4jLoader:
         elif relation in {"HAS_RADIUS", "HAS_MASS"}:
             if not cls._is_valid_quantity_object(obj, relation):
                 return None
+        elif relation == "OPERATED_BY":
+            if not cls._is_valid_mission_operator(obj):
+                return None
+        elif relation == "HAS_MISSION_TARGET":
+            if not cls._is_valid_mission_target(obj):
+                return None
         else:
             return None
 
@@ -870,6 +908,8 @@ class Neo4jLoader:
             "LOCATED_IN": cls._is_valid_location_object,
             "PART_OF": cls._is_valid_part_of_object,
             "HAS_ATMOSPHERE": cls._is_valid_atmosphere_object,
+            "OPERATED_BY": cls._is_valid_mission_operator,
+            "HAS_MISSION_TARGET": cls._is_valid_mission_target,
         }
         if relation in {"HAS_RADIUS", "HAS_MASS"}:
             if not cls._is_valid_quantity_object(obj, relation):
@@ -922,19 +962,7 @@ class Neo4jLoader:
 
         return score
 
-    def load_all_triples(self, triples_dir=None):
-        """加载所有三元组JSON文件到Neo4j"""
-        if not self.driver:
-            print("[Neo4j] 未连接，跳过导入")
-            return 0, 0
-
-        triples_dir = triples_dir or self.triples_dir or TRIPLES_DIR
-        triple_files = glob.glob(os.path.join(triples_dir, '*_triples.json'))
-        print(f"[Neo4j] 发现 {len(triple_files)} 个三元组文件")
-
-        total_nodes = 0
-        total_rels = 0
-        created_nodes = {}  # name → label 缓存已创建的节点
+    def _collect_importable_triples(self, triple_files):
         best_relation_triples = {}
         best_quantity_triples = {}
 
@@ -979,7 +1007,12 @@ class Neo4jLoader:
 
         triples_to_import = list(best_relation_triples.values())
         triples_to_import.extend(best_quantity_triples.values())
+        return triples_to_import
 
+    def _write_triples_to_neo4j(self, triples_to_import, created_nodes=None):
+        total_nodes = 0
+        total_rels = 0
+        created_nodes = created_nodes if created_nodes is not None else {}
         with self.driver.session() as session:
             for cleaned in triples_to_import:
                 subj = cleaned["subject"]
@@ -1046,8 +1079,8 @@ class Neo4jLoader:
                     session.run(
                         f"MATCH (a:{subj_label} {{name: $subj_name}}) "
                         f"MATCH (b:{obj_label} {{name: $obj_name}}) "
-                        f"MERGE (a)-[r:{rel} {{source_title: $source_title, pattern: $pattern}}]->(b) "
-                        f"SET r.source = $source_name, r.raw = $raw, r.origin = $origin, r.type = $record_type, "
+                        f"MERGE (a)-[r:{rel} {{source: $source_name, source_title: $source_title, pattern: $pattern}}]->(b) "
+                        f"SET r.raw = $raw, r.origin = $origin, r.type = $record_type, "
                         f"r.source_role = $source_role, r.schema_version = $schema_version",
                         subj_name=subj,
                         obj_name=obj,
@@ -1064,6 +1097,53 @@ class Neo4jLoader:
                 except Exception as e:
                     print(f"  创建关系失败 '{subj}' -[{rel}]-> '{obj}': {e}")
 
+        return total_nodes, total_rels
+
+    def load_all_triples(self, triples_dir=None, resume: bool = False):
+        """加载所有三元组JSON文件到Neo4j"""
+        if not self.driver:
+            print("[Neo4j] 未连接，跳过导入")
+            return 0, 0
+
+        triples_dir = triples_dir or self.triples_dir or TRIPLES_DIR
+        triple_files = sorted(glob.glob(os.path.join(triples_dir, '*_triples.json')))
+        print(f"[Neo4j] 发现 {len(triple_files)} 个三元组文件")
+
+        if resume:
+            source_name = getattr(self, "source_name", ACTIVE_SOURCE)
+            checkpoint_kind = "neo4j_triples"
+            resume_path = checkpoint_path(checkpoint_kind, source_name, triples_dir)
+            checkpoint = load_checkpoint(resume_path, checkpoint_kind)
+            processed = checkpoint.get("processed", {})
+            total_nodes = 0
+            total_rels = 0
+            created_nodes = {}
+
+            if processed:
+                print(f"[Neo4j] 检测到续入进度，继续导入: {resume_path}")
+
+            for filepath in triple_files:
+                fname = os.path.basename(filepath)
+                if checkpoint_has_current_file(checkpoint, filepath):
+                    print(f"[Neo4j] 跳过已续入文件: {fname}")
+                    continue
+
+                triples_to_import = self._collect_importable_triples([filepath])
+                if triples_to_import:
+                    nodes, rels = self._write_triples_to_neo4j(triples_to_import, created_nodes)
+                    total_nodes += nodes
+                    total_rels += rels
+
+                mark_file_processed(processed, filepath)
+                checkpoint["processed"] = processed
+                save_checkpoint(resume_path, checkpoint_kind, source_name, triples_dir, processed)
+
+            remove_checkpoint(resume_path)
+            print(f"\n[Neo4j] 导入完成！节点: {total_nodes}, 关系: {total_rels}")
+            return total_nodes, total_rels
+
+        triples_to_import = self._collect_importable_triples(triple_files)
+        total_nodes, total_rels = self._write_triples_to_neo4j(triples_to_import)
         print(f"\n[Neo4j] 导入完成！节点: {total_nodes}, 关系: {total_rels}")
         return total_nodes, total_rels
 

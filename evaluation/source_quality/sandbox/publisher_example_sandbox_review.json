@@ -1,0 +1,136 @@
+{
+  "source_id": "publisher_example",
+  "registered": false,
+  "network": false,
+  "mode": "manifest_candidate_sandbox",
+  "generated_at": "2026-07-21T17:49:08.143249+00:00",
+  "manifest_path": "configs\\source_manifests\\examples\\publisher_example.json",
+  "fixture_candidates_path": "tests/fixtures/source_quality/publisher_example_candidates.json",
+  "manifest_validation": {
+    "passed": true,
+    "errors": [],
+    "warnings": []
+  },
+  "candidate_count": 4,
+  "triage_counts": {
+    "rejected": 2,
+    "review_needed": 2
+  },
+  "top_reasons": {
+    "organization domain": 4,
+    "publication/abstract signal": 4,
+    "reference signal present": 2,
+    "short text": 2,
+    "very short text": 2,
+    "low science signal": 2,
+    "topic taxonomy hits=3": 1,
+    "science keyword hits=8": 1,
+    "science keyword hits=6": 1,
+    "news/update signal in body/navigation": 1
+  },
+  "safety_flags": {
+    "formal_pipeline_write": false,
+    "raw_json_write": false,
+    "triples_write": false,
+    "chroma_write": false,
+    "neo4j_write": false,
+    "network_disabled": true,
+    "unregistered_ingest_blocked": true,
+    "sandbox_report_only": true
+  },
+  "selected_candidate_snapshots": [
+    {
+      "index": 1,
+      "url": "https://journal.example.org/articles/planetary-atmosphere-abstract",
+      "title": "Planetary Atmosphere Paper Abstract",
+      "text_length": 179,
+      "html_length": 0,
+      "score": 53,
+      "triage": "review_needed",
+      "labels": [
+        "organization_source",
+        "topic_taxonomy_context",
+        "science_topic",
+        "has_references",
+        "publication_page",
+        "short_text"
+      ],
+      "reasons": [
+        "organization domain",
+        "topic taxonomy hits=3",
+        "science keyword hits=8",
+        "reference signal present",
+        "publication/abstract signal"
+      ]
+    },
+    {
+      "index": 2,
+      "url": "https://journal.example.org/articles/comet-orbit-dataset",
+      "title": "Comet Orbit Dataset Article",
+      "text_length": 184,
+      "html_length": 0,
+      "score": 38,
+      "triage": "review_needed",
+      "labels": [
+        "organization_source",
+        "science_topic",
+        "has_references",
+        "publication_page",
+        "short_text"
+      ],
+      "reasons": [
+        "organization domain",
+        "science keyword hits=6",
+        "reference signal present",
+        "publication/abstract signal",
+        "short text"
+      ]
+    },
+    {
+      "index": 3,
+      "url": "https://journal.example.org/subscribe",
+      "title": "Subscribe",
+      "text_length": 51,
+      "html_length": 0,
+      "score": 0,
+      "triage": "rejected",
+      "labels": [
+        "organization_source",
+        "publication_page",
+        "short_text",
+        "news_page",
+        "low_signal"
+      ],
+      "reasons": [
+        "organization domain",
+        "publication/abstract signal",
+        "very short text",
+        "news/update signal in body/navigation",
+        "low science signal"
+      ]
+    },
+    {
+      "index": 4,
+      "url": "https://journal.example.org/catalog",
+      "title": "Journal catalog",
+      "text_length": 61,
+      "html_length": 0,
+      "score": 0,
+      "triage": "rejected",
+      "labels": [
+        "organization_source",
+        "publication_page",
+        "short_text",
+        "low_signal"
+      ],
+      "reasons": [
+        "organization domain",
+        "publication/abstract signal",
+        "very short text",
+        "low science signal"
+      ]
+    }
+  ],
+  "frontier_skipped_count": 0,
+  "frontier_skipped": []
+}

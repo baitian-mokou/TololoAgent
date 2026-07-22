@@ -1,0 +1,112 @@
+{
+  "source_id": "university_lab_candidate",
+  "registered": false,
+  "network": false,
+  "mode": "manifest_candidate_sandbox",
+  "generated_at": "2026-07-22T02:28:46.047640+00:00",
+  "manifest_path": "configs\\source_manifests\\candidates\\university_lab_candidate.json",
+  "fixture_candidates_path": "tests/fixtures/source_quality/university_lab_candidate_candidates.json",
+  "manifest_validation": {
+    "passed": true,
+    "errors": [],
+    "warnings": []
+  },
+  "candidate_count": 3,
+  "triage_counts": {
+    "review_needed": 3
+  },
+  "top_reasons": {
+    "academic or preprint domain": 3,
+    "short text": 3,
+    "topic taxonomy hits=3": 2,
+    "reference signal present": 2,
+    "publication/abstract signal": 2,
+    "science keyword hits=13": 1,
+    "science keyword hits=7": 1,
+    "topic taxonomy hits=1": 1,
+    "science keyword hits=1": 1
+  },
+  "safety_flags": {
+    "formal_pipeline_write": false,
+    "raw_json_write": false,
+    "triples_write": false,
+    "chroma_write": false,
+    "neo4j_write": false,
+    "network_disabled": true,
+    "unregistered_ingest_blocked": true,
+    "sandbox_report_only": true
+  },
+  "selected_candidate_snapshots": [
+    {
+      "index": 1,
+      "url": "https://astro.example.edu/lab/exoplanet-spectroscopy",
+      "title": "Exoplanet Spectroscopy Research Lab",
+      "text_length": 237,
+      "html_length": 0,
+      "score": 60,
+      "triage": "review_needed",
+      "labels": [
+        "academic_source",
+        "topic_taxonomy_context",
+        "science_topic",
+        "has_references",
+        "publication_page",
+        "short_text"
+      ],
+      "reasons": [
+        "academic or preprint domain",
+        "topic taxonomy hits=3",
+        "science keyword hits=13",
+        "reference signal present",
+        "publication/abstract signal"
+      ]
+    },
+    {
+      "index": 2,
+      "url": "https://astro.example.edu/publications/planetary-atmospheres-abstract",
+      "title": "Abstract: Atmospheric Retrievals for Exoplanets",
+      "text_length": 163,
+      "html_length": 0,
+      "score": 63,
+      "triage": "review_needed",
+      "labels": [
+        "academic_source",
+        "topic_taxonomy_context",
+        "science_topic",
+        "has_references",
+        "publication_page",
+        "short_text"
+      ],
+      "reasons": [
+        "academic or preprint domain",
+        "topic taxonomy hits=3",
+        "science keyword hits=7",
+        "reference signal present",
+        "publication/abstract signal"
+      ]
+    },
+    {
+      "index": 3,
+      "url": "https://astro.example.edu/events/open-house",
+      "title": "Lab Open House Event",
+      "text_length": 87,
+      "html_length": 0,
+      "score": 14,
+      "triage": "review_needed",
+      "labels": [
+        "academic_source",
+        "topic_taxonomy_context",
+        "science_topic",
+        "short_text"
+      ],
+      "reasons": [
+        "academic or preprint domain",
+        "topic taxonomy hits=1",
+        "science keyword hits=1",
+        "short text"
+      ]
+    }
+  ],
+  "frontier_skipped_count": 0,
+  "frontier_skipped": []
+}

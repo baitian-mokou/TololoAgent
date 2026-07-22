@@ -123,6 +123,39 @@ class MultiSourceFusionTests(unittest.TestCase):
         self.assertTrue(fused["metadata"]["conflict_detected"])
         self.assertIn("来源存在差异", fused["answer_prompt"])
 
+    def test_auto_fusion_uses_answer_relation_for_authority_source(self):
+        agent = LLMAgent(source_name="auto")
+
+        fused = agent._fuse_auto_results(
+            "火卫一绕行的行星质量是多少",
+            neo4j_by_source={
+                "wikidata": [{
+                    "subject": "火卫一",
+                    "relation": "ORBITS",
+                    "object": "火星",
+                    "source": "wikidata",
+                    "source_name": "wikidata",
+                }],
+                "zh_wikipedia": [{
+                    "subject": "火星",
+                    "relation": "HAS_MASS",
+                    "object": "6.4169 × 10 23 kg",
+                    "source": "zh_wikipedia",
+                    "source_name": "zh_wikipedia",
+                }],
+            },
+            chroma_by_source={},
+            routing_trace={
+                "selected_sources": ["wikidata", "zh_wikipedia"],
+                "routing_reason": "structured relation keywords matched",
+                "fusion_mode": "peer_source_fusion",
+            },
+        )
+
+        self.assertEqual(fused["metadata"]["authority_source"], "zh_wikipedia")
+        self.assertEqual(fused["metadata"]["authority_by_relation"]["HAS_MASS"], "zh_wikipedia")
+        self.assertIn("权威优先源：中文维基", fused["answer_prompt"])
+
 
 if __name__ == "__main__":
     unittest.main()

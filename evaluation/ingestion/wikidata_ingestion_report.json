@@ -1,9 +1,9 @@
 {
   "source": "wikidata",
-  "raw_records_written": 20,
-  "processed_records_written": 20,
-  "triples_written": 121,
-  "narratives_written": 20,
+  "raw_records_written": 25,
+  "processed_records_written": 25,
+  "triples_written": 151,
+  "narratives_written": 25,
   "graph_written": true,
   "chroma_written": true,
   "crawled_urls": [
@@ -25,7 +25,12 @@
     "https://www.wikidata.org/wiki/Q3169",
     "https://www.wikidata.org/wiki/Q3134",
     "https://www.wikidata.org/wiki/Q2565",
+    "https://www.wikidata.org/wiki/Q3303",
     "https://www.wikidata.org/wiki/Q3359",
+    "https://www.wikidata.org/wiki/Q5964",
+    "https://www.wikidata.org/wiki/Q16711",
+    "https://www.wikidata.org/wiki/Q14913",
+    "https://www.wikidata.org/wiki/Q15034",
     "https://www.wikidata.org/wiki/Q3030"
   ],
   "skipped_urls": [],
@@ -33,11 +38,12 @@
   "warnings": [],
   "materialization_details": {
     "graph": {
-      "loaded_nodes": 86,
-      "loaded_relationships": 113,
+      "cleared_items": 190,
+      "loaded_nodes": 104,
+      "loaded_relationships": 142,
       "stats": {
-        "nodes": 89,
-        "rels": 116,
+        "nodes": 324,
+        "rels": 457,
         "labels": [
           "Planet",
           "Satellite",
@@ -57,26 +63,29 @@
           "围绕",
           "拥有轨道参数",
           "拥有环境特征",
+          "IS_A",
           "DISCOVERED_BY",
           "LOCATED_IN",
           "ORBITS",
           "PART_OF",
           "HAS_RADIUS",
           "HAS_MASS",
-          "HAS_ATMOSPHERE"
+          "HAS_ATMOSPHERE",
+          "OPERATED_BY",
+          "HAS_MISSION_TARGET"
         ]
       }
     },
     "chroma": {
-      "added_narratives": 21,
+      "added_narratives": 25,
       "stats": {
-        "total": 21,
+        "total": 25,
         "collections": [
           "astronomy_narratives_wikidata"
         ]
       }
     }
   },
-  "generated_at": "2026-06-28T15:49:48.618494+00:00",
+  "generated_at": "2026-07-04T02:52:00.085334+00:00",
   "pending_missing_records": []
 }

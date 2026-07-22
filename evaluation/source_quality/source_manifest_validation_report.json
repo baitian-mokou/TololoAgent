@@ -1,0 +1,100 @@
+{
+  "passed": true,
+  "summary": {
+    "validated": 13,
+    "failed": 0
+  },
+  "items": [
+    {
+      "path": "F:\\知识表示与处理结课作业\\TololoAgent\\configs\\source_manifests\\candidates\\arxiv_preprint_candidate.json",
+      "source_name": "arxiv_preprint_candidate",
+      "source_mode": "academic",
+      "passed": true,
+      "errors": []
+    },
+    {
+      "path": "F:\\知识表示与处理结课作业\\TololoAgent\\configs\\source_manifests\\candidates\\data_portal_candidate.json",
+      "source_name": "data_portal_candidate",
+      "source_mode": "official_science",
+      "passed": true,
+      "errors": []
+    },
+    {
+      "path": "F:\\知识表示与处理结课作业\\TololoAgent\\configs\\source_manifests\\candidates\\journal_publisher_candidate.json",
+      "source_name": "journal_publisher_candidate",
+      "source_mode": "publisher",
+      "passed": true,
+      "errors": []
+    },
+    {
+      "path": "F:\\知识表示与处理结课作业\\TololoAgent\\configs\\source_manifests\\candidates\\museum_observatory_candidate.json",
+      "source_name": "museum_observatory_candidate",
+      "source_mode": "generic_unknown",
+      "passed": true,
+      "errors": []
+    },
+    {
+      "path": "F:\\知识表示与处理结课作业\\TololoAgent\\configs\\source_manifests\\candidates\\noaa_climate_candidate.json",
+      "source_name": "noaa_climate_candidate",
+      "source_mode": "official_science",
+      "passed": true,
+      "errors": []
+    },
+    {
+      "path": "F:\\知识表示与处理结课作业\\TololoAgent\\configs\\source_manifests\\candidates\\university_lab_candidate.json",
+      "source_name": "university_lab_candidate",
+      "source_mode": "academic",
+      "passed": true,
+      "errors": []
+    },
+    {
+      "path": "F:\\知识表示与处理结课作业\\TololoAgent\\configs\\source_manifests\\esa.json",
+      "source_name": "esa",
+      "source_mode": "official_science",
+      "passed": true,
+      "errors": []
+    },
+    {
+      "path": "F:\\知识表示与处理结课作业\\TololoAgent\\configs\\source_manifests\\examples\\academic_example.json",
+      "source_name": "academic_example",
+      "source_mode": "academic",
+      "passed": true,
+      "errors": []
+    },
+    {
+      "path": "F:\\知识表示与处理结课作业\\TololoAgent\\configs\\source_manifests\\examples\\generic_unknown_example.json",
+      "source_name": "generic_unknown_example",
+      "source_mode": "generic_unknown",
+      "passed": true,
+      "errors": []
+    },
+    {
+      "path": "F:\\知识表示与处理结课作业\\TololoAgent\\configs\\source_manifests\\examples\\official_science_example.json",
+      "source_name": "official_science_example",
+      "source_mode": "official_science",
+      "passed": true,
+      "errors": []
+    },
+    {
+      "path": "F:\\知识表示与处理结课作业\\TololoAgent\\configs\\source_manifests\\examples\\publisher_example.json",
+      "source_name": "publisher_example",
+      "source_mode": "publisher",
+      "passed": true,
+      "errors": []
+    },
+    {
+      "path": "F:\\知识表示与处理结课作业\\TololoAgent\\configs\\source_manifests\\nasa.json",
+      "source_name": "nasa",
+      "source_mode": "official_science",
+      "passed": true,
+      "errors": []
+    },
+    {
+      "path": "F:\\知识表示与处理结课作业\\TololoAgent\\configs\\source_manifests\\wikidata.json",
+      "source_name": "wikidata",
+      "source_mode": "entity_data",
+      "passed": true,
+      "errors": []
+    }
+  ]
+}

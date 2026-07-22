@@ -1,0 +1,51 @@
+All Rights Reserved / Academic Evaluation Only License
+
+Copyright (c) 2026 项目作者/提交人。
+作者、学号、课程和提交日期以本项目的课程提交记录、仓库历史、原始文件、
+AUTHORSHIP.md 以及其他可验证材料为准。
+
+本项目不是开源软件。除非作者另行作出书面授权，项目中的手写源代码、脚本、
+测试、配置模板、说明文档、设计文档、展示材料和人工整理内容均保留全部权利。
+
+1. 课程评阅有限授权
+
+作者仅授权课程教师、助教、学校教务或课程管理人员在本课程作业评阅范围内
+进行以下必要操作：
+
+- 接收、打开、运行、检查和评分本项目；
+- 为课程评分、查重、归档、成绩复核和教学管理目的保存一份副本；
+- 在不公开传播、不移除署名、不冒充作者的前提下，向课程评阅相关人员展示。
+
+上述授权是非独占、不可转让、不可再授权、限课程评阅目的的授权。
+
+2. 未经书面许可禁止的行为
+
+除课程评阅所必需的行为外，任何人不得在未获得作者明确书面许可的情况下：
+
+- 以自己、团队、课题组、课程、机构或其他主体名义主张本项目作者身份；
+- 删除、遮盖、改写或弱化作者署名、提交记录、版权声明或来源说明；
+- 复制、发布、上传、公开展示、分发、出售、出租、转让或再授权本项目；
+- 将本项目或其中的实质性部分用于论文、课题、竞赛、课程案例、教材、产品、
+  商业服务、数据集、模型训练、演示系统或其他非本次课程评分目的；
+- 基于本项目制作、发布或主张衍生作品，或把本项目并入其他项目后对外使用；
+- 暗示作者、数据来源方、学校、NASA、ESA、Wikimedia、Wikidata、Neo4j、
+  Chroma、Ollama 或其他第三方对未经许可的使用作出认可、背书或授权。
+
+3. 第三方材料
+
+本许可只适用于作者享有权利或可授权的项目内容。项目引用、抓取、清洗或派生
+自 Wikipedia/Wikimedia、Wikidata、NASA、ESA、依赖包、模型、数据库和其他
+外部来源的材料，不因进入本项目而改变其原有许可、署名要求、使用条款或权利
+归属。使用者必须自行遵守相应第三方许可和来源页面要求。
+
+4. 免责声明
+
+本项目按课程作业状态提供，不作任何明示或默示保证。任何超出本许可范围的
+使用、署名、传播、改编、训练或商业化行为，由实施者自行承担责任。
+
+English summary: this project is not open source. All rights are reserved.
+The recipient may only review, run, grade, and archive it for the specific
+course assignment. Reuse, redistribution, publication, relicensing, removal
+of attribution, false authorship claims, derivative publication, commercial
+use, dataset/model training use, or use in other projects requires the
+author's prior written permission.

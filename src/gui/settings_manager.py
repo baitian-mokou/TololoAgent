@@ -27,7 +27,7 @@ DEFAULT_SETTINGS = {
     "connect": {
         "neo4j_uri": "bolt://127.0.0.1:7687",
         "neo4j_user": "neo4j",
-        "neo4j_password": "12345678",
+        "neo4j_password": "${NEO4J_PASSWORD}",
         "ollama_url": "http://localhost:11434",
         "ollama_model": "qwen3:4b",
         "ollama_timeout": 60,

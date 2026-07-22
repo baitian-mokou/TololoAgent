@@ -1,0 +1,119 @@
+{
+  "mode": "sandbox_candidate_review_summary",
+  "generated_at": "2026-07-21T17:32:18.075283+00:00",
+  "manifest_dir": "configs\\source_manifests\\examples",
+  "sandbox_dir": "evaluation\\source_quality\\sandbox",
+  "network": false,
+  "summary": {
+    "sources": 4,
+    "recommendation_counts": {
+      "manual_sample_first": 4
+    }
+  },
+  "items": [
+    {
+      "source_id": "academic_example",
+      "source_mode": "academic",
+      "registered": false,
+      "network": false,
+      "candidate_count": 1,
+      "accepted": 0,
+      "review_needed": 1,
+      "exploratory": 0,
+      "rejected": 0,
+      "skipped": 0,
+      "top_reasons": {
+        "academic or preprint domain": 1,
+        "topic taxonomy hits=2": 1,
+        "science keyword hits=3": 1,
+        "very short text": 1
+      },
+      "manifest_validation": {
+        "passed": true,
+        "errors": [],
+        "warnings": []
+      },
+      "sandbox_report": "evaluation\\source_quality\\sandbox\\academic_example_sandbox_review.json",
+      "recommendation": "manual_sample_first"
+    },
+    {
+      "source_id": "generic_unknown_example",
+      "source_mode": "generic_unknown",
+      "registered": false,
+      "network": false,
+      "candidate_count": 1,
+      "accepted": 0,
+      "review_needed": 0,
+      "exploratory": 1,
+      "rejected": 0,
+      "skipped": 0,
+      "top_reasons": {
+        "topic taxonomy hits=2": 1,
+        "science keyword hits=4": 1,
+        "very short text": 1,
+        "news/update signal": 1
+      },
+      "manifest_validation": {
+        "passed": true,
+        "errors": [],
+        "warnings": []
+      },
+      "sandbox_report": "evaluation\\source_quality\\sandbox\\generic_unknown_example_sandbox_review.json",
+      "recommendation": "manual_sample_first"
+    },
+    {
+      "source_id": "official_science_example",
+      "source_mode": "official_science",
+      "registered": false,
+      "network": false,
+      "candidate_count": 1,
+      "accepted": 0,
+      "review_needed": 1,
+      "exploratory": 0,
+      "rejected": 0,
+      "skipped": 0,
+      "top_reasons": {
+        "official or academic domain": 1,
+        "topic taxonomy hits=3": 1,
+        "science keyword hits=2": 1,
+        "fact or overview page signal": 1,
+        "mission page signal": 1,
+        "very short text": 1,
+        "protected official science/fact/mission page floor": 1
+      },
+      "manifest_validation": {
+        "passed": true,
+        "errors": [],
+        "warnings": []
+      },
+      "sandbox_report": "evaluation\\source_quality\\sandbox\\official_science_example_sandbox_review.json",
+      "recommendation": "manual_sample_first"
+    },
+    {
+      "source_id": "publisher_example",
+      "source_mode": "publisher",
+      "registered": false,
+      "network": false,
+      "candidate_count": 1,
+      "accepted": 0,
+      "review_needed": 1,
+      "exploratory": 0,
+      "rejected": 0,
+      "skipped": 0,
+      "top_reasons": {
+        "organization domain": 1,
+        "topic taxonomy hits=2": 1,
+        "science keyword hits=3": 1,
+        "publication/abstract signal": 1,
+        "very short text": 1
+      },
+      "manifest_validation": {
+        "passed": true,
+        "errors": [],
+        "warnings": []
+      },
+      "sandbox_report": "evaluation\\source_quality\\sandbox\\publisher_example_sandbox_review.json",
+      "recommendation": "manual_sample_first"
+    }
+  ]
+}

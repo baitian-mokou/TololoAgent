@@ -1,0 +1,22 @@
+[
+  {
+    "url": "https://astro.example.edu/research/planetary-lab/mars-spectroscopy",
+    "title": "Planetary Spectroscopy Laboratory Project",
+    "text": "The laboratory studies Mars atmosphere, planetary spectroscopy, telescope observations, datasets, orbit geometry and research methods. References include DOI citations and source datasets for astronomy research."
+  },
+  {
+    "url": "https://astro.example.edu/papers/exoplanet-atmosphere-abstract",
+    "title": "Exoplanet Atmosphere Abstract",
+    "text": "Abstract: this paper reports method, results and citation evidence for exoplanet atmosphere spectroscopy, telescope observations and planetary science. DOI and references are listed."
+  },
+  {
+    "url": "https://astro.example.edu/news/lab-open-day",
+    "title": "Lab open day news",
+    "text": "News update about a laboratory event with short mentions of astronomy students and telescope tours."
+  },
+  {
+    "url": "https://astro.example.edu/people",
+    "title": "People index",
+    "text": "Faculty staff students contact."
+  }
+]

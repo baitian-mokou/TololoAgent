@@ -1,0 +1,22 @@
+{
+  "source_name": "academic_example",
+  "source_mode": "academic",
+  "allowed_domains": ["astro.example.edu"],
+  "seed_urls": ["https://astro.example.edu/research/planetary-lab"],
+  "include_path_keywords": ["research", "lab", "planetary"],
+  "exclude_path_keywords": ["news", "events", "people", "privacy", "/search", "/tag", "gallery", "video"],
+  "max_depth": 1,
+  "max_pages_per_run": 20,
+  "max_discovery_fetch_pages": 0,
+  "crawl_delay": 1.0,
+  "topic_taxonomy": ["astronomy", "planetary_science", "laboratory", "research"],
+  "quality_gate": {
+    "accepted_min_score": 75,
+    "review_min_score": 35,
+    "allow_exploratory": true,
+    "skip_rejected_allowed": false
+  },
+  "quality_notes": "Academic lab pages are useful but should stay review-first until sampled.",
+  "fixture_candidates": "tests/fixtures/source_quality/academic_example_candidates.json",
+  "notes": "Example manifest only; do not crawl without replacing example domain and reviewing robots/rate limits."
+}

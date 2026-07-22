@@ -11,20 +11,61 @@
   },
   "manifest": {
     "exists": true,
-    "path": "F:\\知识表示与处理结课作业\\第二次托洛洛测试 -重大进展\\evaluation\\source_expansion\\esa\\esa_queries.json",
+    "path": "F:\\知识表示与处理结课作业\\TololoAgent\\evaluation\\source_expansion\\esa\\esa_queries.json",
     "source_name": "esa",
     "source_schema_version": "esa_shadow_ready_v1",
+    "total_query_count": 41,
     "query_count": 9,
+    "strict_query_count": 9,
+    "exploratory_query_count": 32,
+    "compat_filtered_query_count": 0,
+    "skipped_query_ids_by_scope": {
+      "exploratory": [
+        "esa_manifest_narrative_01_esa_20_years_of_mars_express_mars_as_never_seen_",
+        "esa_manifest_narrative_02_esa_a_christmas_comet_for_solar_orbiter",
+        "esa_manifest_narrative_03_esa_a_history_of_jupiter_exploration_the_journey",
+        "esa_manifest_narrative_04_esa_a_snaking_scar_on_mars",
+        "esa_manifest_narrative_05_esa_at_the_foot_of_the_red_planet_s_giant_volcan",
+        "esa_manifest_narrative_06_esa_beagle_2_lander_found_on_mars",
+        "esa_manifest_narrative_07_esa_bepicolombo_blasts_off_to_investigate_mercur",
+        "esa_manifest_narrative_08_esa_bepicolombo_reveals_mercury_in_a_new_light",
+        "esa_manifest_narrative_09_esa_bepicolombo_to_swing_by_mercury_for_the_sixt",
+        "esa_manifest_narrative_10_esa_bepicolombo_s_first_views_of_mercury",
+        "esa_manifest_narrative_11_esa_buried_water_ice_at_mars_s_equator",
+        "esa_manifest_narrative_12_esa_caution_martian_wind_at_work",
+        "esa_manifest_narrative_13_esa_chang_e_1_new_mission_to_moon_lifts_off",
+        "esa_manifest_narrative_14_esa_chaotic_crust_contains_clues_to_mars_watery_",
+        "esa_manifest_narrative_15_esa_chaotic_terrain_in_ariadnes_colles",
+        "esa_manifest_narrative_16_esa_chaotic_terrain_in_iani_chaos",
+        "esa_manifest_narrative_17_esa_chasms_on_the_flanks_of_a_martian_volcano",
+        "esa_manifest_narrative_18_esa_christmas_craterscape",
+        "esa_manifest_narrative_19_esa_comet_67p_churyumov_gerasimenko",
+        "esa_manifest_narrative_20_esa_comet_rendezvous",
+        "esa_manifest_narrative_21_esa_crater_in_martian_valley_mamers_valles",
+        "esa_manifest_narrative_22_esa_craters_and_cracks_on_mars",
+        "esa_manifest_structured_01_20_years_of_mars_express_mars_as_never_seen_befo_operated_by",
+        "esa_manifest_structured_02_20_years_of_mars_express_mars_as_never_seen_befo_has_mission_target",
+        "esa_manifest_structured_03_a_christmas_comet_for_solar_orbiter_operated_by",
+        "esa_manifest_structured_04_a_christmas_comet_for_solar_orbiter_has_mission_target",
+        "esa_manifest_structured_05_a_christmas_comet_for_solar_orbiter_has_mission_target",
+        "esa_manifest_structured_06_a_history_of_jupiter_exploration_the_journey_to__operated_by",
+        "esa_manifest_structured_07_a_history_of_jupiter_exploration_the_journey_to__has_mission_target",
+        "esa_manifest_structured_08_a_snaking_scar_on_mars_operated_by",
+        "esa_manifest_structured_09_a_snaking_scar_on_mars_has_mission_target",
+        "esa_manifest_structured_10_at_the_foot_of_the_red_planet_s_giant_volcano_operated_by"
+      ]
+    },
+    "compat_filtered_query_ids": [],
     "load_error": null,
     "query_schema_versions_consistent": true
   },
   "summary": {
     "total_queries": 9,
-    "exact_pass_count": 6,
-    "exact_accuracy": 0.6667,
-    "top_k_hit_count": 5,
+    "exact_pass_count": 9,
+    "exact_accuracy": 1.0,
+    "top_k_hit_count": 8,
     "top_k_hit_denominator": 8,
-    "top_k_hit_rate": 0.625,
+    "top_k_hit_rate": 1.0,
     "path_selection_correct_count": 9,
     "path_selection_correctness": 1.0,
     "graph_embedding_fallback_inconsistency_count": 0,
@@ -57,12 +98,10 @@
       },
       "fallback": {
         "total": 1,
-        "exact_pass_count": 0,
-        "top_k_hit_count": 0,
+        "exact_pass_count": 1,
+        "top_k_hit_count": 1,
         "query_explainability_degraded_count": 0,
-        "failures": {
-          "retrieval miss": 1
-        }
+        "failures": {}
       },
       "source_isolation": {
         "total": 1,
@@ -73,12 +112,10 @@
       },
       "metadata_completeness": {
         "total": 1,
-        "exact_pass_count": 0,
-        "top_k_hit_count": 0,
+        "exact_pass_count": 1,
+        "top_k_hit_count": 1,
         "query_explainability_degraded_count": 0,
-        "failures": {
-          "retrieval miss": 1
-        }
+        "failures": {}
       },
       "path_routing": {
         "total": 1,
@@ -89,12 +126,10 @@
       },
       "unit_normalization": {
         "total": 1,
-        "exact_pass_count": 0,
-        "top_k_hit_count": 0,
+        "exact_pass_count": 1,
+        "top_k_hit_count": 1,
         "query_explainability_degraded_count": 0,
-        "failures": {
-          "retrieval miss": 1
-        }
+        "failures": {}
       },
       "conflict_case": {
         "total": 1,
@@ -107,9 +142,9 @@
   },
   "probes": {
     "graph_results_count": 0,
-    "narrative_results_count": 4,
-    "fallback_graph_count": 1,
-    "fallback_narrative_count": 4
+    "narrative_results_count": 14,
+    "fallback_graph_count": 4,
+    "fallback_narrative_count": 14
   },
   "gates": {
     "passed": true,
@@ -140,7 +175,13 @@
       {
         "name": "exact_accuracy_min",
         "expected": 0.65,
-        "actual": 0.6667,
+        "actual": 1.0,
+        "passed": true
+      },
+      {
+        "name": "query_failure_max",
+        "expected": 0,
+        "actual": 0,
         "passed": true
       },
       {
@@ -222,7 +263,7 @@
         "source": "esa",
         "source_name": "esa",
         "source_role": "primary",
-        "origin": "html_fallback",
+        "origin": "api",
         "source_title": "火星快车号",
         "schema_version": "esa_shadow_ready_v1"
       },
@@ -234,7 +275,7 @@
           "source": "esa",
           "source_name": "esa",
           "source_role": "primary",
-          "origin": "html_fallback",
+          "origin": "api",
           "source_title": "火星快车号",
           "schema_version": "esa_shadow_ready_v1"
         }
@@ -248,7 +289,7 @@
           "source": "esa",
           "source_name": "esa",
           "source_role": "primary",
-          "origin": "html_fallback",
+          "origin": "api",
           "source_title": "火星快车号",
           "schema_version": "esa_shadow_ready_v1"
         }
@@ -270,7 +311,7 @@
         "source": "esa",
         "source_name": "esa",
         "source_role": "primary",
-        "origin": "html_fallback",
+        "origin": "api",
         "source_title": "火星快车号",
         "schema_version": "esa_shadow_ready_v1"
       },
@@ -307,8 +348,8 @@
       "returned_result": {
         "page_title": "JUICE",
         "section": "任务",
-        "content": "ESA fixture 将 JUICE 记录为由 ESA 运营、面向木星及其木卫二、木卫三、木卫四的探测任务。",
-        "score": 0.9555555555555556,
+        "content": "JUICE JUICE mission to Jupiter, Europa, Ganymede and Callisto.",
+        "score": 0.9888888888888889,
         "rank": 1,
         "source": "esa",
         "source_name": "esa",
@@ -321,13 +362,26 @@
         {
           "page_title": "JUICE",
           "section": "任务",
-          "content": "ESA fixture 将 JUICE 记录为由 ESA 运营、面向木星及其木卫二、木卫三、木卫四的探测任务。",
-          "score": 0.9555555555555556,
+          "content": "JUICE JUICE mission to Jupiter, Europa, Ganymede and Callisto.",
+          "score": 0.9888888888888889,
           "rank": 1,
           "source": "esa",
           "source_name": "esa",
           "source_role": "primary",
           "origin": "html_fallback",
+          "source_title": "JUICE",
+          "schema_version": "esa_shadow_ready_v1"
+        },
+        {
+          "page_title": "JUICE",
+          "section": "任务",
+          "content": "ESA fixture 将 JUICE 记录为由 ESA 运营、面向木星及其木卫二、木卫三、木卫四的探测任务。",
+          "score": 0.9555555555555556,
+          "rank": 2,
+          "source": "esa",
+          "source_name": "esa",
+          "source_role": "primary",
+          "origin": "api",
           "source_title": "JUICE",
           "schema_version": "esa_shadow_ready_v1"
         }
@@ -336,13 +390,26 @@
         {
           "page_title": "JUICE",
           "section": "任务",
-          "content": "ESA fixture 将 JUICE 记录为由 ESA 运营、面向木星及其木卫二、木卫三、木卫四的探测任务。",
-          "score": 0.9555555555555556,
+          "content": "JUICE JUICE mission to Jupiter, Europa, Ganymede and Callisto.",
+          "score": 0.9888888888888889,
           "rank": 1,
           "source": "esa",
           "source_name": "esa",
           "source_role": "primary",
           "origin": "html_fallback",
+          "source_title": "JUICE",
+          "schema_version": "esa_shadow_ready_v1"
+        },
+        {
+          "page_title": "JUICE",
+          "section": "任务",
+          "content": "ESA fixture 将 JUICE 记录为由 ESA 运营、面向木星及其木卫二、木卫三、木卫四的探测任务。",
+          "score": 0.9555555555555556,
+          "rank": 2,
+          "source": "esa",
+          "source_name": "esa",
+          "source_role": "primary",
+          "origin": "api",
           "source_title": "JUICE",
           "schema_version": "esa_shadow_ready_v1"
         }
@@ -360,8 +427,8 @@
       "source_metadata": {
         "page_title": "JUICE",
         "section": "任务",
-        "content": "ESA fixture 将 JUICE 记录为由 ESA 运营、面向木星及其木卫二、木卫三、木卫四的探测任务。",
-        "score": 0.9555555555555556,
+        "content": "JUICE JUICE mission to Jupiter, Europa, Ganymede and Callisto.",
+        "score": 0.9888888888888889,
         "rank": 1,
         "source": "esa",
         "source_name": "esa",
@@ -436,29 +503,73 @@
         "object": "月球"
       },
       "normalized_expected_value": null,
-      "normalized_returned_value": null,
-      "returned_result": null,
-      "top_k_results": [],
+      "normalized_returned_value": "月球",
+      "returned_result": {
+        "subject": "SMART-1",
+        "relation": "ORBITS",
+        "object": "月球",
+        "source": "esa",
+        "source_name": "esa",
+        "source_role": "primary",
+        "origin": "api",
+        "source_title": "SMART-1",
+        "schema_version": "esa_shadow_ready_v1"
+      },
+      "top_k_results": [
+        {
+          "subject": "SMART-1",
+          "relation": "ORBITS",
+          "object": "月球",
+          "source": "esa",
+          "source_name": "esa",
+          "source_role": "primary",
+          "origin": "api",
+          "source_title": "SMART-1",
+          "schema_version": "esa_shadow_ready_v1"
+        }
+      ],
       "graph_only_results": [],
-      "fallback_results": [],
-      "exact_match": false,
-      "top_k_hit": false,
+      "fallback_results": [
+        {
+          "subject": "SMART-1",
+          "relation": "ORBITS",
+          "object": "月球",
+          "source": "esa",
+          "source_name": "esa",
+          "source_role": "primary",
+          "origin": "api",
+          "source_title": "SMART-1",
+          "schema_version": "esa_shadow_ready_v1"
+        }
+      ],
+      "exact_match": true,
+      "top_k_hit": true,
       "expected_top_k_hit": true,
-      "top_k_expectation_met": false,
+      "top_k_expectation_met": true,
       "path_correct": true,
       "allowed_final_source_ok": true,
-      "pass": false,
+      "pass": true,
       "query_schema_ok": true,
       "query_explainability_degraded": false,
       "explainability_status": "ok",
-      "source_metadata": null,
+      "source_metadata": {
+        "subject": "SMART-1",
+        "relation": "ORBITS",
+        "object": "月球",
+        "source": "esa",
+        "source_name": "esa",
+        "source_role": "primary",
+        "origin": "api",
+        "source_title": "SMART-1",
+        "schema_version": "esa_shadow_ready_v1"
+      },
       "metadata_complete": true,
       "source_filter_failed": false,
       "inferred_boundary_break": false,
-      "fallback_exact_match": false,
-      "fallback_top_k_hit": false,
+      "fallback_exact_match": true,
+      "fallback_top_k_hit": true,
       "consistency_match": true,
-      "failure_category": "retrieval miss",
+      "failure_category": null,
       "expected_failure_if_any": null
     },
     {
@@ -491,7 +602,7 @@
         "source": "esa",
         "source_name": "esa",
         "source_role": "primary",
-        "origin": "html_fallback",
+        "origin": "api",
         "source_title": "Gaia",
         "schema_version": "esa_shadow_ready_v1"
       },
@@ -505,8 +616,60 @@
           "source": "esa",
           "source_name": "esa",
           "source_role": "primary",
-          "origin": "html_fallback",
+          "origin": "api",
           "source_title": "Gaia",
+          "schema_version": "esa_shadow_ready_v1"
+        },
+        {
+          "page_title": "ESA - Jupiter’s moon Europa to obscure distant star",
+          "section": "任务",
+          "content": "ESA - Jupiter’s moon Europa to obscure distant star Science & Exploration Jupiter’s moon Europa to obscure distant star 07/06/2022 7782 views 121 likes ESA / Science & Exploration / Space Science / Ga...",
+          "score": 0.4888888888888889,
+          "rank": 2,
+          "source": "esa",
+          "source_name": "esa",
+          "source_role": "primary",
+          "origin": "api",
+          "source_title": "ESA - Jupiter’s moon Europa to obscure distant star",
+          "schema_version": "esa_shadow_ready_v1"
+        },
+        {
+          "page_title": "ESA - Gaia spots possible moons around hundreds of asteroids",
+          "section": "raw_chunk_1",
+          "content": "Science & Exploration Gaia spots possible moons around hundreds of asteroids 08/08/2024 9254 views 65 likes ESA / Science & Exploration / Space Science / Gaia ESA’s star-surveying Gaia mission has aga...",
+          "score": 0.4666666666666667,
+          "rank": 3,
+          "source": "esa",
+          "source_name": "esa",
+          "source_role": "primary",
+          "origin": "api",
+          "source_title": "ESA - Gaia spots possible moons around hundreds of asteroids",
+          "schema_version": "esa_shadow_ready_v1"
+        },
+        {
+          "page_title": "ESA - Gaia spots possible moons around hundreds of asteroids",
+          "section": "raw_chunk_2",
+          "content": "spite us expecting just under one-sixth of asteroids to have a companion, so far we have only found 500 of the million known asteroids to be in binary systems. But this discovery shows that there are ...",
+          "score": 0.4666666666666667,
+          "rank": 4,
+          "source": "esa",
+          "source_name": "esa",
+          "source_role": "primary",
+          "origin": "api",
+          "source_title": "ESA - Gaia spots possible moons around hundreds of asteroids",
+          "schema_version": "esa_shadow_ready_v1"
+        },
+        {
+          "page_title": "ESA - Gaia spots possible moons around hundreds of asteroids",
+          "section": "raw_chunk_3",
+          "content": "000+ asteroids — so precisely that scientists could dig deeper and hunt for asteroids displaying the characteristic ‘wobble’ caused by the tug of an orbiting companion (the same mechanism as displayed...",
+          "score": 0.4666666666666667,
+          "rank": 5,
+          "source": "esa",
+          "source_name": "esa",
+          "source_role": "primary",
+          "origin": "api",
+          "source_title": "ESA - Gaia spots possible moons around hundreds of asteroids",
           "schema_version": "esa_shadow_ready_v1"
         }
       ],
@@ -520,8 +683,60 @@
           "source": "esa",
           "source_name": "esa",
           "source_role": "primary",
-          "origin": "html_fallback",
+          "origin": "api",
           "source_title": "Gaia",
+          "schema_version": "esa_shadow_ready_v1"
+        },
+        {
+          "page_title": "ESA - Jupiter’s moon Europa to obscure distant star",
+          "section": "任务",
+          "content": "ESA - Jupiter’s moon Europa to obscure distant star Science & Exploration Jupiter’s moon Europa to obscure distant star 07/06/2022 7782 views 121 likes ESA / Science & Exploration / Space Science / Ga...",
+          "score": 0.4888888888888889,
+          "rank": 2,
+          "source": "esa",
+          "source_name": "esa",
+          "source_role": "primary",
+          "origin": "api",
+          "source_title": "ESA - Jupiter’s moon Europa to obscure distant star",
+          "schema_version": "esa_shadow_ready_v1"
+        },
+        {
+          "page_title": "ESA - Gaia spots possible moons around hundreds of asteroids",
+          "section": "raw_chunk_1",
+          "content": "Science & Exploration Gaia spots possible moons around hundreds of asteroids 08/08/2024 9254 views 65 likes ESA / Science & Exploration / Space Science / Gaia ESA’s star-surveying Gaia mission has aga...",
+          "score": 0.4666666666666667,
+          "rank": 3,
+          "source": "esa",
+          "source_name": "esa",
+          "source_role": "primary",
+          "origin": "api",
+          "source_title": "ESA - Gaia spots possible moons around hundreds of asteroids",
+          "schema_version": "esa_shadow_ready_v1"
+        },
+        {
+          "page_title": "ESA - Gaia spots possible moons around hundreds of asteroids",
+          "section": "raw_chunk_2",
+          "content": "spite us expecting just under one-sixth of asteroids to have a companion, so far we have only found 500 of the million known asteroids to be in binary systems. But this discovery shows that there are ...",
+          "score": 0.4666666666666667,
+          "rank": 4,
+          "source": "esa",
+          "source_name": "esa",
+          "source_role": "primary",
+          "origin": "api",
+          "source_title": "ESA - Gaia spots possible moons around hundreds of asteroids",
+          "schema_version": "esa_shadow_ready_v1"
+        },
+        {
+          "page_title": "ESA - Gaia spots possible moons around hundreds of asteroids",
+          "section": "raw_chunk_3",
+          "content": "000+ asteroids — so precisely that scientists could dig deeper and hunt for asteroids displaying the characteristic ‘wobble’ caused by the tug of an orbiting companion (the same mechanism as displayed...",
+          "score": 0.4666666666666667,
+          "rank": 5,
+          "source": "esa",
+          "source_name": "esa",
+          "source_role": "primary",
+          "origin": "api",
+          "source_title": "ESA - Gaia spots possible moons around hundreds of asteroids",
           "schema_version": "esa_shadow_ready_v1"
         }
       ],
@@ -544,7 +759,7 @@
         "source": "esa",
         "source_name": "esa",
         "source_role": "primary",
-        "origin": "html_fallback",
+        "origin": "api",
         "source_title": "Gaia",
         "schema_version": "esa_shadow_ready_v1"
       },
@@ -574,29 +789,73 @@
         "object": "太阳"
       },
       "normalized_expected_value": null,
-      "normalized_returned_value": null,
-      "returned_result": null,
-      "top_k_results": [],
+      "normalized_returned_value": "太阳",
+      "returned_result": {
+        "subject": "Solar Orbiter",
+        "relation": "ORBITS",
+        "object": "太阳",
+        "source": "esa",
+        "source_name": "esa",
+        "source_role": "primary",
+        "origin": "api",
+        "source_title": "Solar Orbiter",
+        "schema_version": "esa_shadow_ready_v1"
+      },
+      "top_k_results": [
+        {
+          "subject": "Solar Orbiter",
+          "relation": "ORBITS",
+          "object": "太阳",
+          "source": "esa",
+          "source_name": "esa",
+          "source_role": "primary",
+          "origin": "api",
+          "source_title": "Solar Orbiter",
+          "schema_version": "esa_shadow_ready_v1"
+        }
+      ],
       "graph_only_results": [],
-      "fallback_results": [],
-      "exact_match": false,
-      "top_k_hit": false,
+      "fallback_results": [
+        {
+          "subject": "Solar Orbiter",
+          "relation": "ORBITS",
+          "object": "太阳",
+          "source": "esa",
+          "source_name": "esa",
+          "source_role": "primary",
+          "origin": "api",
+          "source_title": "Solar Orbiter",
+          "schema_version": "esa_shadow_ready_v1"
+        }
+      ],
+      "exact_match": true,
+      "top_k_hit": true,
       "expected_top_k_hit": true,
-      "top_k_expectation_met": false,
+      "top_k_expectation_met": true,
       "path_correct": true,
       "allowed_final_source_ok": true,
-      "pass": false,
+      "pass": true,
       "query_schema_ok": true,
       "query_explainability_degraded": false,
       "explainability_status": "ok",
-      "source_metadata": null,
+      "source_metadata": {
+        "subject": "Solar Orbiter",
+        "relation": "ORBITS",
+        "object": "太阳",
+        "source": "esa",
+        "source_name": "esa",
+        "source_role": "primary",
+        "origin": "api",
+        "source_title": "Solar Orbiter",
+        "schema_version": "esa_shadow_ready_v1"
+      },
       "metadata_complete": true,
       "source_filter_failed": false,
       "inferred_boundary_break": false,
-      "fallback_exact_match": false,
-      "fallback_top_k_hit": false,
+      "fallback_exact_match": true,
+      "fallback_top_k_hit": true,
       "consistency_match": true,
-      "failure_category": "retrieval miss",
+      "failure_category": null,
       "expected_failure_if_any": null
     },
     {
@@ -629,7 +888,7 @@
         "source": "esa",
         "source_name": "esa",
         "source_role": "primary",
-        "origin": "html_fallback",
+        "origin": "api",
         "source_title": "Rosetta",
         "schema_version": "esa_shadow_ready_v1"
       },
@@ -643,8 +902,60 @@
           "source": "esa",
           "source_name": "esa",
           "source_role": "primary",
-          "origin": "html_fallback",
+          "origin": "api",
           "source_title": "Rosetta",
+          "schema_version": "esa_shadow_ready_v1"
+        },
+        {
+          "page_title": "ESA - Getting to know Rosetta’s comet",
+          "section": "任务",
+          "content": "ESA - Getting to know Rosetta’s comet Science & Exploration Getting to know Rosetta’s comet 22/01/2015 63685 views 288 likes ESA / Science & Exploration / Space Science / Rosetta Rosetta is revealing ...",
+          "score": 0.5666666666666667,
+          "rank": 2,
+          "source": "esa",
+          "source_name": "esa",
+          "source_role": "primary",
+          "origin": "api",
+          "source_title": "ESA - Getting to know Rosetta’s comet",
+          "schema_version": "esa_shadow_ready_v1"
+        },
+        {
+          "page_title": "ESA - Mission complete: Rosetta’s journey ends in daring descent to comet",
+          "section": "任务",
+          "content": "ESA - Mission complete: Rosetta’s journey ends in daring descent to comet Science & Exploration Mission complete: Rosetta’s journey ends in daring descent to comet 30/09/2016 135135 views 838 likes ES...",
+          "score": 0.5666666666666667,
+          "rank": 3,
+          "source": "esa",
+          "source_name": "esa",
+          "source_role": "primary",
+          "origin": "html_fallback",
+          "source_title": "ESA - Mission complete: Rosetta’s journey ends in daring descent to comet",
+          "schema_version": "esa_shadow_ready_v1"
+        },
+        {
+          "page_title": "ESA - 'Spot the difference' to help reveal Rosetta image secrets",
+          "section": "raw_chunk_1",
+          "content": "Enabling & Support 'Spot the difference' to help reveal Rosetta image secrets 05/05/2022 12270 views 193 likes ESA / Enabling & Support / Preparing for the Future / Space for Earth Today, ESA and the ...",
+          "score": 0.4666666666666667,
+          "rank": 4,
+          "source": "esa",
+          "source_name": "esa",
+          "source_role": "primary",
+          "origin": "api",
+          "source_title": "ESA - 'Spot the difference' to help reveal Rosetta image secrets",
+          "schema_version": "esa_shadow_ready_v1"
+        },
+        {
+          "page_title": "ESA - 'Spot the difference' to help reveal Rosetta image secrets",
+          "section": "raw_chunk_2",
+          "content": "about 186 million km from our star, the comet then moved away again. This meant that its surface was illuminated in different ways during the course of Rosetta’s mission. Rosetta images of Comet 67P a...",
+          "score": 0.4666666666666667,
+          "rank": 5,
+          "source": "esa",
+          "source_name": "esa",
+          "source_role": "primary",
+          "origin": "api",
+          "source_title": "ESA - 'Spot the difference' to help reveal Rosetta image secrets",
           "schema_version": "esa_shadow_ready_v1"
         }
       ],
@@ -658,8 +969,60 @@
           "source": "esa",
           "source_name": "esa",
           "source_role": "primary",
-          "origin": "html_fallback",
+          "origin": "api",
           "source_title": "Rosetta",
+          "schema_version": "esa_shadow_ready_v1"
+        },
+        {
+          "page_title": "ESA - Getting to know Rosetta’s comet",
+          "section": "任务",
+          "content": "ESA - Getting to know Rosetta’s comet Science & Exploration Getting to know Rosetta’s comet 22/01/2015 63685 views 288 likes ESA / Science & Exploration / Space Science / Rosetta Rosetta is revealing ...",
+          "score": 0.5666666666666667,
+          "rank": 2,
+          "source": "esa",
+          "source_name": "esa",
+          "source_role": "primary",
+          "origin": "api",
+          "source_title": "ESA - Getting to know Rosetta’s comet",
+          "schema_version": "esa_shadow_ready_v1"
+        },
+        {
+          "page_title": "ESA - Mission complete: Rosetta’s journey ends in daring descent to comet",
+          "section": "任务",
+          "content": "ESA - Mission complete: Rosetta’s journey ends in daring descent to comet Science & Exploration Mission complete: Rosetta’s journey ends in daring descent to comet 30/09/2016 135135 views 838 likes ES...",
+          "score": 0.5666666666666667,
+          "rank": 3,
+          "source": "esa",
+          "source_name": "esa",
+          "source_role": "primary",
+          "origin": "html_fallback",
+          "source_title": "ESA - Mission complete: Rosetta’s journey ends in daring descent to comet",
+          "schema_version": "esa_shadow_ready_v1"
+        },
+        {
+          "page_title": "ESA - 'Spot the difference' to help reveal Rosetta image secrets",
+          "section": "raw_chunk_1",
+          "content": "Enabling & Support 'Spot the difference' to help reveal Rosetta image secrets 05/05/2022 12270 views 193 likes ESA / Enabling & Support / Preparing for the Future / Space for Earth Today, ESA and the ...",
+          "score": 0.4666666666666667,
+          "rank": 4,
+          "source": "esa",
+          "source_name": "esa",
+          "source_role": "primary",
+          "origin": "api",
+          "source_title": "ESA - 'Spot the difference' to help reveal Rosetta image secrets",
+          "schema_version": "esa_shadow_ready_v1"
+        },
+        {
+          "page_title": "ESA - 'Spot the difference' to help reveal Rosetta image secrets",
+          "section": "raw_chunk_2",
+          "content": "about 186 million km from our star, the comet then moved away again. This meant that its surface was illuminated in different ways during the course of Rosetta’s mission. Rosetta images of Comet 67P a...",
+          "score": 0.4666666666666667,
+          "rank": 5,
+          "source": "esa",
+          "source_name": "esa",
+          "source_role": "primary",
+          "origin": "api",
+          "source_title": "ESA - 'Spot the difference' to help reveal Rosetta image secrets",
           "schema_version": "esa_shadow_ready_v1"
         }
       ],
@@ -682,7 +1045,7 @@
         "source": "esa",
         "source_name": "esa",
         "source_role": "primary",
-        "origin": "html_fallback",
+        "origin": "api",
         "source_title": "Rosetta",
         "schema_version": "esa_shadow_ready_v1"
       },
@@ -712,29 +1075,73 @@
         "object": "月球"
       },
       "normalized_expected_value": null,
-      "normalized_returned_value": null,
-      "returned_result": null,
-      "top_k_results": [],
+      "normalized_returned_value": "月球",
+      "returned_result": {
+        "subject": "SMART-1",
+        "relation": "ORBITS",
+        "object": "月球",
+        "source": "esa",
+        "source_name": "esa",
+        "source_role": "primary",
+        "origin": "api",
+        "source_title": "SMART-1",
+        "schema_version": "esa_shadow_ready_v1"
+      },
+      "top_k_results": [
+        {
+          "subject": "SMART-1",
+          "relation": "ORBITS",
+          "object": "月球",
+          "source": "esa",
+          "source_name": "esa",
+          "source_role": "primary",
+          "origin": "api",
+          "source_title": "SMART-1",
+          "schema_version": "esa_shadow_ready_v1"
+        }
+      ],
       "graph_only_results": [],
-      "fallback_results": [],
-      "exact_match": false,
-      "top_k_hit": false,
+      "fallback_results": [
+        {
+          "subject": "SMART-1",
+          "relation": "ORBITS",
+          "object": "月球",
+          "source": "esa",
+          "source_name": "esa",
+          "source_role": "primary",
+          "origin": "api",
+          "source_title": "SMART-1",
+          "schema_version": "esa_shadow_ready_v1"
+        }
+      ],
+      "exact_match": true,
+      "top_k_hit": true,
       "expected_top_k_hit": true,
-      "top_k_expectation_met": false,
+      "top_k_expectation_met": true,
       "path_correct": true,
       "allowed_final_source_ok": true,
-      "pass": false,
+      "pass": true,
       "query_schema_ok": true,
       "query_explainability_degraded": false,
       "explainability_status": "ok",
-      "source_metadata": null,
+      "source_metadata": {
+        "subject": "SMART-1",
+        "relation": "ORBITS",
+        "object": "月球",
+        "source": "esa",
+        "source_name": "esa",
+        "source_role": "primary",
+        "origin": "api",
+        "source_title": "SMART-1",
+        "schema_version": "esa_shadow_ready_v1"
+      },
       "metadata_complete": true,
       "source_filter_failed": false,
       "inferred_boundary_break": false,
-      "fallback_exact_match": false,
-      "fallback_top_k_hit": false,
+      "fallback_exact_match": true,
+      "fallback_top_k_hit": true,
       "consistency_match": true,
-      "failure_category": "retrieval miss",
+      "failure_category": null,
       "expected_failure_if_any": null
     },
     {
@@ -767,7 +1174,7 @@
         "source": "esa",
         "source_name": "esa",
         "source_role": "primary",
-        "origin": "html_fallback",
+        "origin": "api",
         "source_title": "JUICE",
         "schema_version": "esa_shadow_ready_v1"
       },
@@ -778,6 +1185,19 @@
           "content": "ESA fixture 将 JUICE 记录为由 ESA 运营、面向木星及其木卫二、木卫三、木卫四的探测任务。",
           "score": 0.8,
           "rank": 1,
+          "source": "esa",
+          "source_name": "esa",
+          "source_role": "primary",
+          "origin": "api",
+          "source_title": "JUICE",
+          "schema_version": "esa_shadow_ready_v1"
+        },
+        {
+          "page_title": "JUICE",
+          "section": "任务",
+          "content": "JUICE JUICE mission to Jupiter, Europa, Ganymede and Callisto.",
+          "score": 0.7444444444444445,
+          "rank": 2,
           "source": "esa",
           "source_name": "esa",
           "source_role": "primary",
@@ -793,6 +1213,19 @@
           "content": "ESA fixture 将 JUICE 记录为由 ESA 运营、面向木星及其木卫二、木卫三、木卫四的探测任务。",
           "score": 0.8,
           "rank": 1,
+          "source": "esa",
+          "source_name": "esa",
+          "source_role": "primary",
+          "origin": "api",
+          "source_title": "JUICE",
+          "schema_version": "esa_shadow_ready_v1"
+        },
+        {
+          "page_title": "JUICE",
+          "section": "任务",
+          "content": "JUICE JUICE mission to Jupiter, Europa, Ganymede and Callisto.",
+          "score": 0.7444444444444445,
+          "rank": 2,
           "source": "esa",
           "source_name": "esa",
           "source_role": "primary",
@@ -820,7 +1253,7 @@
         "source": "esa",
         "source_name": "esa",
         "source_role": "primary",
-        "origin": "html_fallback",
+        "origin": "api",
         "source_title": "JUICE",
         "schema_version": "esa_shadow_ready_v1"
       },

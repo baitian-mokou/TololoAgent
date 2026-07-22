@@ -1,0 +1,44 @@
+{
+  "mode": "small_batch_command_skeleton",
+  "generated_at": "2026-07-21T17:52:44.291343+00:00",
+  "execution_status": "not_run",
+  "network": false,
+  "formal_pipeline_write": false,
+  "summary": {
+    "command_skeletons": 1
+  },
+  "items": [
+    {
+      "source_id": "official_science_example",
+      "manual_approval_required": true,
+      "execution_status": "not_run",
+      "proposed_command": "NOT EXECUTED / DRY RUN ONLY: python scripts/preview_source_frontier.py --manifest configs/source_manifests/examples/official_science_example.json --quality-score --limit 12 --json-out evaluation/source_quality/sandbox/official_science_example_future_frontier_preview.json",
+      "prerequisites": [
+        "review approved_small_batch_plan preview",
+        "confirm manifest validation passed",
+        "confirm rejected samples were reviewed",
+        "confirm ACTIVE_SOURCE remains zh_wikipedia"
+      ],
+      "checklist": [
+        "operator manually approves this command",
+        "run preview before any future ingest",
+        "keep output under evaluation/source_quality/sandbox for this stage",
+        "do not write data/raw_json, triples, Chroma, or Neo4j from this skeleton"
+      ],
+      "safety_guards": [
+        "NOT EXECUTED",
+        "DRY RUN",
+        "manual approval required",
+        "ACTIVE_SOURCE unchanged",
+        "formal writes disabled",
+        "network only after approval"
+      ],
+      "expected_outputs": [
+        "evaluation/source_quality/sandbox/official_science_example_future_frontier_preview.json",
+        "evaluation/source_quality/sandbox/official_science_example_future_quality_report.json"
+      ],
+      "approved_sample_size": 12,
+      "candidate_count": 4
+    }
+  ]
+}

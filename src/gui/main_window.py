@@ -811,6 +811,7 @@ class DatabaseTab(BaseTab):
     """数据库管理标签页"""
     def __init__(self, parent, main_window):
         super().__init__(parent, main_window)
+        self._db_operation_running = False
         self._build_ui()
 
     def _build_ui(self):
@@ -943,38 +944,59 @@ class DatabaseTab(BaseTab):
         threading.Thread(target=worker, daemon=True).start()
 
     def _import_neo4j(self):
+        if not self._start_db_operation():
+            return
         self._log(f"📥 {self.i18n.t('db_btn_import_neo4j')}")
         def worker():
+            loader = None
             try:
                 self._add_path()
                 from src.knowledge_graph.neo4j_loader import Neo4jLoader
                 loader = Neo4jLoader()
                 if loader.driver:
-                    nodes, rels = loader.load_all_triples()
+                    nodes, rels = loader.load_all_triples(resume=True)
                     self.frame.after(0, lambda: self._log(
                         self.i18n.t("db_neo4j_imported", nodes=nodes, rels=rels)))
-                    loader.close()
                     self._refresh_neo4j()
                 else:
                     self.frame.after(0, lambda: self._log("❌ Neo4j " + self.i18n.t("db_neo4j_failed")))
             except Exception as e:
                 self.frame.after(0, lambda e=e: self._log(f"❌ Neo4j错误: {e}"))
+            finally:
+                if loader:
+                    loader.close()
+                self.frame.after(0, self._finish_db_operation)
         threading.Thread(target=worker, daemon=True).start()
 
     def _import_chroma(self):
+        if not self._start_db_operation():
+            return
         self._log(f"📥 {self.i18n.t('db_btn_import_chroma')}")
         def worker():
             try:
                 self._add_path()
                 from src.vector_store.chroma_store import ChromaStore
                 store = ChromaStore()
-                count = store.load_all_narratives(replace_existing=True)
+                count = store.load_all_narratives(replace_existing=False, resume=True, skip_existing=True)
                 self.frame.after(0, lambda: self._log(
                     self.i18n.t("db_chroma_imported", count=count)))
                 self._refresh_chroma()
             except Exception as e:
                 self.frame.after(0, lambda e=e: self._log(f"❌ Chroma错误: {e}"))
+            finally:
+                self.frame.after(0, self._finish_db_operation)
         threading.Thread(target=worker, daemon=True).start()
+
+    def _start_db_operation(self):
+        if getattr(self, "_db_operation_running", False):
+            return False
+        self._db_operation_running = True
+        self._set_db_buttons(False)
+        return True
+
+    def _finish_db_operation(self):
+        self._db_operation_running = False
+        self._set_db_buttons(True)
 
     def _set_db_buttons(self, enabled=True):
         state = "normal" if enabled else "disabled"
@@ -985,6 +1007,8 @@ class DatabaseTab(BaseTab):
         self.btn_clear_all.config(state=state)
 
     def _clear_all_databases(self):
+        if getattr(self, "_db_operation_running", False):
+            return
         confirmed = messagebox.askyesno(
             self.i18n.t("db_clear_confirm_title"),
             self.i18n.t("db_clear_confirm_msg"),
@@ -993,7 +1017,8 @@ class DatabaseTab(BaseTab):
         if not confirmed:
             return
 
-        self._set_db_buttons(False)
+        if not self._start_db_operation():
+            return
         self._log(self.i18n.t("db_clear_start"))
 
         def worker():
@@ -1032,7 +1057,7 @@ class DatabaseTab(BaseTab):
                     self._log(self.i18n.t("db_clear_done"))
                 else:
                     self._log(self.i18n.t("db_clear_partial"))
-                self._set_db_buttons(True)
+                self._finish_db_operation()
                 self._refresh_neo4j()
                 self._refresh_chroma()
 
@@ -2144,6 +2169,7 @@ class AgentTab(BaseTab):
         self._ask_in_progress = False
         self._request_epoch = 0
         self._active_llm_signature = None
+        self._source_status_cache = {}
         self.source_var = tk.StringVar(value=self.SOURCE_LABELS[self.DEFAULT_SOURCE_NAME])
         self._build_ui()
     def _build_ui(self):
@@ -2288,9 +2314,33 @@ class AgentTab(BaseTab):
         return self.SOURCE_LABELS.get(self._selected_source_name(), self._selected_source_name())
 
     def _source_status_text(self) -> str:
-        return f"当前数据源：{self._selected_source_label()}"
+        source_name = self._selected_source_name()
+        base = f"当前数据源：{self._selected_source_label()}"
+        if source_name == "auto":
+            return base
+
+        status = getattr(self, "_source_status_cache", {}).get(source_name, {})
+        if not status:
+            return base
+
+        gate = "OK" if status.get("strict_gate_passed") else "待验证"
+        parts = [
+            f"triples {int(status.get('triple_count') or 0)}",
+            f"narratives {int(status.get('narrative_count') or 0)}",
+            f"gate {gate}",
+            f"Chroma {int(status.get('chroma_shadow_count') or 0)}",
+        ]
+        if status.get("last_probe_status") == "ok":
+            parts.append(f"Neo4j {int(status.get('last_probe_relationship_count') or 0)}")
+        return f"{base} | " + " / ".join(parts)
 
     def _refresh_source_status(self):
+        try:
+            from src.source_expansion_status import collect_source_expansion_status
+
+            self._source_status_cache = collect_source_expansion_status()
+        except Exception:
+            self._source_status_cache = getattr(self, "_source_status_cache", {})
         if hasattr(self, "current_source_label"):
             self.current_source_label.config(text=self._source_status_text())
 
