@@ -1,0 +1,50 @@
+[
+  {
+    "subject": "Webb studies how a planet survived the death of its star",
+    "predicate": "SOURCE_URL",
+    "object": "https://www.esa.int/science_exploration/space_science/webb/webb_studies_how_a_planet_survived_the_death_of_its_star",
+    "evidence": "https://www.esa.int/science_exploration/space_science/webb/webb_studies_how_a_planet_survived_the_death_of_its_star",
+    "confidence": 0.99,
+    "validation_status": "accepted",
+    "source_id": "esa",
+    "source_url": "https://www.esa.int/science_exploration/space_science/webb/webb_studies_how_a_planet_survived_the_death_of_its_star",
+    "source_title": "Webb studies how a planet survived the death of its star",
+    "package_trial": true
+  },
+  {
+    "subject": "Webb studies how a planet survived the death of its star",
+    "predicate": "HAS_TOPIC",
+    "object": "space science mission",
+    "evidence": "Science & Exploration Webb studies how a planet survived the death of its star 01/07/2026 2866 views 34 likes ESA / Science & Exploration / Space Science / Webb An international team of astronomers has used the NASA/ESA/CSA James Webb Space Telescope to watch the Jupiter-sized ex",
+    "confidence": 0.84,
+    "validation_status": "accepted",
+    "source_id": "esa",
+    "source_url": "https://www.esa.int/science_exploration/space_science/webb/webb_studies_how_a_planet_survived_the_death_of_its_star",
+    "source_title": "Webb studies how a planet survived the death of its star",
+    "package_trial": true
+  },
+  {
+    "subject": "Webb studies how a planet survived the death of its star",
+    "predicate": "INSTANCE_OF",
+    "object": "ESA space science page",
+    "evidence": "Science & Exploration Webb studies how a planet survived the death of its star 01/07/2026 2866 views 34 likes ESA / Science & Exploration / Space Science / Webb An international team of astronomers has used the NASA/ESA/CSA James Webb Space Telescope to watch the Jupiter-sized ex",
+    "confidence": 0.82,
+    "validation_status": "accepted",
+    "source_id": "esa",
+    "source_url": "https://www.esa.int/science_exploration/space_science/webb/webb_studies_how_a_planet_survived_the_death_of_its_star",
+    "source_title": "Webb studies how a planet survived the death of its star",
+    "package_trial": true
+  },
+  {
+    "subject": "Webb studies how a planet survived the death of its star",
+    "predicate": "INSTANCE_OF",
+    "object": "space mission page",
+    "evidence": "Science & Exploration Webb studies how a planet survived the death of its star 01/07/2026 2866 views 34 likes ESA / Science & Exploration / Space Science / Webb An international team of astronomers has used the NASA/ESA/CSA James Webb Space Telescope to watch the Jupiter-sized ex",
+    "confidence": 0.74,
+    "validation_status": "accepted",
+    "source_id": "esa",
+    "source_url": "https://www.esa.int/science_exploration/space_science/webb/webb_studies_how_a_planet_survived_the_death_of_its_star",
+    "source_title": "Webb studies how a planet survived the death of its star",
+    "package_trial": true
+  }
+]

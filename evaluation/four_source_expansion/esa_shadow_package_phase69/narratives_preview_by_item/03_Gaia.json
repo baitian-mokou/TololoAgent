@@ -1,0 +1,78 @@
+[
+  {
+    "page_title": "ESA - Gaia",
+    "section": "raw_chunk_1",
+    "content": "Science & Exploration Gaia ESA's billion star surveyor The mission From 27 July 2014 to 15 January 2025, Gaia has made more than three trillion observations of two billion stars and other objects throughout our Milky Way galaxy and beyond, mapping their motions, luminosity, temperature and composition. Gaia's extraordinarily precise three-dimensional map will provide the data needed to tackle an enormous range of important questions related to the origin, structure and evolutionary history of our galaxy. Launch: 19 December 2013 Orbit: L2 Lagrange point End of science observations : 15 January 2025 Upcoming data releases: Data Release 4 (based on 66 months of data): expected December 2026 Data Release 5 (based on all mission data): not before the end of 2030 Previous data releases: Data Release 1: 14 September 2016 Data Release 2: 25 April 2018 Early Data Release 3: 3 December 2020 Data",
+    "keywords": [
+      "ESA - Gaia",
+      "esa"
+    ],
+    "source_url": "https://www.esa.int/Science_Exploration/Space_Science/Gaia",
+    "source": "esa",
+    "source_name": "esa",
+    "source_role": "primary",
+    "origin": "api",
+    "type": "embedding_chunk",
+    "schema_version": "esa_shadow_ready_v1",
+    "source_title": "Gaia",
+    "source_id": "esa",
+    "package_trial": true
+  },
+  {
+    "page_title": "ESA - Gaia",
+    "section": "raw_chunk_2",
+    "content": "Release 3: 13 June 2022 Focused Product Release: 10 October 2023 1 billion pixel camera 10 m sunshield >2000 million objects Latest All Stories Videos Images Image Science & Exploration Gaia's multi-dimensional Milky Way poster 12/06/2026 534 views 8 likes View Image Science & Exploration Gaia finds hints of planets in baby star systems 18/12/2025 5904 views 104 likes View Story Science & Exploration Gaia discovers our galaxy’s great wave 30/09/2025 22179 views 167 likes Read Video 00:02:28 Science & Exploration The most accurate 3D map of stellar nurseries in the Milky … 16/09/2025 22373 views 287 likes Play Story Science & Exploration Fly through Gaia’s 3D map of stellar nurseries 16/09/2025 43088 views 104 likes Read Story Science & Exploration Gaia proves our skies are filled with chains of starry gath… 26/08/2025 10045 views 53 likes Read Image Science & Exploration You can’t judge",
+    "keywords": [
+      "ESA - Gaia",
+      "esa"
+    ],
+    "source_url": "https://www.esa.int/Science_Exploration/Space_Science/Gaia",
+    "source": "esa",
+    "source_name": "esa",
+    "source_role": "primary",
+    "origin": "api",
+    "type": "embedding_chunk",
+    "schema_version": "esa_shadow_ready_v1",
+    "source_title": "Gaia",
+    "source_id": "esa",
+    "package_trial": true
+  },
+  {
+    "page_title": "ESA - Gaia",
+    "section": "raw_chunk_3",
+    "content": "a star by its protoplanetary disc 14/07/2025 3275 views 69 likes View Story Science & Exploration Hubble and Gaia revisit fate of our galaxy 02/06/2025 8514 views 63 likes Read Story Science & Exploration Gaia spots odd family of stars desperate to leave home 29/04/2025 9207 views 79 likes Read Video 00:05:23 Science & Exploration Gaia: Rewriting the story of the Milky Way 28/03/2025 7055 views 118 likes Play Video 00:02:00 Enabling & Support ESA’s Gaia spacecraft leaves for retirement orbit 27/03/2025 4252 views 38 likes Play Video 00:01:40 Science & Exploration ESA’s Gaia finds a mysterious planet and brown dwarf 04/02/2025 4544 views 54 likes Play Image Science & Exploration Sky-scanning complete for Gaia 15/01/2025 23411 views 159 likes View Image Science & Exploration The best Milky Way map, by Gaia (edge-on) 15/01/2025 20602 views 253 likes View Video 00:02:05 Science & Exploration",
+    "keywords": [
+      "ESA - Gaia",
+      "esa"
+    ],
+    "source_url": "https://www.esa.int/Science_Exploration/Space_Science/Gaia",
+    "source": "esa",
+    "source_name": "esa",
+    "source_role": "primary",
+    "origin": "api",
+    "type": "embedding_chunk",
+    "schema_version": "esa_shadow_ready_v1",
+    "source_title": "Gaia",
+    "source_id": "esa",
+    "package_trial": true
+  },
+  {
+    "page_title": "ESA - Gaia",
+    "section": "raw_chunk_4",
+    "content": "The best Milky Way animation, by Gaia 15/01/2025 73636 views 705 likes Play More items Image Science & Exploration Anatomy of the Milky Way 09/09/2025 46228 views 243 likes View Image Science & Exploration Interactive map of the sky from Gaia’s Early Data Release 3 19/12/2023 38513 views 487 likes View About Gaia Focus on Science & Exploration Gaia overview Open Story Science & Exploration Gaia factsheet 50072 views 184 likes Read Story Science & Exploration How does Gaia study the Milky Way? 14126 views 42 likes Read Story Science & Exploration Gaia’s decade of discoveries: unravelling the intricacies o… 19/12/2023 19004 views 132 likes Read Image Science & Exploration Gaia's Milky Way map (poster) 06/02/2025 3170 views 24 likes View Image Science & Exploration Gaia's multi-dimensional Milky Way poster 12/06/2026 534 views 8 likes View Video 00:02:05 Science & Exploration The best Milk",
+    "keywords": [
+      "ESA - Gaia",
+      "esa"
+    ],
+    "source_url": "https://www.esa.int/Science_Exploration/Space_Science/Gaia",
+    "source": "esa",
+    "source_name": "esa",
+    "source_role": "primary",
+    "origin": "api",
+    "type": "embedding_chunk",
+    "schema_version": "esa_shadow_ready_v1",
+    "source_title": "Gaia",
+    "source_id": "esa",
+    "package_trial": true
+  }
+]

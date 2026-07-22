@@ -1,0 +1,50 @@
+[
+  {
+    "subject": "Cluster",
+    "predicate": "SOURCE_URL",
+    "object": "https://www.esa.int/Science_Exploration/Space_Science/Cluster",
+    "evidence": "https://www.esa.int/Science_Exploration/Space_Science/Cluster",
+    "confidence": 0.99,
+    "validation_status": "accepted",
+    "source_id": "esa",
+    "source_url": "https://www.esa.int/Science_Exploration/Space_Science/Cluster",
+    "source_title": "Cluster",
+    "package_trial": true
+  },
+  {
+    "subject": "Cluster",
+    "predicate": "HAS_TOPIC",
+    "object": "space science mission",
+    "evidence": "Science & Exploration Cluster Measuring Earth's magnetic environment The mission Cluster was a constellation of four spacecraft investigating the interaction between the Sun and Earth’s magnetosphere in unparalleled detail. The magnetosphere is our shield against the charged gas",
+    "confidence": 0.84,
+    "validation_status": "accepted",
+    "source_id": "esa",
+    "source_url": "https://www.esa.int/Science_Exploration/Space_Science/Cluster",
+    "source_title": "Cluster",
+    "package_trial": true
+  },
+  {
+    "subject": "Cluster",
+    "predicate": "INSTANCE_OF",
+    "object": "ESA space science page",
+    "evidence": "Science & Exploration Cluster Measuring Earth's magnetic environment The mission Cluster was a constellation of four spacecraft investigating the interaction between the Sun and Earth’s magnetosphere in unparalleled detail. The magnetosphere is our shield against the charged gas",
+    "confidence": 0.82,
+    "validation_status": "accepted",
+    "source_id": "esa",
+    "source_url": "https://www.esa.int/Science_Exploration/Space_Science/Cluster",
+    "source_title": "Cluster",
+    "package_trial": true
+  },
+  {
+    "subject": "Cluster",
+    "predicate": "INSTANCE_OF",
+    "object": "space mission page",
+    "evidence": "Science & Exploration Cluster Measuring Earth's magnetic environment The mission Cluster was a constellation of four spacecraft investigating the interaction between the Sun and Earth’s magnetosphere in unparalleled detail. The magnetosphere is our shield against the charged gas",
+    "confidence": 0.74,
+    "validation_status": "accepted",
+    "source_id": "esa",
+    "source_url": "https://www.esa.int/Science_Exploration/Space_Science/Cluster",
+    "source_title": "Cluster",
+    "package_trial": true
+  }
+]

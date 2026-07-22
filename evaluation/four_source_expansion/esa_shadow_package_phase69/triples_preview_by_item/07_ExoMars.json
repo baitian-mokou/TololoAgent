@@ -1,0 +1,50 @@
+[
+  {
+    "subject": "ExoMars",
+    "predicate": "SOURCE_URL",
+    "object": "https://www.esa.int/Science_Exploration/Space_Science/ExoMars",
+    "evidence": "https://www.esa.int/Science_Exploration/Space_Science/ExoMars",
+    "confidence": 0.99,
+    "validation_status": "accepted",
+    "source_id": "esa",
+    "source_url": "https://www.esa.int/Science_Exploration/Space_Science/ExoMars",
+    "source_title": "ExoMars",
+    "package_trial": true
+  },
+  {
+    "subject": "ExoMars",
+    "predicate": "HAS_TOPIC",
+    "object": "space science mission",
+    "evidence": "Science & Exploration ExoMars Has life ever existed on Mars? The mission The ExoMars programme comprises two missions: the first – the Trace Gas Orbiter – launched in 2016 while the second, carrying the Rosalind Franklin rover, will target launch in 2028. Together they will addre",
+    "confidence": 0.84,
+    "validation_status": "accepted",
+    "source_id": "esa",
+    "source_url": "https://www.esa.int/Science_Exploration/Space_Science/ExoMars",
+    "source_title": "ExoMars",
+    "package_trial": true
+  },
+  {
+    "subject": "ExoMars",
+    "predicate": "INSTANCE_OF",
+    "object": "ESA space science page",
+    "evidence": "Science & Exploration ExoMars Has life ever existed on Mars? The mission The ExoMars programme comprises two missions: the first – the Trace Gas Orbiter – launched in 2016 while the second, carrying the Rosalind Franklin rover, will target launch in 2028. Together they will addre",
+    "confidence": 0.82,
+    "validation_status": "accepted",
+    "source_id": "esa",
+    "source_url": "https://www.esa.int/Science_Exploration/Space_Science/ExoMars",
+    "source_title": "ExoMars",
+    "package_trial": true
+  },
+  {
+    "subject": "ExoMars",
+    "predicate": "INSTANCE_OF",
+    "object": "space mission page",
+    "evidence": "Science & Exploration ExoMars Has life ever existed on Mars? The mission The ExoMars programme comprises two missions: the first – the Trace Gas Orbiter – launched in 2016 while the second, carrying the Rosalind Franklin rover, will target launch in 2028. Together they will addre",
+    "confidence": 0.74,
+    "validation_status": "accepted",
+    "source_id": "esa",
+    "source_url": "https://www.esa.int/Science_Exploration/Space_Science/ExoMars",
+    "source_title": "ExoMars",
+    "package_trial": true
+  }
+]

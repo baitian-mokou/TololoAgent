@@ -1,0 +1,50 @@
+[
+  {
+    "subject": "Euclid discovers the most ancient quasar in the Universe",
+    "predicate": "SOURCE_URL",
+    "object": "https://www.esa.int/science_exploration/space_science/euclid/euclid_discovers_the_most_ancient_quasar_in_the_universe",
+    "evidence": "https://www.esa.int/science_exploration/space_science/euclid/euclid_discovers_the_most_ancient_quasar_in_the_universe",
+    "confidence": 0.99,
+    "validation_status": "accepted",
+    "source_id": "esa",
+    "source_url": "https://www.esa.int/science_exploration/space_science/euclid/euclid_discovers_the_most_ancient_quasar_in_the_universe",
+    "source_title": "Euclid discovers the most ancient quasar in the Universe",
+    "package_trial": true
+  },
+  {
+    "subject": "Euclid discovers the most ancient quasar in the Universe",
+    "predicate": "HAS_TOPIC",
+    "object": "space science mission",
+    "evidence": "Science & Exploration Euclid discovers the most ancient quasar in the Universe 06/07/2026 8589 views 78 likes ESA / Science & Exploration / Space Science / Euclid In brief The European Space Agency’s Euclid space telescope has discovered 31 of the most ancient quasars ever found.",
+    "confidence": 0.84,
+    "validation_status": "accepted",
+    "source_id": "esa",
+    "source_url": "https://www.esa.int/science_exploration/space_science/euclid/euclid_discovers_the_most_ancient_quasar_in_the_universe",
+    "source_title": "Euclid discovers the most ancient quasar in the Universe",
+    "package_trial": true
+  },
+  {
+    "subject": "Euclid discovers the most ancient quasar in the Universe",
+    "predicate": "INSTANCE_OF",
+    "object": "ESA space science page",
+    "evidence": "Science & Exploration Euclid discovers the most ancient quasar in the Universe 06/07/2026 8589 views 78 likes ESA / Science & Exploration / Space Science / Euclid In brief The European Space Agency’s Euclid space telescope has discovered 31 of the most ancient quasars ever found.",
+    "confidence": 0.82,
+    "validation_status": "accepted",
+    "source_id": "esa",
+    "source_url": "https://www.esa.int/science_exploration/space_science/euclid/euclid_discovers_the_most_ancient_quasar_in_the_universe",
+    "source_title": "Euclid discovers the most ancient quasar in the Universe",
+    "package_trial": true
+  },
+  {
+    "subject": "Euclid discovers the most ancient quasar in the Universe",
+    "predicate": "INSTANCE_OF",
+    "object": "space mission page",
+    "evidence": "Science & Exploration Euclid discovers the most ancient quasar in the Universe 06/07/2026 8589 views 78 likes ESA / Science & Exploration / Space Science / Euclid In brief The European Space Agency’s Euclid space telescope has discovered 31 of the most ancient quasars ever found.",
+    "confidence": 0.74,
+    "validation_status": "accepted",
+    "source_id": "esa",
+    "source_url": "https://www.esa.int/science_exploration/space_science/euclid/euclid_discovers_the_most_ancient_quasar_in_the_universe",
+    "source_title": "Euclid discovers the most ancient quasar in the Universe",
+    "package_trial": true
+  }
+]

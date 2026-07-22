@@ -1,0 +1,50 @@
+[
+  {
+    "subject": "Euclid",
+    "predicate": "SOURCE_URL",
+    "object": "https://www.esa.int/Science_Exploration/Space_Science/Euclid",
+    "evidence": "https://www.esa.int/Science_Exploration/Space_Science/Euclid",
+    "confidence": 0.99,
+    "validation_status": "accepted",
+    "source_id": "esa",
+    "source_url": "https://www.esa.int/Science_Exploration/Space_Science/Euclid",
+    "source_title": "Euclid",
+    "package_trial": true
+  },
+  {
+    "subject": "Euclid",
+    "predicate": "HAS_TOPIC",
+    "object": "space science mission",
+    "evidence": "Science & Exploration Euclid Exploring the dark Universe The mission ESA's Euclid mission is designed to explore the composition and evolution of the dark Universe. The space telescope will create a great map of the large-scale structure of the Universe across space and time by o",
+    "confidence": 0.84,
+    "validation_status": "accepted",
+    "source_id": "esa",
+    "source_url": "https://www.esa.int/Science_Exploration/Space_Science/Euclid",
+    "source_title": "Euclid",
+    "package_trial": true
+  },
+  {
+    "subject": "Euclid",
+    "predicate": "INSTANCE_OF",
+    "object": "ESA space science page",
+    "evidence": "Science & Exploration Euclid Exploring the dark Universe The mission ESA's Euclid mission is designed to explore the composition and evolution of the dark Universe. The space telescope will create a great map of the large-scale structure of the Universe across space and time by o",
+    "confidence": 0.82,
+    "validation_status": "accepted",
+    "source_id": "esa",
+    "source_url": "https://www.esa.int/Science_Exploration/Space_Science/Euclid",
+    "source_title": "Euclid",
+    "package_trial": true
+  },
+  {
+    "subject": "Euclid",
+    "predicate": "INSTANCE_OF",
+    "object": "space mission page",
+    "evidence": "Science & Exploration Euclid Exploring the dark Universe The mission ESA's Euclid mission is designed to explore the composition and evolution of the dark Universe. The space telescope will create a great map of the large-scale structure of the Universe across space and time by o",
+    "confidence": 0.74,
+    "validation_status": "accepted",
+    "source_id": "esa",
+    "source_url": "https://www.esa.int/Science_Exploration/Space_Science/Euclid",
+    "source_title": "Euclid",
+    "package_trial": true
+  }
+]

@@ -1,0 +1,143 @@
+{
+  "phase": "Phase 69",
+  "mode": "esa_shadow_package_preparation",
+  "generated_at": "2026-07-22T12:50:00.336259+00:00",
+  "source_id": "esa",
+  "selected_count": 18,
+  "packaged_items": 18,
+  "rejected": 0,
+  "failed": 0,
+  "duplicate_skipped": 0,
+  "rejected_failed_skipped": 0,
+  "triples": 70,
+  "narratives": 71,
+  "relations_count": {
+    "HAS_TOPIC": 18,
+    "INSTANCE_OF": 34,
+    "SOURCE_URL": 18
+  },
+  "candidate_statuses": [
+    {
+      "status": "packaged",
+      "title": "Space Science",
+      "url": "https://www.esa.int/Science_Exploration/Space_Science"
+    },
+    {
+      "status": "packaged",
+      "title": "Rosetta",
+      "url": "https://www.esa.int/Science_Exploration/Space_Science/Rosetta"
+    },
+    {
+      "status": "packaged",
+      "title": "Gaia",
+      "url": "https://www.esa.int/Science_Exploration/Space_Science/Gaia"
+    },
+    {
+      "status": "packaged",
+      "title": "Solar Orbiter",
+      "url": "https://www.esa.int/Science_Exploration/Space_Science/Solar_Orbiter"
+    },
+    {
+      "status": "packaged",
+      "title": "BepiColombo",
+      "url": "https://www.esa.int/Science_Exploration/Space_Science/BepiColombo"
+    },
+    {
+      "status": "packaged",
+      "title": "Euclid",
+      "url": "https://www.esa.int/Science_Exploration/Space_Science/Euclid"
+    },
+    {
+      "status": "packaged",
+      "title": "ExoMars",
+      "url": "https://www.esa.int/Science_Exploration/Space_Science/ExoMars"
+    },
+    {
+      "status": "packaged",
+      "title": "Cluster",
+      "url": "https://www.esa.int/Science_Exploration/Space_Science/Cluster"
+    },
+    {
+      "status": "packaged",
+      "title": "Webb",
+      "url": "https://www.esa.int/Science_Exploration/Space_Science/Webb"
+    },
+    {
+      "status": "packaged",
+      "title": "Expedition Sound podcast series",
+      "url": "https://www.esa.int/science_exploration/space_science/expedition_sound_podcast_series"
+    },
+    {
+      "status": "packaged",
+      "title": "Webb reveals millions of stars in nearby galaxy",
+      "url": "https://www.esa.int/science_exploration/space_science/webb/webb_reveals_millions_of_stars_in_nearby_galaxy"
+    },
+    {
+      "status": "packaged",
+      "title": "Euclid discovers the most ancient quasar in the Universe",
+      "url": "https://www.esa.int/science_exploration/space_science/euclid/euclid_discovers_the_most_ancient_quasar_in_the_universe"
+    },
+    {
+      "status": "packaged",
+      "title": "Webb studies how a planet survived the death of its star",
+      "url": "https://www.esa.int/science_exploration/space_science/webb/webb_studies_how_a_planet_survived_the_death_of_its_star"
+    },
+    {
+      "status": "packaged",
+      "title": "Space Science - Archive",
+      "url": "https://www.esa.int/science_exploration/space_science/(archive)/0"
+    },
+    {
+      "status": "packaged",
+      "title": "Plato",
+      "url": "https://www.esa.int/science_exploration/space_science/plato"
+    },
+    {
+      "status": "packaged",
+      "title": "Mission navigator",
+      "url": "https://www.esa.int/science_exploration/space_science/mission_navigator"
+    },
+    {
+      "status": "packaged",
+      "title": "About Space Science",
+      "url": "https://www.esa.int/science_exploration/space_science/about_space_science"
+    },
+    {
+      "status": "packaged",
+      "title": "ESA's 'Cosmic Vision'",
+      "url": "https://www.esa.int/science_exploration/space_science/esa_s_cosmic_vision"
+    }
+  ],
+  "approval_status": "pending",
+  "approval_template": "evaluation\\four_source_expansion\\esa_shadow_package_approval_phase69.json",
+  "out_dir": "evaluation\\four_source_expansion\\esa_shadow_package_phase69",
+  "formal_shadow_write_plan": {
+    "execution_status": "not_run",
+    "requires_manual_approval": true,
+    "source_id": "nasa",
+    "approved_item_count_required": 18,
+    "planned_triples": 70,
+    "planned_narratives": 71,
+    "allowed_scope": "shadow materialization path only",
+    "safety_guards": [
+      "ACTIVE_SOURCE remains zh_wikipedia",
+      "nasa remains disabled/shadow",
+      "no Chroma write",
+      "no Neo4j write",
+      "manual approval file required before any formal shadow write"
+    ]
+  },
+  "network_attempted": false,
+  "formal_triples_write": false,
+  "formal_narratives_write": false,
+  "chroma_write": false,
+  "neo4j_write": false,
+  "active_source": "zh_wikipedia",
+  "registry": {
+    "zh_wikipedia": "active",
+    "nasa": "disabled",
+    "esa": "disabled",
+    "wikidata": "disabled"
+  },
+  "active_source_unchanged": true
+}

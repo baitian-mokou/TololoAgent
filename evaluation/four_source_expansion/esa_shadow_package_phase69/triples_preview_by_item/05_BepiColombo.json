@@ -1,0 +1,50 @@
+[
+  {
+    "subject": "BepiColombo",
+    "predicate": "SOURCE_URL",
+    "object": "https://www.esa.int/Science_Exploration/Space_Science/BepiColombo",
+    "evidence": "https://www.esa.int/Science_Exploration/Space_Science/BepiColombo",
+    "confidence": 0.99,
+    "validation_status": "accepted",
+    "source_id": "esa",
+    "source_url": "https://www.esa.int/Science_Exploration/Space_Science/BepiColombo",
+    "source_title": "BepiColombo",
+    "package_trial": true
+  },
+  {
+    "subject": "BepiColombo",
+    "predicate": "HAS_TOPIC",
+    "object": "space science mission",
+    "evidence": "Science & Exploration BepiColombo Investigating Mercury's mysteries BepiColombo will be the second and most complex mission ever to orbit Mercury. Close to the Sun and more difficult for an orbiter to reach than Saturn, this small desert world is the least explored planet of the",
+    "confidence": 0.84,
+    "validation_status": "accepted",
+    "source_id": "esa",
+    "source_url": "https://www.esa.int/Science_Exploration/Space_Science/BepiColombo",
+    "source_title": "BepiColombo",
+    "package_trial": true
+  },
+  {
+    "subject": "BepiColombo",
+    "predicate": "INSTANCE_OF",
+    "object": "ESA space science page",
+    "evidence": "Science & Exploration BepiColombo Investigating Mercury's mysteries BepiColombo will be the second and most complex mission ever to orbit Mercury. Close to the Sun and more difficult for an orbiter to reach than Saturn, this small desert world is the least explored planet of the",
+    "confidence": 0.82,
+    "validation_status": "accepted",
+    "source_id": "esa",
+    "source_url": "https://www.esa.int/Science_Exploration/Space_Science/BepiColombo",
+    "source_title": "BepiColombo",
+    "package_trial": true
+  },
+  {
+    "subject": "BepiColombo",
+    "predicate": "INSTANCE_OF",
+    "object": "space mission page",
+    "evidence": "Science & Exploration BepiColombo Investigating Mercury's mysteries BepiColombo will be the second and most complex mission ever to orbit Mercury. Close to the Sun and more difficult for an orbiter to reach than Saturn, this small desert world is the least explored planet of the",
+    "confidence": 0.74,
+    "validation_status": "accepted",
+    "source_id": "esa",
+    "source_url": "https://www.esa.int/Science_Exploration/Space_Science/BepiColombo",
+    "source_title": "BepiColombo",
+    "package_trial": true
+  }
+]

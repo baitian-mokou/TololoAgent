@@ -1,0 +1,50 @@
+[
+  {
+    "subject": "ESA's 'Cosmic Vision'",
+    "predicate": "SOURCE_URL",
+    "object": "https://www.esa.int/science_exploration/space_science/esa_s_cosmic_vision",
+    "evidence": "https://www.esa.int/science_exploration/space_science/esa_s_cosmic_vision",
+    "confidence": 0.99,
+    "validation_status": "accepted",
+    "source_id": "esa",
+    "source_url": "https://www.esa.int/science_exploration/space_science/esa_s_cosmic_vision",
+    "source_title": "ESA's 'Cosmic Vision'",
+    "package_trial": true
+  },
+  {
+    "subject": "ESA's 'Cosmic Vision'",
+    "predicate": "HAS_TOPIC",
+    "object": "space science mission",
+    "evidence": "Science & Exploration ESA's 'Cosmic Vision' 57193 views 128 likes ESA / Science & Exploration / Space Science Orbiting and landing on a comet. Mapping the relic radiation from the Big Bang. Sensing liquid water buried on Mars. Charting one billion stars. These are just a handful",
+    "confidence": 0.84,
+    "validation_status": "accepted",
+    "source_id": "esa",
+    "source_url": "https://www.esa.int/science_exploration/space_science/esa_s_cosmic_vision",
+    "source_title": "ESA's 'Cosmic Vision'",
+    "package_trial": true
+  },
+  {
+    "subject": "ESA's 'Cosmic Vision'",
+    "predicate": "INSTANCE_OF",
+    "object": "ESA space science page",
+    "evidence": "Science & Exploration ESA's 'Cosmic Vision' 57193 views 128 likes ESA / Science & Exploration / Space Science Orbiting and landing on a comet. Mapping the relic radiation from the Big Bang. Sensing liquid water buried on Mars. Charting one billion stars. These are just a handful",
+    "confidence": 0.82,
+    "validation_status": "accepted",
+    "source_id": "esa",
+    "source_url": "https://www.esa.int/science_exploration/space_science/esa_s_cosmic_vision",
+    "source_title": "ESA's 'Cosmic Vision'",
+    "package_trial": true
+  },
+  {
+    "subject": "ESA's 'Cosmic Vision'",
+    "predicate": "INSTANCE_OF",
+    "object": "space mission page",
+    "evidence": "Science & Exploration ESA's 'Cosmic Vision' 57193 views 128 likes ESA / Science & Exploration / Space Science Orbiting and landing on a comet. Mapping the relic radiation from the Big Bang. Sensing liquid water buried on Mars. Charting one billion stars. These are just a handful",
+    "confidence": 0.74,
+    "validation_status": "accepted",
+    "source_id": "esa",
+    "source_url": "https://www.esa.int/science_exploration/space_science/esa_s_cosmic_vision",
+    "source_title": "ESA's 'Cosmic Vision'",
+    "package_trial": true
+  }
+]

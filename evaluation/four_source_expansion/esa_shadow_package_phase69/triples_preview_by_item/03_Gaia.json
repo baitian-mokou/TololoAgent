@@ -1,0 +1,50 @@
+[
+  {
+    "subject": "Gaia",
+    "predicate": "SOURCE_URL",
+    "object": "https://www.esa.int/Science_Exploration/Space_Science/Gaia",
+    "evidence": "https://www.esa.int/Science_Exploration/Space_Science/Gaia",
+    "confidence": 0.99,
+    "validation_status": "accepted",
+    "source_id": "esa",
+    "source_url": "https://www.esa.int/Science_Exploration/Space_Science/Gaia",
+    "source_title": "Gaia",
+    "package_trial": true
+  },
+  {
+    "subject": "Gaia",
+    "predicate": "HAS_TOPIC",
+    "object": "space science mission",
+    "evidence": "Science & Exploration Gaia ESA's billion star surveyor The mission From 27 July 2014 to 15 January 2025, Gaia has made more than three trillion observations of two billion stars and other objects throughout our Milky Way galaxy and beyond, mapping their motions, luminosity, tempe",
+    "confidence": 0.84,
+    "validation_status": "accepted",
+    "source_id": "esa",
+    "source_url": "https://www.esa.int/Science_Exploration/Space_Science/Gaia",
+    "source_title": "Gaia",
+    "package_trial": true
+  },
+  {
+    "subject": "Gaia",
+    "predicate": "INSTANCE_OF",
+    "object": "ESA space science page",
+    "evidence": "Science & Exploration Gaia ESA's billion star surveyor The mission From 27 July 2014 to 15 January 2025, Gaia has made more than three trillion observations of two billion stars and other objects throughout our Milky Way galaxy and beyond, mapping their motions, luminosity, tempe",
+    "confidence": 0.82,
+    "validation_status": "accepted",
+    "source_id": "esa",
+    "source_url": "https://www.esa.int/Science_Exploration/Space_Science/Gaia",
+    "source_title": "Gaia",
+    "package_trial": true
+  },
+  {
+    "subject": "Gaia",
+    "predicate": "INSTANCE_OF",
+    "object": "space mission page",
+    "evidence": "Science & Exploration Gaia ESA's billion star surveyor The mission From 27 July 2014 to 15 January 2025, Gaia has made more than three trillion observations of two billion stars and other objects throughout our Milky Way galaxy and beyond, mapping their motions, luminosity, tempe",
+    "confidence": 0.74,
+    "validation_status": "accepted",
+    "source_id": "esa",
+    "source_url": "https://www.esa.int/Science_Exploration/Space_Science/Gaia",
+    "source_title": "Gaia",
+    "package_trial": true
+  }
+]

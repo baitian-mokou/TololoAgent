@@ -1,0 +1,38 @@
+[
+  {
+    "subject": "Space Science - Archive",
+    "predicate": "SOURCE_URL",
+    "object": "https://www.esa.int/science_exploration/space_science/(archive)/0",
+    "evidence": "https://www.esa.int/science_exploration/space_science/(archive)/0",
+    "confidence": 0.99,
+    "validation_status": "accepted",
+    "source_id": "esa",
+    "source_url": "https://www.esa.int/science_exploration/space_science/(archive)/0",
+    "source_title": "Space Science - Archive",
+    "package_trial": true
+  },
+  {
+    "subject": "Space Science - Archive",
+    "predicate": "HAS_TOPIC",
+    "object": "space science mission",
+    "evidence": "Science & Exploration Space Science Archive Back Stories Videos Images Story Science & Exploration Expedition Sound podcast series 16/07/2026 1048 views 32 likes Read Story Science & Exploration Metallic waves on ancient Mars 15/07/2026 3131 views 59 likes Read Story Science & Ex",
+    "confidence": 0.84,
+    "validation_status": "accepted",
+    "source_id": "esa",
+    "source_url": "https://www.esa.int/science_exploration/space_science/(archive)/0",
+    "source_title": "Space Science - Archive",
+    "package_trial": true
+  },
+  {
+    "subject": "Space Science - Archive",
+    "predicate": "INSTANCE_OF",
+    "object": "ESA space science page",
+    "evidence": "Science & Exploration Space Science Archive Back Stories Videos Images Story Science & Exploration Expedition Sound podcast series 16/07/2026 1048 views 32 likes Read Story Science & Exploration Metallic waves on ancient Mars 15/07/2026 3131 views 59 likes Read Story Science & Ex",
+    "confidence": 0.82,
+    "validation_status": "accepted",
+    "source_id": "esa",
+    "source_url": "https://www.esa.int/science_exploration/space_science/(archive)/0",
+    "source_title": "Space Science - Archive",
+    "package_trial": true
+  }
+]

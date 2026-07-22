@@ -1,0 +1,284 @@
+[
+  {
+    "title": "Space Science",
+    "url": "https://www.esa.int/Science_Exploration/Space_Science",
+    "triples": [
+      {
+        "subject": "Space Science",
+        "predicate": "SOURCE_URL",
+        "object": "https://www.esa.int/Science_Exploration/Space_Science",
+        "evidence": "https://www.esa.int/Science_Exploration/Space_Science",
+        "confidence": 0.99,
+        "validation_status": "accepted"
+      },
+      {
+        "subject": "Space Science",
+        "predicate": "HAS_TOPIC",
+        "object": "exoplanet science",
+        "evidence": "Science & Exploration Space Science Latest All Stories Videos Images Image Science & Exploration Plato's electronics ready for space 20/07/2026 1433 views 35 likes View Image Science & Exploration ESA’s Mars Express meets NASA’s Psyche 17/07/2026 2230 views 52 likes View Story Sc",
+        "confidence": 0.84,
+        "validation_status": "accepted"
+      },
+      {
+        "subject": "Space Science",
+        "predicate": "INSTANCE_OF",
+        "object": "ESA space science page",
+        "evidence": "Science & Exploration Space Science Latest All Stories Videos Images Image Science & Exploration Plato's electronics ready for space 20/07/2026 1433 views 35 likes View Image Science & Exploration ESA’s Mars Express meets NASA’s Psyche 17/07/2026 2230 views 52 likes View Story Sc",
+        "confidence": 0.82,
+        "validation_status": "accepted"
+      }
+    ],
+    "narratives": [
+      {
+        "page_title": "ESA - Space Science",
+        "section": "raw_chunk_1",
+        "content": "Science & Exploration Space Science Latest All Stories Videos Images Image Science & Exploration Plato's electronics ready for space 20/07/2026 1433 views 35 likes View Image Science & Exploration ESA’s Mars Express meets NASA’s Psyche 17/07/2026 2230 views 52 likes View Story Science & Exploration Expedition Sound podcast series 16/07/2026 1004 views 31 likes Read Video 00:57:42 Science & Exploration Replay of the online media briefing on the total solar ecli… 15/07/2026 974 views 21 likes Play Story Science & Exploration Metallic waves on ancient Mars 15/07/2026 3051 views 58 likes Read Story Science & Exploration Webb reveals millions of stars in nearby galaxy 06/07/2026 2234 views 16 likes Read Story Science & Exploration Euclid discovers the most ancient quasar in the Universe 06/07/2026 8566 views 78 likes Read Story Science & Exploration Webb studies how a planet survived the deat",
+        "keywords": [
+          "ESA - Space Science",
+          "esa"
+        ],
+        "source_url": "https://www.esa.int/Science_Exploration/Space_Science",
+        "source": "esa",
+        "source_name": "esa",
+        "source_role": "primary",
+        "origin": "api",
+        "type": "embedding_chunk",
+        "schema_version": "esa_shadow_ready_v1",
+        "source_title": "ESA - Space Science"
+      }
+    ],
+    "warnings": []
+  },
+  {
+    "title": "Rosetta",
+    "url": "https://www.esa.int/Science_Exploration/Space_Science/Rosetta",
+    "triples": [
+      {
+        "subject": "Rosetta",
+        "predicate": "SOURCE_URL",
+        "object": "https://www.esa.int/Science_Exploration/Space_Science/Rosetta",
+        "evidence": "https://www.esa.int/Science_Exploration/Space_Science/Rosetta",
+        "confidence": 0.99,
+        "validation_status": "accepted"
+      },
+      {
+        "subject": "Rosetta",
+        "predicate": "HAS_TOPIC",
+        "object": "space science mission",
+        "evidence": "Science & Exploration Rosetta ESA's comet-chaser The mission ESA's Rosetta mission was the first to rendezvous with a comet, the first to follow a comet on its orbit around the Sun, and the first to deploy a lander to a comet's surface. Comets are time capsules containing primiti",
+        "confidence": 0.84,
+        "validation_status": "accepted"
+      },
+      {
+        "subject": "Rosetta",
+        "predicate": "INSTANCE_OF",
+        "object": "ESA space science page",
+        "evidence": "Science & Exploration Rosetta ESA's comet-chaser The mission ESA's Rosetta mission was the first to rendezvous with a comet, the first to follow a comet on its orbit around the Sun, and the first to deploy a lander to a comet's surface. Comets are time capsules containing primiti",
+        "confidence": 0.82,
+        "validation_status": "accepted"
+      },
+      {
+        "subject": "Rosetta",
+        "predicate": "INSTANCE_OF",
+        "object": "space mission page",
+        "evidence": "Science & Exploration Rosetta ESA's comet-chaser The mission ESA's Rosetta mission was the first to rendezvous with a comet, the first to follow a comet on its orbit around the Sun, and the first to deploy a lander to a comet's surface. Comets are time capsules containing primiti",
+        "confidence": 0.74,
+        "validation_status": "accepted"
+      }
+    ],
+    "narratives": [
+      {
+        "page_title": "ESA - Rosetta",
+        "section": "raw_chunk_1",
+        "content": "Science & Exploration Rosetta ESA's comet-chaser The mission ESA's Rosetta mission was the first to rendezvous with a comet, the first to follow a comet on its orbit around the Sun, and the first to deploy a lander to a comet's surface. Comets are time capsules containing primitive material left over from the epoch when the Sun and its planets formed. By studying the gas, dust and structure of the nucleus and organic materials associated with Comet 67P/Churyumov-Gerasimenko, via both remote and in situ observations, the Rosetta mission taught us about the history and evolution of our Solar System. Rosetta is an ESA mission with contributions from its Member States and NASA. Rosetta’s Philae lander was provided by a consortium led by DLR, MPS, CNES and ASI. Launch: 2 March 2004 1st Earth gravity assist: 4 March 2005 Mars gravity assist: 25 February 2007 2nd Earth gravity assist: 13 Novemb",
+        "keywords": [
+          "ESA - Rosetta",
+          "esa"
+        ],
+        "source_url": "https://www.esa.int/Science_Exploration/Space_Science/Rosetta",
+        "source": "esa",
+        "source_name": "esa",
+        "source_role": "primary",
+        "origin": "api",
+        "type": "embedding_chunk",
+        "schema_version": "esa_shadow_ready_v1",
+        "source_title": "ESA - Rosetta"
+      }
+    ],
+    "warnings": []
+  },
+  {
+    "title": "Gaia",
+    "url": "https://www.esa.int/Science_Exploration/Space_Science/Gaia",
+    "triples": [
+      {
+        "subject": "Gaia",
+        "predicate": "SOURCE_URL",
+        "object": "https://www.esa.int/Science_Exploration/Space_Science/Gaia",
+        "evidence": "https://www.esa.int/Science_Exploration/Space_Science/Gaia",
+        "confidence": 0.99,
+        "validation_status": "accepted"
+      },
+      {
+        "subject": "Gaia",
+        "predicate": "HAS_TOPIC",
+        "object": "space science mission",
+        "evidence": "Science & Exploration Gaia ESA's billion star surveyor The mission From 27 July 2014 to 15 January 2025, Gaia has made more than three trillion observations of two billion stars and other objects throughout our Milky Way galaxy and beyond, mapping their motions, luminosity, tempe",
+        "confidence": 0.84,
+        "validation_status": "accepted"
+      },
+      {
+        "subject": "Gaia",
+        "predicate": "INSTANCE_OF",
+        "object": "ESA space science page",
+        "evidence": "Science & Exploration Gaia ESA's billion star surveyor The mission From 27 July 2014 to 15 January 2025, Gaia has made more than three trillion observations of two billion stars and other objects throughout our Milky Way galaxy and beyond, mapping their motions, luminosity, tempe",
+        "confidence": 0.82,
+        "validation_status": "accepted"
+      },
+      {
+        "subject": "Gaia",
+        "predicate": "INSTANCE_OF",
+        "object": "space mission page",
+        "evidence": "Science & Exploration Gaia ESA's billion star surveyor The mission From 27 July 2014 to 15 January 2025, Gaia has made more than three trillion observations of two billion stars and other objects throughout our Milky Way galaxy and beyond, mapping their motions, luminosity, tempe",
+        "confidence": 0.74,
+        "validation_status": "accepted"
+      }
+    ],
+    "narratives": [
+      {
+        "page_title": "ESA - Gaia",
+        "section": "raw_chunk_1",
+        "content": "Science & Exploration Gaia ESA's billion star surveyor The mission From 27 July 2014 to 15 January 2025, Gaia has made more than three trillion observations of two billion stars and other objects throughout our Milky Way galaxy and beyond, mapping their motions, luminosity, temperature and composition. Gaia's extraordinarily precise three-dimensional map will provide the data needed to tackle an enormous range of important questions related to the origin, structure and evolutionary history of our galaxy. Launch: 19 December 2013 Orbit: L2 Lagrange point End of science observations : 15 January 2025 Upcoming data releases: Data Release 4 (based on 66 months of data): expected December 2026 Data Release 5 (based on all mission data): not before the end of 2030 Previous data releases: Data Release 1: 14 September 2016 Data Release 2: 25 April 2018 Early Data Release 3: 3 December 2020 Data",
+        "keywords": [
+          "ESA - Gaia",
+          "esa"
+        ],
+        "source_url": "https://www.esa.int/Science_Exploration/Space_Science/Gaia",
+        "source": "esa",
+        "source_name": "esa",
+        "source_role": "primary",
+        "origin": "api",
+        "type": "embedding_chunk",
+        "schema_version": "esa_shadow_ready_v1",
+        "source_title": "ESA - Gaia"
+      }
+    ],
+    "warnings": []
+  },
+  {
+    "title": "Solar Orbiter",
+    "url": "https://www.esa.int/Science_Exploration/Space_Science/Solar_Orbiter",
+    "triples": [
+      {
+        "subject": "Solar Orbiter",
+        "predicate": "SOURCE_URL",
+        "object": "https://www.esa.int/Science_Exploration/Space_Science/Solar_Orbiter",
+        "evidence": "https://www.esa.int/Science_Exploration/Space_Science/Solar_Orbiter",
+        "confidence": 0.99,
+        "validation_status": "accepted"
+      },
+      {
+        "subject": "Solar Orbiter",
+        "predicate": "HAS_TOPIC",
+        "object": "space science mission",
+        "evidence": "Science & Exploration Solar Orbiter The Sun up close Solar Orbiter is the most complex scientific laboratory ever sent to our life-giving star, taking images of the Sun from closer than any spacecraft before and being the first to look at its polar regions. With Solar Orbiter's t",
+        "confidence": 0.84,
+        "validation_status": "accepted"
+      },
+      {
+        "subject": "Solar Orbiter",
+        "predicate": "INSTANCE_OF",
+        "object": "ESA space science page",
+        "evidence": "Science & Exploration Solar Orbiter The Sun up close Solar Orbiter is the most complex scientific laboratory ever sent to our life-giving star, taking images of the Sun from closer than any spacecraft before and being the first to look at its polar regions. With Solar Orbiter's t",
+        "confidence": 0.82,
+        "validation_status": "accepted"
+      },
+      {
+        "subject": "Solar Orbiter",
+        "predicate": "INSTANCE_OF",
+        "object": "space mission page",
+        "evidence": "Science & Exploration Solar Orbiter The Sun up close Solar Orbiter is the most complex scientific laboratory ever sent to our life-giving star, taking images of the Sun from closer than any spacecraft before and being the first to look at its polar regions. With Solar Orbiter's t",
+        "confidence": 0.74,
+        "validation_status": "accepted"
+      }
+    ],
+    "narratives": [
+      {
+        "page_title": "ESA - Solar Orbiter",
+        "section": "raw_chunk_1",
+        "content": "Science & Exploration Solar Orbiter The Sun up close Solar Orbiter is the most complex scientific laboratory ever sent to our life-giving star, taking images of the Sun from closer than any spacecraft before and being the first to look at its polar regions. With Solar Orbiter's ten instruments, scientists hope to answer some profound questions: What drives the Sun’s 11-year cycle of rising and subsiding magnetic activity? What heats up the upper layer of its atmosphere, the corona, to millions of degrees Celsius? How does solar wind form, and what accelerates it to speeds of hundreds of kilometres per second? And how does it all affect our planet? Launch date: February 2020 First images: July 2020 Beginning of routine science operations: November 2021 Mission highlights: The closest-ever images of the Sun, the first ever close-up images of the Sun’s polar regions, measuring the compositi",
+        "keywords": [
+          "ESA - Solar Orbiter",
+          "esa"
+        ],
+        "source_url": "https://www.esa.int/Science_Exploration/Space_Science/Solar_Orbiter",
+        "source": "esa",
+        "source_name": "esa",
+        "source_role": "primary",
+        "origin": "api",
+        "type": "embedding_chunk",
+        "schema_version": "esa_shadow_ready_v1",
+        "source_title": "ESA - Solar Orbiter"
+      }
+    ],
+    "warnings": []
+  },
+  {
+    "title": "BepiColombo",
+    "url": "https://www.esa.int/Science_Exploration/Space_Science/BepiColombo",
+    "triples": [
+      {
+        "subject": "BepiColombo",
+        "predicate": "SOURCE_URL",
+        "object": "https://www.esa.int/Science_Exploration/Space_Science/BepiColombo",
+        "evidence": "https://www.esa.int/Science_Exploration/Space_Science/BepiColombo",
+        "confidence": 0.99,
+        "validation_status": "accepted"
+      },
+      {
+        "subject": "BepiColombo",
+        "predicate": "HAS_TOPIC",
+        "object": "space science mission",
+        "evidence": "Science & Exploration BepiColombo Investigating Mercury's mysteries BepiColombo will be the second and most complex mission ever to orbit Mercury. Close to the Sun and more difficult for an orbiter to reach than Saturn, this small desert world is the least explored planet of the",
+        "confidence": 0.84,
+        "validation_status": "accepted"
+      },
+      {
+        "subject": "BepiColombo",
+        "predicate": "INSTANCE_OF",
+        "object": "ESA space science page",
+        "evidence": "Science & Exploration BepiColombo Investigating Mercury's mysteries BepiColombo will be the second and most complex mission ever to orbit Mercury. Close to the Sun and more difficult for an orbiter to reach than Saturn, this small desert world is the least explored planet of the",
+        "confidence": 0.82,
+        "validation_status": "accepted"
+      },
+      {
+        "subject": "BepiColombo",
+        "predicate": "INSTANCE_OF",
+        "object": "space mission page",
+        "evidence": "Science & Exploration BepiColombo Investigating Mercury's mysteries BepiColombo will be the second and most complex mission ever to orbit Mercury. Close to the Sun and more difficult for an orbiter to reach than Saturn, this small desert world is the least explored planet of the",
+        "confidence": 0.74,
+        "validation_status": "accepted"
+      }
+    ],
+    "narratives": [
+      {
+        "page_title": "ESA - BepiColombo",
+        "section": "raw_chunk_1",
+        "content": "Science & Exploration BepiColombo Investigating Mercury's mysteries BepiColombo will be the second and most complex mission ever to orbit Mercury. Close to the Sun and more difficult for an orbiter to reach than Saturn, this small desert world is the least explored planet of the inner Solar System. Learning more about Mercury will shed light on the history of the entire Solar System. Packed with scientific instruments, the mission will try to answer many perplexing questions, such as: Why is there ice in the polar craters of the scorched planet? Why does Mercury have a magnetic field? And what are the mysterious 'hollows' on its surface? Launch : 20 October 2018 on an Ariane 5 rocket from Europe's Spaceport Components: Mercury Planetary Orbiter , Mercury Magnetospheric Orbiter , Mercury Transfer Module Status: In operation; en route to Mercury Mercury flybys : 1 Oct 2021 , 23 June 2022 ,",
+        "keywords": [
+          "ESA - BepiColombo",
+          "esa"
+        ],
+        "source_url": "https://www.esa.int/Science_Exploration/Space_Science/BepiColombo",
+        "source": "esa",
+        "source_name": "esa",
+        "source_role": "primary",
+        "origin": "api",
+        "type": "embedding_chunk",
+        "schema_version": "esa_shadow_ready_v1",
+        "source_title": "ESA - BepiColombo"
+      }
+    ],
+    "warnings": []
+  }
+]

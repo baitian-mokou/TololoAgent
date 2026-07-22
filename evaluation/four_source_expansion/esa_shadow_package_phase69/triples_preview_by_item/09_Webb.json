@@ -1,0 +1,50 @@
+[
+  {
+    "subject": "Webb",
+    "predicate": "SOURCE_URL",
+    "object": "https://www.esa.int/Science_Exploration/Space_Science/Webb",
+    "evidence": "https://www.esa.int/Science_Exploration/Space_Science/Webb",
+    "confidence": 0.99,
+    "validation_status": "accepted",
+    "source_id": "esa",
+    "source_url": "https://www.esa.int/Science_Exploration/Space_Science/Webb",
+    "source_title": "Webb",
+    "package_trial": true
+  },
+  {
+    "subject": "Webb",
+    "predicate": "HAS_TOPIC",
+    "object": "space science mission",
+    "evidence": "Science & Exploration Webb Seeing farther The mission The James Webb Space Telescope (Webb) is the next great space science observatory following Hubble, designed to answer outstanding questions about the Universe and to make breakthrough discoveries in all fields of astronomy. W",
+    "confidence": 0.84,
+    "validation_status": "accepted",
+    "source_id": "esa",
+    "source_url": "https://www.esa.int/Science_Exploration/Space_Science/Webb",
+    "source_title": "Webb",
+    "package_trial": true
+  },
+  {
+    "subject": "Webb",
+    "predicate": "INSTANCE_OF",
+    "object": "ESA space science page",
+    "evidence": "Science & Exploration Webb Seeing farther The mission The James Webb Space Telescope (Webb) is the next great space science observatory following Hubble, designed to answer outstanding questions about the Universe and to make breakthrough discoveries in all fields of astronomy. W",
+    "confidence": 0.82,
+    "validation_status": "accepted",
+    "source_id": "esa",
+    "source_url": "https://www.esa.int/Science_Exploration/Space_Science/Webb",
+    "source_title": "Webb",
+    "package_trial": true
+  },
+  {
+    "subject": "Webb",
+    "predicate": "INSTANCE_OF",
+    "object": "space mission page",
+    "evidence": "Science & Exploration Webb Seeing farther The mission The James Webb Space Telescope (Webb) is the next great space science observatory following Hubble, designed to answer outstanding questions about the Universe and to make breakthrough discoveries in all fields of astronomy. W",
+    "confidence": 0.74,
+    "validation_status": "accepted",
+    "source_id": "esa",
+    "source_url": "https://www.esa.int/Science_Exploration/Space_Science/Webb",
+    "source_title": "Webb",
+    "package_trial": true
+  }
+]

@@ -1,0 +1,50 @@
+[
+  {
+    "subject": "Webb reveals millions of stars in nearby galaxy",
+    "predicate": "SOURCE_URL",
+    "object": "https://www.esa.int/science_exploration/space_science/webb/webb_reveals_millions_of_stars_in_nearby_galaxy",
+    "evidence": "https://www.esa.int/science_exploration/space_science/webb/webb_reveals_millions_of_stars_in_nearby_galaxy",
+    "confidence": 0.99,
+    "validation_status": "accepted",
+    "source_id": "esa",
+    "source_url": "https://www.esa.int/science_exploration/space_science/webb/webb_reveals_millions_of_stars_in_nearby_galaxy",
+    "source_title": "Webb reveals millions of stars in nearby galaxy",
+    "package_trial": true
+  },
+  {
+    "subject": "Webb reveals millions of stars in nearby galaxy",
+    "predicate": "HAS_TOPIC",
+    "object": "space science mission",
+    "evidence": "Science & Exploration Webb reveals millions of stars in nearby galaxy 06/07/2026 2167 views 16 likes ESA / Science & Exploration / Space Science / Webb In new images from the NASA/ESA/CSA James Webb Space Telescope to celebrate its fourth science anniversary, a familiar galaxy tr",
+    "confidence": 0.84,
+    "validation_status": "accepted",
+    "source_id": "esa",
+    "source_url": "https://www.esa.int/science_exploration/space_science/webb/webb_reveals_millions_of_stars_in_nearby_galaxy",
+    "source_title": "Webb reveals millions of stars in nearby galaxy",
+    "package_trial": true
+  },
+  {
+    "subject": "Webb reveals millions of stars in nearby galaxy",
+    "predicate": "INSTANCE_OF",
+    "object": "ESA space science page",
+    "evidence": "Science & Exploration Webb reveals millions of stars in nearby galaxy 06/07/2026 2167 views 16 likes ESA / Science & Exploration / Space Science / Webb In new images from the NASA/ESA/CSA James Webb Space Telescope to celebrate its fourth science anniversary, a familiar galaxy tr",
+    "confidence": 0.82,
+    "validation_status": "accepted",
+    "source_id": "esa",
+    "source_url": "https://www.esa.int/science_exploration/space_science/webb/webb_reveals_millions_of_stars_in_nearby_galaxy",
+    "source_title": "Webb reveals millions of stars in nearby galaxy",
+    "package_trial": true
+  },
+  {
+    "subject": "Webb reveals millions of stars in nearby galaxy",
+    "predicate": "INSTANCE_OF",
+    "object": "space mission page",
+    "evidence": "Science & Exploration Webb reveals millions of stars in nearby galaxy 06/07/2026 2167 views 16 likes ESA / Science & Exploration / Space Science / Webb In new images from the NASA/ESA/CSA James Webb Space Telescope to celebrate its fourth science anniversary, a familiar galaxy tr",
+    "confidence": 0.74,
+    "validation_status": "accepted",
+    "source_id": "esa",
+    "source_url": "https://www.esa.int/science_exploration/space_science/webb/webb_reveals_millions_of_stars_in_nearby_galaxy",
+    "source_title": "Webb reveals millions of stars in nearby galaxy",
+    "package_trial": true
+  }
+]

@@ -1,0 +1,50 @@
+[
+  {
+    "subject": "Plato",
+    "predicate": "SOURCE_URL",
+    "object": "https://www.esa.int/science_exploration/space_science/plato",
+    "evidence": "https://www.esa.int/science_exploration/space_science/plato",
+    "confidence": 0.99,
+    "validation_status": "accepted",
+    "source_id": "esa",
+    "source_url": "https://www.esa.int/science_exploration/space_science/plato",
+    "source_title": "Plato",
+    "package_trial": true
+  },
+  {
+    "subject": "Plato",
+    "predicate": "HAS_TOPIC",
+    "object": "space science mission",
+    "evidence": "Science & Exploration Plato Terrestrial planet hunter The mission ESA’s mission Plato, PLAnetary Transits and Oscillations of stars, will use its 26 cameras to study terrestrial exoplanets in orbits up to the habitable zone of Sun-like stars. The mission will measure the sizes of",
+    "confidence": 0.84,
+    "validation_status": "accepted",
+    "source_id": "esa",
+    "source_url": "https://www.esa.int/science_exploration/space_science/plato",
+    "source_title": "Plato",
+    "package_trial": true
+  },
+  {
+    "subject": "Plato",
+    "predicate": "INSTANCE_OF",
+    "object": "ESA space science page",
+    "evidence": "Science & Exploration Plato Terrestrial planet hunter The mission ESA’s mission Plato, PLAnetary Transits and Oscillations of stars, will use its 26 cameras to study terrestrial exoplanets in orbits up to the habitable zone of Sun-like stars. The mission will measure the sizes of",
+    "confidence": 0.82,
+    "validation_status": "accepted",
+    "source_id": "esa",
+    "source_url": "https://www.esa.int/science_exploration/space_science/plato",
+    "source_title": "Plato",
+    "package_trial": true
+  },
+  {
+    "subject": "Plato",
+    "predicate": "INSTANCE_OF",
+    "object": "space mission page",
+    "evidence": "Science & Exploration Plato Terrestrial planet hunter The mission ESA’s mission Plato, PLAnetary Transits and Oscillations of stars, will use its 26 cameras to study terrestrial exoplanets in orbits up to the habitable zone of Sun-like stars. The mission will measure the sizes of",
+    "confidence": 0.74,
+    "validation_status": "accepted",
+    "source_id": "esa",
+    "source_url": "https://www.esa.int/science_exploration/space_science/plato",
+    "source_title": "Plato",
+    "package_trial": true
+  }
+]

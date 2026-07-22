@@ -1,0 +1,78 @@
+[
+  {
+    "page_title": "ESA - Webb studies how a planet survived the death of its star",
+    "section": "raw_chunk_1",
+    "content": "Science & Exploration Webb studies how a planet survived the death of its star 01/07/2026 2866 views 34 likes ESA / Science & Exploration / Space Science / Webb An international team of astronomers has used the NASA/ESA/CSA James Webb Space Telescope to watch the Jupiter-sized exoplanet WD 1856 b transit its host star, measuring the planet’s mass and temperature and even detecting its atmosphere. They found that the planet is significantly warmer than expected and determined how it most likely reached its very tight orbit around the star, a white dwarf. The results are our first window into the future of planets like Jupiter after the death of the Sun, billions of years into the future. Exoplanet WD 1856 b (artist’s concept) Webb is giving us new insight into the far-future of Solar Systems like our own. Billions of years ago, a Sun-like star nearing the end of its life swelled tremendou",
+    "keywords": [
+      "ESA - Webb studies how a planet survived the death of its star",
+      "esa"
+    ],
+    "source_url": "https://www.esa.int/science_exploration/space_science/webb/webb_studies_how_a_planet_survived_the_death_of_its_star",
+    "source": "esa",
+    "source_name": "esa",
+    "source_role": "primary",
+    "origin": "api",
+    "type": "embedding_chunk",
+    "schema_version": "esa_shadow_ready_v1",
+    "source_title": "Webb studies how a planet survived the death of its star",
+    "source_id": "esa",
+    "package_trial": true
+  },
+  {
+    "page_title": "ESA - Webb studies how a planet survived the death of its star",
+    "section": "raw_chunk_2",
+    "content": "sly in size to become a red giant before ejecting its outer layers, leaving a hot, remnant core known as a white dwarf. As a red giant, the star should have engulfed and destroyed any nearby planets. Yet, astronomers have found a Jupiter-sized exoplanet orbiting the white dwarf every 34 hours at a separation of less than 3 million km. The results were published on 1 July 2026 in the journal Nature . WD 1856 b was discovered in 2020 by scientists using NASA's Transiting Exoplanet Survey Satellite (TESS) and the Spitzer Space Telescope , orbiting the white dwarf named WD 1856+534 about 80 light-years from Earth. \"The planet is about the size of Jupiter, but the white dwarf it orbits is the size of Earth, so the planet is seven times larger than its star,\" said lead author Ryan MacDonald of the University of St Andrews in the United Kingdom. WD 1856 b orbits extremely close to its host star",
+    "keywords": [
+      "ESA - Webb studies how a planet survived the death of its star",
+      "esa"
+    ],
+    "source_url": "https://www.esa.int/science_exploration/space_science/webb/webb_studies_how_a_planet_survived_the_death_of_its_star",
+    "source": "esa",
+    "source_name": "esa",
+    "source_role": "primary",
+    "origin": "api",
+    "type": "embedding_chunk",
+    "schema_version": "esa_shadow_ready_v1",
+    "source_title": "Webb studies how a planet survived the death of its star",
+    "source_id": "esa",
+    "package_trial": true
+  },
+  {
+    "page_title": "ESA - Webb studies how a planet survived the death of its star",
+    "section": "raw_chunk_3",
+    "content": ", at a distance 50 times closer than Earth orbits the Sun. If WD 1856 b had originally been orbiting at that distance, it would have been obliterated while the star was a red giant. How did it survive the death of its host star and end up in its current position? Exoplanet WD 1856 b NIRSpec transmission spectrum How big, how hot? The new study used Webb to watch the planet passing in front of its star. This transit [1] yielded unique information about the planet’s mass, which is between four and eleven times the mass of Jupiter. The team also was able to determine the planet’s temperature. During the transit, light from the star was partly blocked, but infrared light was reduced less than other wavelengths. The difference was infrared light emitted by the planet from its own heat. The data indicated that the planet has a temperature of about 126 °C – significantly hotter than it would be",
+    "keywords": [
+      "ESA - Webb studies how a planet survived the death of its star",
+      "esa"
+    ],
+    "source_url": "https://www.esa.int/science_exploration/space_science/webb/webb_studies_how_a_planet_survived_the_death_of_its_star",
+    "source": "esa",
+    "source_name": "esa",
+    "source_role": "primary",
+    "origin": "api",
+    "type": "embedding_chunk",
+    "schema_version": "esa_shadow_ready_v1",
+    "source_title": "Webb studies how a planet survived the death of its star",
+    "source_id": "esa",
+    "package_trial": true
+  },
+  {
+    "page_title": "ESA - Webb studies how a planet survived the death of its star",
+    "section": "raw_chunk_4",
+    "content": "if its only source of heat was the light from the white dwarf. This puzzling discovery turned out to be the key fact that proved how the planet must have reached its current orbit. Christopher O’Connor of Northwestern University in the United States, a co-author on the paper, was responsible for tracing the temperature of the planet back in time. O’Connor said: \" The big question is how WD 1856 b ended up where it is today, and there are two theories. One is that the planet was swallowed by the host star as it was dying, and managed to survive on the inside. The other is that the migration took place due to the gravitational effect of other objects in the system. The white dwarf is part of a triple star system, and the outer companion stars could have influenced WD 1856 b’s orbit.\" The researchers realised that there was no source of energy present to generate that heat today, so it mus",
+    "keywords": [
+      "ESA - Webb studies how a planet survived the death of its star",
+      "esa"
+    ],
+    "source_url": "https://www.esa.int/science_exploration/space_science/webb/webb_studies_how_a_planet_survived_the_death_of_its_star",
+    "source": "esa",
+    "source_name": "esa",
+    "source_role": "primary",
+    "origin": "api",
+    "type": "embedding_chunk",
+    "schema_version": "esa_shadow_ready_v1",
+    "source_title": "Webb studies how a planet survived the death of its star",
+    "source_id": "esa",
+    "package_trial": true
+  }
+]

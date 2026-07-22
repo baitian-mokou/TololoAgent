@@ -1,0 +1,50 @@
+[
+  {
+    "subject": "Solar Orbiter",
+    "predicate": "SOURCE_URL",
+    "object": "https://www.esa.int/Science_Exploration/Space_Science/Solar_Orbiter",
+    "evidence": "https://www.esa.int/Science_Exploration/Space_Science/Solar_Orbiter",
+    "confidence": 0.99,
+    "validation_status": "accepted",
+    "source_id": "esa",
+    "source_url": "https://www.esa.int/Science_Exploration/Space_Science/Solar_Orbiter",
+    "source_title": "Solar Orbiter",
+    "package_trial": true
+  },
+  {
+    "subject": "Solar Orbiter",
+    "predicate": "HAS_TOPIC",
+    "object": "space science mission",
+    "evidence": "Science & Exploration Solar Orbiter The Sun up close Solar Orbiter is the most complex scientific laboratory ever sent to our life-giving star, taking images of the Sun from closer than any spacecraft before and being the first to look at its polar regions. With Solar Orbiter's t",
+    "confidence": 0.84,
+    "validation_status": "accepted",
+    "source_id": "esa",
+    "source_url": "https://www.esa.int/Science_Exploration/Space_Science/Solar_Orbiter",
+    "source_title": "Solar Orbiter",
+    "package_trial": true
+  },
+  {
+    "subject": "Solar Orbiter",
+    "predicate": "INSTANCE_OF",
+    "object": "ESA space science page",
+    "evidence": "Science & Exploration Solar Orbiter The Sun up close Solar Orbiter is the most complex scientific laboratory ever sent to our life-giving star, taking images of the Sun from closer than any spacecraft before and being the first to look at its polar regions. With Solar Orbiter's t",
+    "confidence": 0.82,
+    "validation_status": "accepted",
+    "source_id": "esa",
+    "source_url": "https://www.esa.int/Science_Exploration/Space_Science/Solar_Orbiter",
+    "source_title": "Solar Orbiter",
+    "package_trial": true
+  },
+  {
+    "subject": "Solar Orbiter",
+    "predicate": "INSTANCE_OF",
+    "object": "space mission page",
+    "evidence": "Science & Exploration Solar Orbiter The Sun up close Solar Orbiter is the most complex scientific laboratory ever sent to our life-giving star, taking images of the Sun from closer than any spacecraft before and being the first to look at its polar regions. With Solar Orbiter's t",
+    "confidence": 0.74,
+    "validation_status": "accepted",
+    "source_id": "esa",
+    "source_url": "https://www.esa.int/Science_Exploration/Space_Science/Solar_Orbiter",
+    "source_title": "Solar Orbiter",
+    "package_trial": true
+  }
+]

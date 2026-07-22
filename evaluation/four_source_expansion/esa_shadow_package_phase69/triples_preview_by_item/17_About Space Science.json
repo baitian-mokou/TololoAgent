@@ -1,0 +1,50 @@
+[
+  {
+    "subject": "About Space Science",
+    "predicate": "SOURCE_URL",
+    "object": "https://www.esa.int/science_exploration/space_science/about_space_science",
+    "evidence": "https://www.esa.int/science_exploration/space_science/about_space_science",
+    "confidence": 0.99,
+    "validation_status": "accepted",
+    "source_id": "esa",
+    "source_url": "https://www.esa.int/science_exploration/space_science/about_space_science",
+    "source_title": "About Space Science",
+    "package_trial": true
+  },
+  {
+    "subject": "About Space Science",
+    "predicate": "HAS_TOPIC",
+    "object": "space science mission",
+    "evidence": "Science & Exploration About Space Science 114661 views 340 likes ESA / Science & Exploration / Space Science Science is the underpinning theme of ESA. It drives innovation and leads to progress and economic development. It inspires future generations of scientists and engineers,",
+    "confidence": 0.84,
+    "validation_status": "accepted",
+    "source_id": "esa",
+    "source_url": "https://www.esa.int/science_exploration/space_science/about_space_science",
+    "source_title": "About Space Science",
+    "package_trial": true
+  },
+  {
+    "subject": "About Space Science",
+    "predicate": "INSTANCE_OF",
+    "object": "ESA space science page",
+    "evidence": "Science & Exploration About Space Science 114661 views 340 likes ESA / Science & Exploration / Space Science Science is the underpinning theme of ESA. It drives innovation and leads to progress and economic development. It inspires future generations of scientists and engineers,",
+    "confidence": 0.82,
+    "validation_status": "accepted",
+    "source_id": "esa",
+    "source_url": "https://www.esa.int/science_exploration/space_science/about_space_science",
+    "source_title": "About Space Science",
+    "package_trial": true
+  },
+  {
+    "subject": "About Space Science",
+    "predicate": "INSTANCE_OF",
+    "object": "space mission page",
+    "evidence": "Science & Exploration About Space Science 114661 views 340 likes ESA / Science & Exploration / Space Science Science is the underpinning theme of ESA. It drives innovation and leads to progress and economic development. It inspires future generations of scientists and engineers,",
+    "confidence": 0.74,
+    "validation_status": "accepted",
+    "source_id": "esa",
+    "source_url": "https://www.esa.int/science_exploration/space_science/about_space_science",
+    "source_title": "About Space Science",
+    "package_trial": true
+  }
+]

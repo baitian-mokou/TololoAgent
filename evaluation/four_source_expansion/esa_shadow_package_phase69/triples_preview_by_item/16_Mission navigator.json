@@ -1,0 +1,50 @@
+[
+  {
+    "subject": "Mission navigator",
+    "predicate": "SOURCE_URL",
+    "object": "https://www.esa.int/science_exploration/space_science/mission_navigator",
+    "evidence": "https://www.esa.int/science_exploration/space_science/mission_navigator",
+    "confidence": 0.99,
+    "validation_status": "accepted",
+    "source_id": "esa",
+    "source_url": "https://www.esa.int/science_exploration/space_science/mission_navigator",
+    "source_title": "Mission navigator",
+    "package_trial": true
+  },
+  {
+    "subject": "Mission navigator",
+    "predicate": "HAS_TOPIC",
+    "object": "space science mission",
+    "evidence": "Science & Exploration Mission navigator 142246 views 140 likes ESA / Science & Exploration / Space Science Table of ESA's Science missions past, present and future Sun Solar System Astrophysics Fundamental Physics Operations/Post-Operations Proba-3 [2024] Juice [2023] Euclid [202",
+    "confidence": 0.84,
+    "validation_status": "accepted",
+    "source_id": "esa",
+    "source_url": "https://www.esa.int/science_exploration/space_science/mission_navigator",
+    "source_title": "Mission navigator",
+    "package_trial": true
+  },
+  {
+    "subject": "Mission navigator",
+    "predicate": "INSTANCE_OF",
+    "object": "ESA space science page",
+    "evidence": "Science & Exploration Mission navigator 142246 views 140 likes ESA / Science & Exploration / Space Science Table of ESA's Science missions past, present and future Sun Solar System Astrophysics Fundamental Physics Operations/Post-Operations Proba-3 [2024] Juice [2023] Euclid [202",
+    "confidence": 0.82,
+    "validation_status": "accepted",
+    "source_id": "esa",
+    "source_url": "https://www.esa.int/science_exploration/space_science/mission_navigator",
+    "source_title": "Mission navigator",
+    "package_trial": true
+  },
+  {
+    "subject": "Mission navigator",
+    "predicate": "INSTANCE_OF",
+    "object": "space mission page",
+    "evidence": "Science & Exploration Mission navigator 142246 views 140 likes ESA / Science & Exploration / Space Science Table of ESA's Science missions past, present and future Sun Solar System Astrophysics Fundamental Physics Operations/Post-Operations Proba-3 [2024] Juice [2023] Euclid [202",
+    "confidence": 0.74,
+    "validation_status": "accepted",
+    "source_id": "esa",
+    "source_url": "https://www.esa.int/science_exploration/space_science/mission_navigator",
+    "source_title": "Mission navigator",
+    "package_trial": true
+  }
+]

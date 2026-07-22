@@ -1,0 +1,38 @@
+[
+  {
+    "subject": "Space Science",
+    "predicate": "SOURCE_URL",
+    "object": "https://www.esa.int/Science_Exploration/Space_Science",
+    "evidence": "https://www.esa.int/Science_Exploration/Space_Science",
+    "confidence": 0.99,
+    "validation_status": "accepted",
+    "source_id": "esa",
+    "source_url": "https://www.esa.int/Science_Exploration/Space_Science",
+    "source_title": "Space Science",
+    "package_trial": true
+  },
+  {
+    "subject": "Space Science",
+    "predicate": "HAS_TOPIC",
+    "object": "exoplanet science",
+    "evidence": "Science & Exploration Space Science Latest All Stories Videos Images Image Science & Exploration Plato's electronics ready for space 20/07/2026 1433 views 35 likes View Image Science & Exploration ESA’s Mars Express meets NASA’s Psyche 17/07/2026 2230 views 52 likes View Story Sc",
+    "confidence": 0.84,
+    "validation_status": "accepted",
+    "source_id": "esa",
+    "source_url": "https://www.esa.int/Science_Exploration/Space_Science",
+    "source_title": "Space Science",
+    "package_trial": true
+  },
+  {
+    "subject": "Space Science",
+    "predicate": "INSTANCE_OF",
+    "object": "ESA space science page",
+    "evidence": "Science & Exploration Space Science Latest All Stories Videos Images Image Science & Exploration Plato's electronics ready for space 20/07/2026 1433 views 35 likes View Image Science & Exploration ESA’s Mars Express meets NASA’s Psyche 17/07/2026 2230 views 52 likes View Story Sc",
+    "confidence": 0.82,
+    "validation_status": "accepted",
+    "source_id": "esa",
+    "source_url": "https://www.esa.int/Science_Exploration/Space_Science",
+    "source_title": "Space Science",
+    "package_trial": true
+  }
+]
