@@ -1,8 +1,8 @@
 {
   "source_id": "esa",
-  "approval_decision": "pending",
-  "approved_item_count": 0,
+  "approval_decision": "approved_for_shadow_write",
+  "approved_item_count": 18,
   "max_available_item_count": 18,
-  "reviewer_notes": "",
+  "reviewer_notes": "Approved under user standing conditional approval after reviewer Gate=GO for Phase69 package and Phase70 guarded apply preflight; ESA 18-item package shadow-only write.",
   "allowed_output_scope": "data/triples_shadow/esa only after explicit guarded approval"
 }

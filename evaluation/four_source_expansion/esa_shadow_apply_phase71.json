@@ -1,0 +1,43 @@
+{
+  "phase": "Phase 70",
+  "mode": "guarded_esa_shadow_apply_preflight",
+  "generated_at": "2026-07-22T13:02:43.820539+00:00",
+  "source_id": "esa",
+  "allowed": true,
+  "executed": true,
+  "blocked_reason": "",
+  "package_dir": "evaluation\\four_source_expansion\\esa_shadow_package_phase69",
+  "approval_path": "evaluation\\four_source_expansion\\esa_shadow_package_approval_phase69.json",
+  "shadow_output_dir": "data\\triples_shadow\\esa",
+  "execute_requested": true,
+  "formal_default_triples_write": false,
+  "chroma_write": false,
+  "neo4j_write": false,
+  "active_source": "zh_wikipedia",
+  "registry": {
+    "zh_wikipedia": "active",
+    "nasa": "disabled",
+    "esa": "disabled",
+    "wikidata": "disabled"
+  },
+  "active_source_unchanged": true,
+  "copy_result": {
+    "files_written": [
+      "data\\triples_shadow\\esa\\triples_preview.json",
+      "data\\triples_shadow\\esa\\narratives_preview.json",
+      "data\\triples_shadow\\esa\\package_manifest.json"
+    ],
+    "file_count": 3
+  },
+  "approval": {
+    "source_id": "esa",
+    "approval_decision": "approved_for_shadow_write",
+    "approved_item_count": 18,
+    "reviewer_notes": "Approved under user standing conditional approval after reviewer Gate=GO for Phase69 package and Phase70 guarded apply preflight; ESA 18-item package shadow-only write."
+  },
+  "package_counts": {
+    "items": 18,
+    "triples": 70,
+    "narratives": 71
+  }
+}
