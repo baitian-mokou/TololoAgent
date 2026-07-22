@@ -1,0 +1,45 @@
+{
+  "phase": "Phase 88",
+  "mode": "four_source_rebuilt_readiness_eval_gate",
+  "generated_at": "2026-07-22T16:14:41.434865+00:00",
+  "package_integrity_pass": true,
+  "four_source_coverage_pass": true,
+  "production_ready": false,
+  "approval_status": "pending_review",
+  "blocking_reasons": [],
+  "missing_sources": [],
+  "counts": {
+    "items": 53,
+    "triples": 106,
+    "narratives": 53
+  },
+  "source_breakdown": {
+    "esa": 9,
+    "nasa": 16,
+    "wikidata": 25,
+    "zh_wikipedia": 3
+  },
+  "nasa_repair_quality": {
+    "sampled": true,
+    "sample_count": 5,
+    "repair_source": "title_or_excerpt",
+    "risk_count": 0,
+    "risks": []
+  },
+  "quality_risks": [],
+  "recommended_next": "review_only_cli_or_shadow_review_preview",
+  "not_production_ingest": true,
+  "formal_raw_write": false,
+  "formal_default_triples_write": false,
+  "chroma_write": false,
+  "neo4j_write": false,
+  "clear_source_ingestion_outputs_called": false,
+  "active_source": "zh_wikipedia",
+  "active_source_unchanged": true,
+  "registry": {
+    "zh_wikipedia": "active",
+    "nasa": "disabled",
+    "esa": "disabled",
+    "wikidata": "disabled"
+  }
+}
