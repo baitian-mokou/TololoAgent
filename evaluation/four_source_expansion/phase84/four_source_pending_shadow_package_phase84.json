@@ -1,0 +1,2794 @@
+{
+  "phase": "Phase 84",
+  "mode": "four_source_pending_shadow_package",
+  "generated_at": "2026-07-22T15:52:19.858608+00:00",
+  "manifest": {
+    "phase": "Phase 84",
+    "schema_version": "phase84_pending_shadow_package_v1",
+    "approval_status": "pending_review",
+    "items": 37,
+    "triples": 74,
+    "narratives": 37,
+    "source_breakdown": {
+      "esa": 9,
+      "wikidata": 25,
+      "zh_wikipedia": 3
+    },
+    "rejected_reference_count": 19,
+    "rejected_reference": "evaluation/four_source_expansion/phase83/four_source_shadow_normalize_preview_phase83.json#rejected_records",
+    "phase83_report": "C:\\wt\\TololoAgent-guarded\\evaluation\\four_source_expansion\\phase83\\four_source_shadow_normalize_preview_phase83.json",
+    "provenance_hash": "996ab0487907e6e349548f4cdbebf153da3da515e7396c46ee08a3047eed077b",
+    "provenance_summary": "Phase84 pending package built only from Phase83 normalized_records/triples_preview/narratives_preview."
+  },
+  "package": {
+    "items": [
+      {
+        "source": "zh_wikipedia",
+        "source_id": "zh_wikipedia",
+        "title": "太阳",
+        "subject": "太阳",
+        "source_url": "https://zh.wikipedia.org/wiki/太阳",
+        "entity_id": "",
+        "schema_version": "phase83_shadow_normalize_preview_v1",
+        "extraction_method": "phase83_preview_heuristic",
+        "confidence": 0.68,
+        "quality_flags": {
+          "allowlisted": true,
+          "has_excerpt": true,
+          "evaluation_only": true,
+          "non_empty_text": true
+        },
+        "provenance": {
+          "phase82_status": "local_preview",
+          "phase82_reason": "phase81_accepted"
+        },
+        "text_excerpt": "英語維基百科 相應條目来扩充 ，此條目在對應語言版為高品質條目。 2022年4月16日 若您熟悉来源语言和主题，请协助 参考外语维基百科扩充条目 。请勿直接提交机械翻译，也不要翻译不可靠、低品质内容。依 版权协议 ，译文需 在编辑摘要注明来源 ，或于讨论页顶部标记 Translated page 在2019年使用 太陽濾鏡 真實色彩 的太陽。 太陽、日、Sun、 Helios Solar 觀測數據 與地球的 平均距離 7011149597870700000♠ 7011149600000000000♠ 1.496 8分19秒 −26.74 絕對星等 4.83 恆星分類 = 0.0122 31.6–32.7 0.527–0.545 核心的平均距離 7004266600000000000♠ 26,660 銀河週期 (2.25–2.50)×10 7005251000000000000♠ 251 km/s （繞銀河系中心運行） 7004200000000000000♠ 20 km/s （相對於恆星附近其他恆星的平均速度） 7005370000000000000♠ 370 km/s （相對於 宇宙微波背景 物理性質 695,700 696,342公里 7002109000000000000♠ × 地球半徑 7009437900000000000♠ 4.379 109 ×地球 6994900000000000000♠ 7018609000000000000♠ 6.09 7004120000000000000♠ 12,000 7027141000000000000♠ 1.41 7006130000000000000♠ 1,300,000 × 地球 7030198850000000000♠ 1.9885 7005332950000000000♠ 332,950 7003140800000000000♠ 1.408 g/cm 6999255000000000000♠ 0.255 × 地球 （建模） 7005162200000000000♠ 162.2 g/cm 70011240000000"
+      },
+      {
+        "source": "zh_wikipedia",
+        "source_id": "zh_wikipedia",
+        "title": "太阳系",
+        "subject": "太阳系",
+        "source_url": "https://zh.wikipedia.org/wiki/太阳系",
+        "entity_id": "",
+        "schema_version": "phase83_shadow_normalize_preview_v1",
+        "extraction_method": "phase83_preview_heuristic",
+        "confidence": 0.68,
+        "quality_flags": {
+          "allowlisted": true,
+          "has_excerpt": true,
+          "evaluation_only": true,
+          "non_empty_text": true
+        },
+        "provenance": {
+          "phase82_status": "local_preview",
+          "phase82_reason": "phase81_accepted"
+        },
+        "text_excerpt": "此條目介紹的是太陽和它的行星系統。关于其他類似的系統，请见「 行星系統 有字幕（英文） 有字幕（正體中文） 有字幕（簡體中文） 行星、衛星和矮行星 （真實色彩、大小按比例、距離尺度未照比例） 45.68億年 本地星際雲 獵戶–天鵝臂 最近的恆星 (4.2465 （4.36光年） 行星系統 30.07 AU 古柏斷涯 50–70 AU 賽德娜 (小行星) 更多候選者... 天然衛星 1,368,528 4,591 銀河中心 星系盤面 ~60°, to the ecliptic 至銀河中心的距離 24,000–28,000 ly 軌道速度 720,000 km/h (450,000 mi/h) 軌道週期 ~230 million year 恆星特征 光譜類型 7011747989353500000♠ ~5 AU 日球層頂 detected at 120 AU 1.1 pc (230,000 AU) – 0.865 pc (178,419 AU) 引力束縛 而圍繞其 行星系统 内。太阳系大約形成於46億年前，當時一個 的密集區域坍塌，形成了太陽和 原行星盤 ，之后再通过原行星盘的局部吸积在不同区域形成各种天体。 太陽系超過99.86%的質量集中在太陽上。太陽是一顆 界根据其 光谱类型 將其歸類為 G型主序星 。太阳通過其核心處的 流體靜力平衡 ，並從其外層的 带电粒子 繞太陽運行的最大天體是八顆 。其中最大的两颗行星，木星和土星，集中了近90%的太阳系剩余质量。除了行星之外，环绕太阳运动的天体还有 太阳系小天体 ）。一些行星、矮行星和其他天體还有 天然衛星 圍繞著運行。 太陽系的广袤空间中充满了从太陽大气层中不断辐射出的帶電粒子流—— ，形成半径大約75-90 天文單位 。太阳圈可以看作是太阳大气层的延伸，其边界稱為 日球層頂 。在这里太阳风和 星际介质 达到平衡，不能够再继续前进。這里是太陽系和 星際空間 的物质邊界，但太阳引力控制范围还远超于此。太陽系的最外層區域是理論上的 長週期彗星 的來源，其延伸半徑达到 7014299195741400000♠ 2,000–200,"
+      },
+      {
+        "source": "zh_wikipedia",
+        "source_id": "zh_wikipedia",
+        "title": "水星",
+        "subject": "水星",
+        "source_url": "https://zh.wikipedia.org/wiki/水星",
+        "entity_id": "",
+        "schema_version": "phase83_shadow_normalize_preview_v1",
+        "extraction_method": "phase83_preview_heuristic",
+        "confidence": 0.68,
+        "quality_flags": {
+          "allowlisted": true,
+          "has_excerpt": true,
+          "evaluation_only": true,
+          "non_empty_text": true
+        },
+        "provenance": {
+          "phase82_status": "local_preview",
+          "phase82_reason": "phase81_accepted"
+        },
+        "text_excerpt": "取自信使神太空船的水星合成影像 Mercurian, Mercurial, Hermian 軌道參數 J2000 69,817,900 公里 0.466 697 46,001,200公里 0.307 499 AU 57,909,100公里 0.387 098 AU 0.205 630 軌道週期 87.969 1 (0.240 846 會合週期 115.88 d 軌道速度 47.87 km/s 平近點角 174.796° 軌道傾角 7.005° 對 3.38° 對 太陽的赤道 6.34° 對 不變平面 升交點黃經 48.331° 近日點參數 29.124° 物理特徵 平均半徑 2,440.7 ± 1.0 km 0.387370494907902 地球半徑 7.48×10 0.147 地球面積 6.083×10 0.056 地球體積 3.3022×10 0.055 地球質量 5.427 g/cm 表面重力 0.38 逃逸速度 4.25 km/s 恆星週期 58.646 1407.5 赤道自轉速度 10.892 km/h（3.026 m/s） 轉軸傾角 2.11′ ± 0.1′ 18 h 44 min 2 s 281.01° 61.45° 0.068 ( Bond 0.142 ( geom. 0°N, 0°W 100 K 340 K 700 K 85°N, 0°W 80 K 200 K 380 K −2.6 to 5.7 4.5\" – 13\" 大氣特徵 ; et al. Shape and Orientation of Mercury from Radar Ranging Data. Icarus (Academic press). 1996-07-10, (2): 690–697. Bibcode:1996Icar..124..690A doi:10.1006/icar.1996.0242 Schenk, P.; Melosh, H. J. Lobate Thrust Scarps and the Thickness of Mercury's Lithosphere. Ab"
+      },
+      {
+        "source": "esa",
+        "source_id": "esa",
+        "title": "ESA - Space Science",
+        "subject": "ESA - Space Science",
+        "source_url": "https://www.esa.int/science_exploration/space_science",
+        "entity_id": "",
+        "schema_version": "phase83_shadow_normalize_preview_v1",
+        "extraction_method": "phase83_preview_heuristic",
+        "confidence": 0.72,
+        "quality_flags": {
+          "allowlisted": true,
+          "has_excerpt": true,
+          "evaluation_only": true,
+          "non_empty_text": true
+        },
+        "provenance": {
+          "phase82_status": "local_preview",
+          "phase82_reason": "phase67_68_accepted_or_review_needed"
+        },
+        "text_excerpt": "Science & Exploration Space Science Latest All Stories Videos Images Image Science & Exploration Plato's electronics ready for space 20/07/2026 1433 views 35 likes View Image Science & Exploration ESA’s Mars Express meets NASA’s Psyche 17/07/2026 2230 views 52 likes View Story Science & Exploration Expedition Sound podcast series 16/07/2026 1004 views 31 likes Read Video 00:57:42 Science & Exploration Replay of the online media briefing on the total solar ecli… 15/07/2026 974 views 21 likes Play Story Science & Exploration Metallic waves on ancient Mars 15/07/2026 3051 views 58 likes Read Story Science & Exploration Webb reveals millions of stars in nearby galaxy 06/07/2026 2234 views 16 likes Read Story Science & Exploration Euclid discovers the most ancient quasar in the Universe 06/07/2026 8566 views 78 likes Read Story Science & Exploration Webb studies how a planet survived the deat"
+      },
+      {
+        "source": "esa",
+        "source_id": "esa",
+        "title": "ESA - Rosetta",
+        "subject": "ESA - Rosetta",
+        "source_url": "https://www.esa.int/science_exploration/space_science/rosetta",
+        "entity_id": "",
+        "schema_version": "phase83_shadow_normalize_preview_v1",
+        "extraction_method": "phase83_preview_heuristic",
+        "confidence": 0.72,
+        "quality_flags": {
+          "allowlisted": true,
+          "has_excerpt": true,
+          "evaluation_only": true,
+          "non_empty_text": true
+        },
+        "provenance": {
+          "phase82_status": "local_preview",
+          "phase82_reason": "phase67_68_accepted_or_review_needed"
+        },
+        "text_excerpt": "Science & Exploration Rosetta ESA's comet-chaser The mission ESA's Rosetta mission was the first to rendezvous with a comet, the first to follow a comet on its orbit around the Sun, and the first to deploy a lander to a comet's surface. Comets are time capsules containing primitive material left over from the epoch when the Sun and its planets formed. By studying the gas, dust and structure of the nucleus and organic materials associated with Comet 67P/Churyumov-Gerasimenko, via both remote and in situ observations, the Rosetta mission taught us about the history and evolution of our Solar System. Rosetta is an ESA mission with contributions from its Member States and NASA. Rosetta’s Philae lander was provided by a consortium led by DLR, MPS, CNES and ASI. Launch: 2 March 2004 1st Earth gravity assist: 4 March 2005 Mars gravity assist: 25 February 2007 2nd Earth gravity assist: 13 Novemb"
+      },
+      {
+        "source": "esa",
+        "source_id": "esa",
+        "title": "ESA - Gaia",
+        "subject": "ESA - Gaia",
+        "source_url": "https://www.esa.int/science_exploration/space_science/gaia",
+        "entity_id": "",
+        "schema_version": "phase83_shadow_normalize_preview_v1",
+        "extraction_method": "phase83_preview_heuristic",
+        "confidence": 0.72,
+        "quality_flags": {
+          "allowlisted": true,
+          "has_excerpt": true,
+          "evaluation_only": true,
+          "non_empty_text": true
+        },
+        "provenance": {
+          "phase82_status": "local_preview",
+          "phase82_reason": "phase67_68_accepted_or_review_needed"
+        },
+        "text_excerpt": "Science & Exploration Gaia ESA's billion star surveyor The mission From 27 July 2014 to 15 January 2025, Gaia has made more than three trillion observations of two billion stars and other objects throughout our Milky Way galaxy and beyond, mapping their motions, luminosity, temperature and composition. Gaia's extraordinarily precise three-dimensional map will provide the data needed to tackle an enormous range of important questions related to the origin, structure and evolutionary history of our galaxy. Launch: 19 December 2013 Orbit: L2 Lagrange point End of science observations : 15 January 2025 Upcoming data releases: Data Release 4 (based on 66 months of data): expected December 2026 Data Release 5 (based on all mission data): not before the end of 2030 Previous data releases: Data Release 1: 14 September 2016 Data Release 2: 25 April 2018 Early Data Release 3: 3 December 2020 Data"
+      },
+      {
+        "source": "esa",
+        "source_id": "esa",
+        "title": "ESA - Solar Orbiter",
+        "subject": "ESA - Solar Orbiter",
+        "source_url": "https://www.esa.int/science_exploration/space_science/solar_orbiter",
+        "entity_id": "",
+        "schema_version": "phase83_shadow_normalize_preview_v1",
+        "extraction_method": "phase83_preview_heuristic",
+        "confidence": 0.72,
+        "quality_flags": {
+          "allowlisted": true,
+          "has_excerpt": true,
+          "evaluation_only": true,
+          "non_empty_text": true
+        },
+        "provenance": {
+          "phase82_status": "local_preview",
+          "phase82_reason": "phase67_68_accepted_or_review_needed"
+        },
+        "text_excerpt": "Science & Exploration Solar Orbiter The Sun up close Solar Orbiter is the most complex scientific laboratory ever sent to our life-giving star, taking images of the Sun from closer than any spacecraft before and being the first to look at its polar regions. With Solar Orbiter's ten instruments, scientists hope to answer some profound questions: What drives the Sun’s 11-year cycle of rising and subsiding magnetic activity? What heats up the upper layer of its atmosphere, the corona, to millions of degrees Celsius? How does solar wind form, and what accelerates it to speeds of hundreds of kilometres per second? And how does it all affect our planet? Launch date: February 2020 First images: July 2020 Beginning of routine science operations: November 2021 Mission highlights: The closest-ever images of the Sun, the first ever close-up images of the Sun’s polar regions, measuring the compositi"
+      },
+      {
+        "source": "esa",
+        "source_id": "esa",
+        "title": "ESA - BepiColombo",
+        "subject": "ESA - BepiColombo",
+        "source_url": "https://www.esa.int/science_exploration/space_science/bepicolombo",
+        "entity_id": "",
+        "schema_version": "phase83_shadow_normalize_preview_v1",
+        "extraction_method": "phase83_preview_heuristic",
+        "confidence": 0.72,
+        "quality_flags": {
+          "allowlisted": true,
+          "has_excerpt": true,
+          "evaluation_only": true,
+          "non_empty_text": true
+        },
+        "provenance": {
+          "phase82_status": "local_preview",
+          "phase82_reason": "phase67_68_accepted_or_review_needed"
+        },
+        "text_excerpt": "Science & Exploration BepiColombo Investigating Mercury's mysteries BepiColombo will be the second and most complex mission ever to orbit Mercury. Close to the Sun and more difficult for an orbiter to reach than Saturn, this small desert world is the least explored planet of the inner Solar System. Learning more about Mercury will shed light on the history of the entire Solar System. Packed with scientific instruments, the mission will try to answer many perplexing questions, such as: Why is there ice in the polar craters of the scorched planet? Why does Mercury have a magnetic field? And what are the mysterious 'hollows' on its surface? Launch : 20 October 2018 on an Ariane 5 rocket from Europe's Spaceport Components: Mercury Planetary Orbiter , Mercury Magnetospheric Orbiter , Mercury Transfer Module Status: In operation; en route to Mercury Mercury flybys : 1 Oct 2021 , 23 June 2022 ,"
+      },
+      {
+        "source": "esa",
+        "source_id": "esa",
+        "title": "ESA - Euclid",
+        "subject": "ESA - Euclid",
+        "source_url": "https://www.esa.int/science_exploration/space_science/euclid",
+        "entity_id": "",
+        "schema_version": "phase83_shadow_normalize_preview_v1",
+        "extraction_method": "phase83_preview_heuristic",
+        "confidence": 0.72,
+        "quality_flags": {
+          "allowlisted": true,
+          "has_excerpt": true,
+          "evaluation_only": true,
+          "non_empty_text": true
+        },
+        "provenance": {
+          "phase82_status": "local_preview",
+          "phase82_reason": "phase67_68_accepted_or_review_needed"
+        },
+        "text_excerpt": "Science & Exploration Euclid Exploring the dark Universe The mission ESA's Euclid mission is designed to explore the composition and evolution of the dark Universe. The space telescope will create a great map of the large-scale structure of the Universe across space and time by observing billions of galaxies out to 10 billion light-years, across more than a third of the sky. Euclid will explore how the Universe has expanded and how structure has formed over cosmic history, revealing more about the role of gravity and the nature of dark energy and dark matter. The launch Launch: 1 July 2023 Launch location : Cape Canaveral, Florida, USA Launch vehicle: SpaceX Falcon 9 Destination: Sun-Earth Lagrange point 2, 1.5 million km from Earth 2 instruments 1/3 of the sky 10 billion light-years 3D map of the Universe Latest All Stories Videos Images Story Science & Exploration Euclid discovers the"
+      },
+      {
+        "source": "esa",
+        "source_id": "esa",
+        "title": "ESA - ExoMars",
+        "subject": "ESA - ExoMars",
+        "source_url": "https://www.esa.int/science_exploration/space_science/exomars",
+        "entity_id": "",
+        "schema_version": "phase83_shadow_normalize_preview_v1",
+        "extraction_method": "phase83_preview_heuristic",
+        "confidence": 0.72,
+        "quality_flags": {
+          "allowlisted": true,
+          "has_excerpt": true,
+          "evaluation_only": true,
+          "non_empty_text": true
+        },
+        "provenance": {
+          "phase82_status": "local_preview",
+          "phase82_reason": "phase67_68_accepted_or_review_needed"
+        },
+        "text_excerpt": "Science & Exploration ExoMars Has life ever existed on Mars? The mission The ExoMars programme comprises two missions: the first – the Trace Gas Orbiter – launched in 2016 while the second, carrying the Rosalind Franklin rover, will target launch in 2028. Together they will address the question of whether life has ever existed on Mars. 1st European rover 2 m rover drill depth 70m/sol driving on Mars Latest All Stories Videos Images Image Science & Exploration ExoMars ramps put up with cold, shaking and vacuum 21/07/2026 128 views 2 likes View Story Science & Exploration ExoMars rover targets vast bed of clay in search for life 04/06/2026 4252 views 57 likes Read Video 00:00:27 Science & Exploration Landing sideways 18/05/2026 1464 views 28 likes Play Image Enabling & Support Sensitive and sturdy 07/05/2026 2096 views 50 likes View Image Enabling & Support The great parachute bake-out 30/"
+      },
+      {
+        "source": "esa",
+        "source_id": "esa",
+        "title": "ESA - Cluster",
+        "subject": "ESA - Cluster",
+        "source_url": "https://www.esa.int/science_exploration/space_science/cluster",
+        "entity_id": "",
+        "schema_version": "phase83_shadow_normalize_preview_v1",
+        "extraction_method": "phase83_preview_heuristic",
+        "confidence": 0.72,
+        "quality_flags": {
+          "allowlisted": true,
+          "has_excerpt": true,
+          "evaluation_only": true,
+          "non_empty_text": true
+        },
+        "provenance": {
+          "phase82_status": "local_preview",
+          "phase82_reason": "phase67_68_accepted_or_review_needed"
+        },
+        "text_excerpt": "Science & Exploration Cluster Measuring Earth's magnetic environment The mission Cluster was a constellation of four spacecraft investigating the interaction between the Sun and Earth’s magnetosphere in unparalleled detail. The magnetosphere is our shield against the charged gas that carries particles and magnetic fields outwards from the Sun. Launch: 16 July and 9 August 2000 Mission end: 8 September 2024 Observed: solar wind, magnetosphere Orbit: elliptical around Earth’s poles, a few hundred to 125 000 km altitude Spacecraft names: Rumba, Salsa, Samba and Tango 11 instruments 4 spacecraft 2 decades of operation Latest All Stories Videos Images Story Space Safety Moving satellites to meet a plane for rare reentry data 02/02/2026 6273 views 31 likes Read Video 00:46:03 Science & Exploration Seas of the Sun: The story of Cluster 31/10/2025 3547 views 39 likes Play Image Science & Explora"
+      },
+      {
+        "source": "esa",
+        "source_id": "esa",
+        "title": "ESA - Webb",
+        "subject": "ESA - Webb",
+        "source_url": "https://www.esa.int/science_exploration/space_science/webb",
+        "entity_id": "",
+        "schema_version": "phase83_shadow_normalize_preview_v1",
+        "extraction_method": "phase83_preview_heuristic",
+        "confidence": 0.72,
+        "quality_flags": {
+          "allowlisted": true,
+          "has_excerpt": true,
+          "evaluation_only": true,
+          "non_empty_text": true
+        },
+        "provenance": {
+          "phase82_status": "local_preview",
+          "phase82_reason": "phase67_68_accepted_or_review_needed"
+        },
+        "text_excerpt": "Science & Exploration Webb Seeing farther The mission The James Webb Space Telescope (Webb) is the next great space science observatory following Hubble, designed to answer outstanding questions about the Universe and to make breakthrough discoveries in all fields of astronomy. Webb will see farther into our origins: from the formation of stars and planets, to the birth of the first galaxies in the early Universe. Webb is an international partnership between NASA, ESA and CSA. The telescope launched on an Ariane 5 from Europe's Spaceport in French Guiana. The launch Launch date: 25 December 2021 Launch location: Europe's Spaceport in French Guiana Launch vehicle: Ariane 5 Orbit: Lagrange point 2, 1.5 million km from Earth 6.5 m mirror 18 mirror segments 4 instruments 5 sunshield layers Latest All Stories Videos Images Story Science & Exploration Webb reveals millions of stars in nearby g"
+      },
+      {
+        "source": "wikidata",
+        "source_id": "wikidata",
+        "title": "太阳",
+        "subject": "太阳",
+        "source_url": "https://www.wikidata.org/wiki/Q525",
+        "entity_id": "Q525",
+        "schema_version": "phase83_shadow_normalize_preview_v1",
+        "extraction_method": "phase83_preview_heuristic",
+        "confidence": 0.68,
+        "quality_flags": {
+          "allowlisted": true,
+          "has_excerpt": true,
+          "evaluation_only": true,
+          "non_empty_text": true
+        },
+        "provenance": {
+          "phase82_status": "assessment_preview",
+          "phase82_reason": "phase74_accepted"
+        },
+        "text_excerpt": "{\"qid\": \"Q525\", \"title\": \"太阳\", \"url\": \"https://www.wikidata.org/wiki/Q525\", \"reason\": \"local_entity_raw_has_triples_and_narratives\", \"has_local_raw\": true, \"has_local_materialized_pair\": true}"
+      },
+      {
+        "source": "wikidata",
+        "source_id": "wikidata",
+        "title": "水星",
+        "subject": "水星",
+        "source_url": "https://www.wikidata.org/wiki/Q308",
+        "entity_id": "Q308",
+        "schema_version": "phase83_shadow_normalize_preview_v1",
+        "extraction_method": "phase83_preview_heuristic",
+        "confidence": 0.68,
+        "quality_flags": {
+          "allowlisted": true,
+          "has_excerpt": true,
+          "evaluation_only": true,
+          "non_empty_text": true
+        },
+        "provenance": {
+          "phase82_status": "assessment_preview",
+          "phase82_reason": "phase74_accepted"
+        },
+        "text_excerpt": "{\"qid\": \"Q308\", \"title\": \"水星\", \"url\": \"https://www.wikidata.org/wiki/Q308\", \"reason\": \"local_materialized_preview_exists\", \"has_local_raw\": false, \"has_local_materialized_pair\": true}"
+      },
+      {
+        "source": "wikidata",
+        "source_id": "wikidata",
+        "title": "金星",
+        "subject": "金星",
+        "source_url": "https://www.wikidata.org/wiki/Q313",
+        "entity_id": "Q313",
+        "schema_version": "phase83_shadow_normalize_preview_v1",
+        "extraction_method": "phase83_preview_heuristic",
+        "confidence": 0.68,
+        "quality_flags": {
+          "allowlisted": true,
+          "has_excerpt": true,
+          "evaluation_only": true,
+          "non_empty_text": true
+        },
+        "provenance": {
+          "phase82_status": "assessment_preview",
+          "phase82_reason": "phase74_accepted"
+        },
+        "text_excerpt": "{\"qid\": \"Q313\", \"title\": \"金星\", \"url\": \"https://www.wikidata.org/wiki/Q313\", \"reason\": \"local_materialized_preview_exists\", \"has_local_raw\": false, \"has_local_materialized_pair\": true}"
+      },
+      {
+        "source": "wikidata",
+        "source_id": "wikidata",
+        "title": "地球",
+        "subject": "地球",
+        "source_url": "https://www.wikidata.org/wiki/Q2",
+        "entity_id": "Q2",
+        "schema_version": "phase83_shadow_normalize_preview_v1",
+        "extraction_method": "phase83_preview_heuristic",
+        "confidence": 0.68,
+        "quality_flags": {
+          "allowlisted": true,
+          "has_excerpt": true,
+          "evaluation_only": true,
+          "non_empty_text": true
+        },
+        "provenance": {
+          "phase82_status": "assessment_preview",
+          "phase82_reason": "phase74_accepted"
+        },
+        "text_excerpt": "{\"qid\": \"Q2\", \"title\": \"地球\", \"url\": \"https://www.wikidata.org/wiki/Q2\", \"reason\": \"local_entity_raw_has_triples_and_narratives\", \"has_local_raw\": true, \"has_local_materialized_pair\": true}"
+      },
+      {
+        "source": "wikidata",
+        "source_id": "wikidata",
+        "title": "月球",
+        "subject": "月球",
+        "source_url": "https://www.wikidata.org/wiki/Q405",
+        "entity_id": "Q405",
+        "schema_version": "phase83_shadow_normalize_preview_v1",
+        "extraction_method": "phase83_preview_heuristic",
+        "confidence": 0.68,
+        "quality_flags": {
+          "allowlisted": true,
+          "has_excerpt": true,
+          "evaluation_only": true,
+          "non_empty_text": true
+        },
+        "provenance": {
+          "phase82_status": "assessment_preview",
+          "phase82_reason": "phase74_accepted"
+        },
+        "text_excerpt": "{\"qid\": \"Q405\", \"title\": \"月球\", \"url\": \"https://www.wikidata.org/wiki/Q405\", \"reason\": \"local_materialized_preview_exists\", \"has_local_raw\": false, \"has_local_materialized_pair\": true}"
+      },
+      {
+        "source": "wikidata",
+        "source_id": "wikidata",
+        "title": "火星",
+        "subject": "火星",
+        "source_url": "https://www.wikidata.org/wiki/Q111",
+        "entity_id": "Q111",
+        "schema_version": "phase83_shadow_normalize_preview_v1",
+        "extraction_method": "phase83_preview_heuristic",
+        "confidence": 0.68,
+        "quality_flags": {
+          "allowlisted": true,
+          "has_excerpt": true,
+          "evaluation_only": true,
+          "non_empty_text": true
+        },
+        "provenance": {
+          "phase82_status": "assessment_preview",
+          "phase82_reason": "phase74_accepted"
+        },
+        "text_excerpt": "{\"qid\": \"Q111\", \"title\": \"火星\", \"url\": \"https://www.wikidata.org/wiki/Q111\", \"reason\": \"local_entity_raw_has_triples_and_narratives\", \"has_local_raw\": true, \"has_local_materialized_pair\": true}"
+      },
+      {
+        "source": "wikidata",
+        "source_id": "wikidata",
+        "title": "木星",
+        "subject": "木星",
+        "source_url": "https://www.wikidata.org/wiki/Q319",
+        "entity_id": "Q319",
+        "schema_version": "phase83_shadow_normalize_preview_v1",
+        "extraction_method": "phase83_preview_heuristic",
+        "confidence": 0.68,
+        "quality_flags": {
+          "allowlisted": true,
+          "has_excerpt": true,
+          "evaluation_only": true,
+          "non_empty_text": true
+        },
+        "provenance": {
+          "phase82_status": "assessment_preview",
+          "phase82_reason": "phase74_accepted"
+        },
+        "text_excerpt": "{\"qid\": \"Q319\", \"title\": \"木星\", \"url\": \"https://www.wikidata.org/wiki/Q319\", \"reason\": \"local_materialized_preview_exists\", \"has_local_raw\": false, \"has_local_materialized_pair\": true}"
+      },
+      {
+        "source": "wikidata",
+        "source_id": "wikidata",
+        "title": "土星",
+        "subject": "土星",
+        "source_url": "https://www.wikidata.org/wiki/Q193",
+        "entity_id": "Q193",
+        "schema_version": "phase83_shadow_normalize_preview_v1",
+        "extraction_method": "phase83_preview_heuristic",
+        "confidence": 0.68,
+        "quality_flags": {
+          "allowlisted": true,
+          "has_excerpt": true,
+          "evaluation_only": true,
+          "non_empty_text": true
+        },
+        "provenance": {
+          "phase82_status": "assessment_preview",
+          "phase82_reason": "phase74_accepted"
+        },
+        "text_excerpt": "{\"qid\": \"Q193\", \"title\": \"土星\", \"url\": \"https://www.wikidata.org/wiki/Q193\", \"reason\": \"local_materialized_preview_exists\", \"has_local_raw\": false, \"has_local_materialized_pair\": true}"
+      },
+      {
+        "source": "wikidata",
+        "source_id": "wikidata",
+        "title": "天王星",
+        "subject": "天王星",
+        "source_url": "https://www.wikidata.org/wiki/Q324",
+        "entity_id": "Q324",
+        "schema_version": "phase83_shadow_normalize_preview_v1",
+        "extraction_method": "phase83_preview_heuristic",
+        "confidence": 0.68,
+        "quality_flags": {
+          "allowlisted": true,
+          "has_excerpt": true,
+          "evaluation_only": true,
+          "non_empty_text": true
+        },
+        "provenance": {
+          "phase82_status": "assessment_preview",
+          "phase82_reason": "phase74_accepted"
+        },
+        "text_excerpt": "{\"qid\": \"Q324\", \"title\": \"天王星\", \"url\": \"https://www.wikidata.org/wiki/Q324\", \"reason\": \"local_materialized_preview_exists\", \"has_local_raw\": false, \"has_local_materialized_pair\": true}"
+      },
+      {
+        "source": "wikidata",
+        "source_id": "wikidata",
+        "title": "海王星",
+        "subject": "海王星",
+        "source_url": "https://www.wikidata.org/wiki/Q332",
+        "entity_id": "Q332",
+        "schema_version": "phase83_shadow_normalize_preview_v1",
+        "extraction_method": "phase83_preview_heuristic",
+        "confidence": 0.68,
+        "quality_flags": {
+          "allowlisted": true,
+          "has_excerpt": true,
+          "evaluation_only": true,
+          "non_empty_text": true
+        },
+        "provenance": {
+          "phase82_status": "assessment_preview",
+          "phase82_reason": "phase74_accepted"
+        },
+        "text_excerpt": "{\"qid\": \"Q332\", \"title\": \"海王星\", \"url\": \"https://www.wikidata.org/wiki/Q332\", \"reason\": \"local_materialized_preview_exists\", \"has_local_raw\": false, \"has_local_materialized_pair\": true}"
+      },
+      {
+        "source": "wikidata",
+        "source_id": "wikidata",
+        "title": "冥王星",
+        "subject": "冥王星",
+        "source_url": "https://www.wikidata.org/wiki/Q339",
+        "entity_id": "Q339",
+        "schema_version": "phase83_shadow_normalize_preview_v1",
+        "extraction_method": "phase83_preview_heuristic",
+        "confidence": 0.68,
+        "quality_flags": {
+          "allowlisted": true,
+          "has_excerpt": true,
+          "evaluation_only": true,
+          "non_empty_text": true
+        },
+        "provenance": {
+          "phase82_status": "assessment_preview",
+          "phase82_reason": "phase74_accepted"
+        },
+        "text_excerpt": "{\"qid\": \"Q339\", \"title\": \"冥王星\", \"url\": \"https://www.wikidata.org/wiki/Q339\", \"reason\": \"local_materialized_preview_exists\", \"has_local_raw\": false, \"has_local_materialized_pair\": true}"
+      },
+      {
+        "source": "wikidata",
+        "source_id": "wikidata",
+        "title": "谷神星",
+        "subject": "谷神星",
+        "source_url": "https://www.wikidata.org/wiki/Q596",
+        "entity_id": "Q596",
+        "schema_version": "phase83_shadow_normalize_preview_v1",
+        "extraction_method": "phase83_preview_heuristic",
+        "confidence": 0.68,
+        "quality_flags": {
+          "allowlisted": true,
+          "has_excerpt": true,
+          "evaluation_only": true,
+          "non_empty_text": true
+        },
+        "provenance": {
+          "phase82_status": "assessment_preview",
+          "phase82_reason": "phase74_accepted"
+        },
+        "text_excerpt": "{\"qid\": \"Q596\", \"title\": \"谷神星\", \"url\": \"https://www.wikidata.org/wiki/Q596\", \"reason\": \"local_materialized_preview_exists\", \"has_local_raw\": false, \"has_local_materialized_pair\": true}"
+      },
+      {
+        "source": "wikidata",
+        "source_id": "wikidata",
+        "title": "阋神星",
+        "subject": "阋神星",
+        "source_url": "https://www.wikidata.org/wiki/Q611",
+        "entity_id": "Q611",
+        "schema_version": "phase83_shadow_normalize_preview_v1",
+        "extraction_method": "phase83_preview_heuristic",
+        "confidence": 0.68,
+        "quality_flags": {
+          "allowlisted": true,
+          "has_excerpt": true,
+          "evaluation_only": true,
+          "non_empty_text": true
+        },
+        "provenance": {
+          "phase82_status": "assessment_preview",
+          "phase82_reason": "phase74_accepted"
+        },
+        "text_excerpt": "{\"qid\": \"Q611\", \"title\": \"阋神星\", \"url\": \"https://www.wikidata.org/wiki/Q611\", \"reason\": \"local_materialized_preview_exists\", \"has_local_raw\": false, \"has_local_materialized_pair\": true}"
+      },
+      {
+        "source": "wikidata",
+        "source_id": "wikidata",
+        "title": "妊神星",
+        "subject": "妊神星",
+        "source_url": "https://www.wikidata.org/wiki/Q601",
+        "entity_id": "Q601",
+        "schema_version": "phase83_shadow_normalize_preview_v1",
+        "extraction_method": "phase83_preview_heuristic",
+        "confidence": 0.68,
+        "quality_flags": {
+          "allowlisted": true,
+          "has_excerpt": true,
+          "evaluation_only": true,
+          "non_empty_text": true
+        },
+        "provenance": {
+          "phase82_status": "assessment_preview",
+          "phase82_reason": "phase74_accepted"
+        },
+        "text_excerpt": "{\"qid\": \"Q601\", \"title\": \"妊神星\", \"url\": \"https://www.wikidata.org/wiki/Q601\", \"reason\": \"local_materialized_preview_exists\", \"has_local_raw\": false, \"has_local_materialized_pair\": true}"
+      },
+      {
+        "source": "wikidata",
+        "source_id": "wikidata",
+        "title": "鸟神星",
+        "subject": "鸟神星",
+        "source_url": "https://www.wikidata.org/wiki/Q604",
+        "entity_id": "Q604",
+        "schema_version": "phase83_shadow_normalize_preview_v1",
+        "extraction_method": "phase83_preview_heuristic",
+        "confidence": 0.68,
+        "quality_flags": {
+          "allowlisted": true,
+          "has_excerpt": true,
+          "evaluation_only": true,
+          "non_empty_text": true
+        },
+        "provenance": {
+          "phase82_status": "assessment_preview",
+          "phase82_reason": "phase74_accepted"
+        },
+        "text_excerpt": "{\"qid\": \"Q604\", \"title\": \"鸟神星\", \"url\": \"https://www.wikidata.org/wiki/Q604\", \"reason\": \"local_materialized_preview_exists\", \"has_local_raw\": false, \"has_local_materialized_pair\": true}"
+      },
+      {
+        "source": "wikidata",
+        "source_id": "wikidata",
+        "title": "灶神星",
+        "subject": "灶神星",
+        "source_url": "https://www.wikidata.org/wiki/Q3030",
+        "entity_id": "Q3030",
+        "schema_version": "phase83_shadow_normalize_preview_v1",
+        "extraction_method": "phase83_preview_heuristic",
+        "confidence": 0.68,
+        "quality_flags": {
+          "allowlisted": true,
+          "has_excerpt": true,
+          "evaluation_only": true,
+          "non_empty_text": true
+        },
+        "provenance": {
+          "phase82_status": "assessment_preview",
+          "phase82_reason": "phase74_accepted"
+        },
+        "text_excerpt": "{\"qid\": \"Q3030\", \"title\": \"灶神星\", \"url\": \"https://www.wikidata.org/wiki/Q3030\", \"reason\": \"local_materialized_preview_exists\", \"has_local_raw\": false, \"has_local_materialized_pair\": true}"
+      },
+      {
+        "source": "wikidata",
+        "source_id": "wikidata",
+        "title": "木卫一",
+        "subject": "木卫一",
+        "source_url": "https://www.wikidata.org/wiki/Q3123",
+        "entity_id": "Q3123",
+        "schema_version": "phase83_shadow_normalize_preview_v1",
+        "extraction_method": "phase83_preview_heuristic",
+        "confidence": 0.68,
+        "quality_flags": {
+          "allowlisted": true,
+          "has_excerpt": true,
+          "evaluation_only": true,
+          "non_empty_text": true
+        },
+        "provenance": {
+          "phase82_status": "assessment_preview",
+          "phase82_reason": "phase74_accepted"
+        },
+        "text_excerpt": "{\"qid\": \"Q3123\", \"title\": \"木卫一\", \"url\": \"https://www.wikidata.org/wiki/Q3123\", \"reason\": \"local_materialized_preview_exists\", \"has_local_raw\": false, \"has_local_materialized_pair\": true}"
+      },
+      {
+        "source": "wikidata",
+        "source_id": "wikidata",
+        "title": "木卫二",
+        "subject": "木卫二",
+        "source_url": "https://www.wikidata.org/wiki/Q3143",
+        "entity_id": "Q3143",
+        "schema_version": "phase83_shadow_normalize_preview_v1",
+        "extraction_method": "phase83_preview_heuristic",
+        "confidence": 0.68,
+        "quality_flags": {
+          "allowlisted": true,
+          "has_excerpt": true,
+          "evaluation_only": true,
+          "non_empty_text": true
+        },
+        "provenance": {
+          "phase82_status": "assessment_preview",
+          "phase82_reason": "phase74_accepted"
+        },
+        "text_excerpt": "{\"qid\": \"Q3143\", \"title\": \"木卫二\", \"url\": \"https://www.wikidata.org/wiki/Q3143\", \"reason\": \"local_materialized_preview_exists\", \"has_local_raw\": false, \"has_local_materialized_pair\": true}"
+      },
+      {
+        "source": "wikidata",
+        "source_id": "wikidata",
+        "title": "木卫三",
+        "subject": "木卫三",
+        "source_url": "https://www.wikidata.org/wiki/Q3169",
+        "entity_id": "Q3169",
+        "schema_version": "phase83_shadow_normalize_preview_v1",
+        "extraction_method": "phase83_preview_heuristic",
+        "confidence": 0.68,
+        "quality_flags": {
+          "allowlisted": true,
+          "has_excerpt": true,
+          "evaluation_only": true,
+          "non_empty_text": true
+        },
+        "provenance": {
+          "phase82_status": "assessment_preview",
+          "phase82_reason": "phase74_accepted"
+        },
+        "text_excerpt": "{\"qid\": \"Q3169\", \"title\": \"木卫三\", \"url\": \"https://www.wikidata.org/wiki/Q3169\", \"reason\": \"local_materialized_preview_exists\", \"has_local_raw\": false, \"has_local_materialized_pair\": true}"
+      },
+      {
+        "source": "wikidata",
+        "source_id": "wikidata",
+        "title": "木卫四",
+        "subject": "木卫四",
+        "source_url": "https://www.wikidata.org/wiki/Q3134",
+        "entity_id": "Q3134",
+        "schema_version": "phase83_shadow_normalize_preview_v1",
+        "extraction_method": "phase83_preview_heuristic",
+        "confidence": 0.68,
+        "quality_flags": {
+          "allowlisted": true,
+          "has_excerpt": true,
+          "evaluation_only": true,
+          "non_empty_text": true
+        },
+        "provenance": {
+          "phase82_status": "assessment_preview",
+          "phase82_reason": "phase74_accepted"
+        },
+        "text_excerpt": "{\"qid\": \"Q3134\", \"title\": \"木卫四\", \"url\": \"https://www.wikidata.org/wiki/Q3134\", \"reason\": \"local_materialized_preview_exists\", \"has_local_raw\": false, \"has_local_materialized_pair\": true}"
+      },
+      {
+        "source": "wikidata",
+        "source_id": "wikidata",
+        "title": "土卫六",
+        "subject": "土卫六",
+        "source_url": "https://www.wikidata.org/wiki/Q2565",
+        "entity_id": "Q2565",
+        "schema_version": "phase83_shadow_normalize_preview_v1",
+        "extraction_method": "phase83_preview_heuristic",
+        "confidence": 0.68,
+        "quality_flags": {
+          "allowlisted": true,
+          "has_excerpt": true,
+          "evaluation_only": true,
+          "non_empty_text": true
+        },
+        "provenance": {
+          "phase82_status": "assessment_preview",
+          "phase82_reason": "phase74_accepted"
+        },
+        "text_excerpt": "{\"qid\": \"Q2565\", \"title\": \"土卫六\", \"url\": \"https://www.wikidata.org/wiki/Q2565\", \"reason\": \"local_materialized_preview_exists\", \"has_local_raw\": false, \"has_local_materialized_pair\": true}"
+      },
+      {
+        "source": "wikidata",
+        "source_id": "wikidata",
+        "title": "土卫二",
+        "subject": "土卫二",
+        "source_url": "https://www.wikidata.org/wiki/Q3303",
+        "entity_id": "Q3303",
+        "schema_version": "phase83_shadow_normalize_preview_v1",
+        "extraction_method": "phase83_preview_heuristic",
+        "confidence": 0.68,
+        "quality_flags": {
+          "allowlisted": true,
+          "has_excerpt": true,
+          "evaluation_only": true,
+          "non_empty_text": true
+        },
+        "provenance": {
+          "phase82_status": "assessment_preview",
+          "phase82_reason": "phase74_accepted"
+        },
+        "text_excerpt": "{\"qid\": \"Q3303\", \"title\": \"土卫二\", \"url\": \"https://www.wikidata.org/wiki/Q3303\", \"reason\": \"local_materialized_preview_exists\", \"has_local_raw\": false, \"has_local_materialized_pair\": true}"
+      },
+      {
+        "source": "wikidata",
+        "source_id": "wikidata",
+        "title": "海卫一",
+        "subject": "海卫一",
+        "source_url": "https://www.wikidata.org/wiki/Q3359",
+        "entity_id": "Q3359",
+        "schema_version": "phase83_shadow_normalize_preview_v1",
+        "extraction_method": "phase83_preview_heuristic",
+        "confidence": 0.68,
+        "quality_flags": {
+          "allowlisted": true,
+          "has_excerpt": true,
+          "evaluation_only": true,
+          "non_empty_text": true
+        },
+        "provenance": {
+          "phase82_status": "assessment_preview",
+          "phase82_reason": "phase74_accepted"
+        },
+        "text_excerpt": "{\"qid\": \"Q3359\", \"title\": \"海卫一\", \"url\": \"https://www.wikidata.org/wiki/Q3359\", \"reason\": \"local_materialized_preview_exists\", \"has_local_raw\": false, \"has_local_materialized_pair\": true}"
+      },
+      {
+        "source": "wikidata",
+        "source_id": "wikidata",
+        "title": "火卫一",
+        "subject": "火卫一",
+        "source_url": "https://www.wikidata.org/wiki/Q7547",
+        "entity_id": "Q7547",
+        "schema_version": "phase83_shadow_normalize_preview_v1",
+        "extraction_method": "phase83_preview_heuristic",
+        "confidence": 0.68,
+        "quality_flags": {
+          "allowlisted": true,
+          "has_excerpt": true,
+          "evaluation_only": true,
+          "non_empty_text": true
+        },
+        "provenance": {
+          "phase82_status": "assessment_preview",
+          "phase82_reason": "phase74_accepted"
+        },
+        "text_excerpt": "{\"qid\": \"Q7547\", \"title\": \"火卫一\", \"url\": \"https://www.wikidata.org/wiki/Q7547\", \"reason\": \"local_materialized_preview_exists\", \"has_local_raw\": false, \"has_local_materialized_pair\": true}"
+      },
+      {
+        "source": "wikidata",
+        "source_id": "wikidata",
+        "title": "火卫二",
+        "subject": "火卫二",
+        "source_url": "https://www.wikidata.org/wiki/Q7548",
+        "entity_id": "Q7548",
+        "schema_version": "phase83_shadow_normalize_preview_v1",
+        "extraction_method": "phase83_preview_heuristic",
+        "confidence": 0.68,
+        "quality_flags": {
+          "allowlisted": true,
+          "has_excerpt": true,
+          "evaluation_only": true,
+          "non_empty_text": true
+        },
+        "provenance": {
+          "phase82_status": "assessment_preview",
+          "phase82_reason": "phase74_accepted"
+        },
+        "text_excerpt": "{\"qid\": \"Q7548\", \"title\": \"火卫二\", \"url\": \"https://www.wikidata.org/wiki/Q7548\", \"reason\": \"local_materialized_preview_exists\", \"has_local_raw\": false, \"has_local_materialized_pair\": true}"
+      }
+    ],
+    "triples_preview": [
+      {
+        "source_id": "zh_wikipedia",
+        "subject": "太阳",
+        "schema_version": "phase83_shadow_normalize_preview_v1",
+        "extraction_method": "phase83_preview_heuristic",
+        "confidence": 0.68,
+        "source_url": "https://zh.wikipedia.org/wiki/太阳",
+        "entity_id": "",
+        "validation_status": "accepted_preview",
+        "provenance": {
+          "phase82_status": "local_preview",
+          "phase82_reason": "phase81_accepted"
+        },
+        "predicate": "SOURCE_URL",
+        "object": "https://zh.wikipedia.org/wiki/太阳"
+      },
+      {
+        "source_id": "zh_wikipedia",
+        "subject": "太阳",
+        "schema_version": "phase83_shadow_normalize_preview_v1",
+        "extraction_method": "phase83_preview_heuristic",
+        "confidence": 0.68,
+        "source_url": "https://zh.wikipedia.org/wiki/太阳",
+        "entity_id": "",
+        "validation_status": "accepted_preview",
+        "provenance": {
+          "phase82_status": "local_preview",
+          "phase82_reason": "phase81_accepted"
+        },
+        "predicate": "HAS_PREVIEW_TEXT",
+        "object": "英語維基百科 相應條目来扩充 ，此條目在對應語言版為高品質條目。 2022年4月16日 若您熟悉来源语言和主题，请协助 参考外语维基百科扩充条目 。请勿直接提交机械翻译，也不要翻译不可靠、低品质内容。依 版权协议 ，译文需 在编辑摘要注明来源 ，或于讨论页顶部标记 Translated page 在2019年使用 太陽濾鏡 真實色彩 的太陽。 太陽、日、Su"
+      },
+      {
+        "source_id": "zh_wikipedia",
+        "subject": "太阳系",
+        "schema_version": "phase83_shadow_normalize_preview_v1",
+        "extraction_method": "phase83_preview_heuristic",
+        "confidence": 0.68,
+        "source_url": "https://zh.wikipedia.org/wiki/太阳系",
+        "entity_id": "",
+        "validation_status": "accepted_preview",
+        "provenance": {
+          "phase82_status": "local_preview",
+          "phase82_reason": "phase81_accepted"
+        },
+        "predicate": "SOURCE_URL",
+        "object": "https://zh.wikipedia.org/wiki/太阳系"
+      },
+      {
+        "source_id": "zh_wikipedia",
+        "subject": "太阳系",
+        "schema_version": "phase83_shadow_normalize_preview_v1",
+        "extraction_method": "phase83_preview_heuristic",
+        "confidence": 0.68,
+        "source_url": "https://zh.wikipedia.org/wiki/太阳系",
+        "entity_id": "",
+        "validation_status": "accepted_preview",
+        "provenance": {
+          "phase82_status": "local_preview",
+          "phase82_reason": "phase81_accepted"
+        },
+        "predicate": "HAS_PREVIEW_TEXT",
+        "object": "此條目介紹的是太陽和它的行星系統。关于其他類似的系統，请见「 行星系統 有字幕（英文） 有字幕（正體中文） 有字幕（簡體中文） 行星、衛星和矮行星 （真實色彩、大小按比例、距離尺度未照比例） 45.68億年 本地星際雲 獵戶–天鵝臂 最近的恆星 (4.2465 （4.36光年） 行星系統 30.07 AU 古柏斷涯 50–70 AU 賽德娜 (小行星) 更多"
+      },
+      {
+        "source_id": "zh_wikipedia",
+        "subject": "水星",
+        "schema_version": "phase83_shadow_normalize_preview_v1",
+        "extraction_method": "phase83_preview_heuristic",
+        "confidence": 0.68,
+        "source_url": "https://zh.wikipedia.org/wiki/水星",
+        "entity_id": "",
+        "validation_status": "accepted_preview",
+        "provenance": {
+          "phase82_status": "local_preview",
+          "phase82_reason": "phase81_accepted"
+        },
+        "predicate": "SOURCE_URL",
+        "object": "https://zh.wikipedia.org/wiki/水星"
+      },
+      {
+        "source_id": "zh_wikipedia",
+        "subject": "水星",
+        "schema_version": "phase83_shadow_normalize_preview_v1",
+        "extraction_method": "phase83_preview_heuristic",
+        "confidence": 0.68,
+        "source_url": "https://zh.wikipedia.org/wiki/水星",
+        "entity_id": "",
+        "validation_status": "accepted_preview",
+        "provenance": {
+          "phase82_status": "local_preview",
+          "phase82_reason": "phase81_accepted"
+        },
+        "predicate": "HAS_PREVIEW_TEXT",
+        "object": "取自信使神太空船的水星合成影像 Mercurian, Mercurial, Hermian 軌道參數 J2000 69,817,900 公里 0.466 697 46,001,200公里 0.307 499 AU 57,909,100公里 0.387 098 AU 0.205 630 軌道週期 87.969 1 (0.240 846 會合週期 115.88 "
+      },
+      {
+        "source_id": "esa",
+        "subject": "ESA - Space Science",
+        "schema_version": "phase83_shadow_normalize_preview_v1",
+        "extraction_method": "phase83_preview_heuristic",
+        "confidence": 0.72,
+        "source_url": "https://www.esa.int/science_exploration/space_science",
+        "entity_id": "",
+        "validation_status": "accepted_preview",
+        "provenance": {
+          "phase82_status": "local_preview",
+          "phase82_reason": "phase67_68_accepted_or_review_needed"
+        },
+        "predicate": "SOURCE_URL",
+        "object": "https://www.esa.int/science_exploration/space_science"
+      },
+      {
+        "source_id": "esa",
+        "subject": "ESA - Space Science",
+        "schema_version": "phase83_shadow_normalize_preview_v1",
+        "extraction_method": "phase83_preview_heuristic",
+        "confidence": 0.72,
+        "source_url": "https://www.esa.int/science_exploration/space_science",
+        "entity_id": "",
+        "validation_status": "accepted_preview",
+        "provenance": {
+          "phase82_status": "local_preview",
+          "phase82_reason": "phase67_68_accepted_or_review_needed"
+        },
+        "predicate": "HAS_PREVIEW_TEXT",
+        "object": "Science & Exploration Space Science Latest All Stories Videos Images Image Science & Exploration Plato's electronics ready for space 20/07/2026 1433 views 35 likes View Image Scien"
+      },
+      {
+        "source_id": "esa",
+        "subject": "ESA - Rosetta",
+        "schema_version": "phase83_shadow_normalize_preview_v1",
+        "extraction_method": "phase83_preview_heuristic",
+        "confidence": 0.72,
+        "source_url": "https://www.esa.int/science_exploration/space_science/rosetta",
+        "entity_id": "",
+        "validation_status": "accepted_preview",
+        "provenance": {
+          "phase82_status": "local_preview",
+          "phase82_reason": "phase67_68_accepted_or_review_needed"
+        },
+        "predicate": "SOURCE_URL",
+        "object": "https://www.esa.int/science_exploration/space_science/rosetta"
+      },
+      {
+        "source_id": "esa",
+        "subject": "ESA - Rosetta",
+        "schema_version": "phase83_shadow_normalize_preview_v1",
+        "extraction_method": "phase83_preview_heuristic",
+        "confidence": 0.72,
+        "source_url": "https://www.esa.int/science_exploration/space_science/rosetta",
+        "entity_id": "",
+        "validation_status": "accepted_preview",
+        "provenance": {
+          "phase82_status": "local_preview",
+          "phase82_reason": "phase67_68_accepted_or_review_needed"
+        },
+        "predicate": "HAS_PREVIEW_TEXT",
+        "object": "Science & Exploration Rosetta ESA's comet-chaser The mission ESA's Rosetta mission was the first to rendezvous with a comet, the first to follow a comet on its orbit around the Sun"
+      },
+      {
+        "source_id": "esa",
+        "subject": "ESA - Gaia",
+        "schema_version": "phase83_shadow_normalize_preview_v1",
+        "extraction_method": "phase83_preview_heuristic",
+        "confidence": 0.72,
+        "source_url": "https://www.esa.int/science_exploration/space_science/gaia",
+        "entity_id": "",
+        "validation_status": "accepted_preview",
+        "provenance": {
+          "phase82_status": "local_preview",
+          "phase82_reason": "phase67_68_accepted_or_review_needed"
+        },
+        "predicate": "SOURCE_URL",
+        "object": "https://www.esa.int/science_exploration/space_science/gaia"
+      },
+      {
+        "source_id": "esa",
+        "subject": "ESA - Gaia",
+        "schema_version": "phase83_shadow_normalize_preview_v1",
+        "extraction_method": "phase83_preview_heuristic",
+        "confidence": 0.72,
+        "source_url": "https://www.esa.int/science_exploration/space_science/gaia",
+        "entity_id": "",
+        "validation_status": "accepted_preview",
+        "provenance": {
+          "phase82_status": "local_preview",
+          "phase82_reason": "phase67_68_accepted_or_review_needed"
+        },
+        "predicate": "HAS_PREVIEW_TEXT",
+        "object": "Science & Exploration Gaia ESA's billion star surveyor The mission From 27 July 2014 to 15 January 2025, Gaia has made more than three trillion observations of two billion stars an"
+      },
+      {
+        "source_id": "esa",
+        "subject": "ESA - Solar Orbiter",
+        "schema_version": "phase83_shadow_normalize_preview_v1",
+        "extraction_method": "phase83_preview_heuristic",
+        "confidence": 0.72,
+        "source_url": "https://www.esa.int/science_exploration/space_science/solar_orbiter",
+        "entity_id": "",
+        "validation_status": "accepted_preview",
+        "provenance": {
+          "phase82_status": "local_preview",
+          "phase82_reason": "phase67_68_accepted_or_review_needed"
+        },
+        "predicate": "SOURCE_URL",
+        "object": "https://www.esa.int/science_exploration/space_science/solar_orbiter"
+      },
+      {
+        "source_id": "esa",
+        "subject": "ESA - Solar Orbiter",
+        "schema_version": "phase83_shadow_normalize_preview_v1",
+        "extraction_method": "phase83_preview_heuristic",
+        "confidence": 0.72,
+        "source_url": "https://www.esa.int/science_exploration/space_science/solar_orbiter",
+        "entity_id": "",
+        "validation_status": "accepted_preview",
+        "provenance": {
+          "phase82_status": "local_preview",
+          "phase82_reason": "phase67_68_accepted_or_review_needed"
+        },
+        "predicate": "HAS_PREVIEW_TEXT",
+        "object": "Science & Exploration Solar Orbiter The Sun up close Solar Orbiter is the most complex scientific laboratory ever sent to our life-giving star, taking images of the Sun from closer"
+      },
+      {
+        "source_id": "esa",
+        "subject": "ESA - BepiColombo",
+        "schema_version": "phase83_shadow_normalize_preview_v1",
+        "extraction_method": "phase83_preview_heuristic",
+        "confidence": 0.72,
+        "source_url": "https://www.esa.int/science_exploration/space_science/bepicolombo",
+        "entity_id": "",
+        "validation_status": "accepted_preview",
+        "provenance": {
+          "phase82_status": "local_preview",
+          "phase82_reason": "phase67_68_accepted_or_review_needed"
+        },
+        "predicate": "SOURCE_URL",
+        "object": "https://www.esa.int/science_exploration/space_science/bepicolombo"
+      },
+      {
+        "source_id": "esa",
+        "subject": "ESA - BepiColombo",
+        "schema_version": "phase83_shadow_normalize_preview_v1",
+        "extraction_method": "phase83_preview_heuristic",
+        "confidence": 0.72,
+        "source_url": "https://www.esa.int/science_exploration/space_science/bepicolombo",
+        "entity_id": "",
+        "validation_status": "accepted_preview",
+        "provenance": {
+          "phase82_status": "local_preview",
+          "phase82_reason": "phase67_68_accepted_or_review_needed"
+        },
+        "predicate": "HAS_PREVIEW_TEXT",
+        "object": "Science & Exploration BepiColombo Investigating Mercury's mysteries BepiColombo will be the second and most complex mission ever to orbit Mercury. Close to the Sun and more difficu"
+      },
+      {
+        "source_id": "esa",
+        "subject": "ESA - Euclid",
+        "schema_version": "phase83_shadow_normalize_preview_v1",
+        "extraction_method": "phase83_preview_heuristic",
+        "confidence": 0.72,
+        "source_url": "https://www.esa.int/science_exploration/space_science/euclid",
+        "entity_id": "",
+        "validation_status": "accepted_preview",
+        "provenance": {
+          "phase82_status": "local_preview",
+          "phase82_reason": "phase67_68_accepted_or_review_needed"
+        },
+        "predicate": "SOURCE_URL",
+        "object": "https://www.esa.int/science_exploration/space_science/euclid"
+      },
+      {
+        "source_id": "esa",
+        "subject": "ESA - Euclid",
+        "schema_version": "phase83_shadow_normalize_preview_v1",
+        "extraction_method": "phase83_preview_heuristic",
+        "confidence": 0.72,
+        "source_url": "https://www.esa.int/science_exploration/space_science/euclid",
+        "entity_id": "",
+        "validation_status": "accepted_preview",
+        "provenance": {
+          "phase82_status": "local_preview",
+          "phase82_reason": "phase67_68_accepted_or_review_needed"
+        },
+        "predicate": "HAS_PREVIEW_TEXT",
+        "object": "Science & Exploration Euclid Exploring the dark Universe The mission ESA's Euclid mission is designed to explore the composition and evolution of the dark Universe. The space teles"
+      },
+      {
+        "source_id": "esa",
+        "subject": "ESA - ExoMars",
+        "schema_version": "phase83_shadow_normalize_preview_v1",
+        "extraction_method": "phase83_preview_heuristic",
+        "confidence": 0.72,
+        "source_url": "https://www.esa.int/science_exploration/space_science/exomars",
+        "entity_id": "",
+        "validation_status": "accepted_preview",
+        "provenance": {
+          "phase82_status": "local_preview",
+          "phase82_reason": "phase67_68_accepted_or_review_needed"
+        },
+        "predicate": "SOURCE_URL",
+        "object": "https://www.esa.int/science_exploration/space_science/exomars"
+      },
+      {
+        "source_id": "esa",
+        "subject": "ESA - ExoMars",
+        "schema_version": "phase83_shadow_normalize_preview_v1",
+        "extraction_method": "phase83_preview_heuristic",
+        "confidence": 0.72,
+        "source_url": "https://www.esa.int/science_exploration/space_science/exomars",
+        "entity_id": "",
+        "validation_status": "accepted_preview",
+        "provenance": {
+          "phase82_status": "local_preview",
+          "phase82_reason": "phase67_68_accepted_or_review_needed"
+        },
+        "predicate": "HAS_PREVIEW_TEXT",
+        "object": "Science & Exploration ExoMars Has life ever existed on Mars? The mission The ExoMars programme comprises two missions: the first – the Trace Gas Orbiter – launched in 2016 while th"
+      },
+      {
+        "source_id": "esa",
+        "subject": "ESA - Cluster",
+        "schema_version": "phase83_shadow_normalize_preview_v1",
+        "extraction_method": "phase83_preview_heuristic",
+        "confidence": 0.72,
+        "source_url": "https://www.esa.int/science_exploration/space_science/cluster",
+        "entity_id": "",
+        "validation_status": "accepted_preview",
+        "provenance": {
+          "phase82_status": "local_preview",
+          "phase82_reason": "phase67_68_accepted_or_review_needed"
+        },
+        "predicate": "SOURCE_URL",
+        "object": "https://www.esa.int/science_exploration/space_science/cluster"
+      },
+      {
+        "source_id": "esa",
+        "subject": "ESA - Cluster",
+        "schema_version": "phase83_shadow_normalize_preview_v1",
+        "extraction_method": "phase83_preview_heuristic",
+        "confidence": 0.72,
+        "source_url": "https://www.esa.int/science_exploration/space_science/cluster",
+        "entity_id": "",
+        "validation_status": "accepted_preview",
+        "provenance": {
+          "phase82_status": "local_preview",
+          "phase82_reason": "phase67_68_accepted_or_review_needed"
+        },
+        "predicate": "HAS_PREVIEW_TEXT",
+        "object": "Science & Exploration Cluster Measuring Earth's magnetic environment The mission Cluster was a constellation of four spacecraft investigating the interaction between the Sun and Ea"
+      },
+      {
+        "source_id": "esa",
+        "subject": "ESA - Webb",
+        "schema_version": "phase83_shadow_normalize_preview_v1",
+        "extraction_method": "phase83_preview_heuristic",
+        "confidence": 0.72,
+        "source_url": "https://www.esa.int/science_exploration/space_science/webb",
+        "entity_id": "",
+        "validation_status": "accepted_preview",
+        "provenance": {
+          "phase82_status": "local_preview",
+          "phase82_reason": "phase67_68_accepted_or_review_needed"
+        },
+        "predicate": "SOURCE_URL",
+        "object": "https://www.esa.int/science_exploration/space_science/webb"
+      },
+      {
+        "source_id": "esa",
+        "subject": "ESA - Webb",
+        "schema_version": "phase83_shadow_normalize_preview_v1",
+        "extraction_method": "phase83_preview_heuristic",
+        "confidence": 0.72,
+        "source_url": "https://www.esa.int/science_exploration/space_science/webb",
+        "entity_id": "",
+        "validation_status": "accepted_preview",
+        "provenance": {
+          "phase82_status": "local_preview",
+          "phase82_reason": "phase67_68_accepted_or_review_needed"
+        },
+        "predicate": "HAS_PREVIEW_TEXT",
+        "object": "Science & Exploration Webb Seeing farther The mission The James Webb Space Telescope (Webb) is the next great space science observatory following Hubble, designed to answer outstan"
+      },
+      {
+        "source_id": "wikidata",
+        "subject": "太阳",
+        "schema_version": "phase83_shadow_normalize_preview_v1",
+        "extraction_method": "phase83_preview_heuristic",
+        "confidence": 0.68,
+        "source_url": "https://www.wikidata.org/wiki/Q525",
+        "entity_id": "Q525",
+        "validation_status": "accepted_preview",
+        "provenance": {
+          "phase82_status": "assessment_preview",
+          "phase82_reason": "phase74_accepted"
+        },
+        "predicate": "SOURCE_URL",
+        "object": "https://www.wikidata.org/wiki/Q525"
+      },
+      {
+        "source_id": "wikidata",
+        "subject": "太阳",
+        "schema_version": "phase83_shadow_normalize_preview_v1",
+        "extraction_method": "phase83_preview_heuristic",
+        "confidence": 0.68,
+        "source_url": "https://www.wikidata.org/wiki/Q525",
+        "entity_id": "Q525",
+        "validation_status": "accepted_preview",
+        "provenance": {
+          "phase82_status": "assessment_preview",
+          "phase82_reason": "phase74_accepted"
+        },
+        "predicate": "HAS_PREVIEW_TEXT",
+        "object": "{\"qid\": \"Q525\", \"title\": \"太阳\", \"url\": \"https://www.wikidata.org/wiki/Q525\", \"reason\": \"local_entity_raw_has_triples_and_narratives\", \"has_local_raw\": true, \"has_local_materialized_"
+      },
+      {
+        "source_id": "wikidata",
+        "subject": "水星",
+        "schema_version": "phase83_shadow_normalize_preview_v1",
+        "extraction_method": "phase83_preview_heuristic",
+        "confidence": 0.68,
+        "source_url": "https://www.wikidata.org/wiki/Q308",
+        "entity_id": "Q308",
+        "validation_status": "accepted_preview",
+        "provenance": {
+          "phase82_status": "assessment_preview",
+          "phase82_reason": "phase74_accepted"
+        },
+        "predicate": "SOURCE_URL",
+        "object": "https://www.wikidata.org/wiki/Q308"
+      },
+      {
+        "source_id": "wikidata",
+        "subject": "水星",
+        "schema_version": "phase83_shadow_normalize_preview_v1",
+        "extraction_method": "phase83_preview_heuristic",
+        "confidence": 0.68,
+        "source_url": "https://www.wikidata.org/wiki/Q308",
+        "entity_id": "Q308",
+        "validation_status": "accepted_preview",
+        "provenance": {
+          "phase82_status": "assessment_preview",
+          "phase82_reason": "phase74_accepted"
+        },
+        "predicate": "HAS_PREVIEW_TEXT",
+        "object": "{\"qid\": \"Q308\", \"title\": \"水星\", \"url\": \"https://www.wikidata.org/wiki/Q308\", \"reason\": \"local_materialized_preview_exists\", \"has_local_raw\": false, \"has_local_materialized_pair\": tr"
+      },
+      {
+        "source_id": "wikidata",
+        "subject": "金星",
+        "schema_version": "phase83_shadow_normalize_preview_v1",
+        "extraction_method": "phase83_preview_heuristic",
+        "confidence": 0.68,
+        "source_url": "https://www.wikidata.org/wiki/Q313",
+        "entity_id": "Q313",
+        "validation_status": "accepted_preview",
+        "provenance": {
+          "phase82_status": "assessment_preview",
+          "phase82_reason": "phase74_accepted"
+        },
+        "predicate": "SOURCE_URL",
+        "object": "https://www.wikidata.org/wiki/Q313"
+      },
+      {
+        "source_id": "wikidata",
+        "subject": "金星",
+        "schema_version": "phase83_shadow_normalize_preview_v1",
+        "extraction_method": "phase83_preview_heuristic",
+        "confidence": 0.68,
+        "source_url": "https://www.wikidata.org/wiki/Q313",
+        "entity_id": "Q313",
+        "validation_status": "accepted_preview",
+        "provenance": {
+          "phase82_status": "assessment_preview",
+          "phase82_reason": "phase74_accepted"
+        },
+        "predicate": "HAS_PREVIEW_TEXT",
+        "object": "{\"qid\": \"Q313\", \"title\": \"金星\", \"url\": \"https://www.wikidata.org/wiki/Q313\", \"reason\": \"local_materialized_preview_exists\", \"has_local_raw\": false, \"has_local_materialized_pair\": tr"
+      },
+      {
+        "source_id": "wikidata",
+        "subject": "地球",
+        "schema_version": "phase83_shadow_normalize_preview_v1",
+        "extraction_method": "phase83_preview_heuristic",
+        "confidence": 0.68,
+        "source_url": "https://www.wikidata.org/wiki/Q2",
+        "entity_id": "Q2",
+        "validation_status": "accepted_preview",
+        "provenance": {
+          "phase82_status": "assessment_preview",
+          "phase82_reason": "phase74_accepted"
+        },
+        "predicate": "SOURCE_URL",
+        "object": "https://www.wikidata.org/wiki/Q2"
+      },
+      {
+        "source_id": "wikidata",
+        "subject": "地球",
+        "schema_version": "phase83_shadow_normalize_preview_v1",
+        "extraction_method": "phase83_preview_heuristic",
+        "confidence": 0.68,
+        "source_url": "https://www.wikidata.org/wiki/Q2",
+        "entity_id": "Q2",
+        "validation_status": "accepted_preview",
+        "provenance": {
+          "phase82_status": "assessment_preview",
+          "phase82_reason": "phase74_accepted"
+        },
+        "predicate": "HAS_PREVIEW_TEXT",
+        "object": "{\"qid\": \"Q2\", \"title\": \"地球\", \"url\": \"https://www.wikidata.org/wiki/Q2\", \"reason\": \"local_entity_raw_has_triples_and_narratives\", \"has_local_raw\": true, \"has_local_materialized_pair"
+      },
+      {
+        "source_id": "wikidata",
+        "subject": "月球",
+        "schema_version": "phase83_shadow_normalize_preview_v1",
+        "extraction_method": "phase83_preview_heuristic",
+        "confidence": 0.68,
+        "source_url": "https://www.wikidata.org/wiki/Q405",
+        "entity_id": "Q405",
+        "validation_status": "accepted_preview",
+        "provenance": {
+          "phase82_status": "assessment_preview",
+          "phase82_reason": "phase74_accepted"
+        },
+        "predicate": "SOURCE_URL",
+        "object": "https://www.wikidata.org/wiki/Q405"
+      },
+      {
+        "source_id": "wikidata",
+        "subject": "月球",
+        "schema_version": "phase83_shadow_normalize_preview_v1",
+        "extraction_method": "phase83_preview_heuristic",
+        "confidence": 0.68,
+        "source_url": "https://www.wikidata.org/wiki/Q405",
+        "entity_id": "Q405",
+        "validation_status": "accepted_preview",
+        "provenance": {
+          "phase82_status": "assessment_preview",
+          "phase82_reason": "phase74_accepted"
+        },
+        "predicate": "HAS_PREVIEW_TEXT",
+        "object": "{\"qid\": \"Q405\", \"title\": \"月球\", \"url\": \"https://www.wikidata.org/wiki/Q405\", \"reason\": \"local_materialized_preview_exists\", \"has_local_raw\": false, \"has_local_materialized_pair\": tr"
+      },
+      {
+        "source_id": "wikidata",
+        "subject": "火星",
+        "schema_version": "phase83_shadow_normalize_preview_v1",
+        "extraction_method": "phase83_preview_heuristic",
+        "confidence": 0.68,
+        "source_url": "https://www.wikidata.org/wiki/Q111",
+        "entity_id": "Q111",
+        "validation_status": "accepted_preview",
+        "provenance": {
+          "phase82_status": "assessment_preview",
+          "phase82_reason": "phase74_accepted"
+        },
+        "predicate": "SOURCE_URL",
+        "object": "https://www.wikidata.org/wiki/Q111"
+      },
+      {
+        "source_id": "wikidata",
+        "subject": "火星",
+        "schema_version": "phase83_shadow_normalize_preview_v1",
+        "extraction_method": "phase83_preview_heuristic",
+        "confidence": 0.68,
+        "source_url": "https://www.wikidata.org/wiki/Q111",
+        "entity_id": "Q111",
+        "validation_status": "accepted_preview",
+        "provenance": {
+          "phase82_status": "assessment_preview",
+          "phase82_reason": "phase74_accepted"
+        },
+        "predicate": "HAS_PREVIEW_TEXT",
+        "object": "{\"qid\": \"Q111\", \"title\": \"火星\", \"url\": \"https://www.wikidata.org/wiki/Q111\", \"reason\": \"local_entity_raw_has_triples_and_narratives\", \"has_local_raw\": true, \"has_local_materialized_"
+      },
+      {
+        "source_id": "wikidata",
+        "subject": "木星",
+        "schema_version": "phase83_shadow_normalize_preview_v1",
+        "extraction_method": "phase83_preview_heuristic",
+        "confidence": 0.68,
+        "source_url": "https://www.wikidata.org/wiki/Q319",
+        "entity_id": "Q319",
+        "validation_status": "accepted_preview",
+        "provenance": {
+          "phase82_status": "assessment_preview",
+          "phase82_reason": "phase74_accepted"
+        },
+        "predicate": "SOURCE_URL",
+        "object": "https://www.wikidata.org/wiki/Q319"
+      },
+      {
+        "source_id": "wikidata",
+        "subject": "木星",
+        "schema_version": "phase83_shadow_normalize_preview_v1",
+        "extraction_method": "phase83_preview_heuristic",
+        "confidence": 0.68,
+        "source_url": "https://www.wikidata.org/wiki/Q319",
+        "entity_id": "Q319",
+        "validation_status": "accepted_preview",
+        "provenance": {
+          "phase82_status": "assessment_preview",
+          "phase82_reason": "phase74_accepted"
+        },
+        "predicate": "HAS_PREVIEW_TEXT",
+        "object": "{\"qid\": \"Q319\", \"title\": \"木星\", \"url\": \"https://www.wikidata.org/wiki/Q319\", \"reason\": \"local_materialized_preview_exists\", \"has_local_raw\": false, \"has_local_materialized_pair\": tr"
+      },
+      {
+        "source_id": "wikidata",
+        "subject": "土星",
+        "schema_version": "phase83_shadow_normalize_preview_v1",
+        "extraction_method": "phase83_preview_heuristic",
+        "confidence": 0.68,
+        "source_url": "https://www.wikidata.org/wiki/Q193",
+        "entity_id": "Q193",
+        "validation_status": "accepted_preview",
+        "provenance": {
+          "phase82_status": "assessment_preview",
+          "phase82_reason": "phase74_accepted"
+        },
+        "predicate": "SOURCE_URL",
+        "object": "https://www.wikidata.org/wiki/Q193"
+      },
+      {
+        "source_id": "wikidata",
+        "subject": "土星",
+        "schema_version": "phase83_shadow_normalize_preview_v1",
+        "extraction_method": "phase83_preview_heuristic",
+        "confidence": 0.68,
+        "source_url": "https://www.wikidata.org/wiki/Q193",
+        "entity_id": "Q193",
+        "validation_status": "accepted_preview",
+        "provenance": {
+          "phase82_status": "assessment_preview",
+          "phase82_reason": "phase74_accepted"
+        },
+        "predicate": "HAS_PREVIEW_TEXT",
+        "object": "{\"qid\": \"Q193\", \"title\": \"土星\", \"url\": \"https://www.wikidata.org/wiki/Q193\", \"reason\": \"local_materialized_preview_exists\", \"has_local_raw\": false, \"has_local_materialized_pair\": tr"
+      },
+      {
+        "source_id": "wikidata",
+        "subject": "天王星",
+        "schema_version": "phase83_shadow_normalize_preview_v1",
+        "extraction_method": "phase83_preview_heuristic",
+        "confidence": 0.68,
+        "source_url": "https://www.wikidata.org/wiki/Q324",
+        "entity_id": "Q324",
+        "validation_status": "accepted_preview",
+        "provenance": {
+          "phase82_status": "assessment_preview",
+          "phase82_reason": "phase74_accepted"
+        },
+        "predicate": "SOURCE_URL",
+        "object": "https://www.wikidata.org/wiki/Q324"
+      },
+      {
+        "source_id": "wikidata",
+        "subject": "天王星",
+        "schema_version": "phase83_shadow_normalize_preview_v1",
+        "extraction_method": "phase83_preview_heuristic",
+        "confidence": 0.68,
+        "source_url": "https://www.wikidata.org/wiki/Q324",
+        "entity_id": "Q324",
+        "validation_status": "accepted_preview",
+        "provenance": {
+          "phase82_status": "assessment_preview",
+          "phase82_reason": "phase74_accepted"
+        },
+        "predicate": "HAS_PREVIEW_TEXT",
+        "object": "{\"qid\": \"Q324\", \"title\": \"天王星\", \"url\": \"https://www.wikidata.org/wiki/Q324\", \"reason\": \"local_materialized_preview_exists\", \"has_local_raw\": false, \"has_local_materialized_pair\": t"
+      },
+      {
+        "source_id": "wikidata",
+        "subject": "海王星",
+        "schema_version": "phase83_shadow_normalize_preview_v1",
+        "extraction_method": "phase83_preview_heuristic",
+        "confidence": 0.68,
+        "source_url": "https://www.wikidata.org/wiki/Q332",
+        "entity_id": "Q332",
+        "validation_status": "accepted_preview",
+        "provenance": {
+          "phase82_status": "assessment_preview",
+          "phase82_reason": "phase74_accepted"
+        },
+        "predicate": "SOURCE_URL",
+        "object": "https://www.wikidata.org/wiki/Q332"
+      },
+      {
+        "source_id": "wikidata",
+        "subject": "海王星",
+        "schema_version": "phase83_shadow_normalize_preview_v1",
+        "extraction_method": "phase83_preview_heuristic",
+        "confidence": 0.68,
+        "source_url": "https://www.wikidata.org/wiki/Q332",
+        "entity_id": "Q332",
+        "validation_status": "accepted_preview",
+        "provenance": {
+          "phase82_status": "assessment_preview",
+          "phase82_reason": "phase74_accepted"
+        },
+        "predicate": "HAS_PREVIEW_TEXT",
+        "object": "{\"qid\": \"Q332\", \"title\": \"海王星\", \"url\": \"https://www.wikidata.org/wiki/Q332\", \"reason\": \"local_materialized_preview_exists\", \"has_local_raw\": false, \"has_local_materialized_pair\": t"
+      },
+      {
+        "source_id": "wikidata",
+        "subject": "冥王星",
+        "schema_version": "phase83_shadow_normalize_preview_v1",
+        "extraction_method": "phase83_preview_heuristic",
+        "confidence": 0.68,
+        "source_url": "https://www.wikidata.org/wiki/Q339",
+        "entity_id": "Q339",
+        "validation_status": "accepted_preview",
+        "provenance": {
+          "phase82_status": "assessment_preview",
+          "phase82_reason": "phase74_accepted"
+        },
+        "predicate": "SOURCE_URL",
+        "object": "https://www.wikidata.org/wiki/Q339"
+      },
+      {
+        "source_id": "wikidata",
+        "subject": "冥王星",
+        "schema_version": "phase83_shadow_normalize_preview_v1",
+        "extraction_method": "phase83_preview_heuristic",
+        "confidence": 0.68,
+        "source_url": "https://www.wikidata.org/wiki/Q339",
+        "entity_id": "Q339",
+        "validation_status": "accepted_preview",
+        "provenance": {
+          "phase82_status": "assessment_preview",
+          "phase82_reason": "phase74_accepted"
+        },
+        "predicate": "HAS_PREVIEW_TEXT",
+        "object": "{\"qid\": \"Q339\", \"title\": \"冥王星\", \"url\": \"https://www.wikidata.org/wiki/Q339\", \"reason\": \"local_materialized_preview_exists\", \"has_local_raw\": false, \"has_local_materialized_pair\": t"
+      },
+      {
+        "source_id": "wikidata",
+        "subject": "谷神星",
+        "schema_version": "phase83_shadow_normalize_preview_v1",
+        "extraction_method": "phase83_preview_heuristic",
+        "confidence": 0.68,
+        "source_url": "https://www.wikidata.org/wiki/Q596",
+        "entity_id": "Q596",
+        "validation_status": "accepted_preview",
+        "provenance": {
+          "phase82_status": "assessment_preview",
+          "phase82_reason": "phase74_accepted"
+        },
+        "predicate": "SOURCE_URL",
+        "object": "https://www.wikidata.org/wiki/Q596"
+      },
+      {
+        "source_id": "wikidata",
+        "subject": "谷神星",
+        "schema_version": "phase83_shadow_normalize_preview_v1",
+        "extraction_method": "phase83_preview_heuristic",
+        "confidence": 0.68,
+        "source_url": "https://www.wikidata.org/wiki/Q596",
+        "entity_id": "Q596",
+        "validation_status": "accepted_preview",
+        "provenance": {
+          "phase82_status": "assessment_preview",
+          "phase82_reason": "phase74_accepted"
+        },
+        "predicate": "HAS_PREVIEW_TEXT",
+        "object": "{\"qid\": \"Q596\", \"title\": \"谷神星\", \"url\": \"https://www.wikidata.org/wiki/Q596\", \"reason\": \"local_materialized_preview_exists\", \"has_local_raw\": false, \"has_local_materialized_pair\": t"
+      },
+      {
+        "source_id": "wikidata",
+        "subject": "阋神星",
+        "schema_version": "phase83_shadow_normalize_preview_v1",
+        "extraction_method": "phase83_preview_heuristic",
+        "confidence": 0.68,
+        "source_url": "https://www.wikidata.org/wiki/Q611",
+        "entity_id": "Q611",
+        "validation_status": "accepted_preview",
+        "provenance": {
+          "phase82_status": "assessment_preview",
+          "phase82_reason": "phase74_accepted"
+        },
+        "predicate": "SOURCE_URL",
+        "object": "https://www.wikidata.org/wiki/Q611"
+      },
+      {
+        "source_id": "wikidata",
+        "subject": "阋神星",
+        "schema_version": "phase83_shadow_normalize_preview_v1",
+        "extraction_method": "phase83_preview_heuristic",
+        "confidence": 0.68,
+        "source_url": "https://www.wikidata.org/wiki/Q611",
+        "entity_id": "Q611",
+        "validation_status": "accepted_preview",
+        "provenance": {
+          "phase82_status": "assessment_preview",
+          "phase82_reason": "phase74_accepted"
+        },
+        "predicate": "HAS_PREVIEW_TEXT",
+        "object": "{\"qid\": \"Q611\", \"title\": \"阋神星\", \"url\": \"https://www.wikidata.org/wiki/Q611\", \"reason\": \"local_materialized_preview_exists\", \"has_local_raw\": false, \"has_local_materialized_pair\": t"
+      },
+      {
+        "source_id": "wikidata",
+        "subject": "妊神星",
+        "schema_version": "phase83_shadow_normalize_preview_v1",
+        "extraction_method": "phase83_preview_heuristic",
+        "confidence": 0.68,
+        "source_url": "https://www.wikidata.org/wiki/Q601",
+        "entity_id": "Q601",
+        "validation_status": "accepted_preview",
+        "provenance": {
+          "phase82_status": "assessment_preview",
+          "phase82_reason": "phase74_accepted"
+        },
+        "predicate": "SOURCE_URL",
+        "object": "https://www.wikidata.org/wiki/Q601"
+      },
+      {
+        "source_id": "wikidata",
+        "subject": "妊神星",
+        "schema_version": "phase83_shadow_normalize_preview_v1",
+        "extraction_method": "phase83_preview_heuristic",
+        "confidence": 0.68,
+        "source_url": "https://www.wikidata.org/wiki/Q601",
+        "entity_id": "Q601",
+        "validation_status": "accepted_preview",
+        "provenance": {
+          "phase82_status": "assessment_preview",
+          "phase82_reason": "phase74_accepted"
+        },
+        "predicate": "HAS_PREVIEW_TEXT",
+        "object": "{\"qid\": \"Q601\", \"title\": \"妊神星\", \"url\": \"https://www.wikidata.org/wiki/Q601\", \"reason\": \"local_materialized_preview_exists\", \"has_local_raw\": false, \"has_local_materialized_pair\": t"
+      },
+      {
+        "source_id": "wikidata",
+        "subject": "鸟神星",
+        "schema_version": "phase83_shadow_normalize_preview_v1",
+        "extraction_method": "phase83_preview_heuristic",
+        "confidence": 0.68,
+        "source_url": "https://www.wikidata.org/wiki/Q604",
+        "entity_id": "Q604",
+        "validation_status": "accepted_preview",
+        "provenance": {
+          "phase82_status": "assessment_preview",
+          "phase82_reason": "phase74_accepted"
+        },
+        "predicate": "SOURCE_URL",
+        "object": "https://www.wikidata.org/wiki/Q604"
+      },
+      {
+        "source_id": "wikidata",
+        "subject": "鸟神星",
+        "schema_version": "phase83_shadow_normalize_preview_v1",
+        "extraction_method": "phase83_preview_heuristic",
+        "confidence": 0.68,
+        "source_url": "https://www.wikidata.org/wiki/Q604",
+        "entity_id": "Q604",
+        "validation_status": "accepted_preview",
+        "provenance": {
+          "phase82_status": "assessment_preview",
+          "phase82_reason": "phase74_accepted"
+        },
+        "predicate": "HAS_PREVIEW_TEXT",
+        "object": "{\"qid\": \"Q604\", \"title\": \"鸟神星\", \"url\": \"https://www.wikidata.org/wiki/Q604\", \"reason\": \"local_materialized_preview_exists\", \"has_local_raw\": false, \"has_local_materialized_pair\": t"
+      },
+      {
+        "source_id": "wikidata",
+        "subject": "灶神星",
+        "schema_version": "phase83_shadow_normalize_preview_v1",
+        "extraction_method": "phase83_preview_heuristic",
+        "confidence": 0.68,
+        "source_url": "https://www.wikidata.org/wiki/Q3030",
+        "entity_id": "Q3030",
+        "validation_status": "accepted_preview",
+        "provenance": {
+          "phase82_status": "assessment_preview",
+          "phase82_reason": "phase74_accepted"
+        },
+        "predicate": "SOURCE_URL",
+        "object": "https://www.wikidata.org/wiki/Q3030"
+      },
+      {
+        "source_id": "wikidata",
+        "subject": "灶神星",
+        "schema_version": "phase83_shadow_normalize_preview_v1",
+        "extraction_method": "phase83_preview_heuristic",
+        "confidence": 0.68,
+        "source_url": "https://www.wikidata.org/wiki/Q3030",
+        "entity_id": "Q3030",
+        "validation_status": "accepted_preview",
+        "provenance": {
+          "phase82_status": "assessment_preview",
+          "phase82_reason": "phase74_accepted"
+        },
+        "predicate": "HAS_PREVIEW_TEXT",
+        "object": "{\"qid\": \"Q3030\", \"title\": \"灶神星\", \"url\": \"https://www.wikidata.org/wiki/Q3030\", \"reason\": \"local_materialized_preview_exists\", \"has_local_raw\": false, \"has_local_materialized_pair\":"
+      },
+      {
+        "source_id": "wikidata",
+        "subject": "木卫一",
+        "schema_version": "phase83_shadow_normalize_preview_v1",
+        "extraction_method": "phase83_preview_heuristic",
+        "confidence": 0.68,
+        "source_url": "https://www.wikidata.org/wiki/Q3123",
+        "entity_id": "Q3123",
+        "validation_status": "accepted_preview",
+        "provenance": {
+          "phase82_status": "assessment_preview",
+          "phase82_reason": "phase74_accepted"
+        },
+        "predicate": "SOURCE_URL",
+        "object": "https://www.wikidata.org/wiki/Q3123"
+      },
+      {
+        "source_id": "wikidata",
+        "subject": "木卫一",
+        "schema_version": "phase83_shadow_normalize_preview_v1",
+        "extraction_method": "phase83_preview_heuristic",
+        "confidence": 0.68,
+        "source_url": "https://www.wikidata.org/wiki/Q3123",
+        "entity_id": "Q3123",
+        "validation_status": "accepted_preview",
+        "provenance": {
+          "phase82_status": "assessment_preview",
+          "phase82_reason": "phase74_accepted"
+        },
+        "predicate": "HAS_PREVIEW_TEXT",
+        "object": "{\"qid\": \"Q3123\", \"title\": \"木卫一\", \"url\": \"https://www.wikidata.org/wiki/Q3123\", \"reason\": \"local_materialized_preview_exists\", \"has_local_raw\": false, \"has_local_materialized_pair\":"
+      },
+      {
+        "source_id": "wikidata",
+        "subject": "木卫二",
+        "schema_version": "phase83_shadow_normalize_preview_v1",
+        "extraction_method": "phase83_preview_heuristic",
+        "confidence": 0.68,
+        "source_url": "https://www.wikidata.org/wiki/Q3143",
+        "entity_id": "Q3143",
+        "validation_status": "accepted_preview",
+        "provenance": {
+          "phase82_status": "assessment_preview",
+          "phase82_reason": "phase74_accepted"
+        },
+        "predicate": "SOURCE_URL",
+        "object": "https://www.wikidata.org/wiki/Q3143"
+      },
+      {
+        "source_id": "wikidata",
+        "subject": "木卫二",
+        "schema_version": "phase83_shadow_normalize_preview_v1",
+        "extraction_method": "phase83_preview_heuristic",
+        "confidence": 0.68,
+        "source_url": "https://www.wikidata.org/wiki/Q3143",
+        "entity_id": "Q3143",
+        "validation_status": "accepted_preview",
+        "provenance": {
+          "phase82_status": "assessment_preview",
+          "phase82_reason": "phase74_accepted"
+        },
+        "predicate": "HAS_PREVIEW_TEXT",
+        "object": "{\"qid\": \"Q3143\", \"title\": \"木卫二\", \"url\": \"https://www.wikidata.org/wiki/Q3143\", \"reason\": \"local_materialized_preview_exists\", \"has_local_raw\": false, \"has_local_materialized_pair\":"
+      },
+      {
+        "source_id": "wikidata",
+        "subject": "木卫三",
+        "schema_version": "phase83_shadow_normalize_preview_v1",
+        "extraction_method": "phase83_preview_heuristic",
+        "confidence": 0.68,
+        "source_url": "https://www.wikidata.org/wiki/Q3169",
+        "entity_id": "Q3169",
+        "validation_status": "accepted_preview",
+        "provenance": {
+          "phase82_status": "assessment_preview",
+          "phase82_reason": "phase74_accepted"
+        },
+        "predicate": "SOURCE_URL",
+        "object": "https://www.wikidata.org/wiki/Q3169"
+      },
+      {
+        "source_id": "wikidata",
+        "subject": "木卫三",
+        "schema_version": "phase83_shadow_normalize_preview_v1",
+        "extraction_method": "phase83_preview_heuristic",
+        "confidence": 0.68,
+        "source_url": "https://www.wikidata.org/wiki/Q3169",
+        "entity_id": "Q3169",
+        "validation_status": "accepted_preview",
+        "provenance": {
+          "phase82_status": "assessment_preview",
+          "phase82_reason": "phase74_accepted"
+        },
+        "predicate": "HAS_PREVIEW_TEXT",
+        "object": "{\"qid\": \"Q3169\", \"title\": \"木卫三\", \"url\": \"https://www.wikidata.org/wiki/Q3169\", \"reason\": \"local_materialized_preview_exists\", \"has_local_raw\": false, \"has_local_materialized_pair\":"
+      },
+      {
+        "source_id": "wikidata",
+        "subject": "木卫四",
+        "schema_version": "phase83_shadow_normalize_preview_v1",
+        "extraction_method": "phase83_preview_heuristic",
+        "confidence": 0.68,
+        "source_url": "https://www.wikidata.org/wiki/Q3134",
+        "entity_id": "Q3134",
+        "validation_status": "accepted_preview",
+        "provenance": {
+          "phase82_status": "assessment_preview",
+          "phase82_reason": "phase74_accepted"
+        },
+        "predicate": "SOURCE_URL",
+        "object": "https://www.wikidata.org/wiki/Q3134"
+      },
+      {
+        "source_id": "wikidata",
+        "subject": "木卫四",
+        "schema_version": "phase83_shadow_normalize_preview_v1",
+        "extraction_method": "phase83_preview_heuristic",
+        "confidence": 0.68,
+        "source_url": "https://www.wikidata.org/wiki/Q3134",
+        "entity_id": "Q3134",
+        "validation_status": "accepted_preview",
+        "provenance": {
+          "phase82_status": "assessment_preview",
+          "phase82_reason": "phase74_accepted"
+        },
+        "predicate": "HAS_PREVIEW_TEXT",
+        "object": "{\"qid\": \"Q3134\", \"title\": \"木卫四\", \"url\": \"https://www.wikidata.org/wiki/Q3134\", \"reason\": \"local_materialized_preview_exists\", \"has_local_raw\": false, \"has_local_materialized_pair\":"
+      },
+      {
+        "source_id": "wikidata",
+        "subject": "土卫六",
+        "schema_version": "phase83_shadow_normalize_preview_v1",
+        "extraction_method": "phase83_preview_heuristic",
+        "confidence": 0.68,
+        "source_url": "https://www.wikidata.org/wiki/Q2565",
+        "entity_id": "Q2565",
+        "validation_status": "accepted_preview",
+        "provenance": {
+          "phase82_status": "assessment_preview",
+          "phase82_reason": "phase74_accepted"
+        },
+        "predicate": "SOURCE_URL",
+        "object": "https://www.wikidata.org/wiki/Q2565"
+      },
+      {
+        "source_id": "wikidata",
+        "subject": "土卫六",
+        "schema_version": "phase83_shadow_normalize_preview_v1",
+        "extraction_method": "phase83_preview_heuristic",
+        "confidence": 0.68,
+        "source_url": "https://www.wikidata.org/wiki/Q2565",
+        "entity_id": "Q2565",
+        "validation_status": "accepted_preview",
+        "provenance": {
+          "phase82_status": "assessment_preview",
+          "phase82_reason": "phase74_accepted"
+        },
+        "predicate": "HAS_PREVIEW_TEXT",
+        "object": "{\"qid\": \"Q2565\", \"title\": \"土卫六\", \"url\": \"https://www.wikidata.org/wiki/Q2565\", \"reason\": \"local_materialized_preview_exists\", \"has_local_raw\": false, \"has_local_materialized_pair\":"
+      },
+      {
+        "source_id": "wikidata",
+        "subject": "土卫二",
+        "schema_version": "phase83_shadow_normalize_preview_v1",
+        "extraction_method": "phase83_preview_heuristic",
+        "confidence": 0.68,
+        "source_url": "https://www.wikidata.org/wiki/Q3303",
+        "entity_id": "Q3303",
+        "validation_status": "accepted_preview",
+        "provenance": {
+          "phase82_status": "assessment_preview",
+          "phase82_reason": "phase74_accepted"
+        },
+        "predicate": "SOURCE_URL",
+        "object": "https://www.wikidata.org/wiki/Q3303"
+      },
+      {
+        "source_id": "wikidata",
+        "subject": "土卫二",
+        "schema_version": "phase83_shadow_normalize_preview_v1",
+        "extraction_method": "phase83_preview_heuristic",
+        "confidence": 0.68,
+        "source_url": "https://www.wikidata.org/wiki/Q3303",
+        "entity_id": "Q3303",
+        "validation_status": "accepted_preview",
+        "provenance": {
+          "phase82_status": "assessment_preview",
+          "phase82_reason": "phase74_accepted"
+        },
+        "predicate": "HAS_PREVIEW_TEXT",
+        "object": "{\"qid\": \"Q3303\", \"title\": \"土卫二\", \"url\": \"https://www.wikidata.org/wiki/Q3303\", \"reason\": \"local_materialized_preview_exists\", \"has_local_raw\": false, \"has_local_materialized_pair\":"
+      },
+      {
+        "source_id": "wikidata",
+        "subject": "海卫一",
+        "schema_version": "phase83_shadow_normalize_preview_v1",
+        "extraction_method": "phase83_preview_heuristic",
+        "confidence": 0.68,
+        "source_url": "https://www.wikidata.org/wiki/Q3359",
+        "entity_id": "Q3359",
+        "validation_status": "accepted_preview",
+        "provenance": {
+          "phase82_status": "assessment_preview",
+          "phase82_reason": "phase74_accepted"
+        },
+        "predicate": "SOURCE_URL",
+        "object": "https://www.wikidata.org/wiki/Q3359"
+      },
+      {
+        "source_id": "wikidata",
+        "subject": "海卫一",
+        "schema_version": "phase83_shadow_normalize_preview_v1",
+        "extraction_method": "phase83_preview_heuristic",
+        "confidence": 0.68,
+        "source_url": "https://www.wikidata.org/wiki/Q3359",
+        "entity_id": "Q3359",
+        "validation_status": "accepted_preview",
+        "provenance": {
+          "phase82_status": "assessment_preview",
+          "phase82_reason": "phase74_accepted"
+        },
+        "predicate": "HAS_PREVIEW_TEXT",
+        "object": "{\"qid\": \"Q3359\", \"title\": \"海卫一\", \"url\": \"https://www.wikidata.org/wiki/Q3359\", \"reason\": \"local_materialized_preview_exists\", \"has_local_raw\": false, \"has_local_materialized_pair\":"
+      },
+      {
+        "source_id": "wikidata",
+        "subject": "火卫一",
+        "schema_version": "phase83_shadow_normalize_preview_v1",
+        "extraction_method": "phase83_preview_heuristic",
+        "confidence": 0.68,
+        "source_url": "https://www.wikidata.org/wiki/Q7547",
+        "entity_id": "Q7547",
+        "validation_status": "accepted_preview",
+        "provenance": {
+          "phase82_status": "assessment_preview",
+          "phase82_reason": "phase74_accepted"
+        },
+        "predicate": "SOURCE_URL",
+        "object": "https://www.wikidata.org/wiki/Q7547"
+      },
+      {
+        "source_id": "wikidata",
+        "subject": "火卫一",
+        "schema_version": "phase83_shadow_normalize_preview_v1",
+        "extraction_method": "phase83_preview_heuristic",
+        "confidence": 0.68,
+        "source_url": "https://www.wikidata.org/wiki/Q7547",
+        "entity_id": "Q7547",
+        "validation_status": "accepted_preview",
+        "provenance": {
+          "phase82_status": "assessment_preview",
+          "phase82_reason": "phase74_accepted"
+        },
+        "predicate": "HAS_PREVIEW_TEXT",
+        "object": "{\"qid\": \"Q7547\", \"title\": \"火卫一\", \"url\": \"https://www.wikidata.org/wiki/Q7547\", \"reason\": \"local_materialized_preview_exists\", \"has_local_raw\": false, \"has_local_materialized_pair\":"
+      },
+      {
+        "source_id": "wikidata",
+        "subject": "火卫二",
+        "schema_version": "phase83_shadow_normalize_preview_v1",
+        "extraction_method": "phase83_preview_heuristic",
+        "confidence": 0.68,
+        "source_url": "https://www.wikidata.org/wiki/Q7548",
+        "entity_id": "Q7548",
+        "validation_status": "accepted_preview",
+        "provenance": {
+          "phase82_status": "assessment_preview",
+          "phase82_reason": "phase74_accepted"
+        },
+        "predicate": "SOURCE_URL",
+        "object": "https://www.wikidata.org/wiki/Q7548"
+      },
+      {
+        "source_id": "wikidata",
+        "subject": "火卫二",
+        "schema_version": "phase83_shadow_normalize_preview_v1",
+        "extraction_method": "phase83_preview_heuristic",
+        "confidence": 0.68,
+        "source_url": "https://www.wikidata.org/wiki/Q7548",
+        "entity_id": "Q7548",
+        "validation_status": "accepted_preview",
+        "provenance": {
+          "phase82_status": "assessment_preview",
+          "phase82_reason": "phase74_accepted"
+        },
+        "predicate": "HAS_PREVIEW_TEXT",
+        "object": "{\"qid\": \"Q7548\", \"title\": \"火卫二\", \"url\": \"https://www.wikidata.org/wiki/Q7548\", \"reason\": \"local_materialized_preview_exists\", \"has_local_raw\": false, \"has_local_materialized_pair\":"
+      }
+    ],
+    "narratives_preview": [
+      {
+        "source_id": "zh_wikipedia",
+        "title": "太阳",
+        "source_url": "https://zh.wikipedia.org/wiki/太阳",
+        "entity_id": "",
+        "schema_version": "phase83_shadow_normalize_preview_v1",
+        "extraction_method": "phase83_preview_heuristic",
+        "confidence": 0.68,
+        "quality_flags": {
+          "allowlisted": true,
+          "has_excerpt": true,
+          "evaluation_only": true,
+          "non_empty_text": true
+        },
+        "provenance": {
+          "phase82_status": "local_preview",
+          "phase82_reason": "phase81_accepted"
+        },
+        "text": "英語維基百科 相應條目来扩充 ，此條目在對應語言版為高品質條目。 2022年4月16日 若您熟悉来源语言和主题，请协助 参考外语维基百科扩充条目 。请勿直接提交机械翻译，也不要翻译不可靠、低品质内容。依 版权协议 ，译文需 在编辑摘要注明来源 ，或于讨论页顶部标记 Translated page 在2019年使用 太陽濾鏡 真實色彩 的太陽。 太陽、日、Sun、 Helios Solar 觀測數據 與地球的 平均距離 7011149597870700000♠ 7011149600000000000♠ 1.496 8分19秒 −26.74 絕對星等 4.83 恆星分類 = 0.0122 31.6–32.7 0.527–0.545 核心的平均距離 7004266600000000000♠ 26,660 銀河週期 (2.25–2.50)×10 7005251000000000000♠ 251 km/s （繞銀河系中心運行） 7004200000000000000♠ 20 km/s （相對於恆星附近其他恆星的平均速度） 7005370000000000000♠ 370 km/s （相對於 宇宙微波背景 物理性質 695,700 696,342公里 7002109000000000000♠ × 地球半徑 7009437900000000000♠ 4.379 109 ×地球 6994900000000000000♠ 7018609000000000000♠ 6.09 7004120000000000000♠ 12,000 7027141000000000000♠ 1.41 7006130000000000000♠ 1,300,000 × 地球 7030198850000000000♠ 1.9885 7005332950000000000♠ 332,950 7003140800000000000♠ 1.408 g/cm 6999255000000000000♠ 0.255 × 地球 （建模） 7005162200000000000♠ 162.2 g/cm 70011240000000"
+      },
+      {
+        "source_id": "zh_wikipedia",
+        "title": "太阳系",
+        "source_url": "https://zh.wikipedia.org/wiki/太阳系",
+        "entity_id": "",
+        "schema_version": "phase83_shadow_normalize_preview_v1",
+        "extraction_method": "phase83_preview_heuristic",
+        "confidence": 0.68,
+        "quality_flags": {
+          "allowlisted": true,
+          "has_excerpt": true,
+          "evaluation_only": true,
+          "non_empty_text": true
+        },
+        "provenance": {
+          "phase82_status": "local_preview",
+          "phase82_reason": "phase81_accepted"
+        },
+        "text": "此條目介紹的是太陽和它的行星系統。关于其他類似的系統，请见「 行星系統 有字幕（英文） 有字幕（正體中文） 有字幕（簡體中文） 行星、衛星和矮行星 （真實色彩、大小按比例、距離尺度未照比例） 45.68億年 本地星際雲 獵戶–天鵝臂 最近的恆星 (4.2465 （4.36光年） 行星系統 30.07 AU 古柏斷涯 50–70 AU 賽德娜 (小行星) 更多候選者... 天然衛星 1,368,528 4,591 銀河中心 星系盤面 ~60°, to the ecliptic 至銀河中心的距離 24,000–28,000 ly 軌道速度 720,000 km/h (450,000 mi/h) 軌道週期 ~230 million year 恆星特征 光譜類型 7011747989353500000♠ ~5 AU 日球層頂 detected at 120 AU 1.1 pc (230,000 AU) – 0.865 pc (178,419 AU) 引力束縛 而圍繞其 行星系统 内。太阳系大約形成於46億年前，當時一個 的密集區域坍塌，形成了太陽和 原行星盤 ，之后再通过原行星盘的局部吸积在不同区域形成各种天体。 太陽系超過99.86%的質量集中在太陽上。太陽是一顆 界根据其 光谱类型 將其歸類為 G型主序星 。太阳通過其核心處的 流體靜力平衡 ，並從其外層的 带电粒子 繞太陽運行的最大天體是八顆 。其中最大的两颗行星，木星和土星，集中了近90%的太阳系剩余质量。除了行星之外，环绕太阳运动的天体还有 太阳系小天体 ）。一些行星、矮行星和其他天體还有 天然衛星 圍繞著運行。 太陽系的广袤空间中充满了从太陽大气层中不断辐射出的帶電粒子流—— ，形成半径大約75-90 天文單位 。太阳圈可以看作是太阳大气层的延伸，其边界稱為 日球層頂 。在这里太阳风和 星际介质 达到平衡，不能够再继续前进。這里是太陽系和 星際空間 的物质邊界，但太阳引力控制范围还远超于此。太陽系的最外層區域是理論上的 長週期彗星 的來源，其延伸半徑达到 7014299195741400000♠ 2,000–200,"
+      },
+      {
+        "source_id": "zh_wikipedia",
+        "title": "水星",
+        "source_url": "https://zh.wikipedia.org/wiki/水星",
+        "entity_id": "",
+        "schema_version": "phase83_shadow_normalize_preview_v1",
+        "extraction_method": "phase83_preview_heuristic",
+        "confidence": 0.68,
+        "quality_flags": {
+          "allowlisted": true,
+          "has_excerpt": true,
+          "evaluation_only": true,
+          "non_empty_text": true
+        },
+        "provenance": {
+          "phase82_status": "local_preview",
+          "phase82_reason": "phase81_accepted"
+        },
+        "text": "取自信使神太空船的水星合成影像 Mercurian, Mercurial, Hermian 軌道參數 J2000 69,817,900 公里 0.466 697 46,001,200公里 0.307 499 AU 57,909,100公里 0.387 098 AU 0.205 630 軌道週期 87.969 1 (0.240 846 會合週期 115.88 d 軌道速度 47.87 km/s 平近點角 174.796° 軌道傾角 7.005° 對 3.38° 對 太陽的赤道 6.34° 對 不變平面 升交點黃經 48.331° 近日點參數 29.124° 物理特徵 平均半徑 2,440.7 ± 1.0 km 0.387370494907902 地球半徑 7.48×10 0.147 地球面積 6.083×10 0.056 地球體積 3.3022×10 0.055 地球質量 5.427 g/cm 表面重力 0.38 逃逸速度 4.25 km/s 恆星週期 58.646 1407.5 赤道自轉速度 10.892 km/h（3.026 m/s） 轉軸傾角 2.11′ ± 0.1′ 18 h 44 min 2 s 281.01° 61.45° 0.068 ( Bond 0.142 ( geom. 0°N, 0°W 100 K 340 K 700 K 85°N, 0°W 80 K 200 K 380 K −2.6 to 5.7 4.5\" – 13\" 大氣特徵 ; et al. Shape and Orientation of Mercury from Radar Ranging Data. Icarus (Academic press). 1996-07-10, (2): 690–697. Bibcode:1996Icar..124..690A doi:10.1006/icar.1996.0242 Schenk, P.; Melosh, H. J. Lobate Thrust Scarps and the Thickness of Mercury's Lithosphere. Ab"
+      },
+      {
+        "source_id": "esa",
+        "title": "ESA - Space Science",
+        "source_url": "https://www.esa.int/science_exploration/space_science",
+        "entity_id": "",
+        "schema_version": "phase83_shadow_normalize_preview_v1",
+        "extraction_method": "phase83_preview_heuristic",
+        "confidence": 0.72,
+        "quality_flags": {
+          "allowlisted": true,
+          "has_excerpt": true,
+          "evaluation_only": true,
+          "non_empty_text": true
+        },
+        "provenance": {
+          "phase82_status": "local_preview",
+          "phase82_reason": "phase67_68_accepted_or_review_needed"
+        },
+        "text": "Science & Exploration Space Science Latest All Stories Videos Images Image Science & Exploration Plato's electronics ready for space 20/07/2026 1433 views 35 likes View Image Science & Exploration ESA’s Mars Express meets NASA’s Psyche 17/07/2026 2230 views 52 likes View Story Science & Exploration Expedition Sound podcast series 16/07/2026 1004 views 31 likes Read Video 00:57:42 Science & Exploration Replay of the online media briefing on the total solar ecli… 15/07/2026 974 views 21 likes Play Story Science & Exploration Metallic waves on ancient Mars 15/07/2026 3051 views 58 likes Read Story Science & Exploration Webb reveals millions of stars in nearby galaxy 06/07/2026 2234 views 16 likes Read Story Science & Exploration Euclid discovers the most ancient quasar in the Universe 06/07/2026 8566 views 78 likes Read Story Science & Exploration Webb studies how a planet survived the deat"
+      },
+      {
+        "source_id": "esa",
+        "title": "ESA - Rosetta",
+        "source_url": "https://www.esa.int/science_exploration/space_science/rosetta",
+        "entity_id": "",
+        "schema_version": "phase83_shadow_normalize_preview_v1",
+        "extraction_method": "phase83_preview_heuristic",
+        "confidence": 0.72,
+        "quality_flags": {
+          "allowlisted": true,
+          "has_excerpt": true,
+          "evaluation_only": true,
+          "non_empty_text": true
+        },
+        "provenance": {
+          "phase82_status": "local_preview",
+          "phase82_reason": "phase67_68_accepted_or_review_needed"
+        },
+        "text": "Science & Exploration Rosetta ESA's comet-chaser The mission ESA's Rosetta mission was the first to rendezvous with a comet, the first to follow a comet on its orbit around the Sun, and the first to deploy a lander to a comet's surface. Comets are time capsules containing primitive material left over from the epoch when the Sun and its planets formed. By studying the gas, dust and structure of the nucleus and organic materials associated with Comet 67P/Churyumov-Gerasimenko, via both remote and in situ observations, the Rosetta mission taught us about the history and evolution of our Solar System. Rosetta is an ESA mission with contributions from its Member States and NASA. Rosetta’s Philae lander was provided by a consortium led by DLR, MPS, CNES and ASI. Launch: 2 March 2004 1st Earth gravity assist: 4 March 2005 Mars gravity assist: 25 February 2007 2nd Earth gravity assist: 13 Novemb"
+      },
+      {
+        "source_id": "esa",
+        "title": "ESA - Gaia",
+        "source_url": "https://www.esa.int/science_exploration/space_science/gaia",
+        "entity_id": "",
+        "schema_version": "phase83_shadow_normalize_preview_v1",
+        "extraction_method": "phase83_preview_heuristic",
+        "confidence": 0.72,
+        "quality_flags": {
+          "allowlisted": true,
+          "has_excerpt": true,
+          "evaluation_only": true,
+          "non_empty_text": true
+        },
+        "provenance": {
+          "phase82_status": "local_preview",
+          "phase82_reason": "phase67_68_accepted_or_review_needed"
+        },
+        "text": "Science & Exploration Gaia ESA's billion star surveyor The mission From 27 July 2014 to 15 January 2025, Gaia has made more than three trillion observations of two billion stars and other objects throughout our Milky Way galaxy and beyond, mapping their motions, luminosity, temperature and composition. Gaia's extraordinarily precise three-dimensional map will provide the data needed to tackle an enormous range of important questions related to the origin, structure and evolutionary history of our galaxy. Launch: 19 December 2013 Orbit: L2 Lagrange point End of science observations : 15 January 2025 Upcoming data releases: Data Release 4 (based on 66 months of data): expected December 2026 Data Release 5 (based on all mission data): not before the end of 2030 Previous data releases: Data Release 1: 14 September 2016 Data Release 2: 25 April 2018 Early Data Release 3: 3 December 2020 Data"
+      },
+      {
+        "source_id": "esa",
+        "title": "ESA - Solar Orbiter",
+        "source_url": "https://www.esa.int/science_exploration/space_science/solar_orbiter",
+        "entity_id": "",
+        "schema_version": "phase83_shadow_normalize_preview_v1",
+        "extraction_method": "phase83_preview_heuristic",
+        "confidence": 0.72,
+        "quality_flags": {
+          "allowlisted": true,
+          "has_excerpt": true,
+          "evaluation_only": true,
+          "non_empty_text": true
+        },
+        "provenance": {
+          "phase82_status": "local_preview",
+          "phase82_reason": "phase67_68_accepted_or_review_needed"
+        },
+        "text": "Science & Exploration Solar Orbiter The Sun up close Solar Orbiter is the most complex scientific laboratory ever sent to our life-giving star, taking images of the Sun from closer than any spacecraft before and being the first to look at its polar regions. With Solar Orbiter's ten instruments, scientists hope to answer some profound questions: What drives the Sun’s 11-year cycle of rising and subsiding magnetic activity? What heats up the upper layer of its atmosphere, the corona, to millions of degrees Celsius? How does solar wind form, and what accelerates it to speeds of hundreds of kilometres per second? And how does it all affect our planet? Launch date: February 2020 First images: July 2020 Beginning of routine science operations: November 2021 Mission highlights: The closest-ever images of the Sun, the first ever close-up images of the Sun’s polar regions, measuring the compositi"
+      },
+      {
+        "source_id": "esa",
+        "title": "ESA - BepiColombo",
+        "source_url": "https://www.esa.int/science_exploration/space_science/bepicolombo",
+        "entity_id": "",
+        "schema_version": "phase83_shadow_normalize_preview_v1",
+        "extraction_method": "phase83_preview_heuristic",
+        "confidence": 0.72,
+        "quality_flags": {
+          "allowlisted": true,
+          "has_excerpt": true,
+          "evaluation_only": true,
+          "non_empty_text": true
+        },
+        "provenance": {
+          "phase82_status": "local_preview",
+          "phase82_reason": "phase67_68_accepted_or_review_needed"
+        },
+        "text": "Science & Exploration BepiColombo Investigating Mercury's mysteries BepiColombo will be the second and most complex mission ever to orbit Mercury. Close to the Sun and more difficult for an orbiter to reach than Saturn, this small desert world is the least explored planet of the inner Solar System. Learning more about Mercury will shed light on the history of the entire Solar System. Packed with scientific instruments, the mission will try to answer many perplexing questions, such as: Why is there ice in the polar craters of the scorched planet? Why does Mercury have a magnetic field? And what are the mysterious 'hollows' on its surface? Launch : 20 October 2018 on an Ariane 5 rocket from Europe's Spaceport Components: Mercury Planetary Orbiter , Mercury Magnetospheric Orbiter , Mercury Transfer Module Status: In operation; en route to Mercury Mercury flybys : 1 Oct 2021 , 23 June 2022 ,"
+      },
+      {
+        "source_id": "esa",
+        "title": "ESA - Euclid",
+        "source_url": "https://www.esa.int/science_exploration/space_science/euclid",
+        "entity_id": "",
+        "schema_version": "phase83_shadow_normalize_preview_v1",
+        "extraction_method": "phase83_preview_heuristic",
+        "confidence": 0.72,
+        "quality_flags": {
+          "allowlisted": true,
+          "has_excerpt": true,
+          "evaluation_only": true,
+          "non_empty_text": true
+        },
+        "provenance": {
+          "phase82_status": "local_preview",
+          "phase82_reason": "phase67_68_accepted_or_review_needed"
+        },
+        "text": "Science & Exploration Euclid Exploring the dark Universe The mission ESA's Euclid mission is designed to explore the composition and evolution of the dark Universe. The space telescope will create a great map of the large-scale structure of the Universe across space and time by observing billions of galaxies out to 10 billion light-years, across more than a third of the sky. Euclid will explore how the Universe has expanded and how structure has formed over cosmic history, revealing more about the role of gravity and the nature of dark energy and dark matter. The launch Launch: 1 July 2023 Launch location : Cape Canaveral, Florida, USA Launch vehicle: SpaceX Falcon 9 Destination: Sun-Earth Lagrange point 2, 1.5 million km from Earth 2 instruments 1/3 of the sky 10 billion light-years 3D map of the Universe Latest All Stories Videos Images Story Science & Exploration Euclid discovers the"
+      },
+      {
+        "source_id": "esa",
+        "title": "ESA - ExoMars",
+        "source_url": "https://www.esa.int/science_exploration/space_science/exomars",
+        "entity_id": "",
+        "schema_version": "phase83_shadow_normalize_preview_v1",
+        "extraction_method": "phase83_preview_heuristic",
+        "confidence": 0.72,
+        "quality_flags": {
+          "allowlisted": true,
+          "has_excerpt": true,
+          "evaluation_only": true,
+          "non_empty_text": true
+        },
+        "provenance": {
+          "phase82_status": "local_preview",
+          "phase82_reason": "phase67_68_accepted_or_review_needed"
+        },
+        "text": "Science & Exploration ExoMars Has life ever existed on Mars? The mission The ExoMars programme comprises two missions: the first – the Trace Gas Orbiter – launched in 2016 while the second, carrying the Rosalind Franklin rover, will target launch in 2028. Together they will address the question of whether life has ever existed on Mars. 1st European rover 2 m rover drill depth 70m/sol driving on Mars Latest All Stories Videos Images Image Science & Exploration ExoMars ramps put up with cold, shaking and vacuum 21/07/2026 128 views 2 likes View Story Science & Exploration ExoMars rover targets vast bed of clay in search for life 04/06/2026 4252 views 57 likes Read Video 00:00:27 Science & Exploration Landing sideways 18/05/2026 1464 views 28 likes Play Image Enabling & Support Sensitive and sturdy 07/05/2026 2096 views 50 likes View Image Enabling & Support The great parachute bake-out 30/"
+      },
+      {
+        "source_id": "esa",
+        "title": "ESA - Cluster",
+        "source_url": "https://www.esa.int/science_exploration/space_science/cluster",
+        "entity_id": "",
+        "schema_version": "phase83_shadow_normalize_preview_v1",
+        "extraction_method": "phase83_preview_heuristic",
+        "confidence": 0.72,
+        "quality_flags": {
+          "allowlisted": true,
+          "has_excerpt": true,
+          "evaluation_only": true,
+          "non_empty_text": true
+        },
+        "provenance": {
+          "phase82_status": "local_preview",
+          "phase82_reason": "phase67_68_accepted_or_review_needed"
+        },
+        "text": "Science & Exploration Cluster Measuring Earth's magnetic environment The mission Cluster was a constellation of four spacecraft investigating the interaction between the Sun and Earth’s magnetosphere in unparalleled detail. The magnetosphere is our shield against the charged gas that carries particles and magnetic fields outwards from the Sun. Launch: 16 July and 9 August 2000 Mission end: 8 September 2024 Observed: solar wind, magnetosphere Orbit: elliptical around Earth’s poles, a few hundred to 125 000 km altitude Spacecraft names: Rumba, Salsa, Samba and Tango 11 instruments 4 spacecraft 2 decades of operation Latest All Stories Videos Images Story Space Safety Moving satellites to meet a plane for rare reentry data 02/02/2026 6273 views 31 likes Read Video 00:46:03 Science & Exploration Seas of the Sun: The story of Cluster 31/10/2025 3547 views 39 likes Play Image Science & Explora"
+      },
+      {
+        "source_id": "esa",
+        "title": "ESA - Webb",
+        "source_url": "https://www.esa.int/science_exploration/space_science/webb",
+        "entity_id": "",
+        "schema_version": "phase83_shadow_normalize_preview_v1",
+        "extraction_method": "phase83_preview_heuristic",
+        "confidence": 0.72,
+        "quality_flags": {
+          "allowlisted": true,
+          "has_excerpt": true,
+          "evaluation_only": true,
+          "non_empty_text": true
+        },
+        "provenance": {
+          "phase82_status": "local_preview",
+          "phase82_reason": "phase67_68_accepted_or_review_needed"
+        },
+        "text": "Science & Exploration Webb Seeing farther The mission The James Webb Space Telescope (Webb) is the next great space science observatory following Hubble, designed to answer outstanding questions about the Universe and to make breakthrough discoveries in all fields of astronomy. Webb will see farther into our origins: from the formation of stars and planets, to the birth of the first galaxies in the early Universe. Webb is an international partnership between NASA, ESA and CSA. The telescope launched on an Ariane 5 from Europe's Spaceport in French Guiana. The launch Launch date: 25 December 2021 Launch location: Europe's Spaceport in French Guiana Launch vehicle: Ariane 5 Orbit: Lagrange point 2, 1.5 million km from Earth 6.5 m mirror 18 mirror segments 4 instruments 5 sunshield layers Latest All Stories Videos Images Story Science & Exploration Webb reveals millions of stars in nearby g"
+      },
+      {
+        "source_id": "wikidata",
+        "title": "太阳",
+        "source_url": "https://www.wikidata.org/wiki/Q525",
+        "entity_id": "Q525",
+        "schema_version": "phase83_shadow_normalize_preview_v1",
+        "extraction_method": "phase83_preview_heuristic",
+        "confidence": 0.68,
+        "quality_flags": {
+          "allowlisted": true,
+          "has_excerpt": true,
+          "evaluation_only": true,
+          "non_empty_text": true
+        },
+        "provenance": {
+          "phase82_status": "assessment_preview",
+          "phase82_reason": "phase74_accepted"
+        },
+        "text": "{\"qid\": \"Q525\", \"title\": \"太阳\", \"url\": \"https://www.wikidata.org/wiki/Q525\", \"reason\": \"local_entity_raw_has_triples_and_narratives\", \"has_local_raw\": true, \"has_local_materialized_pair\": true}"
+      },
+      {
+        "source_id": "wikidata",
+        "title": "水星",
+        "source_url": "https://www.wikidata.org/wiki/Q308",
+        "entity_id": "Q308",
+        "schema_version": "phase83_shadow_normalize_preview_v1",
+        "extraction_method": "phase83_preview_heuristic",
+        "confidence": 0.68,
+        "quality_flags": {
+          "allowlisted": true,
+          "has_excerpt": true,
+          "evaluation_only": true,
+          "non_empty_text": true
+        },
+        "provenance": {
+          "phase82_status": "assessment_preview",
+          "phase82_reason": "phase74_accepted"
+        },
+        "text": "{\"qid\": \"Q308\", \"title\": \"水星\", \"url\": \"https://www.wikidata.org/wiki/Q308\", \"reason\": \"local_materialized_preview_exists\", \"has_local_raw\": false, \"has_local_materialized_pair\": true}"
+      },
+      {
+        "source_id": "wikidata",
+        "title": "金星",
+        "source_url": "https://www.wikidata.org/wiki/Q313",
+        "entity_id": "Q313",
+        "schema_version": "phase83_shadow_normalize_preview_v1",
+        "extraction_method": "phase83_preview_heuristic",
+        "confidence": 0.68,
+        "quality_flags": {
+          "allowlisted": true,
+          "has_excerpt": true,
+          "evaluation_only": true,
+          "non_empty_text": true
+        },
+        "provenance": {
+          "phase82_status": "assessment_preview",
+          "phase82_reason": "phase74_accepted"
+        },
+        "text": "{\"qid\": \"Q313\", \"title\": \"金星\", \"url\": \"https://www.wikidata.org/wiki/Q313\", \"reason\": \"local_materialized_preview_exists\", \"has_local_raw\": false, \"has_local_materialized_pair\": true}"
+      },
+      {
+        "source_id": "wikidata",
+        "title": "地球",
+        "source_url": "https://www.wikidata.org/wiki/Q2",
+        "entity_id": "Q2",
+        "schema_version": "phase83_shadow_normalize_preview_v1",
+        "extraction_method": "phase83_preview_heuristic",
+        "confidence": 0.68,
+        "quality_flags": {
+          "allowlisted": true,
+          "has_excerpt": true,
+          "evaluation_only": true,
+          "non_empty_text": true
+        },
+        "provenance": {
+          "phase82_status": "assessment_preview",
+          "phase82_reason": "phase74_accepted"
+        },
+        "text": "{\"qid\": \"Q2\", \"title\": \"地球\", \"url\": \"https://www.wikidata.org/wiki/Q2\", \"reason\": \"local_entity_raw_has_triples_and_narratives\", \"has_local_raw\": true, \"has_local_materialized_pair\": true}"
+      },
+      {
+        "source_id": "wikidata",
+        "title": "月球",
+        "source_url": "https://www.wikidata.org/wiki/Q405",
+        "entity_id": "Q405",
+        "schema_version": "phase83_shadow_normalize_preview_v1",
+        "extraction_method": "phase83_preview_heuristic",
+        "confidence": 0.68,
+        "quality_flags": {
+          "allowlisted": true,
+          "has_excerpt": true,
+          "evaluation_only": true,
+          "non_empty_text": true
+        },
+        "provenance": {
+          "phase82_status": "assessment_preview",
+          "phase82_reason": "phase74_accepted"
+        },
+        "text": "{\"qid\": \"Q405\", \"title\": \"月球\", \"url\": \"https://www.wikidata.org/wiki/Q405\", \"reason\": \"local_materialized_preview_exists\", \"has_local_raw\": false, \"has_local_materialized_pair\": true}"
+      },
+      {
+        "source_id": "wikidata",
+        "title": "火星",
+        "source_url": "https://www.wikidata.org/wiki/Q111",
+        "entity_id": "Q111",
+        "schema_version": "phase83_shadow_normalize_preview_v1",
+        "extraction_method": "phase83_preview_heuristic",
+        "confidence": 0.68,
+        "quality_flags": {
+          "allowlisted": true,
+          "has_excerpt": true,
+          "evaluation_only": true,
+          "non_empty_text": true
+        },
+        "provenance": {
+          "phase82_status": "assessment_preview",
+          "phase82_reason": "phase74_accepted"
+        },
+        "text": "{\"qid\": \"Q111\", \"title\": \"火星\", \"url\": \"https://www.wikidata.org/wiki/Q111\", \"reason\": \"local_entity_raw_has_triples_and_narratives\", \"has_local_raw\": true, \"has_local_materialized_pair\": true}"
+      },
+      {
+        "source_id": "wikidata",
+        "title": "木星",
+        "source_url": "https://www.wikidata.org/wiki/Q319",
+        "entity_id": "Q319",
+        "schema_version": "phase83_shadow_normalize_preview_v1",
+        "extraction_method": "phase83_preview_heuristic",
+        "confidence": 0.68,
+        "quality_flags": {
+          "allowlisted": true,
+          "has_excerpt": true,
+          "evaluation_only": true,
+          "non_empty_text": true
+        },
+        "provenance": {
+          "phase82_status": "assessment_preview",
+          "phase82_reason": "phase74_accepted"
+        },
+        "text": "{\"qid\": \"Q319\", \"title\": \"木星\", \"url\": \"https://www.wikidata.org/wiki/Q319\", \"reason\": \"local_materialized_preview_exists\", \"has_local_raw\": false, \"has_local_materialized_pair\": true}"
+      },
+      {
+        "source_id": "wikidata",
+        "title": "土星",
+        "source_url": "https://www.wikidata.org/wiki/Q193",
+        "entity_id": "Q193",
+        "schema_version": "phase83_shadow_normalize_preview_v1",
+        "extraction_method": "phase83_preview_heuristic",
+        "confidence": 0.68,
+        "quality_flags": {
+          "allowlisted": true,
+          "has_excerpt": true,
+          "evaluation_only": true,
+          "non_empty_text": true
+        },
+        "provenance": {
+          "phase82_status": "assessment_preview",
+          "phase82_reason": "phase74_accepted"
+        },
+        "text": "{\"qid\": \"Q193\", \"title\": \"土星\", \"url\": \"https://www.wikidata.org/wiki/Q193\", \"reason\": \"local_materialized_preview_exists\", \"has_local_raw\": false, \"has_local_materialized_pair\": true}"
+      },
+      {
+        "source_id": "wikidata",
+        "title": "天王星",
+        "source_url": "https://www.wikidata.org/wiki/Q324",
+        "entity_id": "Q324",
+        "schema_version": "phase83_shadow_normalize_preview_v1",
+        "extraction_method": "phase83_preview_heuristic",
+        "confidence": 0.68,
+        "quality_flags": {
+          "allowlisted": true,
+          "has_excerpt": true,
+          "evaluation_only": true,
+          "non_empty_text": true
+        },
+        "provenance": {
+          "phase82_status": "assessment_preview",
+          "phase82_reason": "phase74_accepted"
+        },
+        "text": "{\"qid\": \"Q324\", \"title\": \"天王星\", \"url\": \"https://www.wikidata.org/wiki/Q324\", \"reason\": \"local_materialized_preview_exists\", \"has_local_raw\": false, \"has_local_materialized_pair\": true}"
+      },
+      {
+        "source_id": "wikidata",
+        "title": "海王星",
+        "source_url": "https://www.wikidata.org/wiki/Q332",
+        "entity_id": "Q332",
+        "schema_version": "phase83_shadow_normalize_preview_v1",
+        "extraction_method": "phase83_preview_heuristic",
+        "confidence": 0.68,
+        "quality_flags": {
+          "allowlisted": true,
+          "has_excerpt": true,
+          "evaluation_only": true,
+          "non_empty_text": true
+        },
+        "provenance": {
+          "phase82_status": "assessment_preview",
+          "phase82_reason": "phase74_accepted"
+        },
+        "text": "{\"qid\": \"Q332\", \"title\": \"海王星\", \"url\": \"https://www.wikidata.org/wiki/Q332\", \"reason\": \"local_materialized_preview_exists\", \"has_local_raw\": false, \"has_local_materialized_pair\": true}"
+      },
+      {
+        "source_id": "wikidata",
+        "title": "冥王星",
+        "source_url": "https://www.wikidata.org/wiki/Q339",
+        "entity_id": "Q339",
+        "schema_version": "phase83_shadow_normalize_preview_v1",
+        "extraction_method": "phase83_preview_heuristic",
+        "confidence": 0.68,
+        "quality_flags": {
+          "allowlisted": true,
+          "has_excerpt": true,
+          "evaluation_only": true,
+          "non_empty_text": true
+        },
+        "provenance": {
+          "phase82_status": "assessment_preview",
+          "phase82_reason": "phase74_accepted"
+        },
+        "text": "{\"qid\": \"Q339\", \"title\": \"冥王星\", \"url\": \"https://www.wikidata.org/wiki/Q339\", \"reason\": \"local_materialized_preview_exists\", \"has_local_raw\": false, \"has_local_materialized_pair\": true}"
+      },
+      {
+        "source_id": "wikidata",
+        "title": "谷神星",
+        "source_url": "https://www.wikidata.org/wiki/Q596",
+        "entity_id": "Q596",
+        "schema_version": "phase83_shadow_normalize_preview_v1",
+        "extraction_method": "phase83_preview_heuristic",
+        "confidence": 0.68,
+        "quality_flags": {
+          "allowlisted": true,
+          "has_excerpt": true,
+          "evaluation_only": true,
+          "non_empty_text": true
+        },
+        "provenance": {
+          "phase82_status": "assessment_preview",
+          "phase82_reason": "phase74_accepted"
+        },
+        "text": "{\"qid\": \"Q596\", \"title\": \"谷神星\", \"url\": \"https://www.wikidata.org/wiki/Q596\", \"reason\": \"local_materialized_preview_exists\", \"has_local_raw\": false, \"has_local_materialized_pair\": true}"
+      },
+      {
+        "source_id": "wikidata",
+        "title": "阋神星",
+        "source_url": "https://www.wikidata.org/wiki/Q611",
+        "entity_id": "Q611",
+        "schema_version": "phase83_shadow_normalize_preview_v1",
+        "extraction_method": "phase83_preview_heuristic",
+        "confidence": 0.68,
+        "quality_flags": {
+          "allowlisted": true,
+          "has_excerpt": true,
+          "evaluation_only": true,
+          "non_empty_text": true
+        },
+        "provenance": {
+          "phase82_status": "assessment_preview",
+          "phase82_reason": "phase74_accepted"
+        },
+        "text": "{\"qid\": \"Q611\", \"title\": \"阋神星\", \"url\": \"https://www.wikidata.org/wiki/Q611\", \"reason\": \"local_materialized_preview_exists\", \"has_local_raw\": false, \"has_local_materialized_pair\": true}"
+      },
+      {
+        "source_id": "wikidata",
+        "title": "妊神星",
+        "source_url": "https://www.wikidata.org/wiki/Q601",
+        "entity_id": "Q601",
+        "schema_version": "phase83_shadow_normalize_preview_v1",
+        "extraction_method": "phase83_preview_heuristic",
+        "confidence": 0.68,
+        "quality_flags": {
+          "allowlisted": true,
+          "has_excerpt": true,
+          "evaluation_only": true,
+          "non_empty_text": true
+        },
+        "provenance": {
+          "phase82_status": "assessment_preview",
+          "phase82_reason": "phase74_accepted"
+        },
+        "text": "{\"qid\": \"Q601\", \"title\": \"妊神星\", \"url\": \"https://www.wikidata.org/wiki/Q601\", \"reason\": \"local_materialized_preview_exists\", \"has_local_raw\": false, \"has_local_materialized_pair\": true}"
+      },
+      {
+        "source_id": "wikidata",
+        "title": "鸟神星",
+        "source_url": "https://www.wikidata.org/wiki/Q604",
+        "entity_id": "Q604",
+        "schema_version": "phase83_shadow_normalize_preview_v1",
+        "extraction_method": "phase83_preview_heuristic",
+        "confidence": 0.68,
+        "quality_flags": {
+          "allowlisted": true,
+          "has_excerpt": true,
+          "evaluation_only": true,
+          "non_empty_text": true
+        },
+        "provenance": {
+          "phase82_status": "assessment_preview",
+          "phase82_reason": "phase74_accepted"
+        },
+        "text": "{\"qid\": \"Q604\", \"title\": \"鸟神星\", \"url\": \"https://www.wikidata.org/wiki/Q604\", \"reason\": \"local_materialized_preview_exists\", \"has_local_raw\": false, \"has_local_materialized_pair\": true}"
+      },
+      {
+        "source_id": "wikidata",
+        "title": "灶神星",
+        "source_url": "https://www.wikidata.org/wiki/Q3030",
+        "entity_id": "Q3030",
+        "schema_version": "phase83_shadow_normalize_preview_v1",
+        "extraction_method": "phase83_preview_heuristic",
+        "confidence": 0.68,
+        "quality_flags": {
+          "allowlisted": true,
+          "has_excerpt": true,
+          "evaluation_only": true,
+          "non_empty_text": true
+        },
+        "provenance": {
+          "phase82_status": "assessment_preview",
+          "phase82_reason": "phase74_accepted"
+        },
+        "text": "{\"qid\": \"Q3030\", \"title\": \"灶神星\", \"url\": \"https://www.wikidata.org/wiki/Q3030\", \"reason\": \"local_materialized_preview_exists\", \"has_local_raw\": false, \"has_local_materialized_pair\": true}"
+      },
+      {
+        "source_id": "wikidata",
+        "title": "木卫一",
+        "source_url": "https://www.wikidata.org/wiki/Q3123",
+        "entity_id": "Q3123",
+        "schema_version": "phase83_shadow_normalize_preview_v1",
+        "extraction_method": "phase83_preview_heuristic",
+        "confidence": 0.68,
+        "quality_flags": {
+          "allowlisted": true,
+          "has_excerpt": true,
+          "evaluation_only": true,
+          "non_empty_text": true
+        },
+        "provenance": {
+          "phase82_status": "assessment_preview",
+          "phase82_reason": "phase74_accepted"
+        },
+        "text": "{\"qid\": \"Q3123\", \"title\": \"木卫一\", \"url\": \"https://www.wikidata.org/wiki/Q3123\", \"reason\": \"local_materialized_preview_exists\", \"has_local_raw\": false, \"has_local_materialized_pair\": true}"
+      },
+      {
+        "source_id": "wikidata",
+        "title": "木卫二",
+        "source_url": "https://www.wikidata.org/wiki/Q3143",
+        "entity_id": "Q3143",
+        "schema_version": "phase83_shadow_normalize_preview_v1",
+        "extraction_method": "phase83_preview_heuristic",
+        "confidence": 0.68,
+        "quality_flags": {
+          "allowlisted": true,
+          "has_excerpt": true,
+          "evaluation_only": true,
+          "non_empty_text": true
+        },
+        "provenance": {
+          "phase82_status": "assessment_preview",
+          "phase82_reason": "phase74_accepted"
+        },
+        "text": "{\"qid\": \"Q3143\", \"title\": \"木卫二\", \"url\": \"https://www.wikidata.org/wiki/Q3143\", \"reason\": \"local_materialized_preview_exists\", \"has_local_raw\": false, \"has_local_materialized_pair\": true}"
+      },
+      {
+        "source_id": "wikidata",
+        "title": "木卫三",
+        "source_url": "https://www.wikidata.org/wiki/Q3169",
+        "entity_id": "Q3169",
+        "schema_version": "phase83_shadow_normalize_preview_v1",
+        "extraction_method": "phase83_preview_heuristic",
+        "confidence": 0.68,
+        "quality_flags": {
+          "allowlisted": true,
+          "has_excerpt": true,
+          "evaluation_only": true,
+          "non_empty_text": true
+        },
+        "provenance": {
+          "phase82_status": "assessment_preview",
+          "phase82_reason": "phase74_accepted"
+        },
+        "text": "{\"qid\": \"Q3169\", \"title\": \"木卫三\", \"url\": \"https://www.wikidata.org/wiki/Q3169\", \"reason\": \"local_materialized_preview_exists\", \"has_local_raw\": false, \"has_local_materialized_pair\": true}"
+      },
+      {
+        "source_id": "wikidata",
+        "title": "木卫四",
+        "source_url": "https://www.wikidata.org/wiki/Q3134",
+        "entity_id": "Q3134",
+        "schema_version": "phase83_shadow_normalize_preview_v1",
+        "extraction_method": "phase83_preview_heuristic",
+        "confidence": 0.68,
+        "quality_flags": {
+          "allowlisted": true,
+          "has_excerpt": true,
+          "evaluation_only": true,
+          "non_empty_text": true
+        },
+        "provenance": {
+          "phase82_status": "assessment_preview",
+          "phase82_reason": "phase74_accepted"
+        },
+        "text": "{\"qid\": \"Q3134\", \"title\": \"木卫四\", \"url\": \"https://www.wikidata.org/wiki/Q3134\", \"reason\": \"local_materialized_preview_exists\", \"has_local_raw\": false, \"has_local_materialized_pair\": true}"
+      },
+      {
+        "source_id": "wikidata",
+        "title": "土卫六",
+        "source_url": "https://www.wikidata.org/wiki/Q2565",
+        "entity_id": "Q2565",
+        "schema_version": "phase83_shadow_normalize_preview_v1",
+        "extraction_method": "phase83_preview_heuristic",
+        "confidence": 0.68,
+        "quality_flags": {
+          "allowlisted": true,
+          "has_excerpt": true,
+          "evaluation_only": true,
+          "non_empty_text": true
+        },
+        "provenance": {
+          "phase82_status": "assessment_preview",
+          "phase82_reason": "phase74_accepted"
+        },
+        "text": "{\"qid\": \"Q2565\", \"title\": \"土卫六\", \"url\": \"https://www.wikidata.org/wiki/Q2565\", \"reason\": \"local_materialized_preview_exists\", \"has_local_raw\": false, \"has_local_materialized_pair\": true}"
+      },
+      {
+        "source_id": "wikidata",
+        "title": "土卫二",
+        "source_url": "https://www.wikidata.org/wiki/Q3303",
+        "entity_id": "Q3303",
+        "schema_version": "phase83_shadow_normalize_preview_v1",
+        "extraction_method": "phase83_preview_heuristic",
+        "confidence": 0.68,
+        "quality_flags": {
+          "allowlisted": true,
+          "has_excerpt": true,
+          "evaluation_only": true,
+          "non_empty_text": true
+        },
+        "provenance": {
+          "phase82_status": "assessment_preview",
+          "phase82_reason": "phase74_accepted"
+        },
+        "text": "{\"qid\": \"Q3303\", \"title\": \"土卫二\", \"url\": \"https://www.wikidata.org/wiki/Q3303\", \"reason\": \"local_materialized_preview_exists\", \"has_local_raw\": false, \"has_local_materialized_pair\": true}"
+      },
+      {
+        "source_id": "wikidata",
+        "title": "海卫一",
+        "source_url": "https://www.wikidata.org/wiki/Q3359",
+        "entity_id": "Q3359",
+        "schema_version": "phase83_shadow_normalize_preview_v1",
+        "extraction_method": "phase83_preview_heuristic",
+        "confidence": 0.68,
+        "quality_flags": {
+          "allowlisted": true,
+          "has_excerpt": true,
+          "evaluation_only": true,
+          "non_empty_text": true
+        },
+        "provenance": {
+          "phase82_status": "assessment_preview",
+          "phase82_reason": "phase74_accepted"
+        },
+        "text": "{\"qid\": \"Q3359\", \"title\": \"海卫一\", \"url\": \"https://www.wikidata.org/wiki/Q3359\", \"reason\": \"local_materialized_preview_exists\", \"has_local_raw\": false, \"has_local_materialized_pair\": true}"
+      },
+      {
+        "source_id": "wikidata",
+        "title": "火卫一",
+        "source_url": "https://www.wikidata.org/wiki/Q7547",
+        "entity_id": "Q7547",
+        "schema_version": "phase83_shadow_normalize_preview_v1",
+        "extraction_method": "phase83_preview_heuristic",
+        "confidence": 0.68,
+        "quality_flags": {
+          "allowlisted": true,
+          "has_excerpt": true,
+          "evaluation_only": true,
+          "non_empty_text": true
+        },
+        "provenance": {
+          "phase82_status": "assessment_preview",
+          "phase82_reason": "phase74_accepted"
+        },
+        "text": "{\"qid\": \"Q7547\", \"title\": \"火卫一\", \"url\": \"https://www.wikidata.org/wiki/Q7547\", \"reason\": \"local_materialized_preview_exists\", \"has_local_raw\": false, \"has_local_materialized_pair\": true}"
+      },
+      {
+        "source_id": "wikidata",
+        "title": "火卫二",
+        "source_url": "https://www.wikidata.org/wiki/Q7548",
+        "entity_id": "Q7548",
+        "schema_version": "phase83_shadow_normalize_preview_v1",
+        "extraction_method": "phase83_preview_heuristic",
+        "confidence": 0.68,
+        "quality_flags": {
+          "allowlisted": true,
+          "has_excerpt": true,
+          "evaluation_only": true,
+          "non_empty_text": true
+        },
+        "provenance": {
+          "phase82_status": "assessment_preview",
+          "phase82_reason": "phase74_accepted"
+        },
+        "text": "{\"qid\": \"Q7548\", \"title\": \"火卫二\", \"url\": \"https://www.wikidata.org/wiki/Q7548\", \"reason\": \"local_materialized_preview_exists\", \"has_local_raw\": false, \"has_local_materialized_pair\": true}"
+      }
+    ]
+  },
+  "integrity": {
+    "errors": [],
+    "item_duplicates_removed": 0,
+    "counts_match": true,
+    "rejected_excluded": true,
+    "schema_metadata_required": true
+  },
+  "source_coverage_gap": {
+    "nasa_normalized": 0,
+    "note": "NASA Phase83 rows were rejected by metadata/text quality gate and are not included."
+  },
+  "next_recommendation": "readiness_eval_gate",
+  "formal_raw_write": false,
+  "formal_default_triples_write": false,
+  "chroma_write": false,
+  "neo4j_write": false,
+  "clear_source_ingestion_outputs_called": false,
+  "active_source": "zh_wikipedia",
+  "active_source_unchanged": true,
+  "registry": {
+    "zh_wikipedia": "active",
+    "nasa": "disabled",
+    "esa": "disabled",
+    "wikidata": "disabled"
+  }
+}
