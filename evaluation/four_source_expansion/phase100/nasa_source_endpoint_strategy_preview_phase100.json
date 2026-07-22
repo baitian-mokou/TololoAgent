@@ -1,0 +1,315 @@
+{
+  "phase": "Phase 100",
+  "mode": "nasa_source_endpoint_api_sitemap_strategy_preview",
+  "generated_at": "2026-07-22T18:34:27.092754+00:00",
+  "entry_count": 3,
+  "entry_verdicts": {
+    "science_wp_rest_posts": "usable_structured_body",
+    "science_sitemap_posts": "blocked_fetch_failed",
+    "nasa_images_api": "usable_structured_body"
+  },
+  "entry_reports": [
+    {
+      "strategy": "science_wp_rest_posts",
+      "url": "https://science.nasa.gov/wp-json/wp/v2/posts?per_page=5&search=Juno",
+      "status": "http_200",
+      "status_code": 200,
+      "content_type": "application/json; charset=UTF-8",
+      "sample_count": 3,
+      "body_field_available": true,
+      "structured_fields": [
+        "_links",
+        "acf",
+        "author",
+        "categories",
+        "class_list",
+        "coauthors",
+        "comment_status",
+        "content",
+        "date",
+        "date_gmt",
+        "excerpt",
+        "featured_image",
+        "featured_media",
+        "format",
+        "guid",
+        "id",
+        "internal-terms",
+        "link",
+        "meta",
+        "migration_source_url"
+      ],
+      "auth_required": false,
+      "suitability_verdict": "usable_structured_body",
+      "preview_candidates": [
+        {
+          "source": "nasa",
+          "source_id": "nasa",
+          "title": "Mapping Io’s Hidden Heat With NASA’s Juno",
+          "url": "https://science.nasa.gov/photojournal/mapping-ios-hidden-heat-with-nasas-juno/",
+          "body_excerpt": "2 Min Read Mapping Io’s Hidden Heat With NASA’s Juno PIA26757 Credits: NASA/JPL-Caltech/SwRI/USGS Photojournal Navigation Science Photojournal Mapping Io’s Hidden Heat… Photojournal Home Photojournal Search Latest Content Galleries Feedback RSS About Downloads Mapping Io’s Hidden Heat With NASA’s Juno PNG (1.89 MB) Description This graphic illustrates the areas of Jupiter’s moon Io sampled by the Microwave Radiometer (MWR) instrument aboard NASA’s Juno spacecraft during two close flybys. The black overlapping lines show the instrument’s footprints during Perijove 57 on Dec. 30, 2023, when the spacecraft primarily mapped the northern hemisphere.",
+          "structured_fields": [
+            "content",
+            "excerpt",
+            "link",
+            "title"
+          ],
+          "quality_flags": [
+            "phase100_endpoint_preview",
+            "strong_accepted"
+          ],
+          "provenance": {
+            "phase": "Phase100",
+            "source_url": "https://science.nasa.gov/photojournal/mapping-ios-hidden-heat-with-nasas-juno/"
+          }
+        },
+        {
+          "source": "nasa",
+          "source_id": "nasa",
+          "title": "NASA’s Juno Peers Beneath Io’s Surface",
+          "url": "https://science.nasa.gov/photojournal/nasas-juno-peers-beneath-ios-surface/",
+          "body_excerpt": "2 Min Read NASA’s Juno Peers Beneath Io’s Surface PIA26756 Credits: NASA/JPL-Caltech/SwRI/USGS Photojournal Navigation Science Photojournal NASA’s Juno Peers Beneath… Photojournal Home Photojournal Search Latest Content Galleries Feedback RSS About Downloads NASA’s Juno Peers Beneath Io’s Surface PNG (2.07 MB) Description This map represents data captured by the Microwave Radiometer (MWR) aboard NASA’s Juno spacecraft, indicating heat rising from just beneath the surface of Jupiter’s moon Io. While infrared instruments measure the temperature of the moon’s surface, the lowest frequency microwave channels (0.6 and 1.25 gigahertz) on the MWR can",
+          "structured_fields": [
+            "content",
+            "excerpt",
+            "link",
+            "title"
+          ],
+          "quality_flags": [
+            "phase100_endpoint_preview",
+            "strong_accepted"
+          ],
+          "provenance": {
+            "phase": "Phase100",
+            "source_url": "https://science.nasa.gov/photojournal/nasas-juno-peers-beneath-ios-surface/"
+          }
+        },
+        {
+          "source": "nasa",
+          "source_id": "nasa",
+          "title": "A Moonlit Earth as Seen From Artemis II",
+          "url": "https://science.nasa.gov/earth/earth-observatory/a-moonlit-earth-as-seen-from-artemis-ii/",
+          "body_excerpt": "Earth Observatory Science Earth Observatory A Moonlit Earth as Seen From… Earth Earth Observatory EO Explorer Topics All Topics Atmosphere Land Heat & Radiation Life on Earth Human Dimensions Natural Events Oceans Remote Sensing Technology Snow & Ice Water More Content Collections Global Maps World of Change Articles Earth Matters Blog Blue Marble: Next Generation EO Kids Mission: Biomes About About Us Subscribe 🛜 RSS Contact Us Search April 2, 2026 One of the first images transmitted back to Earth from the Artemis II mission was a stunner. In a",
+          "structured_fields": [
+            "content",
+            "excerpt",
+            "link",
+            "title"
+          ],
+          "quality_flags": [
+            "phase100_endpoint_preview",
+            "strong_accepted"
+          ],
+          "provenance": {
+            "phase": "Phase100",
+            "source_url": "https://science.nasa.gov/earth/earth-observatory/a-moonlit-earth-as-seen-from-artemis-ii/"
+          }
+        }
+      ],
+      "failure_reason": ""
+    },
+    {
+      "strategy": "science_sitemap_posts",
+      "url": "https://science.nasa.gov/post-sitemap.xml",
+      "status": "http_404",
+      "status_code": 404,
+      "content_type": "",
+      "sample_count": 0,
+      "body_field_available": false,
+      "structured_fields": [],
+      "auth_required": false,
+      "suitability_verdict": "blocked_fetch_failed",
+      "preview_candidates": [],
+      "failure_reason": "HTTP Error 404: Not Found"
+    },
+    {
+      "strategy": "nasa_images_api",
+      "url": "https://images-api.nasa.gov/search?q=Juno&media_type=image&page_size=5",
+      "status": "http_200",
+      "status_code": 200,
+      "content_type": "application/json",
+      "sample_count": 5,
+      "body_field_available": true,
+      "structured_fields": [
+        "center",
+        "date_created",
+        "description",
+        "description_508",
+        "href",
+        "keywords",
+        "media_type",
+        "nasa_id",
+        "secondary_creator",
+        "title"
+      ],
+      "auth_required": false,
+      "suitability_verdict": "usable_structured_body",
+      "preview_candidates": [
+        {
+          "source": "nasa",
+          "source_id": "nasa",
+          "title": "Riding Along with Juno",
+          "url": "https://images-assets.nasa.gov/image/PIA14414/collection.json",
+          "body_excerpt": "The three LEGO figurines flying aboard the Juno spacecraft are the Roman god Jupiter, his wife Juno and Galileo Galilei.",
+          "structured_fields": [
+            "description",
+            "nasa_id",
+            "title"
+          ],
+          "quality_flags": [
+            "phase100_endpoint_preview",
+            "strong_accepted"
+          ],
+          "provenance": {
+            "phase": "Phase100",
+            "source_url": "https://images-assets.nasa.gov/image/PIA14414/collection.json"
+          }
+        },
+        {
+          "source": "nasa",
+          "source_id": "nasa",
+          "title": "LEGO Figurines Aboard Juno",
+          "url": "https://images-assets.nasa.gov/image/PIA14413/collection.json",
+          "body_excerpt": "Three LEGO figurines representing the Roman god Jupiter, his wife Juno and Galileo Galilei are shown here aboard the Juno spacecraft.",
+          "structured_fields": [
+            "description",
+            "nasa_id",
+            "title"
+          ],
+          "quality_flags": [
+            "phase100_endpoint_preview",
+            "strong_accepted"
+          ],
+          "provenance": {
+            "phase": "Phase100",
+            "source_url": "https://images-assets.nasa.gov/image/PIA14413/collection.json"
+          }
+        }
+      ],
+      "failure_reason": ""
+    }
+  ],
+  "candidate_count": 5,
+  "reviewable_candidates": [
+    {
+      "source": "nasa",
+      "source_id": "nasa",
+      "title": "Mapping Io’s Hidden Heat With NASA’s Juno",
+      "url": "https://science.nasa.gov/photojournal/mapping-ios-hidden-heat-with-nasas-juno/",
+      "body_excerpt": "2 Min Read Mapping Io’s Hidden Heat With NASA’s Juno PIA26757 Credits: NASA/JPL-Caltech/SwRI/USGS Photojournal Navigation Science Photojournal Mapping Io’s Hidden Heat… Photojournal Home Photojournal Search Latest Content Galleries Feedback RSS About Downloads Mapping Io’s Hidden Heat With NASA’s Juno PNG (1.89 MB) Description This graphic illustrates the areas of Jupiter’s moon Io sampled by the Microwave Radiometer (MWR) instrument aboard NASA’s Juno spacecraft during two close flybys. The black overlapping lines show the instrument’s footprints during Perijove 57 on Dec. 30, 2023, when the spacecraft primarily mapped the northern hemisphere.",
+      "structured_fields": [
+        "content",
+        "excerpt",
+        "link",
+        "title"
+      ],
+      "quality_flags": [
+        "phase100_endpoint_preview",
+        "strong_accepted"
+      ],
+      "provenance": {
+        "phase": "Phase100",
+        "source_url": "https://science.nasa.gov/photojournal/mapping-ios-hidden-heat-with-nasas-juno/"
+      }
+    },
+    {
+      "source": "nasa",
+      "source_id": "nasa",
+      "title": "NASA’s Juno Peers Beneath Io’s Surface",
+      "url": "https://science.nasa.gov/photojournal/nasas-juno-peers-beneath-ios-surface/",
+      "body_excerpt": "2 Min Read NASA’s Juno Peers Beneath Io’s Surface PIA26756 Credits: NASA/JPL-Caltech/SwRI/USGS Photojournal Navigation Science Photojournal NASA’s Juno Peers Beneath… Photojournal Home Photojournal Search Latest Content Galleries Feedback RSS About Downloads NASA’s Juno Peers Beneath Io’s Surface PNG (2.07 MB) Description This map represents data captured by the Microwave Radiometer (MWR) aboard NASA’s Juno spacecraft, indicating heat rising from just beneath the surface of Jupiter’s moon Io. While infrared instruments measure the temperature of the moon’s surface, the lowest frequency microwave channels (0.6 and 1.25 gigahertz) on the MWR can",
+      "structured_fields": [
+        "content",
+        "excerpt",
+        "link",
+        "title"
+      ],
+      "quality_flags": [
+        "phase100_endpoint_preview",
+        "strong_accepted"
+      ],
+      "provenance": {
+        "phase": "Phase100",
+        "source_url": "https://science.nasa.gov/photojournal/nasas-juno-peers-beneath-ios-surface/"
+      }
+    },
+    {
+      "source": "nasa",
+      "source_id": "nasa",
+      "title": "A Moonlit Earth as Seen From Artemis II",
+      "url": "https://science.nasa.gov/earth/earth-observatory/a-moonlit-earth-as-seen-from-artemis-ii/",
+      "body_excerpt": "Earth Observatory Science Earth Observatory A Moonlit Earth as Seen From… Earth Earth Observatory EO Explorer Topics All Topics Atmosphere Land Heat & Radiation Life on Earth Human Dimensions Natural Events Oceans Remote Sensing Technology Snow & Ice Water More Content Collections Global Maps World of Change Articles Earth Matters Blog Blue Marble: Next Generation EO Kids Mission: Biomes About About Us Subscribe 🛜 RSS Contact Us Search April 2, 2026 One of the first images transmitted back to Earth from the Artemis II mission was a stunner. In a",
+      "structured_fields": [
+        "content",
+        "excerpt",
+        "link",
+        "title"
+      ],
+      "quality_flags": [
+        "phase100_endpoint_preview",
+        "strong_accepted"
+      ],
+      "provenance": {
+        "phase": "Phase100",
+        "source_url": "https://science.nasa.gov/earth/earth-observatory/a-moonlit-earth-as-seen-from-artemis-ii/"
+      }
+    },
+    {
+      "source": "nasa",
+      "source_id": "nasa",
+      "title": "Riding Along with Juno",
+      "url": "https://images-assets.nasa.gov/image/PIA14414/collection.json",
+      "body_excerpt": "The three LEGO figurines flying aboard the Juno spacecraft are the Roman god Jupiter, his wife Juno and Galileo Galilei.",
+      "structured_fields": [
+        "description",
+        "nasa_id",
+        "title"
+      ],
+      "quality_flags": [
+        "phase100_endpoint_preview",
+        "strong_accepted"
+      ],
+      "provenance": {
+        "phase": "Phase100",
+        "source_url": "https://images-assets.nasa.gov/image/PIA14414/collection.json"
+      }
+    },
+    {
+      "source": "nasa",
+      "source_id": "nasa",
+      "title": "LEGO Figurines Aboard Juno",
+      "url": "https://images-assets.nasa.gov/image/PIA14413/collection.json",
+      "body_excerpt": "Three LEGO figurines representing the Roman god Jupiter, his wife Juno and Galileo Galilei are shown here aboard the Juno spacecraft.",
+      "structured_fields": [
+        "description",
+        "nasa_id",
+        "title"
+      ],
+      "quality_flags": [
+        "phase100_endpoint_preview",
+        "strong_accepted"
+      ],
+      "provenance": {
+        "phase": "Phase100",
+        "source_url": "https://images-assets.nasa.gov/image/PIA14413/collection.json"
+      }
+    }
+  ],
+  "quality_verdict": "nasa_endpoint_strategy_found_structured_candidates",
+  "production_ready": false,
+  "apply_approved": false,
+  "ingest_approved": false,
+  "formal_raw_write": false,
+  "formal_default_triples_write": false,
+  "chroma_write": false,
+  "neo4j_write": false,
+  "clear_source_ingestion_outputs_called": false,
+  "active_source": "zh_wikipedia",
+  "active_source_unchanged": true,
+  "registry": {
+    "zh_wikipedia": "active",
+    "nasa": "disabled",
+    "esa": "disabled",
+    "wikidata": "disabled"
+  }
+}
