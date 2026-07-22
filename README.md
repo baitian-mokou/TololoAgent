@@ -529,6 +529,7 @@ python scripts/run_four_source_batch_preview.py --plan-json evaluation\four_sour
 python scripts/run_raw_shadow_batch_trial.py --sources nasa esa --limit 20 --out-json evaluation\four_source_expansion\raw_shadow_batch_trial_phase39.json --out-md docs\raw_shadow_batch_trial_phase39.md
 python scripts/select_deduped_frontier_candidates.py --sources nasa esa --limit 50 --out-json evaluation\four_source_expansion\deduped_frontier_candidates_phase40.json --out-md docs\deduped_frontier_candidates_phase40.md
 python scripts/run_selected_raw_shadow_ingest.py --selected-json evaluation\four_source_expansion\deduped_frontier_candidates_phase40.json --source-limit nasa=20 --source-limit esa=8 --out-json evaluation\four_source_expansion\selected_raw_shadow_ingest_phase41.json --out-md docs\selected_raw_shadow_ingest_phase41.md
+python scripts/preview_new_raw_materialization.py --ingest-report evaluation\four_source_expansion\selected_raw_shadow_ingest_phase41.json --out-json evaluation\four_source_expansion\new_raw_materialization_preview_phase42.json --out-md docs\new_raw_materialization_preview_phase42.md
 ```
 
 ```powershell
