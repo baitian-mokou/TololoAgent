@@ -1,0 +1,456 @@
+{
+  "phase": "Phase 47",
+  "mode": "nasa_shadow_source_readiness_query_preview",
+  "generated_at": "2026-07-22T07:24:15.527241+00:00",
+  "source_id": "nasa",
+  "ready": true,
+  "blocked_reason": "",
+  "issues": [],
+  "shadow_dir": "data\\triples_shadow\\nasa",
+  "local_artifact": true,
+  "counts": {
+    "items": 20,
+    "triples": 80,
+    "narratives": 80
+  },
+  "manifest_counts": {
+    "items": 20,
+    "triples": 80,
+    "narratives": 80
+  },
+  "expected_counts": {
+    "items": 20,
+    "triples": 80,
+    "narratives": 80
+  },
+  "validation": {
+    "triple_source_ids": {
+      "nasa": 80
+    },
+    "triple_validation_status": {
+      "accepted": 80
+    },
+    "narrative_source_ids": {
+      "nasa": 80
+    },
+    "narrative_source_roles": {
+      "primary": 80
+    }
+  },
+  "sample_query_preview": [
+    {
+      "query_type": "subject",
+      "query": "NASA Space Science Data Coordinated Archive Status",
+      "result_count": 4,
+      "results": [
+        {
+          "subject": "NASA Space Science Data Coordinated Archive Status",
+          "predicate": "SOURCE_URL",
+          "object": "https://nssdc.gsfc.nasa.gov/planetary/planets/asteroidpage.html",
+          "source_url": "https://nssdc.gsfc.nasa.gov/planetary/planets/asteroidpage.html",
+          "confidence": 0.99,
+          "evidence": "https://nssdc.gsfc.nasa.gov/planetary/planets/asteroidpage.html"
+        },
+        {
+          "subject": "NASA Space Science Data Coordinated Archive Status",
+          "predicate": "HAS_TOPIC",
+          "object": "asteroid",
+          "source_url": "https://nssdc.gsfc.nasa.gov/planetary/planets/asteroidpage.html",
+          "confidence": 0.84,
+          "evidence": "Explore Search News & Events News & Events News Releases Recently Published Video Series on NASA+ Podcasts & Audio Blogs Newsletters Social Media Media Resources Events Upcoming La"
+        },
+        {
+          "subject": "NASA Space Science Data Coordinated Archive Status",
+          "predicate": "INSTANCE_OF",
+          "object": "asteroid",
+          "source_url": "https://nssdc.gsfc.nasa.gov/planetary/planets/asteroidpage.html",
+          "confidence": 0.82,
+          "evidence": "Explore Search News & Events News & Events News Releases Recently Published Video Series on NASA+ Podcasts & Audio Blogs Newsletters Social Media Media Resources Events Upcoming La"
+        },
+        {
+          "subject": "NASA Space Science Data Coordinated Archive Status",
+          "predicate": "INSTANCE_OF",
+          "object": "small body",
+          "source_url": "https://nssdc.gsfc.nasa.gov/planetary/planets/asteroidpage.html",
+          "confidence": 0.72,
+          "evidence": "Explore Search News & Events News & Events News Releases Recently Published Video Series on NASA+ Podcasts & Audio Blogs Newsletters Social Media Media Resources Events Upcoming La"
+        }
+      ]
+    },
+    {
+      "query_type": "subject",
+      "query": "Planetary Defense at NASA",
+      "result_count": 4,
+      "results": [
+        {
+          "subject": "Planetary Defense at NASA",
+          "predicate": "SOURCE_URL",
+          "object": "https://science.nasa.gov/planetary-defense/",
+          "source_url": "https://science.nasa.gov/planetary-defense/",
+          "confidence": 0.99,
+          "evidence": "https://science.nasa.gov/planetary-defense/"
+        },
+        {
+          "subject": "Planetary Defense at NASA",
+          "predicate": "HAS_TOPIC",
+          "object": "asteroid",
+          "source_url": "https://science.nasa.gov/planetary-defense/",
+          "confidence": 0.84,
+          "evidence": "Explore Search News & Events News & Events Recently Published Video Series on NASA+ Podcasts & Audio Blogs Newsletters Social Media Media Resources Multimedia Multimedia NASA+ Imag"
+        },
+        {
+          "subject": "Planetary Defense at NASA",
+          "predicate": "INSTANCE_OF",
+          "object": "asteroid",
+          "source_url": "https://science.nasa.gov/planetary-defense/",
+          "confidence": 0.82,
+          "evidence": "Explore Search News & Events News & Events Recently Published Video Series on NASA+ Podcasts & Audio Blogs Newsletters Social Media Media Resources Multimedia Multimedia NASA+ Imag"
+        },
+        {
+          "subject": "Planetary Defense at NASA",
+          "predicate": "INSTANCE_OF",
+          "object": "small body",
+          "source_url": "https://science.nasa.gov/planetary-defense/",
+          "confidence": 0.72,
+          "evidence": "Explore Search News & Events News & Events Recently Published Video Series on NASA+ Podcasts & Audio Blogs Newsletters Social Media Media Resources Multimedia Multimedia NASA+ Imag"
+        }
+      ]
+    },
+    {
+      "query_type": "subject",
+      "query": "Bennu",
+      "result_count": 4,
+      "results": [
+        {
+          "subject": "Bennu",
+          "predicate": "SOURCE_URL",
+          "object": "https://science.nasa.gov/solar-system/asteroids/101955-bennu/",
+          "source_url": "https://science.nasa.gov/solar-system/asteroids/101955-bennu/",
+          "confidence": 0.99,
+          "evidence": "https://science.nasa.gov/solar-system/asteroids/101955-bennu/"
+        },
+        {
+          "subject": "Bennu",
+          "predicate": "HAS_TOPIC",
+          "object": "asteroid",
+          "source_url": "https://science.nasa.gov/solar-system/asteroids/101955-bennu/",
+          "confidence": 0.84,
+          "evidence": "Explore Search News & Events News & Events Recently Published Video Series on NASA+ Podcasts & Audio Blogs Newsletters Social Media Media Resources Multimedia Multimedia NASA+ Imag"
+        },
+        {
+          "subject": "Bennu",
+          "predicate": "INSTANCE_OF",
+          "object": "asteroid",
+          "source_url": "https://science.nasa.gov/solar-system/asteroids/101955-bennu/",
+          "confidence": 0.82,
+          "evidence": "Explore Search News & Events News & Events Recently Published Video Series on NASA+ Podcasts & Audio Blogs Newsletters Social Media Media Resources Multimedia Multimedia NASA+ Imag"
+        },
+        {
+          "subject": "Bennu",
+          "predicate": "INSTANCE_OF",
+          "object": "small body",
+          "source_url": "https://science.nasa.gov/solar-system/asteroids/101955-bennu/",
+          "confidence": 0.72,
+          "evidence": "Explore Search News & Events News & Events Recently Published Video Series on NASA+ Podcasts & Audio Blogs Newsletters Social Media Media Resources Multimedia Multimedia NASA+ Imag"
+        }
+      ]
+    },
+    {
+      "query_type": "relation",
+      "query": "SOURCE_URL",
+      "result_count": 5,
+      "results": [
+        {
+          "subject": "NASA Space Science Data Coordinated Archive Status",
+          "predicate": "SOURCE_URL",
+          "object": "https://nssdc.gsfc.nasa.gov/planetary/planets/asteroidpage.html",
+          "source_url": "https://nssdc.gsfc.nasa.gov/planetary/planets/asteroidpage.html",
+          "confidence": 0.99,
+          "evidence": "https://nssdc.gsfc.nasa.gov/planetary/planets/asteroidpage.html"
+        },
+        {
+          "subject": "Planetary Defense at NASA",
+          "predicate": "SOURCE_URL",
+          "object": "https://science.nasa.gov/planetary-defense/",
+          "source_url": "https://science.nasa.gov/planetary-defense/",
+          "confidence": 0.99,
+          "evidence": "https://science.nasa.gov/planetary-defense/"
+        },
+        {
+          "subject": "Bennu",
+          "predicate": "SOURCE_URL",
+          "object": "https://science.nasa.gov/solar-system/asteroids/101955-bennu/",
+          "source_url": "https://science.nasa.gov/solar-system/asteroids/101955-bennu/",
+          "confidence": 0.99,
+          "evidence": "https://science.nasa.gov/solar-system/asteroids/101955-bennu/"
+        },
+        {
+          "subject": "Asteroid Psyche",
+          "predicate": "SOURCE_URL",
+          "object": "https://science.nasa.gov/solar-system/asteroids/16-psyche/",
+          "source_url": "https://science.nasa.gov/solar-system/asteroids/16-psyche/",
+          "confidence": 0.99,
+          "evidence": "https://science.nasa.gov/solar-system/asteroids/16-psyche/"
+        },
+        {
+          "subject": "Asteroid 2024 YR4",
+          "predicate": "SOURCE_URL",
+          "object": "https://science.nasa.gov/solar-system/asteroids/2024-yr4/",
+          "source_url": "https://science.nasa.gov/solar-system/asteroids/2024-yr4/",
+          "confidence": 0.99,
+          "evidence": "https://science.nasa.gov/solar-system/asteroids/2024-yr4/"
+        }
+      ]
+    },
+    {
+      "query_type": "relation",
+      "query": "HAS_TOPIC",
+      "result_count": 5,
+      "results": [
+        {
+          "subject": "NASA Space Science Data Coordinated Archive Status",
+          "predicate": "HAS_TOPIC",
+          "object": "asteroid",
+          "source_url": "https://nssdc.gsfc.nasa.gov/planetary/planets/asteroidpage.html",
+          "confidence": 0.84,
+          "evidence": "Explore Search News & Events News & Events News Releases Recently Published Video Series on NASA+ Podcasts & Audio Blogs Newsletters Social Media Media Resources Events Upcoming La"
+        },
+        {
+          "subject": "Planetary Defense at NASA",
+          "predicate": "HAS_TOPIC",
+          "object": "asteroid",
+          "source_url": "https://science.nasa.gov/planetary-defense/",
+          "confidence": 0.84,
+          "evidence": "Explore Search News & Events News & Events Recently Published Video Series on NASA+ Podcasts & Audio Blogs Newsletters Social Media Media Resources Multimedia Multimedia NASA+ Imag"
+        },
+        {
+          "subject": "Bennu",
+          "predicate": "HAS_TOPIC",
+          "object": "asteroid",
+          "source_url": "https://science.nasa.gov/solar-system/asteroids/101955-bennu/",
+          "confidence": 0.84,
+          "evidence": "Explore Search News & Events News & Events Recently Published Video Series on NASA+ Podcasts & Audio Blogs Newsletters Social Media Media Resources Multimedia Multimedia NASA+ Imag"
+        },
+        {
+          "subject": "Asteroid Psyche",
+          "predicate": "HAS_TOPIC",
+          "object": "asteroid",
+          "source_url": "https://science.nasa.gov/solar-system/asteroids/16-psyche/",
+          "confidence": 0.84,
+          "evidence": "Asteroid Psyche."
+        },
+        {
+          "subject": "Asteroid 2024 YR4",
+          "predicate": "HAS_TOPIC",
+          "object": "asteroid",
+          "source_url": "https://science.nasa.gov/solar-system/asteroids/2024-yr4/",
+          "confidence": 0.84,
+          "evidence": "Asteroid 2024 YR4."
+        }
+      ]
+    },
+    {
+      "query_type": "relation",
+      "query": "INSTANCE_OF",
+      "result_count": 5,
+      "results": [
+        {
+          "subject": "NASA Space Science Data Coordinated Archive Status",
+          "predicate": "INSTANCE_OF",
+          "object": "asteroid",
+          "source_url": "https://nssdc.gsfc.nasa.gov/planetary/planets/asteroidpage.html",
+          "confidence": 0.82,
+          "evidence": "Explore Search News & Events News & Events News Releases Recently Published Video Series on NASA+ Podcasts & Audio Blogs Newsletters Social Media Media Resources Events Upcoming La"
+        },
+        {
+          "subject": "NASA Space Science Data Coordinated Archive Status",
+          "predicate": "INSTANCE_OF",
+          "object": "small body",
+          "source_url": "https://nssdc.gsfc.nasa.gov/planetary/planets/asteroidpage.html",
+          "confidence": 0.72,
+          "evidence": "Explore Search News & Events News & Events News Releases Recently Published Video Series on NASA+ Podcasts & Audio Blogs Newsletters Social Media Media Resources Events Upcoming La"
+        },
+        {
+          "subject": "Planetary Defense at NASA",
+          "predicate": "INSTANCE_OF",
+          "object": "asteroid",
+          "source_url": "https://science.nasa.gov/planetary-defense/",
+          "confidence": 0.82,
+          "evidence": "Explore Search News & Events News & Events Recently Published Video Series on NASA+ Podcasts & Audio Blogs Newsletters Social Media Media Resources Multimedia Multimedia NASA+ Imag"
+        },
+        {
+          "subject": "Planetary Defense at NASA",
+          "predicate": "INSTANCE_OF",
+          "object": "small body",
+          "source_url": "https://science.nasa.gov/planetary-defense/",
+          "confidence": 0.72,
+          "evidence": "Explore Search News & Events News & Events Recently Published Video Series on NASA+ Podcasts & Audio Blogs Newsletters Social Media Media Resources Multimedia Multimedia NASA+ Imag"
+        },
+        {
+          "subject": "Bennu",
+          "predicate": "INSTANCE_OF",
+          "object": "asteroid",
+          "source_url": "https://science.nasa.gov/solar-system/asteroids/101955-bennu/",
+          "confidence": 0.82,
+          "evidence": "Explore Search News & Events News & Events Recently Published Video Series on NASA+ Podcasts & Audio Blogs Newsletters Social Media Media Resources Multimedia Multimedia NASA+ Imag"
+        }
+      ]
+    },
+    {
+      "query_type": "topic",
+      "query": "asteroid",
+      "result_count": 5,
+      "results": [
+        {
+          "subject": "NASA Space Science Data Coordinated Archive Status",
+          "predicate": "SOURCE_URL",
+          "object": "https://nssdc.gsfc.nasa.gov/planetary/planets/asteroidpage.html",
+          "source_url": "https://nssdc.gsfc.nasa.gov/planetary/planets/asteroidpage.html",
+          "confidence": 0.99,
+          "evidence": "https://nssdc.gsfc.nasa.gov/planetary/planets/asteroidpage.html"
+        },
+        {
+          "subject": "NASA Space Science Data Coordinated Archive Status",
+          "predicate": "HAS_TOPIC",
+          "object": "asteroid",
+          "source_url": "https://nssdc.gsfc.nasa.gov/planetary/planets/asteroidpage.html",
+          "confidence": 0.84,
+          "evidence": "Explore Search News & Events News & Events News Releases Recently Published Video Series on NASA+ Podcasts & Audio Blogs Newsletters Social Media Media Resources Events Upcoming La"
+        },
+        {
+          "subject": "NASA Space Science Data Coordinated Archive Status",
+          "predicate": "INSTANCE_OF",
+          "object": "asteroid",
+          "source_url": "https://nssdc.gsfc.nasa.gov/planetary/planets/asteroidpage.html",
+          "confidence": 0.82,
+          "evidence": "Explore Search News & Events News & Events News Releases Recently Published Video Series on NASA+ Podcasts & Audio Blogs Newsletters Social Media Media Resources Events Upcoming La"
+        },
+        {
+          "subject": "Planetary Defense at NASA",
+          "predicate": "HAS_TOPIC",
+          "object": "asteroid",
+          "source_url": "https://science.nasa.gov/planetary-defense/",
+          "confidence": 0.84,
+          "evidence": "Explore Search News & Events News & Events Recently Published Video Series on NASA+ Podcasts & Audio Blogs Newsletters Social Media Media Resources Multimedia Multimedia NASA+ Imag"
+        },
+        {
+          "subject": "Planetary Defense at NASA",
+          "predicate": "INSTANCE_OF",
+          "object": "asteroid",
+          "source_url": "https://science.nasa.gov/planetary-defense/",
+          "confidence": 0.82,
+          "evidence": "Explore Search News & Events News & Events Recently Published Video Series on NASA+ Podcasts & Audio Blogs Newsletters Social Media Media Resources Multimedia Multimedia NASA+ Imag"
+        }
+      ]
+    },
+    {
+      "query_type": "topic",
+      "query": "comet",
+      "result_count": 5,
+      "results": [
+        {
+          "subject": "Comet 103P/Hartley (Hartley 2)",
+          "predicate": "SOURCE_URL",
+          "object": "https://science.nasa.gov/solar-system/comets/103p-hartley-hartley-2/",
+          "source_url": "https://science.nasa.gov/solar-system/comets/103p-hartley-hartley-2/",
+          "confidence": 0.99,
+          "evidence": "https://science.nasa.gov/solar-system/comets/103p-hartley-hartley-2/"
+        },
+        {
+          "subject": "Comet 103P/Hartley (Hartley 2)",
+          "predicate": "HAS_TOPIC",
+          "object": "comet",
+          "source_url": "https://science.nasa.gov/solar-system/comets/103p-hartley-hartley-2/",
+          "confidence": 0.84,
+          "evidence": "Comet 103P/Hartley (Hartley 2)."
+        },
+        {
+          "subject": "Comet 103P/Hartley (Hartley 2)",
+          "predicate": "INSTANCE_OF",
+          "object": "comet",
+          "source_url": "https://science.nasa.gov/solar-system/comets/103p-hartley-hartley-2/",
+          "confidence": 0.82,
+          "evidence": "Comet 103P/Hartley (Hartley 2)."
+        },
+        {
+          "subject": "Comet 103P/Hartley (Hartley 2)",
+          "predicate": "INSTANCE_OF",
+          "object": "small body",
+          "source_url": "https://science.nasa.gov/solar-system/comets/103p-hartley-hartley-2/",
+          "confidence": 0.72,
+          "evidence": "Comet 103P/Hartley (Hartley 2)."
+        },
+        {
+          "subject": "109P/Swift-Tuttle",
+          "predicate": "SOURCE_URL",
+          "object": "https://science.nasa.gov/solar-system/comets/109p-swift-tuttle/",
+          "source_url": "https://science.nasa.gov/solar-system/comets/109p-swift-tuttle/",
+          "confidence": 0.99,
+          "evidence": "https://science.nasa.gov/solar-system/comets/109p-swift-tuttle/"
+        }
+      ]
+    },
+    {
+      "query_type": "narrative",
+      "query": "NASA Space Science Data Coordinated Archive Status",
+      "result_count": 3,
+      "results": [
+        {
+          "page_title": "NASA Space Science Data Coordinated Archive Status - NASA",
+          "source_url": "https://nssdc.gsfc.nasa.gov/planetary/planets/asteroidpage.html",
+          "source_role": "primary",
+          "snippet": "Explore Search News & Events News & Events News Releases Recently Published Video Series on NASA+ Podcasts & Audio Blogs Newsletters Social Media Media Resources Events Upcoming Launches & Landings Virtual Guest Program "
+        },
+        {
+          "page_title": "NASA Space Science Data Coordinated Archive Status - NASA",
+          "source_url": "https://nssdc.gsfc.nasa.gov/planetary/planets/asteroidpage.html",
+          "source_role": "primary",
+          "snippet": "n read What’s Up: July 2026 Skywatching Tips from NASA article 3 weeks ago Back Missions Search All NASA Missions A to Z List of Missions Upcoming Launches and Landings Spaceships and Rockets Communicating with Missions "
+        },
+        {
+          "page_title": "NASA Space Science Data Coordinated Archive Status - NASA",
+          "source_url": "https://nssdc.gsfc.nasa.gov/planetary/planets/asteroidpage.html",
+          "source_role": "primary",
+          "snippet": "etary Science Astrophysics & Space Science The Sun & Heliophysics Biological & Physical Sciences Lunar Science Citizen Science Astromaterials Aeronautics Research Human Space Travel Research Aeronautics Science in the Ai"
+        }
+      ]
+    },
+    {
+      "query_type": "narrative",
+      "query": "Planetary Defense at NASA",
+      "result_count": 3,
+      "results": [
+        {
+          "page_title": "Planetary Defense at NASA - NASA Science Facebook logo Instagram logo Linkedin logo",
+          "source_url": "https://science.nasa.gov/planetary-defense/",
+          "source_role": "primary",
+          "snippet": "Explore Search News & Events News & Events Recently Published Video Series on NASA+ Podcasts & Audio Blogs Newsletters Social Media Media Resources Multimedia Multimedia NASA+ Images NASA Live NASA Apps Podcasts Image of"
+        },
+        {
+          "page_title": "Planetary Defense at NASA - NASA Science Facebook logo Instagram logo Linkedin logo",
+          "source_url": "https://science.nasa.gov/planetary-defense/",
+          "source_role": "primary",
+          "snippet": "ago Back Missions Search All NASA Missions A to Z List of Missions Upcoming Launches and Landings Spaceships and Rockets Communicating with Missions Artemis James Webb Space Telescope Hubble Space Telescope International"
+        },
+        {
+          "page_title": "Planetary Defense at NASA - NASA Science Facebook logo Instagram logo Linkedin logo",
+          "source_url": "https://science.nasa.gov/planetary-defense/",
+          "source_role": "primary",
+          "snippet": "ogical & Physical Sciences Lunar Science Citizen Science Astromaterials Aeronautics Research Human Space Travel Research Aeronautics Science in the Air NASA Aircraft Flight Innovation Supersonic Flight Air Traffic Soluti"
+        }
+      ]
+    }
+  ],
+  "default_source_unchanged": true,
+  "active_source": "zh_wikipedia",
+  "registry": {
+    "zh_wikipedia": "active",
+    "nasa": "disabled",
+    "esa": "disabled",
+    "wikidata": "disabled"
+  },
+  "formal_default_triples_write": false,
+  "chroma_write": false,
+  "neo4j_write": false,
+  "recommended_next_action": "review_query_preview_before_shadow_eval_adapter"
+}
