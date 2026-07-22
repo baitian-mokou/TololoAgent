@@ -1,0 +1,61 @@
+{
+  "generated_at": "2026-07-22T23:30:36",
+  "mode": "production_source_gate_review_only",
+  "decision": "review_ready_not_authorized",
+  "passed": true,
+  "formal_write_authorized": false,
+  "default_source": {
+    "active_source": "zh_wikipedia",
+    "zh_wikipedia_active": true
+  },
+  "checks": {
+    "active_source_unchanged": true,
+    "zh_wikipedia_active": true,
+    "shadow_sources_disabled": true,
+    "formal_write_requires_explicit_authorization": true,
+    "formal_write_authorized": false,
+    "all_sources_review_ready": true
+  },
+  "sources": {
+    "nasa": {
+      "registry_state": "disabled",
+      "shadow_dir": "data/triples_shadow/nasa",
+      "formal_write_authorized": false,
+      "review_ready": true,
+      "registry_disabled": true,
+      "shadow_readiness_pass": true,
+      "review_only_cli_exists": true,
+      "data_quality_threshold_pass": true,
+      "duplicate_noise_control_pass": true,
+      "output_path_limited_to_shadow": true
+    },
+    "esa": {
+      "registry_state": "disabled",
+      "shadow_dir": "data/triples_shadow/esa",
+      "formal_write_authorized": false,
+      "review_ready": true,
+      "registry_disabled": true,
+      "shadow_readiness_pass": true,
+      "review_only_cli_exists": true,
+      "data_quality_threshold_pass": true,
+      "duplicate_noise_control_pass": true,
+      "output_path_limited_to_shadow": true
+    },
+    "wikidata": {
+      "registry_state": "disabled",
+      "shadow_dir": "data/triples_shadow/wikidata",
+      "formal_write_authorized": false,
+      "review_ready": true,
+      "registry_disabled": true,
+      "shadow_readiness_pass": true,
+      "review_only_cli_exists": true,
+      "data_quality_threshold_pass": true,
+      "duplicate_noise_control_pass": true,
+      "output_path_limited_to_shadow": true
+    }
+  },
+  "notes": [
+    "Passing this gate means the three shadow sources may be submitted for human review.",
+    "It does not authorize production writes, ACTIVE_SOURCE changes, Chroma writes, or Neo4j writes."
+  ]
+}
