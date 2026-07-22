@@ -1,0 +1,207 @@
+{
+  "phase": "Phase 98",
+  "mode": "nasa_extraction_strategy_repair_preview",
+  "generated_at": "2026-07-22T18:22:48.353807+00:00",
+  "input_urls": [
+    "https://nssdc.gsfc.nasa.gov/planetary/factsheet",
+    "https://science.nasa.gov/mission/juno",
+    "https://science.nasa.gov/mission/cassini"
+  ],
+  "attempted": 3,
+  "refetched": 3,
+  "accepted": 1,
+  "rejected": 2,
+  "failed": 0,
+  "live_refetch_used": true,
+  "per_url": [
+    {
+      "url": "https://nssdc.gsfc.nasa.gov/planetary/factsheet",
+      "status": "rejected_for_review",
+      "fetch_status": "http_200",
+      "status_code": 200,
+      "title": "https://nssdc.gsfc.nasa.gov/planetary/factsheet",
+      "extraction_candidates": [
+        {
+          "method": "main_text",
+          "text": "NASA Space Science Data Coordinated Archive Status - NASA Search Home Missions Humans in Space Earth The Solar System The Universe Science Aeronautics Technology Learning Resources About NASA Español Featured 2 min read NASA-Funded Study Shows How Controlled Burns Help Sequoias Survive Wildfires article 2 days ago 5 min read NASA Study Finds Near-Earth Asteroid Is Actually Comet article 6 days ago 3 min read What’s Up: July 2026 Skywatching Tips from NASA article 3 weeks ago Back Missions Search All NASA Missions A to Z List of Missions Upcoming",
+          "text_length": 551,
+          "boilerplate_score": 1.25,
+          "science_hits": 4,
+          "accepted": false,
+          "reject_reason": "short_or_boilerplate_or_low_science_signal"
+        },
+        {
+          "method": "meta_description",
+          "text": "The NASA Space Science Data Coordinated Archive website is temporarily offline for maintenance.",
+          "text_length": 95,
+          "boilerplate_score": 0.0,
+          "science_hits": 1,
+          "accepted": false,
+          "reject_reason": "short_or_boilerplate_or_low_science_signal"
+        },
+        {
+          "method": "meta_description",
+          "text": "The NASA Space Science Data Coordinated Archive website is temporarily offline for maintenance.",
+          "text_length": 95,
+          "boilerplate_score": 0.0,
+          "science_hits": 1,
+          "accepted": false,
+          "reject_reason": "short_or_boilerplate_or_low_science_signal"
+        },
+        {
+          "method": "meta_description",
+          "text": "The NASA Space Science Data Coordinated Archive website is temporarily offline for maintenance.",
+          "text_length": 95,
+          "boilerplate_score": 0.0,
+          "science_hits": 1,
+          "accepted": false,
+          "reject_reason": "short_or_boilerplate_or_low_science_signal"
+        }
+      ],
+      "accepted_method": "",
+      "body_excerpt": "",
+      "reject_reason": "no_strategy_extracted_reviewable_body",
+      "triples": [],
+      "quality_flags": [
+        "phase98_no_reviewable_body"
+      ]
+    },
+    {
+      "url": "https://science.nasa.gov/mission/juno",
+      "status": "accepted_reviewable",
+      "fetch_status": "http_200",
+      "status_code": 200,
+      "title": "Juno",
+      "extraction_candidates": [
+        {
+          "method": "main_text",
+          "text": "Juno - NASA Science Search Home Missions Humans in Space Earth The Solar System The Universe Science Aeronautics Technology Learning Resources About NASA Español Highlights 2 min read NASA-Funded Study Shows How Controlled Burns Help Sequoias Survive Wildfires article 2 days ago 5 min read NASA Study Finds Near-Earth Asteroid Is Actually Comet article 6 days ago 3 min read What’s Up: July 2026 Skywatching Tips from NASA article 3 weeks ago Back Missions Search All NASA Missions A to Z List of Missions Upcoming Launches and Landings Spaceships and",
+          "text_length": 552,
+          "boilerplate_score": 1.25,
+          "science_hits": 4,
+          "accepted": false,
+          "reject_reason": "short_or_boilerplate_or_low_science_signal"
+        },
+        {
+          "method": "meta_description",
+          "text": "NASA's Juno spacecraft has explored Jupiter, its moons, and rings since 2016, gathering breakthrough science and breathtaking imagery.",
+          "text_length": 134,
+          "boilerplate_score": 0.0,
+          "science_hits": 3,
+          "accepted": true,
+          "reject_reason": ""
+        },
+        {
+          "method": "meta_description",
+          "text": "NASA's Juno spacecraft has explored Jupiter, its moons, and rings since 2016, gathering breakthrough science and breathtaking imagery.",
+          "text_length": 134,
+          "boilerplate_score": 0.0,
+          "science_hits": 3,
+          "accepted": true,
+          "reject_reason": ""
+        },
+        {
+          "method": "meta_description",
+          "text": "NASA's Juno spacecraft has explored Jupiter, its moons, and rings since 2016, gathering breakthrough science and breathtaking imagery.",
+          "text_length": 134,
+          "boilerplate_score": 0.0,
+          "science_hits": 3,
+          "accepted": true,
+          "reject_reason": ""
+        }
+      ],
+      "accepted_method": "meta_description",
+      "body_excerpt": "NASA's Juno spacecraft has explored Jupiter, its moons, and rings since 2016, gathering breakthrough science and breathtaking imagery.",
+      "reject_reason": "",
+      "triples": [
+        {
+          "subject": "Juno",
+          "predicate": "SOURCE_URL",
+          "object": "https://science.nasa.gov/mission/juno"
+        },
+        {
+          "subject": "Juno",
+          "predicate": "HAS_REVIEW_TEXT",
+          "object": "NASA's Juno spacecraft has explored Jupiter, its moons, and rings since 2016, gathering breakthrough science and breathtaking imagery."
+        }
+      ],
+      "quality_flags": [
+        "phase98_strategy_preview",
+        "method:meta_description"
+      ]
+    },
+    {
+      "url": "https://science.nasa.gov/mission/cassini",
+      "status": "rejected_for_review",
+      "fetch_status": "http_200",
+      "status_code": 200,
+      "title": "https://science.nasa.gov/mission/cassini",
+      "extraction_candidates": [
+        {
+          "method": "main_text",
+          "text": "Cassini-Huygens - NASA Science Search Home Missions Humans in Space Earth The Solar System The Universe Science Aeronautics Technology Learning Resources About NASA Español Highlights 2 min read NASA-Funded Study Shows How Controlled Burns Help Sequoias Survive Wildfires article 2 days ago 5 min read NASA Study Finds Near-Earth Asteroid Is Actually Comet article 6 days ago 3 min read What’s Up: July 2026 Skywatching Tips from NASA article 3 weeks ago Back Missions Search All NASA Missions A to Z List of Missions Upcoming Launches and Landings Spaceships and",
+          "text_length": 563,
+          "boilerplate_score": 1.25,
+          "science_hits": 4,
+          "accepted": false,
+          "reject_reason": "short_or_boilerplate_or_low_science_signal"
+        },
+        {
+          "method": "meta_description",
+          "text": "For more than a decade, NASA’s Cassini spacecraft shared the wonders of Saturn, its spectacular rings, and its family of icy moons.",
+          "text_length": 131,
+          "boilerplate_score": 0.0,
+          "science_hits": 1,
+          "accepted": false,
+          "reject_reason": "short_or_boilerplate_or_low_science_signal"
+        },
+        {
+          "method": "meta_description",
+          "text": "For more than a decade, NASA’s Cassini spacecraft shared the wonders of Saturn, its spectacular rings, and its family of icy moons.",
+          "text_length": 131,
+          "boilerplate_score": 0.0,
+          "science_hits": 1,
+          "accepted": false,
+          "reject_reason": "short_or_boilerplate_or_low_science_signal"
+        },
+        {
+          "method": "meta_description",
+          "text": "For more than a decade, NASA’s Cassini spacecraft shared the wonders of Saturn, its spectacular rings, and its family of icy moons.",
+          "text_length": 131,
+          "boilerplate_score": 0.0,
+          "science_hits": 1,
+          "accepted": false,
+          "reject_reason": "short_or_boilerplate_or_low_science_signal"
+        }
+      ],
+      "accepted_method": "",
+      "body_excerpt": "",
+      "reject_reason": "no_strategy_extracted_reviewable_body",
+      "triples": [],
+      "quality_flags": [
+        "phase98_no_reviewable_body"
+      ]
+    }
+  ],
+  "method_breakdown": {
+    "none": 2,
+    "meta_description": 1
+  },
+  "quality_verdict": "nasa_extraction_strategy_found_reviewable_body",
+  "production_ready": false,
+  "apply_approved": false,
+  "ingest_approved": false,
+  "formal_raw_write": false,
+  "formal_default_triples_write": false,
+  "chroma_write": false,
+  "neo4j_write": false,
+  "clear_source_ingestion_outputs_called": false,
+  "active_source": "zh_wikipedia",
+  "active_source_unchanged": true,
+  "registry": {
+    "zh_wikipedia": "active",
+    "nasa": "disabled",
+    "esa": "disabled",
+    "wikidata": "disabled"
+  }
+}
