@@ -1,0 +1,46 @@
+[
+  {
+    "subject": "Asteroid Psyche",
+    "predicate": "SOURCE_URL",
+    "object": "https://science.nasa.gov/solar-system/asteroids/16-psyche/",
+    "evidence": "https://science.nasa.gov/solar-system/asteroids/16-psyche/",
+    "confidence": 0.99,
+    "validation_status": "accepted",
+    "source_url": "https://science.nasa.gov/solar-system/asteroids/16-psyche/",
+    "source_id": "nasa",
+    "package_trial": true
+  },
+  {
+    "subject": "Asteroid Psyche",
+    "predicate": "HAS_TOPIC",
+    "object": "asteroid",
+    "evidence": "Asteroid Psyche.",
+    "confidence": 0.84,
+    "validation_status": "accepted",
+    "source_url": "https://science.nasa.gov/solar-system/asteroids/16-psyche/",
+    "source_id": "nasa",
+    "package_trial": true
+  },
+  {
+    "subject": "Asteroid Psyche",
+    "predicate": "INSTANCE_OF",
+    "object": "asteroid",
+    "evidence": "Asteroid Psyche.",
+    "confidence": 0.82,
+    "validation_status": "accepted",
+    "source_url": "https://science.nasa.gov/solar-system/asteroids/16-psyche/",
+    "source_id": "nasa",
+    "package_trial": true
+  },
+  {
+    "subject": "Asteroid Psyche",
+    "predicate": "INSTANCE_OF",
+    "object": "small body",
+    "evidence": "Asteroid Psyche.",
+    "confidence": 0.72,
+    "validation_status": "accepted",
+    "source_url": "https://science.nasa.gov/solar-system/asteroids/16-psyche/",
+    "source_id": "nasa",
+    "package_trial": true
+  }
+]

@@ -1,0 +1,46 @@
+[
+  {
+    "subject": "Asteroid Facts",
+    "predicate": "SOURCE_URL",
+    "object": "https://science.nasa.gov/solar-system/asteroids/facts/",
+    "evidence": "https://science.nasa.gov/solar-system/asteroids/facts/",
+    "confidence": 0.99,
+    "validation_status": "accepted",
+    "source_url": "https://science.nasa.gov/solar-system/asteroids/facts/",
+    "source_id": "nasa",
+    "package_trial": true
+  },
+  {
+    "subject": "Asteroid Facts",
+    "predicate": "HAS_TOPIC",
+    "object": "asteroid",
+    "evidence": "Asteroid Facts.",
+    "confidence": 0.84,
+    "validation_status": "accepted",
+    "source_url": "https://science.nasa.gov/solar-system/asteroids/facts/",
+    "source_id": "nasa",
+    "package_trial": true
+  },
+  {
+    "subject": "Asteroid Facts",
+    "predicate": "INSTANCE_OF",
+    "object": "asteroid",
+    "evidence": "Asteroid Facts.",
+    "confidence": 0.82,
+    "validation_status": "accepted",
+    "source_url": "https://science.nasa.gov/solar-system/asteroids/facts/",
+    "source_id": "nasa",
+    "package_trial": true
+  },
+  {
+    "subject": "Asteroid Facts",
+    "predicate": "INSTANCE_OF",
+    "object": "small body",
+    "evidence": "Asteroid Facts.",
+    "confidence": 0.72,
+    "validation_status": "accepted",
+    "source_url": "https://science.nasa.gov/solar-system/asteroids/facts/",
+    "source_id": "nasa",
+    "package_trial": true
+  }
+]

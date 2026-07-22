@@ -1,0 +1,405 @@
+{
+  "phase": "Phase 45",
+  "mode": "nasa_limited_shadow_materialization_package",
+  "generated_at": "2026-07-22T05:47:12.577551+00:00",
+  "source_id": "nasa",
+  "items": 20,
+  "triples": 80,
+  "narratives": 80,
+  "relations_count": {
+    "HAS_TOPIC": 20,
+    "INSTANCE_OF": 40,
+    "SOURCE_URL": 20
+  },
+  "type_distribution": {
+    "asteroid": 30,
+    "comet": 10,
+    "small body": 20
+  },
+  "sample_items": [
+    {
+      "title": "NASA Space Science Data Coordinated Archive Status",
+      "url": "https://nssdc.gsfc.nasa.gov/planetary/planets/asteroidpage.html",
+      "triples": [
+        {
+          "subject": "NASA Space Science Data Coordinated Archive Status",
+          "predicate": "SOURCE_URL",
+          "object": "https://nssdc.gsfc.nasa.gov/planetary/planets/asteroidpage.html",
+          "evidence": "https://nssdc.gsfc.nasa.gov/planetary/planets/asteroidpage.html",
+          "confidence": 0.99,
+          "validation_status": "accepted",
+          "source_url": "https://nssdc.gsfc.nasa.gov/planetary/planets/asteroidpage.html",
+          "source_id": "nasa",
+          "package_trial": true
+        },
+        {
+          "subject": "NASA Space Science Data Coordinated Archive Status",
+          "predicate": "HAS_TOPIC",
+          "object": "asteroid",
+          "evidence": "Explore Search News & Events News & Events News Releases Recently Published Video Series on NASA+ Podcasts & Audio Blogs Newsletters Social Media Media Resources Events Upcoming Launches & Landings Virtual Guest Program Multimedia Multimedia NASA+ Images NASA Live NASA Apps Podca",
+          "confidence": 0.84,
+          "validation_status": "accepted",
+          "source_url": "https://nssdc.gsfc.nasa.gov/planetary/planets/asteroidpage.html",
+          "source_id": "nasa",
+          "package_trial": true
+        },
+        {
+          "subject": "NASA Space Science Data Coordinated Archive Status",
+          "predicate": "INSTANCE_OF",
+          "object": "asteroid",
+          "evidence": "Explore Search News & Events News & Events News Releases Recently Published Video Series on NASA+ Podcasts & Audio Blogs Newsletters Social Media Media Resources Events Upcoming Launches & Landings Virtual Guest Program Multimedia Multimedia NASA+ Images NASA Live NASA Apps Podca",
+          "confidence": 0.82,
+          "validation_status": "accepted",
+          "source_url": "https://nssdc.gsfc.nasa.gov/planetary/planets/asteroidpage.html",
+          "source_id": "nasa",
+          "package_trial": true
+        },
+        {
+          "subject": "NASA Space Science Data Coordinated Archive Status",
+          "predicate": "INSTANCE_OF",
+          "object": "small body",
+          "evidence": "Explore Search News & Events News & Events News Releases Recently Published Video Series on NASA+ Podcasts & Audio Blogs Newsletters Social Media Media Resources Events Upcoming Launches & Landings Virtual Guest Program Multimedia Multimedia NASA+ Images NASA Live NASA Apps Podca",
+          "confidence": 0.72,
+          "validation_status": "accepted",
+          "source_url": "https://nssdc.gsfc.nasa.gov/planetary/planets/asteroidpage.html",
+          "source_id": "nasa",
+          "package_trial": true
+        }
+      ],
+      "narratives": [
+        {
+          "page_title": "NASA Space Science Data Coordinated Archive Status - NASA",
+          "section": "raw_chunk_1",
+          "content": "Explore Search News & Events News & Events News Releases Recently Published Video Series on NASA+ Podcasts & Audio Blogs Newsletters Social Media Media Resources Events Upcoming Launches & Landings Virtual Guest Program Multimedia Multimedia NASA+ Images NASA Live NASA Apps Podcasts Image of the Day e-Books 3D Resources Interactives STEM Multimedia NASA Brand & Usage Guidelines NASA+ Search Suggested Searches Climate Change Artemis Expedition 64 Mars perseverance SpaceX Crew-2 International Space Station View All Topics A-Z Home Missions Humans in Space Earth The Solar System The Universe Science Aeronautics Technology Learning Resources About NASA Español News & Events Multimedia NASA+ Featured 2 min read NASA-Funded Study Shows How Controlled Burns Help Sequoias Survive Wildfires article 1 day ago 5 min read NASA Study Finds Near-Earth Asteroid Is Actually Comet article 5 days ago 3 mi",
+          "keywords": [
+            "NASA Space Science Data Coordinated Archive Status - NASA",
+            "nasa"
+          ],
+          "source_url": "https://nssdc.gsfc.nasa.gov/planetary/planets/asteroidpage.html",
+          "source": "nasa",
+          "source_name": "nasa",
+          "source_role": "primary",
+          "origin": "api",
+          "type": "embedding_chunk",
+          "schema_version": "nasa_shadow_ready_v1",
+          "source_title": "NASA Space Science Data Coordinated Archive Status - NASA"
+        }
+      ],
+      "warnings": []
+    },
+    {
+      "title": "Planetary Defense at NASA",
+      "url": "https://science.nasa.gov/planetary-defense/",
+      "triples": [
+        {
+          "subject": "Planetary Defense at NASA",
+          "predicate": "SOURCE_URL",
+          "object": "https://science.nasa.gov/planetary-defense/",
+          "evidence": "https://science.nasa.gov/planetary-defense/",
+          "confidence": 0.99,
+          "validation_status": "accepted",
+          "source_url": "https://science.nasa.gov/planetary-defense/",
+          "source_id": "nasa",
+          "package_trial": true
+        },
+        {
+          "subject": "Planetary Defense at NASA",
+          "predicate": "HAS_TOPIC",
+          "object": "asteroid",
+          "evidence": "Explore Search News & Events News & Events Recently Published Video Series on NASA+ Podcasts & Audio Blogs Newsletters Social Media Media Resources Multimedia Multimedia NASA+ Images NASA Live NASA Apps Podcasts Image of the Day e-Books 3D Resources Interactives STEM Multimedia N",
+          "confidence": 0.84,
+          "validation_status": "accepted",
+          "source_url": "https://science.nasa.gov/planetary-defense/",
+          "source_id": "nasa",
+          "package_trial": true
+        },
+        {
+          "subject": "Planetary Defense at NASA",
+          "predicate": "INSTANCE_OF",
+          "object": "asteroid",
+          "evidence": "Explore Search News & Events News & Events Recently Published Video Series on NASA+ Podcasts & Audio Blogs Newsletters Social Media Media Resources Multimedia Multimedia NASA+ Images NASA Live NASA Apps Podcasts Image of the Day e-Books 3D Resources Interactives STEM Multimedia N",
+          "confidence": 0.82,
+          "validation_status": "accepted",
+          "source_url": "https://science.nasa.gov/planetary-defense/",
+          "source_id": "nasa",
+          "package_trial": true
+        },
+        {
+          "subject": "Planetary Defense at NASA",
+          "predicate": "INSTANCE_OF",
+          "object": "small body",
+          "evidence": "Explore Search News & Events News & Events Recently Published Video Series on NASA+ Podcasts & Audio Blogs Newsletters Social Media Media Resources Multimedia Multimedia NASA+ Images NASA Live NASA Apps Podcasts Image of the Day e-Books 3D Resources Interactives STEM Multimedia N",
+          "confidence": 0.72,
+          "validation_status": "accepted",
+          "source_url": "https://science.nasa.gov/planetary-defense/",
+          "source_id": "nasa",
+          "package_trial": true
+        }
+      ],
+      "narratives": [
+        {
+          "page_title": "Planetary Defense at NASA - NASA Science Facebook logo Instagram logo Linkedin logo",
+          "section": "raw_chunk_1",
+          "content": "Explore Search News & Events News & Events Recently Published Video Series on NASA+ Podcasts & Audio Blogs Newsletters Social Media Media Resources Multimedia Multimedia NASA+ Images NASA Live NASA Apps Podcasts Image of the Day e-Books 3D Resources Interactives STEM Multimedia NASA Brand & Usage Guidelines NASA+ Search Suggested Searches Climate Change Artemis Expedition 64 Mars perseverance SpaceX Crew-2 International Space Station View All Topics A-Z Home Missions Humans in Space Earth The Solar System The Universe Science Aeronautics Technology Learning Resources About NASA Español News & Events Multimedia NASA+ Highlights 2 min read NASA-Funded Study Shows How Controlled Burns Help Sequoias Survive Wildfires article 1 day ago 5 min read NASA Study Finds Near-Earth Asteroid Is Actually Comet article 5 days ago 3 min read What’s Up: July 2026 Skywatching Tips from NASA article 3 weeks",
+          "keywords": [
+            "Planetary Defense at NASA - NASA Science Facebook logo Instagram logo Linkedin logo",
+            "nasa"
+          ],
+          "source_url": "https://science.nasa.gov/planetary-defense/",
+          "source": "nasa",
+          "source_name": "nasa",
+          "source_role": "primary",
+          "origin": "api",
+          "type": "embedding_chunk",
+          "schema_version": "nasa_shadow_ready_v1",
+          "source_title": "Planetary Defense at NASA - NASA Science Facebook logo Instagram logo Linkedin logo"
+        }
+      ],
+      "warnings": []
+    },
+    {
+      "title": "Bennu",
+      "url": "https://science.nasa.gov/solar-system/asteroids/101955-bennu/",
+      "triples": [
+        {
+          "subject": "Bennu",
+          "predicate": "SOURCE_URL",
+          "object": "https://science.nasa.gov/solar-system/asteroids/101955-bennu/",
+          "evidence": "https://science.nasa.gov/solar-system/asteroids/101955-bennu/",
+          "confidence": 0.99,
+          "validation_status": "accepted",
+          "source_url": "https://science.nasa.gov/solar-system/asteroids/101955-bennu/",
+          "source_id": "nasa",
+          "package_trial": true
+        },
+        {
+          "subject": "Bennu",
+          "predicate": "HAS_TOPIC",
+          "object": "asteroid",
+          "evidence": "Explore Search News & Events News & Events Recently Published Video Series on NASA+ Podcasts & Audio Blogs Newsletters Social Media Media Resources Multimedia Multimedia NASA+ Images NASA Live NASA Apps Podcasts Image of the Day e-Books 3D Resources Interactives STEM Multimedia N",
+          "confidence": 0.84,
+          "validation_status": "accepted",
+          "source_url": "https://science.nasa.gov/solar-system/asteroids/101955-bennu/",
+          "source_id": "nasa",
+          "package_trial": true
+        },
+        {
+          "subject": "Bennu",
+          "predicate": "INSTANCE_OF",
+          "object": "asteroid",
+          "evidence": "Explore Search News & Events News & Events Recently Published Video Series on NASA+ Podcasts & Audio Blogs Newsletters Social Media Media Resources Multimedia Multimedia NASA+ Images NASA Live NASA Apps Podcasts Image of the Day e-Books 3D Resources Interactives STEM Multimedia N",
+          "confidence": 0.82,
+          "validation_status": "accepted",
+          "source_url": "https://science.nasa.gov/solar-system/asteroids/101955-bennu/",
+          "source_id": "nasa",
+          "package_trial": true
+        },
+        {
+          "subject": "Bennu",
+          "predicate": "INSTANCE_OF",
+          "object": "small body",
+          "evidence": "Explore Search News & Events News & Events Recently Published Video Series on NASA+ Podcasts & Audio Blogs Newsletters Social Media Media Resources Multimedia Multimedia NASA+ Images NASA Live NASA Apps Podcasts Image of the Day e-Books 3D Resources Interactives STEM Multimedia N",
+          "confidence": 0.72,
+          "validation_status": "accepted",
+          "source_url": "https://science.nasa.gov/solar-system/asteroids/101955-bennu/",
+          "source_id": "nasa",
+          "package_trial": true
+        }
+      ],
+      "narratives": [
+        {
+          "page_title": "Bennu - NASA Science",
+          "section": "raw_chunk_1",
+          "content": "Explore Search News & Events News & Events Recently Published Video Series on NASA+ Podcasts & Audio Blogs Newsletters Social Media Media Resources Multimedia Multimedia NASA+ Images NASA Live NASA Apps Podcasts Image of the Day e-Books 3D Resources Interactives STEM Multimedia NASA Brand & Usage Guidelines NASA+ Search Suggested Searches Climate Change Artemis Expedition 64 Mars perseverance SpaceX Crew-2 International Space Station View All Topics A-Z Home Missions Humans in Space Earth The Solar System The Universe Science Aeronautics Technology Learning Resources About NASA Español News & Events Multimedia NASA+ Highlights 2 min read NASA-Funded Study Shows How Controlled Burns Help Sequoias Survive Wildfires article 1 day ago 5 min read NASA Study Finds Near-Earth Asteroid Is Actually Comet article 5 days ago 3 min read What’s Up: July 2026 Skywatching Tips from NASA article 3 weeks",
+          "keywords": [
+            "Bennu - NASA Science",
+            "nasa"
+          ],
+          "source_url": "https://science.nasa.gov/solar-system/asteroids/101955-bennu/",
+          "source": "nasa",
+          "source_name": "nasa",
+          "source_role": "primary",
+          "origin": "api",
+          "type": "embedding_chunk",
+          "schema_version": "nasa_shadow_ready_v1",
+          "source_title": "Bennu - NASA Science"
+        }
+      ],
+      "warnings": []
+    },
+    {
+      "title": "Asteroid Psyche",
+      "url": "https://science.nasa.gov/solar-system/asteroids/16-psyche/",
+      "triples": [
+        {
+          "subject": "Asteroid Psyche",
+          "predicate": "SOURCE_URL",
+          "object": "https://science.nasa.gov/solar-system/asteroids/16-psyche/",
+          "evidence": "https://science.nasa.gov/solar-system/asteroids/16-psyche/",
+          "confidence": 0.99,
+          "validation_status": "accepted",
+          "source_url": "https://science.nasa.gov/solar-system/asteroids/16-psyche/",
+          "source_id": "nasa",
+          "package_trial": true
+        },
+        {
+          "subject": "Asteroid Psyche",
+          "predicate": "HAS_TOPIC",
+          "object": "asteroid",
+          "evidence": "Asteroid Psyche.",
+          "confidence": 0.84,
+          "validation_status": "accepted",
+          "source_url": "https://science.nasa.gov/solar-system/asteroids/16-psyche/",
+          "source_id": "nasa",
+          "package_trial": true
+        },
+        {
+          "subject": "Asteroid Psyche",
+          "predicate": "INSTANCE_OF",
+          "object": "asteroid",
+          "evidence": "Asteroid Psyche.",
+          "confidence": 0.82,
+          "validation_status": "accepted",
+          "source_url": "https://science.nasa.gov/solar-system/asteroids/16-psyche/",
+          "source_id": "nasa",
+          "package_trial": true
+        },
+        {
+          "subject": "Asteroid Psyche",
+          "predicate": "INSTANCE_OF",
+          "object": "small body",
+          "evidence": "Asteroid Psyche.",
+          "confidence": 0.72,
+          "validation_status": "accepted",
+          "source_url": "https://science.nasa.gov/solar-system/asteroids/16-psyche/",
+          "source_id": "nasa",
+          "package_trial": true
+        }
+      ],
+      "narratives": [
+        {
+          "page_title": "Asteroid Psyche",
+          "section": "raw_chunk_1",
+          "content": "Explore Search News & Events News & Events Recently Published Video Series on NASA+ Podcasts & Audio Blogs Newsletters Social Media Media Resources Multimedia Multimedia NASA+ Images NASA Live NASA Apps Podcasts Image of the Day e-Books 3D Resources Interactives STEM Multimedia NASA Brand & Usage Guidelines NASA+ Search Suggested Searches Climate Change Artemis Expedition 64 Mars perseverance SpaceX Crew-2 International Space Station View All Topics A-Z Home Missions Humans in Space Earth The Solar System The Universe Science Aeronautics Technology Learning Resources About NASA Español News & Events Multimedia NASA+ Highlights 2 min read NASA-Funded Study Shows How Controlled Burns Help Sequoias Survive Wildfires article 1 day ago 5 min read NASA Study Finds Near-Earth Asteroid Is Actually Comet article 5 days ago 3 min read What’s Up: July 2026 Skywatching Tips from NASA article 3 weeks",
+          "keywords": [
+            "Asteroid Psyche",
+            "nasa"
+          ],
+          "source_url": "https://science.nasa.gov/solar-system/asteroids/16-psyche/",
+          "source": "nasa",
+          "source_name": "nasa",
+          "source_role": "primary",
+          "origin": "api",
+          "type": "embedding_chunk",
+          "schema_version": "nasa_shadow_ready_v1",
+          "source_title": "Asteroid Psyche"
+        }
+      ],
+      "warnings": []
+    },
+    {
+      "title": "Asteroid 2024 YR4",
+      "url": "https://science.nasa.gov/solar-system/asteroids/2024-yr4/",
+      "triples": [
+        {
+          "subject": "Asteroid 2024 YR4",
+          "predicate": "SOURCE_URL",
+          "object": "https://science.nasa.gov/solar-system/asteroids/2024-yr4/",
+          "evidence": "https://science.nasa.gov/solar-system/asteroids/2024-yr4/",
+          "confidence": 0.99,
+          "validation_status": "accepted",
+          "source_url": "https://science.nasa.gov/solar-system/asteroids/2024-yr4/",
+          "source_id": "nasa",
+          "package_trial": true
+        },
+        {
+          "subject": "Asteroid 2024 YR4",
+          "predicate": "HAS_TOPIC",
+          "object": "asteroid",
+          "evidence": "Asteroid 2024 YR4.",
+          "confidence": 0.84,
+          "validation_status": "accepted",
+          "source_url": "https://science.nasa.gov/solar-system/asteroids/2024-yr4/",
+          "source_id": "nasa",
+          "package_trial": true
+        },
+        {
+          "subject": "Asteroid 2024 YR4",
+          "predicate": "INSTANCE_OF",
+          "object": "asteroid",
+          "evidence": "Asteroid 2024 YR4.",
+          "confidence": 0.82,
+          "validation_status": "accepted",
+          "source_url": "https://science.nasa.gov/solar-system/asteroids/2024-yr4/",
+          "source_id": "nasa",
+          "package_trial": true
+        },
+        {
+          "subject": "Asteroid 2024 YR4",
+          "predicate": "INSTANCE_OF",
+          "object": "small body",
+          "evidence": "Asteroid 2024 YR4.",
+          "confidence": 0.72,
+          "validation_status": "accepted",
+          "source_url": "https://science.nasa.gov/solar-system/asteroids/2024-yr4/",
+          "source_id": "nasa",
+          "package_trial": true
+        }
+      ],
+      "narratives": [
+        {
+          "page_title": "Asteroid 2024 YR4",
+          "section": "raw_chunk_1",
+          "content": "Explore Search News & Events News & Events Recently Published Video Series on NASA+ Podcasts & Audio Blogs Newsletters Social Media Media Resources Multimedia Multimedia NASA+ Images NASA Live NASA Apps Podcasts Image of the Day e-Books 3D Resources Interactives STEM Multimedia NASA Brand & Usage Guidelines NASA+ Search Suggested Searches Climate Change Artemis Expedition 64 Mars perseverance SpaceX Crew-2 International Space Station View All Topics A-Z Home Missions Humans in Space Earth The Solar System The Universe Science Aeronautics Technology Learning Resources About NASA Español News & Events Multimedia NASA+ Highlights 2 min read NASA-Funded Study Shows How Controlled Burns Help Sequoias Survive Wildfires article 1 day ago 5 min read NASA Study Finds Near-Earth Asteroid Is Actually Comet article 5 days ago 3 min read What’s Up: July 2026 Skywatching Tips from NASA article 3 weeks",
+          "keywords": [
+            "Asteroid 2024 YR4",
+            "nasa"
+          ],
+          "source_url": "https://science.nasa.gov/solar-system/asteroids/2024-yr4/",
+          "source": "nasa",
+          "source_name": "nasa",
+          "source_role": "primary",
+          "origin": "api",
+          "type": "embedding_chunk",
+          "schema_version": "nasa_shadow_ready_v1",
+          "source_title": "Asteroid 2024 YR4"
+        }
+      ],
+      "warnings": []
+    }
+  ],
+  "quality_flags": [],
+  "approval_status": "pending",
+  "approval_template": "evaluation\\four_source_expansion\\nasa_limited_shadow_package_approval_phase45.json",
+  "out_dir": "evaluation\\four_source_expansion\\nasa_limited_shadow_package_phase45",
+  "formal_shadow_write_plan": {
+    "execution_status": "not_run",
+    "requires_manual_approval": true,
+    "source_id": "nasa",
+    "approved_item_count_required": 20,
+    "planned_triples": 80,
+    "planned_narratives": 80,
+    "allowed_scope": "shadow materialization path only",
+    "safety_guards": [
+      "ACTIVE_SOURCE remains zh_wikipedia",
+      "nasa remains disabled/shadow",
+      "no Chroma write",
+      "no Neo4j write",
+      "manual approval file required before any formal shadow write"
+    ]
+  },
+  "formal_triples_write": false,
+  "formal_narratives_write": false,
+  "chroma_write": false,
+  "neo4j_write": false,
+  "network": false,
+  "active_source": "zh_wikipedia",
+  "registry": {
+    "zh_wikipedia": "active",
+    "nasa": "disabled",
+    "esa": "disabled",
+    "wikidata": "disabled"
+  },
+  "active_source_unchanged": true,
+  "recommended_next_action": "ready_for_manual_approval_to_write_formal_shadow_directory"
+}

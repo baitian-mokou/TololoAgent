@@ -1,0 +1,17 @@
+{
+  "package": "nasa_limited_shadow_package_phase45",
+  "source_id": "nasa",
+  "generated_at": "2026-07-22T05:47:12.577551+00:00",
+  "items": 20,
+  "triples": 80,
+  "narratives": 80,
+  "narrative_trial_json": "evaluation\\four_source_expansion\\nasa_shadow_triples_trial_phase43.json",
+  "relation_preview_json": "evaluation\\four_source_expansion\\nasa_text_relation_preview_phase44.json",
+  "formal_write": false,
+  "approval_status": "pending",
+  "files": {
+    "triples_preview": "evaluation\\four_source_expansion\\nasa_limited_shadow_package_phase45\\triples_preview.json",
+    "narratives_preview": "evaluation\\four_source_expansion\\nasa_limited_shadow_package_phase45\\narratives_preview.json",
+    "review_sample": "evaluation\\four_source_expansion\\nasa_limited_shadow_package_phase45\\review_sample.md"
+  }
+}

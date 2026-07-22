@@ -1,0 +1,46 @@
+[
+  {
+    "subject": "Asteroids: Exploration",
+    "predicate": "SOURCE_URL",
+    "object": "https://science.nasa.gov/solar-system/asteroids/exploration/",
+    "evidence": "https://science.nasa.gov/solar-system/asteroids/exploration/",
+    "confidence": 0.99,
+    "validation_status": "accepted",
+    "source_url": "https://science.nasa.gov/solar-system/asteroids/exploration/",
+    "source_id": "nasa",
+    "package_trial": true
+  },
+  {
+    "subject": "Asteroids: Exploration",
+    "predicate": "HAS_TOPIC",
+    "object": "asteroid",
+    "evidence": "Asteroids: Exploration.",
+    "confidence": 0.84,
+    "validation_status": "accepted",
+    "source_url": "https://science.nasa.gov/solar-system/asteroids/exploration/",
+    "source_id": "nasa",
+    "package_trial": true
+  },
+  {
+    "subject": "Asteroids: Exploration",
+    "predicate": "INSTANCE_OF",
+    "object": "asteroid",
+    "evidence": "Asteroids: Exploration.",
+    "confidence": 0.82,
+    "validation_status": "accepted",
+    "source_url": "https://science.nasa.gov/solar-system/asteroids/exploration/",
+    "source_id": "nasa",
+    "package_trial": true
+  },
+  {
+    "subject": "Asteroids: Exploration",
+    "predicate": "INSTANCE_OF",
+    "object": "small body",
+    "evidence": "Asteroids: Exploration.",
+    "confidence": 0.72,
+    "validation_status": "accepted",
+    "source_url": "https://science.nasa.gov/solar-system/asteroids/exploration/",
+    "source_id": "nasa",
+    "package_trial": true
+  }
+]

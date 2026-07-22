@@ -1,0 +1,46 @@
+[
+  {
+    "subject": "Asteroid 2024 YR4",
+    "predicate": "SOURCE_URL",
+    "object": "https://science.nasa.gov/solar-system/asteroids/2024-yr4/",
+    "evidence": "https://science.nasa.gov/solar-system/asteroids/2024-yr4/",
+    "confidence": 0.99,
+    "validation_status": "accepted",
+    "source_url": "https://science.nasa.gov/solar-system/asteroids/2024-yr4/",
+    "source_id": "nasa",
+    "package_trial": true
+  },
+  {
+    "subject": "Asteroid 2024 YR4",
+    "predicate": "HAS_TOPIC",
+    "object": "asteroid",
+    "evidence": "Asteroid 2024 YR4.",
+    "confidence": 0.84,
+    "validation_status": "accepted",
+    "source_url": "https://science.nasa.gov/solar-system/asteroids/2024-yr4/",
+    "source_id": "nasa",
+    "package_trial": true
+  },
+  {
+    "subject": "Asteroid 2024 YR4",
+    "predicate": "INSTANCE_OF",
+    "object": "asteroid",
+    "evidence": "Asteroid 2024 YR4.",
+    "confidence": 0.82,
+    "validation_status": "accepted",
+    "source_url": "https://science.nasa.gov/solar-system/asteroids/2024-yr4/",
+    "source_id": "nasa",
+    "package_trial": true
+  },
+  {
+    "subject": "Asteroid 2024 YR4",
+    "predicate": "INSTANCE_OF",
+    "object": "small body",
+    "evidence": "Asteroid 2024 YR4.",
+    "confidence": 0.72,
+    "validation_status": "accepted",
+    "source_url": "https://science.nasa.gov/solar-system/asteroids/2024-yr4/",
+    "source_id": "nasa",
+    "package_trial": true
+  }
+]

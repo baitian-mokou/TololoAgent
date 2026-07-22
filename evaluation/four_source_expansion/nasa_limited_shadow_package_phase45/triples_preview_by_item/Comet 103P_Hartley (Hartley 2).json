@@ -1,0 +1,46 @@
+[
+  {
+    "subject": "Comet 103P/Hartley (Hartley 2)",
+    "predicate": "SOURCE_URL",
+    "object": "https://science.nasa.gov/solar-system/comets/103p-hartley-hartley-2/",
+    "evidence": "https://science.nasa.gov/solar-system/comets/103p-hartley-hartley-2/",
+    "confidence": 0.99,
+    "validation_status": "accepted",
+    "source_url": "https://science.nasa.gov/solar-system/comets/103p-hartley-hartley-2/",
+    "source_id": "nasa",
+    "package_trial": true
+  },
+  {
+    "subject": "Comet 103P/Hartley (Hartley 2)",
+    "predicate": "HAS_TOPIC",
+    "object": "comet",
+    "evidence": "Comet 103P/Hartley (Hartley 2).",
+    "confidence": 0.84,
+    "validation_status": "accepted",
+    "source_url": "https://science.nasa.gov/solar-system/comets/103p-hartley-hartley-2/",
+    "source_id": "nasa",
+    "package_trial": true
+  },
+  {
+    "subject": "Comet 103P/Hartley (Hartley 2)",
+    "predicate": "INSTANCE_OF",
+    "object": "comet",
+    "evidence": "Comet 103P/Hartley (Hartley 2).",
+    "confidence": 0.82,
+    "validation_status": "accepted",
+    "source_url": "https://science.nasa.gov/solar-system/comets/103p-hartley-hartley-2/",
+    "source_id": "nasa",
+    "package_trial": true
+  },
+  {
+    "subject": "Comet 103P/Hartley (Hartley 2)",
+    "predicate": "INSTANCE_OF",
+    "object": "small body",
+    "evidence": "Comet 103P/Hartley (Hartley 2).",
+    "confidence": 0.72,
+    "validation_status": "accepted",
+    "source_url": "https://science.nasa.gov/solar-system/comets/103p-hartley-hartley-2/",
+    "source_id": "nasa",
+    "package_trial": true
+  }
+]

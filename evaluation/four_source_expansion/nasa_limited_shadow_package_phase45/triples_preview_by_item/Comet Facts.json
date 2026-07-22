@@ -1,0 +1,46 @@
+[
+  {
+    "subject": "Comet Facts",
+    "predicate": "SOURCE_URL",
+    "object": "https://science.nasa.gov/solar-system/comets/facts/",
+    "evidence": "https://science.nasa.gov/solar-system/comets/facts/",
+    "confidence": 0.99,
+    "validation_status": "accepted",
+    "source_url": "https://science.nasa.gov/solar-system/comets/facts/",
+    "source_id": "nasa",
+    "package_trial": true
+  },
+  {
+    "subject": "Comet Facts",
+    "predicate": "HAS_TOPIC",
+    "object": "comet",
+    "evidence": "Comet Facts.",
+    "confidence": 0.84,
+    "validation_status": "accepted",
+    "source_url": "https://science.nasa.gov/solar-system/comets/facts/",
+    "source_id": "nasa",
+    "package_trial": true
+  },
+  {
+    "subject": "Comet Facts",
+    "predicate": "INSTANCE_OF",
+    "object": "comet",
+    "evidence": "Comet Facts.",
+    "confidence": 0.82,
+    "validation_status": "accepted",
+    "source_url": "https://science.nasa.gov/solar-system/comets/facts/",
+    "source_id": "nasa",
+    "package_trial": true
+  },
+  {
+    "subject": "Comet Facts",
+    "predicate": "INSTANCE_OF",
+    "object": "small body",
+    "evidence": "Comet Facts.",
+    "confidence": 0.72,
+    "validation_status": "accepted",
+    "source_url": "https://science.nasa.gov/solar-system/comets/facts/",
+    "source_id": "nasa",
+    "package_trial": true
+  }
+]

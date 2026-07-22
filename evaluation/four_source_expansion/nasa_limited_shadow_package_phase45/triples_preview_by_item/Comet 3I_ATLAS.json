@@ -1,0 +1,46 @@
+[
+  {
+    "subject": "Comet 3I/ATLAS",
+    "predicate": "SOURCE_URL",
+    "object": "https://science.nasa.gov/solar-system/comets/3i-atlas/",
+    "evidence": "https://science.nasa.gov/solar-system/comets/3i-atlas/",
+    "confidence": 0.99,
+    "validation_status": "accepted",
+    "source_url": "https://science.nasa.gov/solar-system/comets/3i-atlas/",
+    "source_id": "nasa",
+    "package_trial": true
+  },
+  {
+    "subject": "Comet 3I/ATLAS",
+    "predicate": "HAS_TOPIC",
+    "object": "comet",
+    "evidence": "Comet 3I/ATLAS.",
+    "confidence": 0.84,
+    "validation_status": "accepted",
+    "source_url": "https://science.nasa.gov/solar-system/comets/3i-atlas/",
+    "source_id": "nasa",
+    "package_trial": true
+  },
+  {
+    "subject": "Comet 3I/ATLAS",
+    "predicate": "INSTANCE_OF",
+    "object": "comet",
+    "evidence": "Comet 3I/ATLAS.",
+    "confidence": 0.82,
+    "validation_status": "accepted",
+    "source_url": "https://science.nasa.gov/solar-system/comets/3i-atlas/",
+    "source_id": "nasa",
+    "package_trial": true
+  },
+  {
+    "subject": "Comet 3I/ATLAS",
+    "predicate": "INSTANCE_OF",
+    "object": "small body",
+    "evidence": "Comet 3I/ATLAS.",
+    "confidence": 0.72,
+    "validation_status": "accepted",
+    "source_url": "https://science.nasa.gov/solar-system/comets/3i-atlas/",
+    "source_id": "nasa",
+    "package_trial": true
+  }
+]
