@@ -1,0 +1,56 @@
+{
+  "phase": "Phase 102",
+  "mode": "four_source_review_closure_nasa_conditional",
+  "generated_at": "2026-07-22T18:45:27.294079+00:00",
+  "input_reports": {
+    "phase101": "evaluation\\four_source_expansion\\phase101\\nasa_structured_review_sample_phase101.json",
+    "phase95": "evaluation\\four_source_expansion\\phase95\\four_source_repaired_sample_quality_closure_phase95.json"
+  },
+  "overall_verdict": "four_source_manual_review_ready_approval_pending",
+  "source_statuses": {
+    "nasa": {
+      "verdict": "manual_review_ready_conditional",
+      "sample_count": 5,
+      "classes": {
+        "conditional_review_candidate": 3,
+        "strong_review_candidate": 2
+      },
+      "manual_review_queue_status": "can_reenter_manual_review_with_endpoint_risk_labels",
+      "risk": "NASA restored to manual-review queue with endpoint/method labels; conditional samples are not quality-pass."
+    },
+    "esa": {
+      "verdict": "go_with_conditions_manual_review",
+      "sample_count": 9,
+      "risk": "ESA remains best-readable non-NASA source but still has minor index/news risk."
+    },
+    "zh_wikipedia": {
+      "verdict": "go_with_conditions_template_table_noise",
+      "sample_count": 3,
+      "risk": "zh_wikipedia is reviewable with template/table noise risk."
+    },
+    "wikidata": {
+      "verdict": "go_with_conditions_thin_entity_facts",
+      "sample_count": 10,
+      "risk": "Wikidata is reviewable as thin entity facts, not rich narrative."
+    }
+  },
+  "shadow_apply_preflight_recommended": false,
+  "production_ready": false,
+  "apply_approved": false,
+  "ingest_approved": false,
+  "preflight_approved": false,
+  "formal_raw_write": false,
+  "formal_default_triples_write": false,
+  "chroma_write": false,
+  "neo4j_write": false,
+  "clear_source_ingestion_outputs_called": false,
+  "active_source": "zh_wikipedia",
+  "active_source_unchanged": true,
+  "registry": {
+    "zh_wikipedia": "active",
+    "nasa": "disabled",
+    "esa": "disabled",
+    "wikidata": "disabled"
+  },
+  "recommended_next": "manual/reviewer four-source content-quality review; do not start apply/preflight."
+}
