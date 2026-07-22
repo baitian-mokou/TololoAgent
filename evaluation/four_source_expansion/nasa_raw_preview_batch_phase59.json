@@ -1,0 +1,601 @@
+{
+  "phase": "Phase 59",
+  "mode": "nasa_controlled_raw_preview_batch",
+  "generated_at": "2026-07-22T11:48:03.721776+00:00",
+  "source_id": "nasa",
+  "limit": 30,
+  "selected": 30,
+  "attempted": 30,
+  "accepted_for_package": 28,
+  "rejected": 0,
+  "failed": 2,
+  "prior_excluded": 0,
+  "duplicate_excluded": 0,
+  "invalid_excluded": 0,
+  "candidate_statuses": [
+    {
+      "status": "failed",
+      "reason": "TimeoutError",
+      "url": "https://nssdc.gsfc.nasa.gov/planetary/factsheet",
+      "title": ""
+    },
+    {
+      "status": "accepted_for_package",
+      "reason": "quality_accepted",
+      "title": "Solar System Exploration",
+      "url": "https://science.nasa.gov/solar-system",
+      "quality_score": 64,
+      "quality_triage": "accepted",
+      "quality_reasons": [
+        "official or academic domain",
+        "science keyword hits=24",
+        "fact or overview page signal",
+        "mission page signal",
+        "reference signal present",
+        "publication/abstract signal",
+        "high link density",
+        "news/update signal in body/navigation",
+        "media/gallery signal in body/navigation"
+      ],
+      "raw_preview_path": "evaluation\\four_source_expansion\\nasa_raw_preview_batch_phase59\\raw_preview_by_item\\02_Solar System Exploration.json"
+    },
+    {
+      "status": "accepted_for_package",
+      "reason": "quality_accepted",
+      "title": "About the Planets Facebook logo Instagram logo",
+      "url": "https://science.nasa.gov/solar-system/planets",
+      "quality_score": 64,
+      "quality_triage": "accepted",
+      "quality_reasons": [
+        "official or academic domain",
+        "science keyword hits=21",
+        "fact or overview page signal",
+        "mission page signal",
+        "reference signal present",
+        "publication/abstract signal",
+        "high link density",
+        "news/update signal in body/navigation",
+        "media/gallery signal in body/navigation"
+      ],
+      "raw_preview_path": "evaluation\\four_source_expansion\\nasa_raw_preview_batch_phase59\\raw_preview_by_item\\03_About the Planets Facebook logo Instagram logo.json"
+    },
+    {
+      "status": "accepted_for_package",
+      "reason": "quality_accepted",
+      "title": "Moons",
+      "url": "https://science.nasa.gov/solar-system/moons",
+      "quality_score": 64,
+      "quality_triage": "accepted",
+      "quality_reasons": [
+        "official or academic domain",
+        "science keyword hits=24",
+        "fact or overview page signal",
+        "mission page signal",
+        "reference signal present",
+        "publication/abstract signal",
+        "high link density",
+        "news/update signal in body/navigation",
+        "media/gallery signal in body/navigation"
+      ],
+      "raw_preview_path": "evaluation\\four_source_expansion\\nasa_raw_preview_batch_phase59\\raw_preview_by_item\\04_Moons.json"
+    },
+    {
+      "status": "failed",
+      "reason": "HTTPError",
+      "url": "https://science.nasa.gov/solar-system/dwarf-planets",
+      "title": ""
+    },
+    {
+      "status": "accepted_for_package",
+      "reason": "quality_accepted",
+      "title": "Asteroids",
+      "url": "https://science.nasa.gov/solar-system/asteroids",
+      "quality_score": 64,
+      "quality_triage": "accepted",
+      "quality_reasons": [
+        "official or academic domain",
+        "science keyword hits=26",
+        "fact or overview page signal",
+        "mission page signal",
+        "reference signal present",
+        "publication/abstract signal",
+        "high link density",
+        "news/update signal in body/navigation",
+        "media/gallery signal in body/navigation"
+      ],
+      "raw_preview_path": "evaluation\\four_source_expansion\\nasa_raw_preview_batch_phase59\\raw_preview_by_item\\06_Asteroids.json"
+    },
+    {
+      "status": "accepted_for_package",
+      "reason": "quality_accepted",
+      "title": "Comets",
+      "url": "https://science.nasa.gov/solar-system/comets",
+      "quality_score": 68,
+      "quality_triage": "accepted",
+      "quality_reasons": [
+        "official or academic domain",
+        "science keyword hits=24",
+        "fact or overview page signal",
+        "mission page signal",
+        "reference signal present",
+        "publication/abstract signal",
+        "high link density",
+        "news/update signal in body/navigation",
+        "media/gallery signal in body/navigation"
+      ],
+      "raw_preview_path": "evaluation\\four_source_expansion\\nasa_raw_preview_batch_phase59\\raw_preview_by_item\\07_Comets.json"
+    },
+    {
+      "status": "accepted_for_package",
+      "reason": "quality_accepted",
+      "title": "Science Missions - NASA Science",
+      "url": "https://science.nasa.gov/mission",
+      "quality_score": 73,
+      "quality_triage": "accepted",
+      "quality_reasons": [
+        "official or academic domain",
+        "science keyword hits=24",
+        "fact or overview page signal",
+        "mission page signal",
+        "reference signal present",
+        "publication/abstract signal",
+        "high link density",
+        "news/update signal in body/navigation",
+        "media/gallery signal in body/navigation"
+      ],
+      "raw_preview_path": "evaluation\\four_source_expansion\\nasa_raw_preview_batch_phase59\\raw_preview_by_item\\08_Science Missions - NASA Science.json"
+    },
+    {
+      "status": "accepted_for_package",
+      "reason": "quality_accepted",
+      "title": "Juno - NASA Science",
+      "url": "https://science.nasa.gov/mission/juno",
+      "quality_score": 100,
+      "quality_triage": "accepted",
+      "quality_reasons": [
+        "official or academic domain",
+        "science keyword hits=27",
+        "fact or overview page signal",
+        "mission page signal",
+        "table evidence present",
+        "reference signal present",
+        "publication/abstract signal",
+        "news/update signal in body/navigation",
+        "media/gallery signal in body/navigation"
+      ],
+      "raw_preview_path": "evaluation\\four_source_expansion\\nasa_raw_preview_batch_phase59\\raw_preview_by_item\\09_Juno - NASA Science.json"
+    },
+    {
+      "status": "accepted_for_package",
+      "reason": "quality_accepted",
+      "title": "Cassini-Huygens - NASA Science",
+      "url": "https://science.nasa.gov/mission/cassini",
+      "quality_score": 64,
+      "quality_triage": "accepted",
+      "quality_reasons": [
+        "official or academic domain",
+        "science keyword hits=23",
+        "fact or overview page signal",
+        "mission page signal",
+        "reference signal present",
+        "publication/abstract signal",
+        "high link density",
+        "news/update signal in body/navigation",
+        "media/gallery signal in body/navigation"
+      ],
+      "raw_preview_path": "evaluation\\four_source_expansion\\nasa_raw_preview_batch_phase59\\raw_preview_by_item\\10_Cassini-Huygens - NASA Science.json"
+    },
+    {
+      "status": "accepted_for_package",
+      "reason": "quality_accepted",
+      "title": "Voyager - NASA Science",
+      "url": "https://science.nasa.gov/mission/voyager",
+      "quality_score": 64,
+      "quality_triage": "accepted",
+      "quality_reasons": [
+        "official or academic domain",
+        "science keyword hits=23",
+        "fact or overview page signal",
+        "mission page signal",
+        "reference signal present",
+        "publication/abstract signal",
+        "high link density",
+        "news/update signal in body/navigation",
+        "media/gallery signal in body/navigation"
+      ],
+      "raw_preview_path": "evaluation\\four_source_expansion\\nasa_raw_preview_batch_phase59\\raw_preview_by_item\\11_Voyager - NASA Science.json"
+    },
+    {
+      "status": "accepted_for_package",
+      "reason": "quality_accepted",
+      "title": "New Horizons",
+      "url": "https://science.nasa.gov/mission/new-horizons",
+      "quality_score": 100,
+      "quality_triage": "accepted",
+      "quality_reasons": [
+        "official or academic domain",
+        "science keyword hits=27",
+        "fact or overview page signal",
+        "mission page signal",
+        "table evidence present",
+        "reference signal present",
+        "publication/abstract signal",
+        "news/update signal in body/navigation",
+        "media/gallery signal in body/navigation"
+      ],
+      "raw_preview_path": "evaluation\\four_source_expansion\\nasa_raw_preview_batch_phase59\\raw_preview_by_item\\12_New Horizons.json"
+    },
+    {
+      "status": "accepted_for_package",
+      "reason": "quality_accepted",
+      "title": "Mars 2020: Perseverance Rover - NASA Science",
+      "url": "https://science.nasa.gov/mission/mars-2020-perseverance",
+      "quality_score": 92,
+      "quality_triage": "accepted",
+      "quality_reasons": [
+        "official or academic domain",
+        "science keyword hits=25",
+        "fact or overview page signal",
+        "mission page signal",
+        "reference signal present",
+        "publication/abstract signal",
+        "news/update signal in body/navigation",
+        "media/gallery signal in body/navigation"
+      ],
+      "raw_preview_path": "evaluation\\four_source_expansion\\nasa_raw_preview_batch_phase59\\raw_preview_by_item\\13_Mars 2020_ Perseverance Rover - NASA Science.json"
+    },
+    {
+      "status": "accepted_for_package",
+      "reason": "quality_accepted",
+      "title": "About the Planets Facebook logo Instagram logo",
+      "url": "https://solarsystem.nasa.gov/planets/overview",
+      "quality_score": 64,
+      "quality_triage": "accepted",
+      "quality_reasons": [
+        "official or academic domain",
+        "science keyword hits=21",
+        "fact or overview page signal",
+        "mission page signal",
+        "reference signal present",
+        "publication/abstract signal",
+        "high link density",
+        "news/update signal in body/navigation",
+        "media/gallery signal in body/navigation"
+      ],
+      "raw_preview_path": "evaluation\\four_source_expansion\\nasa_raw_preview_batch_phase59\\raw_preview_by_item\\14_About the Planets Facebook logo Instagram logo.json"
+    },
+    {
+      "status": "accepted_for_package",
+      "reason": "quality_accepted",
+      "title": "Moons",
+      "url": "https://solarsystem.nasa.gov/moons/overview",
+      "quality_score": 64,
+      "quality_triage": "accepted",
+      "quality_reasons": [
+        "official or academic domain",
+        "science keyword hits=24",
+        "fact or overview page signal",
+        "mission page signal",
+        "reference signal present",
+        "publication/abstract signal",
+        "high link density",
+        "news/update signal in body/navigation",
+        "media/gallery signal in body/navigation"
+      ],
+      "raw_preview_path": "evaluation\\four_source_expansion\\nasa_raw_preview_batch_phase59\\raw_preview_by_item\\15_Moons.json"
+    },
+    {
+      "status": "accepted_for_package",
+      "reason": "quality_accepted",
+      "title": "Asteroids, Comets, and Meteors",
+      "url": "https://solarsystem.nasa.gov/asteroids-comets-and-meteors/overview",
+      "quality_score": 68,
+      "quality_triage": "accepted",
+      "quality_reasons": [
+        "official or academic domain",
+        "science keyword hits=24",
+        "fact or overview page signal",
+        "mission page signal",
+        "reference signal present",
+        "publication/abstract signal",
+        "high link density",
+        "news/update signal in body/navigation",
+        "media/gallery signal in body/navigation"
+      ],
+      "raw_preview_path": "evaluation\\four_source_expansion\\nasa_raw_preview_batch_phase59\\raw_preview_by_item\\16_Asteroids, Comets, and Meteors.json"
+    },
+    {
+      "status": "accepted_for_package",
+      "reason": "quality_accepted",
+      "title": "Science Missions - NASA Science",
+      "url": "https://solarsystem.nasa.gov/missions",
+      "quality_score": 73,
+      "quality_triage": "accepted",
+      "quality_reasons": [
+        "official or academic domain",
+        "science keyword hits=24",
+        "fact or overview page signal",
+        "mission page signal",
+        "reference signal present",
+        "publication/abstract signal",
+        "high link density",
+        "news/update signal in body/navigation",
+        "media/gallery signal in body/navigation"
+      ],
+      "raw_preview_path": "evaluation\\four_source_expansion\\nasa_raw_preview_batch_phase59\\raw_preview_by_item\\17_Science Missions - NASA Science.json"
+    },
+    {
+      "status": "accepted_for_package",
+      "reason": "quality_accepted",
+      "title": "What’s Up: July 2026 Skywatching Tips from NASA - NASA Science",
+      "url": "https://science.nasa.gov/solar-system/whats-up-july-2026-skywatching-tips-from-nasa",
+      "quality_score": 64,
+      "quality_triage": "accepted",
+      "quality_reasons": [
+        "official or academic domain",
+        "science keyword hits=23",
+        "fact or overview page signal",
+        "mission page signal",
+        "reference signal present",
+        "publication/abstract signal",
+        "high link density",
+        "news/update signal in body/navigation",
+        "media/gallery signal in body/navigation"
+      ],
+      "raw_preview_path": "evaluation\\four_source_expansion\\nasa_raw_preview_batch_phase59\\raw_preview_by_item\\18_What’s Up_ July 2026 Skywatching Tips from NASA - NASA Science.json"
+    },
+    {
+      "status": "accepted_for_package",
+      "reason": "quality_accepted",
+      "title": "James Webb Space Telescope - NASA Science",
+      "url": "https://science.nasa.gov/mission/webb",
+      "quality_score": 88,
+      "quality_triage": "accepted",
+      "quality_reasons": [
+        "official or academic domain",
+        "science keyword hits=25",
+        "fact or overview page signal",
+        "mission page signal",
+        "reference signal present",
+        "publication/abstract signal",
+        "news/update signal in body/navigation",
+        "media/gallery signal in body/navigation"
+      ],
+      "raw_preview_path": "evaluation\\four_source_expansion\\nasa_raw_preview_batch_phase59\\raw_preview_by_item\\19_James Webb Space Telescope - NASA Science.json"
+    },
+    {
+      "status": "accepted_for_package",
+      "reason": "quality_accepted",
+      "title": "Hubble Space Telescope - NASA Science",
+      "url": "https://science.nasa.gov/mission/hubble",
+      "quality_score": 64,
+      "quality_triage": "accepted",
+      "quality_reasons": [
+        "official or academic domain",
+        "science keyword hits=25",
+        "fact or overview page signal",
+        "mission page signal",
+        "reference signal present",
+        "publication/abstract signal",
+        "high link density",
+        "news/update signal in body/navigation",
+        "media/gallery signal in body/navigation"
+      ],
+      "raw_preview_path": "evaluation\\four_source_expansion\\nasa_raw_preview_batch_phase59\\raw_preview_by_item\\20_Hubble Space Telescope - NASA Science.json"
+    },
+    {
+      "status": "accepted_for_package",
+      "reason": "quality_accepted",
+      "title": "NASA's OSIRIS-REx Mission to Asteroid Bennu",
+      "url": "https://science.nasa.gov/mission/osiris-rex",
+      "quality_score": 64,
+      "quality_triage": "accepted",
+      "quality_reasons": [
+        "official or academic domain",
+        "science keyword hits=24",
+        "fact or overview page signal",
+        "mission page signal",
+        "reference signal present",
+        "publication/abstract signal",
+        "high link density",
+        "news/update signal in body/navigation",
+        "media/gallery signal in body/navigation"
+      ],
+      "raw_preview_path": "evaluation\\four_source_expansion\\nasa_raw_preview_batch_phase59\\raw_preview_by_item\\21_NASA's OSIRIS-REx Mission to Asteroid Bennu.json"
+    },
+    {
+      "status": "accepted_for_package",
+      "reason": "quality_accepted",
+      "title": "Earth's Moon",
+      "url": "https://science.nasa.gov/moon",
+      "quality_score": 68,
+      "quality_triage": "accepted",
+      "quality_reasons": [
+        "official or academic domain",
+        "science keyword hits=23",
+        "fact or overview page signal",
+        "mission page signal",
+        "reference signal present",
+        "publication/abstract signal",
+        "high link density",
+        "news/update signal in body/navigation",
+        "media/gallery signal in body/navigation"
+      ],
+      "raw_preview_path": "evaluation\\four_source_expansion\\nasa_raw_preview_batch_phase59\\raw_preview_by_item\\22_Earth's Moon.json"
+    },
+    {
+      "status": "accepted_for_package",
+      "reason": "quality_accepted",
+      "title": "Pluto & Dwarf Planets",
+      "url": "https://science.nasa.gov/dwarf-planets",
+      "quality_score": 64,
+      "quality_triage": "accepted",
+      "quality_reasons": [
+        "official or academic domain",
+        "science keyword hits=23",
+        "fact or overview page signal",
+        "mission page signal",
+        "reference signal present",
+        "publication/abstract signal",
+        "high link density",
+        "news/update signal in body/navigation",
+        "media/gallery signal in body/navigation"
+      ],
+      "raw_preview_path": "evaluation\\four_source_expansion\\nasa_raw_preview_batch_phase59\\raw_preview_by_item\\23_Pluto & Dwarf Planets.json"
+    },
+    {
+      "status": "accepted_for_package",
+      "reason": "quality_accepted",
+      "title": "Asteroids, Comets, and Meteors",
+      "url": "https://science.nasa.gov/asteroids-comets-meteors",
+      "quality_score": 68,
+      "quality_triage": "accepted",
+      "quality_reasons": [
+        "official or academic domain",
+        "science keyword hits=24",
+        "fact or overview page signal",
+        "mission page signal",
+        "reference signal present",
+        "publication/abstract signal",
+        "high link density",
+        "news/update signal in body/navigation",
+        "media/gallery signal in body/navigation"
+      ],
+      "raw_preview_path": "evaluation\\four_source_expansion\\nasa_raw_preview_batch_phase59\\raw_preview_by_item\\24_Asteroids, Comets, and Meteors.json"
+    },
+    {
+      "status": "accepted_for_package",
+      "reason": "quality_accepted",
+      "title": "Kuiper Belt",
+      "url": "https://science.nasa.gov/solar-system/kuiper-belt",
+      "quality_score": 64,
+      "quality_triage": "accepted",
+      "quality_reasons": [
+        "official or academic domain",
+        "science keyword hits=23",
+        "fact or overview page signal",
+        "mission page signal",
+        "reference signal present",
+        "publication/abstract signal",
+        "high link density",
+        "news/update signal in body/navigation",
+        "media/gallery signal in body/navigation"
+      ],
+      "raw_preview_path": "evaluation\\four_source_expansion\\nasa_raw_preview_batch_phase59\\raw_preview_by_item\\25_Kuiper Belt.json"
+    },
+    {
+      "status": "accepted_for_package",
+      "reason": "quality_accepted",
+      "title": "Oort Cloud",
+      "url": "https://science.nasa.gov/solar-system/oort-cloud",
+      "quality_score": 64,
+      "quality_triage": "accepted",
+      "quality_reasons": [
+        "official or academic domain",
+        "science keyword hits=22",
+        "fact or overview page signal",
+        "mission page signal",
+        "reference signal present",
+        "publication/abstract signal",
+        "high link density",
+        "news/update signal in body/navigation",
+        "media/gallery signal in body/navigation"
+      ],
+      "raw_preview_path": "evaluation\\four_source_expansion\\nasa_raw_preview_batch_phase59\\raw_preview_by_item\\26_Oort Cloud.json"
+    },
+    {
+      "status": "accepted_for_package",
+      "reason": "quality_accepted",
+      "title": "Exoplanets - NASA Science",
+      "url": "https://science.nasa.gov/exoplanets",
+      "quality_score": 92,
+      "quality_triage": "accepted",
+      "quality_reasons": [
+        "official or academic domain",
+        "science keyword hits=26",
+        "fact or overview page signal",
+        "mission page signal",
+        "reference signal present",
+        "publication/abstract signal",
+        "news/update signal in body/navigation",
+        "media/gallery signal in body/navigation"
+      ],
+      "raw_preview_path": "evaluation\\four_source_expansion\\nasa_raw_preview_batch_phase59\\raw_preview_by_item\\27_Exoplanets - NASA Science.json"
+    },
+    {
+      "status": "accepted_for_package",
+      "reason": "quality_accepted",
+      "title": "Planetary Science - NASA Science",
+      "url": "https://science.nasa.gov/planetary-science",
+      "quality_score": 68,
+      "quality_triage": "accepted",
+      "quality_reasons": [
+        "official or academic domain",
+        "science keyword hits=23",
+        "fact or overview page signal",
+        "mission page signal",
+        "reference signal present",
+        "publication/abstract signal",
+        "high link density",
+        "news/update signal in body/navigation",
+        "media/gallery signal in body/navigation"
+      ],
+      "raw_preview_path": "evaluation\\four_source_expansion\\nasa_raw_preview_batch_phase59\\raw_preview_by_item\\28_Planetary Science - NASA Science.json"
+    },
+    {
+      "status": "accepted_for_package",
+      "reason": "quality_accepted",
+      "title": "NASA's Webb Discovers Hidden Planet in Famous Star System - NASA Science",
+      "url": "https://science.nasa.gov/missions/webb/nasas-webb-discovers-hidden-planet-in-famous-star-system",
+      "quality_score": 95,
+      "quality_triage": "accepted",
+      "quality_reasons": [
+        "official or academic domain",
+        "science keyword hits=28",
+        "fact or overview page signal",
+        "mission page signal",
+        "reference signal present",
+        "publication/abstract signal",
+        "news/update signal in body/navigation",
+        "media/gallery signal in body/navigation"
+      ],
+      "raw_preview_path": "evaluation\\four_source_expansion\\nasa_raw_preview_batch_phase59\\raw_preview_by_item\\29_NASA's Webb Discovers Hidden Planet in Famous Star System - NASA Science.json"
+    },
+    {
+      "status": "accepted_for_package",
+      "reason": "quality_accepted",
+      "title": "New NASA Earth Missions Gear Up to Start Science Flights - NASA Science",
+      "url": "https://science.nasa.gov/earth/new-nasa-earth-missions-gear-up-to-start-science-flights",
+      "quality_score": 84,
+      "quality_triage": "accepted",
+      "quality_reasons": [
+        "official or academic domain",
+        "science keyword hits=24",
+        "fact or overview page signal",
+        "mission page signal",
+        "reference signal present",
+        "publication/abstract signal",
+        "news/update signal in body/navigation",
+        "media/gallery signal in body/navigation"
+      ],
+      "raw_preview_path": "evaluation\\four_source_expansion\\nasa_raw_preview_batch_phase59\\raw_preview_by_item\\30_New NASA Earth Missions Gear Up to Start Science Flights - NASA Science.json"
+    }
+  ],
+  "rejected_reason_counts": {},
+  "recommended_next_package_size": 28,
+  "out_dir": "evaluation\\four_source_expansion\\nasa_raw_preview_batch_phase59",
+  "network_attempted": true,
+  "formal_raw_write": false,
+  "formal_triples_write": false,
+  "formal_narratives_write": false,
+  "chroma_write": false,
+  "neo4j_write": false,
+  "active_source": "zh_wikipedia",
+  "registry": {
+    "zh_wikipedia": "active",
+    "nasa": "disabled",
+    "esa": "disabled",
+    "wikidata": "disabled"
+  },
+  "active_source_unchanged": true
+}
