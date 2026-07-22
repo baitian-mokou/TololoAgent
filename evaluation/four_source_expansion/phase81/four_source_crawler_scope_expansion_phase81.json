@@ -1,0 +1,340 @@
+{
+  "phase": "Phase 81",
+  "mode": "four_source_crawler_scope_expansion_guarded_preview",
+  "generated_at": "2026-07-22T15:21:09.534319+00:00",
+  "dry_run_preview_default": true,
+  "live_fetch_attempted": false,
+  "live_fetch_max_per_source": 30,
+  "per_source_limits": {
+    "zh_wikipedia": 80,
+    "nasa": 100,
+    "esa": 80,
+    "wikidata": 100
+  },
+  "sources": {
+    "zh_wikipedia": {
+      "source_id": "zh_wikipedia",
+      "candidate_limit": 80,
+      "selected_candidates": 3,
+      "accepted_for_raw_preview": 3,
+      "review_needed": 0,
+      "rejected": 0,
+      "failed": 0,
+      "duplicates_excluded": 0,
+      "allowlist_rejected": 0,
+      "recommended_next_batch_size": 3,
+      "allowlist": [
+        "zh.wikipedia.org"
+      ],
+      "sample_candidates": [
+        {
+          "source_id": "zh_wikipedia",
+          "status": "accepted_for_raw_preview",
+          "title": "太阳",
+          "url": "https://zh.wikipedia.org/wiki/太阳",
+          "reason": "local_preview_candidate"
+        },
+        {
+          "source_id": "zh_wikipedia",
+          "status": "accepted_for_raw_preview",
+          "title": "太阳系",
+          "url": "https://zh.wikipedia.org/wiki/太阳系",
+          "reason": "local_preview_candidate"
+        },
+        {
+          "source_id": "zh_wikipedia",
+          "status": "accepted_for_raw_preview",
+          "title": "水星",
+          "url": "https://zh.wikipedia.org/wiki/水星",
+          "reason": "local_preview_candidate"
+        }
+      ]
+    },
+    "nasa": {
+      "source_id": "nasa",
+      "candidate_limit": 100,
+      "selected_candidates": 92,
+      "accepted_for_raw_preview": 0,
+      "review_needed": 92,
+      "rejected": 0,
+      "failed": 0,
+      "duplicates_excluded": 0,
+      "allowlist_rejected": 0,
+      "recommended_next_batch_size": 30,
+      "allowlist": [
+        "science.nasa.gov",
+        "www.nasa.gov",
+        "nasa.gov",
+        "nssdc.gsfc.nasa.gov"
+      ],
+      "sample_candidates": [
+        {
+          "source_id": "nasa",
+          "status": "review_needed",
+          "title": "",
+          "url": "https://nssdc.gsfc.nasa.gov/planetary/factsheet",
+          "reason": "raw_missing_preview_only"
+        },
+        {
+          "source_id": "nasa",
+          "status": "review_needed",
+          "title": "",
+          "url": "https://science.nasa.gov/solar-system",
+          "reason": "raw_missing_preview_only"
+        },
+        {
+          "source_id": "nasa",
+          "status": "review_needed",
+          "title": "",
+          "url": "https://science.nasa.gov/solar-system/planets",
+          "reason": "raw_missing_preview_only"
+        },
+        {
+          "source_id": "nasa",
+          "status": "review_needed",
+          "title": "",
+          "url": "https://science.nasa.gov/solar-system/moons",
+          "reason": "raw_missing_preview_only"
+        },
+        {
+          "source_id": "nasa",
+          "status": "review_needed",
+          "title": "",
+          "url": "https://science.nasa.gov/solar-system/dwarf-planets",
+          "reason": "raw_missing_preview_only"
+        },
+        {
+          "source_id": "nasa",
+          "status": "review_needed",
+          "title": "",
+          "url": "https://science.nasa.gov/solar-system/asteroids",
+          "reason": "raw_missing_preview_only"
+        },
+        {
+          "source_id": "nasa",
+          "status": "review_needed",
+          "title": "",
+          "url": "https://science.nasa.gov/solar-system/comets",
+          "reason": "raw_missing_preview_only"
+        },
+        {
+          "source_id": "nasa",
+          "status": "review_needed",
+          "title": "",
+          "url": "https://science.nasa.gov/mission",
+          "reason": "raw_missing_preview_only"
+        },
+        {
+          "source_id": "nasa",
+          "status": "review_needed",
+          "title": "",
+          "url": "https://science.nasa.gov/mission/juno",
+          "reason": "raw_missing_preview_only"
+        },
+        {
+          "source_id": "nasa",
+          "status": "review_needed",
+          "title": "",
+          "url": "https://science.nasa.gov/mission/cassini",
+          "reason": "raw_missing_preview_only"
+        }
+      ]
+    },
+    "esa": {
+      "source_id": "esa",
+      "candidate_limit": 80,
+      "selected_candidates": 30,
+      "accepted_for_raw_preview": 9,
+      "review_needed": 16,
+      "rejected": 5,
+      "failed": 0,
+      "duplicates_excluded": 16,
+      "allowlist_rejected": 0,
+      "recommended_next_batch_size": 16,
+      "allowlist": [
+        "www.esa.int",
+        "esa.int"
+      ],
+      "sample_candidates": [
+        {
+          "source_id": "esa",
+          "status": "accepted_for_package",
+          "title": "ESA - Space Science",
+          "url": "https://www.esa.int/science_exploration/space_science",
+          "reason": "quality_accepted"
+        },
+        {
+          "source_id": "esa",
+          "status": "rejected",
+          "title": "JUICE",
+          "url": "https://www.esa.int/science_exploration/space_science/juice",
+          "reason": "quality_review_needed"
+        },
+        {
+          "source_id": "esa",
+          "status": "accepted_for_package",
+          "title": "ESA - Rosetta",
+          "url": "https://www.esa.int/science_exploration/space_science/rosetta",
+          "reason": "quality_accepted"
+        },
+        {
+          "source_id": "esa",
+          "status": "accepted_for_package",
+          "title": "ESA - Gaia",
+          "url": "https://www.esa.int/science_exploration/space_science/gaia",
+          "reason": "quality_accepted"
+        },
+        {
+          "source_id": "esa",
+          "status": "accepted_for_package",
+          "title": "ESA - Solar Orbiter",
+          "url": "https://www.esa.int/science_exploration/space_science/solar_orbiter",
+          "reason": "quality_accepted"
+        },
+        {
+          "source_id": "esa",
+          "status": "rejected",
+          "title": "Mars Express",
+          "url": "https://www.esa.int/science_exploration/space_science/mars_express",
+          "reason": "quality_exploratory"
+        },
+        {
+          "source_id": "esa",
+          "status": "rejected",
+          "title": "ESA - Venus Express",
+          "url": "https://www.esa.int/science_exploration/space_science/venus_express",
+          "reason": "quality_exploratory"
+        },
+        {
+          "source_id": "esa",
+          "status": "rejected",
+          "title": "ESA - SMART-1",
+          "url": "https://www.esa.int/science_exploration/space_science/smart-1",
+          "reason": "quality_rejected"
+        },
+        {
+          "source_id": "esa",
+          "status": "accepted_for_package",
+          "title": "ESA - BepiColombo",
+          "url": "https://www.esa.int/science_exploration/space_science/bepicolombo",
+          "reason": "quality_accepted"
+        },
+        {
+          "source_id": "esa",
+          "status": "accepted_for_package",
+          "title": "ESA - Euclid",
+          "url": "https://www.esa.int/science_exploration/space_science/euclid",
+          "reason": "quality_accepted"
+        }
+      ]
+    },
+    "wikidata": {
+      "source_id": "wikidata",
+      "candidate_limit": 100,
+      "selected_candidates": 47,
+      "accepted_for_raw_preview": 25,
+      "review_needed": 22,
+      "rejected": 0,
+      "failed": 0,
+      "duplicates_excluded": 0,
+      "allowlist_rejected": 0,
+      "recommended_next_batch_size": 22,
+      "allowlist": [
+        "www.wikidata.org",
+        "wikidata.org",
+        "query.wikidata.org"
+      ],
+      "sample_candidates": [
+        {
+          "source_id": "wikidata",
+          "status": "accepted_for_package",
+          "title": "太阳",
+          "url": "https://www.wikidata.org/wiki/Q525",
+          "reason": "local_entity_raw_has_triples_and_narratives"
+        },
+        {
+          "source_id": "wikidata",
+          "status": "accepted_for_package",
+          "title": "水星",
+          "url": "https://www.wikidata.org/wiki/Q308",
+          "reason": "local_materialized_preview_exists"
+        },
+        {
+          "source_id": "wikidata",
+          "status": "accepted_for_package",
+          "title": "金星",
+          "url": "https://www.wikidata.org/wiki/Q313",
+          "reason": "local_materialized_preview_exists"
+        },
+        {
+          "source_id": "wikidata",
+          "status": "accepted_for_package",
+          "title": "地球",
+          "url": "https://www.wikidata.org/wiki/Q2",
+          "reason": "local_entity_raw_has_triples_and_narratives"
+        },
+        {
+          "source_id": "wikidata",
+          "status": "accepted_for_package",
+          "title": "月球",
+          "url": "https://www.wikidata.org/wiki/Q405",
+          "reason": "local_materialized_preview_exists"
+        },
+        {
+          "source_id": "wikidata",
+          "status": "accepted_for_package",
+          "title": "火星",
+          "url": "https://www.wikidata.org/wiki/Q111",
+          "reason": "local_entity_raw_has_triples_and_narratives"
+        },
+        {
+          "source_id": "wikidata",
+          "status": "accepted_for_package",
+          "title": "木星",
+          "url": "https://www.wikidata.org/wiki/Q319",
+          "reason": "local_materialized_preview_exists"
+        },
+        {
+          "source_id": "wikidata",
+          "status": "accepted_for_package",
+          "title": "土星",
+          "url": "https://www.wikidata.org/wiki/Q193",
+          "reason": "local_materialized_preview_exists"
+        },
+        {
+          "source_id": "wikidata",
+          "status": "accepted_for_package",
+          "title": "天王星",
+          "url": "https://www.wikidata.org/wiki/Q324",
+          "reason": "local_materialized_preview_exists"
+        },
+        {
+          "source_id": "wikidata",
+          "status": "accepted_for_package",
+          "title": "海王星",
+          "url": "https://www.wikidata.org/wiki/Q332",
+          "reason": "local_materialized_preview_exists"
+        }
+      ]
+    }
+  },
+  "summary": {
+    "candidate_count": 172,
+    "accepted_for_raw_preview": 37,
+    "review_needed": 130,
+    "rejected": 5,
+    "duplicates_excluded": 16
+  },
+  "formal_raw_write": false,
+  "formal_default_triples_write": false,
+  "chroma_write": false,
+  "neo4j_write": false,
+  "active_source": "zh_wikipedia",
+  "active_source_unchanged": true,
+  "registry": {
+    "zh_wikipedia": "active",
+    "nasa": "disabled",
+    "esa": "disabled",
+    "wikidata": "disabled"
+  }
+}
