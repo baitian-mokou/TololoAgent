@@ -1,0 +1,492 @@
+{
+  "phase": "Phase 58",
+  "mode": "nasa_frontier_refresh_controlled",
+  "generated_at": "2026-07-22T11:41:16.287137+00:00",
+  "source_id": "nasa",
+  "target_count": 50,
+  "frontier_candidates_seen": 150,
+  "accepted_for_next_preview": 0,
+  "review_needed": 92,
+  "rejected": 0,
+  "duplicates_excluded": 0,
+  "prior_excluded": 58,
+  "recommended_next_package_size": 0,
+  "accepted_candidates": [],
+  "review_needed_candidates": [
+    {
+      "url": "nssdc.gsfc.nasa.gov/planetary/factsheet",
+      "title": "",
+      "reason": "raw_missing_preview_only"
+    },
+    {
+      "url": "science.nasa.gov/solar-system",
+      "title": "",
+      "reason": "raw_missing_preview_only"
+    },
+    {
+      "url": "science.nasa.gov/solar-system/planets",
+      "title": "",
+      "reason": "raw_missing_preview_only"
+    },
+    {
+      "url": "science.nasa.gov/solar-system/moons",
+      "title": "",
+      "reason": "raw_missing_preview_only"
+    },
+    {
+      "url": "science.nasa.gov/solar-system/dwarf-planets",
+      "title": "",
+      "reason": "raw_missing_preview_only"
+    },
+    {
+      "url": "science.nasa.gov/solar-system/asteroids",
+      "title": "",
+      "reason": "raw_missing_preview_only"
+    },
+    {
+      "url": "science.nasa.gov/solar-system/comets",
+      "title": "",
+      "reason": "raw_missing_preview_only"
+    },
+    {
+      "url": "science.nasa.gov/mission",
+      "title": "",
+      "reason": "raw_missing_preview_only"
+    },
+    {
+      "url": "science.nasa.gov/mission/juno",
+      "title": "",
+      "reason": "raw_missing_preview_only"
+    },
+    {
+      "url": "science.nasa.gov/mission/cassini",
+      "title": "",
+      "reason": "raw_missing_preview_only"
+    },
+    {
+      "url": "science.nasa.gov/mission/voyager",
+      "title": "",
+      "reason": "raw_missing_preview_only"
+    },
+    {
+      "url": "science.nasa.gov/mission/new-horizons",
+      "title": "",
+      "reason": "raw_missing_preview_only"
+    },
+    {
+      "url": "science.nasa.gov/mission/mars-2020-perseverance",
+      "title": "",
+      "reason": "raw_missing_preview_only"
+    },
+    {
+      "url": "solarsystem.nasa.gov/planets/overview",
+      "title": "",
+      "reason": "raw_missing_preview_only"
+    },
+    {
+      "url": "solarsystem.nasa.gov/moons/overview",
+      "title": "",
+      "reason": "raw_missing_preview_only"
+    },
+    {
+      "url": "solarsystem.nasa.gov/asteroids-comets-and-meteors/overview",
+      "title": "",
+      "reason": "raw_missing_preview_only"
+    },
+    {
+      "url": "solarsystem.nasa.gov/missions",
+      "title": "",
+      "reason": "raw_missing_preview_only"
+    },
+    {
+      "url": "science.nasa.gov/solar-system/whats-up-july-2026-skywatching-tips-from-nasa",
+      "title": "",
+      "reason": "raw_missing_preview_only"
+    },
+    {
+      "url": "science.nasa.gov/mission/webb",
+      "title": "",
+      "reason": "raw_missing_preview_only"
+    },
+    {
+      "url": "science.nasa.gov/mission/hubble",
+      "title": "",
+      "reason": "raw_missing_preview_only"
+    },
+    {
+      "url": "science.nasa.gov/mission/osiris-rex",
+      "title": "",
+      "reason": "raw_missing_preview_only"
+    },
+    {
+      "url": "science.nasa.gov/moon",
+      "title": "",
+      "reason": "raw_missing_preview_only"
+    },
+    {
+      "url": "science.nasa.gov/dwarf-planets",
+      "title": "",
+      "reason": "raw_missing_preview_only"
+    },
+    {
+      "url": "science.nasa.gov/asteroids-comets-meteors",
+      "title": "",
+      "reason": "raw_missing_preview_only"
+    },
+    {
+      "url": "science.nasa.gov/solar-system/kuiper-belt",
+      "title": "",
+      "reason": "raw_missing_preview_only"
+    },
+    {
+      "url": "science.nasa.gov/solar-system/oort-cloud",
+      "title": "",
+      "reason": "raw_missing_preview_only"
+    },
+    {
+      "url": "science.nasa.gov/exoplanets",
+      "title": "",
+      "reason": "raw_missing_preview_only"
+    },
+    {
+      "url": "science.nasa.gov/planetary-science",
+      "title": "",
+      "reason": "raw_missing_preview_only"
+    },
+    {
+      "url": "science.nasa.gov/missions/webb/nasas-webb-discovers-hidden-planet-in-famous-star-system",
+      "title": "",
+      "reason": "raw_missing_preview_only"
+    },
+    {
+      "url": "science.nasa.gov/earth/new-nasa-earth-missions-gear-up-to-start-science-flights",
+      "title": "",
+      "reason": "raw_missing_preview_only"
+    },
+    {
+      "url": "science.nasa.gov/science-research/astromaterials/nasa-study-of-pristine-meteorite-adds-to-story-of-ancient-asteroids",
+      "title": "",
+      "reason": "raw_missing_preview_only"
+    },
+    {
+      "url": "science.nasa.gov/missions/hubble/nasas-hubble-discovers-first-of-star-clusters-missing-black-holes",
+      "title": "",
+      "reason": "raw_missing_preview_only"
+    },
+    {
+      "url": "science.nasa.gov/science-missions",
+      "title": "",
+      "reason": "raw_missing_preview_only"
+    },
+    {
+      "url": "science.nasa.gov/nasa-missions",
+      "title": "",
+      "reason": "raw_missing_preview_only"
+    },
+    {
+      "url": "science.nasa.gov/solar-system/facts",
+      "title": "",
+      "reason": "raw_missing_preview_only"
+    },
+    {
+      "url": "science.nasa.gov/solar-system/planet-x",
+      "title": "",
+      "reason": "raw_missing_preview_only"
+    },
+    {
+      "url": "science.nasa.gov/solar-system/planets/planetary-analogs",
+      "title": "",
+      "reason": "raw_missing_preview_only"
+    },
+    {
+      "url": "science.nasa.gov/mars/moons",
+      "title": "",
+      "reason": "raw_missing_preview_only"
+    },
+    {
+      "url": "science.nasa.gov/jupiter/jupiter-moons",
+      "title": "",
+      "reason": "raw_missing_preview_only"
+    },
+    {
+      "url": "science.nasa.gov/saturn/moons",
+      "title": "",
+      "reason": "raw_missing_preview_only"
+    },
+    {
+      "url": "science.nasa.gov/uranus/moons",
+      "title": "",
+      "reason": "raw_missing_preview_only"
+    },
+    {
+      "url": "science.nasa.gov/neptune/moons",
+      "title": "",
+      "reason": "raw_missing_preview_only"
+    },
+    {
+      "url": "science.nasa.gov/dwarf-planets/pluto/moons",
+      "title": "",
+      "reason": "raw_missing_preview_only"
+    },
+    {
+      "url": "science.nasa.gov/solar-system/meteors-meteorites",
+      "title": "",
+      "reason": "raw_missing_preview_only"
+    },
+    {
+      "url": "science.nasa.gov/engage/solar-system-ambassadors",
+      "title": "",
+      "reason": "raw_missing_preview_only"
+    },
+    {
+      "url": "science.nasa.gov/planetary-science/programs/radioisotope-power-systems",
+      "title": "",
+      "reason": "raw_missing_preview_only"
+    },
+    {
+      "url": "science.nasa.gov/solar-system/solar-system-facts",
+      "title": "",
+      "reason": "raw_missing_preview_only"
+    },
+    {
+      "url": "science.nasa.gov/mission/viking/viking-50-years-on-mars",
+      "title": "",
+      "reason": "raw_missing_preview_only"
+    },
+    {
+      "url": "science.nasa.gov/mission/neo-surveyor",
+      "title": "",
+      "reason": "raw_missing_preview_only"
+    },
+    {
+      "url": "science.nasa.gov/mission/europa-clipper",
+      "title": "",
+      "reason": "raw_missing_preview_only"
+    },
+    {
+      "url": "science.nasa.gov/mission/psyche",
+      "title": "",
+      "reason": "raw_missing_preview_only"
+    },
+    {
+      "url": "science.nasa.gov/mission/veritas",
+      "title": "",
+      "reason": "raw_missing_preview_only"
+    },
+    {
+      "url": "science.nasa.gov/solar-system/10-things-movie-night",
+      "title": "",
+      "reason": "raw_missing_preview_only"
+    },
+    {
+      "url": "science.nasa.gov/solar-system/10-things-going-interstellar",
+      "title": "",
+      "reason": "raw_missing_preview_only"
+    },
+    {
+      "url": "science.nasa.gov/solar-system/10-things-whats-that-space-rock",
+      "title": "",
+      "reason": "raw_missing_preview_only"
+    },
+    {
+      "url": "science.nasa.gov/solar-system/moons/10-things-about-our-solar-systems-most-marvelous-moons",
+      "title": "",
+      "reason": "raw_missing_preview_only"
+    },
+    {
+      "url": "science.nasa.gov/solar-system/view-interstellar-comet-3i-atlas-through-nasas-multiple-lenses",
+      "title": "",
+      "reason": "raw_missing_preview_only"
+    },
+    {
+      "url": "science.nasa.gov/solar-system/planets/what-is-a-planet",
+      "title": "",
+      "reason": "raw_missing_preview_only"
+    },
+    {
+      "url": "science.nasa.gov/solar-system/planet-sizes-and-locations-in-our-solar-system",
+      "title": "",
+      "reason": "raw_missing_preview_only"
+    },
+    {
+      "url": "science.nasa.gov/solar-system/temperatures-across-our-solar-system",
+      "title": "",
+      "reason": "raw_missing_preview_only"
+    },
+    {
+      "url": "science.nasa.gov/solar-system/planets/analog-explorer",
+      "title": "",
+      "reason": "raw_missing_preview_only"
+    },
+    {
+      "url": "science.nasa.gov/earth/10-things-to-know-about-planetary-analogs",
+      "title": "",
+      "reason": "raw_missing_preview_only"
+    },
+    {
+      "url": "science.nasa.gov/dwarf-planets/ceres/facts",
+      "title": "",
+      "reason": "raw_missing_preview_only"
+    },
+    {
+      "url": "science.nasa.gov/dwarf-planets/haumea",
+      "title": "",
+      "reason": "raw_missing_preview_only"
+    },
+    {
+      "url": "science.nasa.gov/dwarf-planets/makemake",
+      "title": "",
+      "reason": "raw_missing_preview_only"
+    },
+    {
+      "url": "science.nasa.gov/dwarf-planets/eris",
+      "title": "",
+      "reason": "raw_missing_preview_only"
+    },
+    {
+      "url": "science.nasa.gov/solar-system/planets/planet-sizes-and-locations-in-our-solar-system",
+      "title": "",
+      "reason": "raw_missing_preview_only"
+    },
+    {
+      "url": "science.nasa.gov/solar-system/moons/facts",
+      "title": "",
+      "reason": "raw_missing_preview_only"
+    },
+    {
+      "url": "science.nasa.gov/moon/moon-phases",
+      "title": "",
+      "reason": "raw_missing_preview_only"
+    },
+    {
+      "url": "science.nasa.gov/missions/webb/webbs-titan-forecast-partly-cloudy-with-occasional-methane-showers",
+      "title": "",
+      "reason": "raw_missing_preview_only"
+    },
+    {
+      "url": "nssdc.gsfc.nasa.gov/planetary/planets/cometpage.html",
+      "title": "",
+      "reason": "raw_missing_preview_only"
+    },
+    {
+      "url": "science.nasa.gov/missions/mission-news",
+      "title": "",
+      "reason": "raw_missing_preview_only"
+    },
+    {
+      "url": "science.nasa.gov/mission/advanced-plant-habitat",
+      "title": "",
+      "reason": "raw_missing_preview_only"
+    },
+    {
+      "url": "science.nasa.gov/mission/aim",
+      "title": "",
+      "reason": "raw_missing_preview_only"
+    },
+    {
+      "url": "science.nasa.gov/mission/airmoss",
+      "title": "",
+      "reason": "raw_missing_preview_only"
+    },
+    {
+      "url": "science.nasa.gov/mission/akatsuki",
+      "title": "",
+      "reason": "raw_missing_preview_only"
+    },
+    {
+      "url": "science.nasa.gov/mission/apollo-15-subsatellite",
+      "title": "",
+      "reason": "raw_missing_preview_only"
+    },
+    {
+      "url": "science.nasa.gov/mission/apollo-16-subsatellite",
+      "title": "",
+      "reason": "raw_missing_preview_only"
+    },
+    {
+      "url": "science.nasa.gov/mission/aqua",
+      "title": "",
+      "reason": "raw_missing_preview_only"
+    },
+    {
+      "url": "science.nasa.gov/mission/aquarius",
+      "title": "",
+      "reason": "raw_missing_preview_only"
+    },
+    {
+      "url": "science.nasa.gov/mission/arcstone",
+      "title": "",
+      "reason": "raw_missing_preview_only"
+    },
+    {
+      "url": "science.nasa.gov/mission/arctas",
+      "title": "",
+      "reason": "raw_missing_preview_only"
+    },
+    {
+      "url": "science.nasa.gov/mission/asca",
+      "title": "",
+      "reason": "raw_missing_preview_only"
+    },
+    {
+      "url": "science.nasa.gov/mission/asthros",
+      "title": "",
+      "reason": "raw_missing_preview_only"
+    },
+    {
+      "url": "science.nasa.gov/mission/astro-observatory-1",
+      "title": "",
+      "reason": "raw_missing_preview_only"
+    },
+    {
+      "url": "science.nasa.gov/mission/astro-observatory-2",
+      "title": "",
+      "reason": "raw_missing_preview_only"
+    },
+    {
+      "url": "science.nasa.gov/mission/athena",
+      "title": "",
+      "reason": "raw_missing_preview_only"
+    },
+    {
+      "url": "science.nasa.gov/mission/atlas",
+      "title": "",
+      "reason": "raw_missing_preview_only"
+    },
+    {
+      "url": "science.nasa.gov/mission/aos",
+      "title": "",
+      "reason": "raw_missing_preview_only"
+    },
+    {
+      "url": "science.nasa.gov/mission/ariel",
+      "title": "",
+      "reason": "raw_missing_preview_only"
+    },
+    {
+      "url": "science.nasa.gov/mission/atmospheric-tomography-mission",
+      "title": "",
+      "reason": "raw_missing_preview_only"
+    },
+    {
+      "url": "science.nasa.gov/mission/ats",
+      "title": "",
+      "reason": "raw_missing_preview_only"
+    }
+  ],
+  "rejected_reason_counts": {},
+  "network_attempted": false,
+  "formal_triples_write": false,
+  "formal_narratives_write": false,
+  "chroma_write": false,
+  "neo4j_write": false,
+  "active_source": "zh_wikipedia",
+  "registry": {
+    "zh_wikipedia": "active",
+    "nasa": "disabled",
+    "esa": "disabled",
+    "wikidata": "disabled"
+  },
+  "active_source_unchanged": true,
+  "recommended_next_action": "needs_controlled_live_frontier_refresh_or_manual_seed_review"
+}
