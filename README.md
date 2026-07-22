@@ -526,6 +526,7 @@ tests/test_nasa_fact_sheet_parser.py
 ```powershell
 python scripts/plan_four_source_batch_expansion.py --batch-size 50 --out-json evaluation\four_source_expansion\four_source_batch_plan_phase37.json --out-md docs\four_source_batch_expansion_plan.md
 python scripts/run_four_source_batch_preview.py --plan-json evaluation\four_source_expansion\four_source_batch_plan_phase37.json --batch-size 50 --offline-only --out-json evaluation\four_source_expansion\four_source_batch_preview_phase38.json --out-md docs\four_source_batch_preview_phase38.md
+python scripts/run_raw_shadow_batch_trial.py --sources nasa esa --limit 20 --out-json evaluation\four_source_expansion\raw_shadow_batch_trial_phase39.json --out-md docs\raw_shadow_batch_trial_phase39.md
 ```
 
 ```powershell
