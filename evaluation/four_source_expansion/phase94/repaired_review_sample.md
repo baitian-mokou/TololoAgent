@@ -41,85 +41,67 @@ Review status: `pending_manual_or_reviewer_check`
 - triples:
 
 ### 2. Solar System Exploration
-- review_status: `pending_manual_or_reviewer_check`
+- review_status: `rejected_for_review`
 - source_url: `https://science.nasa.gov/solar-system`
-- narrative: Solar System Exploration Images Expedition 64 Mars perseverance SpaceX Crew-2 International Space Station Home Missions Hum
-- repair_notes: `removed_navigation_boilerplate_from_review_text`
+- narrative: 
+- repair_notes: ``
 - triples:
-  - `Solar System Exploration` `SOURCE_URL` `https://science.nasa.gov/solar-system`
-  - `Solar System Exploration` `HAS_REVIEW_TEXT` `Solar System Exploration Images Expedition 64 Mars perseverance SpaceX Crew-2 International Space Station Home Missions Hum`
 
 ### 3. About the Planets
-- review_status: `pending_manual_or_reviewer_check`
+- review_status: `rejected_for_review`
 - source_url: `https://science.nasa.gov/solar-system/planets`
-- narrative: About the Planets Images Expedition 64 Mars perseverance SpaceX Crew-2 International Space Station Home Missions Humans in
-- repair_notes: `removed_navigation_boilerplate_from_review_text`
+- narrative: 
+- repair_notes: ``
 - triples:
-  - `About the Planets` `SOURCE_URL` `https://science.nasa.gov/solar-system/planets`
-  - `About the Planets` `HAS_REVIEW_TEXT` `About the Planets Images Expedition 64 Mars perseverance SpaceX Crew-2 International Space Station Home Missions Humans in`
 
 ### 4. Moons
-- review_status: `pending_manual_or_reviewer_check`
+- review_status: `rejected_for_review`
 - source_url: `https://science.nasa.gov/solar-system/moons`
-- narrative: Moons Images Expedition 64 Mars perseverance SpaceX Crew-2 International Space Station Home Missions Humans in Space Earth
-- repair_notes: `removed_navigation_boilerplate_from_review_text`
+- narrative: 
+- repair_notes: ``
 - triples:
-  - `Moons` `SOURCE_URL` `https://science.nasa.gov/solar-system/moons`
-  - `Moons` `HAS_REVIEW_TEXT` `Moons Images Expedition 64 Mars perseverance SpaceX Crew-2 International Space Station Home Missions Humans in Space Earth`
 
 ### 5. Asteroids
-- review_status: `pending_manual_or_reviewer_check`
+- review_status: `rejected_for_review`
 - source_url: `https://science.nasa.gov/solar-system/asteroids`
-- narrative: Asteroids Images Expedition 64 Mars perseverance SpaceX Crew-2 International Space Station Home Missions Humans in Space Ea
-- repair_notes: `removed_navigation_boilerplate_from_review_text`
+- narrative: 
+- repair_notes: ``
 - triples:
-  - `Asteroids` `SOURCE_URL` `https://science.nasa.gov/solar-system/asteroids`
-  - `Asteroids` `HAS_REVIEW_TEXT` `Asteroids Images Expedition 64 Mars perseverance SpaceX Crew-2 International Space Station Home Missions Humans in Space Ea`
 
 ### 6. Comets
-- review_status: `pending_manual_or_reviewer_check`
+- review_status: `rejected_for_review`
 - source_url: `https://science.nasa.gov/solar-system/comets`
-- narrative: Comets Images Expedition 64 Mars perseverance SpaceX Crew-2 International Space Station Home Missions Humans in Space Earth
-- repair_notes: `removed_navigation_boilerplate_from_review_text`
+- narrative: 
+- repair_notes: ``
 - triples:
-  - `Comets` `SOURCE_URL` `https://science.nasa.gov/solar-system/comets`
-  - `Comets` `HAS_REVIEW_TEXT` `Comets Images Expedition 64 Mars perseverance SpaceX Crew-2 International Space Station Home Missions Humans in Space Earth`
 
 ### 7. Science Missions
-- review_status: `pending_manual_or_reviewer_check`
+- review_status: `rejected_for_review`
 - source_url: `https://science.nasa.gov/mission`
-- narrative: Science Missions - NASA Science Images Expedition 64 Mars perseverance SpaceX Crew-2 International Space Station Home Missi
-- repair_notes: `removed_navigation_boilerplate_from_review_text`
+- narrative: 
+- repair_notes: ``
 - triples:
-  - `Science Missions` `SOURCE_URL` `https://science.nasa.gov/mission`
-  - `Science Missions` `HAS_REVIEW_TEXT` `Science Missions - NASA Science Images Expedition 64 Mars perseverance SpaceX Crew-2 International Space Station Home Missi`
 
 ### 8. Juno
-- review_status: `pending_manual_or_reviewer_check`
+- review_status: `rejected_for_review`
 - source_url: `https://science.nasa.gov/mission/juno`
-- narrative: Juno - NASA Science Images Expedition 64 Mars perseverance SpaceX Crew-2 International Space Station Home Missions Humans i
-- repair_notes: `removed_navigation_boilerplate_from_review_text`
+- narrative: 
+- repair_notes: ``
 - triples:
-  - `Juno` `SOURCE_URL` `https://science.nasa.gov/mission/juno`
-  - `Juno` `HAS_REVIEW_TEXT` `Juno - NASA Science Images Expedition 64 Mars perseverance SpaceX Crew-2 International Space Station Home Missions Humans i`
 
 ### 9. Cassini-Huygens
-- review_status: `pending_manual_or_reviewer_check`
+- review_status: `rejected_for_review`
 - source_url: `https://science.nasa.gov/mission/cassini`
-- narrative: Cassini-Huygens - NASA Science Images Expedition 64 Mars perseverance SpaceX Crew-2 International Space Station Home Missio
-- repair_notes: `removed_navigation_boilerplate_from_review_text`
+- narrative: 
+- repair_notes: ``
 - triples:
-  - `Cassini-Huygens` `SOURCE_URL` `https://science.nasa.gov/mission/cassini`
-  - `Cassini-Huygens` `HAS_REVIEW_TEXT` `Cassini-Huygens - NASA Science Images Expedition 64 Mars perseverance SpaceX Crew-2 International Space Station Home Missio`
 
 ### 10. Voyager
-- review_status: `pending_manual_or_reviewer_check`
+- review_status: `rejected_for_review`
 - source_url: `https://science.nasa.gov/mission/voyager`
-- narrative: Voyager - NASA Science Images Expedition 64 Mars perseverance SpaceX Crew-2 International Space Station Home Missions Human
-- repair_notes: `removed_navigation_boilerplate_from_review_text`
+- narrative: 
+- repair_notes: ``
 - triples:
-  - `Voyager` `SOURCE_URL` `https://science.nasa.gov/mission/voyager`
-  - `Voyager` `HAS_REVIEW_TEXT` `Voyager - NASA Science Images Expedition 64 Mars perseverance SpaceX Crew-2 International Space Station Home Missions Human`
 
 ## esa
 

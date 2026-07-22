@@ -1,7 +1,7 @@
 {
   "phase": "Phase 94",
   "mode": "sample_content_quality_repair",
-  "generated_at": "2026-07-22T17:51:11.046037+00:00",
+  "generated_at": "2026-07-22T17:56:54.921774+00:00",
   "review_status": "pending_manual_or_reviewer_check",
   "samples_by_source": {
     "zh_wikipedia": [
@@ -280,19 +280,8 @@
         "title": "Solar System Exploration",
         "source_url": "https://science.nasa.gov/solar-system",
         "source_id": "nasa",
-        "narrative_excerpt": "Solar System Exploration Images Expedition 64 Mars perseverance SpaceX Crew-2 International Space Station Home Missions Hum",
-        "triples": [
-          {
-            "subject": "Solar System Exploration",
-            "predicate": "SOURCE_URL",
-            "object": "https://science.nasa.gov/solar-system"
-          },
-          {
-            "subject": "Solar System Exploration",
-            "predicate": "HAS_REVIEW_TEXT",
-            "object": "Solar System Exploration Images Expedition 64 Mars perseverance SpaceX Crew-2 International Space Station Home Missions Hum"
-          }
-        ],
+        "narrative_excerpt": "",
+        "triples": [],
         "provenance": {
           "phase82_status": "http_200",
           "phase82_url": "https://science.nasa.gov/solar-system",
@@ -311,35 +300,22 @@
           "provenance_clear_but_narrative_triples_need_noise_review"
         ],
         "schema_version": "phase87_rebuilt_pending_shadow_package_v1",
-        "review_status": "pending_manual_or_reviewer_check",
+        "review_status": "rejected_for_review",
         "review_questions": [
           "Is the narrative factually relevant to the title/source?",
           "Are provenance and source metadata trustworthy enough for shadow review?",
           "Are the preview triples meaningful and non-noisy?",
           "For NASA repaired metadata, is the Phase86 repair evidence acceptable?"
         ],
-        "repair_notes": [
-          "removed_navigation_boilerplate_from_review_text"
-        ]
+        "rejection_reason": "nasa_boilerplate_only_after_cleaning"
       },
       {
         "source": "nasa",
         "title": "About the Planets",
         "source_url": "https://science.nasa.gov/solar-system/planets",
         "source_id": "nasa",
-        "narrative_excerpt": "About the Planets Images Expedition 64 Mars perseverance SpaceX Crew-2 International Space Station Home Missions Humans in",
-        "triples": [
-          {
-            "subject": "About the Planets",
-            "predicate": "SOURCE_URL",
-            "object": "https://science.nasa.gov/solar-system/planets"
-          },
-          {
-            "subject": "About the Planets",
-            "predicate": "HAS_REVIEW_TEXT",
-            "object": "About the Planets Images Expedition 64 Mars perseverance SpaceX Crew-2 International Space Station Home Missions Humans in"
-          }
-        ],
+        "narrative_excerpt": "",
+        "triples": [],
         "provenance": {
           "phase82_status": "http_200",
           "phase82_url": "https://science.nasa.gov/solar-system/planets",
@@ -358,35 +334,22 @@
           "provenance_clear_but_narrative_triples_need_noise_review"
         ],
         "schema_version": "phase87_rebuilt_pending_shadow_package_v1",
-        "review_status": "pending_manual_or_reviewer_check",
+        "review_status": "rejected_for_review",
         "review_questions": [
           "Is the narrative factually relevant to the title/source?",
           "Are provenance and source metadata trustworthy enough for shadow review?",
           "Are the preview triples meaningful and non-noisy?",
           "For NASA repaired metadata, is the Phase86 repair evidence acceptable?"
         ],
-        "repair_notes": [
-          "removed_navigation_boilerplate_from_review_text"
-        ]
+        "rejection_reason": "nasa_navigation_residue_after_cleaning"
       },
       {
         "source": "nasa",
         "title": "Moons",
         "source_url": "https://science.nasa.gov/solar-system/moons",
         "source_id": "nasa",
-        "narrative_excerpt": "Moons Images Expedition 64 Mars perseverance SpaceX Crew-2 International Space Station Home Missions Humans in Space Earth",
-        "triples": [
-          {
-            "subject": "Moons",
-            "predicate": "SOURCE_URL",
-            "object": "https://science.nasa.gov/solar-system/moons"
-          },
-          {
-            "subject": "Moons",
-            "predicate": "HAS_REVIEW_TEXT",
-            "object": "Moons Images Expedition 64 Mars perseverance SpaceX Crew-2 International Space Station Home Missions Humans in Space Earth"
-          }
-        ],
+        "narrative_excerpt": "",
+        "triples": [],
         "provenance": {
           "phase82_status": "http_200",
           "phase82_url": "https://science.nasa.gov/solar-system/moons",
@@ -405,35 +368,22 @@
           "provenance_clear_but_narrative_triples_need_noise_review"
         ],
         "schema_version": "phase87_rebuilt_pending_shadow_package_v1",
-        "review_status": "pending_manual_or_reviewer_check",
+        "review_status": "rejected_for_review",
         "review_questions": [
           "Is the narrative factually relevant to the title/source?",
           "Are provenance and source metadata trustworthy enough for shadow review?",
           "Are the preview triples meaningful and non-noisy?",
           "For NASA repaired metadata, is the Phase86 repair evidence acceptable?"
         ],
-        "repair_notes": [
-          "removed_navigation_boilerplate_from_review_text"
-        ]
+        "rejection_reason": "nasa_navigation_residue_after_cleaning"
       },
       {
         "source": "nasa",
         "title": "Asteroids",
         "source_url": "https://science.nasa.gov/solar-system/asteroids",
         "source_id": "nasa",
-        "narrative_excerpt": "Asteroids Images Expedition 64 Mars perseverance SpaceX Crew-2 International Space Station Home Missions Humans in Space Ea",
-        "triples": [
-          {
-            "subject": "Asteroids",
-            "predicate": "SOURCE_URL",
-            "object": "https://science.nasa.gov/solar-system/asteroids"
-          },
-          {
-            "subject": "Asteroids",
-            "predicate": "HAS_REVIEW_TEXT",
-            "object": "Asteroids Images Expedition 64 Mars perseverance SpaceX Crew-2 International Space Station Home Missions Humans in Space Ea"
-          }
-        ],
+        "narrative_excerpt": "",
+        "triples": [],
         "provenance": {
           "phase82_status": "http_200",
           "phase82_url": "https://science.nasa.gov/solar-system/asteroids",
@@ -452,35 +402,22 @@
           "provenance_clear_but_narrative_triples_need_noise_review"
         ],
         "schema_version": "phase87_rebuilt_pending_shadow_package_v1",
-        "review_status": "pending_manual_or_reviewer_check",
+        "review_status": "rejected_for_review",
         "review_questions": [
           "Is the narrative factually relevant to the title/source?",
           "Are provenance and source metadata trustworthy enough for shadow review?",
           "Are the preview triples meaningful and non-noisy?",
           "For NASA repaired metadata, is the Phase86 repair evidence acceptable?"
         ],
-        "repair_notes": [
-          "removed_navigation_boilerplate_from_review_text"
-        ]
+        "rejection_reason": "nasa_navigation_residue_after_cleaning"
       },
       {
         "source": "nasa",
         "title": "Comets",
         "source_url": "https://science.nasa.gov/solar-system/comets",
         "source_id": "nasa",
-        "narrative_excerpt": "Comets Images Expedition 64 Mars perseverance SpaceX Crew-2 International Space Station Home Missions Humans in Space Earth",
-        "triples": [
-          {
-            "subject": "Comets",
-            "predicate": "SOURCE_URL",
-            "object": "https://science.nasa.gov/solar-system/comets"
-          },
-          {
-            "subject": "Comets",
-            "predicate": "HAS_REVIEW_TEXT",
-            "object": "Comets Images Expedition 64 Mars perseverance SpaceX Crew-2 International Space Station Home Missions Humans in Space Earth"
-          }
-        ],
+        "narrative_excerpt": "",
+        "triples": [],
         "provenance": {
           "phase82_status": "http_200",
           "phase82_url": "https://science.nasa.gov/solar-system/comets",
@@ -499,35 +436,22 @@
           "provenance_clear_but_narrative_triples_need_noise_review"
         ],
         "schema_version": "phase87_rebuilt_pending_shadow_package_v1",
-        "review_status": "pending_manual_or_reviewer_check",
+        "review_status": "rejected_for_review",
         "review_questions": [
           "Is the narrative factually relevant to the title/source?",
           "Are provenance and source metadata trustworthy enough for shadow review?",
           "Are the preview triples meaningful and non-noisy?",
           "For NASA repaired metadata, is the Phase86 repair evidence acceptable?"
         ],
-        "repair_notes": [
-          "removed_navigation_boilerplate_from_review_text"
-        ]
+        "rejection_reason": "nasa_navigation_residue_after_cleaning"
       },
       {
         "source": "nasa",
         "title": "Science Missions",
         "source_url": "https://science.nasa.gov/mission",
         "source_id": "nasa",
-        "narrative_excerpt": "Science Missions - NASA Science Images Expedition 64 Mars perseverance SpaceX Crew-2 International Space Station Home Missi",
-        "triples": [
-          {
-            "subject": "Science Missions",
-            "predicate": "SOURCE_URL",
-            "object": "https://science.nasa.gov/mission"
-          },
-          {
-            "subject": "Science Missions",
-            "predicate": "HAS_REVIEW_TEXT",
-            "object": "Science Missions - NASA Science Images Expedition 64 Mars perseverance SpaceX Crew-2 International Space Station Home Missi"
-          }
-        ],
+        "narrative_excerpt": "",
+        "triples": [],
         "provenance": {
           "phase82_status": "http_200",
           "phase82_url": "https://science.nasa.gov/mission",
@@ -546,35 +470,22 @@
           "provenance_clear_but_narrative_triples_need_noise_review"
         ],
         "schema_version": "phase87_rebuilt_pending_shadow_package_v1",
-        "review_status": "pending_manual_or_reviewer_check",
+        "review_status": "rejected_for_review",
         "review_questions": [
           "Is the narrative factually relevant to the title/source?",
           "Are provenance and source metadata trustworthy enough for shadow review?",
           "Are the preview triples meaningful and non-noisy?",
           "For NASA repaired metadata, is the Phase86 repair evidence acceptable?"
         ],
-        "repair_notes": [
-          "removed_navigation_boilerplate_from_review_text"
-        ]
+        "rejection_reason": "nasa_navigation_residue_after_cleaning"
       },
       {
         "source": "nasa",
         "title": "Juno",
         "source_url": "https://science.nasa.gov/mission/juno",
         "source_id": "nasa",
-        "narrative_excerpt": "Juno - NASA Science Images Expedition 64 Mars perseverance SpaceX Crew-2 International Space Station Home Missions Humans i",
-        "triples": [
-          {
-            "subject": "Juno",
-            "predicate": "SOURCE_URL",
-            "object": "https://science.nasa.gov/mission/juno"
-          },
-          {
-            "subject": "Juno",
-            "predicate": "HAS_REVIEW_TEXT",
-            "object": "Juno - NASA Science Images Expedition 64 Mars perseverance SpaceX Crew-2 International Space Station Home Missions Humans i"
-          }
-        ],
+        "narrative_excerpt": "",
+        "triples": [],
         "provenance": {
           "phase82_status": "http_200",
           "phase82_url": "https://science.nasa.gov/mission/juno",
@@ -593,35 +504,22 @@
           "provenance_clear_but_narrative_triples_need_noise_review"
         ],
         "schema_version": "phase87_rebuilt_pending_shadow_package_v1",
-        "review_status": "pending_manual_or_reviewer_check",
+        "review_status": "rejected_for_review",
         "review_questions": [
           "Is the narrative factually relevant to the title/source?",
           "Are provenance and source metadata trustworthy enough for shadow review?",
           "Are the preview triples meaningful and non-noisy?",
           "For NASA repaired metadata, is the Phase86 repair evidence acceptable?"
         ],
-        "repair_notes": [
-          "removed_navigation_boilerplate_from_review_text"
-        ]
+        "rejection_reason": "nasa_navigation_residue_after_cleaning"
       },
       {
         "source": "nasa",
         "title": "Cassini-Huygens",
         "source_url": "https://science.nasa.gov/mission/cassini",
         "source_id": "nasa",
-        "narrative_excerpt": "Cassini-Huygens - NASA Science Images Expedition 64 Mars perseverance SpaceX Crew-2 International Space Station Home Missio",
-        "triples": [
-          {
-            "subject": "Cassini-Huygens",
-            "predicate": "SOURCE_URL",
-            "object": "https://science.nasa.gov/mission/cassini"
-          },
-          {
-            "subject": "Cassini-Huygens",
-            "predicate": "HAS_REVIEW_TEXT",
-            "object": "Cassini-Huygens - NASA Science Images Expedition 64 Mars perseverance SpaceX Crew-2 International Space Station Home Missio"
-          }
-        ],
+        "narrative_excerpt": "",
+        "triples": [],
         "provenance": {
           "phase82_status": "http_200",
           "phase82_url": "https://science.nasa.gov/mission/cassini",
@@ -640,35 +538,22 @@
           "provenance_clear_but_narrative_triples_need_noise_review"
         ],
         "schema_version": "phase87_rebuilt_pending_shadow_package_v1",
-        "review_status": "pending_manual_or_reviewer_check",
+        "review_status": "rejected_for_review",
         "review_questions": [
           "Is the narrative factually relevant to the title/source?",
           "Are provenance and source metadata trustworthy enough for shadow review?",
           "Are the preview triples meaningful and non-noisy?",
           "For NASA repaired metadata, is the Phase86 repair evidence acceptable?"
         ],
-        "repair_notes": [
-          "removed_navigation_boilerplate_from_review_text"
-        ]
+        "rejection_reason": "nasa_boilerplate_only_after_cleaning"
       },
       {
         "source": "nasa",
         "title": "Voyager",
         "source_url": "https://science.nasa.gov/mission/voyager",
         "source_id": "nasa",
-        "narrative_excerpt": "Voyager - NASA Science Images Expedition 64 Mars perseverance SpaceX Crew-2 International Space Station Home Missions Human",
-        "triples": [
-          {
-            "subject": "Voyager",
-            "predicate": "SOURCE_URL",
-            "object": "https://science.nasa.gov/mission/voyager"
-          },
-          {
-            "subject": "Voyager",
-            "predicate": "HAS_REVIEW_TEXT",
-            "object": "Voyager - NASA Science Images Expedition 64 Mars perseverance SpaceX Crew-2 International Space Station Home Missions Human"
-          }
-        ],
+        "narrative_excerpt": "",
+        "triples": [],
         "provenance": {
           "phase82_status": "http_200",
           "phase82_url": "https://science.nasa.gov/mission/voyager",
@@ -687,16 +572,14 @@
           "provenance_clear_but_narrative_triples_need_noise_review"
         ],
         "schema_version": "phase87_rebuilt_pending_shadow_package_v1",
-        "review_status": "pending_manual_or_reviewer_check",
+        "review_status": "rejected_for_review",
         "review_questions": [
           "Is the narrative factually relevant to the title/source?",
           "Are provenance and source metadata trustworthy enough for shadow review?",
           "Are the preview triples meaningful and non-noisy?",
           "For NASA repaired metadata, is the Phase86 repair evidence acceptable?"
         ],
-        "repair_notes": [
-          "removed_navigation_boilerplate_from_review_text"
-        ]
+        "rejection_reason": "nasa_navigation_residue_after_cleaning"
       }
     ],
     "esa": [
@@ -1852,9 +1735,9 @@
     },
     "nasa": {
       "total": 10,
-      "repaired": 9,
+      "repaired": 0,
       "preserved": 0,
-      "rejected": 1
+      "rejected": 10
     },
     "esa": {
       "total": 9,
