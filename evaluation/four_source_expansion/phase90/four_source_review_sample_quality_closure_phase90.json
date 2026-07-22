@@ -1,13 +1,11 @@
 {
   "phase": "Phase 90",
   "mode": "review_sample_quality_gate_closure",
-  "generated_at": "2026-07-22T16:30:58.669704+00:00",
+  "generated_at": "2026-07-22T16:34:23.634906+00:00",
   "sample_quality_pass": true,
   "blocking_findings": [],
-  "warnings": [
-    "nasa_repair_marker_missing_on_sample"
-  ],
-  "sample_quality_risk_count": 1,
+  "warnings": [],
+  "sample_quality_risk_count": 0,
   "production_ready": false,
   "approval_status": "pending_review",
   "closure_verdict": "shadow_review_ready_approval_pending",

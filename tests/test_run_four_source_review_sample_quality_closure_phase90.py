@@ -34,6 +34,8 @@ class Phase90ReviewSampleQualityClosureTest(unittest.TestCase):
         self.assertTrue(report["active_source_unchanged"])
         self.assertEqual(report["registry"]["nasa"], "disabled")
         self.assertFalse(report["formal_default_triples_write"])
+        self.assertEqual(report["warnings"], [])
+        self.assertEqual(report["sample_quality_risk_count"], 0)
         self.assertNotIn("approved_for_shadow_write", " ".join(report["next_recommendations"]))
 
     def test_quality_gate_blocks_missing_required_sample_fields(self):

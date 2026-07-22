@@ -12,7 +12,7 @@
 | esa | 3 |
 | wikidata | 3 |
 
-- sample_quality_warnings: `1`
+- sample_quality_warnings: `0`
 
 Verdict: shadow-review ready, approval pending. No apply or ingest authorization.
 

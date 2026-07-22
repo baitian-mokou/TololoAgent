@@ -45,6 +45,16 @@ def output_allowed(path: Path, *, allow_docs: bool = False) -> bool:
     )
 
 
+def nasa_repair_marker_ok(row: Dict[str, Any], quality_flags: Dict[str, Any]) -> bool:
+    provenance = row.get("provenance", {}) if isinstance(row.get("provenance"), dict) else {}
+    metadata = row.get("metadata", {}) if isinstance(row.get("metadata"), dict) else {}
+    return (
+        metadata.get("repair_source") == "title_or_excerpt"
+        or quality_flags.get("repair_source") == "title_or_excerpt"
+        or (quality_flags.get("metadata_repaired") is True and bool(provenance.get("phase86_rule")))
+    )
+
+
 def check_sample_quality(sample_report: Dict[str, Any]) -> Tuple[List[str], List[str]]:
     findings: List[str] = []
     warnings: List[str] = []
@@ -77,7 +87,7 @@ def check_sample_quality(sample_report: Dict[str, Any]) -> Tuple[List[str], List
                 findings.append("missing_required_sample_fields")
             if not row.get("triples") or not row.get("narratives"):
                 findings.append("sample_missing_triple_or_narrative")
-            if source == "nasa" and quality_flags.get("repair_source") != "title_or_excerpt":
+            if source == "nasa" and not nasa_repair_marker_ok(row, quality_flags):
                 warnings.append("nasa_repair_marker_missing_on_sample")
     return sorted(set(findings)), sorted(set(warnings))
 
