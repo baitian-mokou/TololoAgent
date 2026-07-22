@@ -67,6 +67,7 @@ def blocked_report(reason: str, shadow_dir: Path, eval_report_path: Path) -> Dic
         "eval_report_path": str(eval_report_path),
         "adapter_mappings": [],
         "mapping_count": 0,
+        "phase48_eval_ready_required": True,
         "active_source": ACTIVE_SOURCE,
         "default_source_unchanged": ACTIVE_SOURCE == "zh_wikipedia",
         "registry": {source: SOURCE_REGISTRY.get(source, "unknown") for source in ("zh_wikipedia", "nasa", "esa", "wikidata")},
@@ -156,6 +157,8 @@ def build_adapter_preview(*, shadow_dir: Path, eval_report_path: Path) -> Dict[s
     eval_report = read_json(eval_report_path)
     if not isinstance(triples, list) or not isinstance(narratives, list) or not isinstance(manifest, dict) or not isinstance(eval_report, dict):
         return blocked_report("invalid_shadow_or_eval_json", shadow_dir, eval_report_path)
+    if eval_report.get("ready") is not True:
+        return blocked_report("phase48_eval_not_ready", shadow_dir, eval_report_path)
 
     cases = eval_report.get("eval_cases", [])
     if not isinstance(cases, list) or not cases:
@@ -181,6 +184,7 @@ def build_adapter_preview(*, shadow_dir: Path, eval_report_path: Path) -> Dict[s
         "query_chain_notes": query_chain_notes(),
         "adapter_mappings": mappings,
         "mapping_count": len(mappings),
+        "phase48_eval_ready_required": True,
         "active_source": ACTIVE_SOURCE,
         "default_source_unchanged": ACTIVE_SOURCE == "zh_wikipedia",
         "registry": {source: SOURCE_REGISTRY.get(source, "unknown") for source in ("zh_wikipedia", "nasa", "esa", "wikidata")},
@@ -202,6 +206,7 @@ def render_markdown(report: Dict[str, Any]) -> str:
         f"- ready: `{report.get('ready')}`",
         f"- blocked_reason: `{report.get('blocked_reason', '')}`",
         f"- mapping_count: `{report.get('mapping_count', 0)}`",
+        f"- phase48_eval_ready_required: `{report.get('phase48_eval_ready_required')}`",
         f"- active_source: `{report.get('active_source')}`",
         f"- formal_default_triples_write: `{report.get('formal_default_triples_write')}`",
         f"- chroma_write: `{report.get('chroma_write')}`",

@@ -99,6 +99,38 @@ class NasaShadowQueryChainAdapterPreviewTests(unittest.TestCase):
             self.assertFalse(report["ready"])
             self.assertEqual(report["blocked_reason"], "missing_shadow_or_eval_report")
 
+    def test_phase48_eval_ready_false_is_blocked(self):
+        module = load_module()
+        with tempfile.TemporaryDirectory() as temp_dir:
+            root = Path(temp_dir)
+            shadow_dir, eval_path = self.make_shadow_and_eval(root)
+            payload = json.loads(eval_path.read_text(encoding="utf-8"))
+            payload["ready"] = False
+            eval_path.write_text(json.dumps(payload), encoding="utf-8")
+
+            report = module.build_adapter_preview(shadow_dir=shadow_dir, eval_report_path=eval_path)
+
+            self.assertFalse(report["ready"])
+            self.assertEqual(report["blocked_reason"], "phase48_eval_not_ready")
+            self.assertEqual(report["mapping_count"], 0)
+            self.assertEqual(report["adapter_mappings"], [])
+
+    def test_phase48_eval_missing_ready_is_blocked(self):
+        module = load_module()
+        with tempfile.TemporaryDirectory() as temp_dir:
+            root = Path(temp_dir)
+            shadow_dir, eval_path = self.make_shadow_and_eval(root)
+            payload = json.loads(eval_path.read_text(encoding="utf-8"))
+            payload.pop("ready")
+            eval_path.write_text(json.dumps(payload), encoding="utf-8")
+
+            report = module.build_adapter_preview(shadow_dir=shadow_dir, eval_report_path=eval_path)
+
+            self.assertFalse(report["ready"])
+            self.assertEqual(report["blocked_reason"], "phase48_eval_not_ready")
+            self.assertEqual(report["mapping_count"], 0)
+            self.assertEqual(report["adapter_mappings"], [])
+
     def test_output_paths_are_restricted(self):
         module = load_module()
         with tempfile.TemporaryDirectory() as temp_dir:
