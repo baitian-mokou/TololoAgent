@@ -41,20 +41,21 @@ def under_evaluation(path: Path) -> bool:
     return any(parts[i : i + 2] == ["evaluation", "four_source_expansion"] for i in range(len(parts) - 1))
 
 
-def shadow_output_allowed(path: Path) -> bool:
-    resolved = path.resolve()
-    parts = [part.lower() for part in resolved.parts]
-    joined = "/".join(parts)
-    if "shadow" not in joined:
-        return False
-    forbidden_suffixes = [
-        ("data", "triples"),
-        ("data", "triples", SOURCE_ID),
-    ]
-    for suffix in forbidden_suffixes:
-        if tuple(parts[-len(suffix) :]) == suffix:
-            return False
-    return True
+def repo_root_for_package(package_dir: Path) -> Path:
+    resolved = package_dir.resolve()
+    parts = list(resolved.parts)
+    for index in range(len(parts) - 1):
+        if parts[index : index + 2] == ["evaluation", "four_source_expansion"]:
+            return Path(*parts[:index])
+    return ROOT
+
+
+def expected_shadow_output_dir(package_dir: Path) -> Path:
+    return repo_root_for_package(package_dir) / "data" / "triples_shadow" / SOURCE_ID
+
+
+def shadow_output_allowed(path: Path, package_dir: Path) -> bool:
+    return path.resolve() == expected_shadow_output_dir(package_dir).resolve()
 
 
 def report_output_allowed(path: Path) -> bool:
@@ -64,7 +65,10 @@ def report_output_allowed(path: Path) -> bool:
 def package_counts(package_dir: Path) -> Dict[str, int]:
     triples = read_json(package_dir / "triples_preview.json")
     narratives = read_json(package_dir / "narratives_preview.json")
+    manifest = read_json(package_dir / "package_manifest.json")
+    item_count = int(manifest.get("items", 0) or 0) if isinstance(manifest, dict) else 0
     return {
+        "items": item_count,
         "triples": len(triples) if isinstance(triples, list) else 0,
         "narratives": len(narratives) if isinstance(narratives, list) else 0,
     }
@@ -129,9 +133,9 @@ def build_apply_report(
         report = blocked_report("approval_source_mismatch", package_dir, approval_path, shadow_output_dir, execute)
     elif approval["approval_decision"] != APPROVED_DECISION:
         report = blocked_report("approval_not_approved", package_dir, approval_path, shadow_output_dir, execute)
-    elif approval["approved_item_count"] <= 0:
-        report = blocked_report("approved_item_count_not_positive", package_dir, approval_path, shadow_output_dir, execute)
-    elif not shadow_output_allowed(shadow_output_dir):
+    elif approval["approved_item_count"] != counts["items"] or counts["items"] <= 0:
+        report = blocked_report("approved_item_count_mismatch", package_dir, approval_path, shadow_output_dir, execute)
+    elif not shadow_output_allowed(shadow_output_dir, package_dir):
         report = blocked_report("output_not_shadow_only", package_dir, approval_path, shadow_output_dir, execute)
     elif counts["triples"] <= 0 or counts["narratives"] <= 0:
         report = blocked_report("package_missing_preview_records", package_dir, approval_path, shadow_output_dir, execute)

@@ -536,6 +536,8 @@ python scripts/build_nasa_limited_shadow_package.py --narrative-trial-json evalu
 python scripts/apply_nasa_limited_shadow_package.py --package-dir evaluation\four_source_expansion\nasa_limited_shadow_package_phase45 --approval evaluation\four_source_expansion\nasa_limited_shadow_package_approval_phase45.json --shadow-output-dir data\triples_shadow\nasa --report-json evaluation\four_source_expansion\nasa_limited_shadow_apply_guard_phase46.json
 ```
 
+`apply_nasa_limited_shadow_package.py` 默认只做 guarded preflight；只有 approval 明确通过且附加 `--execute` 时才会复制到固定 shadow-only 路径。
+
 ```powershell
 python scripts/preview_source_frontier.py --source nasa --limit 20
 python scripts/preview_source_frontier.py --source esa --limit 20

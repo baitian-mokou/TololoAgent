@@ -18,17 +18,29 @@ def load_module():
 
 
 class ApplyNasaLimitedShadowPackageTests(unittest.TestCase):
-    def make_package(self, root: Path) -> tuple[Path, Path]:
+    def make_package(self, root: Path, item_count: int = 1) -> tuple[Path, Path]:
         package = root / "evaluation" / "four_source_expansion" / "package"
         package.mkdir(parents=True)
+        triples = [
+            {
+                "subject": f"Apophis {index}",
+                "predicate": "INSTANCE_OF",
+                "object": "asteroid",
+                "evidence": "Apophis is an asteroid.",
+                "confidence": 0.82,
+            }
+            for index in range(item_count)
+        ]
+        narratives = [{"content": f"Apophis {index} is a near-Earth asteroid.", "source_id": "nasa"} for index in range(item_count)]
         (package / "triples_preview.json").write_text(
-            json.dumps([{"subject": "Apophis", "predicate": "INSTANCE_OF", "object": "asteroid", "evidence": "Apophis is an asteroid.", "confidence": 0.82}]),
+            json.dumps(triples),
             encoding="utf-8",
         )
         (package / "narratives_preview.json").write_text(
-            json.dumps([{"content": "Apophis is a near-Earth asteroid.", "source_id": "nasa"}]),
+            json.dumps(narratives),
             encoding="utf-8",
         )
+        (package / "package_manifest.json").write_text(json.dumps({"source_id": "nasa", "items": item_count}), encoding="utf-8")
         approval = root / "evaluation" / "four_source_expansion" / "approval.json"
         approval.write_text(json.dumps({"source_id": "nasa", "approval_decision": "pending", "approved_item_count": 0}), encoding="utf-8")
         return package, approval
@@ -59,6 +71,33 @@ class ApplyNasaLimitedShadowPackageTests(unittest.TestCase):
             self.assertEqual(report["blocked_reason"], "output_not_shadow_only")
             self.assertFalse((root / "data" / "triples" / "nasa").exists())
 
+    def test_rejects_formal_triples_subtree_even_if_name_contains_shadow(self):
+        module = load_module()
+        with tempfile.TemporaryDirectory() as temp_dir:
+            root = Path(temp_dir)
+            package, approval = self.make_package(root)
+            approval.write_text(json.dumps({"source_id": "nasa", "approval_decision": "approved_for_shadow_write", "approved_item_count": 1}), encoding="utf-8")
+
+            report = module.build_apply_report(package_dir=package, approval_path=approval, shadow_output_dir=root / "data" / "triples" / "nasa_shadow", execute=True)
+
+            self.assertFalse(report["allowed"])
+            self.assertEqual(report["blocked_reason"], "output_not_shadow_only")
+            self.assertFalse((root / "data" / "triples" / "nasa_shadow").exists())
+
+    def test_rejects_partial_approval_count(self):
+        module = load_module()
+        with tempfile.TemporaryDirectory() as temp_dir:
+            root = Path(temp_dir)
+            package, approval = self.make_package(root, item_count=2)
+            approval.write_text(json.dumps({"source_id": "nasa", "approval_decision": "approved_for_shadow_write", "approved_item_count": 1}), encoding="utf-8")
+            out_dir = root / "data" / "triples_shadow" / "nasa"
+
+            report = module.build_apply_report(package_dir=package, approval_path=approval, shadow_output_dir=out_dir, execute=True)
+
+            self.assertFalse(report["allowed"])
+            self.assertEqual(report["blocked_reason"], "approved_item_count_mismatch")
+            self.assertFalse(out_dir.exists())
+
     def test_approved_execute_writes_only_shadow_output(self):
         module = load_module()
         with tempfile.TemporaryDirectory() as temp_dir:
@@ -82,11 +121,12 @@ class ApplyNasaLimitedShadowPackageTests(unittest.TestCase):
             root = Path(temp_dir)
             package, approval = self.make_package(root)
             approval.write_text(json.dumps({"source_id": "nasa", "approval_decision": "approved_for_shadow_write", "approved_item_count": 1}), encoding="utf-8")
-            out_dir = root / "data" / "triples_shadow" / "nasa"
+            out_dir = root / "custom_shadow" / "nasa"
 
             report = module.build_apply_report(package_dir=package, approval_path=approval, shadow_output_dir=out_dir, execute=False)
 
-            self.assertTrue(report["allowed"])
+            self.assertFalse(report["allowed"])
+            self.assertEqual(report["blocked_reason"], "output_not_shadow_only")
             self.assertFalse(report["executed"])
             self.assertFalse(out_dir.exists())
 

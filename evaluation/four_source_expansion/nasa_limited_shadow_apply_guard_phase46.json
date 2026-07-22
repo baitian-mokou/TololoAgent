@@ -1,7 +1,7 @@
 {
   "phase": "Phase 46 readiness",
   "mode": "guarded_nasa_limited_shadow_apply",
-  "generated_at": "2026-07-22T06:27:05.482242+00:00",
+  "generated_at": "2026-07-22T06:33:50.560494+00:00",
   "source_id": "nasa",
   "allowed": false,
   "executed": false,
@@ -28,6 +28,7 @@
     "reviewer_notes": ""
   },
   "package_counts": {
+    "items": 20,
     "triples": 80,
     "narratives": 80
   }
