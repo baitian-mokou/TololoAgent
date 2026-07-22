@@ -1,19 +1,20 @@
 {
   "phase": "Phase 60",
   "mode": "nasa_fourth_shadow_package_preparation",
-  "generated_at": "2026-07-22T11:53:42.418530+00:00",
+  "generated_at": "2026-07-22T11:57:45.147378+00:00",
   "source_id": "nasa",
   "selected_count": 28,
-  "packaged_items": 28,
+  "packaged_items": 24,
   "rejected": 0,
   "failed": 0,
   "prior_excluded": 0,
-  "triples": 112,
-  "narratives": 112,
+  "internal_duplicate_skipped": 4,
+  "triples": 96,
+  "narratives": 96,
   "relations_count": {
-    "HAS_TOPIC": 28,
-    "INSTANCE_OF": 56,
-    "SOURCE_URL": 28
+    "HAS_TOPIC": 24,
+    "INSTANCE_OF": 48,
+    "SOURCE_URL": 24
   },
   "candidate_statuses": [
     {
@@ -72,12 +73,14 @@
       "url": "https://science.nasa.gov/mission/mars-2020-perseverance"
     },
     {
-      "status": "packaged",
+      "status": "duplicate_skipped",
+      "reason": "package_internal_url_title_subject_overlap",
       "title": "About the Planets Facebook logo Instagram logo",
       "url": "https://solarsystem.nasa.gov/planets/overview"
     },
     {
-      "status": "packaged",
+      "status": "duplicate_skipped",
+      "reason": "package_internal_url_title_subject_overlap",
       "title": "Moons",
       "url": "https://solarsystem.nasa.gov/moons/overview"
     },
@@ -87,8 +90,9 @@
       "url": "https://solarsystem.nasa.gov/asteroids-comets-and-meteors/overview"
     },
     {
-      "status": "packaged",
-      "title": "Science Missions - NASA Science",
+      "status": "duplicate_skipped",
+      "reason": "package_internal_url_title_subject_overlap",
+      "title": "Science Missions",
       "url": "https://solarsystem.nasa.gov/missions"
     },
     {
@@ -122,7 +126,8 @@
       "url": "https://science.nasa.gov/dwarf-planets"
     },
     {
-      "status": "packaged",
+      "status": "duplicate_skipped",
+      "reason": "package_internal_url_title_subject_overlap",
       "title": "Asteroids, Comets, and Meteors",
       "url": "https://science.nasa.gov/asteroids-comets-meteors"
     },
@@ -466,9 +471,9 @@
     "execution_status": "not_run",
     "requires_manual_approval": true,
     "source_id": "nasa",
-    "approved_item_count_required": 28,
-    "planned_triples": 112,
-    "planned_narratives": 112,
+    "approved_item_count_required": 24,
+    "planned_triples": 96,
+    "planned_narratives": 96,
     "allowed_scope": "shadow materialization path only",
     "safety_guards": [
       "ACTIVE_SOURCE remains zh_wikipedia",

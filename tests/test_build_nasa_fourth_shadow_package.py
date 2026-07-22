@@ -76,6 +76,34 @@ class BuildNasaFourthShadowPackageTests(unittest.TestCase):
             self.assertEqual(report["packaged_items"], 0)
             self.assertEqual(report["prior_excluded"], 1)
 
+    def test_excludes_internal_title_subject_duplicates(self):
+        module = load_module()
+        with tempfile.TemporaryDirectory() as temp:
+            root = Path(temp)
+            raw_a = root / "evaluation" / "four_source_expansion" / "p59" / "a.json"
+            raw_b = root / "evaluation" / "four_source_expansion" / "p59" / "b.json"
+            self.make_raw(raw_a, title="Duplicate Title", url="https://science.nasa.gov/a/")
+            self.make_raw(raw_b, title="Duplicate Title", url="https://science.nasa.gov/b/")
+            phase59 = root / "evaluation" / "four_source_expansion" / "p59.json"
+            self.write_json(
+                phase59,
+                {
+                    "candidate_statuses": [
+                        {"status": "accepted_for_package", "raw_preview_path": str(raw_a), "url": "https://science.nasa.gov/a/"},
+                        {"status": "accepted_for_package", "raw_preview_path": str(raw_b), "url": "https://science.nasa.gov/b/"},
+                    ]
+                },
+            )
+            report = module.build_fourth_package(
+                phase59_json=phase59,
+                exclude_package_dirs=[],
+                exclude_report_paths=[],
+                out_dir=root / "evaluation" / "four_source_expansion" / "p60",
+                approval_template=root / "evaluation" / "four_source_expansion" / "approval.json",
+            )
+            self.assertEqual(report["packaged_items"], 1)
+            self.assertEqual(report["internal_duplicate_skipped"], 1)
+
     def test_output_paths_restricted(self):
         module = load_module()
         with tempfile.TemporaryDirectory() as temp:

@@ -125,6 +125,10 @@ def build_fourth_package(
     packaged: List[Dict[str, Any]] = []
     statuses: List[Dict[str, Any]] = []
     prior_excluded = 0
+    internal_duplicate_skipped = 0
+    seen_urls: set[str] = set()
+    seen_titles: set[str] = set()
+    seen_subjects: set[str] = set()
     for status in accepted_phase59_items(phase59_json):
         raw_path = Path(str(status.get("raw_preview_path") or ""))
         item, item_status = item_from_raw(raw_path, status)
@@ -132,6 +136,20 @@ def build_fourth_package(
             prior_excluded += 1
             statuses.append({"status": "duplicate_skipped", "reason": "prior_url_title_subject_overlap", "title": item.get("title"), "url": item.get("source_url")})
             continue
+        if item:
+            item_url = canonical_url(str(item.get("source_url") or ""))
+            item_title = normalized_title(str(item.get("title") or ""))
+            item_subjects = {normalized_title(str(triple.get("subject") or "")) for triple in item.get("triples", [])}
+            item_subjects.discard("")
+            if (item_url and item_url in seen_urls) or (item_title and item_title in seen_titles) or (item_subjects & seen_subjects):
+                internal_duplicate_skipped += 1
+                statuses.append({"status": "duplicate_skipped", "reason": "package_internal_url_title_subject_overlap", "title": item.get("title"), "url": item.get("source_url")})
+                continue
+            if item_url:
+                seen_urls.add(item_url)
+            if item_title:
+                seen_titles.add(item_title)
+            seen_subjects.update(item_subjects)
         statuses.append(item_status)
         if item:
             packaged.append(item)
@@ -164,6 +182,7 @@ def build_fourth_package(
         "rejected": rejected,
         "failed": failed,
         "prior_excluded": prior_excluded,
+        "internal_duplicate_skipped": internal_duplicate_skipped,
         "triples": len(triples),
         "narratives": len(narratives),
         "relations_count": dict(sorted(relation_counts.items())),
@@ -194,6 +213,7 @@ def render_md(report: Dict[str, Any]) -> str:
             f"- rejected: `{report['rejected']}`",
             f"- failed: `{report['failed']}`",
             f"- prior_excluded: `{report['prior_excluded']}`",
+            f"- internal_duplicate_skipped: `{report.get('internal_duplicate_skipped', 0)}`",
             f"- triples: `{report['triples']}`",
             f"- narratives: `{report['narratives']}`",
             f"- approval_status: `{report['approval_status']}`",
