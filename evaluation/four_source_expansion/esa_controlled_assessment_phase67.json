@@ -1,0 +1,369 @@
+{
+  "phase": "Phase 67",
+  "mode": "esa_controlled_source_assessment_preview",
+  "generated_at": "2026-07-22T12:33:26.442155+00:00",
+  "source_id": "esa",
+  "selected": 30,
+  "accepted_for_package": 9,
+  "review_needed": 16,
+  "rejected": 5,
+  "failed": 0,
+  "duplicates_excluded": 0,
+  "recommended_next_package_size": 9,
+  "candidate_statuses": [
+    {
+      "status": "accepted_for_package",
+      "reason": "quality_accepted",
+      "url": "www.esa.int/science_exploration/space_science",
+      "title": "ESA - Space Science",
+      "quality_score": 75,
+      "quality_triage": "accepted",
+      "quality_reasons": [
+        "official or academic domain",
+        "science keyword hits=12",
+        "fact or overview page signal",
+        "mission page signal",
+        "news/update signal in body/navigation",
+        "media/gallery signal in body/navigation"
+      ],
+      "raw_path": "evaluation\\source_quality\\phase15_raw\\gated\\esa\\https_www.esa.int_Science_Exploration_Space_Science.json"
+    },
+    {
+      "status": "rejected",
+      "reason": "quality_review_needed",
+      "url": "www.esa.int/science_exploration/space_science/juice",
+      "title": "JUICE",
+      "quality_score": 45,
+      "quality_triage": "review_needed",
+      "quality_reasons": [
+        "official or academic domain",
+        "science keyword hits=3",
+        "mission page signal",
+        "very short text",
+        "protected official science/fact/mission page floor"
+      ],
+      "raw_path": "C:\\wt\\TololoAgent-guarded\\data\\raw_json\\esa\\JUICE.json"
+    },
+    {
+      "status": "accepted_for_package",
+      "reason": "quality_accepted",
+      "url": "www.esa.int/science_exploration/space_science/rosetta",
+      "title": "ESA - Rosetta",
+      "quality_score": 75,
+      "quality_triage": "accepted",
+      "quality_reasons": [
+        "official or academic domain",
+        "science keyword hits=11",
+        "fact or overview page signal",
+        "mission page signal",
+        "news/update signal in body/navigation",
+        "media/gallery signal in body/navigation"
+      ],
+      "raw_path": "evaluation\\source_quality\\phase15_raw\\gated\\esa\\https_www.esa.int_Science_Exploration_Space_Science_Rosetta.json"
+    },
+    {
+      "status": "accepted_for_package",
+      "reason": "quality_accepted",
+      "url": "www.esa.int/science_exploration/space_science/gaia",
+      "title": "ESA - Gaia",
+      "quality_score": 75,
+      "quality_triage": "accepted",
+      "quality_reasons": [
+        "official or academic domain",
+        "science keyword hits=9",
+        "fact or overview page signal",
+        "mission page signal",
+        "news/update signal in body/navigation",
+        "media/gallery signal in body/navigation"
+      ],
+      "raw_path": "evaluation\\source_quality\\phase15_raw\\gated\\esa\\https_www.esa.int_Science_Exploration_Space_Science_Gaia.json"
+    },
+    {
+      "status": "accepted_for_package",
+      "reason": "quality_accepted",
+      "url": "www.esa.int/science_exploration/space_science/solar_orbiter",
+      "title": "ESA - Solar Orbiter",
+      "quality_score": 75,
+      "quality_triage": "accepted",
+      "quality_reasons": [
+        "official or academic domain",
+        "science keyword hits=9",
+        "fact or overview page signal",
+        "mission page signal",
+        "news/update signal in body/navigation",
+        "media/gallery signal in body/navigation"
+      ],
+      "raw_path": "evaluation\\source_quality\\phase15_raw\\gated\\esa\\https_www.esa.int_Science_Exploration_Space_Science_Solar_Orbiter.json"
+    },
+    {
+      "status": "rejected",
+      "reason": "quality_exploratory",
+      "url": "www.esa.int/science_exploration/space_science/mars_express",
+      "title": "Mars Express",
+      "quality_score": 0,
+      "quality_triage": "exploratory",
+      "quality_reasons": [
+        "official or academic domain",
+        "science keyword hits=3",
+        "mission page signal",
+        "very short text",
+        "news/update signal"
+      ],
+      "raw_path": "C:\\wt\\TololoAgent-guarded\\data\\raw_json\\esa\\Mars Express.json"
+    },
+    {
+      "status": "rejected",
+      "reason": "quality_exploratory",
+      "url": "www.esa.int/science_exploration/space_science/venus_express",
+      "title": "ESA - Venus Express",
+      "quality_score": 45,
+      "quality_triage": "exploratory",
+      "quality_reasons": [
+        "official or academic domain",
+        "science keyword hits=11",
+        "fact or overview page signal",
+        "mission page signal",
+        "high link density",
+        "news/update signal",
+        "media/gallery signal in body/navigation"
+      ],
+      "raw_path": "evaluation\\source_quality\\phase15_raw\\gated\\esa\\https_www.esa.int_Science_Exploration_Space_Science_Venus_Express.json"
+    },
+    {
+      "status": "rejected",
+      "reason": "quality_rejected",
+      "url": "www.esa.int/science_exploration/space_science/smart-1",
+      "title": "ESA - SMART-1",
+      "quality_score": 26,
+      "quality_triage": "rejected",
+      "quality_reasons": [
+        "official or academic domain",
+        "science keyword hits=4",
+        "fact or overview page signal",
+        "mission page signal",
+        "publication/abstract signal",
+        "high link density",
+        "news/update signal in body/navigation",
+        "media/gallery signal in body/navigation"
+      ],
+      "raw_path": "evaluation\\source_quality\\phase15_raw\\gated\\esa\\https_www.esa.int_Science_Exploration_Space_Science_SMART-1.json"
+    },
+    {
+      "status": "accepted_for_package",
+      "reason": "quality_accepted",
+      "url": "www.esa.int/science_exploration/space_science/bepicolombo",
+      "title": "ESA - BepiColombo",
+      "quality_score": 75,
+      "quality_triage": "accepted",
+      "quality_reasons": [
+        "official or academic domain",
+        "science keyword hits=11",
+        "fact or overview page signal",
+        "mission page signal",
+        "news/update signal in body/navigation",
+        "media/gallery signal in body/navigation"
+      ],
+      "raw_path": "evaluation\\source_quality\\phase15_raw\\gated\\esa\\https_www.esa.int_Science_Exploration_Space_Science_BepiColombo.json"
+    },
+    {
+      "status": "accepted_for_package",
+      "reason": "quality_accepted",
+      "url": "www.esa.int/science_exploration/space_science/euclid",
+      "title": "ESA - Euclid",
+      "quality_score": 75,
+      "quality_triage": "accepted",
+      "quality_reasons": [
+        "official or academic domain",
+        "science keyword hits=7",
+        "fact or overview page signal",
+        "mission page signal",
+        "publication/abstract signal",
+        "news/update signal in body/navigation",
+        "media/gallery signal in body/navigation"
+      ],
+      "raw_path": "evaluation\\source_quality\\phase15_raw\\gated\\esa\\https_www.esa.int_Science_Exploration_Space_Science_Euclid.json"
+    },
+    {
+      "status": "review_needed",
+      "reason": "raw_missing_preview_only",
+      "url": "www.esa.int/science_exploration/space_science/hera",
+      "title": ""
+    },
+    {
+      "status": "accepted_for_package",
+      "reason": "quality_accepted",
+      "url": "www.esa.int/science_exploration/space_science/exomars",
+      "title": "ESA - ExoMars",
+      "quality_score": 71,
+      "quality_triage": "accepted",
+      "quality_reasons": [
+        "official or academic domain",
+        "science keyword hits=7",
+        "fact or overview page signal",
+        "mission page signal",
+        "news/update signal in body/navigation",
+        "media/gallery signal in body/navigation"
+      ],
+      "raw_path": "evaluation\\source_quality\\phase15_raw\\gated\\esa\\https_www.esa.int_Science_Exploration_Space_Science_ExoMars.json"
+    },
+    {
+      "status": "accepted_for_package",
+      "reason": "quality_accepted",
+      "url": "www.esa.int/science_exploration/space_science/cluster",
+      "title": "ESA - Cluster",
+      "quality_score": 68,
+      "quality_triage": "accepted",
+      "quality_reasons": [
+        "official or academic domain",
+        "science keyword hits=6",
+        "fact or overview page signal",
+        "mission page signal",
+        "news/update signal in body/navigation",
+        "media/gallery signal in body/navigation"
+      ],
+      "raw_path": "evaluation\\source_quality\\phase15_raw\\gated\\esa\\https_www.esa.int_Science_Exploration_Space_Science_Cluster.json"
+    },
+    {
+      "status": "rejected",
+      "reason": "quality_review_needed",
+      "url": "www.esa.int/science_exploration/space_science/hubble",
+      "title": "ESA - kernel (1)",
+      "quality_score": 19,
+      "quality_triage": "review_needed",
+      "quality_reasons": [
+        "official or academic domain",
+        "science keyword hits=3",
+        "short text"
+      ],
+      "raw_path": "evaluation\\source_quality\\phase15_raw\\gated\\esa\\https_www.esa.int_Science_Exploration_Space_Science_Hubble.json"
+    },
+    {
+      "status": "accepted_for_package",
+      "reason": "quality_accepted",
+      "url": "www.esa.int/science_exploration/space_science/webb",
+      "title": "ESA - Webb",
+      "quality_score": 75,
+      "quality_triage": "accepted",
+      "quality_reasons": [
+        "official or academic domain",
+        "science keyword hits=9",
+        "fact or overview page signal",
+        "mission page signal",
+        "news/update signal in body/navigation",
+        "media/gallery signal in body/navigation"
+      ],
+      "raw_path": "evaluation\\source_quality\\phase15_raw\\gated\\esa\\https_www.esa.int_Science_Exploration_Space_Science_Webb.json"
+    },
+    {
+      "status": "review_needed",
+      "reason": "raw_missing_preview_only",
+      "url": "www.esa.int/science_exploration/space_science/what_is_the_solar_system",
+      "title": ""
+    },
+    {
+      "status": "review_needed",
+      "reason": "raw_missing_preview_only",
+      "url": "www.esa.int/science_exploration/space_science/exploring_space",
+      "title": ""
+    },
+    {
+      "status": "review_needed",
+      "reason": "raw_missing_preview_only",
+      "url": "www.esa.int/science_exploration",
+      "title": ""
+    },
+    {
+      "status": "review_needed",
+      "reason": "raw_missing_preview_only",
+      "url": "www.esa.int/science_exploration/space_science/expedition_sound_podcast_series",
+      "title": ""
+    },
+    {
+      "status": "review_needed",
+      "reason": "raw_missing_preview_only",
+      "url": "www.esa.int/science_exploration/space_science/mars_express/metallic_waves_on_ancient_mars",
+      "title": ""
+    },
+    {
+      "status": "review_needed",
+      "reason": "raw_missing_preview_only",
+      "url": "www.esa.int/science_exploration/space_science/webb/webb_reveals_millions_of_stars_in_nearby_galaxy",
+      "title": ""
+    },
+    {
+      "status": "review_needed",
+      "reason": "raw_missing_preview_only",
+      "url": "www.esa.int/science_exploration/space_science/euclid/euclid_discovers_the_most_ancient_quasar_in_the_universe",
+      "title": ""
+    },
+    {
+      "status": "review_needed",
+      "reason": "raw_missing_preview_only",
+      "url": "www.esa.int/science_exploration/space_science/webb/webb_studies_how_a_planet_survived_the_death_of_its_star",
+      "title": ""
+    },
+    {
+      "status": "review_needed",
+      "reason": "raw_missing_preview_only",
+      "url": "www.esa.int/science_exploration/space_science/(archive)/0",
+      "title": ""
+    },
+    {
+      "status": "review_needed",
+      "reason": "raw_missing_preview_only",
+      "url": "www.esa.int/science_exploration/space_science/exoplanets",
+      "title": ""
+    },
+    {
+      "status": "review_needed",
+      "reason": "raw_missing_preview_only",
+      "url": "www.esa.int/science_exploration/space_science/cheops",
+      "title": ""
+    },
+    {
+      "status": "review_needed",
+      "reason": "raw_missing_preview_only",
+      "url": "www.esa.int/science_exploration/space_science/plato",
+      "title": ""
+    },
+    {
+      "status": "review_needed",
+      "reason": "raw_missing_preview_only",
+      "url": "www.esa.int/science_exploration/space_science/mission_navigator",
+      "title": ""
+    },
+    {
+      "status": "review_needed",
+      "reason": "raw_missing_preview_only",
+      "url": "www.esa.int/science_exploration/space_science/about_space_science",
+      "title": ""
+    },
+    {
+      "status": "review_needed",
+      "reason": "raw_missing_preview_only",
+      "url": "www.esa.int/science_exploration/space_science/esa_s_cosmic_vision",
+      "title": ""
+    }
+  ],
+  "reason_counts": {
+    "quality_accepted": 9,
+    "quality_review_needed": 2,
+    "quality_exploratory": 2,
+    "quality_rejected": 1,
+    "raw_missing_preview_only": 16
+  },
+  "network_attempted": false,
+  "formal_raw_write": false,
+  "formal_triples_write": false,
+  "formal_narratives_write": false,
+  "chroma_write": false,
+  "neo4j_write": false,
+  "active_source": "zh_wikipedia",
+  "registry": {
+    "zh_wikipedia": "active",
+    "nasa": "disabled",
+    "esa": "disabled",
+    "wikidata": "disabled"
+  },
+  "active_source_unchanged": true
+}
