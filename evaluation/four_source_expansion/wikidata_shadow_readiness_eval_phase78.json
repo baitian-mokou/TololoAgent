@@ -1,0 +1,1052 @@
+{
+  "phase": "Phase 78",
+  "mode": "wikidata_shadow_readiness_eval_preview",
+  "generated_at": "2026-07-22T14:34:43.840138+00:00",
+  "source_id": "wikidata",
+  "schema_version": "wikidata_shadow_ready_v1",
+  "ready": true,
+  "blocked_reason": "",
+  "issues": [],
+  "shadow_dir": "data\\triples_shadow\\wikidata",
+  "counts": {
+    "items": 25,
+    "triples": 151,
+    "narratives": 25
+  },
+  "manifest_counts": {
+    "items": 25,
+    "triples": 151,
+    "narratives": 25
+  },
+  "expected_counts": {
+    "items": 25,
+    "triples": 151,
+    "narratives": 25
+  },
+  "validation": {
+    "triple_source_ids": {
+      "wikidata": 151
+    },
+    "triple_schema_versions": {
+      "wikidata_shadow_ready_v1": 151
+    },
+    "triple_qid_present": 151,
+    "narrative_source_ids": {
+      "wikidata": 25
+    },
+    "narrative_schema_versions": {
+      "wikidata_shadow_ready_v1": 25
+    },
+    "narrative_qid_present": 25
+  },
+  "sample_query_preview": [
+    {
+      "query": "太阳",
+      "result_count": 5,
+      "results": [
+        {
+          "kind": "triple",
+          "subject": "太阳",
+          "predicate": "LOCATED_IN",
+          "object": "太阳系",
+          "qid": "Q525",
+          "source_url": "https://www.wikidata.org/wiki/Q525",
+          "evidence": ""
+        },
+        {
+          "kind": "triple",
+          "subject": "太阳",
+          "predicate": "PART_OF",
+          "object": "太阳系",
+          "qid": "Q525",
+          "source_url": "https://www.wikidata.org/wiki/Q525",
+          "evidence": ""
+        },
+        {
+          "kind": "triple",
+          "subject": "太阳",
+          "predicate": "HAS_MASS",
+          "object": "1.9885e30 kg",
+          "qid": "Q525",
+          "source_url": "https://www.wikidata.org/wiki/Q525",
+          "evidence": ""
+        },
+        {
+          "kind": "triple",
+          "subject": "太阳",
+          "predicate": "HAS_RADIUS",
+          "object": "695700 km",
+          "qid": "Q525",
+          "source_url": "https://www.wikidata.org/wiki/Q525",
+          "evidence": ""
+        },
+        {
+          "kind": "triple",
+          "subject": "太阳",
+          "predicate": "HAS_ATMOSPHERE",
+          "object": "氢;氦",
+          "qid": "Q525",
+          "source_url": "https://www.wikidata.org/wiki/Q525",
+          "evidence": ""
+        }
+      ]
+    },
+    {
+      "query": "火星",
+      "result_count": 5,
+      "results": [
+        {
+          "kind": "triple",
+          "subject": "火星",
+          "predicate": "ORBITS",
+          "object": "太阳",
+          "qid": "Q111",
+          "source_url": "https://www.wikidata.org/wiki/Q111",
+          "evidence": ""
+        },
+        {
+          "kind": "triple",
+          "subject": "火星",
+          "predicate": "PART_OF",
+          "object": "太阳系",
+          "qid": "Q111",
+          "source_url": "https://www.wikidata.org/wiki/Q111",
+          "evidence": ""
+        },
+        {
+          "kind": "triple",
+          "subject": "火星",
+          "predicate": "LOCATED_IN",
+          "object": "太阳系",
+          "qid": "Q111",
+          "source_url": "https://www.wikidata.org/wiki/Q111",
+          "evidence": ""
+        },
+        {
+          "kind": "triple",
+          "subject": "火星",
+          "predicate": "HAS_MASS",
+          "object": "6.4171e23 kg",
+          "qid": "Q111",
+          "source_url": "https://www.wikidata.org/wiki/Q111",
+          "evidence": ""
+        },
+        {
+          "kind": "triple",
+          "subject": "火星",
+          "predicate": "HAS_RADIUS",
+          "object": "3389.5 km",
+          "qid": "Q111",
+          "source_url": "https://www.wikidata.org/wiki/Q111",
+          "evidence": ""
+        }
+      ]
+    },
+    {
+      "query": "Q111",
+      "result_count": 5,
+      "results": [
+        {
+          "kind": "triple",
+          "subject": "火星",
+          "predicate": "ORBITS",
+          "object": "太阳",
+          "qid": "Q111",
+          "source_url": "https://www.wikidata.org/wiki/Q111",
+          "evidence": ""
+        },
+        {
+          "kind": "triple",
+          "subject": "火星",
+          "predicate": "PART_OF",
+          "object": "太阳系",
+          "qid": "Q111",
+          "source_url": "https://www.wikidata.org/wiki/Q111",
+          "evidence": ""
+        },
+        {
+          "kind": "triple",
+          "subject": "火星",
+          "predicate": "LOCATED_IN",
+          "object": "太阳系",
+          "qid": "Q111",
+          "source_url": "https://www.wikidata.org/wiki/Q111",
+          "evidence": ""
+        },
+        {
+          "kind": "triple",
+          "subject": "火星",
+          "predicate": "HAS_MASS",
+          "object": "6.4171e23 kg",
+          "qid": "Q111",
+          "source_url": "https://www.wikidata.org/wiki/Q111",
+          "evidence": ""
+        },
+        {
+          "kind": "triple",
+          "subject": "火星",
+          "predicate": "HAS_RADIUS",
+          "object": "3389.5 km",
+          "qid": "Q111",
+          "source_url": "https://www.wikidata.org/wiki/Q111",
+          "evidence": ""
+        }
+      ]
+    },
+    {
+      "query": "HAS_MASS",
+      "result_count": 5,
+      "results": [
+        {
+          "kind": "triple",
+          "subject": "太阳",
+          "predicate": "HAS_MASS",
+          "object": "1.9885e30 kg",
+          "qid": "Q525",
+          "source_url": "https://www.wikidata.org/wiki/Q525",
+          "evidence": ""
+        },
+        {
+          "kind": "triple",
+          "subject": "水星",
+          "predicate": "HAS_MASS",
+          "object": "3.3011e23 kg",
+          "qid": "Q308",
+          "source_url": "https://www.wikidata.org/wiki/Q308",
+          "evidence": "wikidata adapter record: 水星 HAS_MASS 3.3011e23 kg"
+        },
+        {
+          "kind": "triple",
+          "subject": "金星",
+          "predicate": "HAS_MASS",
+          "object": "4.8675e24 kg",
+          "qid": "Q313",
+          "source_url": "https://www.wikidata.org/wiki/Q313",
+          "evidence": "wikidata adapter record: 金星 HAS_MASS 4.8675e24 kg"
+        },
+        {
+          "kind": "triple",
+          "subject": "地球",
+          "predicate": "HAS_MASS",
+          "object": "5.97237e24 kg",
+          "qid": "Q2",
+          "source_url": "https://www.wikidata.org/wiki/Q2",
+          "evidence": ""
+        },
+        {
+          "kind": "triple",
+          "subject": "月球",
+          "predicate": "HAS_MASS",
+          "object": "7.342e22 kg",
+          "qid": "Q405",
+          "source_url": "https://www.wikidata.org/wiki/Q405",
+          "evidence": "wikidata adapter record: 月球 HAS_MASS 7.342e22 kg"
+        }
+      ]
+    },
+    {
+      "query": "HAS_RADIUS",
+      "result_count": 5,
+      "results": [
+        {
+          "kind": "triple",
+          "subject": "太阳",
+          "predicate": "HAS_RADIUS",
+          "object": "695700 km",
+          "qid": "Q525",
+          "source_url": "https://www.wikidata.org/wiki/Q525",
+          "evidence": ""
+        },
+        {
+          "kind": "triple",
+          "subject": "水星",
+          "predicate": "HAS_RADIUS",
+          "object": "2439.7 km",
+          "qid": "Q308",
+          "source_url": "https://www.wikidata.org/wiki/Q308",
+          "evidence": "wikidata adapter record: 水星 HAS_RADIUS 2439.7 km"
+        },
+        {
+          "kind": "triple",
+          "subject": "金星",
+          "predicate": "HAS_RADIUS",
+          "object": "6051.8 km",
+          "qid": "Q313",
+          "source_url": "https://www.wikidata.org/wiki/Q313",
+          "evidence": "wikidata adapter record: 金星 HAS_RADIUS 6051.8 km"
+        },
+        {
+          "kind": "triple",
+          "subject": "地球",
+          "predicate": "HAS_RADIUS",
+          "object": "6371 km",
+          "qid": "Q2",
+          "source_url": "https://www.wikidata.org/wiki/Q2",
+          "evidence": ""
+        },
+        {
+          "kind": "triple",
+          "subject": "月球",
+          "predicate": "HAS_RADIUS",
+          "object": "1737.4 km",
+          "qid": "Q405",
+          "source_url": "https://www.wikidata.org/wiki/Q405",
+          "evidence": "wikidata adapter record: 月球 HAS_RADIUS 1737.4 km"
+        }
+      ]
+    },
+    {
+      "query": "ORBITS",
+      "result_count": 5,
+      "results": [
+        {
+          "kind": "triple",
+          "subject": "水星",
+          "predicate": "ORBITS",
+          "object": "太阳",
+          "qid": "Q308",
+          "source_url": "https://www.wikidata.org/wiki/Q308",
+          "evidence": "wikidata adapter record: 水星 ORBITS 太阳"
+        },
+        {
+          "kind": "triple",
+          "subject": "金星",
+          "predicate": "ORBITS",
+          "object": "太阳",
+          "qid": "Q313",
+          "source_url": "https://www.wikidata.org/wiki/Q313",
+          "evidence": "wikidata adapter record: 金星 ORBITS 太阳"
+        },
+        {
+          "kind": "triple",
+          "subject": "地球",
+          "predicate": "ORBITS",
+          "object": "太阳",
+          "qid": "Q2",
+          "source_url": "https://www.wikidata.org/wiki/Q2",
+          "evidence": ""
+        },
+        {
+          "kind": "triple",
+          "subject": "月球",
+          "predicate": "ORBITS",
+          "object": "地球",
+          "qid": "Q405",
+          "source_url": "https://www.wikidata.org/wiki/Q405",
+          "evidence": "wikidata adapter record: 月球 ORBITS 地球"
+        },
+        {
+          "kind": "triple",
+          "subject": "火星",
+          "predicate": "ORBITS",
+          "object": "太阳",
+          "qid": "Q111",
+          "source_url": "https://www.wikidata.org/wiki/Q111",
+          "evidence": ""
+        }
+      ]
+    },
+    {
+      "query": "土卫六",
+      "result_count": 5,
+      "results": [
+        {
+          "kind": "triple",
+          "subject": "土卫六",
+          "predicate": "ORBITS",
+          "object": "土星",
+          "qid": "Q2565",
+          "source_url": "https://www.wikidata.org/wiki/Q2565",
+          "evidence": "wikidata adapter record: 土卫六 ORBITS 土星"
+        },
+        {
+          "kind": "triple",
+          "subject": "土卫六",
+          "predicate": "PART_OF",
+          "object": "土星系统",
+          "qid": "Q2565",
+          "source_url": "https://www.wikidata.org/wiki/Q2565",
+          "evidence": "wikidata adapter record: 土卫六 PART_OF 土星系统"
+        },
+        {
+          "kind": "triple",
+          "subject": "土卫六",
+          "predicate": "LOCATED_IN",
+          "object": "土星系统",
+          "qid": "Q2565",
+          "source_url": "https://www.wikidata.org/wiki/Q2565",
+          "evidence": "wikidata adapter record: 土卫六 LOCATED_IN 土星系统"
+        },
+        {
+          "kind": "triple",
+          "subject": "土卫六",
+          "predicate": "DISCOVERED_BY",
+          "object": "克里斯蒂安·惠更斯",
+          "qid": "Q2565",
+          "source_url": "https://www.wikidata.org/wiki/Q2565",
+          "evidence": "wikidata adapter record: 土卫六 DISCOVERED_BY 克里斯蒂安·惠更斯"
+        },
+        {
+          "kind": "triple",
+          "subject": "土卫六",
+          "predicate": "HAS_MASS",
+          "object": "1.3452e23 kg",
+          "qid": "Q2565",
+          "source_url": "https://www.wikidata.org/wiki/Q2565",
+          "evidence": "wikidata adapter record: 土卫六 HAS_MASS 1.3452e23 kg"
+        }
+      ]
+    },
+    {
+      "query": "wikidata",
+      "result_count": 5,
+      "results": [
+        {
+          "kind": "triple",
+          "subject": "太阳",
+          "predicate": "LOCATED_IN",
+          "object": "太阳系",
+          "qid": "Q525",
+          "source_url": "https://www.wikidata.org/wiki/Q525",
+          "evidence": ""
+        },
+        {
+          "kind": "triple",
+          "subject": "太阳",
+          "predicate": "PART_OF",
+          "object": "太阳系",
+          "qid": "Q525",
+          "source_url": "https://www.wikidata.org/wiki/Q525",
+          "evidence": ""
+        },
+        {
+          "kind": "triple",
+          "subject": "太阳",
+          "predicate": "HAS_MASS",
+          "object": "1.9885e30 kg",
+          "qid": "Q525",
+          "source_url": "https://www.wikidata.org/wiki/Q525",
+          "evidence": ""
+        },
+        {
+          "kind": "triple",
+          "subject": "太阳",
+          "predicate": "HAS_RADIUS",
+          "object": "695700 km",
+          "qid": "Q525",
+          "source_url": "https://www.wikidata.org/wiki/Q525",
+          "evidence": ""
+        },
+        {
+          "kind": "triple",
+          "subject": "太阳",
+          "predicate": "HAS_ATMOSPHERE",
+          "object": "氢;氦",
+          "qid": "Q525",
+          "source_url": "https://www.wikidata.org/wiki/Q525",
+          "evidence": ""
+        }
+      ]
+    }
+  ],
+  "eval": {
+    "overall": {
+      "total_cases": 10,
+      "passed_cases": 10,
+      "failed_cases": 0,
+      "pass_rate": 1.0
+    },
+    "case_results": [
+      {
+        "case_id": "subject_sun",
+        "query": "太阳 太阳系",
+        "oracle": {
+          "subject": "太阳",
+          "topic": "太阳系"
+        },
+        "passed": true,
+        "hit_count": 8,
+        "failure_reason": "",
+        "top_results": [
+          {
+            "kind": "triple",
+            "subject": "太阳",
+            "predicate": "LOCATED_IN",
+            "object": "太阳系",
+            "qid": "Q525",
+            "source_url": "https://www.wikidata.org/wiki/Q525",
+            "evidence": ""
+          },
+          {
+            "kind": "triple",
+            "subject": "太阳",
+            "predicate": "PART_OF",
+            "object": "太阳系",
+            "qid": "Q525",
+            "source_url": "https://www.wikidata.org/wiki/Q525",
+            "evidence": ""
+          },
+          {
+            "kind": "triple",
+            "subject": "水星",
+            "predicate": "PART_OF",
+            "object": "太阳系",
+            "qid": "Q308",
+            "source_url": "https://www.wikidata.org/wiki/Q308",
+            "evidence": "wikidata adapter record: 水星 PART_OF 太阳系"
+          },
+          {
+            "kind": "triple",
+            "subject": "金星",
+            "predicate": "PART_OF",
+            "object": "太阳系",
+            "qid": "Q313",
+            "source_url": "https://www.wikidata.org/wiki/Q313",
+            "evidence": "wikidata adapter record: 金星 PART_OF 太阳系"
+          },
+          {
+            "kind": "triple",
+            "subject": "金星",
+            "predicate": "LOCATED_IN",
+            "object": "太阳系",
+            "qid": "Q313",
+            "source_url": "https://www.wikidata.org/wiki/Q313",
+            "evidence": "wikidata adapter record: 金星 LOCATED_IN 太阳系"
+          }
+        ]
+      },
+      {
+        "case_id": "subject_mars",
+        "query": "火星 太阳",
+        "oracle": {
+          "subject": "火星"
+        },
+        "passed": true,
+        "hit_count": 8,
+        "failure_reason": "",
+        "top_results": [
+          {
+            "kind": "triple",
+            "subject": "火星",
+            "predicate": "ORBITS",
+            "object": "太阳",
+            "qid": "Q111",
+            "source_url": "https://www.wikidata.org/wiki/Q111",
+            "evidence": ""
+          },
+          {
+            "kind": "triple",
+            "subject": "火星",
+            "predicate": "PART_OF",
+            "object": "太阳系",
+            "qid": "Q111",
+            "source_url": "https://www.wikidata.org/wiki/Q111",
+            "evidence": ""
+          },
+          {
+            "kind": "triple",
+            "subject": "火星",
+            "predicate": "LOCATED_IN",
+            "object": "太阳系",
+            "qid": "Q111",
+            "source_url": "https://www.wikidata.org/wiki/Q111",
+            "evidence": ""
+          },
+          {
+            "kind": "triple",
+            "subject": "太阳",
+            "predicate": "LOCATED_IN",
+            "object": "太阳系",
+            "qid": "Q525",
+            "source_url": "https://www.wikidata.org/wiki/Q525",
+            "evidence": ""
+          },
+          {
+            "kind": "triple",
+            "subject": "太阳",
+            "predicate": "PART_OF",
+            "object": "太阳系",
+            "qid": "Q525",
+            "source_url": "https://www.wikidata.org/wiki/Q525",
+            "evidence": ""
+          }
+        ]
+      },
+      {
+        "case_id": "qid_mars",
+        "query": "Q111 火星",
+        "oracle": {
+          "qid": "Q111"
+        },
+        "passed": true,
+        "hit_count": 8,
+        "failure_reason": "",
+        "top_results": [
+          {
+            "kind": "triple",
+            "subject": "火星",
+            "predicate": "ORBITS",
+            "object": "太阳",
+            "qid": "Q111",
+            "source_url": "https://www.wikidata.org/wiki/Q111",
+            "evidence": ""
+          },
+          {
+            "kind": "triple",
+            "subject": "火星",
+            "predicate": "PART_OF",
+            "object": "太阳系",
+            "qid": "Q111",
+            "source_url": "https://www.wikidata.org/wiki/Q111",
+            "evidence": ""
+          },
+          {
+            "kind": "triple",
+            "subject": "火星",
+            "predicate": "LOCATED_IN",
+            "object": "太阳系",
+            "qid": "Q111",
+            "source_url": "https://www.wikidata.org/wiki/Q111",
+            "evidence": ""
+          },
+          {
+            "kind": "triple",
+            "subject": "火星",
+            "predicate": "HAS_MASS",
+            "object": "6.4171e23 kg",
+            "qid": "Q111",
+            "source_url": "https://www.wikidata.org/wiki/Q111",
+            "evidence": ""
+          },
+          {
+            "kind": "triple",
+            "subject": "火星",
+            "predicate": "HAS_RADIUS",
+            "object": "3389.5 km",
+            "qid": "Q111",
+            "source_url": "https://www.wikidata.org/wiki/Q111",
+            "evidence": ""
+          }
+        ]
+      },
+      {
+        "case_id": "relation_mass",
+        "query": "HAS_MASS",
+        "oracle": {
+          "relation": "HAS_MASS"
+        },
+        "passed": true,
+        "hit_count": 8,
+        "failure_reason": "",
+        "top_results": [
+          {
+            "kind": "triple",
+            "subject": "太阳",
+            "predicate": "HAS_MASS",
+            "object": "1.9885e30 kg",
+            "qid": "Q525",
+            "source_url": "https://www.wikidata.org/wiki/Q525",
+            "evidence": ""
+          },
+          {
+            "kind": "triple",
+            "subject": "水星",
+            "predicate": "HAS_MASS",
+            "object": "3.3011e23 kg",
+            "qid": "Q308",
+            "source_url": "https://www.wikidata.org/wiki/Q308",
+            "evidence": "wikidata adapter record: 水星 HAS_MASS 3.3011e23 kg"
+          },
+          {
+            "kind": "triple",
+            "subject": "金星",
+            "predicate": "HAS_MASS",
+            "object": "4.8675e24 kg",
+            "qid": "Q313",
+            "source_url": "https://www.wikidata.org/wiki/Q313",
+            "evidence": "wikidata adapter record: 金星 HAS_MASS 4.8675e24 kg"
+          },
+          {
+            "kind": "triple",
+            "subject": "地球",
+            "predicate": "HAS_MASS",
+            "object": "5.97237e24 kg",
+            "qid": "Q2",
+            "source_url": "https://www.wikidata.org/wiki/Q2",
+            "evidence": ""
+          },
+          {
+            "kind": "triple",
+            "subject": "月球",
+            "predicate": "HAS_MASS",
+            "object": "7.342e22 kg",
+            "qid": "Q405",
+            "source_url": "https://www.wikidata.org/wiki/Q405",
+            "evidence": "wikidata adapter record: 月球 HAS_MASS 7.342e22 kg"
+          }
+        ]
+      },
+      {
+        "case_id": "relation_radius",
+        "query": "HAS_RADIUS",
+        "oracle": {
+          "relation": "HAS_RADIUS"
+        },
+        "passed": true,
+        "hit_count": 8,
+        "failure_reason": "",
+        "top_results": [
+          {
+            "kind": "triple",
+            "subject": "太阳",
+            "predicate": "HAS_RADIUS",
+            "object": "695700 km",
+            "qid": "Q525",
+            "source_url": "https://www.wikidata.org/wiki/Q525",
+            "evidence": ""
+          },
+          {
+            "kind": "triple",
+            "subject": "水星",
+            "predicate": "HAS_RADIUS",
+            "object": "2439.7 km",
+            "qid": "Q308",
+            "source_url": "https://www.wikidata.org/wiki/Q308",
+            "evidence": "wikidata adapter record: 水星 HAS_RADIUS 2439.7 km"
+          },
+          {
+            "kind": "triple",
+            "subject": "金星",
+            "predicate": "HAS_RADIUS",
+            "object": "6051.8 km",
+            "qid": "Q313",
+            "source_url": "https://www.wikidata.org/wiki/Q313",
+            "evidence": "wikidata adapter record: 金星 HAS_RADIUS 6051.8 km"
+          },
+          {
+            "kind": "triple",
+            "subject": "地球",
+            "predicate": "HAS_RADIUS",
+            "object": "6371 km",
+            "qid": "Q2",
+            "source_url": "https://www.wikidata.org/wiki/Q2",
+            "evidence": ""
+          },
+          {
+            "kind": "triple",
+            "subject": "月球",
+            "predicate": "HAS_RADIUS",
+            "object": "1737.4 km",
+            "qid": "Q405",
+            "source_url": "https://www.wikidata.org/wiki/Q405",
+            "evidence": "wikidata adapter record: 月球 HAS_RADIUS 1737.4 km"
+          }
+        ]
+      },
+      {
+        "case_id": "relation_orbits",
+        "query": "ORBITS 太阳",
+        "oracle": {
+          "relation": "ORBITS",
+          "topic": "太阳"
+        },
+        "passed": true,
+        "hit_count": 8,
+        "failure_reason": "",
+        "top_results": [
+          {
+            "kind": "triple",
+            "subject": "水星",
+            "predicate": "ORBITS",
+            "object": "太阳",
+            "qid": "Q308",
+            "source_url": "https://www.wikidata.org/wiki/Q308",
+            "evidence": "wikidata adapter record: 水星 ORBITS 太阳"
+          },
+          {
+            "kind": "triple",
+            "subject": "金星",
+            "predicate": "ORBITS",
+            "object": "太阳",
+            "qid": "Q313",
+            "source_url": "https://www.wikidata.org/wiki/Q313",
+            "evidence": "wikidata adapter record: 金星 ORBITS 太阳"
+          },
+          {
+            "kind": "triple",
+            "subject": "地球",
+            "predicate": "ORBITS",
+            "object": "太阳",
+            "qid": "Q2",
+            "source_url": "https://www.wikidata.org/wiki/Q2",
+            "evidence": ""
+          },
+          {
+            "kind": "triple",
+            "subject": "火星",
+            "predicate": "ORBITS",
+            "object": "太阳",
+            "qid": "Q111",
+            "source_url": "https://www.wikidata.org/wiki/Q111",
+            "evidence": ""
+          },
+          {
+            "kind": "triple",
+            "subject": "木星",
+            "predicate": "ORBITS",
+            "object": "太阳",
+            "qid": "Q319",
+            "source_url": "https://www.wikidata.org/wiki/Q319",
+            "evidence": "wikidata adapter record: 木星 ORBITS 太阳"
+          }
+        ]
+      },
+      {
+        "case_id": "moon",
+        "query": "月球 地球",
+        "oracle": {
+          "subject": "月球"
+        },
+        "passed": true,
+        "hit_count": 8,
+        "failure_reason": "",
+        "top_results": [
+          {
+            "kind": "triple",
+            "subject": "月球",
+            "predicate": "ORBITS",
+            "object": "地球",
+            "qid": "Q405",
+            "source_url": "https://www.wikidata.org/wiki/Q405",
+            "evidence": "wikidata adapter record: 月球 ORBITS 地球"
+          },
+          {
+            "kind": "triple",
+            "subject": "月球",
+            "predicate": "PART_OF",
+            "object": "地球系统",
+            "qid": "Q405",
+            "source_url": "https://www.wikidata.org/wiki/Q405",
+            "evidence": "wikidata adapter record: 月球 PART_OF 地球系统"
+          },
+          {
+            "kind": "triple",
+            "subject": "月球",
+            "predicate": "LOCATED_IN",
+            "object": "地球系统",
+            "qid": "Q405",
+            "source_url": "https://www.wikidata.org/wiki/Q405",
+            "evidence": "wikidata adapter record: 月球 LOCATED_IN 地球系统"
+          },
+          {
+            "kind": "narrative",
+            "page_title": "月球",
+            "qid": "Q405",
+            "source_url": "https://www.wikidata.org/wiki/Q405",
+            "snippet": "月球在 fixture 中作为地球系统成员记录，结构化事实指出其绕地球运行。"
+          },
+          {
+            "kind": "triple",
+            "subject": "地球",
+            "predicate": "ORBITS",
+            "object": "太阳",
+            "qid": "Q2",
+            "source_url": "https://www.wikidata.org/wiki/Q2",
+            "evidence": ""
+          }
+        ]
+      },
+      {
+        "case_id": "jupiter",
+        "query": "木星 太阳",
+        "oracle": {
+          "subject": "木星"
+        },
+        "passed": true,
+        "hit_count": 8,
+        "failure_reason": "",
+        "top_results": [
+          {
+            "kind": "triple",
+            "subject": "木星",
+            "predicate": "ORBITS",
+            "object": "太阳",
+            "qid": "Q319",
+            "source_url": "https://www.wikidata.org/wiki/Q319",
+            "evidence": "wikidata adapter record: 木星 ORBITS 太阳"
+          },
+          {
+            "kind": "triple",
+            "subject": "木星",
+            "predicate": "PART_OF",
+            "object": "太阳系",
+            "qid": "Q319",
+            "source_url": "https://www.wikidata.org/wiki/Q319",
+            "evidence": "wikidata adapter record: 木星 PART_OF 太阳系"
+          },
+          {
+            "kind": "triple",
+            "subject": "木星",
+            "predicate": "LOCATED_IN",
+            "object": "太阳系",
+            "qid": "Q319",
+            "source_url": "https://www.wikidata.org/wiki/Q319",
+            "evidence": "wikidata adapter record: 木星 LOCATED_IN 太阳系"
+          },
+          {
+            "kind": "narrative",
+            "page_title": "木星",
+            "qid": "Q319",
+            "source_url": "https://www.wikidata.org/wiki/Q319",
+            "snippet": "木星 fixture 将氢和氦列为主要大气成分，并保留质量、半径与绕太阳运行事实。"
+          },
+          {
+            "kind": "triple",
+            "subject": "太阳",
+            "predicate": "LOCATED_IN",
+            "object": "太阳系",
+            "qid": "Q525",
+            "source_url": "https://www.wikidata.org/wiki/Q525",
+            "evidence": ""
+          }
+        ]
+      },
+      {
+        "case_id": "saturn_moon",
+        "query": "土卫六",
+        "oracle": {
+          "subject": "土卫六"
+        },
+        "passed": true,
+        "hit_count": 7,
+        "failure_reason": "",
+        "top_results": [
+          {
+            "kind": "triple",
+            "subject": "土卫六",
+            "predicate": "ORBITS",
+            "object": "土星",
+            "qid": "Q2565",
+            "source_url": "https://www.wikidata.org/wiki/Q2565",
+            "evidence": "wikidata adapter record: 土卫六 ORBITS 土星"
+          },
+          {
+            "kind": "triple",
+            "subject": "土卫六",
+            "predicate": "PART_OF",
+            "object": "土星系统",
+            "qid": "Q2565",
+            "source_url": "https://www.wikidata.org/wiki/Q2565",
+            "evidence": "wikidata adapter record: 土卫六 PART_OF 土星系统"
+          },
+          {
+            "kind": "triple",
+            "subject": "土卫六",
+            "predicate": "LOCATED_IN",
+            "object": "土星系统",
+            "qid": "Q2565",
+            "source_url": "https://www.wikidata.org/wiki/Q2565",
+            "evidence": "wikidata adapter record: 土卫六 LOCATED_IN 土星系统"
+          },
+          {
+            "kind": "triple",
+            "subject": "土卫六",
+            "predicate": "DISCOVERED_BY",
+            "object": "克里斯蒂安·惠更斯",
+            "qid": "Q2565",
+            "source_url": "https://www.wikidata.org/wiki/Q2565",
+            "evidence": "wikidata adapter record: 土卫六 DISCOVERED_BY 克里斯蒂安·惠更斯"
+          },
+          {
+            "kind": "triple",
+            "subject": "土卫六",
+            "predicate": "HAS_MASS",
+            "object": "1.3452e23 kg",
+            "qid": "Q2565",
+            "source_url": "https://www.wikidata.org/wiki/Q2565",
+            "evidence": "wikidata adapter record: 土卫六 HAS_MASS 1.3452e23 kg"
+          }
+        ]
+      },
+      {
+        "case_id": "wikidata_url",
+        "query": "wikidata Q525",
+        "oracle": {
+          "source_url": "Q525"
+        },
+        "passed": true,
+        "hit_count": 8,
+        "failure_reason": "",
+        "top_results": [
+          {
+            "kind": "triple",
+            "subject": "太阳",
+            "predicate": "LOCATED_IN",
+            "object": "太阳系",
+            "qid": "Q525",
+            "source_url": "https://www.wikidata.org/wiki/Q525",
+            "evidence": ""
+          },
+          {
+            "kind": "triple",
+            "subject": "太阳",
+            "predicate": "PART_OF",
+            "object": "太阳系",
+            "qid": "Q525",
+            "source_url": "https://www.wikidata.org/wiki/Q525",
+            "evidence": ""
+          },
+          {
+            "kind": "triple",
+            "subject": "太阳",
+            "predicate": "HAS_MASS",
+            "object": "1.9885e30 kg",
+            "qid": "Q525",
+            "source_url": "https://www.wikidata.org/wiki/Q525",
+            "evidence": ""
+          },
+          {
+            "kind": "triple",
+            "subject": "太阳",
+            "predicate": "HAS_RADIUS",
+            "object": "695700 km",
+            "qid": "Q525",
+            "source_url": "https://www.wikidata.org/wiki/Q525",
+            "evidence": ""
+          },
+          {
+            "kind": "triple",
+            "subject": "太阳",
+            "predicate": "HAS_ATMOSPHERE",
+            "object": "氢;氦",
+            "qid": "Q525",
+            "source_url": "https://www.wikidata.org/wiki/Q525",
+            "evidence": ""
+          }
+        ]
+      }
+    ]
+  },
+  "adapter_preview": {
+    "mapping_count": 10,
+    "payload_shape": [
+      "query",
+      "source_id",
+      "result_count",
+      "top_result",
+      "qid",
+      "source_url"
+    ]
+  },
+  "formal_default_triples_write": false,
+  "chroma_write": false,
+  "neo4j_write": false,
+  "active_source": "zh_wikipedia",
+  "default_source_unchanged": true,
+  "registry": {
+    "zh_wikipedia": "active",
+    "nasa": "disabled",
+    "esa": "disabled",
+    "wikidata": "disabled"
+  }
+}
