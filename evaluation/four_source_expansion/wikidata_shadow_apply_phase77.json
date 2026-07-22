@@ -1,0 +1,45 @@
+{
+  "phase": "Phase 76",
+  "mode": "guarded_wikidata_shadow_apply_preflight",
+  "generated_at": "2026-07-22T14:28:13.457261+00:00",
+  "source_id": "wikidata",
+  "schema_version": "wikidata_shadow_ready_v1",
+  "allowed": true,
+  "executed": true,
+  "blocked_reason": "",
+  "package_dir": "evaluation\\four_source_expansion\\wikidata_shadow_package_phase75",
+  "approval_path": "evaluation\\four_source_expansion\\wikidata_shadow_package_approval_phase75.json",
+  "shadow_output_dir": "data\\triples_shadow\\wikidata",
+  "execute_requested": true,
+  "formal_default_triples_write": false,
+  "chroma_write": false,
+  "neo4j_write": false,
+  "active_source": "zh_wikipedia",
+  "registry": {
+    "zh_wikipedia": "active",
+    "nasa": "disabled",
+    "esa": "disabled",
+    "wikidata": "disabled"
+  },
+  "active_source_unchanged": true,
+  "copy_result": {
+    "files_written": [
+      "data\\triples_shadow\\wikidata\\triples_preview.json",
+      "data\\triples_shadow\\wikidata\\narratives_preview.json",
+      "data\\triples_shadow\\wikidata\\package_manifest.json"
+    ],
+    "file_count": 3
+  },
+  "approval": {
+    "source_id": "wikidata",
+    "approval_decision": "approved_for_shadow_write",
+    "approved_item_count": 25,
+    "reviewer_notes": "Approved under user standing conditional approval after reviewer Gate=GO for Phase75 package and Phase76 guarded apply preflight; Wikidata 25-item package shadow-only write."
+  },
+  "package_counts": {
+    "items": 25,
+    "triples": 151,
+    "narratives": 25
+  },
+  "schema_issues": []
+}

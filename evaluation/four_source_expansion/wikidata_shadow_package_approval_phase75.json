@@ -1,8 +1,8 @@
 {
   "source_id": "wikidata",
-  "approval_decision": "pending",
-  "approved_item_count": 0,
+  "approval_decision": "approved_for_shadow_write",
+  "approved_item_count": 25,
   "max_available_item_count": 25,
-  "reviewer_notes": "",
+  "reviewer_notes": "Approved under user standing conditional approval after reviewer Gate=GO for Phase75 package and Phase76 guarded apply preflight; Wikidata 25-item package shadow-only write.",
   "allowed_output_scope": "data/triples_shadow/wikidata only after explicit guarded approval"
 }
