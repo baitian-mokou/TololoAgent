@@ -1,0 +1,157 @@
+{
+  "phase": "Phase 38",
+  "mode": "four_source_batch_preview_offline_reuse",
+  "generated_at": "2026-07-22T04:11:41.580456+00:00",
+  "active_source": "zh_wikipedia",
+  "offline_only": true,
+  "plan_json": "evaluation\\four_source_expansion\\four_source_batch_plan_phase37.json",
+  "batch_size": 50,
+  "summary": {
+    "sources": 4,
+    "candidate_count": 57,
+    "accepted": 0,
+    "review_needed": 55,
+    "exploratory": 2,
+    "rejected": 0,
+    "recommended_actions": {
+      "keep_baseline": 1,
+      "needs_manual_review": 1,
+      "raw_shadow_ingest_candidate": 2
+    }
+  },
+  "sources": [
+    {
+      "source_id": "zh_wikipedia",
+      "mode": "active",
+      "preview_execution": "skipped_with_reason",
+      "candidate_count": 0,
+      "accepted": 0,
+      "review_needed": 0,
+      "exploratory": 0,
+      "rejected": 0,
+      "skipped": 0,
+      "quality_gate_summary": {
+        "reason": "active baseline source; no batch preview without separate formal approval",
+        "triage_counts": {}
+      },
+      "recommended_next_action": "keep_baseline",
+      "safety_flags": {
+        "formal_pipeline_write": false,
+        "chroma_write": false,
+        "neo4j_write": false,
+        "active_source_unchanged": true
+      }
+    },
+    {
+      "source_id": "nasa",
+      "mode": "disabled",
+      "preview_execution": "offline_reused",
+      "candidate_count": 20,
+      "accepted": 0,
+      "review_needed": 20,
+      "exploratory": 0,
+      "rejected": 0,
+      "skipped": 6,
+      "quality_gate_summary": {
+        "source_report": "evaluation/source_quality/nasa_frontier_quality_preview.json",
+        "triage_counts": {
+          "review_needed": 20
+        },
+        "top_reasons": {
+          "official or academic domain": 20,
+          "very short text": 20,
+          "protected official science/fact/mission page floor": 14,
+          "topic taxonomy hits=1": 10,
+          "fact or overview page signal": 10,
+          "science keyword hits=3": 10,
+          "topic taxonomy hits=3": 10,
+          "science keyword hits=2": 5,
+          "science keyword hits=4": 5,
+          "mission page signal": 4
+        }
+      },
+      "recommended_next_action": "raw_shadow_ingest_candidate",
+      "safety_flags": {
+        "formal_pipeline_write": false,
+        "chroma_write": false,
+        "neo4j_write": false,
+        "active_source_unchanged": true
+      }
+    },
+    {
+      "source_id": "esa",
+      "mode": "disabled",
+      "preview_execution": "offline_reused",
+      "candidate_count": 17,
+      "accepted": 0,
+      "review_needed": 15,
+      "exploratory": 2,
+      "rejected": 0,
+      "skipped": 0,
+      "quality_gate_summary": {
+        "source_report": "evaluation/source_quality/esa_frontier_quality_preview.json",
+        "triage_counts": {
+          "exploratory": 2,
+          "review_needed": 15
+        },
+        "top_reasons": {
+          "official or academic domain": 17,
+          "very short text": 17,
+          "topic taxonomy hits=2": 15,
+          "science keyword hits=1": 12,
+          "mission page signal": 3,
+          "protected official science/fact/mission page floor": 3,
+          "science keyword hits=2": 3,
+          "topic taxonomy hits=3": 2,
+          "science keyword hits=3": 2,
+          "news/update signal": 2
+        }
+      },
+      "recommended_next_action": "raw_shadow_ingest_candidate",
+      "safety_flags": {
+        "formal_pipeline_write": false,
+        "chroma_write": false,
+        "neo4j_write": false,
+        "active_source_unchanged": true
+      }
+    },
+    {
+      "source_id": "wikidata",
+      "mode": "disabled",
+      "preview_execution": "offline_reused",
+      "candidate_count": 20,
+      "accepted": 0,
+      "review_needed": 20,
+      "exploratory": 0,
+      "rejected": 0,
+      "skipped": 27,
+      "quality_gate_summary": {
+        "source_report": "evaluation/source_quality/wikidata_frontier_quality_preview.json",
+        "triage_counts": {
+          "review_needed": 20
+        },
+        "top_reasons": {
+          "entity data source mode": 20,
+          "topic taxonomy hits=1": 20,
+          "very short text": 20,
+          "low science signal": 20,
+          "entity data metadata-only review floor": 20
+        }
+      },
+      "recommended_next_action": "needs_manual_review",
+      "safety_flags": {
+        "formal_pipeline_write": false,
+        "chroma_write": false,
+        "neo4j_write": false,
+        "active_source_unchanged": true
+      }
+    }
+  ],
+  "safety_boundaries": [
+    "offline-only report reuse; no network call",
+    "no collection execution",
+    "no formal raw/triples/vector/graph writes",
+    "nasa/esa/wikidata remain disabled and shadow-only",
+    "zh_wikipedia remains active baseline"
+  ]
+}
