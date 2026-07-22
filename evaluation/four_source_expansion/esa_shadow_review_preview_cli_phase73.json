@@ -1,0 +1,188 @@
+{
+  "phase": "Phase 73",
+  "mode": "esa_shadow_review_only_cli",
+  "generated_at": "2026-07-22T13:21:01.917084+00:00",
+  "source_id": "esa",
+  "ready": true,
+  "blocked_reason": "",
+  "eval_report_path": "evaluation\\four_source_expansion\\esa_shadow_readiness_eval_phase72.json",
+  "shadow_dir": "data\\triples_shadow\\esa",
+  "adapter_mappings": [
+    {
+      "query": "Rosetta ESA mission",
+      "source_id": "esa",
+      "result_count": 8,
+      "oracle_satisfied": true,
+      "top_result": {
+        "kind": "triple",
+        "subject": "Rosetta",
+        "predicate": "HAS_TOPIC",
+        "object": "space science mission",
+        "source_url": "https://www.esa.int/Science_Exploration/Space_Science/Rosetta",
+        "evidence": "Science & Exploration Rosetta ESA's comet-chaser The mission ESA's Rosetta mission was the first to rendezvous with a comet, the first to follow a comet on its "
+      },
+      "evidence": "Science & Exploration Rosetta ESA's comet-chaser The mission ESA's Rosetta mission was the first to rendezvous with a comet, the first to follow a comet on its ",
+      "source_url": "https://www.esa.int/Science_Exploration/Space_Science/Rosetta"
+    },
+    {
+      "query": "Gaia ESA",
+      "source_id": "esa",
+      "result_count": 8,
+      "oracle_satisfied": true,
+      "top_result": {
+        "kind": "triple",
+        "subject": "Gaia",
+        "predicate": "SOURCE_URL",
+        "object": "https://www.esa.int/Science_Exploration/Space_Science/Gaia",
+        "source_url": "https://www.esa.int/Science_Exploration/Space_Science/Gaia",
+        "evidence": "https://www.esa.int/Science_Exploration/Space_Science/Gaia"
+      },
+      "evidence": "https://www.esa.int/Science_Exploration/Space_Science/Gaia",
+      "source_url": "https://www.esa.int/Science_Exploration/Space_Science/Gaia"
+    },
+    {
+      "query": "Euclid ESA",
+      "source_id": "esa",
+      "result_count": 8,
+      "oracle_satisfied": true,
+      "top_result": {
+        "kind": "triple",
+        "subject": "Euclid",
+        "predicate": "SOURCE_URL",
+        "object": "https://www.esa.int/Science_Exploration/Space_Science/Euclid",
+        "source_url": "https://www.esa.int/Science_Exploration/Space_Science/Euclid",
+        "evidence": "https://www.esa.int/Science_Exploration/Space_Science/Euclid"
+      },
+      "evidence": "https://www.esa.int/Science_Exploration/Space_Science/Euclid",
+      "source_url": "https://www.esa.int/Science_Exploration/Space_Science/Euclid"
+    },
+    {
+      "query": "Webb ESA",
+      "source_id": "esa",
+      "result_count": 8,
+      "oracle_satisfied": true,
+      "top_result": {
+        "kind": "triple",
+        "subject": "Webb",
+        "predicate": "SOURCE_URL",
+        "object": "https://www.esa.int/Science_Exploration/Space_Science/Webb",
+        "source_url": "https://www.esa.int/Science_Exploration/Space_Science/Webb",
+        "evidence": "https://www.esa.int/Science_Exploration/Space_Science/Webb"
+      },
+      "evidence": "https://www.esa.int/Science_Exploration/Space_Science/Webb",
+      "source_url": "https://www.esa.int/Science_Exploration/Space_Science/Webb"
+    },
+    {
+      "query": "Plato ESA exoplanet",
+      "source_id": "esa",
+      "result_count": 8,
+      "oracle_satisfied": true,
+      "top_result": {
+        "kind": "triple",
+        "subject": "Space Science",
+        "predicate": "HAS_TOPIC",
+        "object": "exoplanet science",
+        "source_url": "https://www.esa.int/Science_Exploration/Space_Science",
+        "evidence": "Science & Exploration Space Science Latest All Stories Videos Images Image Science & Exploration Plato's electronics ready for space 20/07/2026 1433 views 35 li"
+      },
+      "evidence": "Science & Exploration Space Science Latest All Stories Videos Images Image Science & Exploration Plato's electronics ready for space 20/07/2026 1433 views 35 li",
+      "source_url": "https://www.esa.int/Science_Exploration/Space_Science"
+    },
+    {
+      "query": "SOURCE_URL ESA",
+      "source_id": "esa",
+      "result_count": 8,
+      "oracle_satisfied": true,
+      "top_result": {
+        "kind": "triple",
+        "subject": "Space Science",
+        "predicate": "SOURCE_URL",
+        "object": "https://www.esa.int/Science_Exploration/Space_Science",
+        "source_url": "https://www.esa.int/Science_Exploration/Space_Science",
+        "evidence": "https://www.esa.int/Science_Exploration/Space_Science"
+      },
+      "evidence": "https://www.esa.int/Science_Exploration/Space_Science",
+      "source_url": "https://www.esa.int/Science_Exploration/Space_Science"
+    },
+    {
+      "query": "HAS_TOPIC space science",
+      "source_id": "esa",
+      "result_count": 8,
+      "oracle_satisfied": true,
+      "top_result": {
+        "kind": "triple",
+        "subject": "Space Science",
+        "predicate": "HAS_TOPIC",
+        "object": "exoplanet science",
+        "source_url": "https://www.esa.int/Science_Exploration/Space_Science",
+        "evidence": "Science & Exploration Space Science Latest All Stories Videos Images Image Science & Exploration Plato's electronics ready for space 20/07/2026 1433 views 35 li"
+      },
+      "evidence": "Science & Exploration Space Science Latest All Stories Videos Images Image Science & Exploration Plato's electronics ready for space 20/07/2026 1433 views 35 li",
+      "source_url": "https://www.esa.int/Science_Exploration/Space_Science"
+    },
+    {
+      "query": "space mission page",
+      "source_id": "esa",
+      "result_count": 8,
+      "oracle_satisfied": true,
+      "top_result": {
+        "kind": "triple",
+        "subject": "Rosetta",
+        "predicate": "INSTANCE_OF",
+        "object": "ESA space science page",
+        "source_url": "https://www.esa.int/Science_Exploration/Space_Science/Rosetta",
+        "evidence": "Science & Exploration Rosetta ESA's comet-chaser The mission ESA's Rosetta mission was the first to rendezvous with a comet, the first to follow a comet on its "
+      },
+      "evidence": "Science & Exploration Rosetta ESA's comet-chaser The mission ESA's Rosetta mission was the first to rendezvous with a comet, the first to follow a comet on its ",
+      "source_url": "https://www.esa.int/Science_Exploration/Space_Science/Rosetta"
+    },
+    {
+      "query": "exoplanet science",
+      "source_id": "esa",
+      "result_count": 8,
+      "oracle_satisfied": true,
+      "top_result": {
+        "kind": "triple",
+        "subject": "Space Science",
+        "predicate": "HAS_TOPIC",
+        "object": "exoplanet science",
+        "source_url": "https://www.esa.int/Science_Exploration/Space_Science",
+        "evidence": "Science & Exploration Space Science Latest All Stories Videos Images Image Science & Exploration Plato's electronics ready for space 20/07/2026 1433 views 35 li"
+      },
+      "evidence": "Science & Exploration Space Science Latest All Stories Videos Images Image Science & Exploration Plato's electronics ready for space 20/07/2026 1433 views 35 li",
+      "source_url": "https://www.esa.int/Science_Exploration/Space_Science"
+    },
+    {
+      "query": "Space Science Archive",
+      "source_id": "esa",
+      "result_count": 8,
+      "oracle_satisfied": true,
+      "top_result": {
+        "kind": "triple",
+        "subject": "Space Science - Archive",
+        "predicate": "SOURCE_URL",
+        "object": "https://www.esa.int/science_exploration/space_science/(archive)/0",
+        "source_url": "https://www.esa.int/science_exploration/space_science/(archive)/0",
+        "evidence": "https://www.esa.int/science_exploration/space_science/(archive)/0"
+      },
+      "evidence": "https://www.esa.int/science_exploration/space_science/(archive)/0",
+      "source_url": "https://www.esa.int/science_exploration/space_science/(archive)/0"
+    }
+  ],
+  "mapping_count": 10,
+  "review_only_required": true,
+  "review_only": true,
+  "default_query_path_changed": false,
+  "gui_default_behavior_changed": false,
+  "formal_default_triples_write": false,
+  "chroma_write": false,
+  "neo4j_write": false,
+  "active_source": "zh_wikipedia",
+  "default_source_unchanged": true,
+  "registry": {
+    "zh_wikipedia": "active",
+    "nasa": "disabled",
+    "esa": "disabled",
+    "wikidata": "disabled"
+  }
+}
