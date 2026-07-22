@@ -62,6 +62,19 @@ def source_candidates(phase40: Dict[str, Any]) -> List[Dict[str, Any]]:
     return []
 
 
+def raw_candidates(raw_root: Path) -> List[Dict[str, Any]]:
+    candidates: List[Dict[str, Any]] = []
+    for path in sorted(raw_root.glob("*.json")) if raw_root.exists() else []:
+        payload = read_json(path)
+        if not isinstance(payload, dict):
+            continue
+        url = str(payload.get("source_url") or payload.get("url") or "").strip()
+        title = str(payload.get("title") or path.stem).strip()
+        if url or title:
+            candidates.append({"title": title, "url": url, "source_reason": "existing_raw", "raw_path": str(path)})
+    return candidates
+
+
 def package_fingerprints(package_dir: Path) -> Tuple[set[str], set[str], set[str]]:
     urls: set[str] = set()
     titles: set[str] = set()
@@ -85,8 +98,53 @@ def candidate_key(candidate: Dict[str, Any]) -> Tuple[str, str]:
     return canonical_url(str(candidate.get("url") or "")), normalized_title(str(candidate.get("title") or ""))
 
 
+def combined_package_fingerprints(package_dirs: Sequence[Path]) -> Tuple[set[str], set[str], set[str]]:
+    urls: set[str] = set()
+    titles: set[str] = set()
+    subjects: set[str] = set()
+    for package_dir in package_dirs:
+        package_urls, package_titles, package_subjects = package_fingerprints(package_dir)
+        urls.update(package_urls)
+        titles.update(package_titles)
+        subjects.update(package_subjects)
+    return urls, titles, subjects
+
+
+def report_status_fingerprints(report_paths: Sequence[Path]) -> Tuple[set[str], set[str], set[str]]:
+    urls: set[str] = set()
+    titles: set[str] = set()
+    subjects: set[str] = set()
+    for path in report_paths:
+        report = read_json(path)
+        for status in report.get("candidate_statuses", []) if isinstance(report, dict) else []:
+            if status.get("status") not in {"rejected", "failed", "duplicate_skipped"}:
+                continue
+            url = canonical_url(str(status.get("url") or ""))
+            title = normalized_title(str(status.get("title") or ""))
+            if url:
+                urls.add(url)
+            if title:
+                titles.add(title)
+                subjects.add(title)
+    return urls, titles, subjects
+
+
 def select_second_batch(candidates: Sequence[Dict[str, Any]], package_dir: Path, target_count: int) -> Tuple[List[Dict[str, Any]], Dict[str, int]]:
-    packaged_urls, packaged_titles, packaged_subjects = package_fingerprints(package_dir)
+    return select_batch(candidates, [package_dir], target_count, "phase40_remaining_after_phase45_exclusion")
+
+
+def select_batch(
+    candidates: Sequence[Dict[str, Any]],
+    exclude_package_dirs: Sequence[Path],
+    exclude_report_paths: Sequence[Path],
+    target_count: int,
+    selection_reason: str,
+) -> Tuple[List[Dict[str, Any]], Dict[str, int]]:
+    packaged_urls, packaged_titles, packaged_subjects = combined_package_fingerprints(exclude_package_dirs)
+    report_urls, report_titles, report_subjects = report_status_fingerprints(exclude_report_paths)
+    packaged_urls.update(report_urls)
+    packaged_titles.update(report_titles)
+    packaged_subjects.update(report_subjects)
     selected: List[Dict[str, Any]] = []
     seen_urls: set[str] = set()
     seen_titles: set[str] = set()
@@ -103,7 +161,7 @@ def select_second_batch(candidates: Sequence[Dict[str, Any]], package_dir: Path,
             seen_urls.add(url_key)
         if title_key:
             seen_titles.add(title_key)
-        selected.append({**candidate, "selection_reason": "phase40_remaining_after_phase45_exclusion"})
+        selected.append({**candidate, "selection_reason": selection_reason})
         if len(selected) >= target_count:
             break
     return selected, {"excluded_phase45": excluded_packaged, "duplicate_candidates": duplicate}
@@ -283,12 +341,54 @@ def build_second_package(
     target_count: int,
     fetcher: Fetcher = fetch_url,
     raw_root: Path = ROOT / "data" / "raw_json" / SOURCE_ID,
+    include_raw_candidates: bool = False,
+    exclude_report_paths: Sequence[Path] = (),
+) -> Dict[str, Any]:
+    return build_nasa_package(
+        phase40_json=phase40_json,
+        exclude_package_dirs=[phase45_package_dir],
+        out_dir=out_dir,
+        approval_template=approval_template,
+        target_count=target_count,
+        phase_label="Phase 52",
+        package_name="nasa_second_shadow_package_phase52",
+        mode="nasa_second_shadow_package_preparation",
+        fetcher=fetcher,
+        raw_root=raw_root,
+        include_raw_candidates=include_raw_candidates,
+        exclude_report_paths=exclude_report_paths,
+    )
+
+
+def build_nasa_package(
+    *,
+    phase40_json: Path,
+    exclude_package_dirs: Sequence[Path],
+    out_dir: Path,
+    approval_template: Path,
+    target_count: int,
+    phase_label: str,
+    package_name: str,
+    mode: str,
+    fetcher: Fetcher = fetch_url,
+    raw_root: Path = ROOT / "data" / "raw_json" / SOURCE_ID,
+    include_raw_candidates: bool = False,
+    exclude_report_paths: Sequence[Path] = (),
 ) -> Dict[str, Any]:
     reset_output_dir(out_dir)
     out_dir.mkdir(parents=True, exist_ok=True)
     phase40 = read_json(phase40_json)
-    candidates, selection_stats = select_second_batch(source_candidates(phase40 if isinstance(phase40, dict) else {}), phase45_package_dir, target_count)
-    _packaged_urls, packaged_titles, packaged_subjects = package_fingerprints(phase45_package_dir)
+    candidate_pool = source_candidates(phase40 if isinstance(phase40, dict) else {})
+    if include_raw_candidates:
+        candidate_pool += raw_candidates(raw_root)
+    candidates, selection_stats = select_batch(
+        candidate_pool,
+        exclude_package_dirs,
+        exclude_report_paths,
+        target_count,
+        f"{phase_label.lower().replace(' ', '_')}_remaining_after_prior_package_exclusion",
+    )
+    _packaged_urls, packaged_titles, packaged_subjects = combined_package_fingerprints(exclude_package_dirs)
     raw_lookup = raw_by_url(raw_root)
     raw_cache_dir = out_dir / "raw_preview_by_item"
     packaged: List[Dict[str, Any]] = []
@@ -312,7 +412,7 @@ def build_second_package(
     approval = approval_payload(len(packaged))
     write_json(approval_template, approval)
     manifest = {
-        "package": "nasa_second_shadow_package_phase52",
+        "package": package_name,
         "source_id": SOURCE_ID,
         "generated_at": utc_now(),
         "target_count": target_count,
@@ -339,8 +439,8 @@ def build_second_package(
     network_attempted = any(bool(status.get("network_attempted")) for status in statuses)
     shortage = max(0, target_count - len(packaged))
     return {
-        "phase": "Phase 52",
-        "mode": "nasa_second_shadow_package_preparation",
+        "phase": phase_label,
+        "mode": mode,
         "generated_at": manifest["generated_at"],
         "source_id": SOURCE_ID,
         "target_count": target_count,
@@ -351,9 +451,13 @@ def build_second_package(
         "failed": failed,
         "rejected": rejected,
         "duplicates_excluded": selection_stats["duplicate_candidates"],
+        "prior_items_excluded": selection_stats["excluded_phase45"] + post_fetch_phase45_excluded,
+        "prior_items_excluded_before_fetch": selection_stats["excluded_phase45"],
+        "prior_items_excluded_after_fetch": post_fetch_phase45_excluded,
         "phase45_items_excluded": selection_stats["excluded_phase45"] + post_fetch_phase45_excluded,
         "phase45_items_excluded_before_fetch": selection_stats["excluded_phase45"],
         "phase45_items_excluded_after_fetch": post_fetch_phase45_excluded,
+        "exclude_package_dirs": [str(path) for path in exclude_package_dirs],
         "shortage": shortage,
         "shortage_reason": "" if shortage == 0 else "remaining Phase 40 candidates were fewer than target or failed quality/fetch gates",
         "candidate_statuses": statuses,
@@ -372,7 +476,7 @@ def build_second_package(
         "active_source": ACTIVE_SOURCE,
         "registry": {source: SOURCE_REGISTRY.get(source, "unknown") for source in ("zh_wikipedia", "nasa", "esa", "wikidata")},
         "active_source_unchanged": ACTIVE_SOURCE == "zh_wikipedia",
-        "recommended_next_action": "review_second_package_before_any_shadow_apply" if packaged else "refresh_nasa_frontier_before_second_package",
+        "recommended_next_action": "review_package_before_any_shadow_apply" if packaged else "refresh_nasa_frontier_before_next_package",
     }
 
 
@@ -385,16 +489,16 @@ def reset_output_dir(out_dir: Path) -> None:
 
 def render_markdown(report: Dict[str, Any]) -> str:
     lines = [
-        "# NASA second shadow package preparation",
+        f"# NASA shadow package preparation ({report['phase']})",
         "",
-        "Phase 52 prepares a second NASA shadow package from remaining Phase 40 candidates. It does not approve or apply the package.",
+        "This prepares a NASA shadow package from remaining candidates. It does not approve or apply the package.",
         "",
         f"- target_count: `{report['target_count']}`",
         f"- selected_count: `{report['selected_count']}`",
         f"- packaged_items: `{report['packaged_items']}`",
         f"- triples: `{report['triples']}`",
         f"- narratives: `{report['narratives']}`",
-        f"- phase45_items_excluded: `{report['phase45_items_excluded']}`",
+        f"- prior_items_excluded: `{report.get('prior_items_excluded', report.get('phase45_items_excluded'))}`",
         f"- rejected: `{report['rejected']}`",
         f"- failed: `{report['failed']}`",
         f"- shortage: `{report['shortage']}`",
@@ -422,6 +526,12 @@ def main(argv: Sequence[str] | None = None) -> int:
     parser = argparse.ArgumentParser(description="Prepare NASA second shadow package under evaluation only.")
     parser.add_argument("--phase40-json", default=str(ROOT / "evaluation" / "four_source_expansion" / "deduped_frontier_candidates_phase40.json"))
     parser.add_argument("--phase45-package-dir", default=str(ROOT / "evaluation" / "four_source_expansion" / "nasa_limited_shadow_package_phase45"))
+    parser.add_argument("--exclude-package-dir", action="append", default=[])
+    parser.add_argument("--exclude-report-json", action="append", default=[])
+    parser.add_argument("--include-raw-candidates", action="store_true")
+    parser.add_argument("--phase-label", default="Phase 52")
+    parser.add_argument("--package-name", default="nasa_second_shadow_package_phase52")
+    parser.add_argument("--mode", default="nasa_second_shadow_package_preparation")
     parser.add_argument("--target-count", type=int, default=30)
     parser.add_argument("--out-dir", default=str(ROOT / "evaluation" / "four_source_expansion" / "nasa_second_shadow_package_phase52"))
     parser.add_argument("--report-json", default=str(ROOT / "evaluation" / "four_source_expansion" / "nasa_second_shadow_package_phase52.json"))
@@ -440,12 +550,19 @@ def main(argv: Sequence[str] | None = None) -> int:
         print("target-count must be positive", file=sys.stderr)
         return 2
 
-    report = build_second_package(
+    exclude_dirs = [Path(args.phase45_package_dir)] + [Path(path) for path in args.exclude_package_dir]
+    exclude_reports = [Path(path) for path in args.exclude_report_json]
+    report = build_nasa_package(
         phase40_json=Path(args.phase40_json),
-        phase45_package_dir=Path(args.phase45_package_dir),
+        exclude_package_dirs=exclude_dirs,
         out_dir=out_dir,
         approval_template=approval,
         target_count=args.target_count,
+        phase_label=args.phase_label,
+        package_name=args.package_name,
+        mode=args.mode,
+        include_raw_candidates=args.include_raw_candidates,
+        exclude_report_paths=exclude_reports,
     )
     write_json(report_json, report)
     write_text(report_md, render_markdown(report))

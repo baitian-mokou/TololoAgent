@@ -153,6 +153,60 @@ class NasaSecondShadowPackageTests(unittest.TestCase):
             )
             self.assertEqual(exit_code, 2)
 
+    def test_third_package_excludes_phase45_and_phase52_overlap(self):
+        module = load_script()
+        with tempfile.TemporaryDirectory() as temp_dir:
+            root = Path(temp_dir)
+            phase40, phase45 = self.make_phase40_and_phase45(root)
+            phase52 = root / "evaluation" / "four_source_expansion" / "phase52"
+            self.write_json(
+                phase52 / "triples_preview.json",
+                [
+                    {
+                        "subject": "Comet Example",
+                        "predicate": "SOURCE_URL",
+                        "object": "https://science.nasa.gov/solar-system/comets/example/",
+                        "source_url": "https://science.nasa.gov/solar-system/comets/example/",
+                    }
+                ],
+            )
+            self.write_json(phase52 / "narratives_preview.json", [])
+            phase52_report = root / "evaluation" / "four_source_expansion" / "phase52_report.json"
+            self.write_json(
+                phase52_report,
+                {
+                    "candidate_statuses": [
+                        {
+                            "status": "duplicate_skipped",
+                            "title": "Mission Example",
+                            "url": "https://science.nasa.gov/mission/example/",
+                        }
+                    ]
+                },
+            )
+
+            report = module.build_nasa_package(
+                phase40_json=phase40,
+                exclude_package_dirs=[phase45, phase52],
+                exclude_report_paths=[phase52_report],
+                out_dir=root / "evaluation" / "four_source_expansion" / "phase57",
+                approval_template=root / "evaluation" / "four_source_expansion" / "approval57.json",
+                target_count=50,
+                phase_label="Phase 57",
+                package_name="nasa_third_shadow_package_phase57",
+                mode="nasa_third_shadow_package_preparation",
+                fetcher=self.fake_fetcher,
+            )
+
+            titles = {item["title"] for item in report["sample_items"]}
+            self.assertNotIn("Comet Example", titles)
+            self.assertNotIn("Mission Example", titles)
+            self.assertEqual(report["selected_count"], 1)
+            self.assertEqual(report["packaged_items"], 0)
+            self.assertEqual(report["prior_items_excluded_after_fetch"], 1)
+            self.assertEqual(report["approval_status"], "pending")
+            self.assertFalse(report["formal_triples_write"])
+
 
 if __name__ == "__main__":
     unittest.main()

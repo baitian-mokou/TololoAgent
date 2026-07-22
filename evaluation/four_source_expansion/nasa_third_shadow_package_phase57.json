@@ -1,0 +1,197 @@
+{
+  "phase": "Phase 57",
+  "mode": "nasa_third_shadow_package_preparation",
+  "generated_at": "2026-07-22T09:18:22.835970+00:00",
+  "source_id": "nasa",
+  "target_count": 50,
+  "selected_count": 19,
+  "packaged_items": 0,
+  "triples": 0,
+  "narratives": 0,
+  "failed": 0,
+  "rejected": 19,
+  "duplicates_excluded": 2,
+  "prior_items_excluded": 50,
+  "prior_items_excluded_before_fetch": 50,
+  "prior_items_excluded_after_fetch": 0,
+  "phase45_items_excluded": 50,
+  "phase45_items_excluded_before_fetch": 50,
+  "phase45_items_excluded_after_fetch": 0,
+  "exclude_package_dirs": [
+    "evaluation\\four_source_expansion\\nasa_limited_shadow_package_phase45",
+    "evaluation\\four_source_expansion\\nasa_second_shadow_package_phase52"
+  ],
+  "shortage": 50,
+  "shortage_reason": "remaining Phase 40 candidates were fewer than target or failed quality/fetch gates",
+  "candidate_statuses": [
+    {
+      "url": "https://science.nasa.gov/dwarf-planets/pluto/moons/charon/",
+      "title": "冥卫一",
+      "status": "rejected",
+      "reason": "quality_review_needed",
+      "network_attempted": false
+    },
+    {
+      "url": "https://science.nasa.gov/dwarf-planets/pluto/facts/",
+      "title": "冥王星",
+      "status": "rejected",
+      "reason": "quality_review_needed",
+      "network_attempted": false
+    },
+    {
+      "url": "https://science.nasa.gov/saturn/moons/enceladus/",
+      "title": "土卫二",
+      "status": "rejected",
+      "reason": "quality_review_needed",
+      "network_attempted": false
+    },
+    {
+      "url": "https://science.nasa.gov/saturn/moons/titan/",
+      "title": "土卫六",
+      "status": "rejected",
+      "reason": "quality_review_needed",
+      "network_attempted": false
+    },
+    {
+      "url": "https://nssdc.gsfc.nasa.gov/planetary/factsheet/saturnfact.html",
+      "title": "土星",
+      "status": "rejected",
+      "reason": "quality_review_needed",
+      "network_attempted": false
+    },
+    {
+      "url": "https://nssdc.gsfc.nasa.gov/planetary/factsheet/earthfact.html",
+      "title": "地球",
+      "status": "rejected",
+      "reason": "quality_review_needed",
+      "network_attempted": false
+    },
+    {
+      "url": "https://nssdc.gsfc.nasa.gov/planetary/factsheet/uranusfact.html",
+      "title": "天王星",
+      "status": "rejected",
+      "reason": "quality_review_needed",
+      "network_attempted": false
+    },
+    {
+      "url": "https://science.nasa.gov/sun/facts/",
+      "title": "太阳",
+      "status": "rejected",
+      "reason": "quality_review_needed",
+      "network_attempted": false
+    },
+    {
+      "url": "https://nssdc.gsfc.nasa.gov/planetary/factsheet/moonfact.html",
+      "title": "月球",
+      "status": "rejected",
+      "reason": "quality_review_needed",
+      "network_attempted": false
+    },
+    {
+      "url": "https://science.nasa.gov/jupiter/moons/europa/",
+      "title": "木卫二",
+      "status": "rejected",
+      "reason": "quality_review_needed",
+      "network_attempted": false
+    },
+    {
+      "url": "https://science.nasa.gov/jupiter/moons/callisto/",
+      "title": "木卫四",
+      "status": "rejected",
+      "reason": "quality_review_needed",
+      "network_attempted": false
+    },
+    {
+      "url": "https://nssdc.gsfc.nasa.gov/planetary/factsheet/jupiterfact.html",
+      "title": "木星",
+      "status": "rejected",
+      "reason": "quality_review_needed",
+      "network_attempted": false
+    },
+    {
+      "url": "https://nssdc.gsfc.nasa.gov/planetary/factsheet/mercuryfact.html",
+      "title": "水星",
+      "status": "rejected",
+      "reason": "quality_review_needed",
+      "network_attempted": false
+    },
+    {
+      "url": "https://science.nasa.gov/neptune/moons/triton/",
+      "title": "海卫一",
+      "status": "rejected",
+      "reason": "quality_review_needed",
+      "network_attempted": false
+    },
+    {
+      "url": "https://nssdc.gsfc.nasa.gov/planetary/factsheet/neptunefact.html",
+      "title": "海王星",
+      "status": "rejected",
+      "reason": "quality_review_needed",
+      "network_attempted": false
+    },
+    {
+      "url": "https://science.nasa.gov/mars/moons/phobos/",
+      "title": "火卫一",
+      "status": "rejected",
+      "reason": "quality_review_needed",
+      "network_attempted": false
+    },
+    {
+      "url": "https://science.nasa.gov/mars/moons/deimos/",
+      "title": "火卫二",
+      "status": "rejected",
+      "reason": "quality_review_needed",
+      "network_attempted": false
+    },
+    {
+      "url": "https://nssdc.gsfc.nasa.gov/planetary/factsheet/marsfact.html",
+      "title": "火星",
+      "status": "rejected",
+      "reason": "quality_review_needed",
+      "network_attempted": false
+    },
+    {
+      "url": "https://nssdc.gsfc.nasa.gov/planetary/factsheet/venusfact.html",
+      "title": "金星",
+      "status": "rejected",
+      "reason": "quality_review_needed",
+      "network_attempted": false
+    }
+  ],
+  "relations_count": {},
+  "type_distribution": {},
+  "sample_items": [],
+  "approval_status": "pending",
+  "approval_template": "evaluation\\four_source_expansion\\nasa_third_shadow_package_approval_phase57.json",
+  "out_dir": "evaluation\\four_source_expansion\\nasa_third_shadow_package_phase57",
+  "formal_shadow_write_plan": {
+    "execution_status": "not_run",
+    "requires_manual_approval": true,
+    "source_id": "nasa",
+    "approved_item_count_required": 0,
+    "planned_triples": 0,
+    "planned_narratives": 0,
+    "allowed_scope": "shadow materialization path only",
+    "safety_guards": [
+      "ACTIVE_SOURCE remains zh_wikipedia",
+      "nasa remains disabled/shadow",
+      "no Chroma write",
+      "no Neo4j write",
+      "manual approval file required before any formal shadow write"
+    ]
+  },
+  "network_attempted": false,
+  "formal_triples_write": false,
+  "formal_narratives_write": false,
+  "chroma_write": false,
+  "neo4j_write": false,
+  "active_source": "zh_wikipedia",
+  "registry": {
+    "zh_wikipedia": "active",
+    "nasa": "disabled",
+    "esa": "disabled",
+    "wikidata": "disabled"
+  },
+  "active_source_unchanged": true,
+  "recommended_next_action": "refresh_nasa_frontier_before_next_package"
+}
