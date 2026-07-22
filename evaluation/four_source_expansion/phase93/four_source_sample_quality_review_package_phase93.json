@@ -1,7 +1,7 @@
 {
   "phase": "Phase 93",
   "mode": "sample_quality_review_package",
-  "generated_at": "2026-07-22T17:33:17.348110+00:00",
+  "generated_at": "2026-07-22T17:38:40.895055+00:00",
   "review_status": "pending_manual_or_reviewer_check",
   "samples_by_source": {
     "zh_wikipedia": [
@@ -67,6 +67,10 @@
           "evaluation_only": true,
           "non_empty_text": true
         },
+        "quality_risk_labels": [
+          "zh_table_template_noise_risk",
+          "manual_judgment_feasible"
+        ],
         "schema_version": "phase83_shadow_normalize_preview_v1",
         "review_status": "pending_manual_or_reviewer_check",
         "review_questions": [
@@ -138,6 +142,10 @@
           "evaluation_only": true,
           "non_empty_text": true
         },
+        "quality_risk_labels": [
+          "zh_table_template_noise_risk",
+          "manual_judgment_feasible"
+        ],
         "schema_version": "phase83_shadow_normalize_preview_v1",
         "review_status": "pending_manual_or_reviewer_check",
         "review_questions": [
@@ -209,6 +217,10 @@
           "evaluation_only": true,
           "non_empty_text": true
         },
+        "quality_risk_labels": [
+          "zh_table_template_noise_risk",
+          "manual_judgment_feasible"
+        ],
         "schema_version": "phase83_shadow_normalize_preview_v1",
         "review_status": "pending_manual_or_reviewer_check",
         "review_questions": [
@@ -291,6 +303,10 @@
           "metadata_repaired": true,
           "phase87_rebuilt": true
         },
+        "quality_risk_labels": [
+          "nasa_navigation_boilerplate_noise_risk",
+          "provenance_clear_but_narrative_triples_need_noise_review"
+        ],
         "schema_version": "phase87_rebuilt_pending_shadow_package_v1",
         "review_status": "pending_manual_or_reviewer_check",
         "review_questions": [
@@ -371,6 +387,10 @@
           "metadata_repaired": true,
           "phase87_rebuilt": true
         },
+        "quality_risk_labels": [
+          "nasa_navigation_boilerplate_noise_risk",
+          "provenance_clear_but_narrative_triples_need_noise_review"
+        ],
         "schema_version": "phase87_rebuilt_pending_shadow_package_v1",
         "review_status": "pending_manual_or_reviewer_check",
         "review_questions": [
@@ -451,6 +471,10 @@
           "metadata_repaired": true,
           "phase87_rebuilt": true
         },
+        "quality_risk_labels": [
+          "nasa_navigation_boilerplate_noise_risk",
+          "provenance_clear_but_narrative_triples_need_noise_review"
+        ],
         "schema_version": "phase87_rebuilt_pending_shadow_package_v1",
         "review_status": "pending_manual_or_reviewer_check",
         "review_questions": [
@@ -531,6 +555,10 @@
           "metadata_repaired": true,
           "phase87_rebuilt": true
         },
+        "quality_risk_labels": [
+          "nasa_navigation_boilerplate_noise_risk",
+          "provenance_clear_but_narrative_triples_need_noise_review"
+        ],
         "schema_version": "phase87_rebuilt_pending_shadow_package_v1",
         "review_status": "pending_manual_or_reviewer_check",
         "review_questions": [
@@ -611,6 +639,10 @@
           "metadata_repaired": true,
           "phase87_rebuilt": true
         },
+        "quality_risk_labels": [
+          "nasa_navigation_boilerplate_noise_risk",
+          "provenance_clear_but_narrative_triples_need_noise_review"
+        ],
         "schema_version": "phase87_rebuilt_pending_shadow_package_v1",
         "review_status": "pending_manual_or_reviewer_check",
         "review_questions": [
@@ -691,6 +723,10 @@
           "metadata_repaired": true,
           "phase87_rebuilt": true
         },
+        "quality_risk_labels": [
+          "nasa_navigation_boilerplate_noise_risk",
+          "provenance_clear_but_narrative_triples_need_noise_review"
+        ],
         "schema_version": "phase87_rebuilt_pending_shadow_package_v1",
         "review_status": "pending_manual_or_reviewer_check",
         "review_questions": [
@@ -771,6 +807,10 @@
           "metadata_repaired": true,
           "phase87_rebuilt": true
         },
+        "quality_risk_labels": [
+          "nasa_navigation_boilerplate_noise_risk",
+          "provenance_clear_but_narrative_triples_need_noise_review"
+        ],
         "schema_version": "phase87_rebuilt_pending_shadow_package_v1",
         "review_status": "pending_manual_or_reviewer_check",
         "review_questions": [
@@ -851,6 +891,10 @@
           "metadata_repaired": true,
           "phase87_rebuilt": true
         },
+        "quality_risk_labels": [
+          "nasa_navigation_boilerplate_noise_risk",
+          "provenance_clear_but_narrative_triples_need_noise_review"
+        ],
         "schema_version": "phase87_rebuilt_pending_shadow_package_v1",
         "review_status": "pending_manual_or_reviewer_check",
         "review_questions": [
@@ -931,6 +975,10 @@
           "metadata_repaired": true,
           "phase87_rebuilt": true
         },
+        "quality_risk_labels": [
+          "nasa_navigation_boilerplate_noise_risk",
+          "provenance_clear_but_narrative_triples_need_noise_review"
+        ],
         "schema_version": "phase87_rebuilt_pending_shadow_package_v1",
         "review_status": "pending_manual_or_reviewer_check",
         "review_questions": [
@@ -1011,6 +1059,10 @@
           "metadata_repaired": true,
           "phase87_rebuilt": true
         },
+        "quality_risk_labels": [
+          "nasa_navigation_boilerplate_noise_risk",
+          "provenance_clear_but_narrative_triples_need_noise_review"
+        ],
         "schema_version": "phase87_rebuilt_pending_shadow_package_v1",
         "review_status": "pending_manual_or_reviewer_check",
         "review_questions": [
@@ -1084,6 +1136,9 @@
           "evaluation_only": true,
           "non_empty_text": true
         },
+        "quality_risk_labels": [
+          "esa_relatively_clean_pending_review"
+        ],
         "schema_version": "phase83_shadow_normalize_preview_v1",
         "review_status": "pending_manual_or_reviewer_check",
         "review_questions": [
@@ -1155,6 +1210,9 @@
           "evaluation_only": true,
           "non_empty_text": true
         },
+        "quality_risk_labels": [
+          "esa_relatively_clean_pending_review"
+        ],
         "schema_version": "phase83_shadow_normalize_preview_v1",
         "review_status": "pending_manual_or_reviewer_check",
         "review_questions": [
@@ -1226,6 +1284,9 @@
           "evaluation_only": true,
           "non_empty_text": true
         },
+        "quality_risk_labels": [
+          "esa_relatively_clean_pending_review"
+        ],
         "schema_version": "phase83_shadow_normalize_preview_v1",
         "review_status": "pending_manual_or_reviewer_check",
         "review_questions": [
@@ -1297,6 +1358,9 @@
           "evaluation_only": true,
           "non_empty_text": true
         },
+        "quality_risk_labels": [
+          "esa_relatively_clean_pending_review"
+        ],
         "schema_version": "phase83_shadow_normalize_preview_v1",
         "review_status": "pending_manual_or_reviewer_check",
         "review_questions": [
@@ -1368,6 +1432,9 @@
           "evaluation_only": true,
           "non_empty_text": true
         },
+        "quality_risk_labels": [
+          "esa_relatively_clean_pending_review"
+        ],
         "schema_version": "phase83_shadow_normalize_preview_v1",
         "review_status": "pending_manual_or_reviewer_check",
         "review_questions": [
@@ -1439,6 +1506,9 @@
           "evaluation_only": true,
           "non_empty_text": true
         },
+        "quality_risk_labels": [
+          "esa_relatively_clean_pending_review"
+        ],
         "schema_version": "phase83_shadow_normalize_preview_v1",
         "review_status": "pending_manual_or_reviewer_check",
         "review_questions": [
@@ -1510,6 +1580,9 @@
           "evaluation_only": true,
           "non_empty_text": true
         },
+        "quality_risk_labels": [
+          "esa_relatively_clean_pending_review"
+        ],
         "schema_version": "phase83_shadow_normalize_preview_v1",
         "review_status": "pending_manual_or_reviewer_check",
         "review_questions": [
@@ -1581,6 +1654,9 @@
           "evaluation_only": true,
           "non_empty_text": true
         },
+        "quality_risk_labels": [
+          "esa_relatively_clean_pending_review"
+        ],
         "schema_version": "phase83_shadow_normalize_preview_v1",
         "review_status": "pending_manual_or_reviewer_check",
         "review_questions": [
@@ -1652,6 +1728,9 @@
           "evaluation_only": true,
           "non_empty_text": true
         },
+        "quality_risk_labels": [
+          "esa_relatively_clean_pending_review"
+        ],
         "schema_version": "phase83_shadow_normalize_preview_v1",
         "review_status": "pending_manual_or_reviewer_check",
         "review_questions": [
@@ -1725,6 +1804,10 @@
           "evaluation_only": true,
           "non_empty_text": true
         },
+        "quality_risk_labels": [
+          "wikidata_json_metadata_review_risk",
+          "narrative_and_preview_text_may_wrap_json_metadata"
+        ],
         "schema_version": "phase83_shadow_normalize_preview_v1",
         "review_status": "pending_manual_or_reviewer_check",
         "review_questions": [
@@ -1796,6 +1879,10 @@
           "evaluation_only": true,
           "non_empty_text": true
         },
+        "quality_risk_labels": [
+          "wikidata_json_metadata_review_risk",
+          "narrative_and_preview_text_may_wrap_json_metadata"
+        ],
         "schema_version": "phase83_shadow_normalize_preview_v1",
         "review_status": "pending_manual_or_reviewer_check",
         "review_questions": [
@@ -1867,6 +1954,10 @@
           "evaluation_only": true,
           "non_empty_text": true
         },
+        "quality_risk_labels": [
+          "wikidata_json_metadata_review_risk",
+          "narrative_and_preview_text_may_wrap_json_metadata"
+        ],
         "schema_version": "phase83_shadow_normalize_preview_v1",
         "review_status": "pending_manual_or_reviewer_check",
         "review_questions": [
@@ -1938,6 +2029,10 @@
           "evaluation_only": true,
           "non_empty_text": true
         },
+        "quality_risk_labels": [
+          "wikidata_json_metadata_review_risk",
+          "narrative_and_preview_text_may_wrap_json_metadata"
+        ],
         "schema_version": "phase83_shadow_normalize_preview_v1",
         "review_status": "pending_manual_or_reviewer_check",
         "review_questions": [
@@ -2009,6 +2104,10 @@
           "evaluation_only": true,
           "non_empty_text": true
         },
+        "quality_risk_labels": [
+          "wikidata_json_metadata_review_risk",
+          "narrative_and_preview_text_may_wrap_json_metadata"
+        ],
         "schema_version": "phase83_shadow_normalize_preview_v1",
         "review_status": "pending_manual_or_reviewer_check",
         "review_questions": [
@@ -2080,6 +2179,10 @@
           "evaluation_only": true,
           "non_empty_text": true
         },
+        "quality_risk_labels": [
+          "wikidata_json_metadata_review_risk",
+          "narrative_and_preview_text_may_wrap_json_metadata"
+        ],
         "schema_version": "phase83_shadow_normalize_preview_v1",
         "review_status": "pending_manual_or_reviewer_check",
         "review_questions": [
@@ -2151,6 +2254,10 @@
           "evaluation_only": true,
           "non_empty_text": true
         },
+        "quality_risk_labels": [
+          "wikidata_json_metadata_review_risk",
+          "narrative_and_preview_text_may_wrap_json_metadata"
+        ],
         "schema_version": "phase83_shadow_normalize_preview_v1",
         "review_status": "pending_manual_or_reviewer_check",
         "review_questions": [
@@ -2222,6 +2329,10 @@
           "evaluation_only": true,
           "non_empty_text": true
         },
+        "quality_risk_labels": [
+          "wikidata_json_metadata_review_risk",
+          "narrative_and_preview_text_may_wrap_json_metadata"
+        ],
         "schema_version": "phase83_shadow_normalize_preview_v1",
         "review_status": "pending_manual_or_reviewer_check",
         "review_questions": [
@@ -2293,6 +2404,10 @@
           "evaluation_only": true,
           "non_empty_text": true
         },
+        "quality_risk_labels": [
+          "wikidata_json_metadata_review_risk",
+          "narrative_and_preview_text_may_wrap_json_metadata"
+        ],
         "schema_version": "phase83_shadow_normalize_preview_v1",
         "review_status": "pending_manual_or_reviewer_check",
         "review_questions": [
@@ -2364,6 +2479,10 @@
           "evaluation_only": true,
           "non_empty_text": true
         },
+        "quality_risk_labels": [
+          "wikidata_json_metadata_review_risk",
+          "narrative_and_preview_text_may_wrap_json_metadata"
+        ],
         "schema_version": "phase83_shadow_normalize_preview_v1",
         "review_status": "pending_manual_or_reviewer_check",
         "review_questions": [
@@ -2391,6 +2510,23 @@
     "ESA is fully sampled at 9 items but still pending human quality review",
     "NASA repaired metadata relies on Phase86 provenance evidence"
   ],
+  "quality_risk_labels": {
+    "wikidata": [
+      "wikidata_json_metadata_review_risk",
+      "narrative_and_preview_text_may_wrap_json_metadata"
+    ],
+    "nasa": [
+      "nasa_navigation_boilerplate_noise_risk",
+      "provenance_clear_but_narrative_triples_need_noise_review"
+    ],
+    "esa": [
+      "esa_relatively_clean_pending_review"
+    ],
+    "zh_wikipedia": [
+      "zh_table_template_noise_risk",
+      "manual_judgment_feasible"
+    ]
+  },
   "next_recommendation": "send to review thread for content-quality verdict",
   "package_files": [
     "review_sample.json",

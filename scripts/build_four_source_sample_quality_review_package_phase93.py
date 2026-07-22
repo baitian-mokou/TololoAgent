@@ -17,6 +17,18 @@ from config import ACTIVE_SOURCE, SOURCE_REGISTRY
 
 REQUIRED_SOURCES = ("zh_wikipedia", "nasa", "esa", "wikidata")
 REVIEW_STATUS = "pending_manual_or_reviewer_check"
+QUALITY_RISK_LABELS = {
+    "wikidata": [
+        "wikidata_json_metadata_review_risk",
+        "narrative_and_preview_text_may_wrap_json_metadata",
+    ],
+    "nasa": [
+        "nasa_navigation_boilerplate_noise_risk",
+        "provenance_clear_but_narrative_triples_need_noise_review",
+    ],
+    "esa": ["esa_relatively_clean_pending_review"],
+    "zh_wikipedia": ["zh_table_template_noise_risk", "manual_judgment_feasible"],
+}
 
 
 def read_json(path: Path) -> Any:
@@ -60,6 +72,7 @@ def sample_to_review_row(row: Dict[str, Any]) -> Dict[str, Any]:
         "triples": triples[:2],
         "provenance": provenance,
         "quality_flags": metadata.get("quality_flags", {}),
+        "quality_risk_labels": QUALITY_RISK_LABELS.get(row.get("source", ""), []),
         "schema_version": metadata.get("schema_version", ""),
         "review_status": REVIEW_STATUS,
         "review_questions": [
@@ -94,6 +107,7 @@ def build_review_package(*, expanded_sample_report: Path, closure_report: Path) 
         "ingest_approved": False,
         "closure_verdict": phase92.get("closure_verdict", "sample_review_ready_approval_pending"),
         "remaining_risks": phase92.get("remaining_risks", []),
+        "quality_risk_labels": QUALITY_RISK_LABELS,
         "next_recommendation": "send to review thread for content-quality verdict",
         "package_files": [
             "review_sample.json",
@@ -127,6 +141,7 @@ def render_review_sample(package: Dict[str, Any]) -> str:
                     f"- narrative: {row.get('narrative_excerpt', '')}",
                     f"- provenance: `{json.dumps(row.get('provenance', {}), ensure_ascii=False)}`",
                     f"- quality_flags: `{json.dumps(row.get('quality_flags', {}), ensure_ascii=False)}`",
+                    f"- quality_risk_labels: `{', '.join(row.get('quality_risk_labels', []))}`",
                     "- triples:",
                 ]
             )
@@ -146,6 +161,10 @@ def render_review_checklist(package: Dict[str, Any]) -> str:
             "- Check metadata/provenance credibility.",
             "- Check whether triples are meaningful and non-noisy.",
             "- For NASA, check whether metadata repair evidence is acceptable.",
+            "- Wikidata focus risk: narrative often looks like JSON metadata and HAS_PREVIEW_TEXT may wrap that JSON.",
+            "- NASA focus risk: provenance is clear, but narrative/triples can include NASA navigation boilerplate.",
+            "- ESA: relatively clean in this sample, still pending human review.",
+            "- zh_wikipedia: table/template noise is possible but human review remains feasible.",
             "- Mark noise, ambiguity, or source mismatch for follow-up.",
             "- This package is not an apply or ingest authorization.",
             "",
@@ -166,6 +185,9 @@ def render_report(package: Dict[str, Any]) -> str:
     ]
     for source in REQUIRED_SOURCES:
         lines.append(f"| {source} | {int(package['sample_counts'].get(source, 0))} |")
+    lines.extend(["", "Quality risk labels:", ""])
+    for source in REQUIRED_SOURCES:
+        lines.append(f"- {source}: `{', '.join(package.get('quality_risk_labels', {}).get(source, []))}`")
     lines.extend(["", "Next: send to review thread for content-quality verdict.", ""])
     return "\n".join(lines)
 

@@ -25,11 +25,16 @@ class Phase93SampleQualityReviewPackageTest(unittest.TestCase):
         self.assertFalse(package["production_ready"])
         self.assertFalse(package["apply_approved"])
         self.assertFalse(package["ingest_approved"])
+        self.assertIn("wikidata_json_metadata_review_risk", package["quality_risk_labels"]["wikidata"])
+        self.assertIn("nasa_navigation_boilerplate_noise_risk", package["quality_risk_labels"]["nasa"])
+        self.assertIn("esa_relatively_clean_pending_review", package["quality_risk_labels"]["esa"])
+        self.assertIn("zh_table_template_noise_risk", package["quality_risk_labels"]["zh_wikipedia"])
         self.assertEqual(set(package["samples_by_source"]), set(phase93.REQUIRED_SOURCES))
         for rows in package["samples_by_source"].values():
             for row in rows:
                 self.assertEqual(row["review_status"], "pending_manual_or_reviewer_check")
                 self.assertTrue(row["review_questions"])
+                self.assertTrue(row["quality_risk_labels"])
                 self.assertLessEqual(len(row["triples"]), 2)
 
     def test_output_guard_restricts_phase93_or_docs(self):
@@ -57,6 +62,8 @@ class Phase93SampleQualityReviewPackageTest(unittest.TestCase):
         }
         text = phase93.render_review_checklist(package).lower() + phase93.render_report(package).lower()
         self.assertIn("pending_manual_or_reviewer_check", text)
+        self.assertIn("wikidata", text)
+        self.assertIn("nasa", text)
         self.assertNotIn("production ready", text)
         self.assertNotIn("apply approved", text)
         self.assertNotIn("ingest approved", text)
