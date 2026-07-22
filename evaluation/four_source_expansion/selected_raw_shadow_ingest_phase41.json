@@ -1,0 +1,243 @@
+{
+  "phase": "Phase 41",
+  "mode": "selected_raw_only_shadow_ingest",
+  "generated_at": "2026-07-22T04:35:21.554811+00:00",
+  "selected_json": "evaluation\\four_source_expansion\\deduped_frontier_candidates_phase40.json",
+  "active_source": "zh_wikipedia",
+  "registry": {
+    "zh_wikipedia": "active",
+    "nasa": "disabled",
+    "esa": "disabled",
+    "wikidata": "disabled"
+  },
+  "skipped_sources": [],
+  "summary": {
+    "sources": 2,
+    "new_records": 23,
+    "duplicate_skipped": 0,
+    "failed": 5
+  },
+  "sources": [
+    {
+      "source_id": "nasa",
+      "selected_requested": 50,
+      "attempted": 20,
+      "before_raw_count": 95,
+      "after_raw_count": 115,
+      "new_records": 20,
+      "duplicate_skipped": 0,
+      "failed": 0,
+      "failed_urls": [],
+      "limit": 20,
+      "items": [
+        {
+          "url": "https://science.nasa.gov/solar-system/asteroids/facts/",
+          "title": "Asteroid Facts",
+          "status": "written",
+          "saved_path": "F:\\知识表示与处理结课作业\\TololoAgent\\data\\raw_json\\nasa\\https_science.nasa.gov_solar-system_asteroids_facts.json"
+        },
+        {
+          "url": "https://science.nasa.gov/solar-system/asteroids/exploration/",
+          "title": "Asteroids: Exploration - NASA Science",
+          "status": "written",
+          "saved_path": "F:\\知识表示与处理结课作业\\TololoAgent\\data\\raw_json\\nasa\\https_science.nasa.gov_solar-system_asteroids_exploration.json"
+        },
+        {
+          "url": "https://science.nasa.gov/solar-system/asteroids/2024-yr4/",
+          "title": "Asteroid 2024 YR4",
+          "status": "written",
+          "saved_path": "F:\\知识表示与处理结课作业\\TololoAgent\\data\\raw_json\\nasa\\https_science.nasa.gov_solar-system_asteroids_2024-yr4.json"
+        },
+        {
+          "url": "https://science.nasa.gov/solar-system/asteroids/apophis/",
+          "title": "Apophis - NASA Science",
+          "status": "written",
+          "saved_path": "F:\\知识表示与处理结课作业\\TololoAgent\\data\\raw_json\\nasa\\https_science.nasa.gov_solar-system_asteroids_apophis.json"
+        },
+        {
+          "url": "https://science.nasa.gov/solar-system/asteroids/16-psyche/",
+          "title": "Asteroid Psyche",
+          "status": "written",
+          "saved_path": "F:\\知识表示与处理结课作业\\TololoAgent\\data\\raw_json\\nasa\\https_science.nasa.gov_solar-system_asteroids_16-psyche.json"
+        },
+        {
+          "url": "https://science.nasa.gov/solar-system/asteroids/101955-bennu/",
+          "title": "Bennu - NASA Science",
+          "status": "written",
+          "saved_path": "F:\\知识表示与处理结课作业\\TololoAgent\\data\\raw_json\\nasa\\https_science.nasa.gov_solar-system_asteroids_101955-bennu.json"
+        },
+        {
+          "url": "https://science.nasa.gov/solar-system/asteroids/dinkinesh/",
+          "title": "Dinkinesh - NASA Science",
+          "status": "written",
+          "saved_path": "F:\\知识表示与处理结课作业\\TololoAgent\\data\\raw_json\\nasa\\https_science.nasa.gov_solar-system_asteroids_dinkinesh.json"
+        },
+        {
+          "url": "https://science.nasa.gov/solar-system/asteroids/donaldjohanson/",
+          "title": "Asteroid Donaldjohanson",
+          "status": "written",
+          "saved_path": "F:\\知识表示与处理结课作业\\TololoAgent\\data\\raw_json\\nasa\\https_science.nasa.gov_solar-system_asteroids_donaldjohanson.json"
+        },
+        {
+          "url": "https://science.nasa.gov/solar-system/asteroids/didymos/",
+          "title": "Didymos & Dimorphos - NASA Science",
+          "status": "written",
+          "saved_path": "F:\\知识表示与处理结课作业\\TololoAgent\\data\\raw_json\\nasa\\https_science.nasa.gov_solar-system_asteroids_didymos.json"
+        },
+        {
+          "url": "https://science.nasa.gov/solar-system/asteroids/4-vesta/",
+          "title": "4 Vesta - NASA Science",
+          "status": "written",
+          "saved_path": "F:\\知识表示与处理结课作业\\TololoAgent\\data\\raw_json\\nasa\\https_science.nasa.gov_solar-system_asteroids_4-vesta.json"
+        },
+        {
+          "url": "https://science.nasa.gov/solar-system/asteroids/433-eros/",
+          "title": "433 Eros - NASA Science",
+          "status": "written",
+          "saved_path": "F:\\知识表示与处理结课作业\\TololoAgent\\data\\raw_json\\nasa\\https_science.nasa.gov_solar-system_asteroids_433-eros.json"
+        },
+        {
+          "url": "https://science.nasa.gov/solar-system/asteroids/243-ida/",
+          "title": "243 Ida - NASA Science",
+          "status": "written",
+          "saved_path": "F:\\知识表示与处理结课作业\\TololoAgent\\data\\raw_json\\nasa\\https_science.nasa.gov_solar-system_asteroids_243-ida.json"
+        },
+        {
+          "url": "https://science.nasa.gov/solar-system/asteroids/25143-itokawa/",
+          "title": "25143 Itokawa - NASA Science",
+          "status": "written",
+          "saved_path": "F:\\知识表示与处理结课作业\\TololoAgent\\data\\raw_json\\nasa\\https_science.nasa.gov_solar-system_asteroids_25143-itokawa.json"
+        },
+        {
+          "url": "https://science.nasa.gov/planetary-defense/",
+          "title": "Planetary Defense at NASA - NASA Science Facebook logo Instagram logo Linkedin logo",
+          "status": "written",
+          "saved_path": "F:\\知识表示与处理结课作业\\TololoAgent\\data\\raw_json\\nasa\\https_science.nasa.gov_planetary-defense.json"
+        },
+        {
+          "url": "https://nssdc.gsfc.nasa.gov/planetary/planets/asteroidpage.html",
+          "title": "NASA Space Science Data Coordinated Archive Status - NASA",
+          "status": "written",
+          "saved_path": "F:\\知识表示与处理结课作业\\TololoAgent\\data\\raw_json\\nasa\\https_nssdc.gsfc.nasa.gov_planetary_planets_asteroidpage.html.json"
+        },
+        {
+          "url": "https://science.nasa.gov/solar-system/comets/facts/",
+          "title": "Comet Facts",
+          "status": "written",
+          "saved_path": "F:\\知识表示与处理结课作业\\TololoAgent\\data\\raw_json\\nasa\\https_science.nasa.gov_solar-system_comets_facts.json"
+        },
+        {
+          "url": "https://science.nasa.gov/solar-system/comets/3i-atlas/",
+          "title": "Comet 3I/ATLAS - NASA Science",
+          "status": "written",
+          "saved_path": "F:\\知识表示与处理结课作业\\TololoAgent\\data\\raw_json\\nasa\\https_science.nasa.gov_solar-system_comets_3i-atlas.json"
+        },
+        {
+          "url": "https://science.nasa.gov/solar-system/comets/103p-hartley-hartley-2/",
+          "title": "Comet 103P/Hartley (Hartley 2) - NASA Science",
+          "status": "written",
+          "saved_path": "F:\\知识表示与处理结课作业\\TololoAgent\\data\\raw_json\\nasa\\https_science.nasa.gov_solar-system_comets_103p-hartley-hartley-2.json"
+        },
+        {
+          "url": "https://science.nasa.gov/solar-system/comets/109p-swift-tuttle/",
+          "title": "109P/Swift-Tuttle - NASA Science",
+          "status": "written",
+          "saved_path": "F:\\知识表示与处理结课作业\\TololoAgent\\data\\raw_json\\nasa\\https_science.nasa.gov_solar-system_comets_109p-swift-tuttle.json"
+        },
+        {
+          "url": "https://science.nasa.gov/solar-system/comets/19p-borrelly/",
+          "title": "19P/Borrelly - NASA Science",
+          "status": "written",
+          "saved_path": "F:\\知识表示与处理结课作业\\TololoAgent\\data\\raw_json\\nasa\\https_science.nasa.gov_solar-system_comets_19p-borrelly.json"
+        }
+      ],
+      "network_attempted": true,
+      "raw_only": true,
+      "triples_write": false,
+      "chroma_write": false,
+      "neo4j_write": false,
+      "active_source_unchanged": true
+    },
+    {
+      "source_id": "esa",
+      "selected_requested": 8,
+      "attempted": 8,
+      "before_raw_count": 168,
+      "after_raw_count": 171,
+      "new_records": 3,
+      "duplicate_skipped": 0,
+      "failed": 5,
+      "failed_urls": [
+        "https://sci.esa.int/web/juice/journal-archive",
+        "http://sci.esa.int/rosetta",
+        "http://sci.esa.int/where_is_rosetta/",
+        "https://www.cosmos.esa.int/web/gaia/data-release-4",
+        "https://cosmos.esa.int/web/gaia"
+      ],
+      "limit": 8,
+      "items": [
+        {
+          "url": "https://sci.esa.int/web/juice/journal-archive",
+          "title": "https://sci.esa.int/web/juice/journal-archive",
+          "status": "failed",
+          "reason": "URLError"
+        },
+        {
+          "url": "https://scifleet.esa.int/model/juice/",
+          "title": "https://scifleet.esa.int/model/juice/",
+          "status": "written",
+          "saved_path": "F:\\知识表示与处理结课作业\\TololoAgent\\data\\raw_json\\esa\\https_scifleet.esa.int_model_juice.json"
+        },
+        {
+          "url": "https://blogs.esa.int/10-years-since-rosetta/",
+          "title": "10 years since Rosetta",
+          "status": "written",
+          "saved_path": "F:\\知识表示与处理结课作业\\TololoAgent\\data\\raw_json\\esa\\https_blogs.esa.int_10-years-since-rosetta.json"
+        },
+        {
+          "url": "http://blogs.esa.int/rosetta/",
+          "title": "Rosetta – ESA's comet chaser – Follow ESA's mission to Comet 67P/Churyumov-Gerasimenko",
+          "status": "written",
+          "saved_path": "F:\\知识表示与处理结课作业\\TololoAgent\\data\\raw_json\\esa\\http_blogs.esa.int_rosetta.json"
+        },
+        {
+          "url": "http://sci.esa.int/rosetta",
+          "title": "http://sci.esa.int/rosetta",
+          "status": "failed",
+          "reason": "URLError"
+        },
+        {
+          "url": "http://sci.esa.int/where_is_rosetta/",
+          "title": "http://sci.esa.int/where_is_rosetta/",
+          "status": "failed",
+          "reason": "URLError"
+        },
+        {
+          "url": "https://www.cosmos.esa.int/web/gaia/data-release-4",
+          "title": "https://www.cosmos.esa.int/web/gaia/data-release-4",
+          "status": "failed",
+          "reason": "URLError"
+        },
+        {
+          "url": "https://cosmos.esa.int/web/gaia",
+          "title": "https://cosmos.esa.int/web/gaia",
+          "status": "failed",
+          "reason": "URLError"
+        }
+      ],
+      "network_attempted": true,
+      "raw_only": true,
+      "triples_write": false,
+      "chroma_write": false,
+      "neo4j_write": false,
+      "active_source_unchanged": true
+    }
+  ],
+  "safety_boundaries": [
+    "only Phase 40 selected candidates",
+    "nasa/esa only",
+    "raw JSON only",
+    "no downstream materialization",
+    "ACTIVE_SOURCE remains zh_wikipedia"
+  ]
+}
