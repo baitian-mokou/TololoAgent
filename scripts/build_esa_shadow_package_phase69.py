@@ -17,7 +17,7 @@ if str(ROOT) not in sys.path:
     sys.path.insert(0, str(ROOT))
 
 from config import ACTIVE_SOURCE, SOURCE_REGISTRY
-from scripts.build_nasa_limited_shadow_package import approval_payload, formal_shadow_plan, render_review_sample
+from scripts.build_nasa_limited_shadow_package import formal_shadow_plan, render_review_sample
 from scripts.ingest_manifest_frontier import quality_fields_for_payload
 from scripts.materialize_manifest_raw_records import clean_text, convert_raw_payload, safe_name
 from scripts.select_deduped_frontier_candidates import canonical_url, normalized_title
@@ -41,6 +41,17 @@ def write_json(path: Path, payload: Any) -> None:
 def write_text(path: Path, text: str) -> None:
     path.parent.mkdir(parents=True, exist_ok=True)
     path.write_text(text, encoding="utf-8")
+
+
+def approval_payload(item_count: int) -> Dict[str, Any]:
+    return {
+        "source_id": SOURCE_ID,
+        "approval_decision": "pending",
+        "approved_item_count": 0,
+        "max_available_item_count": item_count,
+        "reviewer_notes": "",
+        "allowed_output_scope": "data/triples_shadow/esa only after explicit guarded approval",
+    }
 
 
 def output_allowed(path: Path, *, allow_docs: bool = False) -> bool:

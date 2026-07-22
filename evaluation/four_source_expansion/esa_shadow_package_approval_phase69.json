@@ -1,9 +1,8 @@
 {
-  "schema_version": 1,
-  "source_id": "nasa",
+  "source_id": "esa",
   "approval_decision": "pending",
   "approved_item_count": 0,
   "max_available_item_count": 18,
   "reviewer_notes": "",
-  "allowed_output_scope": "formal shadow triples directory only after explicit approval; no active source change; no Chroma or Neo4j write"
+  "allowed_output_scope": "data/triples_shadow/esa only after explicit guarded approval"
 }

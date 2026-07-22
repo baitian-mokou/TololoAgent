@@ -1,0 +1,35 @@
+{
+  "phase": "Phase 70",
+  "mode": "guarded_esa_shadow_apply_preflight",
+  "generated_at": "2026-07-22T12:57:31.521192+00:00",
+  "source_id": "esa",
+  "allowed": false,
+  "executed": false,
+  "blocked_reason": "approval_not_approved",
+  "package_dir": "evaluation\\four_source_expansion\\esa_shadow_package_phase69",
+  "approval_path": "evaluation\\four_source_expansion\\esa_shadow_package_approval_phase69.json",
+  "shadow_output_dir": "data\\triples_shadow\\esa",
+  "execute_requested": false,
+  "formal_default_triples_write": false,
+  "chroma_write": false,
+  "neo4j_write": false,
+  "active_source": "zh_wikipedia",
+  "registry": {
+    "zh_wikipedia": "active",
+    "nasa": "disabled",
+    "esa": "disabled",
+    "wikidata": "disabled"
+  },
+  "active_source_unchanged": true,
+  "approval": {
+    "source_id": "esa",
+    "approval_decision": "pending",
+    "approved_item_count": 0,
+    "reviewer_notes": ""
+  },
+  "package_counts": {
+    "items": 18,
+    "triples": 70,
+    "narratives": 71
+  }
+}
