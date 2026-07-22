@@ -267,6 +267,9 @@ def main(argv: Sequence[str] | None = None) -> int:
     parser.add_argument("--shadow-dir", default=str(ROOT / "data" / "triples_shadow" / SOURCE_ID))
     parser.add_argument("--out-json", default=str(ROOT / "evaluation" / "four_source_expansion" / "nasa_shadow_source_readiness_phase47.json"))
     parser.add_argument("--out-md", default=str(ROOT / "docs" / "nasa_shadow_source_readiness_phase47.md"))
+    parser.add_argument("--expected-items", type=int, default=EXPECTED_ITEMS)
+    parser.add_argument("--expected-triples", type=int, default=EXPECTED_TRIPLES)
+    parser.add_argument("--expected-narratives", type=int, default=EXPECTED_NARRATIVES)
     args = parser.parse_args(argv)
 
     out_json = Path(args.out_json)
@@ -278,7 +281,12 @@ def main(argv: Sequence[str] | None = None) -> int:
         print("out-md must stay under docs/ or evaluation/four_source_expansion/", file=sys.stderr)
         return 2
 
-    report = build_readiness_report(shadow_dir=Path(args.shadow_dir))
+    report = build_readiness_report(
+        shadow_dir=Path(args.shadow_dir),
+        expected_items=args.expected_items,
+        expected_triples=args.expected_triples,
+        expected_narratives=args.expected_narratives,
+    )
     write_json(out_json, report)
     write_text(out_md, render_markdown(report))
     print(
