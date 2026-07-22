@@ -1,0 +1,1780 @@
+[
+  {
+    "source": "nasa",
+    "title_or_id": "Riding Along with Juno",
+    "url_or_entity": "https://images-assets.nasa.gov/image/PIA14414/collection.json",
+    "quality_class": "strong_review_candidate",
+    "known_risks": [
+      "images_api_structured_metadata_relatively_clean"
+    ],
+    "review_questions": [
+      "Is the item factually relevant to its source title/entity?",
+      "Are the narrative and triples meaningful and non-noisy?",
+      "Is the provenance/source URL sufficient for manual review?"
+    ],
+    "accept_criteria": [
+      "Clear source metadata and provenance.",
+      "Review text supports at least one meaningful fact/triple.",
+      "Known source-specific risk is acceptable or absent."
+    ],
+    "reject_criteria": [
+      "Navigation, boilerplate, index/news-card, template/table, or JSON-wrapper noise dominates.",
+      "Source metadata is missing or cannot be checked.",
+      "Triples or narrative are too thin to judge."
+    ],
+    "review_status": "accepted_with_conditions_for_shadow_review",
+    "sample": {
+      "source": "nasa",
+      "source_id": "nasa",
+      "title": "Riding Along with Juno",
+      "url": "https://images-assets.nasa.gov/image/PIA14414/collection.json",
+      "endpoint": "nasa_images_api",
+      "method": "structured_description",
+      "body_excerpt": "The three LEGO figurines flying aboard the Juno spacecraft are the Roman god Jupiter, his wife Juno and Galileo Galilei.",
+      "narrative": "The three LEGO figurines flying aboard the Juno spacecraft are the Roman god Jupiter, his wife Juno and Galileo Galilei.",
+      "triples": [
+        {
+          "subject": "Riding Along with Juno",
+          "predicate": "SOURCE_URL",
+          "object": "https://images-assets.nasa.gov/image/PIA14414/collection.json"
+        },
+        {
+          "subject": "Riding Along with Juno",
+          "predicate": "HAS_REVIEW_TEXT",
+          "object": "The three LEGO figurines flying aboard the Juno spacecraft are the Roman god Jupiter, his wife Juno and Galileo Galilei."
+        }
+      ],
+      "provenance": {
+        "phase": "Phase101",
+        "input_phase": "Phase100",
+        "source_url": "https://images-assets.nasa.gov/image/PIA14414/collection.json",
+        "endpoint": "nasa_images_api",
+        "phase100_provenance": {
+          "phase": "Phase100",
+          "source_url": "https://images-assets.nasa.gov/image/PIA14414/collection.json"
+        }
+      },
+      "quality_flags": [
+        "phase100_endpoint_preview",
+        "strong_accepted",
+        "strong_review_candidate",
+        "images_api_structured_metadata_relatively_clean"
+      ],
+      "quality_class": "strong_review_candidate",
+      "risk_note": "images_api_structured_metadata_relatively_clean",
+      "review_status": "pending_manual_review"
+    },
+    "reviewer_verdict": "ACCEPT_WITH_CONDITIONS",
+    "reviewer_reason": "Images API metadata clean but thin.",
+    "shadow_review_only": true,
+    "apply_preflight_allowed": false,
+    "production_ready": false,
+    "item_verdict": "ITEM_ACCEPT_WITH_CONDITIONS",
+    "risk_label": "2 Images API metadata candidates are clean but thin; rejected WP REST/EO residue remains out."
+  },
+  {
+    "source": "nasa",
+    "title_or_id": "LEGO Figurines Aboard Juno",
+    "url_or_entity": "https://images-assets.nasa.gov/image/PIA14413/collection.json",
+    "quality_class": "strong_review_candidate",
+    "known_risks": [
+      "images_api_structured_metadata_relatively_clean"
+    ],
+    "review_questions": [
+      "Is the item factually relevant to its source title/entity?",
+      "Are the narrative and triples meaningful and non-noisy?",
+      "Is the provenance/source URL sufficient for manual review?"
+    ],
+    "accept_criteria": [
+      "Clear source metadata and provenance.",
+      "Review text supports at least one meaningful fact/triple.",
+      "Known source-specific risk is acceptable or absent."
+    ],
+    "reject_criteria": [
+      "Navigation, boilerplate, index/news-card, template/table, or JSON-wrapper noise dominates.",
+      "Source metadata is missing or cannot be checked.",
+      "Triples or narrative are too thin to judge."
+    ],
+    "review_status": "accepted_with_conditions_for_shadow_review",
+    "sample": {
+      "source": "nasa",
+      "source_id": "nasa",
+      "title": "LEGO Figurines Aboard Juno",
+      "url": "https://images-assets.nasa.gov/image/PIA14413/collection.json",
+      "endpoint": "nasa_images_api",
+      "method": "structured_description",
+      "body_excerpt": "Three LEGO figurines representing the Roman god Jupiter, his wife Juno and Galileo Galilei are shown here aboard the Juno spacecraft.",
+      "narrative": "Three LEGO figurines representing the Roman god Jupiter, his wife Juno and Galileo Galilei are shown here aboard the Juno spacecraft.",
+      "triples": [
+        {
+          "subject": "LEGO Figurines Aboard Juno",
+          "predicate": "SOURCE_URL",
+          "object": "https://images-assets.nasa.gov/image/PIA14413/collection.json"
+        },
+        {
+          "subject": "LEGO Figurines Aboard Juno",
+          "predicate": "HAS_REVIEW_TEXT",
+          "object": "Three LEGO figurines representing the Roman god Jupiter, his wife Juno and Galileo Galilei are shown here aboard the Juno spacecraft."
+        }
+      ],
+      "provenance": {
+        "phase": "Phase101",
+        "input_phase": "Phase100",
+        "source_url": "https://images-assets.nasa.gov/image/PIA14413/collection.json",
+        "endpoint": "nasa_images_api",
+        "phase100_provenance": {
+          "phase": "Phase100",
+          "source_url": "https://images-assets.nasa.gov/image/PIA14413/collection.json"
+        }
+      },
+      "quality_flags": [
+        "phase100_endpoint_preview",
+        "strong_accepted",
+        "strong_review_candidate",
+        "images_api_structured_metadata_relatively_clean"
+      ],
+      "quality_class": "strong_review_candidate",
+      "risk_note": "images_api_structured_metadata_relatively_clean",
+      "review_status": "pending_manual_review"
+    },
+    "reviewer_verdict": "ACCEPT_WITH_CONDITIONS",
+    "reviewer_reason": "Images API metadata clean but thin.",
+    "shadow_review_only": true,
+    "apply_preflight_allowed": false,
+    "production_ready": false,
+    "item_verdict": "ITEM_ACCEPT_WITH_CONDITIONS",
+    "risk_label": "2 Images API metadata candidates are clean but thin; rejected WP REST/EO residue remains out."
+  },
+  {
+    "source": "esa",
+    "title_or_id": "ESA - Rosetta",
+    "url_or_entity": "https://www.esa.int/science_exploration/space_science/rosetta",
+    "quality_class": "go_with_conditions_manual_review",
+    "known_risks": [
+      "minor index/news risk; verify mission-specific content"
+    ],
+    "review_questions": [
+      "Is the item factually relevant to its source title/entity?",
+      "Are the narrative and triples meaningful and non-noisy?",
+      "Is the provenance/source URL sufficient for manual review?"
+    ],
+    "accept_criteria": [
+      "Clear source metadata and provenance.",
+      "Review text supports at least one meaningful fact/triple.",
+      "Known source-specific risk is acceptable or absent."
+    ],
+    "reject_criteria": [
+      "Navigation, boilerplate, index/news-card, template/table, or JSON-wrapper noise dominates.",
+      "Source metadata is missing or cannot be checked.",
+      "Triples or narrative are too thin to judge."
+    ],
+    "review_status": "accepted_with_conditions_for_shadow_review",
+    "sample": {
+      "source": "esa",
+      "title": "ESA - Rosetta",
+      "source_url": "https://www.esa.int/science_exploration/space_science/rosetta",
+      "source_id": "esa",
+      "narrative_excerpt": "Science & Exploration Rosetta ESA's comet-chaser The mission ESA's Rosetta mission was the first to rendezvous with a comet, the first to follow a comet on its orbit around the Sun, and the first to deploy a lander to a comet's surface. Comets are time capsules containing primitive material left over from the epoch when the Sun and its planets formed. By studying the gas, dust and structure of the nucleus and organic materials associated with Comet 67P/Churyumov-Gerasimenko, via both remote and ",
+      "triples": [
+        {
+          "source_id": "esa",
+          "subject": "ESA - Rosetta",
+          "schema_version": "phase87_rebuilt_pending_shadow_package_v1",
+          "extraction_method": "phase83_preview_heuristic",
+          "confidence": 0.72,
+          "source_url": "https://www.esa.int/science_exploration/space_science/rosetta",
+          "entity_id": "",
+          "validation_status": "accepted_preview",
+          "provenance": {
+            "phase82_status": "local_preview",
+            "phase82_reason": "phase67_68_accepted_or_review_needed"
+          },
+          "quality_flags": {
+            "allowlisted": true,
+            "has_excerpt": true,
+            "evaluation_only": true,
+            "non_empty_text": true
+          },
+          "predicate": "SOURCE_URL",
+          "object": "https://www.esa.int/science_exploration/space_science/rosetta"
+        },
+        {
+          "source_id": "esa",
+          "subject": "ESA - Rosetta",
+          "schema_version": "phase87_rebuilt_pending_shadow_package_v1",
+          "extraction_method": "phase83_preview_heuristic",
+          "confidence": 0.72,
+          "source_url": "https://www.esa.int/science_exploration/space_science/rosetta",
+          "entity_id": "",
+          "validation_status": "accepted_preview",
+          "provenance": {
+            "phase82_status": "local_preview",
+            "phase82_reason": "phase67_68_accepted_or_review_needed"
+          },
+          "quality_flags": {
+            "allowlisted": true,
+            "has_excerpt": true,
+            "evaluation_only": true,
+            "non_empty_text": true
+          },
+          "predicate": "HAS_PREVIEW_TEXT",
+          "object": "Science & Exploration Rosetta ESA's comet-chaser The mission ESA's Rosetta mission was the first to rendezvous with a comet, the first to follow a comet on its orbit around the Sun"
+        }
+      ],
+      "provenance": {
+        "phase82_status": "local_preview",
+        "phase82_reason": "phase67_68_accepted_or_review_needed"
+      },
+      "quality_flags": {
+        "allowlisted": true,
+        "has_excerpt": true,
+        "evaluation_only": true,
+        "non_empty_text": true
+      },
+      "quality_risk_labels": [
+        "esa_relatively_clean_pending_review"
+      ],
+      "schema_version": "phase83_shadow_normalize_preview_v1",
+      "review_status": "pending_manual_or_reviewer_check",
+      "review_questions": [
+        "Is the narrative factually relevant to the title/source?",
+        "Are provenance and source metadata trustworthy enough for shadow review?",
+        "Are the preview triples meaningful and non-noisy?",
+        "For NASA repaired metadata, is the Phase86 repair evidence acceptable?"
+      ],
+      "repair_notes": [
+        "preserved_from_phase93_with_existing_risk_labels"
+      ]
+    },
+    "reviewer_verdict": "ACCEPT_WITH_CONDITIONS",
+    "reviewer_reason": "Readable, with minor index/news risk.",
+    "shadow_review_only": true,
+    "apply_preflight_allowed": false,
+    "production_ready": false,
+    "item_verdict": "ITEM_ACCEPT_WITH_CONDITIONS",
+    "risk_label": "8 reviewable candidates retain minor index/news risk; ESA - Space Science remains rejected."
+  },
+  {
+    "source": "esa",
+    "title_or_id": "ESA - Gaia",
+    "url_or_entity": "https://www.esa.int/science_exploration/space_science/gaia",
+    "quality_class": "go_with_conditions_manual_review",
+    "known_risks": [
+      "minor index/news risk; verify mission-specific content"
+    ],
+    "review_questions": [
+      "Is the item factually relevant to its source title/entity?",
+      "Are the narrative and triples meaningful and non-noisy?",
+      "Is the provenance/source URL sufficient for manual review?"
+    ],
+    "accept_criteria": [
+      "Clear source metadata and provenance.",
+      "Review text supports at least one meaningful fact/triple.",
+      "Known source-specific risk is acceptable or absent."
+    ],
+    "reject_criteria": [
+      "Navigation, boilerplate, index/news-card, template/table, or JSON-wrapper noise dominates.",
+      "Source metadata is missing or cannot be checked.",
+      "Triples or narrative are too thin to judge."
+    ],
+    "review_status": "accepted_with_conditions_for_shadow_review",
+    "sample": {
+      "source": "esa",
+      "title": "ESA - Gaia",
+      "source_url": "https://www.esa.int/science_exploration/space_science/gaia",
+      "source_id": "esa",
+      "narrative_excerpt": "Science & Exploration Gaia ESA's billion star surveyor The mission From 27 July 2014 to 15 January 2025, Gaia has made more than three trillion observations of two billion stars and other objects throughout our Milky Way galaxy and beyond, mapping their motions, luminosity, temperature and composition. Gaia's extraordinarily precise three-dimensional map will provide the data needed to tackle an enormous range of important questions related to the origin, structure and evolutionary history of ou",
+      "triples": [
+        {
+          "source_id": "esa",
+          "subject": "ESA - Gaia",
+          "schema_version": "phase87_rebuilt_pending_shadow_package_v1",
+          "extraction_method": "phase83_preview_heuristic",
+          "confidence": 0.72,
+          "source_url": "https://www.esa.int/science_exploration/space_science/gaia",
+          "entity_id": "",
+          "validation_status": "accepted_preview",
+          "provenance": {
+            "phase82_status": "local_preview",
+            "phase82_reason": "phase67_68_accepted_or_review_needed"
+          },
+          "quality_flags": {
+            "allowlisted": true,
+            "has_excerpt": true,
+            "evaluation_only": true,
+            "non_empty_text": true
+          },
+          "predicate": "SOURCE_URL",
+          "object": "https://www.esa.int/science_exploration/space_science/gaia"
+        },
+        {
+          "source_id": "esa",
+          "subject": "ESA - Gaia",
+          "schema_version": "phase87_rebuilt_pending_shadow_package_v1",
+          "extraction_method": "phase83_preview_heuristic",
+          "confidence": 0.72,
+          "source_url": "https://www.esa.int/science_exploration/space_science/gaia",
+          "entity_id": "",
+          "validation_status": "accepted_preview",
+          "provenance": {
+            "phase82_status": "local_preview",
+            "phase82_reason": "phase67_68_accepted_or_review_needed"
+          },
+          "quality_flags": {
+            "allowlisted": true,
+            "has_excerpt": true,
+            "evaluation_only": true,
+            "non_empty_text": true
+          },
+          "predicate": "HAS_PREVIEW_TEXT",
+          "object": "Science & Exploration Gaia ESA's billion star surveyor The mission From 27 July 2014 to 15 January 2025, Gaia has made more than three trillion observations of two billion stars an"
+        }
+      ],
+      "provenance": {
+        "phase82_status": "local_preview",
+        "phase82_reason": "phase67_68_accepted_or_review_needed"
+      },
+      "quality_flags": {
+        "allowlisted": true,
+        "has_excerpt": true,
+        "evaluation_only": true,
+        "non_empty_text": true
+      },
+      "quality_risk_labels": [
+        "esa_relatively_clean_pending_review"
+      ],
+      "schema_version": "phase83_shadow_normalize_preview_v1",
+      "review_status": "pending_manual_or_reviewer_check",
+      "review_questions": [
+        "Is the narrative factually relevant to the title/source?",
+        "Are provenance and source metadata trustworthy enough for shadow review?",
+        "Are the preview triples meaningful and non-noisy?",
+        "For NASA repaired metadata, is the Phase86 repair evidence acceptable?"
+      ],
+      "repair_notes": [
+        "preserved_from_phase93_with_existing_risk_labels"
+      ]
+    },
+    "reviewer_verdict": "ACCEPT_WITH_CONDITIONS",
+    "reviewer_reason": "Readable, with minor index/news risk.",
+    "shadow_review_only": true,
+    "apply_preflight_allowed": false,
+    "production_ready": false,
+    "item_verdict": "ITEM_ACCEPT_WITH_CONDITIONS",
+    "risk_label": "8 reviewable candidates retain minor index/news risk; ESA - Space Science remains rejected."
+  },
+  {
+    "source": "esa",
+    "title_or_id": "ESA - Solar Orbiter",
+    "url_or_entity": "https://www.esa.int/science_exploration/space_science/solar_orbiter",
+    "quality_class": "go_with_conditions_manual_review",
+    "known_risks": [
+      "minor index/news risk; verify mission-specific content"
+    ],
+    "review_questions": [
+      "Is the item factually relevant to its source title/entity?",
+      "Are the narrative and triples meaningful and non-noisy?",
+      "Is the provenance/source URL sufficient for manual review?"
+    ],
+    "accept_criteria": [
+      "Clear source metadata and provenance.",
+      "Review text supports at least one meaningful fact/triple.",
+      "Known source-specific risk is acceptable or absent."
+    ],
+    "reject_criteria": [
+      "Navigation, boilerplate, index/news-card, template/table, or JSON-wrapper noise dominates.",
+      "Source metadata is missing or cannot be checked.",
+      "Triples or narrative are too thin to judge."
+    ],
+    "review_status": "accepted_with_conditions_for_shadow_review",
+    "sample": {
+      "source": "esa",
+      "title": "ESA - Solar Orbiter",
+      "source_url": "https://www.esa.int/science_exploration/space_science/solar_orbiter",
+      "source_id": "esa",
+      "narrative_excerpt": "Science & Exploration Solar Orbiter The Sun up close Solar Orbiter is the most complex scientific laboratory ever sent to our life-giving star, taking images of the Sun from closer than any spacecraft before and being the first to look at its polar regions. With Solar Orbiter's ten instruments, scientists hope to answer some profound questions: What drives the Sun’s 11-year cycle of rising and subsiding magnetic activity? What heats up the upper layer of its atmosphere, the corona, to millions o",
+      "triples": [
+        {
+          "source_id": "esa",
+          "subject": "ESA - Solar Orbiter",
+          "schema_version": "phase87_rebuilt_pending_shadow_package_v1",
+          "extraction_method": "phase83_preview_heuristic",
+          "confidence": 0.72,
+          "source_url": "https://www.esa.int/science_exploration/space_science/solar_orbiter",
+          "entity_id": "",
+          "validation_status": "accepted_preview",
+          "provenance": {
+            "phase82_status": "local_preview",
+            "phase82_reason": "phase67_68_accepted_or_review_needed"
+          },
+          "quality_flags": {
+            "allowlisted": true,
+            "has_excerpt": true,
+            "evaluation_only": true,
+            "non_empty_text": true
+          },
+          "predicate": "SOURCE_URL",
+          "object": "https://www.esa.int/science_exploration/space_science/solar_orbiter"
+        },
+        {
+          "source_id": "esa",
+          "subject": "ESA - Solar Orbiter",
+          "schema_version": "phase87_rebuilt_pending_shadow_package_v1",
+          "extraction_method": "phase83_preview_heuristic",
+          "confidence": 0.72,
+          "source_url": "https://www.esa.int/science_exploration/space_science/solar_orbiter",
+          "entity_id": "",
+          "validation_status": "accepted_preview",
+          "provenance": {
+            "phase82_status": "local_preview",
+            "phase82_reason": "phase67_68_accepted_or_review_needed"
+          },
+          "quality_flags": {
+            "allowlisted": true,
+            "has_excerpt": true,
+            "evaluation_only": true,
+            "non_empty_text": true
+          },
+          "predicate": "HAS_PREVIEW_TEXT",
+          "object": "Science & Exploration Solar Orbiter The Sun up close Solar Orbiter is the most complex scientific laboratory ever sent to our life-giving star, taking images of the Sun from closer"
+        }
+      ],
+      "provenance": {
+        "phase82_status": "local_preview",
+        "phase82_reason": "phase67_68_accepted_or_review_needed"
+      },
+      "quality_flags": {
+        "allowlisted": true,
+        "has_excerpt": true,
+        "evaluation_only": true,
+        "non_empty_text": true
+      },
+      "quality_risk_labels": [
+        "esa_relatively_clean_pending_review"
+      ],
+      "schema_version": "phase83_shadow_normalize_preview_v1",
+      "review_status": "pending_manual_or_reviewer_check",
+      "review_questions": [
+        "Is the narrative factually relevant to the title/source?",
+        "Are provenance and source metadata trustworthy enough for shadow review?",
+        "Are the preview triples meaningful and non-noisy?",
+        "For NASA repaired metadata, is the Phase86 repair evidence acceptable?"
+      ],
+      "repair_notes": [
+        "preserved_from_phase93_with_existing_risk_labels"
+      ]
+    },
+    "reviewer_verdict": "ACCEPT_WITH_CONDITIONS",
+    "reviewer_reason": "Readable, with minor index/news risk.",
+    "shadow_review_only": true,
+    "apply_preflight_allowed": false,
+    "production_ready": false,
+    "item_verdict": "ITEM_ACCEPT_WITH_CONDITIONS",
+    "risk_label": "8 reviewable candidates retain minor index/news risk; ESA - Space Science remains rejected."
+  },
+  {
+    "source": "esa",
+    "title_or_id": "ESA - BepiColombo",
+    "url_or_entity": "https://www.esa.int/science_exploration/space_science/bepicolombo",
+    "quality_class": "go_with_conditions_manual_review",
+    "known_risks": [
+      "minor index/news risk; verify mission-specific content"
+    ],
+    "review_questions": [
+      "Is the item factually relevant to its source title/entity?",
+      "Are the narrative and triples meaningful and non-noisy?",
+      "Is the provenance/source URL sufficient for manual review?"
+    ],
+    "accept_criteria": [
+      "Clear source metadata and provenance.",
+      "Review text supports at least one meaningful fact/triple.",
+      "Known source-specific risk is acceptable or absent."
+    ],
+    "reject_criteria": [
+      "Navigation, boilerplate, index/news-card, template/table, or JSON-wrapper noise dominates.",
+      "Source metadata is missing or cannot be checked.",
+      "Triples or narrative are too thin to judge."
+    ],
+    "review_status": "accepted_with_conditions_for_shadow_review",
+    "sample": {
+      "source": "esa",
+      "title": "ESA - BepiColombo",
+      "source_url": "https://www.esa.int/science_exploration/space_science/bepicolombo",
+      "source_id": "esa",
+      "narrative_excerpt": "Science & Exploration BepiColombo Investigating Mercury's mysteries BepiColombo will be the second and most complex mission ever to orbit Mercury. Close to the Sun and more difficult for an orbiter to reach than Saturn, this small desert world is the least explored planet of the inner Solar System. Learning more about Mercury will shed light on the history of the entire Solar System. Packed with scientific instruments, the mission will try to answer many perplexing questions, such as: Why is the",
+      "triples": [
+        {
+          "source_id": "esa",
+          "subject": "ESA - BepiColombo",
+          "schema_version": "phase87_rebuilt_pending_shadow_package_v1",
+          "extraction_method": "phase83_preview_heuristic",
+          "confidence": 0.72,
+          "source_url": "https://www.esa.int/science_exploration/space_science/bepicolombo",
+          "entity_id": "",
+          "validation_status": "accepted_preview",
+          "provenance": {
+            "phase82_status": "local_preview",
+            "phase82_reason": "phase67_68_accepted_or_review_needed"
+          },
+          "quality_flags": {
+            "allowlisted": true,
+            "has_excerpt": true,
+            "evaluation_only": true,
+            "non_empty_text": true
+          },
+          "predicate": "SOURCE_URL",
+          "object": "https://www.esa.int/science_exploration/space_science/bepicolombo"
+        },
+        {
+          "source_id": "esa",
+          "subject": "ESA - BepiColombo",
+          "schema_version": "phase87_rebuilt_pending_shadow_package_v1",
+          "extraction_method": "phase83_preview_heuristic",
+          "confidence": 0.72,
+          "source_url": "https://www.esa.int/science_exploration/space_science/bepicolombo",
+          "entity_id": "",
+          "validation_status": "accepted_preview",
+          "provenance": {
+            "phase82_status": "local_preview",
+            "phase82_reason": "phase67_68_accepted_or_review_needed"
+          },
+          "quality_flags": {
+            "allowlisted": true,
+            "has_excerpt": true,
+            "evaluation_only": true,
+            "non_empty_text": true
+          },
+          "predicate": "HAS_PREVIEW_TEXT",
+          "object": "Science & Exploration BepiColombo Investigating Mercury's mysteries BepiColombo will be the second and most complex mission ever to orbit Mercury. Close to the Sun and more difficu"
+        }
+      ],
+      "provenance": {
+        "phase82_status": "local_preview",
+        "phase82_reason": "phase67_68_accepted_or_review_needed"
+      },
+      "quality_flags": {
+        "allowlisted": true,
+        "has_excerpt": true,
+        "evaluation_only": true,
+        "non_empty_text": true
+      },
+      "quality_risk_labels": [
+        "esa_relatively_clean_pending_review"
+      ],
+      "schema_version": "phase83_shadow_normalize_preview_v1",
+      "review_status": "pending_manual_or_reviewer_check",
+      "review_questions": [
+        "Is the narrative factually relevant to the title/source?",
+        "Are provenance and source metadata trustworthy enough for shadow review?",
+        "Are the preview triples meaningful and non-noisy?",
+        "For NASA repaired metadata, is the Phase86 repair evidence acceptable?"
+      ],
+      "repair_notes": [
+        "preserved_from_phase93_with_existing_risk_labels"
+      ]
+    },
+    "reviewer_verdict": "ACCEPT_WITH_CONDITIONS",
+    "reviewer_reason": "Readable, with minor index/news risk.",
+    "shadow_review_only": true,
+    "apply_preflight_allowed": false,
+    "production_ready": false,
+    "item_verdict": "ITEM_ACCEPT_WITH_CONDITIONS",
+    "risk_label": "8 reviewable candidates retain minor index/news risk; ESA - Space Science remains rejected."
+  },
+  {
+    "source": "esa",
+    "title_or_id": "ESA - Euclid",
+    "url_or_entity": "https://www.esa.int/science_exploration/space_science/euclid",
+    "quality_class": "go_with_conditions_manual_review",
+    "known_risks": [
+      "minor index/news risk; verify mission-specific content"
+    ],
+    "review_questions": [
+      "Is the item factually relevant to its source title/entity?",
+      "Are the narrative and triples meaningful and non-noisy?",
+      "Is the provenance/source URL sufficient for manual review?"
+    ],
+    "accept_criteria": [
+      "Clear source metadata and provenance.",
+      "Review text supports at least one meaningful fact/triple.",
+      "Known source-specific risk is acceptable or absent."
+    ],
+    "reject_criteria": [
+      "Navigation, boilerplate, index/news-card, template/table, or JSON-wrapper noise dominates.",
+      "Source metadata is missing or cannot be checked.",
+      "Triples or narrative are too thin to judge."
+    ],
+    "review_status": "accepted_with_conditions_for_shadow_review",
+    "sample": {
+      "source": "esa",
+      "title": "ESA - Euclid",
+      "source_url": "https://www.esa.int/science_exploration/space_science/euclid",
+      "source_id": "esa",
+      "narrative_excerpt": "Science & Exploration Euclid Exploring the dark Universe The mission ESA's Euclid mission is designed to explore the composition and evolution of the dark Universe. The space telescope will create a great map of the large-scale structure of the Universe across space and time by observing billions of galaxies out to 10 billion light-years, across more than a third of the sky. Euclid will explore how the Universe has expanded and how structure has formed over cosmic history, revealing more about t",
+      "triples": [
+        {
+          "source_id": "esa",
+          "subject": "ESA - Euclid",
+          "schema_version": "phase87_rebuilt_pending_shadow_package_v1",
+          "extraction_method": "phase83_preview_heuristic",
+          "confidence": 0.72,
+          "source_url": "https://www.esa.int/science_exploration/space_science/euclid",
+          "entity_id": "",
+          "validation_status": "accepted_preview",
+          "provenance": {
+            "phase82_status": "local_preview",
+            "phase82_reason": "phase67_68_accepted_or_review_needed"
+          },
+          "quality_flags": {
+            "allowlisted": true,
+            "has_excerpt": true,
+            "evaluation_only": true,
+            "non_empty_text": true
+          },
+          "predicate": "SOURCE_URL",
+          "object": "https://www.esa.int/science_exploration/space_science/euclid"
+        },
+        {
+          "source_id": "esa",
+          "subject": "ESA - Euclid",
+          "schema_version": "phase87_rebuilt_pending_shadow_package_v1",
+          "extraction_method": "phase83_preview_heuristic",
+          "confidence": 0.72,
+          "source_url": "https://www.esa.int/science_exploration/space_science/euclid",
+          "entity_id": "",
+          "validation_status": "accepted_preview",
+          "provenance": {
+            "phase82_status": "local_preview",
+            "phase82_reason": "phase67_68_accepted_or_review_needed"
+          },
+          "quality_flags": {
+            "allowlisted": true,
+            "has_excerpt": true,
+            "evaluation_only": true,
+            "non_empty_text": true
+          },
+          "predicate": "HAS_PREVIEW_TEXT",
+          "object": "Science & Exploration Euclid Exploring the dark Universe The mission ESA's Euclid mission is designed to explore the composition and evolution of the dark Universe. The space teles"
+        }
+      ],
+      "provenance": {
+        "phase82_status": "local_preview",
+        "phase82_reason": "phase67_68_accepted_or_review_needed"
+      },
+      "quality_flags": {
+        "allowlisted": true,
+        "has_excerpt": true,
+        "evaluation_only": true,
+        "non_empty_text": true
+      },
+      "quality_risk_labels": [
+        "esa_relatively_clean_pending_review"
+      ],
+      "schema_version": "phase83_shadow_normalize_preview_v1",
+      "review_status": "pending_manual_or_reviewer_check",
+      "review_questions": [
+        "Is the narrative factually relevant to the title/source?",
+        "Are provenance and source metadata trustworthy enough for shadow review?",
+        "Are the preview triples meaningful and non-noisy?",
+        "For NASA repaired metadata, is the Phase86 repair evidence acceptable?"
+      ],
+      "repair_notes": [
+        "preserved_from_phase93_with_existing_risk_labels"
+      ]
+    },
+    "reviewer_verdict": "ACCEPT_WITH_CONDITIONS",
+    "reviewer_reason": "Readable, with minor index/news risk.",
+    "shadow_review_only": true,
+    "apply_preflight_allowed": false,
+    "production_ready": false,
+    "item_verdict": "ITEM_ACCEPT_WITH_CONDITIONS",
+    "risk_label": "8 reviewable candidates retain minor index/news risk; ESA - Space Science remains rejected."
+  },
+  {
+    "source": "esa",
+    "title_or_id": "ESA - ExoMars",
+    "url_or_entity": "https://www.esa.int/science_exploration/space_science/exomars",
+    "quality_class": "go_with_conditions_manual_review",
+    "known_risks": [
+      "minor index/news risk; verify mission-specific content"
+    ],
+    "review_questions": [
+      "Is the item factually relevant to its source title/entity?",
+      "Are the narrative and triples meaningful and non-noisy?",
+      "Is the provenance/source URL sufficient for manual review?"
+    ],
+    "accept_criteria": [
+      "Clear source metadata and provenance.",
+      "Review text supports at least one meaningful fact/triple.",
+      "Known source-specific risk is acceptable or absent."
+    ],
+    "reject_criteria": [
+      "Navigation, boilerplate, index/news-card, template/table, or JSON-wrapper noise dominates.",
+      "Source metadata is missing or cannot be checked.",
+      "Triples or narrative are too thin to judge."
+    ],
+    "review_status": "accepted_with_conditions_for_shadow_review",
+    "sample": {
+      "source": "esa",
+      "title": "ESA - ExoMars",
+      "source_url": "https://www.esa.int/science_exploration/space_science/exomars",
+      "source_id": "esa",
+      "narrative_excerpt": "Science & Exploration ExoMars Has life ever existed on Mars? The mission The ExoMars programme comprises two missions: the first – the Trace Gas Orbiter – launched in 2016 while the second, carrying the Rosalind Franklin rover, will target launch in 2028. Together they will address the question of whether life has ever existed on Mars. 1st European rover 2 m rover drill depth 70m/sol driving on Mars Latest All Stories Videos Images Image Science & Exploration ExoMars ramps put up with cold, shak",
+      "triples": [
+        {
+          "source_id": "esa",
+          "subject": "ESA - ExoMars",
+          "schema_version": "phase87_rebuilt_pending_shadow_package_v1",
+          "extraction_method": "phase83_preview_heuristic",
+          "confidence": 0.72,
+          "source_url": "https://www.esa.int/science_exploration/space_science/exomars",
+          "entity_id": "",
+          "validation_status": "accepted_preview",
+          "provenance": {
+            "phase82_status": "local_preview",
+            "phase82_reason": "phase67_68_accepted_or_review_needed"
+          },
+          "quality_flags": {
+            "allowlisted": true,
+            "has_excerpt": true,
+            "evaluation_only": true,
+            "non_empty_text": true
+          },
+          "predicate": "SOURCE_URL",
+          "object": "https://www.esa.int/science_exploration/space_science/exomars"
+        },
+        {
+          "source_id": "esa",
+          "subject": "ESA - ExoMars",
+          "schema_version": "phase87_rebuilt_pending_shadow_package_v1",
+          "extraction_method": "phase83_preview_heuristic",
+          "confidence": 0.72,
+          "source_url": "https://www.esa.int/science_exploration/space_science/exomars",
+          "entity_id": "",
+          "validation_status": "accepted_preview",
+          "provenance": {
+            "phase82_status": "local_preview",
+            "phase82_reason": "phase67_68_accepted_or_review_needed"
+          },
+          "quality_flags": {
+            "allowlisted": true,
+            "has_excerpt": true,
+            "evaluation_only": true,
+            "non_empty_text": true
+          },
+          "predicate": "HAS_PREVIEW_TEXT",
+          "object": "Science & Exploration ExoMars Has life ever existed on Mars? The mission The ExoMars programme comprises two missions: the first – the Trace Gas Orbiter – launched in 2016 while th"
+        }
+      ],
+      "provenance": {
+        "phase82_status": "local_preview",
+        "phase82_reason": "phase67_68_accepted_or_review_needed"
+      },
+      "quality_flags": {
+        "allowlisted": true,
+        "has_excerpt": true,
+        "evaluation_only": true,
+        "non_empty_text": true
+      },
+      "quality_risk_labels": [
+        "esa_relatively_clean_pending_review"
+      ],
+      "schema_version": "phase83_shadow_normalize_preview_v1",
+      "review_status": "pending_manual_or_reviewer_check",
+      "review_questions": [
+        "Is the narrative factually relevant to the title/source?",
+        "Are provenance and source metadata trustworthy enough for shadow review?",
+        "Are the preview triples meaningful and non-noisy?",
+        "For NASA repaired metadata, is the Phase86 repair evidence acceptable?"
+      ],
+      "repair_notes": [
+        "preserved_from_phase93_with_existing_risk_labels"
+      ]
+    },
+    "reviewer_verdict": "ACCEPT_WITH_CONDITIONS",
+    "reviewer_reason": "Readable, with minor index/news risk.",
+    "shadow_review_only": true,
+    "apply_preflight_allowed": false,
+    "production_ready": false,
+    "item_verdict": "ITEM_ACCEPT_WITH_CONDITIONS",
+    "risk_label": "8 reviewable candidates retain minor index/news risk; ESA - Space Science remains rejected."
+  },
+  {
+    "source": "esa",
+    "title_or_id": "ESA - Cluster",
+    "url_or_entity": "https://www.esa.int/science_exploration/space_science/cluster",
+    "quality_class": "go_with_conditions_manual_review",
+    "known_risks": [
+      "minor index/news risk; verify mission-specific content"
+    ],
+    "review_questions": [
+      "Is the item factually relevant to its source title/entity?",
+      "Are the narrative and triples meaningful and non-noisy?",
+      "Is the provenance/source URL sufficient for manual review?"
+    ],
+    "accept_criteria": [
+      "Clear source metadata and provenance.",
+      "Review text supports at least one meaningful fact/triple.",
+      "Known source-specific risk is acceptable or absent."
+    ],
+    "reject_criteria": [
+      "Navigation, boilerplate, index/news-card, template/table, or JSON-wrapper noise dominates.",
+      "Source metadata is missing or cannot be checked.",
+      "Triples or narrative are too thin to judge."
+    ],
+    "review_status": "accepted_with_conditions_for_shadow_review",
+    "sample": {
+      "source": "esa",
+      "title": "ESA - Cluster",
+      "source_url": "https://www.esa.int/science_exploration/space_science/cluster",
+      "source_id": "esa",
+      "narrative_excerpt": "Science & Exploration Cluster Measuring Earth's magnetic environment The mission Cluster was a constellation of four spacecraft investigating the interaction between the Sun and Earth’s magnetosphere in unparalleled detail. The magnetosphere is our shield against the charged gas that carries particles and magnetic fields outwards from the Sun. Launch: 16 July and 9 August 2000 Mission end: 8 September 2024 Observed: solar wind, magnetosphere Orbit: elliptical around Earth’s poles, a few hundred ",
+      "triples": [
+        {
+          "source_id": "esa",
+          "subject": "ESA - Cluster",
+          "schema_version": "phase87_rebuilt_pending_shadow_package_v1",
+          "extraction_method": "phase83_preview_heuristic",
+          "confidence": 0.72,
+          "source_url": "https://www.esa.int/science_exploration/space_science/cluster",
+          "entity_id": "",
+          "validation_status": "accepted_preview",
+          "provenance": {
+            "phase82_status": "local_preview",
+            "phase82_reason": "phase67_68_accepted_or_review_needed"
+          },
+          "quality_flags": {
+            "allowlisted": true,
+            "has_excerpt": true,
+            "evaluation_only": true,
+            "non_empty_text": true
+          },
+          "predicate": "SOURCE_URL",
+          "object": "https://www.esa.int/science_exploration/space_science/cluster"
+        },
+        {
+          "source_id": "esa",
+          "subject": "ESA - Cluster",
+          "schema_version": "phase87_rebuilt_pending_shadow_package_v1",
+          "extraction_method": "phase83_preview_heuristic",
+          "confidence": 0.72,
+          "source_url": "https://www.esa.int/science_exploration/space_science/cluster",
+          "entity_id": "",
+          "validation_status": "accepted_preview",
+          "provenance": {
+            "phase82_status": "local_preview",
+            "phase82_reason": "phase67_68_accepted_or_review_needed"
+          },
+          "quality_flags": {
+            "allowlisted": true,
+            "has_excerpt": true,
+            "evaluation_only": true,
+            "non_empty_text": true
+          },
+          "predicate": "HAS_PREVIEW_TEXT",
+          "object": "Science & Exploration Cluster Measuring Earth's magnetic environment The mission Cluster was a constellation of four spacecraft investigating the interaction between the Sun and Ea"
+        }
+      ],
+      "provenance": {
+        "phase82_status": "local_preview",
+        "phase82_reason": "phase67_68_accepted_or_review_needed"
+      },
+      "quality_flags": {
+        "allowlisted": true,
+        "has_excerpt": true,
+        "evaluation_only": true,
+        "non_empty_text": true
+      },
+      "quality_risk_labels": [
+        "esa_relatively_clean_pending_review"
+      ],
+      "schema_version": "phase83_shadow_normalize_preview_v1",
+      "review_status": "pending_manual_or_reviewer_check",
+      "review_questions": [
+        "Is the narrative factually relevant to the title/source?",
+        "Are provenance and source metadata trustworthy enough for shadow review?",
+        "Are the preview triples meaningful and non-noisy?",
+        "For NASA repaired metadata, is the Phase86 repair evidence acceptable?"
+      ],
+      "repair_notes": [
+        "preserved_from_phase93_with_existing_risk_labels"
+      ]
+    },
+    "reviewer_verdict": "ACCEPT_WITH_CONDITIONS",
+    "reviewer_reason": "Readable, with minor index/news risk.",
+    "shadow_review_only": true,
+    "apply_preflight_allowed": false,
+    "production_ready": false,
+    "item_verdict": "ITEM_ACCEPT_WITH_CONDITIONS",
+    "risk_label": "8 reviewable candidates retain minor index/news risk; ESA - Space Science remains rejected."
+  },
+  {
+    "source": "esa",
+    "title_or_id": "ESA - Webb",
+    "url_or_entity": "https://www.esa.int/science_exploration/space_science/webb",
+    "quality_class": "go_with_conditions_manual_review",
+    "known_risks": [
+      "minor index/news risk; verify mission-specific content"
+    ],
+    "review_questions": [
+      "Is the item factually relevant to its source title/entity?",
+      "Are the narrative and triples meaningful and non-noisy?",
+      "Is the provenance/source URL sufficient for manual review?"
+    ],
+    "accept_criteria": [
+      "Clear source metadata and provenance.",
+      "Review text supports at least one meaningful fact/triple.",
+      "Known source-specific risk is acceptable or absent."
+    ],
+    "reject_criteria": [
+      "Navigation, boilerplate, index/news-card, template/table, or JSON-wrapper noise dominates.",
+      "Source metadata is missing or cannot be checked.",
+      "Triples or narrative are too thin to judge."
+    ],
+    "review_status": "accepted_with_conditions_for_shadow_review",
+    "sample": {
+      "source": "esa",
+      "title": "ESA - Webb",
+      "source_url": "https://www.esa.int/science_exploration/space_science/webb",
+      "source_id": "esa",
+      "narrative_excerpt": "Science & Exploration Webb Seeing farther The mission The James Webb Space Telescope (Webb) is the next great space science observatory following Hubble, designed to answer outstanding questions about the Universe and to make breakthrough discoveries in all fields of astronomy. Webb will see farther into our origins: from the formation of stars and planets, to the birth of the first galaxies in the early Universe. Webb is an international partnership between NASA, ESA and CSA. The telescope laun",
+      "triples": [
+        {
+          "source_id": "esa",
+          "subject": "ESA - Webb",
+          "schema_version": "phase87_rebuilt_pending_shadow_package_v1",
+          "extraction_method": "phase83_preview_heuristic",
+          "confidence": 0.72,
+          "source_url": "https://www.esa.int/science_exploration/space_science/webb",
+          "entity_id": "",
+          "validation_status": "accepted_preview",
+          "provenance": {
+            "phase82_status": "local_preview",
+            "phase82_reason": "phase67_68_accepted_or_review_needed"
+          },
+          "quality_flags": {
+            "allowlisted": true,
+            "has_excerpt": true,
+            "evaluation_only": true,
+            "non_empty_text": true
+          },
+          "predicate": "SOURCE_URL",
+          "object": "https://www.esa.int/science_exploration/space_science/webb"
+        },
+        {
+          "source_id": "esa",
+          "subject": "ESA - Webb",
+          "schema_version": "phase87_rebuilt_pending_shadow_package_v1",
+          "extraction_method": "phase83_preview_heuristic",
+          "confidence": 0.72,
+          "source_url": "https://www.esa.int/science_exploration/space_science/webb",
+          "entity_id": "",
+          "validation_status": "accepted_preview",
+          "provenance": {
+            "phase82_status": "local_preview",
+            "phase82_reason": "phase67_68_accepted_or_review_needed"
+          },
+          "quality_flags": {
+            "allowlisted": true,
+            "has_excerpt": true,
+            "evaluation_only": true,
+            "non_empty_text": true
+          },
+          "predicate": "HAS_PREVIEW_TEXT",
+          "object": "Science & Exploration Webb Seeing farther The mission The James Webb Space Telescope (Webb) is the next great space science observatory following Hubble, designed to answer outstan"
+        }
+      ],
+      "provenance": {
+        "phase82_status": "local_preview",
+        "phase82_reason": "phase67_68_accepted_or_review_needed"
+      },
+      "quality_flags": {
+        "allowlisted": true,
+        "has_excerpt": true,
+        "evaluation_only": true,
+        "non_empty_text": true
+      },
+      "quality_risk_labels": [
+        "esa_relatively_clean_pending_review"
+      ],
+      "schema_version": "phase83_shadow_normalize_preview_v1",
+      "review_status": "pending_manual_or_reviewer_check",
+      "review_questions": [
+        "Is the narrative factually relevant to the title/source?",
+        "Are provenance and source metadata trustworthy enough for shadow review?",
+        "Are the preview triples meaningful and non-noisy?",
+        "For NASA repaired metadata, is the Phase86 repair evidence acceptable?"
+      ],
+      "repair_notes": [
+        "preserved_from_phase93_with_existing_risk_labels"
+      ]
+    },
+    "reviewer_verdict": "ACCEPT_WITH_CONDITIONS",
+    "reviewer_reason": "Readable, with minor index/news risk.",
+    "shadow_review_only": true,
+    "apply_preflight_allowed": false,
+    "production_ready": false,
+    "item_verdict": "ITEM_ACCEPT_WITH_CONDITIONS",
+    "risk_label": "8 reviewable candidates retain minor index/news risk; ESA - Space Science remains rejected."
+  },
+  {
+    "source": "wikidata",
+    "title_or_id": "太阳",
+    "url_or_entity": "https://www.wikidata.org/wiki/Q525",
+    "quality_class": "go_with_conditions_thin_entity_facts",
+    "known_risks": [
+      "thin entity facts; verify identifiers and fact relevance"
+    ],
+    "review_questions": [
+      "Is the item factually relevant to its source title/entity?",
+      "Are the narrative and triples meaningful and non-noisy?",
+      "Is the provenance/source URL sufficient for manual review?"
+    ],
+    "accept_criteria": [
+      "Clear source metadata and provenance.",
+      "Review text supports at least one meaningful fact/triple.",
+      "Known source-specific risk is acceptable or absent."
+    ],
+    "reject_criteria": [
+      "Navigation, boilerplate, index/news-card, template/table, or JSON-wrapper noise dominates.",
+      "Source metadata is missing or cannot be checked.",
+      "Triples or narrative are too thin to judge."
+    ],
+    "review_status": "accepted_with_conditions_for_shadow_review",
+    "sample": {
+      "source": "wikidata",
+      "title": "太阳",
+      "source_url": "https://www.wikidata.org/wiki/Q525",
+      "source_id": "wikidata",
+      "narrative_excerpt": "太阳 is a Wikidata entity (Q525) available at https://www.wikidata.org/wiki/Q525.",
+      "triples": [
+        {
+          "subject": "太阳",
+          "predicate": "WIKIDATA_QID",
+          "object": "Q525"
+        },
+        {
+          "subject": "太阳",
+          "predicate": "SOURCE_URL",
+          "object": "https://www.wikidata.org/wiki/Q525"
+        }
+      ],
+      "provenance": {
+        "phase82_status": "assessment_preview",
+        "phase82_reason": "phase74_accepted"
+      },
+      "quality_flags": {
+        "allowlisted": true,
+        "has_excerpt": true,
+        "evaluation_only": true,
+        "non_empty_text": true
+      },
+      "quality_risk_labels": [
+        "wikidata_json_metadata_review_risk",
+        "narrative_and_preview_text_may_wrap_json_metadata"
+      ],
+      "schema_version": "phase83_shadow_normalize_preview_v1",
+      "review_status": "pending_manual_or_reviewer_check",
+      "review_questions": [
+        "Is the narrative factually relevant to the title/source?",
+        "Are provenance and source metadata trustworthy enough for shadow review?",
+        "Are the preview triples meaningful and non-noisy?",
+        "For NASA repaired metadata, is the Phase86 repair evidence acceptable?"
+      ],
+      "repair_notes": [
+        "converted_json_metadata_preview_to_readable_entity_facts"
+      ]
+    },
+    "reviewer_verdict": "ACCEPT_WITH_CONDITIONS",
+    "reviewer_reason": "QID/source facts valid but thin.",
+    "shadow_review_only": true,
+    "apply_preflight_allowed": false,
+    "production_ready": false,
+    "item_verdict": "ITEM_ACCEPT_WITH_CONDITIONS",
+    "risk_label": "10 QID/source facts are valid but thin and need human judgment before enrichment."
+  },
+  {
+    "source": "wikidata",
+    "title_or_id": "水星",
+    "url_or_entity": "https://www.wikidata.org/wiki/Q308",
+    "quality_class": "go_with_conditions_thin_entity_facts",
+    "known_risks": [
+      "thin entity facts; verify identifiers and fact relevance"
+    ],
+    "review_questions": [
+      "Is the item factually relevant to its source title/entity?",
+      "Are the narrative and triples meaningful and non-noisy?",
+      "Is the provenance/source URL sufficient for manual review?"
+    ],
+    "accept_criteria": [
+      "Clear source metadata and provenance.",
+      "Review text supports at least one meaningful fact/triple.",
+      "Known source-specific risk is acceptable or absent."
+    ],
+    "reject_criteria": [
+      "Navigation, boilerplate, index/news-card, template/table, or JSON-wrapper noise dominates.",
+      "Source metadata is missing or cannot be checked.",
+      "Triples or narrative are too thin to judge."
+    ],
+    "review_status": "accepted_with_conditions_for_shadow_review",
+    "sample": {
+      "source": "wikidata",
+      "title": "水星",
+      "source_url": "https://www.wikidata.org/wiki/Q308",
+      "source_id": "wikidata",
+      "narrative_excerpt": "水星 is a Wikidata entity (Q308) available at https://www.wikidata.org/wiki/Q308.",
+      "triples": [
+        {
+          "subject": "水星",
+          "predicate": "WIKIDATA_QID",
+          "object": "Q308"
+        },
+        {
+          "subject": "水星",
+          "predicate": "SOURCE_URL",
+          "object": "https://www.wikidata.org/wiki/Q308"
+        }
+      ],
+      "provenance": {
+        "phase82_status": "assessment_preview",
+        "phase82_reason": "phase74_accepted"
+      },
+      "quality_flags": {
+        "allowlisted": true,
+        "has_excerpt": true,
+        "evaluation_only": true,
+        "non_empty_text": true
+      },
+      "quality_risk_labels": [
+        "wikidata_json_metadata_review_risk",
+        "narrative_and_preview_text_may_wrap_json_metadata"
+      ],
+      "schema_version": "phase83_shadow_normalize_preview_v1",
+      "review_status": "pending_manual_or_reviewer_check",
+      "review_questions": [
+        "Is the narrative factually relevant to the title/source?",
+        "Are provenance and source metadata trustworthy enough for shadow review?",
+        "Are the preview triples meaningful and non-noisy?",
+        "For NASA repaired metadata, is the Phase86 repair evidence acceptable?"
+      ],
+      "repair_notes": [
+        "converted_json_metadata_preview_to_readable_entity_facts"
+      ]
+    },
+    "reviewer_verdict": "ACCEPT_WITH_CONDITIONS",
+    "reviewer_reason": "QID/source facts valid but thin.",
+    "shadow_review_only": true,
+    "apply_preflight_allowed": false,
+    "production_ready": false,
+    "item_verdict": "ITEM_ACCEPT_WITH_CONDITIONS",
+    "risk_label": "10 QID/source facts are valid but thin and need human judgment before enrichment."
+  },
+  {
+    "source": "wikidata",
+    "title_or_id": "金星",
+    "url_or_entity": "https://www.wikidata.org/wiki/Q313",
+    "quality_class": "go_with_conditions_thin_entity_facts",
+    "known_risks": [
+      "thin entity facts; verify identifiers and fact relevance"
+    ],
+    "review_questions": [
+      "Is the item factually relevant to its source title/entity?",
+      "Are the narrative and triples meaningful and non-noisy?",
+      "Is the provenance/source URL sufficient for manual review?"
+    ],
+    "accept_criteria": [
+      "Clear source metadata and provenance.",
+      "Review text supports at least one meaningful fact/triple.",
+      "Known source-specific risk is acceptable or absent."
+    ],
+    "reject_criteria": [
+      "Navigation, boilerplate, index/news-card, template/table, or JSON-wrapper noise dominates.",
+      "Source metadata is missing or cannot be checked.",
+      "Triples or narrative are too thin to judge."
+    ],
+    "review_status": "accepted_with_conditions_for_shadow_review",
+    "sample": {
+      "source": "wikidata",
+      "title": "金星",
+      "source_url": "https://www.wikidata.org/wiki/Q313",
+      "source_id": "wikidata",
+      "narrative_excerpt": "金星 is a Wikidata entity (Q313) available at https://www.wikidata.org/wiki/Q313.",
+      "triples": [
+        {
+          "subject": "金星",
+          "predicate": "WIKIDATA_QID",
+          "object": "Q313"
+        },
+        {
+          "subject": "金星",
+          "predicate": "SOURCE_URL",
+          "object": "https://www.wikidata.org/wiki/Q313"
+        }
+      ],
+      "provenance": {
+        "phase82_status": "assessment_preview",
+        "phase82_reason": "phase74_accepted"
+      },
+      "quality_flags": {
+        "allowlisted": true,
+        "has_excerpt": true,
+        "evaluation_only": true,
+        "non_empty_text": true
+      },
+      "quality_risk_labels": [
+        "wikidata_json_metadata_review_risk",
+        "narrative_and_preview_text_may_wrap_json_metadata"
+      ],
+      "schema_version": "phase83_shadow_normalize_preview_v1",
+      "review_status": "pending_manual_or_reviewer_check",
+      "review_questions": [
+        "Is the narrative factually relevant to the title/source?",
+        "Are provenance and source metadata trustworthy enough for shadow review?",
+        "Are the preview triples meaningful and non-noisy?",
+        "For NASA repaired metadata, is the Phase86 repair evidence acceptable?"
+      ],
+      "repair_notes": [
+        "converted_json_metadata_preview_to_readable_entity_facts"
+      ]
+    },
+    "reviewer_verdict": "ACCEPT_WITH_CONDITIONS",
+    "reviewer_reason": "QID/source facts valid but thin.",
+    "shadow_review_only": true,
+    "apply_preflight_allowed": false,
+    "production_ready": false,
+    "item_verdict": "ITEM_ACCEPT_WITH_CONDITIONS",
+    "risk_label": "10 QID/source facts are valid but thin and need human judgment before enrichment."
+  },
+  {
+    "source": "wikidata",
+    "title_or_id": "地球",
+    "url_or_entity": "https://www.wikidata.org/wiki/Q2",
+    "quality_class": "go_with_conditions_thin_entity_facts",
+    "known_risks": [
+      "thin entity facts; verify identifiers and fact relevance"
+    ],
+    "review_questions": [
+      "Is the item factually relevant to its source title/entity?",
+      "Are the narrative and triples meaningful and non-noisy?",
+      "Is the provenance/source URL sufficient for manual review?"
+    ],
+    "accept_criteria": [
+      "Clear source metadata and provenance.",
+      "Review text supports at least one meaningful fact/triple.",
+      "Known source-specific risk is acceptable or absent."
+    ],
+    "reject_criteria": [
+      "Navigation, boilerplate, index/news-card, template/table, or JSON-wrapper noise dominates.",
+      "Source metadata is missing or cannot be checked.",
+      "Triples or narrative are too thin to judge."
+    ],
+    "review_status": "accepted_with_conditions_for_shadow_review",
+    "sample": {
+      "source": "wikidata",
+      "title": "地球",
+      "source_url": "https://www.wikidata.org/wiki/Q2",
+      "source_id": "wikidata",
+      "narrative_excerpt": "地球 is a Wikidata entity (Q2) available at https://www.wikidata.org/wiki/Q2.",
+      "triples": [
+        {
+          "subject": "地球",
+          "predicate": "WIKIDATA_QID",
+          "object": "Q2"
+        },
+        {
+          "subject": "地球",
+          "predicate": "SOURCE_URL",
+          "object": "https://www.wikidata.org/wiki/Q2"
+        }
+      ],
+      "provenance": {
+        "phase82_status": "assessment_preview",
+        "phase82_reason": "phase74_accepted"
+      },
+      "quality_flags": {
+        "allowlisted": true,
+        "has_excerpt": true,
+        "evaluation_only": true,
+        "non_empty_text": true
+      },
+      "quality_risk_labels": [
+        "wikidata_json_metadata_review_risk",
+        "narrative_and_preview_text_may_wrap_json_metadata"
+      ],
+      "schema_version": "phase83_shadow_normalize_preview_v1",
+      "review_status": "pending_manual_or_reviewer_check",
+      "review_questions": [
+        "Is the narrative factually relevant to the title/source?",
+        "Are provenance and source metadata trustworthy enough for shadow review?",
+        "Are the preview triples meaningful and non-noisy?",
+        "For NASA repaired metadata, is the Phase86 repair evidence acceptable?"
+      ],
+      "repair_notes": [
+        "converted_json_metadata_preview_to_readable_entity_facts"
+      ]
+    },
+    "reviewer_verdict": "ACCEPT_WITH_CONDITIONS",
+    "reviewer_reason": "QID/source facts valid but thin.",
+    "shadow_review_only": true,
+    "apply_preflight_allowed": false,
+    "production_ready": false,
+    "item_verdict": "ITEM_ACCEPT_WITH_CONDITIONS",
+    "risk_label": "10 QID/source facts are valid but thin and need human judgment before enrichment."
+  },
+  {
+    "source": "wikidata",
+    "title_or_id": "月球",
+    "url_or_entity": "https://www.wikidata.org/wiki/Q405",
+    "quality_class": "go_with_conditions_thin_entity_facts",
+    "known_risks": [
+      "thin entity facts; verify identifiers and fact relevance"
+    ],
+    "review_questions": [
+      "Is the item factually relevant to its source title/entity?",
+      "Are the narrative and triples meaningful and non-noisy?",
+      "Is the provenance/source URL sufficient for manual review?"
+    ],
+    "accept_criteria": [
+      "Clear source metadata and provenance.",
+      "Review text supports at least one meaningful fact/triple.",
+      "Known source-specific risk is acceptable or absent."
+    ],
+    "reject_criteria": [
+      "Navigation, boilerplate, index/news-card, template/table, or JSON-wrapper noise dominates.",
+      "Source metadata is missing or cannot be checked.",
+      "Triples or narrative are too thin to judge."
+    ],
+    "review_status": "accepted_with_conditions_for_shadow_review",
+    "sample": {
+      "source": "wikidata",
+      "title": "月球",
+      "source_url": "https://www.wikidata.org/wiki/Q405",
+      "source_id": "wikidata",
+      "narrative_excerpt": "月球 is a Wikidata entity (Q405) available at https://www.wikidata.org/wiki/Q405.",
+      "triples": [
+        {
+          "subject": "月球",
+          "predicate": "WIKIDATA_QID",
+          "object": "Q405"
+        },
+        {
+          "subject": "月球",
+          "predicate": "SOURCE_URL",
+          "object": "https://www.wikidata.org/wiki/Q405"
+        }
+      ],
+      "provenance": {
+        "phase82_status": "assessment_preview",
+        "phase82_reason": "phase74_accepted"
+      },
+      "quality_flags": {
+        "allowlisted": true,
+        "has_excerpt": true,
+        "evaluation_only": true,
+        "non_empty_text": true
+      },
+      "quality_risk_labels": [
+        "wikidata_json_metadata_review_risk",
+        "narrative_and_preview_text_may_wrap_json_metadata"
+      ],
+      "schema_version": "phase83_shadow_normalize_preview_v1",
+      "review_status": "pending_manual_or_reviewer_check",
+      "review_questions": [
+        "Is the narrative factually relevant to the title/source?",
+        "Are provenance and source metadata trustworthy enough for shadow review?",
+        "Are the preview triples meaningful and non-noisy?",
+        "For NASA repaired metadata, is the Phase86 repair evidence acceptable?"
+      ],
+      "repair_notes": [
+        "converted_json_metadata_preview_to_readable_entity_facts"
+      ]
+    },
+    "reviewer_verdict": "ACCEPT_WITH_CONDITIONS",
+    "reviewer_reason": "QID/source facts valid but thin.",
+    "shadow_review_only": true,
+    "apply_preflight_allowed": false,
+    "production_ready": false,
+    "item_verdict": "ITEM_ACCEPT_WITH_CONDITIONS",
+    "risk_label": "10 QID/source facts are valid but thin and need human judgment before enrichment."
+  },
+  {
+    "source": "wikidata",
+    "title_or_id": "火星",
+    "url_or_entity": "https://www.wikidata.org/wiki/Q111",
+    "quality_class": "go_with_conditions_thin_entity_facts",
+    "known_risks": [
+      "thin entity facts; verify identifiers and fact relevance"
+    ],
+    "review_questions": [
+      "Is the item factually relevant to its source title/entity?",
+      "Are the narrative and triples meaningful and non-noisy?",
+      "Is the provenance/source URL sufficient for manual review?"
+    ],
+    "accept_criteria": [
+      "Clear source metadata and provenance.",
+      "Review text supports at least one meaningful fact/triple.",
+      "Known source-specific risk is acceptable or absent."
+    ],
+    "reject_criteria": [
+      "Navigation, boilerplate, index/news-card, template/table, or JSON-wrapper noise dominates.",
+      "Source metadata is missing or cannot be checked.",
+      "Triples or narrative are too thin to judge."
+    ],
+    "review_status": "accepted_with_conditions_for_shadow_review",
+    "sample": {
+      "source": "wikidata",
+      "title": "火星",
+      "source_url": "https://www.wikidata.org/wiki/Q111",
+      "source_id": "wikidata",
+      "narrative_excerpt": "火星 is a Wikidata entity (Q111) available at https://www.wikidata.org/wiki/Q111.",
+      "triples": [
+        {
+          "subject": "火星",
+          "predicate": "WIKIDATA_QID",
+          "object": "Q111"
+        },
+        {
+          "subject": "火星",
+          "predicate": "SOURCE_URL",
+          "object": "https://www.wikidata.org/wiki/Q111"
+        }
+      ],
+      "provenance": {
+        "phase82_status": "assessment_preview",
+        "phase82_reason": "phase74_accepted"
+      },
+      "quality_flags": {
+        "allowlisted": true,
+        "has_excerpt": true,
+        "evaluation_only": true,
+        "non_empty_text": true
+      },
+      "quality_risk_labels": [
+        "wikidata_json_metadata_review_risk",
+        "narrative_and_preview_text_may_wrap_json_metadata"
+      ],
+      "schema_version": "phase83_shadow_normalize_preview_v1",
+      "review_status": "pending_manual_or_reviewer_check",
+      "review_questions": [
+        "Is the narrative factually relevant to the title/source?",
+        "Are provenance and source metadata trustworthy enough for shadow review?",
+        "Are the preview triples meaningful and non-noisy?",
+        "For NASA repaired metadata, is the Phase86 repair evidence acceptable?"
+      ],
+      "repair_notes": [
+        "converted_json_metadata_preview_to_readable_entity_facts"
+      ]
+    },
+    "reviewer_verdict": "ACCEPT_WITH_CONDITIONS",
+    "reviewer_reason": "QID/source facts valid but thin.",
+    "shadow_review_only": true,
+    "apply_preflight_allowed": false,
+    "production_ready": false,
+    "item_verdict": "ITEM_ACCEPT_WITH_CONDITIONS",
+    "risk_label": "10 QID/source facts are valid but thin and need human judgment before enrichment."
+  },
+  {
+    "source": "wikidata",
+    "title_or_id": "木星",
+    "url_or_entity": "https://www.wikidata.org/wiki/Q319",
+    "quality_class": "go_with_conditions_thin_entity_facts",
+    "known_risks": [
+      "thin entity facts; verify identifiers and fact relevance"
+    ],
+    "review_questions": [
+      "Is the item factually relevant to its source title/entity?",
+      "Are the narrative and triples meaningful and non-noisy?",
+      "Is the provenance/source URL sufficient for manual review?"
+    ],
+    "accept_criteria": [
+      "Clear source metadata and provenance.",
+      "Review text supports at least one meaningful fact/triple.",
+      "Known source-specific risk is acceptable or absent."
+    ],
+    "reject_criteria": [
+      "Navigation, boilerplate, index/news-card, template/table, or JSON-wrapper noise dominates.",
+      "Source metadata is missing or cannot be checked.",
+      "Triples or narrative are too thin to judge."
+    ],
+    "review_status": "accepted_with_conditions_for_shadow_review",
+    "sample": {
+      "source": "wikidata",
+      "title": "木星",
+      "source_url": "https://www.wikidata.org/wiki/Q319",
+      "source_id": "wikidata",
+      "narrative_excerpt": "木星 is a Wikidata entity (Q319) available at https://www.wikidata.org/wiki/Q319.",
+      "triples": [
+        {
+          "subject": "木星",
+          "predicate": "WIKIDATA_QID",
+          "object": "Q319"
+        },
+        {
+          "subject": "木星",
+          "predicate": "SOURCE_URL",
+          "object": "https://www.wikidata.org/wiki/Q319"
+        }
+      ],
+      "provenance": {
+        "phase82_status": "assessment_preview",
+        "phase82_reason": "phase74_accepted"
+      },
+      "quality_flags": {
+        "allowlisted": true,
+        "has_excerpt": true,
+        "evaluation_only": true,
+        "non_empty_text": true
+      },
+      "quality_risk_labels": [
+        "wikidata_json_metadata_review_risk",
+        "narrative_and_preview_text_may_wrap_json_metadata"
+      ],
+      "schema_version": "phase83_shadow_normalize_preview_v1",
+      "review_status": "pending_manual_or_reviewer_check",
+      "review_questions": [
+        "Is the narrative factually relevant to the title/source?",
+        "Are provenance and source metadata trustworthy enough for shadow review?",
+        "Are the preview triples meaningful and non-noisy?",
+        "For NASA repaired metadata, is the Phase86 repair evidence acceptable?"
+      ],
+      "repair_notes": [
+        "converted_json_metadata_preview_to_readable_entity_facts"
+      ]
+    },
+    "reviewer_verdict": "ACCEPT_WITH_CONDITIONS",
+    "reviewer_reason": "QID/source facts valid but thin.",
+    "shadow_review_only": true,
+    "apply_preflight_allowed": false,
+    "production_ready": false,
+    "item_verdict": "ITEM_ACCEPT_WITH_CONDITIONS",
+    "risk_label": "10 QID/source facts are valid but thin and need human judgment before enrichment."
+  },
+  {
+    "source": "wikidata",
+    "title_or_id": "土星",
+    "url_or_entity": "https://www.wikidata.org/wiki/Q193",
+    "quality_class": "go_with_conditions_thin_entity_facts",
+    "known_risks": [
+      "thin entity facts; verify identifiers and fact relevance"
+    ],
+    "review_questions": [
+      "Is the item factually relevant to its source title/entity?",
+      "Are the narrative and triples meaningful and non-noisy?",
+      "Is the provenance/source URL sufficient for manual review?"
+    ],
+    "accept_criteria": [
+      "Clear source metadata and provenance.",
+      "Review text supports at least one meaningful fact/triple.",
+      "Known source-specific risk is acceptable or absent."
+    ],
+    "reject_criteria": [
+      "Navigation, boilerplate, index/news-card, template/table, or JSON-wrapper noise dominates.",
+      "Source metadata is missing or cannot be checked.",
+      "Triples or narrative are too thin to judge."
+    ],
+    "review_status": "accepted_with_conditions_for_shadow_review",
+    "sample": {
+      "source": "wikidata",
+      "title": "土星",
+      "source_url": "https://www.wikidata.org/wiki/Q193",
+      "source_id": "wikidata",
+      "narrative_excerpt": "土星 is a Wikidata entity (Q193) available at https://www.wikidata.org/wiki/Q193.",
+      "triples": [
+        {
+          "subject": "土星",
+          "predicate": "WIKIDATA_QID",
+          "object": "Q193"
+        },
+        {
+          "subject": "土星",
+          "predicate": "SOURCE_URL",
+          "object": "https://www.wikidata.org/wiki/Q193"
+        }
+      ],
+      "provenance": {
+        "phase82_status": "assessment_preview",
+        "phase82_reason": "phase74_accepted"
+      },
+      "quality_flags": {
+        "allowlisted": true,
+        "has_excerpt": true,
+        "evaluation_only": true,
+        "non_empty_text": true
+      },
+      "quality_risk_labels": [
+        "wikidata_json_metadata_review_risk",
+        "narrative_and_preview_text_may_wrap_json_metadata"
+      ],
+      "schema_version": "phase83_shadow_normalize_preview_v1",
+      "review_status": "pending_manual_or_reviewer_check",
+      "review_questions": [
+        "Is the narrative factually relevant to the title/source?",
+        "Are provenance and source metadata trustworthy enough for shadow review?",
+        "Are the preview triples meaningful and non-noisy?",
+        "For NASA repaired metadata, is the Phase86 repair evidence acceptable?"
+      ],
+      "repair_notes": [
+        "converted_json_metadata_preview_to_readable_entity_facts"
+      ]
+    },
+    "reviewer_verdict": "ACCEPT_WITH_CONDITIONS",
+    "reviewer_reason": "QID/source facts valid but thin.",
+    "shadow_review_only": true,
+    "apply_preflight_allowed": false,
+    "production_ready": false,
+    "item_verdict": "ITEM_ACCEPT_WITH_CONDITIONS",
+    "risk_label": "10 QID/source facts are valid but thin and need human judgment before enrichment."
+  },
+  {
+    "source": "wikidata",
+    "title_or_id": "天王星",
+    "url_or_entity": "https://www.wikidata.org/wiki/Q324",
+    "quality_class": "go_with_conditions_thin_entity_facts",
+    "known_risks": [
+      "thin entity facts; verify identifiers and fact relevance"
+    ],
+    "review_questions": [
+      "Is the item factually relevant to its source title/entity?",
+      "Are the narrative and triples meaningful and non-noisy?",
+      "Is the provenance/source URL sufficient for manual review?"
+    ],
+    "accept_criteria": [
+      "Clear source metadata and provenance.",
+      "Review text supports at least one meaningful fact/triple.",
+      "Known source-specific risk is acceptable or absent."
+    ],
+    "reject_criteria": [
+      "Navigation, boilerplate, index/news-card, template/table, or JSON-wrapper noise dominates.",
+      "Source metadata is missing or cannot be checked.",
+      "Triples or narrative are too thin to judge."
+    ],
+    "review_status": "accepted_with_conditions_for_shadow_review",
+    "sample": {
+      "source": "wikidata",
+      "title": "天王星",
+      "source_url": "https://www.wikidata.org/wiki/Q324",
+      "source_id": "wikidata",
+      "narrative_excerpt": "天王星 is a Wikidata entity (Q324) available at https://www.wikidata.org/wiki/Q324.",
+      "triples": [
+        {
+          "subject": "天王星",
+          "predicate": "WIKIDATA_QID",
+          "object": "Q324"
+        },
+        {
+          "subject": "天王星",
+          "predicate": "SOURCE_URL",
+          "object": "https://www.wikidata.org/wiki/Q324"
+        }
+      ],
+      "provenance": {
+        "phase82_status": "assessment_preview",
+        "phase82_reason": "phase74_accepted"
+      },
+      "quality_flags": {
+        "allowlisted": true,
+        "has_excerpt": true,
+        "evaluation_only": true,
+        "non_empty_text": true
+      },
+      "quality_risk_labels": [
+        "wikidata_json_metadata_review_risk",
+        "narrative_and_preview_text_may_wrap_json_metadata"
+      ],
+      "schema_version": "phase83_shadow_normalize_preview_v1",
+      "review_status": "pending_manual_or_reviewer_check",
+      "review_questions": [
+        "Is the narrative factually relevant to the title/source?",
+        "Are provenance and source metadata trustworthy enough for shadow review?",
+        "Are the preview triples meaningful and non-noisy?",
+        "For NASA repaired metadata, is the Phase86 repair evidence acceptable?"
+      ],
+      "repair_notes": [
+        "converted_json_metadata_preview_to_readable_entity_facts"
+      ]
+    },
+    "reviewer_verdict": "ACCEPT_WITH_CONDITIONS",
+    "reviewer_reason": "QID/source facts valid but thin.",
+    "shadow_review_only": true,
+    "apply_preflight_allowed": false,
+    "production_ready": false,
+    "item_verdict": "ITEM_ACCEPT_WITH_CONDITIONS",
+    "risk_label": "10 QID/source facts are valid but thin and need human judgment before enrichment."
+  },
+  {
+    "source": "wikidata",
+    "title_or_id": "海王星",
+    "url_or_entity": "https://www.wikidata.org/wiki/Q332",
+    "quality_class": "go_with_conditions_thin_entity_facts",
+    "known_risks": [
+      "thin entity facts; verify identifiers and fact relevance"
+    ],
+    "review_questions": [
+      "Is the item factually relevant to its source title/entity?",
+      "Are the narrative and triples meaningful and non-noisy?",
+      "Is the provenance/source URL sufficient for manual review?"
+    ],
+    "accept_criteria": [
+      "Clear source metadata and provenance.",
+      "Review text supports at least one meaningful fact/triple.",
+      "Known source-specific risk is acceptable or absent."
+    ],
+    "reject_criteria": [
+      "Navigation, boilerplate, index/news-card, template/table, or JSON-wrapper noise dominates.",
+      "Source metadata is missing or cannot be checked.",
+      "Triples or narrative are too thin to judge."
+    ],
+    "review_status": "accepted_with_conditions_for_shadow_review",
+    "sample": {
+      "source": "wikidata",
+      "title": "海王星",
+      "source_url": "https://www.wikidata.org/wiki/Q332",
+      "source_id": "wikidata",
+      "narrative_excerpt": "海王星 is a Wikidata entity (Q332) available at https://www.wikidata.org/wiki/Q332.",
+      "triples": [
+        {
+          "subject": "海王星",
+          "predicate": "WIKIDATA_QID",
+          "object": "Q332"
+        },
+        {
+          "subject": "海王星",
+          "predicate": "SOURCE_URL",
+          "object": "https://www.wikidata.org/wiki/Q332"
+        }
+      ],
+      "provenance": {
+        "phase82_status": "assessment_preview",
+        "phase82_reason": "phase74_accepted"
+      },
+      "quality_flags": {
+        "allowlisted": true,
+        "has_excerpt": true,
+        "evaluation_only": true,
+        "non_empty_text": true
+      },
+      "quality_risk_labels": [
+        "wikidata_json_metadata_review_risk",
+        "narrative_and_preview_text_may_wrap_json_metadata"
+      ],
+      "schema_version": "phase83_shadow_normalize_preview_v1",
+      "review_status": "pending_manual_or_reviewer_check",
+      "review_questions": [
+        "Is the narrative factually relevant to the title/source?",
+        "Are provenance and source metadata trustworthy enough for shadow review?",
+        "Are the preview triples meaningful and non-noisy?",
+        "For NASA repaired metadata, is the Phase86 repair evidence acceptable?"
+      ],
+      "repair_notes": [
+        "converted_json_metadata_preview_to_readable_entity_facts"
+      ]
+    },
+    "reviewer_verdict": "ACCEPT_WITH_CONDITIONS",
+    "reviewer_reason": "QID/source facts valid but thin.",
+    "shadow_review_only": true,
+    "apply_preflight_allowed": false,
+    "production_ready": false,
+    "item_verdict": "ITEM_ACCEPT_WITH_CONDITIONS",
+    "risk_label": "10 QID/source facts are valid but thin and need human judgment before enrichment."
+  }
+]
