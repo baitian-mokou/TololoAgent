@@ -1,0 +1,57 @@
+{
+  "phase": "Phase 90",
+  "mode": "review_sample_quality_gate_closure",
+  "generated_at": "2026-07-22T16:30:58.669704+00:00",
+  "sample_quality_pass": true,
+  "blocking_findings": [],
+  "warnings": [
+    "nasa_repair_marker_missing_on_sample"
+  ],
+  "sample_quality_risk_count": 1,
+  "production_ready": false,
+  "approval_status": "pending_review",
+  "closure_verdict": "shadow_review_ready_approval_pending",
+  "sample_counts": {
+    "zh_wikipedia": 3,
+    "nasa": 3,
+    "esa": 3,
+    "wikidata": 3
+  },
+  "package_counts": {
+    "items": 53,
+    "triples": 106,
+    "narratives": 53
+  },
+  "source_breakdown": {
+    "esa": 9,
+    "nasa": 16,
+    "wikidata": 25,
+    "zh_wikipedia": 3
+  },
+  "phase81_90_summary": [
+    "Phase81 scoped four-source crawler expansion candidates.",
+    "Phase82 produced controlled raw previews under evaluation only.",
+    "Phase83 normalized/materialized preview records.",
+    "Phase84/87 built pending shadow packages; Phase86 repaired NASA metadata.",
+    "Phase88 passed rebuilt readiness coverage; Phase89 produced review-only samples.",
+    "Phase90 closes as shadow-review ready with approval pending."
+  ],
+  "next_recommendations": [
+    "manual review of samples",
+    "larger review-only sample if needed"
+  ],
+  "not_production_ingest": true,
+  "formal_raw_write": false,
+  "formal_default_triples_write": false,
+  "chroma_write": false,
+  "neo4j_write": false,
+  "clear_source_ingestion_outputs_called": false,
+  "active_source": "zh_wikipedia",
+  "active_source_unchanged": true,
+  "registry": {
+    "zh_wikipedia": "active",
+    "nasa": "disabled",
+    "esa": "disabled",
+    "wikidata": "disabled"
+  }
+}
