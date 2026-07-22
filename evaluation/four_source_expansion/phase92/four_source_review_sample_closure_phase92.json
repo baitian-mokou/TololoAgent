@@ -1,0 +1,54 @@
+{
+  "phase": "Phase 92",
+  "mode": "human_review_sample_closure",
+  "generated_at": "2026-07-22T17:27:54.263912+00:00",
+  "closure_verdict": "sample_review_ready_approval_pending",
+  "production_ready": false,
+  "apply_approved": false,
+  "ingest_approved": false,
+  "approval_status": "pending_review",
+  "sample_counts": {
+    "zh_wikipedia": 3,
+    "nasa": 10,
+    "esa": 9,
+    "wikidata": 10
+  },
+  "total_samples": 32,
+  "package_counts": {
+    "items": 53,
+    "triples": 106,
+    "narratives": 53
+  },
+  "quality_summary": {
+    "phase91_sample_quality_pass": true,
+    "phase91_warnings": [],
+    "phase88_integrity_pass": true,
+    "phase90_closure_verdict": "shadow_review_ready_approval_pending"
+  },
+  "nasa_repair_evidence": "metadata_repaired=true plus phase86_rule provenance in expanded samples",
+  "esa_full_sample_risk": "ESA sample covers all 9 items; still requires human review before preflight.",
+  "remaining_risks": [
+    "manual review still required before any apply preflight",
+    "ESA is fully sampled at 9 items but still pending human quality review",
+    "NASA repaired metadata relies on Phase86 provenance evidence"
+  ],
+  "next_recommendations": [
+    "manual sample quality review",
+    "larger review-only sample only if needed"
+  ],
+  "not_shadow_apply_preflight": true,
+  "not_production_ingest": true,
+  "formal_raw_write": false,
+  "formal_default_triples_write": false,
+  "chroma_write": false,
+  "neo4j_write": false,
+  "clear_source_ingestion_outputs_called": false,
+  "active_source": "zh_wikipedia",
+  "active_source_unchanged": true,
+  "registry": {
+    "zh_wikipedia": "active",
+    "nasa": "disabled",
+    "esa": "disabled",
+    "wikidata": "disabled"
+  }
+}
