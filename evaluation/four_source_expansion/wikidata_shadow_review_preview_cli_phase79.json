@@ -1,0 +1,208 @@
+{
+  "phase": "Phase 79",
+  "mode": "wikidata_shadow_review_only_cli",
+  "generated_at": "2026-07-22T14:42:30.887029+00:00",
+  "source_id": "wikidata",
+  "ready": true,
+  "blocked_reason": "",
+  "eval_report_path": "evaluation\\four_source_expansion\\wikidata_shadow_readiness_eval_phase78.json",
+  "shadow_dir": "data\\triples_shadow\\wikidata",
+  "adapter_mappings": [
+    {
+      "query": "太阳 太阳系",
+      "source_id": "wikidata",
+      "result_count": 8,
+      "oracle_satisfied": true,
+      "top_result": {
+        "kind": "triple",
+        "subject": "太阳",
+        "predicate": "LOCATED_IN",
+        "object": "太阳系",
+        "qid": "Q525",
+        "source_url": "https://www.wikidata.org/wiki/Q525",
+        "evidence": ""
+      },
+      "qid": "Q525",
+      "evidence": "",
+      "source_url": "https://www.wikidata.org/wiki/Q525"
+    },
+    {
+      "query": "火星 太阳",
+      "source_id": "wikidata",
+      "result_count": 8,
+      "oracle_satisfied": true,
+      "top_result": {
+        "kind": "triple",
+        "subject": "火星",
+        "predicate": "ORBITS",
+        "object": "太阳",
+        "qid": "Q111",
+        "source_url": "https://www.wikidata.org/wiki/Q111",
+        "evidence": ""
+      },
+      "qid": "Q111",
+      "evidence": "",
+      "source_url": "https://www.wikidata.org/wiki/Q111"
+    },
+    {
+      "query": "Q111 火星",
+      "source_id": "wikidata",
+      "result_count": 8,
+      "oracle_satisfied": true,
+      "top_result": {
+        "kind": "triple",
+        "subject": "火星",
+        "predicate": "ORBITS",
+        "object": "太阳",
+        "qid": "Q111",
+        "source_url": "https://www.wikidata.org/wiki/Q111",
+        "evidence": ""
+      },
+      "qid": "Q111",
+      "evidence": "",
+      "source_url": "https://www.wikidata.org/wiki/Q111"
+    },
+    {
+      "query": "HAS_MASS",
+      "source_id": "wikidata",
+      "result_count": 8,
+      "oracle_satisfied": true,
+      "top_result": {
+        "kind": "triple",
+        "subject": "太阳",
+        "predicate": "HAS_MASS",
+        "object": "1.9885e30 kg",
+        "qid": "Q525",
+        "source_url": "https://www.wikidata.org/wiki/Q525",
+        "evidence": ""
+      },
+      "qid": "Q525",
+      "evidence": "",
+      "source_url": "https://www.wikidata.org/wiki/Q525"
+    },
+    {
+      "query": "HAS_RADIUS",
+      "source_id": "wikidata",
+      "result_count": 8,
+      "oracle_satisfied": true,
+      "top_result": {
+        "kind": "triple",
+        "subject": "太阳",
+        "predicate": "HAS_RADIUS",
+        "object": "695700 km",
+        "qid": "Q525",
+        "source_url": "https://www.wikidata.org/wiki/Q525",
+        "evidence": ""
+      },
+      "qid": "Q525",
+      "evidence": "",
+      "source_url": "https://www.wikidata.org/wiki/Q525"
+    },
+    {
+      "query": "ORBITS 太阳",
+      "source_id": "wikidata",
+      "result_count": 8,
+      "oracle_satisfied": true,
+      "top_result": {
+        "kind": "triple",
+        "subject": "水星",
+        "predicate": "ORBITS",
+        "object": "太阳",
+        "qid": "Q308",
+        "source_url": "https://www.wikidata.org/wiki/Q308",
+        "evidence": "wikidata adapter record: 水星 ORBITS 太阳"
+      },
+      "qid": "Q308",
+      "evidence": "wikidata adapter record: 水星 ORBITS 太阳",
+      "source_url": "https://www.wikidata.org/wiki/Q308"
+    },
+    {
+      "query": "月球 地球",
+      "source_id": "wikidata",
+      "result_count": 8,
+      "oracle_satisfied": true,
+      "top_result": {
+        "kind": "triple",
+        "subject": "月球",
+        "predicate": "ORBITS",
+        "object": "地球",
+        "qid": "Q405",
+        "source_url": "https://www.wikidata.org/wiki/Q405",
+        "evidence": "wikidata adapter record: 月球 ORBITS 地球"
+      },
+      "qid": "Q405",
+      "evidence": "wikidata adapter record: 月球 ORBITS 地球",
+      "source_url": "https://www.wikidata.org/wiki/Q405"
+    },
+    {
+      "query": "木星 太阳",
+      "source_id": "wikidata",
+      "result_count": 8,
+      "oracle_satisfied": true,
+      "top_result": {
+        "kind": "triple",
+        "subject": "木星",
+        "predicate": "ORBITS",
+        "object": "太阳",
+        "qid": "Q319",
+        "source_url": "https://www.wikidata.org/wiki/Q319",
+        "evidence": "wikidata adapter record: 木星 ORBITS 太阳"
+      },
+      "qid": "Q319",
+      "evidence": "wikidata adapter record: 木星 ORBITS 太阳",
+      "source_url": "https://www.wikidata.org/wiki/Q319"
+    },
+    {
+      "query": "土卫六",
+      "source_id": "wikidata",
+      "result_count": 7,
+      "oracle_satisfied": true,
+      "top_result": {
+        "kind": "triple",
+        "subject": "土卫六",
+        "predicate": "ORBITS",
+        "object": "土星",
+        "qid": "Q2565",
+        "source_url": "https://www.wikidata.org/wiki/Q2565",
+        "evidence": "wikidata adapter record: 土卫六 ORBITS 土星"
+      },
+      "qid": "Q2565",
+      "evidence": "wikidata adapter record: 土卫六 ORBITS 土星",
+      "source_url": "https://www.wikidata.org/wiki/Q2565"
+    },
+    {
+      "query": "wikidata Q525",
+      "source_id": "wikidata",
+      "result_count": 8,
+      "oracle_satisfied": true,
+      "top_result": {
+        "kind": "triple",
+        "subject": "太阳",
+        "predicate": "LOCATED_IN",
+        "object": "太阳系",
+        "qid": "Q525",
+        "source_url": "https://www.wikidata.org/wiki/Q525",
+        "evidence": ""
+      },
+      "qid": "Q525",
+      "evidence": "",
+      "source_url": "https://www.wikidata.org/wiki/Q525"
+    }
+  ],
+  "mapping_count": 10,
+  "review_only_required": true,
+  "review_only": true,
+  "default_query_path_changed": false,
+  "gui_default_behavior_changed": false,
+  "formal_default_triples_write": false,
+  "chroma_write": false,
+  "neo4j_write": false,
+  "active_source": "zh_wikipedia",
+  "default_source_unchanged": true,
+  "registry": {
+    "zh_wikipedia": "active",
+    "nasa": "disabled",
+    "esa": "disabled",
+    "wikidata": "disabled"
+  }
+}
