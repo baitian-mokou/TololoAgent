@@ -1,0 +1,136 @@
+{
+  "phase": "Phase 37",
+  "mode": "four_source_batch_expansion_dry_run",
+  "generated_at": "2026-07-22T04:02:55.801825+00:00",
+  "active_source": "zh_wikipedia",
+  "registry": {
+    "zh_wikipedia": "active",
+    "nasa": "disabled",
+    "esa": "disabled",
+    "wikidata": "disabled"
+  },
+  "status_report": {
+    "path": "evaluation/source_expansion/source_expansion_status_report.json",
+    "status": "present"
+  },
+  "summary": {
+    "targets": 4,
+    "batch_size": 50,
+    "formal_candidate_sources": [
+      "zh_wikipedia"
+    ],
+    "shadow_only_sources": [
+      "nasa",
+      "esa",
+      "wikidata"
+    ]
+  },
+  "sources": [
+    {
+      "source_id": "zh_wikipedia",
+      "current_raw_count": 69,
+      "current_triple_count": 41,
+      "current_narrative_count": 69,
+      "mode": "active",
+      "proposed_batch_size": 50,
+      "proposed_next_target_count": 119,
+      "quality_gate_required": true,
+      "materialization_scope": "formal_candidate",
+      "recommended_action": "keep_active_baseline",
+      "risks": [
+        "quality drift if batch is accepted without review",
+        "default answer pollution if disabled sources are promoted too early"
+      ],
+      "safeguards": [
+        "dry_run_plan_only",
+        "quality_gate_before_materialization",
+        "no_default_source_cutover",
+        "keep_active_baseline"
+      ],
+      "warnings": [
+        "zh_wikipedia counts are directory-based baseline estimates; no source expansion status item"
+      ]
+    },
+    {
+      "source_id": "nasa",
+      "current_raw_count": 79,
+      "current_triple_count": 34,
+      "current_narrative_count": 323,
+      "mode": "disabled",
+      "proposed_batch_size": 50,
+      "proposed_next_target_count": 129,
+      "quality_gate_required": true,
+      "materialization_scope": "shadow_only",
+      "recommended_action": "ready_for_batch_preview",
+      "risks": [
+        "quality drift if batch is accepted without review",
+        "default answer pollution if disabled sources are promoted too early"
+      ],
+      "safeguards": [
+        "dry_run_plan_only",
+        "quality_gate_before_materialization",
+        "no_default_source_cutover",
+        "shadow_namespace_only"
+      ],
+      "warnings": []
+    },
+    {
+      "source_id": "esa",
+      "current_raw_count": 73,
+      "current_triple_count": 191,
+      "current_narrative_count": 455,
+      "mode": "disabled",
+      "proposed_batch_size": 50,
+      "proposed_next_target_count": 123,
+      "quality_gate_required": true,
+      "materialization_scope": "shadow_only",
+      "recommended_action": "ready_for_batch_preview",
+      "risks": [
+        "quality drift if batch is accepted without review",
+        "default answer pollution if disabled sources are promoted too early"
+      ],
+      "safeguards": [
+        "dry_run_plan_only",
+        "quality_gate_before_materialization",
+        "no_default_source_cutover",
+        "shadow_namespace_only"
+      ],
+      "warnings": []
+    },
+    {
+      "source_id": "wikidata",
+      "current_raw_count": 47,
+      "current_triple_count": 228,
+      "current_narrative_count": 161,
+      "mode": "disabled",
+      "proposed_batch_size": 50,
+      "proposed_next_target_count": 97,
+      "quality_gate_required": true,
+      "materialization_scope": "shadow_only",
+      "recommended_action": "ready_for_batch_preview",
+      "risks": [
+        "quality drift if batch is accepted without review",
+        "default answer pollution if disabled sources are promoted too early"
+      ],
+      "safeguards": [
+        "dry_run_plan_only",
+        "quality_gate_before_materialization",
+        "no_default_source_cutover",
+        "shadow_namespace_only"
+      ],
+      "warnings": []
+    }
+  ],
+  "safety_boundaries": [
+    "This is a dry-run planning report only.",
+    "No network probe, no preview run, no data pipeline write.",
+    "nasa/esa/wikidata remain disabled and shadow-only.",
+    "ACTIVE_SOURCE remains zh_wikipedia.",
+    "Each proposed batch must pass quality review before any later materialization."
+  ],
+  "next_steps": [
+    "Run per-source frontier preview with explicit limits if a batch is approved.",
+    "Review quality triage and rejected samples before any raw materialization.",
+    "Keep nasa/esa/wikidata in shadow reports until cutover is separately approved."
+  ]
+}

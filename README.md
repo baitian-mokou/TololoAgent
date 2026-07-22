@@ -519,9 +519,13 @@ tests/test_nasa_fact_sheet_parser.py
 
 ## 扩源预览 / Source Frontier Preview
 
-课程展示用的扩源阶段总结见 [`docs/source_expansion_delivery_report.md`](docs/source_expansion_delivery_report.md)；通用科学网站筛选闭环总览见 [`docs/general_science_source_screening_overview.md`](docs/general_science_source_screening_overview.md)；当前项目成果总报告见 [`docs/project_current_stage_final_report.md`](docs/project_current_stage_final_report.md)；答辩材料包入口见 [`docs/project_stage_index.md`](docs/project_stage_index.md)。
+课程展示用的扩源阶段总结见 [`docs/source_expansion_delivery_report.md`](docs/source_expansion_delivery_report.md)；通用科学网站筛选闭环总览见 [`docs/general_science_source_screening_overview.md`](docs/general_science_source_screening_overview.md)；当前项目成果总报告见 [`docs/project_current_stage_final_report.md`](docs/project_current_stage_final_report.md)；答辩材料包入口见 [`docs/project_stage_index.md`](docs/project_stage_index.md)；四源受控扩批计划见 [`docs/four_source_batch_expansion_plan.md`](docs/four_source_batch_expansion_plan.md)。
 
 扩源前先做只读 frontier preview，查看每个来源的候选入口和跳过原因；该步骤默认不联网、不写 `data/`，也不会写 Neo4j 或 Chroma。
+
+```powershell
+python scripts/plan_four_source_batch_expansion.py --batch-size 50 --out-json evaluation\four_source_expansion\four_source_batch_plan_phase37.json --out-md docs\four_source_batch_expansion_plan.md
+```
 
 ```powershell
 python scripts/preview_source_frontier.py --source nasa --limit 20
