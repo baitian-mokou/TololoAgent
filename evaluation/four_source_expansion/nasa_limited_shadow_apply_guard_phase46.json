@@ -1,15 +1,33 @@
 {
   "phase": "Phase 46 readiness",
   "mode": "guarded_nasa_limited_shadow_apply",
-  "generated_at": "2026-07-22T06:33:50.560494+00:00",
+  "generated_at": "2026-07-22T07:09:36.910813+00:00",
   "source_id": "nasa",
-  "allowed": false,
-  "executed": false,
-  "blocked_reason": "approval_not_approved",
+  "allowed": true,
+  "executed": true,
+  "blocked_reason": "",
   "package_dir": "evaluation\\four_source_expansion\\nasa_limited_shadow_package_phase45",
   "approval_path": "evaluation\\four_source_expansion\\nasa_limited_shadow_package_approval_phase45.json",
   "shadow_output_dir": "data\\triples_shadow\\nasa",
-  "execute_requested": false,
+  "approval": {
+    "source_id": "nasa",
+    "approval_decision": "approved_for_shadow_write",
+    "approved_item_count": 20,
+    "reviewer_notes": "User approved conditionally after reviewer Gate GO WITH CONDITIONS, for NASA Phase 45 20-item package shadow-only write."
+  },
+  "package_counts": {
+    "items": 20,
+    "triples": 80,
+    "narratives": 80
+  },
+  "copy_result": {
+    "files_written": [
+      "data\\triples_shadow\\nasa\\triples_preview.json",
+      "data\\triples_shadow\\nasa\\narratives_preview.json",
+      "data\\triples_shadow\\nasa\\package_manifest.json"
+    ],
+    "file_count": 3
+  },
   "formal_default_triples_write": false,
   "chroma_write": false,
   "neo4j_write": false,
@@ -20,16 +38,5 @@
     "esa": "disabled",
     "wikidata": "disabled"
   },
-  "active_source_unchanged": true,
-  "approval": {
-    "source_id": "nasa",
-    "approval_decision": "pending",
-    "approved_item_count": 0,
-    "reviewer_notes": ""
-  },
-  "package_counts": {
-    "items": 20,
-    "triples": 80,
-    "narratives": 80
-  }
+  "active_source_unchanged": true
 }
