@@ -1,0 +1,79 @@
+{
+  "phase": "Phase107",
+  "mode": "final_review_only_closeout",
+  "generated_at": "2026-07-22T19:23:19.066939+00:00",
+  "input_reports": {
+    "phase104": "evaluation\\four_source_expansion\\phase104\\verdict_report_phase104.json",
+    "phase105": "evaluation\\four_source_expansion\\phase105\\review_handoff_phase105.json",
+    "phase106": "evaluation\\four_source_expansion\\phase106\\item_verdict_report_phase106.json"
+  },
+  "phase81_107_chain_summary": [
+    "Phase81 broadened four-source crawler scope in evaluation-only mode.",
+    "Phase82-88 built raw, normalize, package, repair, and readiness previews without formal writes.",
+    "Phase89-95 produced review samples, quality gates, and conservative source verdicts.",
+    "Phase96-101 repaired NASA reviewability through structured candidates, not default ingestion.",
+    "Phase102-106 rebuilt closure, handoff, queue verdicts, and item verdicts for manual shadow review only."
+  ],
+  "final_verdict": "four_source_review_only_closeout_complete_approval_pending",
+  "overall_status": "review-only/manual shadow review queue ready with conditions",
+  "accepted_with_conditions_count": 20,
+  "accepted_with_conditions_by_source": {
+    "nasa": 2,
+    "esa": 8,
+    "wikidata": 10
+  },
+  "rejected_earlier_count": 7,
+  "rejected_earlier_by_source": {
+    "nasa": 3,
+    "esa": 1,
+    "zh_wikipedia": 3
+  },
+  "source_statuses": {
+    "nasa": "2 accepted with conditions; Images API clean but thin; 3 rejected earlier.",
+    "esa": "8 accepted with conditions; mission pages readable with minor index/news risk; 1 rejected earlier.",
+    "zh_wikipedia": "0 accepted; 3 rejected earlier for template/table/numeric infobox noise.",
+    "wikidata": "10 accepted with conditions; QID/source facts valid but thin."
+  },
+  "accepted_with_conditions_risks": {
+    "nasa": "2 Images API metadata candidates are clean but thin; rejected WP REST/EO residue remains out.",
+    "esa": "8 reviewable candidates retain minor index/news risk; ESA - Space Science remains rejected.",
+    "wikidata": "10 QID/source facts are valid but thin and need human judgment before enrichment."
+  },
+  "rejected_items_summary": {
+    "nasa": "2 Images API metadata candidates are clean but thin; rejected WP REST/EO residue remains out.",
+    "esa": "8 reviewable candidates retain minor index/news risk; ESA - Space Science remains rejected.",
+    "zh_wikipedia": "All 3 samples rejected for template/table/numeric infobox noise.",
+    "wikidata": "10 QID/source facts are valid but thin and need human judgment before enrichment."
+  },
+  "allowed_next_steps": [
+    "manual review of 20 filtered items",
+    "source-specific fixes for rejected NASA/ESA/zh items",
+    "source-specific enrichment for thin Wikidata facts"
+  ],
+  "forbidden_next_steps_without_explicit_approval": [
+    "shadow apply preflight",
+    "apply",
+    "ingest",
+    "production",
+    "default data/raw_json writes",
+    "default data/triples writes",
+    "Chroma writes",
+    "Neo4j writes"
+  ],
+  "shadow_review_only": true,
+  "production_ready": false,
+  "apply_approved": false,
+  "ingest_approved": false,
+  "preflight_allowed": false,
+  "apply_preflight_allowed": false,
+  "preflight_approved": false,
+  "formal_raw_write": false,
+  "formal_default_triples_write": false,
+  "chroma_write": false,
+  "neo4j_write": false,
+  "clear_source_ingestion_outputs_called": false,
+  "active_source": "zh_wikipedia",
+  "active_source_unchanged": true,
+  "source_state": "ACTIVE_SOURCE remains zh_wikipedia; NASA/ESA/Wikidata remain disabled/shadow.",
+  "next_recommendation": "review the 20 conditional items; do not run preflight/apply/ingest without explicit approval"
+}
