@@ -1,0 +1,633 @@
+{
+  "phase": "Phase 48",
+  "mode": "nasa_shadow_json_only_retrieval_eval",
+  "generated_at": "2026-07-22T07:31:27.166587+00:00",
+  "source_id": "nasa",
+  "ready": true,
+  "blocked_reason": "",
+  "shadow_dir": "data\\triples_shadow\\nasa",
+  "local_artifact": true,
+  "counts": {
+    "items": 20,
+    "triples": 80,
+    "narratives": 80
+  },
+  "eval_cases": [
+    {
+      "case_id": "subject_apophis",
+      "query": "Apophis asteroid",
+      "oracle": {
+        "subject": "Apophis",
+        "relation": "INSTANCE_OF",
+        "topic": "asteroid"
+      }
+    },
+    {
+      "case_id": "subject_bennu",
+      "query": "Bennu asteroid",
+      "oracle": {
+        "subject": "Bennu",
+        "topic": "asteroid"
+      }
+    },
+    {
+      "case_id": "subject_psyche_url",
+      "query": "Asteroid Psyche URL",
+      "oracle": {
+        "subject": "Asteroid Psyche",
+        "source_url": "https://science.nasa.gov/solar-system/asteroids/16-psyche/"
+      }
+    },
+    {
+      "case_id": "subject_didymos",
+      "query": "Didymos Dimorphos asteroid",
+      "oracle": {
+        "subject": "Didymos & Dimorphos",
+        "topic": "asteroid"
+      }
+    },
+    {
+      "case_id": "subject_swift_tuttle",
+      "query": "109P Swift-Tuttle comet",
+      "oracle": {
+        "subject": "109P/Swift-Tuttle",
+        "topic": "comet"
+      }
+    },
+    {
+      "case_id": "topic_asteroid",
+      "query": "asteroid topic",
+      "oracle": {
+        "topic": "asteroid"
+      }
+    },
+    {
+      "case_id": "topic_comet",
+      "query": "comet topic",
+      "oracle": {
+        "topic": "comet"
+      }
+    },
+    {
+      "case_id": "relation_source_url",
+      "query": "SOURCE_URL NASA",
+      "oracle": {
+        "relation": "SOURCE_URL"
+      }
+    },
+    {
+      "case_id": "relation_has_topic",
+      "query": "HAS_TOPIC asteroid",
+      "oracle": {
+        "relation": "HAS_TOPIC",
+        "topic": "asteroid"
+      }
+    },
+    {
+      "case_id": "planetary_defense_url",
+      "query": "Planetary Defense NASA",
+      "oracle": {
+        "subject": "Planetary Defense at NASA",
+        "source_url": "https://science.nasa.gov/planetary-defense/"
+      }
+    }
+  ],
+  "case_results": [
+    {
+      "case_id": "subject_apophis",
+      "query": "Apophis asteroid",
+      "oracle": {
+        "subject": "Apophis",
+        "relation": "INSTANCE_OF",
+        "topic": "asteroid"
+      },
+      "passed": true,
+      "hit_count": 8,
+      "failure_reason": "",
+      "top_results": [
+        {
+          "kind": "triple",
+          "subject": "Apophis",
+          "predicate": "SOURCE_URL",
+          "object": "https://science.nasa.gov/solar-system/asteroids/apophis/",
+          "source_url": "https://science.nasa.gov/solar-system/asteroids/apophis/",
+          "evidence": "https://science.nasa.gov/solar-system/asteroids/apophis/"
+        },
+        {
+          "kind": "triple",
+          "subject": "Apophis",
+          "predicate": "HAS_TOPIC",
+          "object": "asteroid",
+          "source_url": "https://science.nasa.gov/solar-system/asteroids/apophis/",
+          "evidence": "Explore Search News & Events News & Events Recently Published Video Series on NASA+ Podcasts & Audio Blogs Newsletters Social Media Media Resources Multimedia M"
+        },
+        {
+          "kind": "triple",
+          "subject": "Apophis",
+          "predicate": "INSTANCE_OF",
+          "object": "asteroid",
+          "source_url": "https://science.nasa.gov/solar-system/asteroids/apophis/",
+          "evidence": "Explore Search News & Events News & Events Recently Published Video Series on NASA+ Podcasts & Audio Blogs Newsletters Social Media Media Resources Multimedia M"
+        },
+        {
+          "kind": "triple",
+          "subject": "Apophis",
+          "predicate": "INSTANCE_OF",
+          "object": "small body",
+          "source_url": "https://science.nasa.gov/solar-system/asteroids/apophis/",
+          "evidence": "Explore Search News & Events News & Events Recently Published Video Series on NASA+ Podcasts & Audio Blogs Newsletters Social Media Media Resources Multimedia M"
+        },
+        {
+          "kind": "narrative",
+          "page_title": "Apophis - NASA Science",
+          "source_url": "https://science.nasa.gov/solar-system/asteroids/apophis/",
+          "snippet": "Explore Search News & Events News & Events Recently Published Video Series on NASA+ Podcasts & Audio Blogs Newsletters Social Media Media Resources Multimedia Multimedia NASA+ Imag"
+        }
+      ]
+    },
+    {
+      "case_id": "subject_bennu",
+      "query": "Bennu asteroid",
+      "oracle": {
+        "subject": "Bennu",
+        "topic": "asteroid"
+      },
+      "passed": true,
+      "hit_count": 8,
+      "failure_reason": "",
+      "top_results": [
+        {
+          "kind": "triple",
+          "subject": "Bennu",
+          "predicate": "SOURCE_URL",
+          "object": "https://science.nasa.gov/solar-system/asteroids/101955-bennu/",
+          "source_url": "https://science.nasa.gov/solar-system/asteroids/101955-bennu/",
+          "evidence": "https://science.nasa.gov/solar-system/asteroids/101955-bennu/"
+        },
+        {
+          "kind": "triple",
+          "subject": "Bennu",
+          "predicate": "HAS_TOPIC",
+          "object": "asteroid",
+          "source_url": "https://science.nasa.gov/solar-system/asteroids/101955-bennu/",
+          "evidence": "Explore Search News & Events News & Events Recently Published Video Series on NASA+ Podcasts & Audio Blogs Newsletters Social Media Media Resources Multimedia M"
+        },
+        {
+          "kind": "triple",
+          "subject": "Bennu",
+          "predicate": "INSTANCE_OF",
+          "object": "asteroid",
+          "source_url": "https://science.nasa.gov/solar-system/asteroids/101955-bennu/",
+          "evidence": "Explore Search News & Events News & Events Recently Published Video Series on NASA+ Podcasts & Audio Blogs Newsletters Social Media Media Resources Multimedia M"
+        },
+        {
+          "kind": "triple",
+          "subject": "Bennu",
+          "predicate": "INSTANCE_OF",
+          "object": "small body",
+          "source_url": "https://science.nasa.gov/solar-system/asteroids/101955-bennu/",
+          "evidence": "Explore Search News & Events News & Events Recently Published Video Series on NASA+ Podcasts & Audio Blogs Newsletters Social Media Media Resources Multimedia M"
+        },
+        {
+          "kind": "narrative",
+          "page_title": "Bennu - NASA Science",
+          "source_url": "https://science.nasa.gov/solar-system/asteroids/101955-bennu/",
+          "snippet": "Explore Search News & Events News & Events Recently Published Video Series on NASA+ Podcasts & Audio Blogs Newsletters Social Media Media Resources Multimedia Multimedia NASA+ Imag"
+        }
+      ]
+    },
+    {
+      "case_id": "subject_psyche_url",
+      "query": "Asteroid Psyche URL",
+      "oracle": {
+        "subject": "Asteroid Psyche",
+        "source_url": "https://science.nasa.gov/solar-system/asteroids/16-psyche/"
+      },
+      "passed": true,
+      "hit_count": 8,
+      "failure_reason": "",
+      "top_results": [
+        {
+          "kind": "triple",
+          "subject": "Asteroid Psyche",
+          "predicate": "SOURCE_URL",
+          "object": "https://science.nasa.gov/solar-system/asteroids/16-psyche/",
+          "source_url": "https://science.nasa.gov/solar-system/asteroids/16-psyche/",
+          "evidence": "https://science.nasa.gov/solar-system/asteroids/16-psyche/"
+        },
+        {
+          "kind": "triple",
+          "subject": "NASA Space Science Data Coordinated Archive Status",
+          "predicate": "SOURCE_URL",
+          "object": "https://nssdc.gsfc.nasa.gov/planetary/planets/asteroidpage.html",
+          "source_url": "https://nssdc.gsfc.nasa.gov/planetary/planets/asteroidpage.html",
+          "evidence": "https://nssdc.gsfc.nasa.gov/planetary/planets/asteroidpage.html"
+        },
+        {
+          "kind": "triple",
+          "subject": "Bennu",
+          "predicate": "SOURCE_URL",
+          "object": "https://science.nasa.gov/solar-system/asteroids/101955-bennu/",
+          "source_url": "https://science.nasa.gov/solar-system/asteroids/101955-bennu/",
+          "evidence": "https://science.nasa.gov/solar-system/asteroids/101955-bennu/"
+        },
+        {
+          "kind": "triple",
+          "subject": "Asteroid Psyche",
+          "predicate": "HAS_TOPIC",
+          "object": "asteroid",
+          "source_url": "https://science.nasa.gov/solar-system/asteroids/16-psyche/",
+          "evidence": "Asteroid Psyche."
+        },
+        {
+          "kind": "triple",
+          "subject": "Asteroid Psyche",
+          "predicate": "INSTANCE_OF",
+          "object": "asteroid",
+          "source_url": "https://science.nasa.gov/solar-system/asteroids/16-psyche/",
+          "evidence": "Asteroid Psyche."
+        }
+      ]
+    },
+    {
+      "case_id": "subject_didymos",
+      "query": "Didymos Dimorphos asteroid",
+      "oracle": {
+        "subject": "Didymos & Dimorphos",
+        "topic": "asteroid"
+      },
+      "passed": true,
+      "hit_count": 8,
+      "failure_reason": "",
+      "top_results": [
+        {
+          "kind": "triple",
+          "subject": "Didymos & Dimorphos",
+          "predicate": "SOURCE_URL",
+          "object": "https://science.nasa.gov/solar-system/asteroids/didymos/",
+          "source_url": "https://science.nasa.gov/solar-system/asteroids/didymos/",
+          "evidence": "https://science.nasa.gov/solar-system/asteroids/didymos/"
+        },
+        {
+          "kind": "triple",
+          "subject": "Didymos & Dimorphos",
+          "predicate": "HAS_TOPIC",
+          "object": "asteroid",
+          "source_url": "https://science.nasa.gov/solar-system/asteroids/didymos/",
+          "evidence": "Explore Search News & Events News & Events Recently Published Video Series on NASA+ Podcasts & Audio Blogs Newsletters Social Media Media Resources Multimedia M"
+        },
+        {
+          "kind": "triple",
+          "subject": "Didymos & Dimorphos",
+          "predicate": "INSTANCE_OF",
+          "object": "asteroid",
+          "source_url": "https://science.nasa.gov/solar-system/asteroids/didymos/",
+          "evidence": "Explore Search News & Events News & Events Recently Published Video Series on NASA+ Podcasts & Audio Blogs Newsletters Social Media Media Resources Multimedia M"
+        },
+        {
+          "kind": "triple",
+          "subject": "Didymos & Dimorphos",
+          "predicate": "INSTANCE_OF",
+          "object": "small body",
+          "source_url": "https://science.nasa.gov/solar-system/asteroids/didymos/",
+          "evidence": "Explore Search News & Events News & Events Recently Published Video Series on NASA+ Podcasts & Audio Blogs Newsletters Social Media Media Resources Multimedia M"
+        },
+        {
+          "kind": "narrative",
+          "page_title": "Didymos & Dimorphos - NASA Science",
+          "source_url": "https://science.nasa.gov/solar-system/asteroids/didymos/",
+          "snippet": "Explore Search News & Events News & Events Recently Published Video Series on NASA+ Podcasts & Audio Blogs Newsletters Social Media Media Resources Multimedia Multimedia NASA+ Imag"
+        }
+      ]
+    },
+    {
+      "case_id": "subject_swift_tuttle",
+      "query": "109P Swift-Tuttle comet",
+      "oracle": {
+        "subject": "109P/Swift-Tuttle",
+        "topic": "comet"
+      },
+      "passed": true,
+      "hit_count": 8,
+      "failure_reason": "",
+      "top_results": [
+        {
+          "kind": "triple",
+          "subject": "109P/Swift-Tuttle",
+          "predicate": "SOURCE_URL",
+          "object": "https://science.nasa.gov/solar-system/comets/109p-swift-tuttle/",
+          "source_url": "https://science.nasa.gov/solar-system/comets/109p-swift-tuttle/",
+          "evidence": "https://science.nasa.gov/solar-system/comets/109p-swift-tuttle/"
+        },
+        {
+          "kind": "triple",
+          "subject": "109P/Swift-Tuttle",
+          "predicate": "HAS_TOPIC",
+          "object": "comet",
+          "source_url": "https://science.nasa.gov/solar-system/comets/109p-swift-tuttle/",
+          "evidence": "Explore Search News & Events News & Events Recently Published Video Series on NASA+ Podcasts & Audio Blogs Newsletters Social Media Media Resources Multimedia M"
+        },
+        {
+          "kind": "triple",
+          "subject": "109P/Swift-Tuttle",
+          "predicate": "INSTANCE_OF",
+          "object": "comet",
+          "source_url": "https://science.nasa.gov/solar-system/comets/109p-swift-tuttle/",
+          "evidence": "Explore Search News & Events News & Events Recently Published Video Series on NASA+ Podcasts & Audio Blogs Newsletters Social Media Media Resources Multimedia M"
+        },
+        {
+          "kind": "triple",
+          "subject": "109P/Swift-Tuttle",
+          "predicate": "INSTANCE_OF",
+          "object": "small body",
+          "source_url": "https://science.nasa.gov/solar-system/comets/109p-swift-tuttle/",
+          "evidence": "Explore Search News & Events News & Events Recently Published Video Series on NASA+ Podcasts & Audio Blogs Newsletters Social Media Media Resources Multimedia M"
+        },
+        {
+          "kind": "narrative",
+          "page_title": "109P/Swift-Tuttle - NASA Science",
+          "source_url": "https://science.nasa.gov/solar-system/comets/109p-swift-tuttle/",
+          "snippet": "Explore Search News & Events News & Events Recently Published Video Series on NASA+ Podcasts & Audio Blogs Newsletters Social Media Media Resources Multimedia Multimedia NASA+ Imag"
+        }
+      ]
+    },
+    {
+      "case_id": "topic_asteroid",
+      "query": "asteroid topic",
+      "oracle": {
+        "topic": "asteroid"
+      },
+      "passed": true,
+      "hit_count": 8,
+      "failure_reason": "",
+      "top_results": [
+        {
+          "kind": "triple",
+          "subject": "NASA Space Science Data Coordinated Archive Status",
+          "predicate": "HAS_TOPIC",
+          "object": "asteroid",
+          "source_url": "https://nssdc.gsfc.nasa.gov/planetary/planets/asteroidpage.html",
+          "evidence": "Explore Search News & Events News & Events News Releases Recently Published Video Series on NASA+ Podcasts & Audio Blogs Newsletters Social Media Media Resource"
+        },
+        {
+          "kind": "triple",
+          "subject": "Planetary Defense at NASA",
+          "predicate": "HAS_TOPIC",
+          "object": "asteroid",
+          "source_url": "https://science.nasa.gov/planetary-defense/",
+          "evidence": "Explore Search News & Events News & Events Recently Published Video Series on NASA+ Podcasts & Audio Blogs Newsletters Social Media Media Resources Multimedia M"
+        },
+        {
+          "kind": "triple",
+          "subject": "Bennu",
+          "predicate": "HAS_TOPIC",
+          "object": "asteroid",
+          "source_url": "https://science.nasa.gov/solar-system/asteroids/101955-bennu/",
+          "evidence": "Explore Search News & Events News & Events Recently Published Video Series on NASA+ Podcasts & Audio Blogs Newsletters Social Media Media Resources Multimedia M"
+        },
+        {
+          "kind": "triple",
+          "subject": "Asteroid Psyche",
+          "predicate": "HAS_TOPIC",
+          "object": "asteroid",
+          "source_url": "https://science.nasa.gov/solar-system/asteroids/16-psyche/",
+          "evidence": "Asteroid Psyche."
+        },
+        {
+          "kind": "triple",
+          "subject": "Asteroid 2024 YR4",
+          "predicate": "HAS_TOPIC",
+          "object": "asteroid",
+          "source_url": "https://science.nasa.gov/solar-system/asteroids/2024-yr4/",
+          "evidence": "Asteroid 2024 YR4."
+        }
+      ]
+    },
+    {
+      "case_id": "topic_comet",
+      "query": "comet topic",
+      "oracle": {
+        "topic": "comet"
+      },
+      "passed": true,
+      "hit_count": 8,
+      "failure_reason": "",
+      "top_results": [
+        {
+          "kind": "triple",
+          "subject": "Comet 103P/Hartley (Hartley 2)",
+          "predicate": "HAS_TOPIC",
+          "object": "comet",
+          "source_url": "https://science.nasa.gov/solar-system/comets/103p-hartley-hartley-2/",
+          "evidence": "Comet 103P/Hartley (Hartley 2)."
+        },
+        {
+          "kind": "triple",
+          "subject": "109P/Swift-Tuttle",
+          "predicate": "HAS_TOPIC",
+          "object": "comet",
+          "source_url": "https://science.nasa.gov/solar-system/comets/109p-swift-tuttle/",
+          "evidence": "Explore Search News & Events News & Events Recently Published Video Series on NASA+ Podcasts & Audio Blogs Newsletters Social Media Media Resources Multimedia M"
+        },
+        {
+          "kind": "triple",
+          "subject": "19P/Borrelly",
+          "predicate": "HAS_TOPIC",
+          "object": "comet",
+          "source_url": "https://science.nasa.gov/solar-system/comets/19p-borrelly/",
+          "evidence": "Explore Search News & Events News & Events Recently Published Video Series on NASA+ Podcasts & Audio Blogs Newsletters Social Media Media Resources Multimedia M"
+        },
+        {
+          "kind": "triple",
+          "subject": "Comet 3I/ATLAS",
+          "predicate": "HAS_TOPIC",
+          "object": "comet",
+          "source_url": "https://science.nasa.gov/solar-system/comets/3i-atlas/",
+          "evidence": "Comet 3I/ATLAS."
+        },
+        {
+          "kind": "triple",
+          "subject": "Comet Facts",
+          "predicate": "HAS_TOPIC",
+          "object": "comet",
+          "source_url": "https://science.nasa.gov/solar-system/comets/facts/",
+          "evidence": "Comet Facts."
+        }
+      ]
+    },
+    {
+      "case_id": "relation_source_url",
+      "query": "SOURCE_URL NASA",
+      "oracle": {
+        "relation": "SOURCE_URL"
+      },
+      "passed": true,
+      "hit_count": 8,
+      "failure_reason": "",
+      "top_results": [
+        {
+          "kind": "triple",
+          "subject": "NASA Space Science Data Coordinated Archive Status",
+          "predicate": "SOURCE_URL",
+          "object": "https://nssdc.gsfc.nasa.gov/planetary/planets/asteroidpage.html",
+          "source_url": "https://nssdc.gsfc.nasa.gov/planetary/planets/asteroidpage.html",
+          "evidence": "https://nssdc.gsfc.nasa.gov/planetary/planets/asteroidpage.html"
+        },
+        {
+          "kind": "triple",
+          "subject": "Planetary Defense at NASA",
+          "predicate": "SOURCE_URL",
+          "object": "https://science.nasa.gov/planetary-defense/",
+          "source_url": "https://science.nasa.gov/planetary-defense/",
+          "evidence": "https://science.nasa.gov/planetary-defense/"
+        },
+        {
+          "kind": "triple",
+          "subject": "Bennu",
+          "predicate": "SOURCE_URL",
+          "object": "https://science.nasa.gov/solar-system/asteroids/101955-bennu/",
+          "source_url": "https://science.nasa.gov/solar-system/asteroids/101955-bennu/",
+          "evidence": "https://science.nasa.gov/solar-system/asteroids/101955-bennu/"
+        },
+        {
+          "kind": "triple",
+          "subject": "Asteroid Psyche",
+          "predicate": "SOURCE_URL",
+          "object": "https://science.nasa.gov/solar-system/asteroids/16-psyche/",
+          "source_url": "https://science.nasa.gov/solar-system/asteroids/16-psyche/",
+          "evidence": "https://science.nasa.gov/solar-system/asteroids/16-psyche/"
+        },
+        {
+          "kind": "triple",
+          "subject": "Asteroid 2024 YR4",
+          "predicate": "SOURCE_URL",
+          "object": "https://science.nasa.gov/solar-system/asteroids/2024-yr4/",
+          "source_url": "https://science.nasa.gov/solar-system/asteroids/2024-yr4/",
+          "evidence": "https://science.nasa.gov/solar-system/asteroids/2024-yr4/"
+        }
+      ]
+    },
+    {
+      "case_id": "relation_has_topic",
+      "query": "HAS_TOPIC asteroid",
+      "oracle": {
+        "relation": "HAS_TOPIC",
+        "topic": "asteroid"
+      },
+      "passed": true,
+      "hit_count": 8,
+      "failure_reason": "",
+      "top_results": [
+        {
+          "kind": "triple",
+          "subject": "NASA Space Science Data Coordinated Archive Status",
+          "predicate": "HAS_TOPIC",
+          "object": "asteroid",
+          "source_url": "https://nssdc.gsfc.nasa.gov/planetary/planets/asteroidpage.html",
+          "evidence": "Explore Search News & Events News & Events News Releases Recently Published Video Series on NASA+ Podcasts & Audio Blogs Newsletters Social Media Media Resource"
+        },
+        {
+          "kind": "triple",
+          "subject": "Planetary Defense at NASA",
+          "predicate": "HAS_TOPIC",
+          "object": "asteroid",
+          "source_url": "https://science.nasa.gov/planetary-defense/",
+          "evidence": "Explore Search News & Events News & Events Recently Published Video Series on NASA+ Podcasts & Audio Blogs Newsletters Social Media Media Resources Multimedia M"
+        },
+        {
+          "kind": "triple",
+          "subject": "Bennu",
+          "predicate": "HAS_TOPIC",
+          "object": "asteroid",
+          "source_url": "https://science.nasa.gov/solar-system/asteroids/101955-bennu/",
+          "evidence": "Explore Search News & Events News & Events Recently Published Video Series on NASA+ Podcasts & Audio Blogs Newsletters Social Media Media Resources Multimedia M"
+        },
+        {
+          "kind": "triple",
+          "subject": "Asteroid Psyche",
+          "predicate": "HAS_TOPIC",
+          "object": "asteroid",
+          "source_url": "https://science.nasa.gov/solar-system/asteroids/16-psyche/",
+          "evidence": "Asteroid Psyche."
+        },
+        {
+          "kind": "triple",
+          "subject": "Asteroid 2024 YR4",
+          "predicate": "HAS_TOPIC",
+          "object": "asteroid",
+          "source_url": "https://science.nasa.gov/solar-system/asteroids/2024-yr4/",
+          "evidence": "Asteroid 2024 YR4."
+        }
+      ]
+    },
+    {
+      "case_id": "planetary_defense_url",
+      "query": "Planetary Defense NASA",
+      "oracle": {
+        "subject": "Planetary Defense at NASA",
+        "source_url": "https://science.nasa.gov/planetary-defense/"
+      },
+      "passed": true,
+      "hit_count": 8,
+      "failure_reason": "",
+      "top_results": [
+        {
+          "kind": "triple",
+          "subject": "Planetary Defense at NASA",
+          "predicate": "SOURCE_URL",
+          "object": "https://science.nasa.gov/planetary-defense/",
+          "source_url": "https://science.nasa.gov/planetary-defense/",
+          "evidence": "https://science.nasa.gov/planetary-defense/"
+        },
+        {
+          "kind": "triple",
+          "subject": "Planetary Defense at NASA",
+          "predicate": "HAS_TOPIC",
+          "object": "asteroid",
+          "source_url": "https://science.nasa.gov/planetary-defense/",
+          "evidence": "Explore Search News & Events News & Events Recently Published Video Series on NASA+ Podcasts & Audio Blogs Newsletters Social Media Media Resources Multimedia M"
+        },
+        {
+          "kind": "triple",
+          "subject": "Planetary Defense at NASA",
+          "predicate": "INSTANCE_OF",
+          "object": "asteroid",
+          "source_url": "https://science.nasa.gov/planetary-defense/",
+          "evidence": "Explore Search News & Events News & Events Recently Published Video Series on NASA+ Podcasts & Audio Blogs Newsletters Social Media Media Resources Multimedia M"
+        },
+        {
+          "kind": "triple",
+          "subject": "Planetary Defense at NASA",
+          "predicate": "INSTANCE_OF",
+          "object": "small body",
+          "source_url": "https://science.nasa.gov/planetary-defense/",
+          "evidence": "Explore Search News & Events News & Events Recently Published Video Series on NASA+ Podcasts & Audio Blogs Newsletters Social Media Media Resources Multimedia M"
+        },
+        {
+          "kind": "narrative",
+          "page_title": "Planetary Defense at NASA - NASA Science Facebook logo Instagram logo Linkedin logo",
+          "source_url": "https://science.nasa.gov/planetary-defense/",
+          "snippet": "Explore Search News & Events News & Events Recently Published Video Series on NASA+ Podcasts & Audio Blogs Newsletters Social Media Media Resources Multimedia Multimedia NASA+ Imag"
+        }
+      ]
+    }
+  ],
+  "overall": {
+    "total_cases": 10,
+    "passed_cases": 10,
+    "failed_cases": 0,
+    "pass_rate": 1.0
+  },
+  "active_source": "zh_wikipedia",
+  "default_source_unchanged": true,
+  "registry": {
+    "zh_wikipedia": "active",
+    "nasa": "disabled",
+    "esa": "disabled",
+    "wikidata": "disabled"
+  },
+  "formal_default_triples_write": false,
+  "chroma_write": false,
+  "neo4j_write": false,
+  "recommended_next_action": "review_json_eval_before_gui_or_vector_adapter"
+}
