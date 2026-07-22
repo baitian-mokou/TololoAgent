@@ -1,0 +1,192 @@
+{
+  "phase": "Phase 75",
+  "mode": "wikidata_shadow_package_preparation",
+  "generated_at": "2026-07-22T13:41:44.521449+00:00",
+  "source_id": "wikidata",
+  "schema_version": "wikidata_shadow_ready_v1",
+  "selected_count": 25,
+  "packaged_items": 25,
+  "rejected": 0,
+  "failed": 0,
+  "duplicate_skipped": 0,
+  "rejected_overlap_skipped": 0,
+  "triples": 151,
+  "narratives": 25,
+  "relations_count": {
+    "DISCOVERED_BY": 17,
+    "HAS_ATMOSPHERE": 11,
+    "HAS_MASS": 25,
+    "HAS_RADIUS": 25,
+    "LOCATED_IN": 24,
+    "ORBITS": 24,
+    "PART_OF": 25
+  },
+  "candidate_statuses": [
+    {
+      "status": "packaged",
+      "qid": "Q525",
+      "title": "太阳",
+      "url": "https://www.wikidata.org/wiki/Q525"
+    },
+    {
+      "status": "packaged",
+      "qid": "Q308",
+      "title": "水星",
+      "url": "https://www.wikidata.org/wiki/Q308"
+    },
+    {
+      "status": "packaged",
+      "qid": "Q313",
+      "title": "金星",
+      "url": "https://www.wikidata.org/wiki/Q313"
+    },
+    {
+      "status": "packaged",
+      "qid": "Q2",
+      "title": "地球",
+      "url": "https://www.wikidata.org/wiki/Q2"
+    },
+    {
+      "status": "packaged",
+      "qid": "Q405",
+      "title": "月球",
+      "url": "https://www.wikidata.org/wiki/Q405"
+    },
+    {
+      "status": "packaged",
+      "qid": "Q111",
+      "title": "火星",
+      "url": "https://www.wikidata.org/wiki/Q111"
+    },
+    {
+      "status": "packaged",
+      "qid": "Q319",
+      "title": "木星",
+      "url": "https://www.wikidata.org/wiki/Q319"
+    },
+    {
+      "status": "packaged",
+      "qid": "Q193",
+      "title": "土星",
+      "url": "https://www.wikidata.org/wiki/Q193"
+    },
+    {
+      "status": "packaged",
+      "qid": "Q324",
+      "title": "天王星",
+      "url": "https://www.wikidata.org/wiki/Q324"
+    },
+    {
+      "status": "packaged",
+      "qid": "Q332",
+      "title": "海王星",
+      "url": "https://www.wikidata.org/wiki/Q332"
+    },
+    {
+      "status": "packaged",
+      "qid": "Q339",
+      "title": "冥王星",
+      "url": "https://www.wikidata.org/wiki/Q339"
+    },
+    {
+      "status": "packaged",
+      "qid": "Q596",
+      "title": "谷神星",
+      "url": "https://www.wikidata.org/wiki/Q596"
+    },
+    {
+      "status": "packaged",
+      "qid": "Q611",
+      "title": "阋神星",
+      "url": "https://www.wikidata.org/wiki/Q611"
+    },
+    {
+      "status": "packaged",
+      "qid": "Q601",
+      "title": "妊神星",
+      "url": "https://www.wikidata.org/wiki/Q601"
+    },
+    {
+      "status": "packaged",
+      "qid": "Q604",
+      "title": "鸟神星",
+      "url": "https://www.wikidata.org/wiki/Q604"
+    },
+    {
+      "status": "packaged",
+      "qid": "Q3030",
+      "title": "灶神星",
+      "url": "https://www.wikidata.org/wiki/Q3030"
+    },
+    {
+      "status": "packaged",
+      "qid": "Q3123",
+      "title": "木卫一",
+      "url": "https://www.wikidata.org/wiki/Q3123"
+    },
+    {
+      "status": "packaged",
+      "qid": "Q3143",
+      "title": "木卫二",
+      "url": "https://www.wikidata.org/wiki/Q3143"
+    },
+    {
+      "status": "packaged",
+      "qid": "Q3169",
+      "title": "木卫三",
+      "url": "https://www.wikidata.org/wiki/Q3169"
+    },
+    {
+      "status": "packaged",
+      "qid": "Q3134",
+      "title": "木卫四",
+      "url": "https://www.wikidata.org/wiki/Q3134"
+    },
+    {
+      "status": "packaged",
+      "qid": "Q2565",
+      "title": "土卫六",
+      "url": "https://www.wikidata.org/wiki/Q2565"
+    },
+    {
+      "status": "packaged",
+      "qid": "Q3303",
+      "title": "土卫二",
+      "url": "https://www.wikidata.org/wiki/Q3303"
+    },
+    {
+      "status": "packaged",
+      "qid": "Q3359",
+      "title": "海卫一",
+      "url": "https://www.wikidata.org/wiki/Q3359"
+    },
+    {
+      "status": "packaged",
+      "qid": "Q7547",
+      "title": "火卫一",
+      "url": "https://www.wikidata.org/wiki/Q7547"
+    },
+    {
+      "status": "packaged",
+      "qid": "Q7548",
+      "title": "火卫二",
+      "url": "https://www.wikidata.org/wiki/Q7548"
+    }
+  ],
+  "approval_status": "pending",
+  "approval_template": "evaluation\\four_source_expansion\\wikidata_shadow_package_approval_phase75.json",
+  "out_dir": "evaluation\\four_source_expansion\\wikidata_shadow_package_phase75",
+  "network_attempted": false,
+  "formal_triples_write": false,
+  "formal_narratives_write": false,
+  "chroma_write": false,
+  "neo4j_write": false,
+  "active_source": "zh_wikipedia",
+  "registry": {
+    "zh_wikipedia": "active",
+    "nasa": "disabled",
+    "esa": "disabled",
+    "wikidata": "disabled"
+  },
+  "active_source_unchanged": true
+}

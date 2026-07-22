@@ -1,0 +1,23 @@
+[
+  {
+    "section": "Wikidata 摘要",
+    "content": "Wikidata fixture 将太阳登记为太阳系的中心恒星，并保留质量、半径和主要成分等结构化事实。",
+    "keywords": [
+      "太阳",
+      "太阳系",
+      "质量",
+      "半径"
+    ],
+    "page_title": "太阳",
+    "chunk_index": 0,
+    "source_id": "wikidata",
+    "source": "wikidata",
+    "source_name": "wikidata",
+    "source_role": "primary",
+    "source_url": "https://www.wikidata.org/wiki/Q525",
+    "source_title": "太阳",
+    "qid": "Q525",
+    "schema_version": "wikidata_shadow_ready_v1",
+    "package_trial": true
+  }
+]

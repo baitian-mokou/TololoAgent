@@ -1,0 +1,26 @@
+[
+  {
+    "section": "大气",
+    "content": "金星的 fixture 记录突出其以二氧化碳为主的大气，并保留与太阳系成员关系相关的事实。",
+    "keywords": [
+      "金星",
+      "大气",
+      "二氧化碳"
+    ],
+    "page_title": "金星",
+    "chunk_index": 0,
+    "path": "大气",
+    "chunk_id": "wikidata_金星_00",
+    "source": "wikidata",
+    "source_name": "wikidata",
+    "source_role": "primary",
+    "origin": "api",
+    "type": "embedding_chunk",
+    "schema_version": "wikidata_shadow_ready_v1",
+    "source_title": "金星",
+    "qid": "Q313",
+    "source_id": "wikidata",
+    "source_url": "https://www.wikidata.org/wiki/Q313",
+    "package_trial": true
+  }
+]

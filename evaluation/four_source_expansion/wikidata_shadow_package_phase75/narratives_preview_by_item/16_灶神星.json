@@ -1,0 +1,26 @@
+[
+  {
+    "section": "发现",
+    "content": "灶神星 fixture 将其记录为小行星带中的代表性天体，并保留海因里希·威廉·奥伯斯的发现者信息。",
+    "keywords": [
+      "灶神星",
+      "小行星带",
+      "发现者"
+    ],
+    "page_title": "灶神星",
+    "chunk_index": 0,
+    "path": "发现",
+    "chunk_id": "wikidata_灶神星_00",
+    "source": "wikidata",
+    "source_name": "wikidata",
+    "source_role": "primary",
+    "origin": "api",
+    "type": "embedding_chunk",
+    "schema_version": "wikidata_shadow_ready_v1",
+    "source_title": "灶神星",
+    "qid": "Q3030",
+    "source_id": "wikidata",
+    "source_url": "https://www.wikidata.org/wiki/Q3030",
+    "package_trial": true
+  }
+]

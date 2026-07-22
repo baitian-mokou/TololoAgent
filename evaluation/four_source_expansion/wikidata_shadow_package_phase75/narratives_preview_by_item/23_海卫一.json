@@ -1,0 +1,26 @@
+[
+  {
+    "section": "发现",
+    "content": "海卫一 fixture 保留其绕海王星运行、属于海王星系统以及由威廉·拉塞尔发现等核心事实。",
+    "keywords": [
+      "海卫一",
+      "海王星",
+      "发现者"
+    ],
+    "page_title": "海卫一",
+    "chunk_index": 0,
+    "path": "发现",
+    "chunk_id": "wikidata_海卫一_00",
+    "source": "wikidata",
+    "source_name": "wikidata",
+    "source_role": "primary",
+    "origin": "api",
+    "type": "embedding_chunk",
+    "schema_version": "wikidata_shadow_ready_v1",
+    "source_title": "海卫一",
+    "qid": "Q3359",
+    "source_id": "wikidata",
+    "source_url": "https://www.wikidata.org/wiki/Q3359",
+    "package_trial": true
+  }
+]

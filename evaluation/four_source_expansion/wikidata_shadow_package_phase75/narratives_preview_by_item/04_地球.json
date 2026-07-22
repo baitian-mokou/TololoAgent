@@ -1,0 +1,22 @@
+[
+  {
+    "section": "大气",
+    "content": "地球 fixture 记录包括氮气、氧气和氩气等大气成分，也声明地球绕太阳运行。",
+    "keywords": [
+      "地球",
+      "大气",
+      "太阳"
+    ],
+    "page_title": "地球",
+    "chunk_index": 0,
+    "source_id": "wikidata",
+    "source": "wikidata",
+    "source_name": "wikidata",
+    "source_role": "primary",
+    "source_url": "https://www.wikidata.org/wiki/Q2",
+    "source_title": "地球",
+    "qid": "Q2",
+    "schema_version": "wikidata_shadow_ready_v1",
+    "package_trial": true
+  }
+]

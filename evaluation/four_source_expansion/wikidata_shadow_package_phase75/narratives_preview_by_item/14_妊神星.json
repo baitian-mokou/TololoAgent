@@ -1,0 +1,26 @@
+[
+  {
+    "section": "分类",
+    "content": "妊神星 fixture 保留其作为柯伊伯带矮行星的结构化事实，可用于 source isolation 和单位归一化检索。",
+    "keywords": [
+      "妊神星",
+      "柯伊伯带",
+      "半径"
+    ],
+    "page_title": "妊神星",
+    "chunk_index": 0,
+    "path": "分类",
+    "chunk_id": "wikidata_妊神星_00",
+    "source": "wikidata",
+    "source_name": "wikidata",
+    "source_role": "primary",
+    "origin": "api",
+    "type": "embedding_chunk",
+    "schema_version": "wikidata_shadow_ready_v1",
+    "source_title": "妊神星",
+    "qid": "Q601",
+    "source_id": "wikidata",
+    "source_url": "https://www.wikidata.org/wiki/Q601",
+    "package_trial": true
+  }
+]

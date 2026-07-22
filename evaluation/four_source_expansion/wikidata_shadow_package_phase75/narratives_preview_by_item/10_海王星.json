@@ -1,0 +1,26 @@
+[
+  {
+    "section": "发现",
+    "content": "海王星 fixture 保留发现者、甲烷大气以及太阳系成员关系，适合冲突和路由评测。",
+    "keywords": [
+      "海王星",
+      "发现者",
+      "太阳系"
+    ],
+    "page_title": "海王星",
+    "chunk_index": 0,
+    "path": "发现",
+    "chunk_id": "wikidata_海王星_00",
+    "source": "wikidata",
+    "source_name": "wikidata",
+    "source_role": "primary",
+    "origin": "api",
+    "type": "embedding_chunk",
+    "schema_version": "wikidata_shadow_ready_v1",
+    "source_title": "海王星",
+    "qid": "Q332",
+    "source_id": "wikidata",
+    "source_url": "https://www.wikidata.org/wiki/Q332",
+    "package_trial": true
+  }
+]

@@ -1,0 +1,8 @@
+{
+  "source_id": "wikidata",
+  "approval_decision": "pending",
+  "approved_item_count": 0,
+  "max_available_item_count": 25,
+  "reviewer_notes": "",
+  "allowed_output_scope": "data/triples_shadow/wikidata only after explicit guarded approval"
+}

@@ -1,0 +1,26 @@
+[
+  {
+    "section": "发现",
+    "content": "谷神星 fixture 记录其位于小行星带，发现者为朱塞普·皮亚齐。",
+    "keywords": [
+      "谷神星",
+      "小行星带",
+      "发现者"
+    ],
+    "page_title": "谷神星",
+    "chunk_index": 0,
+    "path": "发现",
+    "chunk_id": "wikidata_谷神星_00",
+    "source": "wikidata",
+    "source_name": "wikidata",
+    "source_role": "primary",
+    "origin": "api",
+    "type": "embedding_chunk",
+    "schema_version": "wikidata_shadow_ready_v1",
+    "source_title": "谷神星",
+    "qid": "Q596",
+    "source_id": "wikidata",
+    "source_url": "https://www.wikidata.org/wiki/Q596",
+    "package_trial": true
+  }
+]

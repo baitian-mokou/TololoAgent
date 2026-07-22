@@ -1,0 +1,26 @@
+[
+  {
+    "section": "伽利略卫星",
+    "content": "木卫二 fixture 记录其绕木星运行，属于木星系统，并保留半径与质量数值。",
+    "keywords": [
+      "木卫二",
+      "木星",
+      "半径"
+    ],
+    "page_title": "木卫二",
+    "chunk_index": 0,
+    "path": "伽利略卫星",
+    "chunk_id": "wikidata_木卫二_00",
+    "source": "wikidata",
+    "source_name": "wikidata",
+    "source_role": "primary",
+    "origin": "api",
+    "type": "embedding_chunk",
+    "schema_version": "wikidata_shadow_ready_v1",
+    "source_title": "木卫二",
+    "qid": "Q3143",
+    "source_id": "wikidata",
+    "source_url": "https://www.wikidata.org/wiki/Q3143",
+    "package_trial": true
+  }
+]

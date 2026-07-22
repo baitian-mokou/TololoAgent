@@ -1,0 +1,26 @@
+[
+  {
+    "section": "分类",
+    "content": "阋神星 fixture 将其视为太阳系中的矮行星样例，保留离散盘成员关系和迈克·布朗相关发现信息。",
+    "keywords": [
+      "阋神星",
+      "离散盘",
+      "矮行星"
+    ],
+    "page_title": "阋神星",
+    "chunk_index": 0,
+    "path": "分类",
+    "chunk_id": "wikidata_阋神星_00",
+    "source": "wikidata",
+    "source_name": "wikidata",
+    "source_role": "primary",
+    "origin": "api",
+    "type": "embedding_chunk",
+    "schema_version": "wikidata_shadow_ready_v1",
+    "source_title": "阋神星",
+    "qid": "Q611",
+    "source_id": "wikidata",
+    "source_url": "https://www.wikidata.org/wiki/Q611",
+    "package_trial": true
+  }
+]

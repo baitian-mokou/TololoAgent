@@ -1,0 +1,5 @@
+- 太阳 `Q525` triples=4
+- 水星 `Q308` triples=4
+- 金星 `Q313` triples=4
+- 地球 `Q2` triples=4
+- 月球 `Q405` triples=4

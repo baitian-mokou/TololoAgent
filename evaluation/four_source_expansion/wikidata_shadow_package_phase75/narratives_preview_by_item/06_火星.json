@@ -1,0 +1,24 @@
+[
+  {
+    "section": "大气",
+    "content": "根据 Wikidata fixture，火星大气以二氧化碳为主，并含有氮气、氩气以及微量氧气和水蒸气。",
+    "keywords": [
+      "火星",
+      "大气",
+      "二氧化碳",
+      "氮气",
+      "氩气"
+    ],
+    "page_title": "火星",
+    "chunk_index": 0,
+    "source_id": "wikidata",
+    "source": "wikidata",
+    "source_name": "wikidata",
+    "source_role": "primary",
+    "source_url": "https://www.wikidata.org/wiki/Q111",
+    "source_title": "火星",
+    "qid": "Q111",
+    "schema_version": "wikidata_shadow_ready_v1",
+    "package_trial": true
+  }
+]

@@ -1,0 +1,26 @@
+[
+  {
+    "section": "发现",
+    "content": "天王星 fixture 记录发现者威廉·赫歇尔，并将甲烷列为大气成分之一。",
+    "keywords": [
+      "天王星",
+      "发现者",
+      "甲烷"
+    ],
+    "page_title": "天王星",
+    "chunk_index": 0,
+    "path": "发现",
+    "chunk_id": "wikidata_天王星_00",
+    "source": "wikidata",
+    "source_name": "wikidata",
+    "source_role": "primary",
+    "origin": "api",
+    "type": "embedding_chunk",
+    "schema_version": "wikidata_shadow_ready_v1",
+    "source_title": "天王星",
+    "qid": "Q324",
+    "source_id": "wikidata",
+    "source_url": "https://www.wikidata.org/wiki/Q324",
+    "package_trial": true
+  }
+]

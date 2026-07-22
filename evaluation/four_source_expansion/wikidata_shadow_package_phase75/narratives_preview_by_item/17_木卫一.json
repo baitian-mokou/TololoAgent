@@ -1,0 +1,26 @@
+[
+  {
+    "section": "伽利略卫星",
+    "content": "木卫一 fixture 将其归入木星系统，并作为伽利略卫星样例保存发现者信息。",
+    "keywords": [
+      "木卫一",
+      "木星",
+      "伽利略卫星"
+    ],
+    "page_title": "木卫一",
+    "chunk_index": 0,
+    "path": "伽利略卫星",
+    "chunk_id": "wikidata_木卫一_00",
+    "source": "wikidata",
+    "source_name": "wikidata",
+    "source_role": "primary",
+    "origin": "api",
+    "type": "embedding_chunk",
+    "schema_version": "wikidata_shadow_ready_v1",
+    "source_title": "木卫一",
+    "qid": "Q3123",
+    "source_id": "wikidata",
+    "source_url": "https://www.wikidata.org/wiki/Q3123",
+    "package_trial": true
+  }
+]
