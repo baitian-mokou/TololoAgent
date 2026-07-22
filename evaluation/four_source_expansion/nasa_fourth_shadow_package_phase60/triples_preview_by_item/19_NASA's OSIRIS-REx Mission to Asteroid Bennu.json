@@ -1,0 +1,50 @@
+[
+  {
+    "subject": "NASA's OSIRIS-REx Mission to Asteroid Bennu",
+    "predicate": "SOURCE_URL",
+    "object": "https://science.nasa.gov/mission/osiris-rex",
+    "evidence": "https://science.nasa.gov/mission/osiris-rex",
+    "confidence": 0.99,
+    "validation_status": "accepted",
+    "source_id": "nasa",
+    "source_url": "https://science.nasa.gov/mission/osiris-rex",
+    "source_title": "NASA's OSIRIS-REx Mission to Asteroid Bennu",
+    "package_trial": true
+  },
+  {
+    "subject": "NASA's OSIRIS-REx Mission to Asteroid Bennu",
+    "predicate": "HAS_TOPIC",
+    "object": "asteroid",
+    "evidence": "NASA's OSIRIS-REx Mission to Asteroid Bennu.",
+    "confidence": 0.84,
+    "validation_status": "accepted",
+    "source_id": "nasa",
+    "source_url": "https://science.nasa.gov/mission/osiris-rex",
+    "source_title": "NASA's OSIRIS-REx Mission to Asteroid Bennu",
+    "package_trial": true
+  },
+  {
+    "subject": "NASA's OSIRIS-REx Mission to Asteroid Bennu",
+    "predicate": "INSTANCE_OF",
+    "object": "asteroid",
+    "evidence": "NASA's OSIRIS-REx Mission to Asteroid Bennu.",
+    "confidence": 0.82,
+    "validation_status": "accepted",
+    "source_id": "nasa",
+    "source_url": "https://science.nasa.gov/mission/osiris-rex",
+    "source_title": "NASA's OSIRIS-REx Mission to Asteroid Bennu",
+    "package_trial": true
+  },
+  {
+    "subject": "NASA's OSIRIS-REx Mission to Asteroid Bennu",
+    "predicate": "INSTANCE_OF",
+    "object": "small body",
+    "evidence": "NASA's OSIRIS-REx Mission to Asteroid Bennu.",
+    "confidence": 0.72,
+    "validation_status": "accepted",
+    "source_id": "nasa",
+    "source_url": "https://science.nasa.gov/mission/osiris-rex",
+    "source_title": "NASA's OSIRIS-REx Mission to Asteroid Bennu",
+    "package_trial": true
+  }
+]

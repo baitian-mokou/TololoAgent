@@ -1,0 +1,50 @@
+[
+  {
+    "subject": "Solar System Exploration",
+    "predicate": "SOURCE_URL",
+    "object": "https://science.nasa.gov/solar-system",
+    "evidence": "https://science.nasa.gov/solar-system",
+    "confidence": 0.99,
+    "validation_status": "accepted",
+    "source_id": "nasa",
+    "source_url": "https://science.nasa.gov/solar-system",
+    "source_title": "Solar System Exploration",
+    "package_trial": true
+  },
+  {
+    "subject": "Solar System Exploration",
+    "predicate": "HAS_TOPIC",
+    "object": "asteroid",
+    "evidence": "Explore Search News & Events News & Events Recently Published Video Series on NASA+ Podcasts & Audio Blogs Newsletters Social Media Media Resources Multimedia Multimedia NASA+ Images NASA Live NASA Apps Podcasts Image of the Day e-Books 3D Resources Interactives STEM Multimedia N",
+    "confidence": 0.84,
+    "validation_status": "accepted",
+    "source_id": "nasa",
+    "source_url": "https://science.nasa.gov/solar-system",
+    "source_title": "Solar System Exploration",
+    "package_trial": true
+  },
+  {
+    "subject": "Solar System Exploration",
+    "predicate": "INSTANCE_OF",
+    "object": "asteroid",
+    "evidence": "Explore Search News & Events News & Events Recently Published Video Series on NASA+ Podcasts & Audio Blogs Newsletters Social Media Media Resources Multimedia Multimedia NASA+ Images NASA Live NASA Apps Podcasts Image of the Day e-Books 3D Resources Interactives STEM Multimedia N",
+    "confidence": 0.82,
+    "validation_status": "accepted",
+    "source_id": "nasa",
+    "source_url": "https://science.nasa.gov/solar-system",
+    "source_title": "Solar System Exploration",
+    "package_trial": true
+  },
+  {
+    "subject": "Solar System Exploration",
+    "predicate": "INSTANCE_OF",
+    "object": "small body",
+    "evidence": "Explore Search News & Events News & Events Recently Published Video Series on NASA+ Podcasts & Audio Blogs Newsletters Social Media Media Resources Multimedia Multimedia NASA+ Images NASA Live NASA Apps Podcasts Image of the Day e-Books 3D Resources Interactives STEM Multimedia N",
+    "confidence": 0.72,
+    "validation_status": "accepted",
+    "source_id": "nasa",
+    "source_url": "https://science.nasa.gov/solar-system",
+    "source_title": "Solar System Exploration",
+    "package_trial": true
+  }
+]

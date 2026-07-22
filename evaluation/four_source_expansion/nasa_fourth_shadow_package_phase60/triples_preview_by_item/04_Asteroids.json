@@ -1,0 +1,50 @@
+[
+  {
+    "subject": "Asteroids",
+    "predicate": "SOURCE_URL",
+    "object": "https://science.nasa.gov/solar-system/asteroids",
+    "evidence": "https://science.nasa.gov/solar-system/asteroids",
+    "confidence": 0.99,
+    "validation_status": "accepted",
+    "source_id": "nasa",
+    "source_url": "https://science.nasa.gov/solar-system/asteroids",
+    "source_title": "Asteroids",
+    "package_trial": true
+  },
+  {
+    "subject": "Asteroids",
+    "predicate": "HAS_TOPIC",
+    "object": "asteroid",
+    "evidence": "Asteroids.",
+    "confidence": 0.84,
+    "validation_status": "accepted",
+    "source_id": "nasa",
+    "source_url": "https://science.nasa.gov/solar-system/asteroids",
+    "source_title": "Asteroids",
+    "package_trial": true
+  },
+  {
+    "subject": "Asteroids",
+    "predicate": "INSTANCE_OF",
+    "object": "asteroid",
+    "evidence": "Asteroids.",
+    "confidence": 0.82,
+    "validation_status": "accepted",
+    "source_id": "nasa",
+    "source_url": "https://science.nasa.gov/solar-system/asteroids",
+    "source_title": "Asteroids",
+    "package_trial": true
+  },
+  {
+    "subject": "Asteroids",
+    "predicate": "INSTANCE_OF",
+    "object": "small body",
+    "evidence": "Asteroids.",
+    "confidence": 0.72,
+    "validation_status": "accepted",
+    "source_id": "nasa",
+    "source_url": "https://science.nasa.gov/solar-system/asteroids",
+    "source_title": "Asteroids",
+    "package_trial": true
+  }
+]

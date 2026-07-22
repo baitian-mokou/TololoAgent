@@ -1,0 +1,50 @@
+[
+  {
+    "subject": "Asteroids, Comets, and Meteors",
+    "predicate": "SOURCE_URL",
+    "object": "https://solarsystem.nasa.gov/asteroids-comets-and-meteors/overview",
+    "evidence": "https://solarsystem.nasa.gov/asteroids-comets-and-meteors/overview",
+    "confidence": 0.99,
+    "validation_status": "accepted",
+    "source_id": "nasa",
+    "source_url": "https://solarsystem.nasa.gov/asteroids-comets-and-meteors/overview",
+    "source_title": "Asteroids, Comets, and Meteors",
+    "package_trial": true
+  },
+  {
+    "subject": "Asteroids, Comets, and Meteors",
+    "predicate": "HAS_TOPIC",
+    "object": "asteroid",
+    "evidence": "Asteroids, Comets, and Meteors.",
+    "confidence": 0.84,
+    "validation_status": "accepted",
+    "source_id": "nasa",
+    "source_url": "https://solarsystem.nasa.gov/asteroids-comets-and-meteors/overview",
+    "source_title": "Asteroids, Comets, and Meteors",
+    "package_trial": true
+  },
+  {
+    "subject": "Asteroids, Comets, and Meteors",
+    "predicate": "INSTANCE_OF",
+    "object": "asteroid",
+    "evidence": "Asteroids, Comets, and Meteors.",
+    "confidence": 0.82,
+    "validation_status": "accepted",
+    "source_id": "nasa",
+    "source_url": "https://solarsystem.nasa.gov/asteroids-comets-and-meteors/overview",
+    "source_title": "Asteroids, Comets, and Meteors",
+    "package_trial": true
+  },
+  {
+    "subject": "Asteroids, Comets, and Meteors",
+    "predicate": "INSTANCE_OF",
+    "object": "small body",
+    "evidence": "Asteroids, Comets, and Meteors.",
+    "confidence": 0.72,
+    "validation_status": "accepted",
+    "source_id": "nasa",
+    "source_url": "https://solarsystem.nasa.gov/asteroids-comets-and-meteors/overview",
+    "source_title": "Asteroids, Comets, and Meteors",
+    "package_trial": true
+  }
+]
