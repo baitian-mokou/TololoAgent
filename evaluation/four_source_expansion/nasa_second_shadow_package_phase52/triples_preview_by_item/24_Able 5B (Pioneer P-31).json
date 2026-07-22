@@ -1,0 +1,50 @@
+[
+  {
+    "subject": "Able 5B (Pioneer P-31)",
+    "predicate": "SOURCE_URL",
+    "object": "https://science.nasa.gov/mission/pioneer-p-31-able-5b/",
+    "evidence": "https://science.nasa.gov/mission/pioneer-p-31-able-5b/",
+    "confidence": 0.99,
+    "validation_status": "accepted",
+    "source_id": "nasa",
+    "source_url": "https://science.nasa.gov/mission/pioneer-p-31-able-5b/",
+    "source_title": "Able 5B (Pioneer P-31)",
+    "package_trial": true
+  },
+  {
+    "subject": "Able 5B (Pioneer P-31)",
+    "predicate": "HAS_TOPIC",
+    "object": "asteroid",
+    "evidence": "Explore Search News & Events News & Events Recently Published Video Series on NASA+ Podcasts & Audio Blogs Newsletters Social Media Media Resources Multimedia Multimedia NASA+ Images NASA Live NASA Apps Podcasts Image of the Day e-Books 3D Resources Interactives STEM Multimedia N",
+    "confidence": 0.84,
+    "validation_status": "accepted",
+    "source_id": "nasa",
+    "source_url": "https://science.nasa.gov/mission/pioneer-p-31-able-5b/",
+    "source_title": "Able 5B (Pioneer P-31)",
+    "package_trial": true
+  },
+  {
+    "subject": "Able 5B (Pioneer P-31)",
+    "predicate": "INSTANCE_OF",
+    "object": "asteroid",
+    "evidence": "Explore Search News & Events News & Events Recently Published Video Series on NASA+ Podcasts & Audio Blogs Newsletters Social Media Media Resources Multimedia Multimedia NASA+ Images NASA Live NASA Apps Podcasts Image of the Day e-Books 3D Resources Interactives STEM Multimedia N",
+    "confidence": 0.82,
+    "validation_status": "accepted",
+    "source_id": "nasa",
+    "source_url": "https://science.nasa.gov/mission/pioneer-p-31-able-5b/",
+    "source_title": "Able 5B (Pioneer P-31)",
+    "package_trial": true
+  },
+  {
+    "subject": "Able 5B (Pioneer P-31)",
+    "predicate": "INSTANCE_OF",
+    "object": "small body",
+    "evidence": "Explore Search News & Events News & Events Recently Published Video Series on NASA+ Podcasts & Audio Blogs Newsletters Social Media Media Resources Multimedia Multimedia NASA+ Images NASA Live NASA Apps Podcasts Image of the Day e-Books 3D Resources Interactives STEM Multimedia N",
+    "confidence": 0.72,
+    "validation_status": "accepted",
+    "source_id": "nasa",
+    "source_url": "https://science.nasa.gov/mission/pioneer-p-31-able-5b/",
+    "source_title": "Able 5B (Pioneer P-31)",
+    "package_trial": true
+  }
+]

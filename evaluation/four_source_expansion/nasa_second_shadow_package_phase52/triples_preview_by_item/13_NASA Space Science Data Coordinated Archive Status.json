@@ -1,0 +1,50 @@
+[
+  {
+    "subject": "NASA Space Science Data Coordinated Archive Status",
+    "predicate": "SOURCE_URL",
+    "object": "https://nssdc.gsfc.nasa.gov/planetary/planets/cometpage.html",
+    "evidence": "https://nssdc.gsfc.nasa.gov/planetary/planets/cometpage.html",
+    "confidence": 0.99,
+    "validation_status": "accepted",
+    "source_id": "nasa",
+    "source_url": "https://nssdc.gsfc.nasa.gov/planetary/planets/cometpage.html",
+    "source_title": "NASA Space Science Data Coordinated Archive Status",
+    "package_trial": true
+  },
+  {
+    "subject": "NASA Space Science Data Coordinated Archive Status",
+    "predicate": "HAS_TOPIC",
+    "object": "comet",
+    "evidence": "Explore Search News & Events News & Events News Releases Recently Published Video Series on NASA+ Podcasts & Audio Blogs Newsletters Social Media Media Resources Events Upcoming Launches & Landings Virtual Guest Program Multimedia Multimedia NASA+ Images NASA Live NASA Apps Podca",
+    "confidence": 0.84,
+    "validation_status": "accepted",
+    "source_id": "nasa",
+    "source_url": "https://nssdc.gsfc.nasa.gov/planetary/planets/cometpage.html",
+    "source_title": "NASA Space Science Data Coordinated Archive Status",
+    "package_trial": true
+  },
+  {
+    "subject": "NASA Space Science Data Coordinated Archive Status",
+    "predicate": "INSTANCE_OF",
+    "object": "comet",
+    "evidence": "Explore Search News & Events News & Events News Releases Recently Published Video Series on NASA+ Podcasts & Audio Blogs Newsletters Social Media Media Resources Events Upcoming Launches & Landings Virtual Guest Program Multimedia Multimedia NASA+ Images NASA Live NASA Apps Podca",
+    "confidence": 0.82,
+    "validation_status": "accepted",
+    "source_id": "nasa",
+    "source_url": "https://nssdc.gsfc.nasa.gov/planetary/planets/cometpage.html",
+    "source_title": "NASA Space Science Data Coordinated Archive Status",
+    "package_trial": true
+  },
+  {
+    "subject": "NASA Space Science Data Coordinated Archive Status",
+    "predicate": "INSTANCE_OF",
+    "object": "small body",
+    "evidence": "Explore Search News & Events News & Events News Releases Recently Published Video Series on NASA+ Podcasts & Audio Blogs Newsletters Social Media Media Resources Events Upcoming Launches & Landings Virtual Guest Program Multimedia Multimedia NASA+ Images NASA Live NASA Apps Podca",
+    "confidence": 0.72,
+    "validation_status": "accepted",
+    "source_id": "nasa",
+    "source_url": "https://nssdc.gsfc.nasa.gov/planetary/planets/cometpage.html",
+    "source_title": "NASA Space Science Data Coordinated Archive Status",
+    "package_trial": true
+  }
+]

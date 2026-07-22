@@ -1,0 +1,50 @@
+[
+  {
+    "subject": "NASA's Hubble Detects First-Ever Spin Reversal of Tiny Comet",
+    "predicate": "SOURCE_URL",
+    "object": "https://science.nasa.gov/missions/hubble/nasas-hubble-detects-first-ever-spin-reversal-of-tiny-comet/",
+    "evidence": "https://science.nasa.gov/missions/hubble/nasas-hubble-detects-first-ever-spin-reversal-of-tiny-comet/",
+    "confidence": 0.99,
+    "validation_status": "accepted",
+    "source_id": "nasa",
+    "source_url": "https://science.nasa.gov/missions/hubble/nasas-hubble-detects-first-ever-spin-reversal-of-tiny-comet/",
+    "source_title": "NASA's Hubble Detects First-Ever Spin Reversal of Tiny Comet",
+    "package_trial": true
+  },
+  {
+    "subject": "NASA's Hubble Detects First-Ever Spin Reversal of Tiny Comet",
+    "predicate": "HAS_TOPIC",
+    "object": "comet",
+    "evidence": "NASA's Hubble Detects First-Ever Spin Reversal of Tiny Comet.",
+    "confidence": 0.84,
+    "validation_status": "accepted",
+    "source_id": "nasa",
+    "source_url": "https://science.nasa.gov/missions/hubble/nasas-hubble-detects-first-ever-spin-reversal-of-tiny-comet/",
+    "source_title": "NASA's Hubble Detects First-Ever Spin Reversal of Tiny Comet",
+    "package_trial": true
+  },
+  {
+    "subject": "NASA's Hubble Detects First-Ever Spin Reversal of Tiny Comet",
+    "predicate": "INSTANCE_OF",
+    "object": "comet",
+    "evidence": "NASA's Hubble Detects First-Ever Spin Reversal of Tiny Comet.",
+    "confidence": 0.82,
+    "validation_status": "accepted",
+    "source_id": "nasa",
+    "source_url": "https://science.nasa.gov/missions/hubble/nasas-hubble-detects-first-ever-spin-reversal-of-tiny-comet/",
+    "source_title": "NASA's Hubble Detects First-Ever Spin Reversal of Tiny Comet",
+    "package_trial": true
+  },
+  {
+    "subject": "NASA's Hubble Detects First-Ever Spin Reversal of Tiny Comet",
+    "predicate": "INSTANCE_OF",
+    "object": "small body",
+    "evidence": "NASA's Hubble Detects First-Ever Spin Reversal of Tiny Comet.",
+    "confidence": 0.72,
+    "validation_status": "accepted",
+    "source_id": "nasa",
+    "source_url": "https://science.nasa.gov/missions/hubble/nasas-hubble-detects-first-ever-spin-reversal-of-tiny-comet/",
+    "source_title": "NASA's Hubble Detects First-Ever Spin Reversal of Tiny Comet",
+    "package_trial": true
+  }
+]

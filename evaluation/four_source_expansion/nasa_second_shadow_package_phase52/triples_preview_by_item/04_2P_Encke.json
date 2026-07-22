@@ -1,0 +1,50 @@
+[
+  {
+    "subject": "2P/Encke",
+    "predicate": "SOURCE_URL",
+    "object": "https://science.nasa.gov/solar-system/comets/2p-encke/",
+    "evidence": "https://science.nasa.gov/solar-system/comets/2p-encke/",
+    "confidence": 0.99,
+    "validation_status": "accepted",
+    "source_id": "nasa",
+    "source_url": "https://science.nasa.gov/solar-system/comets/2p-encke/",
+    "source_title": "2P/Encke",
+    "package_trial": true
+  },
+  {
+    "subject": "2P/Encke",
+    "predicate": "HAS_TOPIC",
+    "object": "comet",
+    "evidence": "Explore Search News & Events News & Events Recently Published Video Series on NASA+ Podcasts & Audio Blogs Newsletters Social Media Media Resources Multimedia Multimedia NASA+ Images NASA Live NASA Apps Podcasts Image of the Day e-Books 3D Resources Interactives STEM Multimedia N",
+    "confidence": 0.84,
+    "validation_status": "accepted",
+    "source_id": "nasa",
+    "source_url": "https://science.nasa.gov/solar-system/comets/2p-encke/",
+    "source_title": "2P/Encke",
+    "package_trial": true
+  },
+  {
+    "subject": "2P/Encke",
+    "predicate": "INSTANCE_OF",
+    "object": "comet",
+    "evidence": "Explore Search News & Events News & Events Recently Published Video Series on NASA+ Podcasts & Audio Blogs Newsletters Social Media Media Resources Multimedia Multimedia NASA+ Images NASA Live NASA Apps Podcasts Image of the Day e-Books 3D Resources Interactives STEM Multimedia N",
+    "confidence": 0.82,
+    "validation_status": "accepted",
+    "source_id": "nasa",
+    "source_url": "https://science.nasa.gov/solar-system/comets/2p-encke/",
+    "source_title": "2P/Encke",
+    "package_trial": true
+  },
+  {
+    "subject": "2P/Encke",
+    "predicate": "INSTANCE_OF",
+    "object": "small body",
+    "evidence": "Explore Search News & Events News & Events Recently Published Video Series on NASA+ Podcasts & Audio Blogs Newsletters Social Media Media Resources Multimedia Multimedia NASA+ Images NASA Live NASA Apps Podcasts Image of the Day e-Books 3D Resources Interactives STEM Multimedia N",
+    "confidence": 0.72,
+    "validation_status": "accepted",
+    "source_id": "nasa",
+    "source_url": "https://science.nasa.gov/solar-system/comets/2p-encke/",
+    "source_title": "2P/Encke",
+    "package_trial": true
+  }
+]

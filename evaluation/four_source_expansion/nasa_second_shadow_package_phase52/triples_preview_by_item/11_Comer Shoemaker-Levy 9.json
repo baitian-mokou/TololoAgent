@@ -1,0 +1,50 @@
+[
+  {
+    "subject": "Comer Shoemaker-Levy 9",
+    "predicate": "SOURCE_URL",
+    "object": "https://science.nasa.gov/solar-system/comets/p-shoemaker-levy-9/",
+    "evidence": "https://science.nasa.gov/solar-system/comets/p-shoemaker-levy-9/",
+    "confidence": 0.99,
+    "validation_status": "accepted",
+    "source_id": "nasa",
+    "source_url": "https://science.nasa.gov/solar-system/comets/p-shoemaker-levy-9/",
+    "source_title": "Comer Shoemaker-Levy 9",
+    "package_trial": true
+  },
+  {
+    "subject": "Comer Shoemaker-Levy 9",
+    "predicate": "HAS_TOPIC",
+    "object": "comet",
+    "evidence": "Explore Search News & Events News & Events Recently Published Video Series on NASA+ Podcasts & Audio Blogs Newsletters Social Media Media Resources Multimedia Multimedia NASA+ Images NASA Live NASA Apps Podcasts Image of the Day e-Books 3D Resources Interactives STEM Multimedia N",
+    "confidence": 0.84,
+    "validation_status": "accepted",
+    "source_id": "nasa",
+    "source_url": "https://science.nasa.gov/solar-system/comets/p-shoemaker-levy-9/",
+    "source_title": "Comer Shoemaker-Levy 9",
+    "package_trial": true
+  },
+  {
+    "subject": "Comer Shoemaker-Levy 9",
+    "predicate": "INSTANCE_OF",
+    "object": "comet",
+    "evidence": "Explore Search News & Events News & Events Recently Published Video Series on NASA+ Podcasts & Audio Blogs Newsletters Social Media Media Resources Multimedia Multimedia NASA+ Images NASA Live NASA Apps Podcasts Image of the Day e-Books 3D Resources Interactives STEM Multimedia N",
+    "confidence": 0.82,
+    "validation_status": "accepted",
+    "source_id": "nasa",
+    "source_url": "https://science.nasa.gov/solar-system/comets/p-shoemaker-levy-9/",
+    "source_title": "Comer Shoemaker-Levy 9",
+    "package_trial": true
+  },
+  {
+    "subject": "Comer Shoemaker-Levy 9",
+    "predicate": "INSTANCE_OF",
+    "object": "small body",
+    "evidence": "Explore Search News & Events News & Events Recently Published Video Series on NASA+ Podcasts & Audio Blogs Newsletters Social Media Media Resources Multimedia Multimedia NASA+ Images NASA Live NASA Apps Podcasts Image of the Day e-Books 3D Resources Interactives STEM Multimedia N",
+    "confidence": 0.72,
+    "validation_status": "accepted",
+    "source_id": "nasa",
+    "source_url": "https://science.nasa.gov/solar-system/comets/p-shoemaker-levy-9/",
+    "source_title": "Comer Shoemaker-Levy 9",
+    "package_trial": true
+  }
+]

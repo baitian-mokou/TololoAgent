@@ -1,0 +1,545 @@
+{
+  "phase": "Phase 52",
+  "mode": "nasa_second_shadow_package_preparation",
+  "generated_at": "2026-07-22T08:04:38.574611+00:00",
+  "source_id": "nasa",
+  "target_count": 30,
+  "selected_count": 30,
+  "packaged_items": 29,
+  "triples": 116,
+  "narratives": 116,
+  "failed": 0,
+  "rejected": 1,
+  "duplicates_excluded": 0,
+  "phase45_items_excluded": 20,
+  "shortage": 1,
+  "shortage_reason": "remaining Phase 40 candidates were fewer than target or failed quality/fetch gates",
+  "candidate_statuses": [
+    {
+      "url": "https://science.nasa.gov/solar-system/comets/1p-halley/",
+      "title": "1P/Halley - NASA Science",
+      "status": "packaged",
+      "network_attempted": true
+    },
+    {
+      "url": "https://science.nasa.gov/solar-system/comets/67p-churyumov-gerasimenko/",
+      "title": "67P/Churyumov-Gerasimenko - NASA Science",
+      "status": "packaged",
+      "network_attempted": true
+    },
+    {
+      "url": "https://science.nasa.gov/solar-system/comets/2i-borisov/",
+      "title": "Comet 2I/Borisov - NASA Science",
+      "status": "packaged",
+      "network_attempted": true
+    },
+    {
+      "url": "https://science.nasa.gov/solar-system/comets/2p-encke/",
+      "title": "2P/Encke - NASA Science",
+      "status": "packaged",
+      "network_attempted": true
+    },
+    {
+      "url": "https://science.nasa.gov/solar-system/comets/81p-wild/",
+      "title": "81P/Wild (Wild 2) - NASA Science",
+      "status": "packaged",
+      "network_attempted": true
+    },
+    {
+      "url": "https://science.nasa.gov/solar-system/comets/9p-tempel-1/",
+      "title": "9P/Tempel 1 - NASA Science",
+      "status": "packaged",
+      "network_attempted": true
+    },
+    {
+      "url": "https://science.nasa.gov/solar-system/comets/c-1995-o1-hale-bopp/",
+      "title": "C/1995 O1 (Hale-Bopp) - NASA Science",
+      "status": "packaged",
+      "network_attempted": true
+    },
+    {
+      "url": "https://science.nasa.gov/solar-system/comets/c-2013-a1-siding-spring/",
+      "title": "C/2013 A1 Siding Spring - NASA Science",
+      "status": "packaged",
+      "network_attempted": true
+    },
+    {
+      "url": "https://science.nasa.gov/solar-system/comets/c-2012-s1-ison/",
+      "title": "C/2012 S1 (ISON) - NASA Science",
+      "status": "packaged",
+      "network_attempted": true
+    },
+    {
+      "url": "https://science.nasa.gov/solar-system/comets/oumuamua/",
+      "title": "'Oumuamua - NASA Science",
+      "status": "packaged",
+      "network_attempted": true
+    },
+    {
+      "url": "https://science.nasa.gov/solar-system/comets/p-shoemaker-levy-9/",
+      "title": "Comer Shoemaker-Levy 9",
+      "status": "packaged",
+      "network_attempted": true
+    },
+    {
+      "url": "https://science.nasa.gov/missions/hubble/nasas-hubble-detects-first-ever-spin-reversal-of-tiny-comet/",
+      "title": "NASA's Hubble Detects First-Ever Spin Reversal of Tiny Comet - NASA Science Facebook logo Instagram logo",
+      "status": "packaged",
+      "network_attempted": true
+    },
+    {
+      "url": "https://nssdc.gsfc.nasa.gov/planetary/planets/cometpage.html",
+      "title": "NASA Space Science Data Coordinated Archive Status - NASA",
+      "status": "packaged",
+      "network_attempted": true
+    },
+    {
+      "url": "https://science.nasa.gov/mission/imap/",
+      "title": "Interstellar Mapping and Acceleration Probe (IMAP)",
+      "status": "packaged",
+      "network_attempted": true
+    },
+    {
+      "url": "https://science.nasa.gov/mission/tracers/",
+      "title": "TRACERS - NASA Science",
+      "status": "packaged",
+      "network_attempted": true
+    },
+    {
+      "url": "https://science.nasa.gov/mission/dragonfly/",
+      "title": "Dragonfly",
+      "status": "packaged",
+      "network_attempted": true
+    },
+    {
+      "url": "https://science.nasa.gov/missions/mission-news/",
+      "title": "NASA Science Mission News - NASA Science",
+      "status": "rejected",
+      "reason": "quality_exploratory",
+      "network_attempted": true
+    },
+    {
+      "url": "https://science.nasa.gov/missions/hubble/nasa-celebrates-hubbles-35th-year-in-orbit/",
+      "title": "Eye on Infinity: NASA Celebrates Hubble's 35th Year in Orbit - NASA Science Facebook logo Instagram logo",
+      "status": "packaged",
+      "network_attempted": true
+    },
+    {
+      "url": "https://science.nasa.gov/mission/3d-tissue-chips/",
+      "title": "3D Tissue Chips - NASA Science",
+      "status": "packaged",
+      "network_attempted": true
+    },
+    {
+      "url": "https://science.nasa.gov/mission/a-train/",
+      "title": "A-Train: The Afternoon Constellation - NASA Science",
+      "status": "packaged",
+      "network_attempted": true
+    },
+    {
+      "url": "https://science.nasa.gov/mission/pioneer-0-able1/",
+      "title": "Able 1 (Pioneer 0) - NASA Science",
+      "status": "packaged",
+      "network_attempted": true
+    },
+    {
+      "url": "https://science.nasa.gov/mission/pioneer-1-able-2/",
+      "title": "Able 2 (Pioneer 1) - NASA Science",
+      "status": "packaged",
+      "network_attempted": true
+    },
+    {
+      "url": "https://science.nasa.gov/mission/pioneer-p-3-able-4b/",
+      "title": "Able 4B (Pioneer P-3) - NASA Science",
+      "status": "packaged",
+      "network_attempted": true
+    },
+    {
+      "url": "https://science.nasa.gov/mission/pioneer-p-30-able-5a/",
+      "title": "Able 5A (Pioneer P-30) - NASA Science",
+      "status": "packaged",
+      "network_attempted": true
+    },
+    {
+      "url": "https://science.nasa.gov/mission/pioneer-p-31-able-5b/",
+      "title": "Able 5B (Pioneer P-31) - NASA Science",
+      "status": "packaged",
+      "network_attempted": true
+    },
+    {
+      "url": "https://science.nasa.gov/mission/ace/",
+      "title": "ACE - NASA Science",
+      "status": "packaged",
+      "network_attempted": true
+    },
+    {
+      "url": "https://science.nasa.gov/mission/acme/",
+      "title": "ACME - NASA Science",
+      "status": "packaged",
+      "network_attempted": true
+    },
+    {
+      "url": "https://science.nasa.gov/mission/acrimsat/",
+      "title": "ACRIMSAT - NASA Science",
+      "status": "packaged",
+      "network_attempted": true
+    },
+    {
+      "url": "https://science.nasa.gov/mission/act-america/",
+      "title": "ACT-America - NASA Science",
+      "status": "packaged",
+      "network_attempted": true
+    },
+    {
+      "url": "https://science.nasa.gov/mission/adeos-midori/",
+      "title": "ADEOS / Midori - NASA Science",
+      "status": "packaged",
+      "network_attempted": true
+    }
+  ],
+  "relations_count": {
+    "HAS_TOPIC": 29,
+    "INSTANCE_OF": 58,
+    "SOURCE_URL": 29
+  },
+  "type_distribution": {
+    "asteroid": 32,
+    "comet": 26,
+    "small body": 29
+  },
+  "sample_items": [
+    {
+      "title": "1P/Halley",
+      "url": "https://science.nasa.gov/solar-system/comets/1p-halley/",
+      "source_url": "https://science.nasa.gov/solar-system/comets/1p-halley/",
+      "triples": [
+        {
+          "subject": "1P/Halley",
+          "predicate": "SOURCE_URL",
+          "object": "https://science.nasa.gov/solar-system/comets/1p-halley/",
+          "evidence": "https://science.nasa.gov/solar-system/comets/1p-halley/",
+          "confidence": 0.99,
+          "validation_status": "accepted"
+        },
+        {
+          "subject": "1P/Halley",
+          "predicate": "HAS_TOPIC",
+          "object": "comet",
+          "evidence": "Explore Search News & Events News & Events Recently Published Video Series on NASA+ Podcasts & Audio Blogs Newsletters Social Media Media Resources Multimedia Multimedia NASA+ Images NASA Live NASA Apps Podcasts Image of the Day e-Books 3D Resources Interactives STEM Multimedia N",
+          "confidence": 0.84,
+          "validation_status": "accepted"
+        },
+        {
+          "subject": "1P/Halley",
+          "predicate": "INSTANCE_OF",
+          "object": "comet",
+          "evidence": "Explore Search News & Events News & Events Recently Published Video Series on NASA+ Podcasts & Audio Blogs Newsletters Social Media Media Resources Multimedia Multimedia NASA+ Images NASA Live NASA Apps Podcasts Image of the Day e-Books 3D Resources Interactives STEM Multimedia N",
+          "confidence": 0.82,
+          "validation_status": "accepted"
+        },
+        {
+          "subject": "1P/Halley",
+          "predicate": "INSTANCE_OF",
+          "object": "small body",
+          "evidence": "Explore Search News & Events News & Events Recently Published Video Series on NASA+ Podcasts & Audio Blogs Newsletters Social Media Media Resources Multimedia Multimedia NASA+ Images NASA Live NASA Apps Podcasts Image of the Day e-Books 3D Resources Interactives STEM Multimedia N",
+          "confidence": 0.72,
+          "validation_status": "accepted"
+        }
+      ],
+      "narratives": [
+        {
+          "page_title": "1P/Halley - NASA Science",
+          "section": "raw_chunk_1",
+          "content": "Explore Search News & Events News & Events Recently Published Video Series on NASA+ Podcasts & Audio Blogs Newsletters Social Media Media Resources Multimedia Multimedia NASA+ Images NASA Live NASA Apps Podcasts Image of the Day e-Books 3D Resources Interactives STEM Multimedia NASA Brand & Usage Guidelines NASA+ Search Suggested Searches Climate Change Artemis Expedition 64 Mars perseverance SpaceX Crew-2 International Space Station View All Topics A-Z Home Missions Humans in Space Earth The Solar System The Universe Science Aeronautics Technology Learning Resources About NASA Español News & Events Multimedia NASA+ Highlights 2 min read NASA-Funded Study Shows How Controlled Burns Help Sequoias Survive Wildfires article 1 day ago 5 min read NASA Study Finds Near-Earth Asteroid Is Actually Comet article 6 days ago 3 min read What’s Up: July 2026 Skywatching Tips from NASA article 3 weeks",
+          "keywords": [
+            "1P/Halley - NASA Science",
+            "nasa"
+          ],
+          "source_url": "https://science.nasa.gov/solar-system/comets/1p-halley/",
+          "source": "nasa",
+          "source_name": "nasa",
+          "source_role": "primary",
+          "origin": "api",
+          "type": "embedding_chunk",
+          "schema_version": "nasa_shadow_ready_v1",
+          "source_title": "1P/Halley - NASA Science"
+        }
+      ],
+      "candidate_reason": "phase40_remaining_after_phase45_exclusion",
+      "warnings": []
+    },
+    {
+      "title": "67P/Churyumov-Gerasimenko",
+      "url": "https://science.nasa.gov/solar-system/comets/67p-churyumov-gerasimenko/",
+      "source_url": "https://science.nasa.gov/solar-system/comets/67p-churyumov-gerasimenko/",
+      "triples": [
+        {
+          "subject": "67P/Churyumov-Gerasimenko",
+          "predicate": "SOURCE_URL",
+          "object": "https://science.nasa.gov/solar-system/comets/67p-churyumov-gerasimenko/",
+          "evidence": "https://science.nasa.gov/solar-system/comets/67p-churyumov-gerasimenko/",
+          "confidence": 0.99,
+          "validation_status": "accepted"
+        },
+        {
+          "subject": "67P/Churyumov-Gerasimenko",
+          "predicate": "HAS_TOPIC",
+          "object": "comet",
+          "evidence": "Explore Search News & Events News & Events Recently Published Video Series on NASA+ Podcasts & Audio Blogs Newsletters Social Media Media Resources Multimedia Multimedia NASA+ Images NASA Live NASA Apps Podcasts Image of the Day e-Books 3D Resources Interactives STEM Multimedia N",
+          "confidence": 0.84,
+          "validation_status": "accepted"
+        },
+        {
+          "subject": "67P/Churyumov-Gerasimenko",
+          "predicate": "INSTANCE_OF",
+          "object": "comet",
+          "evidence": "Explore Search News & Events News & Events Recently Published Video Series on NASA+ Podcasts & Audio Blogs Newsletters Social Media Media Resources Multimedia Multimedia NASA+ Images NASA Live NASA Apps Podcasts Image of the Day e-Books 3D Resources Interactives STEM Multimedia N",
+          "confidence": 0.82,
+          "validation_status": "accepted"
+        },
+        {
+          "subject": "67P/Churyumov-Gerasimenko",
+          "predicate": "INSTANCE_OF",
+          "object": "small body",
+          "evidence": "Explore Search News & Events News & Events Recently Published Video Series on NASA+ Podcasts & Audio Blogs Newsletters Social Media Media Resources Multimedia Multimedia NASA+ Images NASA Live NASA Apps Podcasts Image of the Day e-Books 3D Resources Interactives STEM Multimedia N",
+          "confidence": 0.72,
+          "validation_status": "accepted"
+        }
+      ],
+      "narratives": [
+        {
+          "page_title": "67P/Churyumov-Gerasimenko - NASA Science",
+          "section": "raw_chunk_1",
+          "content": "Explore Search News & Events News & Events Recently Published Video Series on NASA+ Podcasts & Audio Blogs Newsletters Social Media Media Resources Multimedia Multimedia NASA+ Images NASA Live NASA Apps Podcasts Image of the Day e-Books 3D Resources Interactives STEM Multimedia NASA Brand & Usage Guidelines NASA+ Search Suggested Searches Climate Change Artemis Expedition 64 Mars perseverance SpaceX Crew-2 International Space Station View All Topics A-Z Home Missions Humans in Space Earth The Solar System The Universe Science Aeronautics Technology Learning Resources About NASA Español News & Events Multimedia NASA+ Highlights 2 min read NASA-Funded Study Shows How Controlled Burns Help Sequoias Survive Wildfires article 1 day ago 5 min read NASA Study Finds Near-Earth Asteroid Is Actually Comet article 6 days ago 3 min read What’s Up: July 2026 Skywatching Tips from NASA article 3 weeks",
+          "keywords": [
+            "67P/Churyumov-Gerasimenko - NASA Science",
+            "nasa"
+          ],
+          "source_url": "https://science.nasa.gov/solar-system/comets/67p-churyumov-gerasimenko/",
+          "source": "nasa",
+          "source_name": "nasa",
+          "source_role": "primary",
+          "origin": "api",
+          "type": "embedding_chunk",
+          "schema_version": "nasa_shadow_ready_v1",
+          "source_title": "67P/Churyumov-Gerasimenko - NASA Science"
+        }
+      ],
+      "candidate_reason": "phase40_remaining_after_phase45_exclusion",
+      "warnings": []
+    },
+    {
+      "title": "Comet 2I/Borisov",
+      "url": "https://science.nasa.gov/solar-system/comets/2i-borisov/",
+      "source_url": "https://science.nasa.gov/solar-system/comets/2i-borisov/",
+      "triples": [
+        {
+          "subject": "Comet 2I/Borisov",
+          "predicate": "SOURCE_URL",
+          "object": "https://science.nasa.gov/solar-system/comets/2i-borisov/",
+          "evidence": "https://science.nasa.gov/solar-system/comets/2i-borisov/",
+          "confidence": 0.99,
+          "validation_status": "accepted"
+        },
+        {
+          "subject": "Comet 2I/Borisov",
+          "predicate": "HAS_TOPIC",
+          "object": "comet",
+          "evidence": "Comet 2I/Borisov.",
+          "confidence": 0.84,
+          "validation_status": "accepted"
+        },
+        {
+          "subject": "Comet 2I/Borisov",
+          "predicate": "INSTANCE_OF",
+          "object": "comet",
+          "evidence": "Comet 2I/Borisov.",
+          "confidence": 0.82,
+          "validation_status": "accepted"
+        },
+        {
+          "subject": "Comet 2I/Borisov",
+          "predicate": "INSTANCE_OF",
+          "object": "small body",
+          "evidence": "Comet 2I/Borisov.",
+          "confidence": 0.72,
+          "validation_status": "accepted"
+        }
+      ],
+      "narratives": [
+        {
+          "page_title": "Comet 2I/Borisov - NASA Science",
+          "section": "raw_chunk_1",
+          "content": "Explore Search News & Events News & Events Recently Published Video Series on NASA+ Podcasts & Audio Blogs Newsletters Social Media Media Resources Multimedia Multimedia NASA+ Images NASA Live NASA Apps Podcasts Image of the Day e-Books 3D Resources Interactives STEM Multimedia NASA Brand & Usage Guidelines NASA+ Search Suggested Searches Climate Change Artemis Expedition 64 Mars perseverance SpaceX Crew-2 International Space Station View All Topics A-Z Home Missions Humans in Space Earth The Solar System The Universe Science Aeronautics Technology Learning Resources About NASA Español News & Events Multimedia NASA+ Highlights 2 min read NASA-Funded Study Shows How Controlled Burns Help Sequoias Survive Wildfires article 1 day ago 5 min read NASA Study Finds Near-Earth Asteroid Is Actually Comet article 6 days ago 3 min read What’s Up: July 2026 Skywatching Tips from NASA article 3 weeks",
+          "keywords": [
+            "Comet 2I/Borisov - NASA Science",
+            "nasa"
+          ],
+          "source_url": "https://science.nasa.gov/solar-system/comets/2i-borisov/",
+          "source": "nasa",
+          "source_name": "nasa",
+          "source_role": "primary",
+          "origin": "api",
+          "type": "embedding_chunk",
+          "schema_version": "nasa_shadow_ready_v1",
+          "source_title": "Comet 2I/Borisov - NASA Science"
+        }
+      ],
+      "candidate_reason": "phase40_remaining_after_phase45_exclusion",
+      "warnings": []
+    },
+    {
+      "title": "2P/Encke",
+      "url": "https://science.nasa.gov/solar-system/comets/2p-encke/",
+      "source_url": "https://science.nasa.gov/solar-system/comets/2p-encke/",
+      "triples": [
+        {
+          "subject": "2P/Encke",
+          "predicate": "SOURCE_URL",
+          "object": "https://science.nasa.gov/solar-system/comets/2p-encke/",
+          "evidence": "https://science.nasa.gov/solar-system/comets/2p-encke/",
+          "confidence": 0.99,
+          "validation_status": "accepted"
+        },
+        {
+          "subject": "2P/Encke",
+          "predicate": "HAS_TOPIC",
+          "object": "comet",
+          "evidence": "Explore Search News & Events News & Events Recently Published Video Series on NASA+ Podcasts & Audio Blogs Newsletters Social Media Media Resources Multimedia Multimedia NASA+ Images NASA Live NASA Apps Podcasts Image of the Day e-Books 3D Resources Interactives STEM Multimedia N",
+          "confidence": 0.84,
+          "validation_status": "accepted"
+        },
+        {
+          "subject": "2P/Encke",
+          "predicate": "INSTANCE_OF",
+          "object": "comet",
+          "evidence": "Explore Search News & Events News & Events Recently Published Video Series on NASA+ Podcasts & Audio Blogs Newsletters Social Media Media Resources Multimedia Multimedia NASA+ Images NASA Live NASA Apps Podcasts Image of the Day e-Books 3D Resources Interactives STEM Multimedia N",
+          "confidence": 0.82,
+          "validation_status": "accepted"
+        },
+        {
+          "subject": "2P/Encke",
+          "predicate": "INSTANCE_OF",
+          "object": "small body",
+          "evidence": "Explore Search News & Events News & Events Recently Published Video Series on NASA+ Podcasts & Audio Blogs Newsletters Social Media Media Resources Multimedia Multimedia NASA+ Images NASA Live NASA Apps Podcasts Image of the Day e-Books 3D Resources Interactives STEM Multimedia N",
+          "confidence": 0.72,
+          "validation_status": "accepted"
+        }
+      ],
+      "narratives": [
+        {
+          "page_title": "2P/Encke - NASA Science",
+          "section": "raw_chunk_1",
+          "content": "Explore Search News & Events News & Events Recently Published Video Series on NASA+ Podcasts & Audio Blogs Newsletters Social Media Media Resources Multimedia Multimedia NASA+ Images NASA Live NASA Apps Podcasts Image of the Day e-Books 3D Resources Interactives STEM Multimedia NASA Brand & Usage Guidelines NASA+ Search Suggested Searches Climate Change Artemis Expedition 64 Mars perseverance SpaceX Crew-2 International Space Station View All Topics A-Z Home Missions Humans in Space Earth The Solar System The Universe Science Aeronautics Technology Learning Resources About NASA Español News & Events Multimedia NASA+ Highlights 2 min read NASA-Funded Study Shows How Controlled Burns Help Sequoias Survive Wildfires article 1 day ago 5 min read NASA Study Finds Near-Earth Asteroid Is Actually Comet article 6 days ago 3 min read What’s Up: July 2026 Skywatching Tips from NASA article 3 weeks",
+          "keywords": [
+            "2P/Encke - NASA Science",
+            "nasa"
+          ],
+          "source_url": "https://science.nasa.gov/solar-system/comets/2p-encke/",
+          "source": "nasa",
+          "source_name": "nasa",
+          "source_role": "primary",
+          "origin": "api",
+          "type": "embedding_chunk",
+          "schema_version": "nasa_shadow_ready_v1",
+          "source_title": "2P/Encke - NASA Science"
+        }
+      ],
+      "candidate_reason": "phase40_remaining_after_phase45_exclusion",
+      "warnings": []
+    },
+    {
+      "title": "81P/Wild (Wild 2)",
+      "url": "https://science.nasa.gov/solar-system/comets/81p-wild/",
+      "source_url": "https://science.nasa.gov/solar-system/comets/81p-wild/",
+      "triples": [
+        {
+          "subject": "81P/Wild (Wild 2)",
+          "predicate": "SOURCE_URL",
+          "object": "https://science.nasa.gov/solar-system/comets/81p-wild/",
+          "evidence": "https://science.nasa.gov/solar-system/comets/81p-wild/",
+          "confidence": 0.99,
+          "validation_status": "accepted"
+        },
+        {
+          "subject": "81P/Wild (Wild 2)",
+          "predicate": "HAS_TOPIC",
+          "object": "comet",
+          "evidence": "Explore Search News & Events News & Events Recently Published Video Series on NASA+ Podcasts & Audio Blogs Newsletters Social Media Media Resources Multimedia Multimedia NASA+ Images NASA Live NASA Apps Podcasts Image of the Day e-Books 3D Resources Interactives STEM Multimedia N",
+          "confidence": 0.84,
+          "validation_status": "accepted"
+        },
+        {
+          "subject": "81P/Wild (Wild 2)",
+          "predicate": "INSTANCE_OF",
+          "object": "comet",
+          "evidence": "Explore Search News & Events News & Events Recently Published Video Series on NASA+ Podcasts & Audio Blogs Newsletters Social Media Media Resources Multimedia Multimedia NASA+ Images NASA Live NASA Apps Podcasts Image of the Day e-Books 3D Resources Interactives STEM Multimedia N",
+          "confidence": 0.82,
+          "validation_status": "accepted"
+        },
+        {
+          "subject": "81P/Wild (Wild 2)",
+          "predicate": "INSTANCE_OF",
+          "object": "small body",
+          "evidence": "Explore Search News & Events News & Events Recently Published Video Series on NASA+ Podcasts & Audio Blogs Newsletters Social Media Media Resources Multimedia Multimedia NASA+ Images NASA Live NASA Apps Podcasts Image of the Day e-Books 3D Resources Interactives STEM Multimedia N",
+          "confidence": 0.72,
+          "validation_status": "accepted"
+        }
+      ],
+      "narratives": [
+        {
+          "page_title": "81P/Wild (Wild 2) - NASA Science",
+          "section": "raw_chunk_1",
+          "content": "Explore Search News & Events News & Events Recently Published Video Series on NASA+ Podcasts & Audio Blogs Newsletters Social Media Media Resources Multimedia Multimedia NASA+ Images NASA Live NASA Apps Podcasts Image of the Day e-Books 3D Resources Interactives STEM Multimedia NASA Brand & Usage Guidelines NASA+ Search Suggested Searches Climate Change Artemis Expedition 64 Mars perseverance SpaceX Crew-2 International Space Station View All Topics A-Z Home Missions Humans in Space Earth The Solar System The Universe Science Aeronautics Technology Learning Resources About NASA Español News & Events Multimedia NASA+ Highlights 2 min read NASA-Funded Study Shows How Controlled Burns Help Sequoias Survive Wildfires article 1 day ago 5 min read NASA Study Finds Near-Earth Asteroid Is Actually Comet article 6 days ago 3 min read What’s Up: July 2026 Skywatching Tips from NASA article 3 weeks",
+          "keywords": [
+            "81P/Wild (Wild 2) - NASA Science",
+            "nasa"
+          ],
+          "source_url": "https://science.nasa.gov/solar-system/comets/81p-wild/",
+          "source": "nasa",
+          "source_name": "nasa",
+          "source_role": "primary",
+          "origin": "api",
+          "type": "embedding_chunk",
+          "schema_version": "nasa_shadow_ready_v1",
+          "source_title": "81P/Wild (Wild 2) - NASA Science"
+        }
+      ],
+      "candidate_reason": "phase40_remaining_after_phase45_exclusion",
+      "warnings": []
+    }
+  ],
+  "approval_status": "pending",
+  "approval_template": "evaluation\\four_source_expansion\\nasa_second_shadow_package_approval_phase52.json",
+  "out_dir": "evaluation\\four_source_expansion\\nasa_second_shadow_package_phase52",
+  "formal_shadow_write_plan": {
+    "execution_status": "not_run",
+    "requires_manual_approval": true,
+    "source_id": "nasa",
+    "approved_item_count_required": 29,
+    "planned_triples": 116,
+    "planned_narratives": 116,
+    "allowed_scope": "shadow materialization path only",
+    "safety_guards": [
+      "ACTIVE_SOURCE remains zh_wikipedia",
+      "nasa remains disabled/shadow",
+      "no Chroma write",
+      "no Neo4j write",
+      "manual approval file required before any formal shadow write"
+    ]
+  },
+  "network_attempted": true,
+  "formal_triples_write": false,
+  "formal_narratives_write": false,
+  "chroma_write": false,
+  "neo4j_write": false,
+  "active_source": "zh_wikipedia",
+  "registry": {
+    "zh_wikipedia": "active",
+    "nasa": "disabled",
+    "esa": "disabled",
+    "wikidata": "disabled"
+  },
+  "active_source_unchanged": true,
+  "recommended_next_action": "review_second_package_before_any_shadow_apply"
+}
