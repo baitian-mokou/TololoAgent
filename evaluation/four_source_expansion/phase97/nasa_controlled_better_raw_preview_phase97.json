@@ -1,0 +1,96 @@
+{
+  "phase": "Phase 97",
+  "mode": "controlled_nasa_better_raw_preview",
+  "generated_at": "2026-07-22T18:16:56.147756+00:00",
+  "candidate_limit": 10,
+  "selected_urls": [
+    "https://nssdc.gsfc.nasa.gov/planetary/factsheet",
+    "https://science.nasa.gov/mission/juno",
+    "https://science.nasa.gov/mission/cassini"
+  ],
+  "attempted": 3,
+  "succeeded": 3,
+  "accepted_reviewable": 0,
+  "rejected": 3,
+  "failed": 0,
+  "raw_previews": [
+    {
+      "source": "nasa",
+      "source_id": "nasa",
+      "url": "https://nssdc.gsfc.nasa.gov/planetary/factsheet",
+      "title": "https://nssdc.gsfc.nasa.gov/planetary/factsheet",
+      "fetch_status": "http_200",
+      "status_code": 200,
+      "review_status": "rejected_for_review",
+      "body_excerpt": "",
+      "quality_flags": [
+        "no_reviewable_body_extracted"
+      ],
+      "reject_reason": "body_too_short_or_boilerplate",
+      "provenance": {
+        "phase": "Phase97",
+        "candidate_reason": "raw_missing_preview_only",
+        "source_url": "https://nssdc.gsfc.nasa.gov/planetary/factsheet"
+      },
+      "triples": []
+    },
+    {
+      "source": "nasa",
+      "source_id": "nasa",
+      "url": "https://science.nasa.gov/mission/juno",
+      "title": "https://science.nasa.gov/mission/juno",
+      "fetch_status": "http_200",
+      "status_code": 200,
+      "review_status": "rejected_for_review",
+      "body_excerpt": "",
+      "quality_flags": [
+        "no_reviewable_body_extracted"
+      ],
+      "reject_reason": "body_too_short_or_boilerplate",
+      "provenance": {
+        "phase": "Phase97",
+        "candidate_reason": "raw_missing_preview_only",
+        "source_url": "https://science.nasa.gov/mission/juno"
+      },
+      "triples": []
+    },
+    {
+      "source": "nasa",
+      "source_id": "nasa",
+      "url": "https://science.nasa.gov/mission/cassini",
+      "title": "https://science.nasa.gov/mission/cassini",
+      "fetch_status": "http_200",
+      "status_code": 200,
+      "review_status": "rejected_for_review",
+      "body_excerpt": "",
+      "quality_flags": [
+        "no_reviewable_body_extracted"
+      ],
+      "reject_reason": "body_too_short_or_boilerplate",
+      "provenance": {
+        "phase": "Phase97",
+        "candidate_reason": "raw_missing_preview_only",
+        "source_url": "https://science.nasa.gov/mission/cassini"
+      },
+      "triples": []
+    }
+  ],
+  "live_fetch_used": true,
+  "quality_verdict": "nasa_better_raw_preview_still_blocked",
+  "production_ready": false,
+  "apply_approved": false,
+  "ingest_approved": false,
+  "formal_raw_write": false,
+  "formal_default_triples_write": false,
+  "chroma_write": false,
+  "neo4j_write": false,
+  "clear_source_ingestion_outputs_called": false,
+  "active_source": "zh_wikipedia",
+  "active_source_unchanged": true,
+  "registry": {
+    "zh_wikipedia": "active",
+    "nasa": "disabled",
+    "esa": "disabled",
+    "wikidata": "disabled"
+  }
+}
