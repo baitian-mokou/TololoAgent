@@ -1,0 +1,52 @@
+{
+  "phase": "Phase 44",
+  "source_id": "nasa",
+  "title": "Comet 3I/ATLAS",
+  "url": "https://science.nasa.gov/solar-system/comets/3i-atlas/",
+  "trial_path": "evaluation\\four_source_expansion\\nasa_shadow_triples_trial_phase43\\17_Comet 3I_ATLAS - NASA Science.json",
+  "raw_path": "F:\\知识表示与处理结课作业\\TololoAgent\\data\\raw_json\\nasa\\https_science.nasa.gov_solar-system_comets_3i-atlas.json",
+  "triples_preview": [
+    {
+      "subject": "Comet 3I/ATLAS",
+      "predicate": "SOURCE_URL",
+      "object": "https://science.nasa.gov/solar-system/comets/3i-atlas/",
+      "evidence": "https://science.nasa.gov/solar-system/comets/3i-atlas/",
+      "confidence": 0.99,
+      "validation_status": "accepted"
+    },
+    {
+      "subject": "Comet 3I/ATLAS",
+      "predicate": "HAS_TOPIC",
+      "object": "comet",
+      "evidence": "Comet 3I/ATLAS.",
+      "confidence": 0.84,
+      "validation_status": "accepted"
+    },
+    {
+      "subject": "Comet 3I/ATLAS",
+      "predicate": "INSTANCE_OF",
+      "object": "comet",
+      "evidence": "Comet 3I/ATLAS.",
+      "confidence": 0.82,
+      "validation_status": "accepted"
+    },
+    {
+      "subject": "Comet 3I/ATLAS",
+      "predicate": "INSTANCE_OF",
+      "object": "small body",
+      "evidence": "Comet 3I/ATLAS.",
+      "confidence": 0.72,
+      "validation_status": "accepted"
+    }
+  ],
+  "narratives_used": 4,
+  "evidence_snippets": [
+    "https://science.nasa.gov/solar-system/comets/3i-atlas/",
+    "Comet 3I/ATLAS.",
+    "Comet 3I/ATLAS.",
+    "Comet 3I/ATLAS."
+  ],
+  "confidence": 0.84,
+  "warnings": [],
+  "formal_write": false
+}

@@ -531,6 +531,7 @@ python scripts/select_deduped_frontier_candidates.py --sources nasa esa --limit 
 python scripts/run_selected_raw_shadow_ingest.py --selected-json evaluation\four_source_expansion\deduped_frontier_candidates_phase40.json --source-limit nasa=20 --source-limit esa=8 --out-json evaluation\four_source_expansion\selected_raw_shadow_ingest_phase41.json --out-md docs\selected_raw_shadow_ingest_phase41.md
 python scripts/preview_new_raw_materialization.py --ingest-report evaluation\four_source_expansion\selected_raw_shadow_ingest_phase41.json --out-json evaluation\four_source_expansion\new_raw_materialization_preview_phase42.json --out-md docs\new_raw_materialization_preview_phase42.md
 python scripts/run_nasa_shadow_triples_trial.py --preview-json evaluation\four_source_expansion\new_raw_materialization_preview_phase42.json --limit 20 --out-dir evaluation\four_source_expansion\nasa_shadow_triples_trial_phase43 --report-json evaluation\four_source_expansion\nasa_shadow_triples_trial_phase43.json --report-md docs\nasa_shadow_triples_trial_phase43.md
+python scripts/preview_nasa_text_relation_extraction.py --trial-dir evaluation\four_source_expansion\nasa_shadow_triples_trial_phase43 --phase42-json evaluation\four_source_expansion\new_raw_materialization_preview_phase42.json --out-dir evaluation\four_source_expansion\nasa_text_relation_preview_phase44 --report-json evaluation\four_source_expansion\nasa_text_relation_preview_phase44.json --report-md docs\nasa_text_relation_preview_phase44.md
 ```
 
 ```powershell

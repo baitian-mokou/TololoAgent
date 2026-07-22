@@ -1,0 +1,52 @@
+{
+  "phase": "Phase 44",
+  "source_id": "nasa",
+  "title": "NASA Space Science Data Coordinated Archive Status",
+  "url": "https://nssdc.gsfc.nasa.gov/planetary/planets/asteroidpage.html",
+  "trial_path": "evaluation\\four_source_expansion\\nasa_shadow_triples_trial_phase43\\15_NASA Space Science Data Coordinated Archive Status - NASA.json",
+  "raw_path": "F:\\知识表示与处理结课作业\\TololoAgent\\data\\raw_json\\nasa\\https_nssdc.gsfc.nasa.gov_planetary_planets_asteroidpage.html.json",
+  "triples_preview": [
+    {
+      "subject": "NASA Space Science Data Coordinated Archive Status",
+      "predicate": "SOURCE_URL",
+      "object": "https://nssdc.gsfc.nasa.gov/planetary/planets/asteroidpage.html",
+      "evidence": "https://nssdc.gsfc.nasa.gov/planetary/planets/asteroidpage.html",
+      "confidence": 0.99,
+      "validation_status": "accepted"
+    },
+    {
+      "subject": "NASA Space Science Data Coordinated Archive Status",
+      "predicate": "HAS_TOPIC",
+      "object": "asteroid",
+      "evidence": "Explore Search News & Events News & Events News Releases Recently Published Video Series on NASA+ Podcasts & Audio Blogs Newsletters Social Media Media Resources Events Upcoming Launches & Landings Virtual Guest Program Multimedia Multimedia NASA+ Images NASA Live NASA Apps Podca",
+      "confidence": 0.84,
+      "validation_status": "accepted"
+    },
+    {
+      "subject": "NASA Space Science Data Coordinated Archive Status",
+      "predicate": "INSTANCE_OF",
+      "object": "asteroid",
+      "evidence": "Explore Search News & Events News & Events News Releases Recently Published Video Series on NASA+ Podcasts & Audio Blogs Newsletters Social Media Media Resources Events Upcoming Launches & Landings Virtual Guest Program Multimedia Multimedia NASA+ Images NASA Live NASA Apps Podca",
+      "confidence": 0.82,
+      "validation_status": "accepted"
+    },
+    {
+      "subject": "NASA Space Science Data Coordinated Archive Status",
+      "predicate": "INSTANCE_OF",
+      "object": "small body",
+      "evidence": "Explore Search News & Events News & Events News Releases Recently Published Video Series on NASA+ Podcasts & Audio Blogs Newsletters Social Media Media Resources Events Upcoming Launches & Landings Virtual Guest Program Multimedia Multimedia NASA+ Images NASA Live NASA Apps Podca",
+      "confidence": 0.72,
+      "validation_status": "accepted"
+    }
+  ],
+  "narratives_used": 4,
+  "evidence_snippets": [
+    "https://nssdc.gsfc.nasa.gov/planetary/planets/asteroidpage.html",
+    "Explore Search News & Events News & Events News Releases Recently Published Video Series on NASA+ Podcasts & Audio Blogs Newsletters Social Media Media Resources Events Upcoming Launches & Landings Virtual Guest Program Multimedia Multimedia NASA+ Images NASA Live NASA Apps Podca",
+    "Explore Search News & Events News & Events News Releases Recently Published Video Series on NASA+ Podcasts & Audio Blogs Newsletters Social Media Media Resources Events Upcoming Launches & Landings Virtual Guest Program Multimedia Multimedia NASA+ Images NASA Live NASA Apps Podca",
+    "Explore Search News & Events News & Events News Releases Recently Published Video Series on NASA+ Podcasts & Audio Blogs Newsletters Social Media Media Resources Events Upcoming Launches & Landings Virtual Guest Program Multimedia Multimedia NASA+ Images NASA Live NASA Apps Podca"
+  ],
+  "confidence": 0.84,
+  "warnings": [],
+  "formal_write": false
+}

@@ -1,0 +1,52 @@
+{
+  "phase": "Phase 44",
+  "source_id": "nasa",
+  "title": "Asteroid Donaldjohanson",
+  "url": "https://science.nasa.gov/solar-system/asteroids/donaldjohanson/",
+  "trial_path": "evaluation\\four_source_expansion\\nasa_shadow_triples_trial_phase43\\08_Asteroid Donaldjohanson.json",
+  "raw_path": "F:\\知识表示与处理结课作业\\TololoAgent\\data\\raw_json\\nasa\\https_science.nasa.gov_solar-system_asteroids_donaldjohanson.json",
+  "triples_preview": [
+    {
+      "subject": "Asteroid Donaldjohanson",
+      "predicate": "SOURCE_URL",
+      "object": "https://science.nasa.gov/solar-system/asteroids/donaldjohanson/",
+      "evidence": "https://science.nasa.gov/solar-system/asteroids/donaldjohanson/",
+      "confidence": 0.99,
+      "validation_status": "accepted"
+    },
+    {
+      "subject": "Asteroid Donaldjohanson",
+      "predicate": "HAS_TOPIC",
+      "object": "asteroid",
+      "evidence": "Asteroid Donaldjohanson.",
+      "confidence": 0.84,
+      "validation_status": "accepted"
+    },
+    {
+      "subject": "Asteroid Donaldjohanson",
+      "predicate": "INSTANCE_OF",
+      "object": "asteroid",
+      "evidence": "Asteroid Donaldjohanson.",
+      "confidence": 0.82,
+      "validation_status": "accepted"
+    },
+    {
+      "subject": "Asteroid Donaldjohanson",
+      "predicate": "INSTANCE_OF",
+      "object": "small body",
+      "evidence": "Asteroid Donaldjohanson.",
+      "confidence": 0.72,
+      "validation_status": "accepted"
+    }
+  ],
+  "narratives_used": 4,
+  "evidence_snippets": [
+    "https://science.nasa.gov/solar-system/asteroids/donaldjohanson/",
+    "Asteroid Donaldjohanson.",
+    "Asteroid Donaldjohanson.",
+    "Asteroid Donaldjohanson."
+  ],
+  "confidence": 0.84,
+  "warnings": [],
+  "formal_write": false
+}

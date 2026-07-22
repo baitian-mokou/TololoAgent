@@ -1,0 +1,52 @@
+{
+  "phase": "Phase 44",
+  "source_id": "nasa",
+  "title": "Asteroid Psyche",
+  "url": "https://science.nasa.gov/solar-system/asteroids/16-psyche/",
+  "trial_path": "evaluation\\four_source_expansion\\nasa_shadow_triples_trial_phase43\\05_Asteroid Psyche.json",
+  "raw_path": "F:\\知识表示与处理结课作业\\TololoAgent\\data\\raw_json\\nasa\\https_science.nasa.gov_solar-system_asteroids_16-psyche.json",
+  "triples_preview": [
+    {
+      "subject": "Asteroid Psyche",
+      "predicate": "SOURCE_URL",
+      "object": "https://science.nasa.gov/solar-system/asteroids/16-psyche/",
+      "evidence": "https://science.nasa.gov/solar-system/asteroids/16-psyche/",
+      "confidence": 0.99,
+      "validation_status": "accepted"
+    },
+    {
+      "subject": "Asteroid Psyche",
+      "predicate": "HAS_TOPIC",
+      "object": "asteroid",
+      "evidence": "Asteroid Psyche.",
+      "confidence": 0.84,
+      "validation_status": "accepted"
+    },
+    {
+      "subject": "Asteroid Psyche",
+      "predicate": "INSTANCE_OF",
+      "object": "asteroid",
+      "evidence": "Asteroid Psyche.",
+      "confidence": 0.82,
+      "validation_status": "accepted"
+    },
+    {
+      "subject": "Asteroid Psyche",
+      "predicate": "INSTANCE_OF",
+      "object": "small body",
+      "evidence": "Asteroid Psyche.",
+      "confidence": 0.72,
+      "validation_status": "accepted"
+    }
+  ],
+  "narratives_used": 4,
+  "evidence_snippets": [
+    "https://science.nasa.gov/solar-system/asteroids/16-psyche/",
+    "Asteroid Psyche.",
+    "Asteroid Psyche.",
+    "Asteroid Psyche."
+  ],
+  "confidence": 0.84,
+  "warnings": [],
+  "formal_write": false
+}

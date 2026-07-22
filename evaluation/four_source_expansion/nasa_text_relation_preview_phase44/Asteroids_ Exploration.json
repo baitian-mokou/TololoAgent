@@ -1,0 +1,52 @@
+{
+  "phase": "Phase 44",
+  "source_id": "nasa",
+  "title": "Asteroids: Exploration",
+  "url": "https://science.nasa.gov/solar-system/asteroids/exploration/",
+  "trial_path": "evaluation\\four_source_expansion\\nasa_shadow_triples_trial_phase43\\02_Asteroids_ Exploration - NASA Science.json",
+  "raw_path": "F:\\知识表示与处理结课作业\\TololoAgent\\data\\raw_json\\nasa\\https_science.nasa.gov_solar-system_asteroids_exploration.json",
+  "triples_preview": [
+    {
+      "subject": "Asteroids: Exploration",
+      "predicate": "SOURCE_URL",
+      "object": "https://science.nasa.gov/solar-system/asteroids/exploration/",
+      "evidence": "https://science.nasa.gov/solar-system/asteroids/exploration/",
+      "confidence": 0.99,
+      "validation_status": "accepted"
+    },
+    {
+      "subject": "Asteroids: Exploration",
+      "predicate": "HAS_TOPIC",
+      "object": "asteroid",
+      "evidence": "Asteroids: Exploration.",
+      "confidence": 0.84,
+      "validation_status": "accepted"
+    },
+    {
+      "subject": "Asteroids: Exploration",
+      "predicate": "INSTANCE_OF",
+      "object": "asteroid",
+      "evidence": "Asteroids: Exploration.",
+      "confidence": 0.82,
+      "validation_status": "accepted"
+    },
+    {
+      "subject": "Asteroids: Exploration",
+      "predicate": "INSTANCE_OF",
+      "object": "small body",
+      "evidence": "Asteroids: Exploration.",
+      "confidence": 0.72,
+      "validation_status": "accepted"
+    }
+  ],
+  "narratives_used": 4,
+  "evidence_snippets": [
+    "https://science.nasa.gov/solar-system/asteroids/exploration/",
+    "Asteroids: Exploration.",
+    "Asteroids: Exploration.",
+    "Asteroids: Exploration."
+  ],
+  "confidence": 0.84,
+  "warnings": [],
+  "formal_write": false
+}
