@@ -2,6 +2,7 @@ from __future__ import annotations
 
 import argparse
 import json
+import shutil
 import sys
 from collections import Counter
 from pathlib import Path
@@ -108,6 +109,20 @@ def select_second_batch(candidates: Sequence[Dict[str, Any]], package_dir: Path,
     return selected, {"excluded_phase45": excluded_packaged, "duplicate_candidates": duplicate}
 
 
+def overlaps_phase45_item(item: Dict[str, Any], packaged_titles: set[str], packaged_subjects: set[str]) -> bool:
+    title_key = normalized_title(str(item.get("title") or ""))
+    if title_key and (title_key in packaged_titles or title_key in packaged_subjects):
+        return True
+    for triple in item.get("triples", []) if isinstance(item.get("triples"), list) else []:
+        subject_key = normalized_title(str(triple.get("subject") or ""))
+        source_title_key = normalized_title(str(triple.get("source_title") or ""))
+        if subject_key and (subject_key in packaged_titles or subject_key in packaged_subjects):
+            return True
+        if source_title_key and (source_title_key in packaged_titles or source_title_key in packaged_subjects):
+            return True
+    return False
+
+
 def record_for_candidate(candidate: Dict[str, Any]) -> Dict[str, Any]:
     return {
         "kind": "url",
@@ -201,6 +216,8 @@ def process_candidate(
     candidate: Dict[str, Any],
     raw_lookup: Dict[str, Path],
     raw_cache_dir: Path,
+    packaged_titles: set[str],
+    packaged_subjects: set[str],
     fetcher: Fetcher,
 ) -> Tuple[Dict[str, Any] | None, Dict[str, Any]]:
     url = str(candidate.get("url") or "")
@@ -210,14 +227,23 @@ def process_candidate(
             return None, {"url": url, "status": "failed", "reason": "raw_json_missing_or_invalid", "network_attempted": network}
         raw.update(quality_fields_for_payload(raw))
         title = str(raw.get("title") or candidate.get("title") or url)
-        raw_cache_path = raw_cache_dir / f"{safe_name(title)}.json"
-        write_json(raw_cache_path, raw)
         if not quality_ok(raw):
             return None, {"url": url, "title": title, "status": "rejected", "reason": f"quality_{raw.get('quality_triage')}", "network_attempted": network}
+        raw_cache_path = raw_cache_dir / f"{safe_name(title)}.json"
         trial = narrative_preview(raw, candidate)
         relation_input = {**trial, "raw_path": str(raw_cache_path)}
         triples_raw, narrative_count = extract_text_relations(relation_input)
         accepted, warnings = validate_triples(triples_raw, str(trial.get("source_url") or ""))
+        overlap_probe = {"title": normalize_title(title), "triples": accepted}
+        if overlaps_phase45_item(overlap_probe, packaged_titles, packaged_subjects):
+            return None, {
+                "url": url,
+                "title": normalize_title(title),
+                "status": "duplicate_skipped",
+                "reason": "phase45_title_or_subject_overlap",
+                "network_attempted": network,
+            }
+        write_json(raw_cache_path, raw)
         if not accepted or not trial.get("narratives"):
             return None, {
                 "url": url,
@@ -258,15 +284,24 @@ def build_second_package(
     fetcher: Fetcher = fetch_url,
     raw_root: Path = ROOT / "data" / "raw_json" / SOURCE_ID,
 ) -> Dict[str, Any]:
+    reset_output_dir(out_dir)
     out_dir.mkdir(parents=True, exist_ok=True)
     phase40 = read_json(phase40_json)
     candidates, selection_stats = select_second_batch(source_candidates(phase40 if isinstance(phase40, dict) else {}), phase45_package_dir, target_count)
+    _packaged_urls, packaged_titles, packaged_subjects = package_fingerprints(phase45_package_dir)
     raw_lookup = raw_by_url(raw_root)
     raw_cache_dir = out_dir / "raw_preview_by_item"
     packaged: List[Dict[str, Any]] = []
     statuses: List[Dict[str, Any]] = []
     for candidate in candidates:
-        item, status = process_candidate(candidate=candidate, raw_lookup=raw_lookup, raw_cache_dir=raw_cache_dir, fetcher=fetcher)
+        item, status = process_candidate(
+            candidate=candidate,
+            raw_lookup=raw_lookup,
+            raw_cache_dir=raw_cache_dir,
+            packaged_titles=packaged_titles,
+            packaged_subjects=packaged_subjects,
+            fetcher=fetcher,
+        )
         statuses.append(status)
         if item:
             packaged.append(item)
@@ -300,6 +335,7 @@ def build_second_package(
     )
     failed = sum(1 for status in statuses if status.get("status") == "failed")
     rejected = sum(1 for status in statuses if status.get("status") == "rejected")
+    post_fetch_phase45_excluded = sum(1 for status in statuses if status.get("reason") == "phase45_title_or_subject_overlap")
     network_attempted = any(bool(status.get("network_attempted")) for status in statuses)
     shortage = max(0, target_count - len(packaged))
     return {
@@ -315,7 +351,9 @@ def build_second_package(
         "failed": failed,
         "rejected": rejected,
         "duplicates_excluded": selection_stats["duplicate_candidates"],
-        "phase45_items_excluded": selection_stats["excluded_phase45"],
+        "phase45_items_excluded": selection_stats["excluded_phase45"] + post_fetch_phase45_excluded,
+        "phase45_items_excluded_before_fetch": selection_stats["excluded_phase45"],
+        "phase45_items_excluded_after_fetch": post_fetch_phase45_excluded,
         "shortage": shortage,
         "shortage_reason": "" if shortage == 0 else "remaining Phase 40 candidates were fewer than target or failed quality/fetch gates",
         "candidate_statuses": statuses,
@@ -336,6 +374,13 @@ def build_second_package(
         "active_source_unchanged": ACTIVE_SOURCE == "zh_wikipedia",
         "recommended_next_action": "review_second_package_before_any_shadow_apply" if packaged else "refresh_nasa_frontier_before_second_package",
     }
+
+
+def reset_output_dir(out_dir: Path) -> None:
+    if not under_four_source_expansion(out_dir):
+        raise ValueError("out_dir must stay under evaluation/four_source_expansion")
+    if out_dir.exists():
+        shutil.rmtree(out_dir)
 
 
 def render_markdown(report: Dict[str, Any]) -> str:

@@ -4,21 +4,21 @@ Phase 52 prepares a second NASA shadow package from remaining Phase 40 candidate
 
 - target_count: `30`
 - selected_count: `30`
-- packaged_items: `29`
-- triples: `116`
-- narratives: `116`
-- phase45_items_excluded: `20`
+- packaged_items: `28`
+- triples: `112`
+- narratives: `112`
+- phase45_items_excluded: `21`
 - rejected: `1`
 - failed: `0`
-- shortage: `1`
+- shortage: `2`
 - approval_status: `pending`
 - network_attempted: `True`
 
 ## Relation Counts
 
-- `HAS_TOPIC`: 29
-- `INSTANCE_OF`: 58
-- `SOURCE_URL`: 29
+- `HAS_TOPIC`: 28
+- `INSTANCE_OF`: 56
+- `SOURCE_URL`: 28
 
 ## Candidate Statuses
 
@@ -36,7 +36,7 @@ Phase 52 prepares a second NASA shadow package from remaining Phase 40 candidate
 | `packaged` | 'Oumuamua - NASA Science | `https://science.nasa.gov/solar-system/comets/oumuamua/` | `` |
 | `packaged` | Comer Shoemaker-Levy 9 | `https://science.nasa.gov/solar-system/comets/p-shoemaker-levy-9/` | `` |
 | `packaged` | NASA's Hubble Detects First-Ever Spin Reversal of Tiny Comet - NASA Science Facebook logo Instagram logo | `https://science.nasa.gov/missions/hubble/nasas-hubble-detects-first-ever-spin-reversal-of-tiny-comet/` | `` |
-| `packaged` | NASA Space Science Data Coordinated Archive Status - NASA | `https://nssdc.gsfc.nasa.gov/planetary/planets/cometpage.html` | `` |
+| `duplicate_skipped` | NASA Space Science Data Coordinated Archive Status | `https://nssdc.gsfc.nasa.gov/planetary/planets/cometpage.html` | `phase45_title_or_subject_overlap` |
 | `packaged` | Interstellar Mapping and Acceleration Probe (IMAP) | `https://science.nasa.gov/mission/imap/` | `` |
 | `packaged` | TRACERS - NASA Science | `https://science.nasa.gov/mission/tracers/` | `` |
 | `packaged` | Dragonfly | `https://science.nasa.gov/mission/dragonfly/` | `` |

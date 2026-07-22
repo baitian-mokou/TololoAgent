@@ -46,6 +46,11 @@ class NasaSecondShadowPackageTests(unittest.TestCase):
                                 "url": "https://science.nasa.gov/mission/example/",
                                 "source_reason": "accepted",
                             },
+                            {
+                                "title": "https://nssdc.gsfc.nasa.gov/planetary/planets/cometpage.html",
+                                "url": "https://nssdc.gsfc.nasa.gov/planetary/planets/cometpage.html",
+                                "source_reason": "accepted",
+                            },
                         ],
                     }
                 ]
@@ -59,13 +64,22 @@ class NasaSecondShadowPackageTests(unittest.TestCase):
                     "predicate": "SOURCE_URL",
                     "object": "https://science.nasa.gov/solar-system/asteroids/apophis/",
                     "source_url": "https://science.nasa.gov/solar-system/asteroids/apophis/",
+                },
+                {
+                    "subject": "NASA Space Science Data Coordinated Archive Status",
+                    "predicate": "SOURCE_URL",
+                    "object": "https://nssdc.gsfc.nasa.gov/planetary/planets/asteroidpage.html",
+                    "source_url": "https://nssdc.gsfc.nasa.gov/planetary/planets/asteroidpage.html",
                 }
             ],
         )
         return phase40, phase45
 
     def fake_fetcher(self, url: str, timeout: int):
-        title = "Comet Example" if "comets" in url else "Mission Example"
+        if "nssdc" in url:
+            title = "NASA Space Science Data Coordinated Archive Status"
+        else:
+            title = "Comet Example" if "comets" in url else "Mission Example"
         science_text = " ".join(
             [
                 "NASA science solar system planetary science mission asteroid comet spacecraft orbit discovery diameter exploration data research observations",
@@ -100,9 +114,12 @@ class NasaSecondShadowPackageTests(unittest.TestCase):
             )
 
             urls = {item["source_url"] for item in report["sample_items"]}
+            titles = {item["title"] for item in report["sample_items"]}
             self.assertNotIn("https://science.nasa.gov/solar-system/asteroids/apophis/", urls)
-            self.assertEqual(report["selected_count"], 2)
+            self.assertNotIn("NASA Space Science Data Coordinated Archive Status", titles)
+            self.assertEqual(report["selected_count"], 3)
             self.assertEqual(report["packaged_items"], 2)
+            self.assertEqual(report["phase45_items_excluded"], 2)
             self.assertGreaterEqual(report["triples"], 6)
             self.assertGreaterEqual(report["narratives"], 2)
             self.assertEqual(report["approval_status"], "pending")

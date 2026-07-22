@@ -1,18 +1,20 @@
 {
   "phase": "Phase 52",
   "mode": "nasa_second_shadow_package_preparation",
-  "generated_at": "2026-07-22T08:04:38.574611+00:00",
+  "generated_at": "2026-07-22T08:11:35.826048+00:00",
   "source_id": "nasa",
   "target_count": 30,
   "selected_count": 30,
-  "packaged_items": 29,
-  "triples": 116,
-  "narratives": 116,
+  "packaged_items": 28,
+  "triples": 112,
+  "narratives": 112,
   "failed": 0,
   "rejected": 1,
   "duplicates_excluded": 0,
-  "phase45_items_excluded": 20,
-  "shortage": 1,
+  "phase45_items_excluded": 21,
+  "phase45_items_excluded_before_fetch": 20,
+  "phase45_items_excluded_after_fetch": 1,
+  "shortage": 2,
   "shortage_reason": "remaining Phase 40 candidates were fewer than target or failed quality/fetch gates",
   "candidate_statuses": [
     {
@@ -89,8 +91,9 @@
     },
     {
       "url": "https://nssdc.gsfc.nasa.gov/planetary/planets/cometpage.html",
-      "title": "NASA Space Science Data Coordinated Archive Status - NASA",
-      "status": "packaged",
+      "title": "NASA Space Science Data Coordinated Archive Status",
+      "status": "duplicate_skipped",
+      "reason": "phase45_title_or_subject_overlap",
       "network_attempted": true
     },
     {
@@ -198,14 +201,14 @@
     }
   ],
   "relations_count": {
-    "HAS_TOPIC": 29,
-    "INSTANCE_OF": 58,
-    "SOURCE_URL": 29
+    "HAS_TOPIC": 28,
+    "INSTANCE_OF": 56,
+    "SOURCE_URL": 28
   },
   "type_distribution": {
     "asteroid": 32,
-    "comet": 26,
-    "small body": 29
+    "comet": 24,
+    "small body": 28
   },
   "sample_items": [
     {
@@ -516,9 +519,9 @@
     "execution_status": "not_run",
     "requires_manual_approval": true,
     "source_id": "nasa",
-    "approved_item_count_required": 29,
-    "planned_triples": 116,
-    "planned_narratives": 116,
+    "approved_item_count_required": 28,
+    "planned_triples": 112,
+    "planned_narratives": 112,
     "allowed_scope": "shadow materialization path only",
     "safety_guards": [
       "ACTIVE_SOURCE remains zh_wikipedia",
