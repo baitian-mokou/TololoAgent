@@ -1,0 +1,455 @@
+{
+  "phase": "Phase 40",
+  "mode": "deduped_frontier_candidate_selection",
+  "generated_at": "2026-07-22T04:27:05.741276+00:00",
+  "sources_requested": [
+    "nasa",
+    "esa"
+  ],
+  "sources_skipped": [],
+  "limit": 50,
+  "summary": {
+    "sources": 2,
+    "selected_total": 58,
+    "duplicates_total": 219,
+    "blocked_total": 3
+  },
+  "sources": [
+    {
+      "source_id": "nasa",
+      "existing_raw_count": 95,
+      "frontier_total": 150,
+      "duplicate_candidates": 79,
+      "failed_or_blocked_candidates": 1,
+      "selected_count": 50,
+      "selected_candidates": [
+        {
+          "title": "https://science.nasa.gov/solar-system/asteroids/facts/",
+          "url": "https://science.nasa.gov/solar-system/asteroids/facts/",
+          "quality_triage": null,
+          "quality_score": null,
+          "source_reason": "accepted"
+        },
+        {
+          "title": "https://science.nasa.gov/solar-system/asteroids/exploration/",
+          "url": "https://science.nasa.gov/solar-system/asteroids/exploration/",
+          "quality_triage": null,
+          "quality_score": null,
+          "source_reason": "accepted"
+        },
+        {
+          "title": "https://science.nasa.gov/solar-system/asteroids/2024-yr4/",
+          "url": "https://science.nasa.gov/solar-system/asteroids/2024-yr4/",
+          "quality_triage": null,
+          "quality_score": null,
+          "source_reason": "accepted"
+        },
+        {
+          "title": "https://science.nasa.gov/solar-system/asteroids/apophis/",
+          "url": "https://science.nasa.gov/solar-system/asteroids/apophis/",
+          "quality_triage": null,
+          "quality_score": null,
+          "source_reason": "accepted"
+        },
+        {
+          "title": "https://science.nasa.gov/solar-system/asteroids/16-psyche/",
+          "url": "https://science.nasa.gov/solar-system/asteroids/16-psyche/",
+          "quality_triage": null,
+          "quality_score": null,
+          "source_reason": "accepted"
+        },
+        {
+          "title": "https://science.nasa.gov/solar-system/asteroids/101955-bennu/",
+          "url": "https://science.nasa.gov/solar-system/asteroids/101955-bennu/",
+          "quality_triage": null,
+          "quality_score": null,
+          "source_reason": "accepted"
+        },
+        {
+          "title": "https://science.nasa.gov/solar-system/asteroids/dinkinesh/",
+          "url": "https://science.nasa.gov/solar-system/asteroids/dinkinesh/",
+          "quality_triage": null,
+          "quality_score": null,
+          "source_reason": "accepted"
+        },
+        {
+          "title": "https://science.nasa.gov/solar-system/asteroids/donaldjohanson/",
+          "url": "https://science.nasa.gov/solar-system/asteroids/donaldjohanson/",
+          "quality_triage": null,
+          "quality_score": null,
+          "source_reason": "accepted"
+        },
+        {
+          "title": "https://science.nasa.gov/solar-system/asteroids/didymos/",
+          "url": "https://science.nasa.gov/solar-system/asteroids/didymos/",
+          "quality_triage": null,
+          "quality_score": null,
+          "source_reason": "accepted"
+        },
+        {
+          "title": "https://science.nasa.gov/solar-system/asteroids/4-vesta/",
+          "url": "https://science.nasa.gov/solar-system/asteroids/4-vesta/",
+          "quality_triage": null,
+          "quality_score": null,
+          "source_reason": "accepted"
+        },
+        {
+          "title": "https://science.nasa.gov/solar-system/asteroids/433-eros/",
+          "url": "https://science.nasa.gov/solar-system/asteroids/433-eros/",
+          "quality_triage": null,
+          "quality_score": null,
+          "source_reason": "accepted"
+        },
+        {
+          "title": "https://science.nasa.gov/solar-system/asteroids/243-ida/",
+          "url": "https://science.nasa.gov/solar-system/asteroids/243-ida/",
+          "quality_triage": null,
+          "quality_score": null,
+          "source_reason": "accepted"
+        },
+        {
+          "title": "https://science.nasa.gov/solar-system/asteroids/25143-itokawa/",
+          "url": "https://science.nasa.gov/solar-system/asteroids/25143-itokawa/",
+          "quality_triage": null,
+          "quality_score": null,
+          "source_reason": "accepted"
+        },
+        {
+          "title": "https://science.nasa.gov/planetary-defense/",
+          "url": "https://science.nasa.gov/planetary-defense/",
+          "quality_triage": null,
+          "quality_score": null,
+          "source_reason": "accepted"
+        },
+        {
+          "title": "https://nssdc.gsfc.nasa.gov/planetary/planets/asteroidpage.html",
+          "url": "https://nssdc.gsfc.nasa.gov/planetary/planets/asteroidpage.html",
+          "quality_triage": null,
+          "quality_score": null,
+          "source_reason": "accepted"
+        },
+        {
+          "title": "https://science.nasa.gov/solar-system/comets/facts/",
+          "url": "https://science.nasa.gov/solar-system/comets/facts/",
+          "quality_triage": null,
+          "quality_score": null,
+          "source_reason": "accepted"
+        },
+        {
+          "title": "https://science.nasa.gov/solar-system/comets/3i-atlas/",
+          "url": "https://science.nasa.gov/solar-system/comets/3i-atlas/",
+          "quality_triage": null,
+          "quality_score": null,
+          "source_reason": "accepted"
+        },
+        {
+          "title": "https://science.nasa.gov/solar-system/comets/103p-hartley-hartley-2/",
+          "url": "https://science.nasa.gov/solar-system/comets/103p-hartley-hartley-2/",
+          "quality_triage": null,
+          "quality_score": null,
+          "source_reason": "accepted"
+        },
+        {
+          "title": "https://science.nasa.gov/solar-system/comets/109p-swift-tuttle/",
+          "url": "https://science.nasa.gov/solar-system/comets/109p-swift-tuttle/",
+          "quality_triage": null,
+          "quality_score": null,
+          "source_reason": "accepted"
+        },
+        {
+          "title": "https://science.nasa.gov/solar-system/comets/19p-borrelly/",
+          "url": "https://science.nasa.gov/solar-system/comets/19p-borrelly/",
+          "quality_triage": null,
+          "quality_score": null,
+          "source_reason": "accepted"
+        },
+        {
+          "title": "https://science.nasa.gov/solar-system/comets/1p-halley/",
+          "url": "https://science.nasa.gov/solar-system/comets/1p-halley/",
+          "quality_triage": null,
+          "quality_score": null,
+          "source_reason": "accepted"
+        },
+        {
+          "title": "https://science.nasa.gov/solar-system/comets/67p-churyumov-gerasimenko/",
+          "url": "https://science.nasa.gov/solar-system/comets/67p-churyumov-gerasimenko/",
+          "quality_triage": null,
+          "quality_score": null,
+          "source_reason": "accepted"
+        },
+        {
+          "title": "https://science.nasa.gov/solar-system/comets/2i-borisov/",
+          "url": "https://science.nasa.gov/solar-system/comets/2i-borisov/",
+          "quality_triage": null,
+          "quality_score": null,
+          "source_reason": "accepted"
+        },
+        {
+          "title": "https://science.nasa.gov/solar-system/comets/2p-encke/",
+          "url": "https://science.nasa.gov/solar-system/comets/2p-encke/",
+          "quality_triage": null,
+          "quality_score": null,
+          "source_reason": "accepted"
+        },
+        {
+          "title": "https://science.nasa.gov/solar-system/comets/81p-wild/",
+          "url": "https://science.nasa.gov/solar-system/comets/81p-wild/",
+          "quality_triage": null,
+          "quality_score": null,
+          "source_reason": "accepted"
+        },
+        {
+          "title": "https://science.nasa.gov/solar-system/comets/9p-tempel-1/",
+          "url": "https://science.nasa.gov/solar-system/comets/9p-tempel-1/",
+          "quality_triage": null,
+          "quality_score": null,
+          "source_reason": "accepted"
+        },
+        {
+          "title": "https://science.nasa.gov/solar-system/comets/c-1995-o1-hale-bopp/",
+          "url": "https://science.nasa.gov/solar-system/comets/c-1995-o1-hale-bopp/",
+          "quality_triage": null,
+          "quality_score": null,
+          "source_reason": "accepted"
+        },
+        {
+          "title": "https://science.nasa.gov/solar-system/comets/c-2013-a1-siding-spring/",
+          "url": "https://science.nasa.gov/solar-system/comets/c-2013-a1-siding-spring/",
+          "quality_triage": null,
+          "quality_score": null,
+          "source_reason": "accepted"
+        },
+        {
+          "title": "https://science.nasa.gov/solar-system/comets/c-2012-s1-ison/",
+          "url": "https://science.nasa.gov/solar-system/comets/c-2012-s1-ison/",
+          "quality_triage": null,
+          "quality_score": null,
+          "source_reason": "accepted"
+        },
+        {
+          "title": "https://science.nasa.gov/solar-system/comets/oumuamua/",
+          "url": "https://science.nasa.gov/solar-system/comets/oumuamua/",
+          "quality_triage": null,
+          "quality_score": null,
+          "source_reason": "accepted"
+        },
+        {
+          "title": "https://science.nasa.gov/solar-system/comets/p-shoemaker-levy-9/",
+          "url": "https://science.nasa.gov/solar-system/comets/p-shoemaker-levy-9/",
+          "quality_triage": null,
+          "quality_score": null,
+          "source_reason": "accepted"
+        },
+        {
+          "title": "https://science.nasa.gov/missions/hubble/nasas-hubble-detects-first-ever-spin-reversal-of-tiny-comet/",
+          "url": "https://science.nasa.gov/missions/hubble/nasas-hubble-detects-first-ever-spin-reversal-of-tiny-comet/",
+          "quality_triage": null,
+          "quality_score": null,
+          "source_reason": "accepted"
+        },
+        {
+          "title": "https://nssdc.gsfc.nasa.gov/planetary/planets/cometpage.html",
+          "url": "https://nssdc.gsfc.nasa.gov/planetary/planets/cometpage.html",
+          "quality_triage": null,
+          "quality_score": null,
+          "source_reason": "accepted"
+        },
+        {
+          "title": "https://science.nasa.gov/mission/imap/",
+          "url": "https://science.nasa.gov/mission/imap/",
+          "quality_triage": null,
+          "quality_score": null,
+          "source_reason": "accepted"
+        },
+        {
+          "title": "https://science.nasa.gov/mission/tracers/",
+          "url": "https://science.nasa.gov/mission/tracers/",
+          "quality_triage": null,
+          "quality_score": null,
+          "source_reason": "accepted"
+        },
+        {
+          "title": "https://science.nasa.gov/mission/dragonfly/",
+          "url": "https://science.nasa.gov/mission/dragonfly/",
+          "quality_triage": null,
+          "quality_score": null,
+          "source_reason": "accepted"
+        },
+        {
+          "title": "https://science.nasa.gov/missions/mission-news/",
+          "url": "https://science.nasa.gov/missions/mission-news/",
+          "quality_triage": null,
+          "quality_score": null,
+          "source_reason": "accepted"
+        },
+        {
+          "title": "https://science.nasa.gov/missions/hubble/nasa-celebrates-hubbles-35th-year-in-orbit/",
+          "url": "https://science.nasa.gov/missions/hubble/nasa-celebrates-hubbles-35th-year-in-orbit/",
+          "quality_triage": null,
+          "quality_score": null,
+          "source_reason": "accepted"
+        },
+        {
+          "title": "https://science.nasa.gov/mission/3d-tissue-chips/",
+          "url": "https://science.nasa.gov/mission/3d-tissue-chips/",
+          "quality_triage": null,
+          "quality_score": null,
+          "source_reason": "accepted"
+        },
+        {
+          "title": "https://science.nasa.gov/mission/a-train/",
+          "url": "https://science.nasa.gov/mission/a-train/",
+          "quality_triage": null,
+          "quality_score": null,
+          "source_reason": "accepted"
+        },
+        {
+          "title": "https://science.nasa.gov/mission/pioneer-0-able1/",
+          "url": "https://science.nasa.gov/mission/pioneer-0-able1/",
+          "quality_triage": null,
+          "quality_score": null,
+          "source_reason": "accepted"
+        },
+        {
+          "title": "https://science.nasa.gov/mission/pioneer-1-able-2/",
+          "url": "https://science.nasa.gov/mission/pioneer-1-able-2/",
+          "quality_triage": null,
+          "quality_score": null,
+          "source_reason": "accepted"
+        },
+        {
+          "title": "https://science.nasa.gov/mission/pioneer-p-3-able-4b/",
+          "url": "https://science.nasa.gov/mission/pioneer-p-3-able-4b/",
+          "quality_triage": null,
+          "quality_score": null,
+          "source_reason": "accepted"
+        },
+        {
+          "title": "https://science.nasa.gov/mission/pioneer-p-30-able-5a/",
+          "url": "https://science.nasa.gov/mission/pioneer-p-30-able-5a/",
+          "quality_triage": null,
+          "quality_score": null,
+          "source_reason": "accepted"
+        },
+        {
+          "title": "https://science.nasa.gov/mission/pioneer-p-31-able-5b/",
+          "url": "https://science.nasa.gov/mission/pioneer-p-31-able-5b/",
+          "quality_triage": null,
+          "quality_score": null,
+          "source_reason": "accepted"
+        },
+        {
+          "title": "https://science.nasa.gov/mission/ace/",
+          "url": "https://science.nasa.gov/mission/ace/",
+          "quality_triage": null,
+          "quality_score": null,
+          "source_reason": "accepted"
+        },
+        {
+          "title": "https://science.nasa.gov/mission/acme/",
+          "url": "https://science.nasa.gov/mission/acme/",
+          "quality_triage": null,
+          "quality_score": null,
+          "source_reason": "accepted"
+        },
+        {
+          "title": "https://science.nasa.gov/mission/acrimsat/",
+          "url": "https://science.nasa.gov/mission/acrimsat/",
+          "quality_triage": null,
+          "quality_score": null,
+          "source_reason": "accepted"
+        },
+        {
+          "title": "https://science.nasa.gov/mission/act-america/",
+          "url": "https://science.nasa.gov/mission/act-america/",
+          "quality_triage": null,
+          "quality_score": null,
+          "source_reason": "accepted"
+        },
+        {
+          "title": "https://science.nasa.gov/mission/adeos-midori/",
+          "url": "https://science.nasa.gov/mission/adeos-midori/",
+          "quality_triage": null,
+          "quality_score": null,
+          "source_reason": "accepted"
+        }
+      ],
+      "suggested_offset_or_skip_count": 80,
+      "next_action": "ready_for_raw_shadow_trial"
+    },
+    {
+      "source_id": "esa",
+      "existing_raw_count": 168,
+      "frontier_total": 150,
+      "duplicate_candidates": 140,
+      "failed_or_blocked_candidates": 2,
+      "selected_count": 8,
+      "selected_candidates": [
+        {
+          "title": "https://sci.esa.int/web/juice/journal-archive",
+          "url": "https://sci.esa.int/web/juice/journal-archive",
+          "quality_triage": null,
+          "quality_score": null,
+          "source_reason": "accepted"
+        },
+        {
+          "title": "https://scifleet.esa.int/model/juice/",
+          "url": "https://scifleet.esa.int/model/juice/",
+          "quality_triage": null,
+          "quality_score": null,
+          "source_reason": "accepted"
+        },
+        {
+          "title": "https://blogs.esa.int/10-years-since-rosetta/",
+          "url": "https://blogs.esa.int/10-years-since-rosetta/",
+          "quality_triage": null,
+          "quality_score": null,
+          "source_reason": "accepted"
+        },
+        {
+          "title": "http://blogs.esa.int/rosetta/",
+          "url": "http://blogs.esa.int/rosetta/",
+          "quality_triage": null,
+          "quality_score": null,
+          "source_reason": "accepted"
+        },
+        {
+          "title": "http://sci.esa.int/rosetta",
+          "url": "http://sci.esa.int/rosetta",
+          "quality_triage": null,
+          "quality_score": null,
+          "source_reason": "accepted"
+        },
+        {
+          "title": "http://sci.esa.int/where_is_rosetta/",
+          "url": "http://sci.esa.int/where_is_rosetta/",
+          "quality_triage": null,
+          "quality_score": null,
+          "source_reason": "accepted"
+        },
+        {
+          "title": "https://www.cosmos.esa.int/web/gaia/data-release-4",
+          "url": "https://www.cosmos.esa.int/web/gaia/data-release-4",
+          "quality_triage": null,
+          "quality_score": null,
+          "source_reason": "accepted"
+        },
+        {
+          "title": "https://cosmos.esa.int/web/gaia",
+          "url": "https://cosmos.esa.int/web/gaia",
+          "quality_triage": null,
+          "quality_score": null,
+          "source_reason": "accepted"
+        }
+      ],
+      "suggested_offset_or_skip_count": 142,
+      "next_action": "ready_for_raw_shadow_trial"
+    }
+  ],
+  "safety_boundaries": [
+    "selection report only",
+    "no raw writes",
+    "no downstream materialization",
+    "nasa/esa remain shadow-only candidates"
+  ]
+}
