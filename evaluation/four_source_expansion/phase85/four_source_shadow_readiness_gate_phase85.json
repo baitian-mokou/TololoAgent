@@ -1,0 +1,41 @@
+{
+  "phase": "Phase 85",
+  "mode": "four_source_shadow_readiness_eval_gate",
+  "generated_at": "2026-07-22T15:57:33.511593+00:00",
+  "package_report": "C:\\wt\\TololoAgent-guarded\\evaluation\\four_source_expansion\\phase84\\four_source_pending_shadow_package_phase84.json",
+  "package_integrity_pass": true,
+  "four_source_coverage_pass": false,
+  "production_ready": false,
+  "blocking_reasons": [
+    "nasa_coverage_gap"
+  ],
+  "missing_sources": [
+    "nasa"
+  ],
+  "counts": {
+    "items": 37,
+    "triples": 74,
+    "narratives": 37
+  },
+  "source_breakdown": {
+    "esa": 9,
+    "wikidata": 25,
+    "zh_wikipedia": 3
+  },
+  "approval_status": "pending_review",
+  "recommended_next": "nasa_metadata_repair_or_three_source_review_preview",
+  "current_summary": "3-source pending package with NASA coverage gap",
+  "formal_raw_write": false,
+  "formal_default_triples_write": false,
+  "chroma_write": false,
+  "neo4j_write": false,
+  "clear_source_ingestion_outputs_called": false,
+  "active_source": "zh_wikipedia",
+  "active_source_unchanged": true,
+  "registry": {
+    "zh_wikipedia": "active",
+    "nasa": "disabled",
+    "esa": "disabled",
+    "wikidata": "disabled"
+  }
+}
