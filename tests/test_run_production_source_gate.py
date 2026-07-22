@@ -27,6 +27,10 @@ class ProductionSourceGateTests(unittest.TestCase):
         self.assertTrue(all(item["review_ready"] for item in report["sources"].values()))
         self.assertTrue(all(item["registry_state"] == "disabled" for item in report["sources"].values()))
         self.assertTrue(all(item["output_path_limited_to_shadow"] for item in report["sources"].values()))
+        self.assertEqual(
+            report["test_evidence"],
+            ["tests.test_run_production_source_gate", "tests.test_validate_source_manifests"],
+        )
 
 
 if __name__ == "__main__":

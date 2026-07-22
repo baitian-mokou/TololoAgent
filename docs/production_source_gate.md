@@ -12,6 +12,11 @@ python scripts/run_production_source_gate.py
 ```
 
 The gate must pass with `decision = review_ready_not_authorized`.
+Minimum test evidence must use the real unittest module names:
+
+```bash
+python -m unittest tests.test_run_production_source_gate tests.test_validate_source_manifests
+```
 
 ## Evidence requirements
 
@@ -34,4 +39,3 @@ The gate must pass with `decision = review_ready_not_authorized`.
 ## Rollback and review blockers
 
 Block review or roll back the production-gate proposal if any source is enabled early, a readiness or review-only CLI report fails, output escapes its shadow path, duplicate/noise controls report issues, or production write authorization is missing/ambiguous.
-

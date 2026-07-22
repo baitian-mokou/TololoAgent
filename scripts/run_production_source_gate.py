@@ -22,6 +22,10 @@ SOURCES = {
         "review_cli": EVAL / "wikidata_shadow_review_preview_cli_phase79.json",
     },
 }
+TEST_EVIDENCE = [
+    "tests.test_run_production_source_gate",
+    "tests.test_validate_source_manifests",
+]
 
 
 def _read_json(path: Path) -> Dict[str, Any]:
@@ -90,6 +94,7 @@ def build_report() -> Dict[str, Any]:
         "formal_write_authorized": False,
         "default_source": default_source,
         "checks": checks,
+        "test_evidence": TEST_EVIDENCE,
         "sources": source_reports,
         "notes": [
             "Passing this gate means the three shadow sources may be submitted for human review.",
@@ -106,7 +111,17 @@ def main(argv=None) -> int:
     out = Path(args.out_json)
     out.parent.mkdir(parents=True, exist_ok=True)
     out.write_text(json.dumps(report, ensure_ascii=False, indent=2) + "\n", encoding="utf-8")
-    print(json.dumps({"passed": report["passed"], "decision": report["decision"], "out_json": str(out)}, ensure_ascii=False))
+    print(
+        json.dumps(
+            {
+                "passed": report["passed"],
+                "decision": report["decision"],
+                "test_evidence": report["test_evidence"],
+                "out_json": str(out),
+            },
+            ensure_ascii=False,
+        )
+    )
     return 0 if report["passed"] else 1
 
 

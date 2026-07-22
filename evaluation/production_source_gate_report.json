@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-07-22T23:30:36",
+  "generated_at": "2026-07-22T23:34:01",
   "mode": "production_source_gate_review_only",
   "decision": "review_ready_not_authorized",
   "passed": true,
@@ -16,6 +16,10 @@
     "formal_write_authorized": false,
     "all_sources_review_ready": true
   },
+  "test_evidence": [
+    "tests.test_run_production_source_gate",
+    "tests.test_validate_source_manifests"
+  ],
   "sources": {
     "nasa": {
       "registry_state": "disabled",
