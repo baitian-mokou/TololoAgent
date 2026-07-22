@@ -1,0 +1,1146 @@
+{
+  "phase": "Phase 82",
+  "mode": "four_source_controlled_raw_preview",
+  "generated_at": "2026-07-22T15:39:39.570513+00:00",
+  "total_limit": 60,
+  "per_source_limits": {
+    "zh_wikipedia": 3,
+    "nasa": 17,
+    "esa": 15,
+    "wikidata": 25
+  },
+  "attempted": 60,
+  "succeeded": 56,
+  "failed": 4,
+  "rejected": 0,
+  "duplicates": 0,
+  "per_source": {
+    "zh_wikipedia": {
+      "attempted": 3,
+      "succeeded": 3,
+      "failed": 0,
+      "rejected": 0,
+      "duplicates": 0,
+      "recommended_next_batch_size": 3
+    },
+    "nasa": {
+      "attempted": 17,
+      "succeeded": 16,
+      "failed": 1,
+      "rejected": 0,
+      "duplicates": 0,
+      "recommended_next_batch_size": 16
+    },
+    "esa": {
+      "attempted": 15,
+      "succeeded": 12,
+      "failed": 3,
+      "rejected": 0,
+      "duplicates": 0,
+      "recommended_next_batch_size": 12
+    },
+    "wikidata": {
+      "attempted": 25,
+      "succeeded": 25,
+      "failed": 0,
+      "rejected": 0,
+      "duplicates": 0,
+      "recommended_next_batch_size": 25
+    }
+  },
+  "raw_previews": [
+    {
+      "source": "zh_wikipedia",
+      "title": "太阳",
+      "id": "太阳",
+      "url": "https://zh.wikipedia.org/wiki/太阳",
+      "entity_id": "",
+      "reason": "phase81_accepted",
+      "fetched": true,
+      "status": "local_preview",
+      "failure_reason": "",
+      "text_excerpt": "英語維基百科 相應條目来扩充 ，此條目在對應語言版為高品質條目。 2022年4月16日 若您熟悉来源语言和主题，请协助 参考外语维基百科扩充条目 。请勿直接提交机械翻译，也不要翻译不可靠、低品质内容。依 版权协议 ，译文需 在编辑摘要注明来源 ，或于讨论页顶部标记 Translated page 在2019年使用 太陽濾鏡 真實色彩 的太陽。 太陽、日、Sun、 Helios Solar 觀測數據 與地球的 平均距離 7011149597870700000♠ 7011149600000000000♠ 1.496 8分19秒 −26.74 絕對星等 4.83 恆星分類 = 0.0122 31.6–32.7 0.527–0.545 核心的平均距離 7004266600000000000♠ 26,660 銀河週期 (2.25–2.50)×10 7005251000000000000♠ 251 km/s （繞銀河系中心運行） 7004200000000000000♠ 20 km/s （相對於恆星附近其他恆星的平均速度） 7005370000000000000♠ 370 km/s （相對於 宇宙微波背景 物理性質 695,700 696,342公里 7002109000000000000♠ × 地球半徑 7009437900000000000♠ 4.379 109 ×地球 6994900000000000000♠ 7018609000000000000♠ 6.09 7004120000000000000♠ 12,000 7027141000000000000♠ 1.41 7006130000000000000♠ 1,300,000 × 地球 7030198850000000000♠ 1.9885 7005332950000000000♠ 332,950 7003140800000000000♠ 1.408 g/cm 6999255000000000000♠ 0.255 × 地球 （建模） 7005162200000000000♠ 162.2 g/cm 70011240000000",
+      "claims_subset": "",
+      "quality_flags": {
+        "allowlisted": true,
+        "has_excerpt": true,
+        "evaluation_only": true
+      }
+    },
+    {
+      "source": "zh_wikipedia",
+      "title": "太阳系",
+      "id": "太阳系",
+      "url": "https://zh.wikipedia.org/wiki/太阳系",
+      "entity_id": "",
+      "reason": "phase81_accepted",
+      "fetched": true,
+      "status": "local_preview",
+      "failure_reason": "",
+      "text_excerpt": "此條目介紹的是太陽和它的行星系統。关于其他類似的系統，请见「 行星系統 有字幕（英文） 有字幕（正體中文） 有字幕（簡體中文） 行星、衛星和矮行星 （真實色彩、大小按比例、距離尺度未照比例） 45.68億年 本地星際雲 獵戶–天鵝臂 最近的恆星 (4.2465 （4.36光年） 行星系統 30.07 AU 古柏斷涯 50–70 AU 賽德娜 (小行星) 更多候選者... 天然衛星 1,368,528 4,591 銀河中心 星系盤面 ~60°, to the ecliptic 至銀河中心的距離 24,000–28,000 ly 軌道速度 720,000 km/h (450,000 mi/h) 軌道週期 ~230 million year 恆星特征 光譜類型 7011747989353500000♠ ~5 AU 日球層頂 detected at 120 AU 1.1 pc (230,000 AU) – 0.865 pc (178,419 AU) 引力束縛 而圍繞其 行星系统 内。太阳系大約形成於46億年前，當時一個 的密集區域坍塌，形成了太陽和 原行星盤 ，之后再通过原行星盘的局部吸积在不同区域形成各种天体。 太陽系超過99.86%的質量集中在太陽上。太陽是一顆 界根据其 光谱类型 將其歸類為 G型主序星 。太阳通過其核心處的 流體靜力平衡 ，並從其外層的 带电粒子 繞太陽運行的最大天體是八顆 。其中最大的两颗行星，木星和土星，集中了近90%的太阳系剩余质量。除了行星之外，环绕太阳运动的天体还有 太阳系小天体 ）。一些行星、矮行星和其他天體还有 天然衛星 圍繞著運行。 太陽系的广袤空间中充满了从太陽大气层中不断辐射出的帶電粒子流—— ，形成半径大約75-90 天文單位 。太阳圈可以看作是太阳大气层的延伸，其边界稱為 日球層頂 。在这里太阳风和 星际介质 达到平衡，不能够再继续前进。這里是太陽系和 星際空間 的物质邊界，但太阳引力控制范围还远超于此。太陽系的最外層區域是理論上的 長週期彗星 的來源，其延伸半徑达到 7014299195741400000♠ 2,000–200,",
+      "claims_subset": "",
+      "quality_flags": {
+        "allowlisted": true,
+        "has_excerpt": true,
+        "evaluation_only": true
+      }
+    },
+    {
+      "source": "zh_wikipedia",
+      "title": "水星",
+      "id": "水星",
+      "url": "https://zh.wikipedia.org/wiki/水星",
+      "entity_id": "",
+      "reason": "phase81_accepted",
+      "fetched": true,
+      "status": "local_preview",
+      "failure_reason": "",
+      "text_excerpt": "取自信使神太空船的水星合成影像 Mercurian, Mercurial, Hermian 軌道參數 J2000 69,817,900 公里 0.466 697 46,001,200公里 0.307 499 AU 57,909,100公里 0.387 098 AU 0.205 630 軌道週期 87.969 1 (0.240 846 會合週期 115.88 d 軌道速度 47.87 km/s 平近點角 174.796° 軌道傾角 7.005° 對 3.38° 對 太陽的赤道 6.34° 對 不變平面 升交點黃經 48.331° 近日點參數 29.124° 物理特徵 平均半徑 2,440.7 ± 1.0 km 0.387370494907902 地球半徑 7.48×10 0.147 地球面積 6.083×10 0.056 地球體積 3.3022×10 0.055 地球質量 5.427 g/cm 表面重力 0.38 逃逸速度 4.25 km/s 恆星週期 58.646 1407.5 赤道自轉速度 10.892 km/h（3.026 m/s） 轉軸傾角 2.11′ ± 0.1′ 18 h 44 min 2 s 281.01° 61.45° 0.068 ( Bond 0.142 ( geom. 0°N, 0°W 100 K 340 K 700 K 85°N, 0°W 80 K 200 K 380 K −2.6 to 5.7 4.5\" – 13\" 大氣特徵 ; et al. Shape and Orientation of Mercury from Radar Ranging Data. Icarus (Academic press). 1996-07-10, (2): 690–697. Bibcode:1996Icar..124..690A doi:10.1006/icar.1996.0242 Schenk, P.; Melosh, H. J. Lobate Thrust Scarps and the Thickness of Mercury's Lithosphere. Ab",
+      "claims_subset": "",
+      "quality_flags": {
+        "allowlisted": true,
+        "has_excerpt": true,
+        "evaluation_only": true
+      }
+    },
+    {
+      "source": "nasa",
+      "title": "",
+      "id": "",
+      "url": "https://nssdc.gsfc.nasa.gov/planetary/factsheet",
+      "entity_id": "",
+      "reason": "phase81_review_needed_official",
+      "fetched": true,
+      "status": "http_200",
+      "failure_reason": "",
+      "text_excerpt": "NASA Space Science Data Coordinated Archive Status - NASA Explore Search News & Events News & Events News Releases Recently Published Video Series on NASA+ Podcasts & Audio Blogs Newsletters Social Media Media Resources Events Upcoming Launches & Landings Virtual Guest Program Multimedia Multimedia NASA+ Images NASA Live NASA Apps Podcasts Image of the Day e-Books 3D Resources Interactives STEM Multimedia NASA Brand & Usage Guidelines NASA+ Search Suggested Searches Climate Change Artemis Expedition 64 Mars perseverance SpaceX Crew-2 International Space Station View All Topics A-Z Home Missions Humans in Space Earth The Solar System The Universe Science Aeronautics Technology Learning Resources About NASA Español News & Events Multimedia NASA+ Featured 2 min read NASA-Funded Study Shows How Controlled Burns Help Sequoias Survive Wildfires article 2 days ago 5 min read NASA Study Finds Ne",
+      "claims_subset": "",
+      "quality_flags": {
+        "allowlisted": true,
+        "has_excerpt": true,
+        "evaluation_only": true
+      }
+    },
+    {
+      "source": "nasa",
+      "title": "",
+      "id": "",
+      "url": "https://science.nasa.gov/solar-system",
+      "entity_id": "",
+      "reason": "phase81_review_needed_official",
+      "fetched": true,
+      "status": "http_200",
+      "failure_reason": "",
+      "text_excerpt": "Solar System Exploration Explore Search News & Events News & Events Recently Published Video Series on NASA+ Podcasts & Audio Blogs Newsletters Social Media Media Resources Multimedia Multimedia NASA+ Images NASA Live NASA Apps Podcasts Image of the Day e-Books 3D Resources Interactives STEM Multimedia NASA Brand & Usage Guidelines NASA+ Search Suggested Searches Climate Change Artemis Expedition 64 Mars perseverance SpaceX Crew-2 International Space Station View All Topics A-Z Home Missions Humans in Space Earth The Solar System The Universe Science Aeronautics Technology Learning Resources About NASA Español News & Events Multimedia NASA+ Highlights 2 min read NASA-Funded Study Shows How Controlled Burns Help Sequoias Survive Wildfires article 2 days ago 5 min read NASA Study Finds Near-Earth Asteroid Is Actually Comet article 6 days ago 3 min read What’s Up: July 2026 Skywatching Tips",
+      "claims_subset": "",
+      "quality_flags": {
+        "allowlisted": true,
+        "has_excerpt": true,
+        "evaluation_only": true
+      }
+    },
+    {
+      "source": "nasa",
+      "title": "",
+      "id": "",
+      "url": "https://science.nasa.gov/solar-system/planets",
+      "entity_id": "",
+      "reason": "phase81_review_needed_official",
+      "fetched": true,
+      "status": "http_200",
+      "failure_reason": "",
+      "text_excerpt": "About the Planets Explore Search News & Events News & Events Recently Published Video Series on NASA+ Podcasts & Audio Blogs Newsletters Social Media Media Resources Multimedia Multimedia NASA+ Images NASA Live NASA Apps Podcasts Image of the Day e-Books 3D Resources Interactives STEM Multimedia NASA Brand & Usage Guidelines NASA+ Search Suggested Searches Climate Change Artemis Expedition 64 Mars perseverance SpaceX Crew-2 International Space Station View All Topics A-Z Home Missions Humans in Space Earth The Solar System The Universe Science Aeronautics Technology Learning Resources About NASA Español News & Events Multimedia NASA+ Highlights 2 min read NASA-Funded Study Shows How Controlled Burns Help Sequoias Survive Wildfires article 2 days ago 5 min read NASA Study Finds Near-Earth Asteroid Is Actually Comet article 6 days ago 3 min read What’s Up: July 2026 Skywatching Tips from N",
+      "claims_subset": "",
+      "quality_flags": {
+        "allowlisted": true,
+        "has_excerpt": true,
+        "evaluation_only": true
+      }
+    },
+    {
+      "source": "nasa",
+      "title": "",
+      "id": "",
+      "url": "https://science.nasa.gov/solar-system/moons",
+      "entity_id": "",
+      "reason": "phase81_review_needed_official",
+      "fetched": true,
+      "status": "http_200",
+      "failure_reason": "",
+      "text_excerpt": "Moons Explore Search News & Events News & Events Recently Published Video Series on NASA+ Podcasts & Audio Blogs Newsletters Social Media Media Resources Multimedia Multimedia NASA+ Images NASA Live NASA Apps Podcasts Image of the Day e-Books 3D Resources Interactives STEM Multimedia NASA Brand & Usage Guidelines NASA+ Search Suggested Searches Climate Change Artemis Expedition 64 Mars perseverance SpaceX Crew-2 International Space Station View All Topics A-Z Home Missions Humans in Space Earth The Solar System The Universe Science Aeronautics Technology Learning Resources About NASA Español News & Events Multimedia NASA+ Highlights 2 min read NASA-Funded Study Shows How Controlled Burns Help Sequoias Survive Wildfires article 2 days ago 5 min read NASA Study Finds Near-Earth Asteroid Is Actually Comet article 6 days ago 3 min read What’s Up: July 2026 Skywatching Tips from NASA article ",
+      "claims_subset": "",
+      "quality_flags": {
+        "allowlisted": true,
+        "has_excerpt": true,
+        "evaluation_only": true
+      }
+    },
+    {
+      "source": "nasa",
+      "title": "",
+      "id": "",
+      "url": "https://science.nasa.gov/solar-system/dwarf-planets",
+      "entity_id": "",
+      "reason": "phase81_review_needed_official",
+      "fetched": false,
+      "status": "failed",
+      "failure_reason": "HTTPError",
+      "text_excerpt": "",
+      "claims_subset": "",
+      "quality_flags": {
+        "allowlisted": true,
+        "has_excerpt": false,
+        "evaluation_only": true
+      }
+    },
+    {
+      "source": "nasa",
+      "title": "",
+      "id": "",
+      "url": "https://science.nasa.gov/solar-system/asteroids",
+      "entity_id": "",
+      "reason": "phase81_review_needed_official",
+      "fetched": true,
+      "status": "http_200",
+      "failure_reason": "",
+      "text_excerpt": "Asteroids Explore Search News & Events News & Events Recently Published Video Series on NASA+ Podcasts & Audio Blogs Newsletters Social Media Media Resources Multimedia Multimedia NASA+ Images NASA Live NASA Apps Podcasts Image of the Day e-Books 3D Resources Interactives STEM Multimedia NASA Brand & Usage Guidelines NASA+ Search Suggested Searches Climate Change Artemis Expedition 64 Mars perseverance SpaceX Crew-2 International Space Station View All Topics A-Z Home Missions Humans in Space Earth The Solar System The Universe Science Aeronautics Technology Learning Resources About NASA Español News & Events Multimedia NASA+ Highlights 2 min read NASA-Funded Study Shows How Controlled Burns Help Sequoias Survive Wildfires article 2 days ago 5 min read NASA Study Finds Near-Earth Asteroid Is Actually Comet article 6 days ago 3 min read What’s Up: July 2026 Skywatching Tips from NASA arti",
+      "claims_subset": "",
+      "quality_flags": {
+        "allowlisted": true,
+        "has_excerpt": true,
+        "evaluation_only": true
+      }
+    },
+    {
+      "source": "nasa",
+      "title": "",
+      "id": "",
+      "url": "https://science.nasa.gov/solar-system/comets",
+      "entity_id": "",
+      "reason": "phase81_review_needed_official",
+      "fetched": true,
+      "status": "http_200",
+      "failure_reason": "",
+      "text_excerpt": "Comets Explore Search News & Events News & Events Recently Published Video Series on NASA+ Podcasts & Audio Blogs Newsletters Social Media Media Resources Multimedia Multimedia NASA+ Images NASA Live NASA Apps Podcasts Image of the Day e-Books 3D Resources Interactives STEM Multimedia NASA Brand & Usage Guidelines NASA+ Search Suggested Searches Climate Change Artemis Expedition 64 Mars perseverance SpaceX Crew-2 International Space Station View All Topics A-Z Home Missions Humans in Space Earth The Solar System The Universe Science Aeronautics Technology Learning Resources About NASA Español News & Events Multimedia NASA+ Highlights 2 min read NASA-Funded Study Shows How Controlled Burns Help Sequoias Survive Wildfires article 2 days ago 5 min read NASA Study Finds Near-Earth Asteroid Is Actually Comet article 6 days ago 3 min read What’s Up: July 2026 Skywatching Tips from NASA article",
+      "claims_subset": "",
+      "quality_flags": {
+        "allowlisted": true,
+        "has_excerpt": true,
+        "evaluation_only": true
+      }
+    },
+    {
+      "source": "nasa",
+      "title": "",
+      "id": "",
+      "url": "https://science.nasa.gov/mission",
+      "entity_id": "",
+      "reason": "phase81_review_needed_official",
+      "fetched": true,
+      "status": "http_200",
+      "failure_reason": "",
+      "text_excerpt": "Science Missions - NASA Science Explore Search News & Events News & Events Recently Published Video Series on NASA+ Podcasts & Audio Blogs Newsletters Social Media Media Resources Multimedia Multimedia NASA+ Images NASA Live NASA Apps Podcasts Image of the Day e-Books 3D Resources Interactives STEM Multimedia NASA Brand & Usage Guidelines NASA+ Search Suggested Searches Climate Change Artemis Expedition 64 Mars perseverance SpaceX Crew-2 International Space Station View All Topics A-Z Home Missions Humans in Space Earth The Solar System The Universe Science Aeronautics Technology Learning Resources About NASA Español News & Events Multimedia NASA+ Highlights 2 min read NASA-Funded Study Shows How Controlled Burns Help Sequoias Survive Wildfires article 2 days ago 5 min read NASA Study Finds Near-Earth Asteroid Is Actually Comet article 6 days ago 3 min read What’s Up: July 2026 Skywatchi",
+      "claims_subset": "",
+      "quality_flags": {
+        "allowlisted": true,
+        "has_excerpt": true,
+        "evaluation_only": true
+      }
+    },
+    {
+      "source": "nasa",
+      "title": "",
+      "id": "",
+      "url": "https://science.nasa.gov/mission/juno",
+      "entity_id": "",
+      "reason": "phase81_review_needed_official",
+      "fetched": true,
+      "status": "http_200",
+      "failure_reason": "",
+      "text_excerpt": "Juno - NASA Science Explore Search News & Events News & Events Recently Published Video Series on NASA+ Podcasts & Audio Blogs Newsletters Social Media Media Resources Multimedia Multimedia NASA+ Images NASA Live NASA Apps Podcasts Image of the Day e-Books 3D Resources Interactives STEM Multimedia NASA Brand & Usage Guidelines NASA+ Search Suggested Searches Climate Change Artemis Expedition 64 Mars perseverance SpaceX Crew-2 International Space Station View All Topics A-Z Home Missions Humans in Space Earth The Solar System The Universe Science Aeronautics Technology Learning Resources About NASA Español News & Events Multimedia NASA+ Highlights 2 min read NASA-Funded Study Shows How Controlled Burns Help Sequoias Survive Wildfires article 2 days ago 5 min read NASA Study Finds Near-Earth Asteroid Is Actually Comet article 6 days ago 3 min read What’s Up: July 2026 Skywatching Tips from",
+      "claims_subset": "",
+      "quality_flags": {
+        "allowlisted": true,
+        "has_excerpt": true,
+        "evaluation_only": true
+      }
+    },
+    {
+      "source": "nasa",
+      "title": "",
+      "id": "",
+      "url": "https://science.nasa.gov/mission/cassini",
+      "entity_id": "",
+      "reason": "phase81_review_needed_official",
+      "fetched": true,
+      "status": "http_200",
+      "failure_reason": "",
+      "text_excerpt": "Cassini-Huygens - NASA Science Explore Search News & Events News & Events Recently Published Video Series on NASA+ Podcasts & Audio Blogs Newsletters Social Media Media Resources Multimedia Multimedia NASA+ Images NASA Live NASA Apps Podcasts Image of the Day e-Books 3D Resources Interactives STEM Multimedia NASA Brand & Usage Guidelines NASA+ Search Suggested Searches Climate Change Artemis Expedition 64 Mars perseverance SpaceX Crew-2 International Space Station View All Topics A-Z Home Missions Humans in Space Earth The Solar System The Universe Science Aeronautics Technology Learning Resources About NASA Español News & Events Multimedia NASA+ Highlights 2 min read NASA-Funded Study Shows How Controlled Burns Help Sequoias Survive Wildfires article 2 days ago 5 min read NASA Study Finds Near-Earth Asteroid Is Actually Comet article 6 days ago 3 min read What’s Up: July 2026 Skywatchin",
+      "claims_subset": "",
+      "quality_flags": {
+        "allowlisted": true,
+        "has_excerpt": true,
+        "evaluation_only": true
+      }
+    },
+    {
+      "source": "nasa",
+      "title": "",
+      "id": "",
+      "url": "https://science.nasa.gov/mission/voyager",
+      "entity_id": "",
+      "reason": "phase81_review_needed_official",
+      "fetched": true,
+      "status": "http_200",
+      "failure_reason": "",
+      "text_excerpt": "Voyager - NASA Science Explore Search News & Events News & Events Recently Published Video Series on NASA+ Podcasts & Audio Blogs Newsletters Social Media Media Resources Multimedia Multimedia NASA+ Images NASA Live NASA Apps Podcasts Image of the Day e-Books 3D Resources Interactives STEM Multimedia NASA Brand & Usage Guidelines NASA+ Search Suggested Searches Climate Change Artemis Expedition 64 Mars perseverance SpaceX Crew-2 International Space Station View All Topics A-Z Home Missions Humans in Space Earth The Solar System The Universe Science Aeronautics Technology Learning Resources About NASA Español News & Events Multimedia NASA+ Highlights 2 min read NASA-Funded Study Shows How Controlled Burns Help Sequoias Survive Wildfires article 2 days ago 5 min read NASA Study Finds Near-Earth Asteroid Is Actually Comet article 6 days ago 3 min read What’s Up: July 2026 Skywatching Tips f",
+      "claims_subset": "",
+      "quality_flags": {
+        "allowlisted": true,
+        "has_excerpt": true,
+        "evaluation_only": true
+      }
+    },
+    {
+      "source": "nasa",
+      "title": "",
+      "id": "",
+      "url": "https://science.nasa.gov/mission/new-horizons",
+      "entity_id": "",
+      "reason": "phase81_review_needed_official",
+      "fetched": true,
+      "status": "http_200",
+      "failure_reason": "",
+      "text_excerpt": "New Horizons Explore Search News & Events News & Events Recently Published Video Series on NASA+ Podcasts & Audio Blogs Newsletters Social Media Media Resources Multimedia Multimedia NASA+ Images NASA Live NASA Apps Podcasts Image of the Day e-Books 3D Resources Interactives STEM Multimedia NASA Brand & Usage Guidelines NASA+ Search Suggested Searches Climate Change Artemis Expedition 64 Mars perseverance SpaceX Crew-2 International Space Station View All Topics A-Z Home Missions Humans in Space Earth The Solar System The Universe Science Aeronautics Technology Learning Resources About NASA Español News & Events Multimedia NASA+ Highlights 2 min read NASA-Funded Study Shows How Controlled Burns Help Sequoias Survive Wildfires article 2 days ago 5 min read NASA Study Finds Near-Earth Asteroid Is Actually Comet article 6 days ago 3 min read What’s Up: July 2026 Skywatching Tips from NASA a",
+      "claims_subset": "",
+      "quality_flags": {
+        "allowlisted": true,
+        "has_excerpt": true,
+        "evaluation_only": true
+      }
+    },
+    {
+      "source": "nasa",
+      "title": "",
+      "id": "",
+      "url": "https://science.nasa.gov/mission/mars-2020-perseverance",
+      "entity_id": "",
+      "reason": "phase81_review_needed_official",
+      "fetched": true,
+      "status": "http_200",
+      "failure_reason": "",
+      "text_excerpt": "Mars 2020: Perseverance Rover - NASA Science Explore Search News & Events News & Events Recently Published Video Series on NASA+ Podcasts & Audio Blogs Newsletters Social Media Media Resources Multimedia Multimedia NASA+ Images NASA Live NASA Apps Podcasts Image of the Day e-Books 3D Resources Interactives STEM Multimedia NASA Brand & Usage Guidelines NASA+ Search Suggested Searches Climate Change Artemis Expedition 64 Mars perseverance SpaceX Crew-2 International Space Station View All Topics A-Z Home Missions Humans in Space Earth The Solar System The Universe Science Aeronautics Technology Learning Resources About NASA Español News & Events Multimedia NASA+ Highlights 2 min read NASA-Funded Study Shows How Controlled Burns Help Sequoias Survive Wildfires article 2 days ago 5 min read NASA Study Finds Near-Earth Asteroid Is Actually Comet article 6 days ago 3 min read What’s Up: July 2",
+      "claims_subset": "",
+      "quality_flags": {
+        "allowlisted": true,
+        "has_excerpt": true,
+        "evaluation_only": true
+      }
+    },
+    {
+      "source": "nasa",
+      "title": "",
+      "id": "",
+      "url": "https://solarsystem.nasa.gov/planets/overview",
+      "entity_id": "",
+      "reason": "phase81_review_needed_official",
+      "fetched": true,
+      "status": "http_200",
+      "failure_reason": "",
+      "text_excerpt": "About the Planets Explore Search News & Events News & Events Recently Published Video Series on NASA+ Podcasts & Audio Blogs Newsletters Social Media Media Resources Multimedia Multimedia NASA+ Images NASA Live NASA Apps Podcasts Image of the Day e-Books 3D Resources Interactives STEM Multimedia NASA Brand & Usage Guidelines NASA+ Search Suggested Searches Climate Change Artemis Expedition 64 Mars perseverance SpaceX Crew-2 International Space Station View All Topics A-Z Home Missions Humans in Space Earth The Solar System The Universe Science Aeronautics Technology Learning Resources About NASA Español News & Events Multimedia NASA+ Highlights 2 min read NASA-Funded Study Shows How Controlled Burns Help Sequoias Survive Wildfires article 2 days ago 5 min read NASA Study Finds Near-Earth Asteroid Is Actually Comet article 6 days ago 3 min read What’s Up: July 2026 Skywatching Tips from N",
+      "claims_subset": "",
+      "quality_flags": {
+        "allowlisted": true,
+        "has_excerpt": true,
+        "evaluation_only": true
+      }
+    },
+    {
+      "source": "nasa",
+      "title": "",
+      "id": "",
+      "url": "https://solarsystem.nasa.gov/moons/overview",
+      "entity_id": "",
+      "reason": "phase81_review_needed_official",
+      "fetched": true,
+      "status": "http_200",
+      "failure_reason": "",
+      "text_excerpt": "Moons Explore Search News & Events News & Events Recently Published Video Series on NASA+ Podcasts & Audio Blogs Newsletters Social Media Media Resources Multimedia Multimedia NASA+ Images NASA Live NASA Apps Podcasts Image of the Day e-Books 3D Resources Interactives STEM Multimedia NASA Brand & Usage Guidelines NASA+ Search Suggested Searches Climate Change Artemis Expedition 64 Mars perseverance SpaceX Crew-2 International Space Station View All Topics A-Z Home Missions Humans in Space Earth The Solar System The Universe Science Aeronautics Technology Learning Resources About NASA Español News & Events Multimedia NASA+ Highlights 2 min read NASA-Funded Study Shows How Controlled Burns Help Sequoias Survive Wildfires article 2 days ago 5 min read NASA Study Finds Near-Earth Asteroid Is Actually Comet article 6 days ago 3 min read What’s Up: July 2026 Skywatching Tips from NASA article ",
+      "claims_subset": "",
+      "quality_flags": {
+        "allowlisted": true,
+        "has_excerpt": true,
+        "evaluation_only": true
+      }
+    },
+    {
+      "source": "nasa",
+      "title": "",
+      "id": "",
+      "url": "https://solarsystem.nasa.gov/asteroids-comets-and-meteors/overview",
+      "entity_id": "",
+      "reason": "phase81_review_needed_official",
+      "fetched": true,
+      "status": "http_200",
+      "failure_reason": "",
+      "text_excerpt": "Asteroids, Comets, and Meteors Explore Search News & Events News & Events Recently Published Video Series on NASA+ Podcasts & Audio Blogs Newsletters Social Media Media Resources Multimedia Multimedia NASA+ Images NASA Live NASA Apps Podcasts Image of the Day e-Books 3D Resources Interactives STEM Multimedia NASA Brand & Usage Guidelines NASA+ Search Suggested Searches Climate Change Artemis Expedition 64 Mars perseverance SpaceX Crew-2 International Space Station View All Topics A-Z Home Missions Humans in Space Earth The Solar System The Universe Science Aeronautics Technology Learning Resources About NASA Español News & Events Multimedia NASA+ Highlights 2 min read NASA-Funded Study Shows How Controlled Burns Help Sequoias Survive Wildfires article 2 days ago 5 min read NASA Study Finds Near-Earth Asteroid Is Actually Comet article 6 days ago 3 min read What’s Up: July 2026 Skywatchin",
+      "claims_subset": "",
+      "quality_flags": {
+        "allowlisted": true,
+        "has_excerpt": true,
+        "evaluation_only": true
+      }
+    },
+    {
+      "source": "nasa",
+      "title": "",
+      "id": "",
+      "url": "https://solarsystem.nasa.gov/missions",
+      "entity_id": "",
+      "reason": "phase81_review_needed_official",
+      "fetched": true,
+      "status": "http_200",
+      "failure_reason": "",
+      "text_excerpt": "Science Missions - NASA Science Explore Search News & Events News & Events Recently Published Video Series on NASA+ Podcasts & Audio Blogs Newsletters Social Media Media Resources Multimedia Multimedia NASA+ Images NASA Live NASA Apps Podcasts Image of the Day e-Books 3D Resources Interactives STEM Multimedia NASA Brand & Usage Guidelines NASA+ Search Suggested Searches Climate Change Artemis Expedition 64 Mars perseverance SpaceX Crew-2 International Space Station View All Topics A-Z Home Missions Humans in Space Earth The Solar System The Universe Science Aeronautics Technology Learning Resources About NASA Español News & Events Multimedia NASA+ Highlights 2 min read NASA-Funded Study Shows How Controlled Burns Help Sequoias Survive Wildfires article 2 days ago 5 min read NASA Study Finds Near-Earth Asteroid Is Actually Comet article 6 days ago 3 min read What’s Up: July 2026 Skywatchi",
+      "claims_subset": "",
+      "quality_flags": {
+        "allowlisted": true,
+        "has_excerpt": true,
+        "evaluation_only": true
+      }
+    },
+    {
+      "source": "esa",
+      "title": "ESA - Space Science",
+      "id": "ESA - Space Science",
+      "url": "https://www.esa.int/science_exploration/space_science",
+      "entity_id": "",
+      "reason": "phase67_68_accepted_or_review_needed",
+      "fetched": true,
+      "status": "local_preview",
+      "failure_reason": "",
+      "text_excerpt": "Science & Exploration Space Science Latest All Stories Videos Images Image Science & Exploration Plato's electronics ready for space 20/07/2026 1433 views 35 likes View Image Science & Exploration ESA’s Mars Express meets NASA’s Psyche 17/07/2026 2230 views 52 likes View Story Science & Exploration Expedition Sound podcast series 16/07/2026 1004 views 31 likes Read Video 00:57:42 Science & Exploration Replay of the online media briefing on the total solar ecli… 15/07/2026 974 views 21 likes Play Story Science & Exploration Metallic waves on ancient Mars 15/07/2026 3051 views 58 likes Read Story Science & Exploration Webb reveals millions of stars in nearby galaxy 06/07/2026 2234 views 16 likes Read Story Science & Exploration Euclid discovers the most ancient quasar in the Universe 06/07/2026 8566 views 78 likes Read Story Science & Exploration Webb studies how a planet survived the deat",
+      "claims_subset": "",
+      "quality_flags": {
+        "allowlisted": true,
+        "has_excerpt": true,
+        "evaluation_only": true
+      }
+    },
+    {
+      "source": "esa",
+      "title": "ESA - Rosetta",
+      "id": "ESA - Rosetta",
+      "url": "https://www.esa.int/science_exploration/space_science/rosetta",
+      "entity_id": "",
+      "reason": "phase67_68_accepted_or_review_needed",
+      "fetched": true,
+      "status": "local_preview",
+      "failure_reason": "",
+      "text_excerpt": "Science & Exploration Rosetta ESA's comet-chaser The mission ESA's Rosetta mission was the first to rendezvous with a comet, the first to follow a comet on its orbit around the Sun, and the first to deploy a lander to a comet's surface. Comets are time capsules containing primitive material left over from the epoch when the Sun and its planets formed. By studying the gas, dust and structure of the nucleus and organic materials associated with Comet 67P/Churyumov-Gerasimenko, via both remote and in situ observations, the Rosetta mission taught us about the history and evolution of our Solar System. Rosetta is an ESA mission with contributions from its Member States and NASA. Rosetta’s Philae lander was provided by a consortium led by DLR, MPS, CNES and ASI. Launch: 2 March 2004 1st Earth gravity assist: 4 March 2005 Mars gravity assist: 25 February 2007 2nd Earth gravity assist: 13 Novemb",
+      "claims_subset": "",
+      "quality_flags": {
+        "allowlisted": true,
+        "has_excerpt": true,
+        "evaluation_only": true
+      }
+    },
+    {
+      "source": "esa",
+      "title": "ESA - Gaia",
+      "id": "ESA - Gaia",
+      "url": "https://www.esa.int/science_exploration/space_science/gaia",
+      "entity_id": "",
+      "reason": "phase67_68_accepted_or_review_needed",
+      "fetched": true,
+      "status": "local_preview",
+      "failure_reason": "",
+      "text_excerpt": "Science & Exploration Gaia ESA's billion star surveyor The mission From 27 July 2014 to 15 January 2025, Gaia has made more than three trillion observations of two billion stars and other objects throughout our Milky Way galaxy and beyond, mapping their motions, luminosity, temperature and composition. Gaia's extraordinarily precise three-dimensional map will provide the data needed to tackle an enormous range of important questions related to the origin, structure and evolutionary history of our galaxy. Launch: 19 December 2013 Orbit: L2 Lagrange point End of science observations : 15 January 2025 Upcoming data releases: Data Release 4 (based on 66 months of data): expected December 2026 Data Release 5 (based on all mission data): not before the end of 2030 Previous data releases: Data Release 1: 14 September 2016 Data Release 2: 25 April 2018 Early Data Release 3: 3 December 2020 Data ",
+      "claims_subset": "",
+      "quality_flags": {
+        "allowlisted": true,
+        "has_excerpt": true,
+        "evaluation_only": true
+      }
+    },
+    {
+      "source": "esa",
+      "title": "ESA - Solar Orbiter",
+      "id": "ESA - Solar Orbiter",
+      "url": "https://www.esa.int/science_exploration/space_science/solar_orbiter",
+      "entity_id": "",
+      "reason": "phase67_68_accepted_or_review_needed",
+      "fetched": true,
+      "status": "local_preview",
+      "failure_reason": "",
+      "text_excerpt": "Science & Exploration Solar Orbiter The Sun up close Solar Orbiter is the most complex scientific laboratory ever sent to our life-giving star, taking images of the Sun from closer than any spacecraft before and being the first to look at its polar regions. With Solar Orbiter's ten instruments, scientists hope to answer some profound questions: What drives the Sun’s 11-year cycle of rising and subsiding magnetic activity? What heats up the upper layer of its atmosphere, the corona, to millions of degrees Celsius? How does solar wind form, and what accelerates it to speeds of hundreds of kilometres per second? And how does it all affect our planet? Launch date: February 2020 First images: July 2020 Beginning of routine science operations: November 2021 Mission highlights: The closest-ever images of the Sun, the first ever close-up images of the Sun’s polar regions, measuring the compositi",
+      "claims_subset": "",
+      "quality_flags": {
+        "allowlisted": true,
+        "has_excerpt": true,
+        "evaluation_only": true
+      }
+    },
+    {
+      "source": "esa",
+      "title": "ESA - BepiColombo",
+      "id": "ESA - BepiColombo",
+      "url": "https://www.esa.int/science_exploration/space_science/bepicolombo",
+      "entity_id": "",
+      "reason": "phase67_68_accepted_or_review_needed",
+      "fetched": true,
+      "status": "local_preview",
+      "failure_reason": "",
+      "text_excerpt": "Science & Exploration BepiColombo Investigating Mercury's mysteries BepiColombo will be the second and most complex mission ever to orbit Mercury. Close to the Sun and more difficult for an orbiter to reach than Saturn, this small desert world is the least explored planet of the inner Solar System. Learning more about Mercury will shed light on the history of the entire Solar System. Packed with scientific instruments, the mission will try to answer many perplexing questions, such as: Why is there ice in the polar craters of the scorched planet? Why does Mercury have a magnetic field? And what are the mysterious 'hollows' on its surface? Launch : 20 October 2018 on an Ariane 5 rocket from Europe's Spaceport Components: Mercury Planetary Orbiter , Mercury Magnetospheric Orbiter , Mercury Transfer Module Status: In operation; en route to Mercury Mercury flybys : 1 Oct 2021 , 23 June 2022 ,",
+      "claims_subset": "",
+      "quality_flags": {
+        "allowlisted": true,
+        "has_excerpt": true,
+        "evaluation_only": true
+      }
+    },
+    {
+      "source": "esa",
+      "title": "ESA - Euclid",
+      "id": "ESA - Euclid",
+      "url": "https://www.esa.int/science_exploration/space_science/euclid",
+      "entity_id": "",
+      "reason": "phase67_68_accepted_or_review_needed",
+      "fetched": true,
+      "status": "local_preview",
+      "failure_reason": "",
+      "text_excerpt": "Science & Exploration Euclid Exploring the dark Universe The mission ESA's Euclid mission is designed to explore the composition and evolution of the dark Universe. The space telescope will create a great map of the large-scale structure of the Universe across space and time by observing billions of galaxies out to 10 billion light-years, across more than a third of the sky. Euclid will explore how the Universe has expanded and how structure has formed over cosmic history, revealing more about the role of gravity and the nature of dark energy and dark matter. The launch Launch: 1 July 2023 Launch location : Cape Canaveral, Florida, USA Launch vehicle: SpaceX Falcon 9 Destination: Sun-Earth Lagrange point 2, 1.5 million km from Earth 2 instruments 1/3 of the sky 10 billion light-years 3D map of the Universe Latest All Stories Videos Images Story Science & Exploration Euclid discovers the ",
+      "claims_subset": "",
+      "quality_flags": {
+        "allowlisted": true,
+        "has_excerpt": true,
+        "evaluation_only": true
+      }
+    },
+    {
+      "source": "esa",
+      "title": "ESA - ExoMars",
+      "id": "ESA - ExoMars",
+      "url": "https://www.esa.int/science_exploration/space_science/exomars",
+      "entity_id": "",
+      "reason": "phase67_68_accepted_or_review_needed",
+      "fetched": true,
+      "status": "local_preview",
+      "failure_reason": "",
+      "text_excerpt": "Science & Exploration ExoMars Has life ever existed on Mars? The mission The ExoMars programme comprises two missions: the first – the Trace Gas Orbiter – launched in 2016 while the second, carrying the Rosalind Franklin rover, will target launch in 2028. Together they will address the question of whether life has ever existed on Mars. 1st European rover 2 m rover drill depth 70m/sol driving on Mars Latest All Stories Videos Images Image Science & Exploration ExoMars ramps put up with cold, shaking and vacuum 21/07/2026 128 views 2 likes View Story Science & Exploration ExoMars rover targets vast bed of clay in search for life 04/06/2026 4252 views 57 likes Read Video 00:00:27 Science & Exploration Landing sideways 18/05/2026 1464 views 28 likes Play Image Enabling & Support Sensitive and sturdy 07/05/2026 2096 views 50 likes View Image Enabling & Support The great parachute bake-out 30/",
+      "claims_subset": "",
+      "quality_flags": {
+        "allowlisted": true,
+        "has_excerpt": true,
+        "evaluation_only": true
+      }
+    },
+    {
+      "source": "esa",
+      "title": "ESA - Cluster",
+      "id": "ESA - Cluster",
+      "url": "https://www.esa.int/science_exploration/space_science/cluster",
+      "entity_id": "",
+      "reason": "phase67_68_accepted_or_review_needed",
+      "fetched": true,
+      "status": "local_preview",
+      "failure_reason": "",
+      "text_excerpt": "Science & Exploration Cluster Measuring Earth's magnetic environment The mission Cluster was a constellation of four spacecraft investigating the interaction between the Sun and Earth’s magnetosphere in unparalleled detail. The magnetosphere is our shield against the charged gas that carries particles and magnetic fields outwards from the Sun. Launch: 16 July and 9 August 2000 Mission end: 8 September 2024 Observed: solar wind, magnetosphere Orbit: elliptical around Earth’s poles, a few hundred to 125 000 km altitude Spacecraft names: Rumba, Salsa, Samba and Tango 11 instruments 4 spacecraft 2 decades of operation Latest All Stories Videos Images Story Space Safety Moving satellites to meet a plane for rare reentry data 02/02/2026 6273 views 31 likes Read Video 00:46:03 Science & Exploration Seas of the Sun: The story of Cluster 31/10/2025 3547 views 39 likes Play Image Science & Explora",
+      "claims_subset": "",
+      "quality_flags": {
+        "allowlisted": true,
+        "has_excerpt": true,
+        "evaluation_only": true
+      }
+    },
+    {
+      "source": "esa",
+      "title": "ESA - Webb",
+      "id": "ESA - Webb",
+      "url": "https://www.esa.int/science_exploration/space_science/webb",
+      "entity_id": "",
+      "reason": "phase67_68_accepted_or_review_needed",
+      "fetched": true,
+      "status": "local_preview",
+      "failure_reason": "",
+      "text_excerpt": "Science & Exploration Webb Seeing farther The mission The James Webb Space Telescope (Webb) is the next great space science observatory following Hubble, designed to answer outstanding questions about the Universe and to make breakthrough discoveries in all fields of astronomy. Webb will see farther into our origins: from the formation of stars and planets, to the birth of the first galaxies in the early Universe. Webb is an international partnership between NASA, ESA and CSA. The telescope launched on an Ariane 5 from Europe's Spaceport in French Guiana. The launch Launch date: 25 December 2021 Launch location: Europe's Spaceport in French Guiana Launch vehicle: Ariane 5 Orbit: Lagrange point 2, 1.5 million km from Earth 6.5 m mirror 18 mirror segments 4 instruments 5 sunshield layers Latest All Stories Videos Images Story Science & Exploration Webb reveals millions of stars in nearby g",
+      "claims_subset": "",
+      "quality_flags": {
+        "allowlisted": true,
+        "has_excerpt": true,
+        "evaluation_only": true
+      }
+    },
+    {
+      "source": "esa",
+      "title": "",
+      "id": "",
+      "url": "https://www.esa.int/science_exploration/space_science/hera",
+      "entity_id": "",
+      "reason": "phase67_68_accepted_or_review_needed",
+      "fetched": false,
+      "status": "failed",
+      "failure_reason": "HTTPError",
+      "text_excerpt": "",
+      "claims_subset": "",
+      "quality_flags": {
+        "allowlisted": true,
+        "has_excerpt": false,
+        "evaluation_only": true
+      }
+    },
+    {
+      "source": "esa",
+      "title": "",
+      "id": "",
+      "url": "https://www.esa.int/science_exploration/space_science/what_is_the_solar_system",
+      "entity_id": "",
+      "reason": "phase67_68_accepted_or_review_needed",
+      "fetched": false,
+      "status": "failed",
+      "failure_reason": "HTTPError",
+      "text_excerpt": "",
+      "claims_subset": "",
+      "quality_flags": {
+        "allowlisted": true,
+        "has_excerpt": false,
+        "evaluation_only": true
+      }
+    },
+    {
+      "source": "esa",
+      "title": "",
+      "id": "",
+      "url": "https://www.esa.int/science_exploration/space_science/exploring_space",
+      "entity_id": "",
+      "reason": "phase67_68_accepted_or_review_needed",
+      "fetched": true,
+      "status": "http_200",
+      "failure_reason": "",
+      "text_excerpt": "ESA - Exploring space Science & Exploration Exploring space Latest All Stories Videos Images Story Science & Exploration Let gravity assist you... 21/06/2013 32689 views 187 likes Read Story Science & Exploration XMM-Newton's fifth anniversary in orbit 10/12/2004 1179 views 0 likes Read Story Science & Exploration SOHO's ninth anniversary 02/12/2004 715 views 0 likes Read Story Science & Exploration Infrared anniversary 18/11/2004 827 views 0 likes Read Story Science & Exploration Europe reaches the Moon! 16/11/2004 895 views 0 likes Read More items More About Space Science ESA's 'Cosmic Vision' Science missions Mission navigator Solar System explorers Cosmic observers Resources For Media For Scientists For Educators For Kids Space science from home Glossary Multimedia Science images Science videos Expedition Sound podcast series Sounds from space Follow us @science.esa.int ESA Space Sci",
+      "claims_subset": "",
+      "quality_flags": {
+        "allowlisted": true,
+        "has_excerpt": true,
+        "evaluation_only": true
+      }
+    },
+    {
+      "source": "esa",
+      "title": "",
+      "id": "",
+      "url": "https://www.esa.int/science_exploration",
+      "entity_id": "",
+      "reason": "phase67_68_accepted_or_review_needed",
+      "fetched": false,
+      "status": "failed",
+      "failure_reason": "URLError",
+      "text_excerpt": "",
+      "claims_subset": "",
+      "quality_flags": {
+        "allowlisted": true,
+        "has_excerpt": false,
+        "evaluation_only": true
+      }
+    },
+    {
+      "source": "esa",
+      "title": "",
+      "id": "",
+      "url": "https://www.esa.int/science_exploration/space_science/expedition_sound_podcast_series",
+      "entity_id": "",
+      "reason": "phase67_68_accepted_or_review_needed",
+      "fetched": true,
+      "status": "http_200",
+      "failure_reason": "",
+      "text_excerpt": "ESA - Expedition Sound podcast series Science & Exploration Expedition Sound podcast series 16/07/2026 1024 views 32 likes ESA / Science & Exploration / Space Science Expedition Sound is a podcast series by the European Space Agency (ESA) in which you’re invited to explore the Universe through your ears. Guided by sonifications – the translation of data into sound – host Zsófi Szalavári travels from our Sun out into the depths of space to uncover what the space telescopes of ESA’s science missions teach us about the Universe. Each episode stops at a different destination along the way, where Zsófi is joined by ESA scientists, astronomers and sonification experts, to learn about the science that is hidden in the data that our space missions send back to us. At the heart of the podcast is the idea that sound can make astronomy more accessible. So, alongside the science, you can also hear f",
+      "claims_subset": "",
+      "quality_flags": {
+        "allowlisted": true,
+        "has_excerpt": true,
+        "evaluation_only": true
+      }
+    },
+    {
+      "source": "esa",
+      "title": "",
+      "id": "",
+      "url": "https://www.esa.int/science_exploration/space_science/mars_express/metallic_waves_on_ancient_mars",
+      "entity_id": "",
+      "reason": "phase67_68_accepted_or_review_needed",
+      "fetched": true,
+      "status": "http_200",
+      "failure_reason": "",
+      "text_excerpt": "ESA - Metallic waves on ancient Mars Science & Exploration Metallic waves on ancient Mars 15/07/2026 3103 views 59 likes ESA / Science & Exploration / Space Science / Mars Express The European Space Agency’s Mars Express has spotted a swathe of metallic-looking waves filling Mars’s large Kaiser Crater – an ancient and otherworldly dune field sculpted by wind. This month’s snapshot of Mars, taken by the High Resolution Stereo Camera (HRSC) aboard ESA’s Mars orbiter, captures one of the oldest parts of the Red Planet: Noachis Terra. Situated in Mars’s ancient southern highlands, Noachis Terra has been heavily bombarded with rocks from space over the past four billion years – and the scars from these collisions are clear to see. Mars Express visits Kaiser Crater on Mars. Click on the image to zoom in and explore. This image is packed with impact craters. The right half of the image is domin",
+      "claims_subset": "",
+      "quality_flags": {
+        "allowlisted": true,
+        "has_excerpt": true,
+        "evaluation_only": true
+      }
+    },
+    {
+      "source": "wikidata",
+      "title": "太阳",
+      "id": "Q525",
+      "url": "https://www.wikidata.org/wiki/Q525",
+      "entity_id": "Q525",
+      "reason": "phase74_accepted",
+      "fetched": true,
+      "status": "assessment_preview",
+      "failure_reason": "",
+      "text_excerpt": "{\"qid\": \"Q525\", \"title\": \"太阳\", \"url\": \"https://www.wikidata.org/wiki/Q525\", \"reason\": \"local_entity_raw_has_triples_and_narratives\", \"has_local_raw\": true, \"has_local_materialized_pair\": true}",
+      "claims_subset": "{\"qid\": \"Q525\", \"title\": \"太阳\", \"url\": \"https://www.wikidata.org/wiki/Q525\", \"reason\": \"local_entity_raw_has_triples_and_narratives\", \"has_local_raw\": true, \"has_local_materialized_pair\": true}",
+      "quality_flags": {
+        "allowlisted": true,
+        "has_excerpt": true,
+        "evaluation_only": true
+      }
+    },
+    {
+      "source": "wikidata",
+      "title": "水星",
+      "id": "Q308",
+      "url": "https://www.wikidata.org/wiki/Q308",
+      "entity_id": "Q308",
+      "reason": "phase74_accepted",
+      "fetched": true,
+      "status": "assessment_preview",
+      "failure_reason": "",
+      "text_excerpt": "{\"qid\": \"Q308\", \"title\": \"水星\", \"url\": \"https://www.wikidata.org/wiki/Q308\", \"reason\": \"local_materialized_preview_exists\", \"has_local_raw\": false, \"has_local_materialized_pair\": true}",
+      "claims_subset": "{\"qid\": \"Q308\", \"title\": \"水星\", \"url\": \"https://www.wikidata.org/wiki/Q308\", \"reason\": \"local_materialized_preview_exists\", \"has_local_raw\": false, \"has_local_materialized_pair\": true}",
+      "quality_flags": {
+        "allowlisted": true,
+        "has_excerpt": true,
+        "evaluation_only": true
+      }
+    },
+    {
+      "source": "wikidata",
+      "title": "金星",
+      "id": "Q313",
+      "url": "https://www.wikidata.org/wiki/Q313",
+      "entity_id": "Q313",
+      "reason": "phase74_accepted",
+      "fetched": true,
+      "status": "assessment_preview",
+      "failure_reason": "",
+      "text_excerpt": "{\"qid\": \"Q313\", \"title\": \"金星\", \"url\": \"https://www.wikidata.org/wiki/Q313\", \"reason\": \"local_materialized_preview_exists\", \"has_local_raw\": false, \"has_local_materialized_pair\": true}",
+      "claims_subset": "{\"qid\": \"Q313\", \"title\": \"金星\", \"url\": \"https://www.wikidata.org/wiki/Q313\", \"reason\": \"local_materialized_preview_exists\", \"has_local_raw\": false, \"has_local_materialized_pair\": true}",
+      "quality_flags": {
+        "allowlisted": true,
+        "has_excerpt": true,
+        "evaluation_only": true
+      }
+    },
+    {
+      "source": "wikidata",
+      "title": "地球",
+      "id": "Q2",
+      "url": "https://www.wikidata.org/wiki/Q2",
+      "entity_id": "Q2",
+      "reason": "phase74_accepted",
+      "fetched": true,
+      "status": "assessment_preview",
+      "failure_reason": "",
+      "text_excerpt": "{\"qid\": \"Q2\", \"title\": \"地球\", \"url\": \"https://www.wikidata.org/wiki/Q2\", \"reason\": \"local_entity_raw_has_triples_and_narratives\", \"has_local_raw\": true, \"has_local_materialized_pair\": true}",
+      "claims_subset": "{\"qid\": \"Q2\", \"title\": \"地球\", \"url\": \"https://www.wikidata.org/wiki/Q2\", \"reason\": \"local_entity_raw_has_triples_and_narratives\", \"has_local_raw\": true, \"has_local_materialized_pair\": true}",
+      "quality_flags": {
+        "allowlisted": true,
+        "has_excerpt": true,
+        "evaluation_only": true
+      }
+    },
+    {
+      "source": "wikidata",
+      "title": "月球",
+      "id": "Q405",
+      "url": "https://www.wikidata.org/wiki/Q405",
+      "entity_id": "Q405",
+      "reason": "phase74_accepted",
+      "fetched": true,
+      "status": "assessment_preview",
+      "failure_reason": "",
+      "text_excerpt": "{\"qid\": \"Q405\", \"title\": \"月球\", \"url\": \"https://www.wikidata.org/wiki/Q405\", \"reason\": \"local_materialized_preview_exists\", \"has_local_raw\": false, \"has_local_materialized_pair\": true}",
+      "claims_subset": "{\"qid\": \"Q405\", \"title\": \"月球\", \"url\": \"https://www.wikidata.org/wiki/Q405\", \"reason\": \"local_materialized_preview_exists\", \"has_local_raw\": false, \"has_local_materialized_pair\": true}",
+      "quality_flags": {
+        "allowlisted": true,
+        "has_excerpt": true,
+        "evaluation_only": true
+      }
+    },
+    {
+      "source": "wikidata",
+      "title": "火星",
+      "id": "Q111",
+      "url": "https://www.wikidata.org/wiki/Q111",
+      "entity_id": "Q111",
+      "reason": "phase74_accepted",
+      "fetched": true,
+      "status": "assessment_preview",
+      "failure_reason": "",
+      "text_excerpt": "{\"qid\": \"Q111\", \"title\": \"火星\", \"url\": \"https://www.wikidata.org/wiki/Q111\", \"reason\": \"local_entity_raw_has_triples_and_narratives\", \"has_local_raw\": true, \"has_local_materialized_pair\": true}",
+      "claims_subset": "{\"qid\": \"Q111\", \"title\": \"火星\", \"url\": \"https://www.wikidata.org/wiki/Q111\", \"reason\": \"local_entity_raw_has_triples_and_narratives\", \"has_local_raw\": true, \"has_local_materialized_pair\": true}",
+      "quality_flags": {
+        "allowlisted": true,
+        "has_excerpt": true,
+        "evaluation_only": true
+      }
+    },
+    {
+      "source": "wikidata",
+      "title": "木星",
+      "id": "Q319",
+      "url": "https://www.wikidata.org/wiki/Q319",
+      "entity_id": "Q319",
+      "reason": "phase74_accepted",
+      "fetched": true,
+      "status": "assessment_preview",
+      "failure_reason": "",
+      "text_excerpt": "{\"qid\": \"Q319\", \"title\": \"木星\", \"url\": \"https://www.wikidata.org/wiki/Q319\", \"reason\": \"local_materialized_preview_exists\", \"has_local_raw\": false, \"has_local_materialized_pair\": true}",
+      "claims_subset": "{\"qid\": \"Q319\", \"title\": \"木星\", \"url\": \"https://www.wikidata.org/wiki/Q319\", \"reason\": \"local_materialized_preview_exists\", \"has_local_raw\": false, \"has_local_materialized_pair\": true}",
+      "quality_flags": {
+        "allowlisted": true,
+        "has_excerpt": true,
+        "evaluation_only": true
+      }
+    },
+    {
+      "source": "wikidata",
+      "title": "土星",
+      "id": "Q193",
+      "url": "https://www.wikidata.org/wiki/Q193",
+      "entity_id": "Q193",
+      "reason": "phase74_accepted",
+      "fetched": true,
+      "status": "assessment_preview",
+      "failure_reason": "",
+      "text_excerpt": "{\"qid\": \"Q193\", \"title\": \"土星\", \"url\": \"https://www.wikidata.org/wiki/Q193\", \"reason\": \"local_materialized_preview_exists\", \"has_local_raw\": false, \"has_local_materialized_pair\": true}",
+      "claims_subset": "{\"qid\": \"Q193\", \"title\": \"土星\", \"url\": \"https://www.wikidata.org/wiki/Q193\", \"reason\": \"local_materialized_preview_exists\", \"has_local_raw\": false, \"has_local_materialized_pair\": true}",
+      "quality_flags": {
+        "allowlisted": true,
+        "has_excerpt": true,
+        "evaluation_only": true
+      }
+    },
+    {
+      "source": "wikidata",
+      "title": "天王星",
+      "id": "Q324",
+      "url": "https://www.wikidata.org/wiki/Q324",
+      "entity_id": "Q324",
+      "reason": "phase74_accepted",
+      "fetched": true,
+      "status": "assessment_preview",
+      "failure_reason": "",
+      "text_excerpt": "{\"qid\": \"Q324\", \"title\": \"天王星\", \"url\": \"https://www.wikidata.org/wiki/Q324\", \"reason\": \"local_materialized_preview_exists\", \"has_local_raw\": false, \"has_local_materialized_pair\": true}",
+      "claims_subset": "{\"qid\": \"Q324\", \"title\": \"天王星\", \"url\": \"https://www.wikidata.org/wiki/Q324\", \"reason\": \"local_materialized_preview_exists\", \"has_local_raw\": false, \"has_local_materialized_pair\": true}",
+      "quality_flags": {
+        "allowlisted": true,
+        "has_excerpt": true,
+        "evaluation_only": true
+      }
+    },
+    {
+      "source": "wikidata",
+      "title": "海王星",
+      "id": "Q332",
+      "url": "https://www.wikidata.org/wiki/Q332",
+      "entity_id": "Q332",
+      "reason": "phase74_accepted",
+      "fetched": true,
+      "status": "assessment_preview",
+      "failure_reason": "",
+      "text_excerpt": "{\"qid\": \"Q332\", \"title\": \"海王星\", \"url\": \"https://www.wikidata.org/wiki/Q332\", \"reason\": \"local_materialized_preview_exists\", \"has_local_raw\": false, \"has_local_materialized_pair\": true}",
+      "claims_subset": "{\"qid\": \"Q332\", \"title\": \"海王星\", \"url\": \"https://www.wikidata.org/wiki/Q332\", \"reason\": \"local_materialized_preview_exists\", \"has_local_raw\": false, \"has_local_materialized_pair\": true}",
+      "quality_flags": {
+        "allowlisted": true,
+        "has_excerpt": true,
+        "evaluation_only": true
+      }
+    },
+    {
+      "source": "wikidata",
+      "title": "冥王星",
+      "id": "Q339",
+      "url": "https://www.wikidata.org/wiki/Q339",
+      "entity_id": "Q339",
+      "reason": "phase74_accepted",
+      "fetched": true,
+      "status": "assessment_preview",
+      "failure_reason": "",
+      "text_excerpt": "{\"qid\": \"Q339\", \"title\": \"冥王星\", \"url\": \"https://www.wikidata.org/wiki/Q339\", \"reason\": \"local_materialized_preview_exists\", \"has_local_raw\": false, \"has_local_materialized_pair\": true}",
+      "claims_subset": "{\"qid\": \"Q339\", \"title\": \"冥王星\", \"url\": \"https://www.wikidata.org/wiki/Q339\", \"reason\": \"local_materialized_preview_exists\", \"has_local_raw\": false, \"has_local_materialized_pair\": true}",
+      "quality_flags": {
+        "allowlisted": true,
+        "has_excerpt": true,
+        "evaluation_only": true
+      }
+    },
+    {
+      "source": "wikidata",
+      "title": "谷神星",
+      "id": "Q596",
+      "url": "https://www.wikidata.org/wiki/Q596",
+      "entity_id": "Q596",
+      "reason": "phase74_accepted",
+      "fetched": true,
+      "status": "assessment_preview",
+      "failure_reason": "",
+      "text_excerpt": "{\"qid\": \"Q596\", \"title\": \"谷神星\", \"url\": \"https://www.wikidata.org/wiki/Q596\", \"reason\": \"local_materialized_preview_exists\", \"has_local_raw\": false, \"has_local_materialized_pair\": true}",
+      "claims_subset": "{\"qid\": \"Q596\", \"title\": \"谷神星\", \"url\": \"https://www.wikidata.org/wiki/Q596\", \"reason\": \"local_materialized_preview_exists\", \"has_local_raw\": false, \"has_local_materialized_pair\": true}",
+      "quality_flags": {
+        "allowlisted": true,
+        "has_excerpt": true,
+        "evaluation_only": true
+      }
+    },
+    {
+      "source": "wikidata",
+      "title": "阋神星",
+      "id": "Q611",
+      "url": "https://www.wikidata.org/wiki/Q611",
+      "entity_id": "Q611",
+      "reason": "phase74_accepted",
+      "fetched": true,
+      "status": "assessment_preview",
+      "failure_reason": "",
+      "text_excerpt": "{\"qid\": \"Q611\", \"title\": \"阋神星\", \"url\": \"https://www.wikidata.org/wiki/Q611\", \"reason\": \"local_materialized_preview_exists\", \"has_local_raw\": false, \"has_local_materialized_pair\": true}",
+      "claims_subset": "{\"qid\": \"Q611\", \"title\": \"阋神星\", \"url\": \"https://www.wikidata.org/wiki/Q611\", \"reason\": \"local_materialized_preview_exists\", \"has_local_raw\": false, \"has_local_materialized_pair\": true}",
+      "quality_flags": {
+        "allowlisted": true,
+        "has_excerpt": true,
+        "evaluation_only": true
+      }
+    },
+    {
+      "source": "wikidata",
+      "title": "妊神星",
+      "id": "Q601",
+      "url": "https://www.wikidata.org/wiki/Q601",
+      "entity_id": "Q601",
+      "reason": "phase74_accepted",
+      "fetched": true,
+      "status": "assessment_preview",
+      "failure_reason": "",
+      "text_excerpt": "{\"qid\": \"Q601\", \"title\": \"妊神星\", \"url\": \"https://www.wikidata.org/wiki/Q601\", \"reason\": \"local_materialized_preview_exists\", \"has_local_raw\": false, \"has_local_materialized_pair\": true}",
+      "claims_subset": "{\"qid\": \"Q601\", \"title\": \"妊神星\", \"url\": \"https://www.wikidata.org/wiki/Q601\", \"reason\": \"local_materialized_preview_exists\", \"has_local_raw\": false, \"has_local_materialized_pair\": true}",
+      "quality_flags": {
+        "allowlisted": true,
+        "has_excerpt": true,
+        "evaluation_only": true
+      }
+    },
+    {
+      "source": "wikidata",
+      "title": "鸟神星",
+      "id": "Q604",
+      "url": "https://www.wikidata.org/wiki/Q604",
+      "entity_id": "Q604",
+      "reason": "phase74_accepted",
+      "fetched": true,
+      "status": "assessment_preview",
+      "failure_reason": "",
+      "text_excerpt": "{\"qid\": \"Q604\", \"title\": \"鸟神星\", \"url\": \"https://www.wikidata.org/wiki/Q604\", \"reason\": \"local_materialized_preview_exists\", \"has_local_raw\": false, \"has_local_materialized_pair\": true}",
+      "claims_subset": "{\"qid\": \"Q604\", \"title\": \"鸟神星\", \"url\": \"https://www.wikidata.org/wiki/Q604\", \"reason\": \"local_materialized_preview_exists\", \"has_local_raw\": false, \"has_local_materialized_pair\": true}",
+      "quality_flags": {
+        "allowlisted": true,
+        "has_excerpt": true,
+        "evaluation_only": true
+      }
+    },
+    {
+      "source": "wikidata",
+      "title": "灶神星",
+      "id": "Q3030",
+      "url": "https://www.wikidata.org/wiki/Q3030",
+      "entity_id": "Q3030",
+      "reason": "phase74_accepted",
+      "fetched": true,
+      "status": "assessment_preview",
+      "failure_reason": "",
+      "text_excerpt": "{\"qid\": \"Q3030\", \"title\": \"灶神星\", \"url\": \"https://www.wikidata.org/wiki/Q3030\", \"reason\": \"local_materialized_preview_exists\", \"has_local_raw\": false, \"has_local_materialized_pair\": true}",
+      "claims_subset": "{\"qid\": \"Q3030\", \"title\": \"灶神星\", \"url\": \"https://www.wikidata.org/wiki/Q3030\", \"reason\": \"local_materialized_preview_exists\", \"has_local_raw\": false, \"has_local_materialized_pair\": true}",
+      "quality_flags": {
+        "allowlisted": true,
+        "has_excerpt": true,
+        "evaluation_only": true
+      }
+    },
+    {
+      "source": "wikidata",
+      "title": "木卫一",
+      "id": "Q3123",
+      "url": "https://www.wikidata.org/wiki/Q3123",
+      "entity_id": "Q3123",
+      "reason": "phase74_accepted",
+      "fetched": true,
+      "status": "assessment_preview",
+      "failure_reason": "",
+      "text_excerpt": "{\"qid\": \"Q3123\", \"title\": \"木卫一\", \"url\": \"https://www.wikidata.org/wiki/Q3123\", \"reason\": \"local_materialized_preview_exists\", \"has_local_raw\": false, \"has_local_materialized_pair\": true}",
+      "claims_subset": "{\"qid\": \"Q3123\", \"title\": \"木卫一\", \"url\": \"https://www.wikidata.org/wiki/Q3123\", \"reason\": \"local_materialized_preview_exists\", \"has_local_raw\": false, \"has_local_materialized_pair\": true}",
+      "quality_flags": {
+        "allowlisted": true,
+        "has_excerpt": true,
+        "evaluation_only": true
+      }
+    },
+    {
+      "source": "wikidata",
+      "title": "木卫二",
+      "id": "Q3143",
+      "url": "https://www.wikidata.org/wiki/Q3143",
+      "entity_id": "Q3143",
+      "reason": "phase74_accepted",
+      "fetched": true,
+      "status": "assessment_preview",
+      "failure_reason": "",
+      "text_excerpt": "{\"qid\": \"Q3143\", \"title\": \"木卫二\", \"url\": \"https://www.wikidata.org/wiki/Q3143\", \"reason\": \"local_materialized_preview_exists\", \"has_local_raw\": false, \"has_local_materialized_pair\": true}",
+      "claims_subset": "{\"qid\": \"Q3143\", \"title\": \"木卫二\", \"url\": \"https://www.wikidata.org/wiki/Q3143\", \"reason\": \"local_materialized_preview_exists\", \"has_local_raw\": false, \"has_local_materialized_pair\": true}",
+      "quality_flags": {
+        "allowlisted": true,
+        "has_excerpt": true,
+        "evaluation_only": true
+      }
+    },
+    {
+      "source": "wikidata",
+      "title": "木卫三",
+      "id": "Q3169",
+      "url": "https://www.wikidata.org/wiki/Q3169",
+      "entity_id": "Q3169",
+      "reason": "phase74_accepted",
+      "fetched": true,
+      "status": "assessment_preview",
+      "failure_reason": "",
+      "text_excerpt": "{\"qid\": \"Q3169\", \"title\": \"木卫三\", \"url\": \"https://www.wikidata.org/wiki/Q3169\", \"reason\": \"local_materialized_preview_exists\", \"has_local_raw\": false, \"has_local_materialized_pair\": true}",
+      "claims_subset": "{\"qid\": \"Q3169\", \"title\": \"木卫三\", \"url\": \"https://www.wikidata.org/wiki/Q3169\", \"reason\": \"local_materialized_preview_exists\", \"has_local_raw\": false, \"has_local_materialized_pair\": true}",
+      "quality_flags": {
+        "allowlisted": true,
+        "has_excerpt": true,
+        "evaluation_only": true
+      }
+    },
+    {
+      "source": "wikidata",
+      "title": "木卫四",
+      "id": "Q3134",
+      "url": "https://www.wikidata.org/wiki/Q3134",
+      "entity_id": "Q3134",
+      "reason": "phase74_accepted",
+      "fetched": true,
+      "status": "assessment_preview",
+      "failure_reason": "",
+      "text_excerpt": "{\"qid\": \"Q3134\", \"title\": \"木卫四\", \"url\": \"https://www.wikidata.org/wiki/Q3134\", \"reason\": \"local_materialized_preview_exists\", \"has_local_raw\": false, \"has_local_materialized_pair\": true}",
+      "claims_subset": "{\"qid\": \"Q3134\", \"title\": \"木卫四\", \"url\": \"https://www.wikidata.org/wiki/Q3134\", \"reason\": \"local_materialized_preview_exists\", \"has_local_raw\": false, \"has_local_materialized_pair\": true}",
+      "quality_flags": {
+        "allowlisted": true,
+        "has_excerpt": true,
+        "evaluation_only": true
+      }
+    },
+    {
+      "source": "wikidata",
+      "title": "土卫六",
+      "id": "Q2565",
+      "url": "https://www.wikidata.org/wiki/Q2565",
+      "entity_id": "Q2565",
+      "reason": "phase74_accepted",
+      "fetched": true,
+      "status": "assessment_preview",
+      "failure_reason": "",
+      "text_excerpt": "{\"qid\": \"Q2565\", \"title\": \"土卫六\", \"url\": \"https://www.wikidata.org/wiki/Q2565\", \"reason\": \"local_materialized_preview_exists\", \"has_local_raw\": false, \"has_local_materialized_pair\": true}",
+      "claims_subset": "{\"qid\": \"Q2565\", \"title\": \"土卫六\", \"url\": \"https://www.wikidata.org/wiki/Q2565\", \"reason\": \"local_materialized_preview_exists\", \"has_local_raw\": false, \"has_local_materialized_pair\": true}",
+      "quality_flags": {
+        "allowlisted": true,
+        "has_excerpt": true,
+        "evaluation_only": true
+      }
+    },
+    {
+      "source": "wikidata",
+      "title": "土卫二",
+      "id": "Q3303",
+      "url": "https://www.wikidata.org/wiki/Q3303",
+      "entity_id": "Q3303",
+      "reason": "phase74_accepted",
+      "fetched": true,
+      "status": "assessment_preview",
+      "failure_reason": "",
+      "text_excerpt": "{\"qid\": \"Q3303\", \"title\": \"土卫二\", \"url\": \"https://www.wikidata.org/wiki/Q3303\", \"reason\": \"local_materialized_preview_exists\", \"has_local_raw\": false, \"has_local_materialized_pair\": true}",
+      "claims_subset": "{\"qid\": \"Q3303\", \"title\": \"土卫二\", \"url\": \"https://www.wikidata.org/wiki/Q3303\", \"reason\": \"local_materialized_preview_exists\", \"has_local_raw\": false, \"has_local_materialized_pair\": true}",
+      "quality_flags": {
+        "allowlisted": true,
+        "has_excerpt": true,
+        "evaluation_only": true
+      }
+    },
+    {
+      "source": "wikidata",
+      "title": "海卫一",
+      "id": "Q3359",
+      "url": "https://www.wikidata.org/wiki/Q3359",
+      "entity_id": "Q3359",
+      "reason": "phase74_accepted",
+      "fetched": true,
+      "status": "assessment_preview",
+      "failure_reason": "",
+      "text_excerpt": "{\"qid\": \"Q3359\", \"title\": \"海卫一\", \"url\": \"https://www.wikidata.org/wiki/Q3359\", \"reason\": \"local_materialized_preview_exists\", \"has_local_raw\": false, \"has_local_materialized_pair\": true}",
+      "claims_subset": "{\"qid\": \"Q3359\", \"title\": \"海卫一\", \"url\": \"https://www.wikidata.org/wiki/Q3359\", \"reason\": \"local_materialized_preview_exists\", \"has_local_raw\": false, \"has_local_materialized_pair\": true}",
+      "quality_flags": {
+        "allowlisted": true,
+        "has_excerpt": true,
+        "evaluation_only": true
+      }
+    },
+    {
+      "source": "wikidata",
+      "title": "火卫一",
+      "id": "Q7547",
+      "url": "https://www.wikidata.org/wiki/Q7547",
+      "entity_id": "Q7547",
+      "reason": "phase74_accepted",
+      "fetched": true,
+      "status": "assessment_preview",
+      "failure_reason": "",
+      "text_excerpt": "{\"qid\": \"Q7547\", \"title\": \"火卫一\", \"url\": \"https://www.wikidata.org/wiki/Q7547\", \"reason\": \"local_materialized_preview_exists\", \"has_local_raw\": false, \"has_local_materialized_pair\": true}",
+      "claims_subset": "{\"qid\": \"Q7547\", \"title\": \"火卫一\", \"url\": \"https://www.wikidata.org/wiki/Q7547\", \"reason\": \"local_materialized_preview_exists\", \"has_local_raw\": false, \"has_local_materialized_pair\": true}",
+      "quality_flags": {
+        "allowlisted": true,
+        "has_excerpt": true,
+        "evaluation_only": true
+      }
+    },
+    {
+      "source": "wikidata",
+      "title": "火卫二",
+      "id": "Q7548",
+      "url": "https://www.wikidata.org/wiki/Q7548",
+      "entity_id": "Q7548",
+      "reason": "phase74_accepted",
+      "fetched": true,
+      "status": "assessment_preview",
+      "failure_reason": "",
+      "text_excerpt": "{\"qid\": \"Q7548\", \"title\": \"火卫二\", \"url\": \"https://www.wikidata.org/wiki/Q7548\", \"reason\": \"local_materialized_preview_exists\", \"has_local_raw\": false, \"has_local_materialized_pair\": true}",
+      "claims_subset": "{\"qid\": \"Q7548\", \"title\": \"火卫二\", \"url\": \"https://www.wikidata.org/wiki/Q7548\", \"reason\": \"local_materialized_preview_exists\", \"has_local_raw\": false, \"has_local_materialized_pair\": true}",
+      "quality_flags": {
+        "allowlisted": true,
+        "has_excerpt": true,
+        "evaluation_only": true
+      }
+    }
+  ],
+  "formal_raw_write": false,
+  "formal_default_triples_write": false,
+  "chroma_write": false,
+  "neo4j_write": false,
+  "clear_source_ingestion_outputs_called": false,
+  "active_source": "zh_wikipedia",
+  "active_source_unchanged": true,
+  "registry": {
+    "zh_wikipedia": "active",
+    "nasa": "disabled",
+    "esa": "disabled",
+    "wikidata": "disabled"
+  }
+}
