@@ -1,0 +1,105 @@
+{
+  "phase": "Phase 96",
+  "mode": "nasa_body_extraction_repair_preview",
+  "generated_at": "2026-07-22T18:09:32.590452+00:00",
+  "candidate_count": 17,
+  "accepted_reviewable": 0,
+  "rejected_boilerplate": 0,
+  "rejected_search_or_nav": 16,
+  "failed": 1,
+  "needs_live_refetch": true,
+  "quality_verdict": "nasa_body_extraction_blocked_needs_better_raw",
+  "reviewable_samples": [],
+  "rejected_examples": [
+    {
+      "status": "rejected_search_or_nav",
+      "title": "NASA Space Science Data Coordinated Archive Status",
+      "url": "https://nssdc.gsfc.nasa.gov/planetary/factsheet",
+      "reason": "no_non_navigation_body_in_existing_preview"
+    },
+    {
+      "status": "rejected_search_or_nav",
+      "title": "Solar System Exploration",
+      "url": "https://science.nasa.gov/solar-system",
+      "reason": "no_non_navigation_body_in_existing_preview"
+    },
+    {
+      "status": "rejected_search_or_nav",
+      "title": "About the Planets",
+      "url": "https://science.nasa.gov/solar-system/planets",
+      "reason": "no_non_navigation_body_in_existing_preview"
+    },
+    {
+      "status": "rejected_search_or_nav",
+      "title": "Moons",
+      "url": "https://science.nasa.gov/solar-system/moons",
+      "reason": "no_non_navigation_body_in_existing_preview"
+    },
+    {
+      "status": "rejected_search_or_nav",
+      "title": "Asteroids",
+      "url": "https://science.nasa.gov/solar-system/asteroids",
+      "reason": "no_non_navigation_body_in_existing_preview"
+    },
+    {
+      "status": "rejected_search_or_nav",
+      "title": "Comets",
+      "url": "https://science.nasa.gov/solar-system/comets",
+      "reason": "no_non_navigation_body_in_existing_preview"
+    },
+    {
+      "status": "rejected_search_or_nav",
+      "title": "Science Missions - NASA Science",
+      "url": "https://science.nasa.gov/mission",
+      "reason": "no_non_navigation_body_in_existing_preview"
+    },
+    {
+      "status": "rejected_search_or_nav",
+      "title": "Juno - NASA Science",
+      "url": "https://science.nasa.gov/mission/juno",
+      "reason": "no_non_navigation_body_in_existing_preview"
+    },
+    {
+      "status": "rejected_search_or_nav",
+      "title": "Cassini-Huygens - NASA Science",
+      "url": "https://science.nasa.gov/mission/cassini",
+      "reason": "no_non_navigation_body_in_existing_preview"
+    },
+    {
+      "status": "rejected_search_or_nav",
+      "title": "Voyager - NASA Science",
+      "url": "https://science.nasa.gov/mission/voyager",
+      "reason": "no_non_navigation_body_in_existing_preview"
+    },
+    {
+      "status": "rejected_search_or_nav",
+      "title": "New Horizons",
+      "url": "https://science.nasa.gov/mission/new-horizons",
+      "reason": "no_non_navigation_body_in_existing_preview"
+    },
+    {
+      "status": "rejected_search_or_nav",
+      "title": "Mars 2020: Perseverance Rover - NASA Science",
+      "url": "https://science.nasa.gov/mission/mars-2020-perseverance",
+      "reason": "no_non_navigation_body_in_existing_preview"
+    }
+  ],
+  "root_cause": "Existing Phase82 NASA excerpts contain navigation/search/recent-news chrome before usable body text.",
+  "production_ready": false,
+  "apply_approved": false,
+  "ingest_approved": false,
+  "formal_raw_write": false,
+  "formal_default_triples_write": false,
+  "chroma_write": false,
+  "neo4j_write": false,
+  "clear_source_ingestion_outputs_called": false,
+  "live_fetch_used": false,
+  "active_source": "zh_wikipedia",
+  "active_source_unchanged": true,
+  "registry": {
+    "zh_wikipedia": "active",
+    "nasa": "disabled",
+    "esa": "disabled",
+    "wikidata": "disabled"
+  }
+}
