@@ -1,0 +1,63 @@
+{
+  "phase": "Phase 56",
+  "mode": "nasa_shadow_combined_artifact_verification",
+  "generated_at": "2026-07-22T09:12:17.149996+00:00",
+  "source_id": "nasa",
+  "shadow_dir": "data\\triples_shadow\\nasa",
+  "local_artifact": true,
+  "rebuild_command": "python scripts\\merge_nasa_shadow_packages.py --phase45-package-dir evaluation\\four_source_expansion\\nasa_limited_shadow_package_phase45 --phase52-package-dir evaluation\\four_source_expansion\\nasa_second_shadow_package_phase52 --phase52-approval evaluation\\four_source_expansion\\nasa_second_shadow_package_approval_phase52.json --shadow-output-dir data\\triples_shadow\\nasa --report-json evaluation\\four_source_expansion\\nasa_shadow_combined_merge_apply_phase54.json --report-md docs\\nasa_shadow_combined_merge_apply_phase54.md --execute",
+  "active_source": "zh_wikipedia",
+  "registry": {
+    "zh_wikipedia": "active",
+    "nasa": "disabled",
+    "esa": "disabled",
+    "wikidata": "disabled"
+  },
+  "active_source_unchanged": true,
+  "formal_default_triples_write": false,
+  "chroma_write": false,
+  "neo4j_write": false,
+  "ready": true,
+  "blocked_reason": "",
+  "issues": [],
+  "files": [
+    "narratives_preview.json",
+    "package_manifest.json",
+    "triples_preview.json"
+  ],
+  "counts": {
+    "items": 48,
+    "triples": 192,
+    "narratives": 192
+  },
+  "manifest_counts": {
+    "items": 48,
+    "triples": 192,
+    "narratives": 192
+  },
+  "expected_counts": {
+    "items": 48,
+    "triples": 192,
+    "narratives": 192
+  },
+  "overlap_summary": {
+    "urls": [],
+    "titles": [],
+    "subjects": []
+  },
+  "validation": {
+    "triple_source_ids": {
+      "nasa": 192
+    },
+    "triple_validation_status": {
+      "accepted": 192
+    },
+    "narrative_source_ids": {
+      "nasa": 192
+    },
+    "narrative_source_roles": {
+      "primary": 192
+    },
+    "duplicate_triples": 0
+  }
+}
