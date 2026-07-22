@@ -1,0 +1,350 @@
+{
+  "phase": "Phase 51",
+  "mode": "nasa_shadow_review_only_query_bypass",
+  "generated_at": "2026-07-22T07:53:05.946243+00:00",
+  "source_id": "nasa",
+  "ready": true,
+  "blocked_reason": "",
+  "shadow_dir": "C:\\wt\\TololoAgent-guarded\\data\\triples_shadow\\nasa",
+  "eval_report_path": "C:\\wt\\TololoAgent-guarded\\evaluation\\four_source_expansion\\nasa_shadow_json_retrieval_eval_phase48.json",
+  "local_artifact": true,
+  "counts": {
+    "items": 20,
+    "triples": 80,
+    "narratives": 80
+  },
+  "query_chain_notes": {
+    "observed_entrypoints": [
+      "src.gui.main_window: source selection forwards source_name toward the agent tab workflow",
+      "src.agent.llm_agent: LLMAgent(source_name=...) owns single-source retrieval",
+      "src.agent.llm_agent: _search_single_source_bundle(source_name, query) calls graph and narrative retrieval",
+      "src.agent.llm_agent: local JSON fallback already exists for formal data/triples namespaces"
+    ],
+    "minimal_future_adapter_point": "Add an explicit NASA shadow dry-run branch near LLMAgent._search_single_source_bundle or behind a separate review-only command path.",
+    "forbidden_in_phase49": [
+      "do not enable nasa in SOURCE_REGISTRY",
+      "do not change ACTIVE_SOURCE",
+      "do not query vector or graph databases",
+      "do not write data/triples or data/triples_shadow"
+    ]
+  },
+  "adapter_mappings": [
+    {
+      "case_id": "subject_apophis",
+      "user_query": "Apophis asteroid",
+      "proposed_adapter_function": "nasa_shadow_json_retrieve",
+      "proposed_adapter_input": {
+        "query": "Apophis asteroid",
+        "source_id": "nasa",
+        "mode": "dry_run_json_only",
+        "shadow_dir": "data/triples_shadow/nasa"
+      },
+      "json_shadow_result_count": 8,
+      "expected_retrieval_payload": {
+        "query": "Apophis asteroid",
+        "source_id": "nasa",
+        "result_count": 8,
+        "top_result": {
+          "kind": "triple",
+          "subject": "Apophis",
+          "relation": "INSTANCE_OF",
+          "object": "asteroid",
+          "evidence": "Explore Search News & Events News & Events Recently Published Video Series on NASA+ Podcasts & Audio Blogs Newsletters Social Media Media Resources Multimedia M",
+          "source_url": "https://science.nasa.gov/solar-system/asteroids/apophis/"
+        }
+      },
+      "oracle": {
+        "subject": "Apophis",
+        "relation": "INSTANCE_OF",
+        "topic": "asteroid"
+      },
+      "oracle_satisfied": true
+    },
+    {
+      "case_id": "subject_bennu",
+      "user_query": "Bennu asteroid",
+      "proposed_adapter_function": "nasa_shadow_json_retrieve",
+      "proposed_adapter_input": {
+        "query": "Bennu asteroid",
+        "source_id": "nasa",
+        "mode": "dry_run_json_only",
+        "shadow_dir": "data/triples_shadow/nasa"
+      },
+      "json_shadow_result_count": 8,
+      "expected_retrieval_payload": {
+        "query": "Bennu asteroid",
+        "source_id": "nasa",
+        "result_count": 8,
+        "top_result": {
+          "kind": "triple",
+          "subject": "Bennu",
+          "relation": "SOURCE_URL",
+          "object": "https://science.nasa.gov/solar-system/asteroids/101955-bennu/",
+          "evidence": "https://science.nasa.gov/solar-system/asteroids/101955-bennu/",
+          "source_url": "https://science.nasa.gov/solar-system/asteroids/101955-bennu/"
+        }
+      },
+      "oracle": {
+        "subject": "Bennu",
+        "topic": "asteroid"
+      },
+      "oracle_satisfied": true
+    },
+    {
+      "case_id": "subject_psyche_url",
+      "user_query": "Asteroid Psyche URL",
+      "proposed_adapter_function": "nasa_shadow_json_retrieve",
+      "proposed_adapter_input": {
+        "query": "Asteroid Psyche URL",
+        "source_id": "nasa",
+        "mode": "dry_run_json_only",
+        "shadow_dir": "data/triples_shadow/nasa"
+      },
+      "json_shadow_result_count": 8,
+      "expected_retrieval_payload": {
+        "query": "Asteroid Psyche URL",
+        "source_id": "nasa",
+        "result_count": 8,
+        "top_result": {
+          "kind": "triple",
+          "subject": "Asteroid Psyche",
+          "relation": "SOURCE_URL",
+          "object": "https://science.nasa.gov/solar-system/asteroids/16-psyche/",
+          "evidence": "https://science.nasa.gov/solar-system/asteroids/16-psyche/",
+          "source_url": "https://science.nasa.gov/solar-system/asteroids/16-psyche/"
+        }
+      },
+      "oracle": {
+        "subject": "Asteroid Psyche",
+        "source_url": "https://science.nasa.gov/solar-system/asteroids/16-psyche/"
+      },
+      "oracle_satisfied": true
+    },
+    {
+      "case_id": "subject_didymos",
+      "user_query": "Didymos Dimorphos asteroid",
+      "proposed_adapter_function": "nasa_shadow_json_retrieve",
+      "proposed_adapter_input": {
+        "query": "Didymos Dimorphos asteroid",
+        "source_id": "nasa",
+        "mode": "dry_run_json_only",
+        "shadow_dir": "data/triples_shadow/nasa"
+      },
+      "json_shadow_result_count": 8,
+      "expected_retrieval_payload": {
+        "query": "Didymos Dimorphos asteroid",
+        "source_id": "nasa",
+        "result_count": 8,
+        "top_result": {
+          "kind": "triple",
+          "subject": "Didymos & Dimorphos",
+          "relation": "SOURCE_URL",
+          "object": "https://science.nasa.gov/solar-system/asteroids/didymos/",
+          "evidence": "https://science.nasa.gov/solar-system/asteroids/didymos/",
+          "source_url": "https://science.nasa.gov/solar-system/asteroids/didymos/"
+        }
+      },
+      "oracle": {
+        "subject": "Didymos & Dimorphos",
+        "topic": "asteroid"
+      },
+      "oracle_satisfied": true
+    },
+    {
+      "case_id": "subject_swift_tuttle",
+      "user_query": "109P Swift-Tuttle comet",
+      "proposed_adapter_function": "nasa_shadow_json_retrieve",
+      "proposed_adapter_input": {
+        "query": "109P Swift-Tuttle comet",
+        "source_id": "nasa",
+        "mode": "dry_run_json_only",
+        "shadow_dir": "data/triples_shadow/nasa"
+      },
+      "json_shadow_result_count": 8,
+      "expected_retrieval_payload": {
+        "query": "109P Swift-Tuttle comet",
+        "source_id": "nasa",
+        "result_count": 8,
+        "top_result": {
+          "kind": "triple",
+          "subject": "109P/Swift-Tuttle",
+          "relation": "SOURCE_URL",
+          "object": "https://science.nasa.gov/solar-system/comets/109p-swift-tuttle/",
+          "evidence": "https://science.nasa.gov/solar-system/comets/109p-swift-tuttle/",
+          "source_url": "https://science.nasa.gov/solar-system/comets/109p-swift-tuttle/"
+        }
+      },
+      "oracle": {
+        "subject": "109P/Swift-Tuttle",
+        "topic": "comet"
+      },
+      "oracle_satisfied": true
+    },
+    {
+      "case_id": "topic_asteroid",
+      "user_query": "asteroid topic",
+      "proposed_adapter_function": "nasa_shadow_json_retrieve",
+      "proposed_adapter_input": {
+        "query": "asteroid topic",
+        "source_id": "nasa",
+        "mode": "dry_run_json_only",
+        "shadow_dir": "data/triples_shadow/nasa"
+      },
+      "json_shadow_result_count": 8,
+      "expected_retrieval_payload": {
+        "query": "asteroid topic",
+        "source_id": "nasa",
+        "result_count": 8,
+        "top_result": {
+          "kind": "triple",
+          "subject": "NASA Space Science Data Coordinated Archive Status",
+          "relation": "HAS_TOPIC",
+          "object": "asteroid",
+          "evidence": "Explore Search News & Events News & Events News Releases Recently Published Video Series on NASA+ Podcasts & Audio Blogs Newsletters Social Media Media Resource",
+          "source_url": "https://nssdc.gsfc.nasa.gov/planetary/planets/asteroidpage.html"
+        }
+      },
+      "oracle": {
+        "topic": "asteroid"
+      },
+      "oracle_satisfied": true
+    },
+    {
+      "case_id": "topic_comet",
+      "user_query": "comet topic",
+      "proposed_adapter_function": "nasa_shadow_json_retrieve",
+      "proposed_adapter_input": {
+        "query": "comet topic",
+        "source_id": "nasa",
+        "mode": "dry_run_json_only",
+        "shadow_dir": "data/triples_shadow/nasa"
+      },
+      "json_shadow_result_count": 8,
+      "expected_retrieval_payload": {
+        "query": "comet topic",
+        "source_id": "nasa",
+        "result_count": 8,
+        "top_result": {
+          "kind": "triple",
+          "subject": "Comet 103P/Hartley (Hartley 2)",
+          "relation": "HAS_TOPIC",
+          "object": "comet",
+          "evidence": "Comet 103P/Hartley (Hartley 2).",
+          "source_url": "https://science.nasa.gov/solar-system/comets/103p-hartley-hartley-2/"
+        }
+      },
+      "oracle": {
+        "topic": "comet"
+      },
+      "oracle_satisfied": true
+    },
+    {
+      "case_id": "relation_source_url",
+      "user_query": "SOURCE_URL NASA",
+      "proposed_adapter_function": "nasa_shadow_json_retrieve",
+      "proposed_adapter_input": {
+        "query": "SOURCE_URL NASA",
+        "source_id": "nasa",
+        "mode": "dry_run_json_only",
+        "shadow_dir": "data/triples_shadow/nasa"
+      },
+      "json_shadow_result_count": 8,
+      "expected_retrieval_payload": {
+        "query": "SOURCE_URL NASA",
+        "source_id": "nasa",
+        "result_count": 8,
+        "top_result": {
+          "kind": "triple",
+          "subject": "NASA Space Science Data Coordinated Archive Status",
+          "relation": "SOURCE_URL",
+          "object": "https://nssdc.gsfc.nasa.gov/planetary/planets/asteroidpage.html",
+          "evidence": "https://nssdc.gsfc.nasa.gov/planetary/planets/asteroidpage.html",
+          "source_url": "https://nssdc.gsfc.nasa.gov/planetary/planets/asteroidpage.html"
+        }
+      },
+      "oracle": {
+        "relation": "SOURCE_URL"
+      },
+      "oracle_satisfied": true
+    },
+    {
+      "case_id": "relation_has_topic",
+      "user_query": "HAS_TOPIC asteroid",
+      "proposed_adapter_function": "nasa_shadow_json_retrieve",
+      "proposed_adapter_input": {
+        "query": "HAS_TOPIC asteroid",
+        "source_id": "nasa",
+        "mode": "dry_run_json_only",
+        "shadow_dir": "data/triples_shadow/nasa"
+      },
+      "json_shadow_result_count": 8,
+      "expected_retrieval_payload": {
+        "query": "HAS_TOPIC asteroid",
+        "source_id": "nasa",
+        "result_count": 8,
+        "top_result": {
+          "kind": "triple",
+          "subject": "NASA Space Science Data Coordinated Archive Status",
+          "relation": "HAS_TOPIC",
+          "object": "asteroid",
+          "evidence": "Explore Search News & Events News & Events News Releases Recently Published Video Series on NASA+ Podcasts & Audio Blogs Newsletters Social Media Media Resource",
+          "source_url": "https://nssdc.gsfc.nasa.gov/planetary/planets/asteroidpage.html"
+        }
+      },
+      "oracle": {
+        "relation": "HAS_TOPIC",
+        "topic": "asteroid"
+      },
+      "oracle_satisfied": true
+    },
+    {
+      "case_id": "planetary_defense_url",
+      "user_query": "Planetary Defense NASA",
+      "proposed_adapter_function": "nasa_shadow_json_retrieve",
+      "proposed_adapter_input": {
+        "query": "Planetary Defense NASA",
+        "source_id": "nasa",
+        "mode": "dry_run_json_only",
+        "shadow_dir": "data/triples_shadow/nasa"
+      },
+      "json_shadow_result_count": 8,
+      "expected_retrieval_payload": {
+        "query": "Planetary Defense NASA",
+        "source_id": "nasa",
+        "result_count": 8,
+        "top_result": {
+          "kind": "triple",
+          "subject": "Planetary Defense at NASA",
+          "relation": "SOURCE_URL",
+          "object": "https://science.nasa.gov/planetary-defense/",
+          "evidence": "https://science.nasa.gov/planetary-defense/",
+          "source_url": "https://science.nasa.gov/planetary-defense/"
+        }
+      },
+      "oracle": {
+        "subject": "Planetary Defense at NASA",
+        "source_url": "https://science.nasa.gov/planetary-defense/"
+      },
+      "oracle_satisfied": true
+    }
+  ],
+  "mapping_count": 10,
+  "phase48_eval_ready_required": true,
+  "active_source": "zh_wikipedia",
+  "default_source_unchanged": true,
+  "registry": {
+    "zh_wikipedia": "active",
+    "nasa": "disabled",
+    "esa": "disabled",
+    "wikidata": "disabled"
+  },
+  "formal_default_triples_write": false,
+  "chroma_write": false,
+  "neo4j_write": false,
+  "data_write": false,
+  "recommended_next_action": "review_dry_run_adapter_before_any_gui_or_database_integration",
+  "review_only_required": true,
+  "review_only": true,
+  "default_query_path_changed": false,
+  "gui_default_behavior_changed": false
+}

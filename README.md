@@ -534,9 +534,11 @@ python scripts/run_nasa_shadow_triples_trial.py --preview-json evaluation\four_s
 python scripts/preview_nasa_text_relation_extraction.py --trial-dir evaluation\four_source_expansion\nasa_shadow_triples_trial_phase43 --phase42-json evaluation\four_source_expansion\new_raw_materialization_preview_phase42.json --out-dir evaluation\four_source_expansion\nasa_text_relation_preview_phase44 --report-json evaluation\four_source_expansion\nasa_text_relation_preview_phase44.json --report-md docs\nasa_text_relation_preview_phase44.md
 python scripts/build_nasa_limited_shadow_package.py --narrative-trial-json evaluation\four_source_expansion\nasa_shadow_triples_trial_phase43.json --narrative-trial-dir evaluation\four_source_expansion\nasa_shadow_triples_trial_phase43 --relation-preview-json evaluation\four_source_expansion\nasa_text_relation_preview_phase44.json --relation-preview-dir evaluation\four_source_expansion\nasa_text_relation_preview_phase44 --out-dir evaluation\four_source_expansion\nasa_limited_shadow_package_phase45 --report-json evaluation\four_source_expansion\nasa_limited_shadow_package_phase45.json --report-md docs\nasa_limited_shadow_package_phase45.md --approval-template evaluation\four_source_expansion\nasa_limited_shadow_package_approval_phase45.json
 python scripts/apply_nasa_limited_shadow_package.py --package-dir evaluation\four_source_expansion\nasa_limited_shadow_package_phase45 --approval evaluation\four_source_expansion\nasa_limited_shadow_package_approval_phase45.json --shadow-output-dir data\triples_shadow\nasa --report-json evaluation\four_source_expansion\nasa_limited_shadow_apply_guard_phase46.json
+python scripts/report_nasa_shadow_review_bypass_phase51.py --out-json evaluation\four_source_expansion\nasa_shadow_review_bypass_phase51.json --out-md docs\nasa_shadow_review_bypass_phase51.md
 ```
 
 `apply_nasa_limited_shadow_package.py` 默认只做 guarded preflight；只有 approval 明确通过且附加 `--execute` 时才会复制到固定 shadow-only 路径。
+`report_nasa_shadow_review_bypass_phase51.py` 只渲染 NASA shadow JSON review-only 旁路报告；默认 GUI、LLMAgent、Chroma、Neo4j 行为不变。
 
 ```powershell
 python scripts/preview_source_frontier.py --source nasa --limit 20
