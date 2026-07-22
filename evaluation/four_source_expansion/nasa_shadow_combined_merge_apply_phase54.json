@@ -1,0 +1,64 @@
+{
+  "phase": "Phase 54",
+  "mode": "nasa_shadow_combined_guarded_merge",
+  "generated_at": "2026-07-22T08:28:08.497804+00:00",
+  "source_id": "nasa",
+  "allowed": true,
+  "executed": true,
+  "blocked_reason": "",
+  "execute_requested": true,
+  "phase45_package_dir": "evaluation\\four_source_expansion\\nasa_limited_shadow_package_phase45",
+  "phase52_package_dir": "evaluation\\four_source_expansion\\nasa_second_shadow_package_phase52",
+  "phase52_approval_path": "evaluation\\four_source_expansion\\nasa_second_shadow_package_approval_phase52.json",
+  "shadow_output_dir": "data\\triples_shadow\\nasa",
+  "phase45_counts": {
+    "items": 20,
+    "triples": 80,
+    "narratives": 80
+  },
+  "phase52_counts": {
+    "items": 28,
+    "triples": 112,
+    "narratives": 112
+  },
+  "expected_combined_counts": {
+    "items": 48,
+    "triples": 192,
+    "narratives": 192
+  },
+  "combined_counts": {
+    "items": 48,
+    "triples": 192,
+    "narratives": 192
+  },
+  "approval": {
+    "source_id": "nasa",
+    "approval_decision": "approved_for_shadow_write",
+    "approved_item_count": 28,
+    "reviewer_notes": "approved under user standing conditional approval after reviewer Gate GO for Phase 52 fix and Gate GO WITH CONDITIONS for Phase 53 preflight, shadow-only combined merge."
+  },
+  "overlap_summary": {
+    "urls": [],
+    "titles": [],
+    "subjects": []
+  },
+  "copy_result": {
+    "files_written": [
+      "data\\triples_shadow\\nasa\\triples_preview.json",
+      "data\\triples_shadow\\nasa\\narratives_preview.json",
+      "data\\triples_shadow\\nasa\\package_manifest.json"
+    ],
+    "file_count": 3
+  },
+  "formal_default_triples_write": false,
+  "chroma_write": false,
+  "neo4j_write": false,
+  "active_source": "zh_wikipedia",
+  "registry": {
+    "zh_wikipedia": "active",
+    "nasa": "disabled",
+    "esa": "disabled",
+    "wikidata": "disabled"
+  },
+  "active_source_unchanged": true
+}
