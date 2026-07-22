@@ -1,0 +1,943 @@
+{
+  "phase": "Phase 72",
+  "mode": "esa_shadow_readiness_eval_preview",
+  "generated_at": "2026-07-22T13:14:26.156319+00:00",
+  "source_id": "esa",
+  "ready": true,
+  "blocked_reason": "",
+  "issues": [],
+  "shadow_dir": "data\\triples_shadow\\esa",
+  "counts": {
+    "items": 18,
+    "triples": 70,
+    "narratives": 71
+  },
+  "manifest_counts": {
+    "items": 18,
+    "triples": 70,
+    "narratives": 71
+  },
+  "expected_counts": {
+    "items": 18,
+    "triples": 70,
+    "narratives": 71
+  },
+  "validation": {
+    "triple_source_ids": {
+      "esa": 70
+    },
+    "triple_validation_status": {
+      "accepted": 70
+    },
+    "narrative_source_ids": {
+      "esa": 71
+    },
+    "narrative_source_roles": {
+      "primary": 71
+    }
+  },
+  "sample_query_preview": [
+    {
+      "query": "Rosetta",
+      "result_count": 5,
+      "results": [
+        {
+          "kind": "triple",
+          "subject": "Rosetta",
+          "predicate": "SOURCE_URL",
+          "object": "https://www.esa.int/Science_Exploration/Space_Science/Rosetta",
+          "source_url": "https://www.esa.int/Science_Exploration/Space_Science/Rosetta",
+          "evidence": "https://www.esa.int/Science_Exploration/Space_Science/Rosetta"
+        },
+        {
+          "kind": "triple",
+          "subject": "Rosetta",
+          "predicate": "HAS_TOPIC",
+          "object": "space science mission",
+          "source_url": "https://www.esa.int/Science_Exploration/Space_Science/Rosetta",
+          "evidence": "Science & Exploration Rosetta ESA's comet-chaser The mission ESA's Rosetta mission was the first to rendezvous with a comet, the first to follow a comet on its "
+        },
+        {
+          "kind": "triple",
+          "subject": "Rosetta",
+          "predicate": "INSTANCE_OF",
+          "object": "ESA space science page",
+          "source_url": "https://www.esa.int/Science_Exploration/Space_Science/Rosetta",
+          "evidence": "Science & Exploration Rosetta ESA's comet-chaser The mission ESA's Rosetta mission was the first to rendezvous with a comet, the first to follow a comet on its "
+        },
+        {
+          "kind": "triple",
+          "subject": "Rosetta",
+          "predicate": "INSTANCE_OF",
+          "object": "space mission page",
+          "source_url": "https://www.esa.int/Science_Exploration/Space_Science/Rosetta",
+          "evidence": "Science & Exploration Rosetta ESA's comet-chaser The mission ESA's Rosetta mission was the first to rendezvous with a comet, the first to follow a comet on its "
+        },
+        {
+          "kind": "narrative",
+          "page_title": "ESA - Space Science",
+          "source_url": "https://www.esa.int/Science_Exploration/Space_Science",
+          "snippet": "estrial planet hunter Open Mission Science & Exploration Rosetta: ESA's comet chaser Open Mission Science & Exploration Hubble's Universe Open Focus on Science & Exploration Missio"
+        }
+      ]
+    },
+    {
+      "query": "Gaia",
+      "result_count": 5,
+      "results": [
+        {
+          "kind": "triple",
+          "subject": "Gaia",
+          "predicate": "SOURCE_URL",
+          "object": "https://www.esa.int/Science_Exploration/Space_Science/Gaia",
+          "source_url": "https://www.esa.int/Science_Exploration/Space_Science/Gaia",
+          "evidence": "https://www.esa.int/Science_Exploration/Space_Science/Gaia"
+        },
+        {
+          "kind": "triple",
+          "subject": "Gaia",
+          "predicate": "HAS_TOPIC",
+          "object": "space science mission",
+          "source_url": "https://www.esa.int/Science_Exploration/Space_Science/Gaia",
+          "evidence": "Science & Exploration Gaia ESA's billion star surveyor The mission From 27 July 2014 to 15 January 2025, Gaia has made more than three trillion observations of "
+        },
+        {
+          "kind": "triple",
+          "subject": "Gaia",
+          "predicate": "INSTANCE_OF",
+          "object": "ESA space science page",
+          "source_url": "https://www.esa.int/Science_Exploration/Space_Science/Gaia",
+          "evidence": "Science & Exploration Gaia ESA's billion star surveyor The mission From 27 July 2014 to 15 January 2025, Gaia has made more than three trillion observations of "
+        },
+        {
+          "kind": "triple",
+          "subject": "Gaia",
+          "predicate": "INSTANCE_OF",
+          "object": "space mission page",
+          "source_url": "https://www.esa.int/Science_Exploration/Space_Science/Gaia",
+          "evidence": "Science & Exploration Gaia ESA's billion star surveyor The mission From 27 July 2014 to 15 January 2025, Gaia has made more than three trillion observations of "
+        },
+        {
+          "kind": "narrative",
+          "page_title": "ESA - Space Science",
+          "source_url": "https://www.esa.int/Science_Exploration/Space_Science",
+          "snippet": "m explorers 28/05/2024 95118 views 362 likes View Image Science & Exploration ESA’s science fleet of cosmic observers 28/05/2024 25436 views 165 likes View Science & Exploration Ex"
+        }
+      ]
+    },
+    {
+      "query": "Euclid",
+      "result_count": 5,
+      "results": [
+        {
+          "kind": "triple",
+          "subject": "Euclid",
+          "predicate": "SOURCE_URL",
+          "object": "https://www.esa.int/Science_Exploration/Space_Science/Euclid",
+          "source_url": "https://www.esa.int/Science_Exploration/Space_Science/Euclid",
+          "evidence": "https://www.esa.int/Science_Exploration/Space_Science/Euclid"
+        },
+        {
+          "kind": "triple",
+          "subject": "Euclid",
+          "predicate": "HAS_TOPIC",
+          "object": "space science mission",
+          "source_url": "https://www.esa.int/Science_Exploration/Space_Science/Euclid",
+          "evidence": "Science & Exploration Euclid Exploring the dark Universe The mission ESA's Euclid mission is designed to explore the composition and evolution of the dark Unive"
+        },
+        {
+          "kind": "triple",
+          "subject": "Euclid",
+          "predicate": "INSTANCE_OF",
+          "object": "ESA space science page",
+          "source_url": "https://www.esa.int/Science_Exploration/Space_Science/Euclid",
+          "evidence": "Science & Exploration Euclid Exploring the dark Universe The mission ESA's Euclid mission is designed to explore the composition and evolution of the dark Unive"
+        },
+        {
+          "kind": "triple",
+          "subject": "Euclid",
+          "predicate": "INSTANCE_OF",
+          "object": "space mission page",
+          "source_url": "https://www.esa.int/Science_Exploration/Space_Science/Euclid",
+          "evidence": "Science & Exploration Euclid Exploring the dark Universe The mission ESA's Euclid mission is designed to explore the composition and evolution of the dark Unive"
+        },
+        {
+          "kind": "triple",
+          "subject": "Euclid discovers the most ancient quasar in the Universe",
+          "predicate": "SOURCE_URL",
+          "object": "https://www.esa.int/science_exploration/space_science/euclid/euclid_discovers_the_most_ancient_quasar_in_the_universe",
+          "source_url": "https://www.esa.int/science_exploration/space_science/euclid/euclid_discovers_the_most_ancient_quasar_in_the_universe",
+          "evidence": "https://www.esa.int/science_exploration/space_science/euclid/euclid_discovers_the_most_ancient_quasar_in_the_universe"
+        }
+      ]
+    },
+    {
+      "query": "Webb",
+      "result_count": 5,
+      "results": [
+        {
+          "kind": "triple",
+          "subject": "Webb",
+          "predicate": "SOURCE_URL",
+          "object": "https://www.esa.int/Science_Exploration/Space_Science/Webb",
+          "source_url": "https://www.esa.int/Science_Exploration/Space_Science/Webb",
+          "evidence": "https://www.esa.int/Science_Exploration/Space_Science/Webb"
+        },
+        {
+          "kind": "triple",
+          "subject": "Webb",
+          "predicate": "HAS_TOPIC",
+          "object": "space science mission",
+          "source_url": "https://www.esa.int/Science_Exploration/Space_Science/Webb",
+          "evidence": "Science & Exploration Webb Seeing farther The mission The James Webb Space Telescope (Webb) is the next great space science observatory following Hubble, design"
+        },
+        {
+          "kind": "triple",
+          "subject": "Webb",
+          "predicate": "INSTANCE_OF",
+          "object": "ESA space science page",
+          "source_url": "https://www.esa.int/Science_Exploration/Space_Science/Webb",
+          "evidence": "Science & Exploration Webb Seeing farther The mission The James Webb Space Telescope (Webb) is the next great space science observatory following Hubble, design"
+        },
+        {
+          "kind": "triple",
+          "subject": "Webb",
+          "predicate": "INSTANCE_OF",
+          "object": "space mission page",
+          "source_url": "https://www.esa.int/Science_Exploration/Space_Science/Webb",
+          "evidence": "Science & Exploration Webb Seeing farther The mission The James Webb Space Telescope (Webb) is the next great space science observatory following Hubble, design"
+        },
+        {
+          "kind": "triple",
+          "subject": "Webb reveals millions of stars in nearby galaxy",
+          "predicate": "SOURCE_URL",
+          "object": "https://www.esa.int/science_exploration/space_science/webb/webb_reveals_millions_of_stars_in_nearby_galaxy",
+          "source_url": "https://www.esa.int/science_exploration/space_science/webb/webb_reveals_millions_of_stars_in_nearby_galaxy",
+          "evidence": "https://www.esa.int/science_exploration/space_science/webb/webb_reveals_millions_of_stars_in_nearby_galaxy"
+        }
+      ]
+    },
+    {
+      "query": "SOURCE_URL",
+      "result_count": 5,
+      "results": [
+        {
+          "kind": "triple",
+          "subject": "Space Science",
+          "predicate": "SOURCE_URL",
+          "object": "https://www.esa.int/Science_Exploration/Space_Science",
+          "source_url": "https://www.esa.int/Science_Exploration/Space_Science",
+          "evidence": "https://www.esa.int/Science_Exploration/Space_Science"
+        },
+        {
+          "kind": "triple",
+          "subject": "Rosetta",
+          "predicate": "SOURCE_URL",
+          "object": "https://www.esa.int/Science_Exploration/Space_Science/Rosetta",
+          "source_url": "https://www.esa.int/Science_Exploration/Space_Science/Rosetta",
+          "evidence": "https://www.esa.int/Science_Exploration/Space_Science/Rosetta"
+        },
+        {
+          "kind": "triple",
+          "subject": "Gaia",
+          "predicate": "SOURCE_URL",
+          "object": "https://www.esa.int/Science_Exploration/Space_Science/Gaia",
+          "source_url": "https://www.esa.int/Science_Exploration/Space_Science/Gaia",
+          "evidence": "https://www.esa.int/Science_Exploration/Space_Science/Gaia"
+        },
+        {
+          "kind": "triple",
+          "subject": "Solar Orbiter",
+          "predicate": "SOURCE_URL",
+          "object": "https://www.esa.int/Science_Exploration/Space_Science/Solar_Orbiter",
+          "source_url": "https://www.esa.int/Science_Exploration/Space_Science/Solar_Orbiter",
+          "evidence": "https://www.esa.int/Science_Exploration/Space_Science/Solar_Orbiter"
+        },
+        {
+          "kind": "triple",
+          "subject": "BepiColombo",
+          "predicate": "SOURCE_URL",
+          "object": "https://www.esa.int/Science_Exploration/Space_Science/BepiColombo",
+          "source_url": "https://www.esa.int/Science_Exploration/Space_Science/BepiColombo",
+          "evidence": "https://www.esa.int/Science_Exploration/Space_Science/BepiColombo"
+        }
+      ]
+    },
+    {
+      "query": "HAS_TOPIC",
+      "result_count": 5,
+      "results": [
+        {
+          "kind": "triple",
+          "subject": "Space Science",
+          "predicate": "HAS_TOPIC",
+          "object": "exoplanet science",
+          "source_url": "https://www.esa.int/Science_Exploration/Space_Science",
+          "evidence": "Science & Exploration Space Science Latest All Stories Videos Images Image Science & Exploration Plato's electronics ready for space 20/07/2026 1433 views 35 li"
+        },
+        {
+          "kind": "triple",
+          "subject": "Rosetta",
+          "predicate": "HAS_TOPIC",
+          "object": "space science mission",
+          "source_url": "https://www.esa.int/Science_Exploration/Space_Science/Rosetta",
+          "evidence": "Science & Exploration Rosetta ESA's comet-chaser The mission ESA's Rosetta mission was the first to rendezvous with a comet, the first to follow a comet on its "
+        },
+        {
+          "kind": "triple",
+          "subject": "Gaia",
+          "predicate": "HAS_TOPIC",
+          "object": "space science mission",
+          "source_url": "https://www.esa.int/Science_Exploration/Space_Science/Gaia",
+          "evidence": "Science & Exploration Gaia ESA's billion star surveyor The mission From 27 July 2014 to 15 January 2025, Gaia has made more than three trillion observations of "
+        },
+        {
+          "kind": "triple",
+          "subject": "Solar Orbiter",
+          "predicate": "HAS_TOPIC",
+          "object": "space science mission",
+          "source_url": "https://www.esa.int/Science_Exploration/Space_Science/Solar_Orbiter",
+          "evidence": "Science & Exploration Solar Orbiter The Sun up close Solar Orbiter is the most complex scientific laboratory ever sent to our life-giving star, taking images of"
+        },
+        {
+          "kind": "triple",
+          "subject": "BepiColombo",
+          "predicate": "HAS_TOPIC",
+          "object": "space science mission",
+          "source_url": "https://www.esa.int/Science_Exploration/Space_Science/BepiColombo",
+          "evidence": "Science & Exploration BepiColombo Investigating Mercury's mysteries BepiColombo will be the second and most complex mission ever to orbit Mercury. Close to the "
+        }
+      ]
+    },
+    {
+      "query": "space mission",
+      "result_count": 5,
+      "results": [
+        {
+          "kind": "triple",
+          "subject": "Rosetta",
+          "predicate": "HAS_TOPIC",
+          "object": "space science mission",
+          "source_url": "https://www.esa.int/Science_Exploration/Space_Science/Rosetta",
+          "evidence": "Science & Exploration Rosetta ESA's comet-chaser The mission ESA's Rosetta mission was the first to rendezvous with a comet, the first to follow a comet on its "
+        },
+        {
+          "kind": "triple",
+          "subject": "Rosetta",
+          "predicate": "INSTANCE_OF",
+          "object": "ESA space science page",
+          "source_url": "https://www.esa.int/Science_Exploration/Space_Science/Rosetta",
+          "evidence": "Science & Exploration Rosetta ESA's comet-chaser The mission ESA's Rosetta mission was the first to rendezvous with a comet, the first to follow a comet on its "
+        },
+        {
+          "kind": "triple",
+          "subject": "Rosetta",
+          "predicate": "INSTANCE_OF",
+          "object": "space mission page",
+          "source_url": "https://www.esa.int/Science_Exploration/Space_Science/Rosetta",
+          "evidence": "Science & Exploration Rosetta ESA's comet-chaser The mission ESA's Rosetta mission was the first to rendezvous with a comet, the first to follow a comet on its "
+        },
+        {
+          "kind": "triple",
+          "subject": "Gaia",
+          "predicate": "HAS_TOPIC",
+          "object": "space science mission",
+          "source_url": "https://www.esa.int/Science_Exploration/Space_Science/Gaia",
+          "evidence": "Science & Exploration Gaia ESA's billion star surveyor The mission From 27 July 2014 to 15 January 2025, Gaia has made more than three trillion observations of "
+        },
+        {
+          "kind": "triple",
+          "subject": "Gaia",
+          "predicate": "INSTANCE_OF",
+          "object": "ESA space science page",
+          "source_url": "https://www.esa.int/Science_Exploration/Space_Science/Gaia",
+          "evidence": "Science & Exploration Gaia ESA's billion star surveyor The mission From 27 July 2014 to 15 January 2025, Gaia has made more than three trillion observations of "
+        }
+      ]
+    },
+    {
+      "query": "exoplanet",
+      "result_count": 5,
+      "results": [
+        {
+          "kind": "triple",
+          "subject": "Space Science",
+          "predicate": "HAS_TOPIC",
+          "object": "exoplanet science",
+          "source_url": "https://www.esa.int/Science_Exploration/Space_Science",
+          "evidence": "Science & Exploration Space Science Latest All Stories Videos Images Image Science & Exploration Plato's electronics ready for space 20/07/2026 1433 views 35 li"
+        },
+        {
+          "kind": "triple",
+          "subject": "Plato",
+          "predicate": "HAS_TOPIC",
+          "object": "space science mission",
+          "source_url": "https://www.esa.int/science_exploration/space_science/plato",
+          "evidence": "Science & Exploration Plato Terrestrial planet hunter The mission ESA’s mission Plato, PLAnetary Transits and Oscillations of stars, will use its 26 cameras to "
+        },
+        {
+          "kind": "triple",
+          "subject": "Plato",
+          "predicate": "INSTANCE_OF",
+          "object": "ESA space science page",
+          "source_url": "https://www.esa.int/science_exploration/space_science/plato",
+          "evidence": "Science & Exploration Plato Terrestrial planet hunter The mission ESA’s mission Plato, PLAnetary Transits and Oscillations of stars, will use its 26 cameras to "
+        },
+        {
+          "kind": "triple",
+          "subject": "Plato",
+          "predicate": "INSTANCE_OF",
+          "object": "space mission page",
+          "source_url": "https://www.esa.int/science_exploration/space_science/plato",
+          "evidence": "Science & Exploration Plato Terrestrial planet hunter The mission ESA’s mission Plato, PLAnetary Transits and Oscillations of stars, will use its 26 cameras to "
+        },
+        {
+          "kind": "narrative",
+          "page_title": "ESA - Space Science",
+          "source_url": "https://www.esa.int/Science_Exploration/Space_Science",
+          "snippet": "m explorers 28/05/2024 95118 views 362 likes View Image Science & Exploration ESA’s science fleet of cosmic observers 28/05/2024 25436 views 165 likes View Science & Exploration Ex"
+        }
+      ]
+    }
+  ],
+  "eval": {
+    "overall": {
+      "total_cases": 10,
+      "passed_cases": 10,
+      "failed_cases": 0,
+      "pass_rate": 1.0
+    },
+    "case_results": [
+      {
+        "case_id": "subject_rosetta",
+        "query": "Rosetta ESA mission",
+        "oracle": {
+          "subject": "Rosetta",
+          "relation": "HAS_TOPIC",
+          "topic": "mission"
+        },
+        "passed": true,
+        "hit_count": 8,
+        "failure_reason": "",
+        "top_results": [
+          {
+            "kind": "triple",
+            "subject": "Rosetta",
+            "predicate": "HAS_TOPIC",
+            "object": "space science mission",
+            "source_url": "https://www.esa.int/Science_Exploration/Space_Science/Rosetta",
+            "evidence": "Science & Exploration Rosetta ESA's comet-chaser The mission ESA's Rosetta mission was the first to rendezvous with a comet, the first to follow a comet on its "
+          },
+          {
+            "kind": "triple",
+            "subject": "Rosetta",
+            "predicate": "INSTANCE_OF",
+            "object": "ESA space science page",
+            "source_url": "https://www.esa.int/Science_Exploration/Space_Science/Rosetta",
+            "evidence": "Science & Exploration Rosetta ESA's comet-chaser The mission ESA's Rosetta mission was the first to rendezvous with a comet, the first to follow a comet on its "
+          },
+          {
+            "kind": "triple",
+            "subject": "Rosetta",
+            "predicate": "INSTANCE_OF",
+            "object": "space mission page",
+            "source_url": "https://www.esa.int/Science_Exploration/Space_Science/Rosetta",
+            "evidence": "Science & Exploration Rosetta ESA's comet-chaser The mission ESA's Rosetta mission was the first to rendezvous with a comet, the first to follow a comet on its "
+          },
+          {
+            "kind": "narrative",
+            "page_title": "ESA - Space Science",
+            "source_url": "https://www.esa.int/Science_Exploration/Space_Science",
+            "snippet": "estrial planet hunter Open Mission Science & Exploration Rosetta: ESA's comet chaser Open Mission Science & Exploration Hubble's Universe Open Focus on Science & Exploration Missio"
+          },
+          {
+            "kind": "narrative",
+            "page_title": "ESA - Rosetta",
+            "source_url": "https://www.esa.int/Science_Exploration/Space_Science/Rosetta",
+            "snippet": "Science & Exploration Rosetta ESA's comet-chaser The mission ESA's Rosetta mission was the first to rendezvous with a comet, the first to follow a comet on its orbit around the Sun"
+          }
+        ]
+      },
+      {
+        "case_id": "subject_gaia",
+        "query": "Gaia ESA",
+        "oracle": {
+          "subject": "Gaia"
+        },
+        "passed": true,
+        "hit_count": 8,
+        "failure_reason": "",
+        "top_results": [
+          {
+            "kind": "triple",
+            "subject": "Gaia",
+            "predicate": "SOURCE_URL",
+            "object": "https://www.esa.int/Science_Exploration/Space_Science/Gaia",
+            "source_url": "https://www.esa.int/Science_Exploration/Space_Science/Gaia",
+            "evidence": "https://www.esa.int/Science_Exploration/Space_Science/Gaia"
+          },
+          {
+            "kind": "triple",
+            "subject": "Gaia",
+            "predicate": "HAS_TOPIC",
+            "object": "space science mission",
+            "source_url": "https://www.esa.int/Science_Exploration/Space_Science/Gaia",
+            "evidence": "Science & Exploration Gaia ESA's billion star surveyor The mission From 27 July 2014 to 15 January 2025, Gaia has made more than three trillion observations of "
+          },
+          {
+            "kind": "triple",
+            "subject": "Gaia",
+            "predicate": "INSTANCE_OF",
+            "object": "ESA space science page",
+            "source_url": "https://www.esa.int/Science_Exploration/Space_Science/Gaia",
+            "evidence": "Science & Exploration Gaia ESA's billion star surveyor The mission From 27 July 2014 to 15 January 2025, Gaia has made more than three trillion observations of "
+          },
+          {
+            "kind": "triple",
+            "subject": "Gaia",
+            "predicate": "INSTANCE_OF",
+            "object": "space mission page",
+            "source_url": "https://www.esa.int/Science_Exploration/Space_Science/Gaia",
+            "evidence": "Science & Exploration Gaia ESA's billion star surveyor The mission From 27 July 2014 to 15 January 2025, Gaia has made more than three trillion observations of "
+          },
+          {
+            "kind": "narrative",
+            "page_title": "ESA - Space Science",
+            "source_url": "https://www.esa.int/Science_Exploration/Space_Science",
+            "snippet": "m explorers 28/05/2024 95118 views 362 likes View Image Science & Exploration ESA’s science fleet of cosmic observers 28/05/2024 25436 views 165 likes View Science & Exploration Ex"
+          }
+        ]
+      },
+      {
+        "case_id": "subject_euclid",
+        "query": "Euclid ESA",
+        "oracle": {
+          "subject": "Euclid"
+        },
+        "passed": true,
+        "hit_count": 8,
+        "failure_reason": "",
+        "top_results": [
+          {
+            "kind": "triple",
+            "subject": "Euclid",
+            "predicate": "SOURCE_URL",
+            "object": "https://www.esa.int/Science_Exploration/Space_Science/Euclid",
+            "source_url": "https://www.esa.int/Science_Exploration/Space_Science/Euclid",
+            "evidence": "https://www.esa.int/Science_Exploration/Space_Science/Euclid"
+          },
+          {
+            "kind": "triple",
+            "subject": "Euclid",
+            "predicate": "HAS_TOPIC",
+            "object": "space science mission",
+            "source_url": "https://www.esa.int/Science_Exploration/Space_Science/Euclid",
+            "evidence": "Science & Exploration Euclid Exploring the dark Universe The mission ESA's Euclid mission is designed to explore the composition and evolution of the dark Unive"
+          },
+          {
+            "kind": "triple",
+            "subject": "Euclid",
+            "predicate": "INSTANCE_OF",
+            "object": "ESA space science page",
+            "source_url": "https://www.esa.int/Science_Exploration/Space_Science/Euclid",
+            "evidence": "Science & Exploration Euclid Exploring the dark Universe The mission ESA's Euclid mission is designed to explore the composition and evolution of the dark Unive"
+          },
+          {
+            "kind": "triple",
+            "subject": "Euclid",
+            "predicate": "INSTANCE_OF",
+            "object": "space mission page",
+            "source_url": "https://www.esa.int/Science_Exploration/Space_Science/Euclid",
+            "evidence": "Science & Exploration Euclid Exploring the dark Universe The mission ESA's Euclid mission is designed to explore the composition and evolution of the dark Unive"
+          },
+          {
+            "kind": "triple",
+            "subject": "Euclid discovers the most ancient quasar in the Universe",
+            "predicate": "SOURCE_URL",
+            "object": "https://www.esa.int/science_exploration/space_science/euclid/euclid_discovers_the_most_ancient_quasar_in_the_universe",
+            "source_url": "https://www.esa.int/science_exploration/space_science/euclid/euclid_discovers_the_most_ancient_quasar_in_the_universe",
+            "evidence": "https://www.esa.int/science_exploration/space_science/euclid/euclid_discovers_the_most_ancient_quasar_in_the_universe"
+          }
+        ]
+      },
+      {
+        "case_id": "subject_webb",
+        "query": "Webb ESA",
+        "oracle": {
+          "subject": "Webb"
+        },
+        "passed": true,
+        "hit_count": 8,
+        "failure_reason": "",
+        "top_results": [
+          {
+            "kind": "triple",
+            "subject": "Webb",
+            "predicate": "SOURCE_URL",
+            "object": "https://www.esa.int/Science_Exploration/Space_Science/Webb",
+            "source_url": "https://www.esa.int/Science_Exploration/Space_Science/Webb",
+            "evidence": "https://www.esa.int/Science_Exploration/Space_Science/Webb"
+          },
+          {
+            "kind": "triple",
+            "subject": "Webb",
+            "predicate": "HAS_TOPIC",
+            "object": "space science mission",
+            "source_url": "https://www.esa.int/Science_Exploration/Space_Science/Webb",
+            "evidence": "Science & Exploration Webb Seeing farther The mission The James Webb Space Telescope (Webb) is the next great space science observatory following Hubble, design"
+          },
+          {
+            "kind": "triple",
+            "subject": "Webb",
+            "predicate": "INSTANCE_OF",
+            "object": "ESA space science page",
+            "source_url": "https://www.esa.int/Science_Exploration/Space_Science/Webb",
+            "evidence": "Science & Exploration Webb Seeing farther The mission The James Webb Space Telescope (Webb) is the next great space science observatory following Hubble, design"
+          },
+          {
+            "kind": "triple",
+            "subject": "Webb",
+            "predicate": "INSTANCE_OF",
+            "object": "space mission page",
+            "source_url": "https://www.esa.int/Science_Exploration/Space_Science/Webb",
+            "evidence": "Science & Exploration Webb Seeing farther The mission The James Webb Space Telescope (Webb) is the next great space science observatory following Hubble, design"
+          },
+          {
+            "kind": "triple",
+            "subject": "Webb reveals millions of stars in nearby galaxy",
+            "predicate": "SOURCE_URL",
+            "object": "https://www.esa.int/science_exploration/space_science/webb/webb_reveals_millions_of_stars_in_nearby_galaxy",
+            "source_url": "https://www.esa.int/science_exploration/space_science/webb/webb_reveals_millions_of_stars_in_nearby_galaxy",
+            "evidence": "https://www.esa.int/science_exploration/space_science/webb/webb_reveals_millions_of_stars_in_nearby_galaxy"
+          }
+        ]
+      },
+      {
+        "case_id": "subject_plato",
+        "query": "Plato ESA exoplanet",
+        "oracle": {
+          "subject": "Plato"
+        },
+        "passed": true,
+        "hit_count": 8,
+        "failure_reason": "",
+        "top_results": [
+          {
+            "kind": "triple",
+            "subject": "Space Science",
+            "predicate": "HAS_TOPIC",
+            "object": "exoplanet science",
+            "source_url": "https://www.esa.int/Science_Exploration/Space_Science",
+            "evidence": "Science & Exploration Space Science Latest All Stories Videos Images Image Science & Exploration Plato's electronics ready for space 20/07/2026 1433 views 35 li"
+          },
+          {
+            "kind": "triple",
+            "subject": "Plato",
+            "predicate": "HAS_TOPIC",
+            "object": "space science mission",
+            "source_url": "https://www.esa.int/science_exploration/space_science/plato",
+            "evidence": "Science & Exploration Plato Terrestrial planet hunter The mission ESA’s mission Plato, PLAnetary Transits and Oscillations of stars, will use its 26 cameras to "
+          },
+          {
+            "kind": "triple",
+            "subject": "Plato",
+            "predicate": "INSTANCE_OF",
+            "object": "ESA space science page",
+            "source_url": "https://www.esa.int/science_exploration/space_science/plato",
+            "evidence": "Science & Exploration Plato Terrestrial planet hunter The mission ESA’s mission Plato, PLAnetary Transits and Oscillations of stars, will use its 26 cameras to "
+          },
+          {
+            "kind": "triple",
+            "subject": "Plato",
+            "predicate": "INSTANCE_OF",
+            "object": "space mission page",
+            "source_url": "https://www.esa.int/science_exploration/space_science/plato",
+            "evidence": "Science & Exploration Plato Terrestrial planet hunter The mission ESA’s mission Plato, PLAnetary Transits and Oscillations of stars, will use its 26 cameras to "
+          },
+          {
+            "kind": "narrative",
+            "page_title": "ESA - Space Science",
+            "source_url": "https://www.esa.int/Science_Exploration/Space_Science",
+            "snippet": "m explorers 28/05/2024 95118 views 362 likes View Image Science & Exploration ESA’s science fleet of cosmic observers 28/05/2024 25436 views 165 likes View Science & Exploration Ex"
+          }
+        ]
+      },
+      {
+        "case_id": "relation_source_url",
+        "query": "SOURCE_URL ESA",
+        "oracle": {
+          "relation": "SOURCE_URL"
+        },
+        "passed": true,
+        "hit_count": 8,
+        "failure_reason": "",
+        "top_results": [
+          {
+            "kind": "triple",
+            "subject": "Space Science",
+            "predicate": "SOURCE_URL",
+            "object": "https://www.esa.int/Science_Exploration/Space_Science",
+            "source_url": "https://www.esa.int/Science_Exploration/Space_Science",
+            "evidence": "https://www.esa.int/Science_Exploration/Space_Science"
+          },
+          {
+            "kind": "triple",
+            "subject": "Rosetta",
+            "predicate": "SOURCE_URL",
+            "object": "https://www.esa.int/Science_Exploration/Space_Science/Rosetta",
+            "source_url": "https://www.esa.int/Science_Exploration/Space_Science/Rosetta",
+            "evidence": "https://www.esa.int/Science_Exploration/Space_Science/Rosetta"
+          },
+          {
+            "kind": "triple",
+            "subject": "Gaia",
+            "predicate": "SOURCE_URL",
+            "object": "https://www.esa.int/Science_Exploration/Space_Science/Gaia",
+            "source_url": "https://www.esa.int/Science_Exploration/Space_Science/Gaia",
+            "evidence": "https://www.esa.int/Science_Exploration/Space_Science/Gaia"
+          },
+          {
+            "kind": "triple",
+            "subject": "Solar Orbiter",
+            "predicate": "SOURCE_URL",
+            "object": "https://www.esa.int/Science_Exploration/Space_Science/Solar_Orbiter",
+            "source_url": "https://www.esa.int/Science_Exploration/Space_Science/Solar_Orbiter",
+            "evidence": "https://www.esa.int/Science_Exploration/Space_Science/Solar_Orbiter"
+          },
+          {
+            "kind": "triple",
+            "subject": "BepiColombo",
+            "predicate": "SOURCE_URL",
+            "object": "https://www.esa.int/Science_Exploration/Space_Science/BepiColombo",
+            "source_url": "https://www.esa.int/Science_Exploration/Space_Science/BepiColombo",
+            "evidence": "https://www.esa.int/Science_Exploration/Space_Science/BepiColombo"
+          }
+        ]
+      },
+      {
+        "case_id": "relation_has_topic",
+        "query": "HAS_TOPIC space science",
+        "oracle": {
+          "relation": "HAS_TOPIC"
+        },
+        "passed": true,
+        "hit_count": 8,
+        "failure_reason": "",
+        "top_results": [
+          {
+            "kind": "triple",
+            "subject": "Space Science",
+            "predicate": "HAS_TOPIC",
+            "object": "exoplanet science",
+            "source_url": "https://www.esa.int/Science_Exploration/Space_Science",
+            "evidence": "Science & Exploration Space Science Latest All Stories Videos Images Image Science & Exploration Plato's electronics ready for space 20/07/2026 1433 views 35 li"
+          },
+          {
+            "kind": "triple",
+            "subject": "Rosetta",
+            "predicate": "HAS_TOPIC",
+            "object": "space science mission",
+            "source_url": "https://www.esa.int/Science_Exploration/Space_Science/Rosetta",
+            "evidence": "Science & Exploration Rosetta ESA's comet-chaser The mission ESA's Rosetta mission was the first to rendezvous with a comet, the first to follow a comet on its "
+          },
+          {
+            "kind": "triple",
+            "subject": "Gaia",
+            "predicate": "HAS_TOPIC",
+            "object": "space science mission",
+            "source_url": "https://www.esa.int/Science_Exploration/Space_Science/Gaia",
+            "evidence": "Science & Exploration Gaia ESA's billion star surveyor The mission From 27 July 2014 to 15 January 2025, Gaia has made more than three trillion observations of "
+          },
+          {
+            "kind": "triple",
+            "subject": "Solar Orbiter",
+            "predicate": "HAS_TOPIC",
+            "object": "space science mission",
+            "source_url": "https://www.esa.int/Science_Exploration/Space_Science/Solar_Orbiter",
+            "evidence": "Science & Exploration Solar Orbiter The Sun up close Solar Orbiter is the most complex scientific laboratory ever sent to our life-giving star, taking images of"
+          },
+          {
+            "kind": "triple",
+            "subject": "BepiColombo",
+            "predicate": "HAS_TOPIC",
+            "object": "space science mission",
+            "source_url": "https://www.esa.int/Science_Exploration/Space_Science/BepiColombo",
+            "evidence": "Science & Exploration BepiColombo Investigating Mercury's mysteries BepiColombo will be the second and most complex mission ever to orbit Mercury. Close to the "
+          }
+        ]
+      },
+      {
+        "case_id": "topic_mission",
+        "query": "space mission page",
+        "oracle": {
+          "topic": "mission"
+        },
+        "passed": true,
+        "hit_count": 8,
+        "failure_reason": "",
+        "top_results": [
+          {
+            "kind": "triple",
+            "subject": "Rosetta",
+            "predicate": "INSTANCE_OF",
+            "object": "ESA space science page",
+            "source_url": "https://www.esa.int/Science_Exploration/Space_Science/Rosetta",
+            "evidence": "Science & Exploration Rosetta ESA's comet-chaser The mission ESA's Rosetta mission was the first to rendezvous with a comet, the first to follow a comet on its "
+          },
+          {
+            "kind": "triple",
+            "subject": "Rosetta",
+            "predicate": "INSTANCE_OF",
+            "object": "space mission page",
+            "source_url": "https://www.esa.int/Science_Exploration/Space_Science/Rosetta",
+            "evidence": "Science & Exploration Rosetta ESA's comet-chaser The mission ESA's Rosetta mission was the first to rendezvous with a comet, the first to follow a comet on its "
+          },
+          {
+            "kind": "triple",
+            "subject": "Gaia",
+            "predicate": "INSTANCE_OF",
+            "object": "ESA space science page",
+            "source_url": "https://www.esa.int/Science_Exploration/Space_Science/Gaia",
+            "evidence": "Science & Exploration Gaia ESA's billion star surveyor The mission From 27 July 2014 to 15 January 2025, Gaia has made more than three trillion observations of "
+          },
+          {
+            "kind": "triple",
+            "subject": "Gaia",
+            "predicate": "INSTANCE_OF",
+            "object": "space mission page",
+            "source_url": "https://www.esa.int/Science_Exploration/Space_Science/Gaia",
+            "evidence": "Science & Exploration Gaia ESA's billion star surveyor The mission From 27 July 2014 to 15 January 2025, Gaia has made more than three trillion observations of "
+          },
+          {
+            "kind": "triple",
+            "subject": "Solar Orbiter",
+            "predicate": "INSTANCE_OF",
+            "object": "space mission page",
+            "source_url": "https://www.esa.int/Science_Exploration/Space_Science/Solar_Orbiter",
+            "evidence": "Science & Exploration Solar Orbiter The Sun up close Solar Orbiter is the most complex scientific laboratory ever sent to our life-giving star, taking images of"
+          }
+        ]
+      },
+      {
+        "case_id": "topic_exoplanet",
+        "query": "exoplanet science",
+        "oracle": {
+          "topic": "exoplanet"
+        },
+        "passed": true,
+        "hit_count": 8,
+        "failure_reason": "",
+        "top_results": [
+          {
+            "kind": "triple",
+            "subject": "Space Science",
+            "predicate": "HAS_TOPIC",
+            "object": "exoplanet science",
+            "source_url": "https://www.esa.int/Science_Exploration/Space_Science",
+            "evidence": "Science & Exploration Space Science Latest All Stories Videos Images Image Science & Exploration Plato's electronics ready for space 20/07/2026 1433 views 35 li"
+          },
+          {
+            "kind": "triple",
+            "subject": "Plato",
+            "predicate": "HAS_TOPIC",
+            "object": "space science mission",
+            "source_url": "https://www.esa.int/science_exploration/space_science/plato",
+            "evidence": "Science & Exploration Plato Terrestrial planet hunter The mission ESA’s mission Plato, PLAnetary Transits and Oscillations of stars, will use its 26 cameras to "
+          },
+          {
+            "kind": "triple",
+            "subject": "Plato",
+            "predicate": "INSTANCE_OF",
+            "object": "ESA space science page",
+            "source_url": "https://www.esa.int/science_exploration/space_science/plato",
+            "evidence": "Science & Exploration Plato Terrestrial planet hunter The mission ESA’s mission Plato, PLAnetary Transits and Oscillations of stars, will use its 26 cameras to "
+          },
+          {
+            "kind": "triple",
+            "subject": "Plato",
+            "predicate": "INSTANCE_OF",
+            "object": "space mission page",
+            "source_url": "https://www.esa.int/science_exploration/space_science/plato",
+            "evidence": "Science & Exploration Plato Terrestrial planet hunter The mission ESA’s mission Plato, PLAnetary Transits and Oscillations of stars, will use its 26 cameras to "
+          },
+          {
+            "kind": "narrative",
+            "page_title": "ESA - Space Science",
+            "source_url": "https://www.esa.int/Science_Exploration/Space_Science",
+            "snippet": "m explorers 28/05/2024 95118 views 362 likes View Image Science & Exploration ESA’s science fleet of cosmic observers 28/05/2024 25436 views 165 likes View Science & Exploration Ex"
+          }
+        ]
+      },
+      {
+        "case_id": "archive_url",
+        "query": "Space Science Archive",
+        "oracle": {
+          "subject": "Space Science - Archive"
+        },
+        "passed": true,
+        "hit_count": 8,
+        "failure_reason": "",
+        "top_results": [
+          {
+            "kind": "triple",
+            "subject": "Space Science - Archive",
+            "predicate": "SOURCE_URL",
+            "object": "https://www.esa.int/science_exploration/space_science/(archive)/0",
+            "source_url": "https://www.esa.int/science_exploration/space_science/(archive)/0",
+            "evidence": "https://www.esa.int/science_exploration/space_science/(archive)/0"
+          },
+          {
+            "kind": "triple",
+            "subject": "Space Science - Archive",
+            "predicate": "HAS_TOPIC",
+            "object": "space science mission",
+            "source_url": "https://www.esa.int/science_exploration/space_science/(archive)/0",
+            "evidence": "Science & Exploration Space Science Archive Back Stories Videos Images Story Science & Exploration Expedition Sound podcast series 16/07/2026 1048 views 32 like"
+          },
+          {
+            "kind": "triple",
+            "subject": "Space Science - Archive",
+            "predicate": "INSTANCE_OF",
+            "object": "ESA space science page",
+            "source_url": "https://www.esa.int/science_exploration/space_science/(archive)/0",
+            "evidence": "Science & Exploration Space Science Archive Back Stories Videos Images Story Science & Exploration Expedition Sound podcast series 16/07/2026 1048 views 32 like"
+          },
+          {
+            "kind": "narrative",
+            "page_title": "ESA - Space Science - Archive",
+            "source_url": "https://www.esa.int/science_exploration/space_science/(archive)/0",
+            "snippet": "Science & Exploration Space Science Archive Back Stories Videos Images Story Science & Exploration Expedition Sound podcast series 16/07/2026 1048 views 32 likes Read Story Science"
+          },
+          {
+            "kind": "narrative",
+            "page_title": "ESA - Space Science - Archive",
+            "source_url": "https://www.esa.int/science_exploration/space_science/(archive)/0",
+            "snippet": "BepiColombo turns off solar electric … 24/06/2026 5545 views 68 likes Read Story Science & Exploration Webb finds clues to ancient origin of Comet 3I/ATLAS 22/06/2026 4742 views 54"
+          }
+        ]
+      }
+    ]
+  },
+  "adapter_preview": {
+    "mapping_count": 10,
+    "payload_shape": [
+      "query",
+      "source_id",
+      "result_count",
+      "top_result",
+      "evidence",
+      "source_url"
+    ]
+  },
+  "formal_default_triples_write": false,
+  "chroma_write": false,
+  "neo4j_write": false,
+  "active_source": "zh_wikipedia",
+  "default_source_unchanged": true,
+  "registry": {
+    "zh_wikipedia": "active",
+    "nasa": "disabled",
+    "esa": "disabled",
+    "wikidata": "disabled"
+  }
+}
