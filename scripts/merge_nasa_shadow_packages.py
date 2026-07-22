@@ -159,6 +159,11 @@ def combined_manifest(phase45_counts: Dict[str, int], phase52_counts: Dict[str, 
     }
 
 
+def retag_report(report: Dict[str, Any], phase: str) -> Dict[str, Any]:
+    report["phase"] = phase
+    return report
+
+
 def blocked_report(
     reason: str,
     *,
@@ -229,6 +234,7 @@ def build_merge_report(
     phase52_approval_path: Path,
     shadow_output_dir: Path,
     execute: bool = False,
+    report_phase: str = "Phase 53",
 ) -> Dict[str, Any]:
     phase45 = package_payload(phase45_package_dir)
     phase52 = package_payload(phase52_package_dir)
@@ -248,23 +254,23 @@ def build_merge_report(
         "overlap": overlap,
     }
     if approval["source_id"] != SOURCE_ID:
-        return blocked_report("approval_source_mismatch", **common)
+        return retag_report(blocked_report("approval_source_mismatch", **common), report_phase)
     if approval["approval_decision"] != APPROVED_DECISION:
-        return blocked_report("approval_not_approved", **common)
+        return retag_report(blocked_report("approval_not_approved", **common), report_phase)
     if approval["approved_item_count"] != phase52_counts["items"] or phase52_counts["items"] <= 0:
-        return blocked_report("approved_item_count_mismatch", **common)
+        return retag_report(blocked_report("approved_item_count_mismatch", **common), report_phase)
     if not shadow_output_allowed(shadow_output_dir, phase45_package_dir):
-        return blocked_report("output_not_fixed_shadow_path", **common)
+        return retag_report(blocked_report("output_not_fixed_shadow_path", **common), report_phase)
     if has_overlap(overlap):
-        return blocked_report("package_overlap_detected", **common)
+        return retag_report(blocked_report("package_overlap_detected", **common), report_phase)
     if min(phase45_counts.values()) <= 0 or min(phase52_counts.values()) <= 0:
-        return blocked_report("package_missing_records", **common)
+        return retag_report(blocked_report("package_missing_records", **common), report_phase)
 
     manifest = combined_manifest(phase45_counts, phase52_counts)
     copy_result = write_combined(shadow_output_dir, phase45, phase52, manifest) if execute else {"files_written": [], "file_count": 0}
     expected = {"items": manifest["items"], "triples": manifest["triples"], "narratives": manifest["narratives"]}
     return {
-        "phase": "Phase 53",
+        "phase": report_phase,
         "mode": "nasa_shadow_combined_guarded_merge",
         "generated_at": manifest["generated_at"],
         "source_id": SOURCE_ID,
@@ -296,7 +302,7 @@ def render_markdown(report: Dict[str, Any]) -> str:
     lines = [
         "# NASA combined shadow merge guard preflight",
         "",
-        "Phase 53 validates merging Phase 45 and Phase 52 NASA shadow packages. The default path is preflight only; pending approval blocks execution.",
+        f"{report['phase']} validates merging a base NASA shadow package with the next pending package. The default path is preflight only; pending approval blocks execution.",
         "",
         f"- allowed: `{report['allowed']}`",
         f"- executed: `{report['executed']}`",
@@ -331,6 +337,10 @@ def main(argv: Sequence[str] | None = None) -> int:
     parser.add_argument("--phase45-package-dir", default=str(ROOT / "evaluation" / "four_source_expansion" / "nasa_limited_shadow_package_phase45"))
     parser.add_argument("--phase52-package-dir", default=str(ROOT / "evaluation" / "four_source_expansion" / "nasa_second_shadow_package_phase52"))
     parser.add_argument("--phase52-approval", default=str(ROOT / "evaluation" / "four_source_expansion" / "nasa_second_shadow_package_approval_phase52.json"))
+    parser.add_argument("--base-package-dir")
+    parser.add_argument("--next-package-dir")
+    parser.add_argument("--next-approval")
+    parser.add_argument("--report-phase", default="Phase 53")
     parser.add_argument("--shadow-output-dir", default=str(ROOT / "data" / "triples_shadow" / SOURCE_ID))
     parser.add_argument("--report-json", default=str(ROOT / "evaluation" / "four_source_expansion" / "nasa_shadow_combined_merge_preflight_phase53.json"))
     parser.add_argument("--report-md", default=str(ROOT / "docs" / "nasa_shadow_combined_merge_preflight_phase53.md"))
@@ -344,11 +354,12 @@ def main(argv: Sequence[str] | None = None) -> int:
         return 2
 
     report = build_merge_report(
-        phase45_package_dir=Path(args.phase45_package_dir),
-        phase52_package_dir=Path(args.phase52_package_dir),
-        phase52_approval_path=Path(args.phase52_approval),
+        phase45_package_dir=Path(args.base_package_dir or args.phase45_package_dir),
+        phase52_package_dir=Path(args.next_package_dir or args.phase52_package_dir),
+        phase52_approval_path=Path(args.next_approval or args.phase52_approval),
         shadow_output_dir=Path(args.shadow_output_dir),
         execute=bool(args.execute),
+        report_phase=args.report_phase,
     )
     write_json(report_json, report)
     write_text(report_md, render_markdown(report))

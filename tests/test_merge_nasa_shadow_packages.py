@@ -181,6 +181,29 @@ class MergeNasaShadowPackagesTests(unittest.TestCase):
             self.assertFalse(report["allowed"])
             self.assertEqual(report["blocked_reason"], "output_not_fixed_shadow_path")
 
+    def test_phase61_pending_preflight_combined_counts(self):
+        module = load_script()
+        with tempfile.TemporaryDirectory() as temp_dir:
+            root = Path(temp_dir)
+            combined = self.make_package(root, "combined48", start=1, count=48)
+            phase60 = self.make_package(root, "phase60", start=100, count=24)
+            approval = self.make_approval(root, "pending", 0)
+
+            report = module.build_merge_report(
+                phase45_package_dir=combined,
+                phase52_package_dir=phase60,
+                phase52_approval_path=approval,
+                shadow_output_dir=root / "data" / "triples_shadow" / "nasa",
+                execute=False,
+                report_phase="Phase 61",
+            )
+
+            self.assertEqual(report["phase"], "Phase 61")
+            self.assertFalse(report["allowed"])
+            self.assertEqual(report["blocked_reason"], "approval_not_approved")
+            self.assertEqual(report["expected_combined_counts"], {"items": 72, "triples": 72, "narratives": 72})
+            self.assertFalse((root / "data" / "triples_shadow" / "nasa").exists())
+
     def test_script_source_does_not_import_databases_or_mutate_active_source(self):
         source = SCRIPT.read_text(encoding="utf-8")
         self.assertNotIn("ChromaStore", source)

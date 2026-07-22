@@ -1,0 +1,56 @@
+{
+  "phase": "Phase 61",
+  "mode": "nasa_shadow_combined_guarded_merge",
+  "generated_at": "2026-07-22T12:04:18.742756+00:00",
+  "source_id": "nasa",
+  "allowed": false,
+  "executed": false,
+  "blocked_reason": "approval_not_approved",
+  "execute_requested": false,
+  "phase45_package_dir": "data\\triples_shadow\\nasa",
+  "phase52_package_dir": "evaluation\\four_source_expansion\\nasa_fourth_shadow_package_phase60",
+  "phase52_approval_path": "evaluation\\four_source_expansion\\nasa_fourth_shadow_package_approval_phase60.json",
+  "shadow_output_dir": "data\\triples_shadow\\nasa",
+  "phase45_counts": {
+    "items": 48,
+    "triples": 192,
+    "narratives": 192
+  },
+  "phase52_counts": {
+    "items": 24,
+    "triples": 96,
+    "narratives": 96
+  },
+  "expected_combined_counts": {
+    "items": 72,
+    "triples": 288,
+    "narratives": 288
+  },
+  "combined_counts": {
+    "items": 72,
+    "triples": 288,
+    "narratives": 288
+  },
+  "approval": {
+    "source_id": "nasa",
+    "approval_decision": "pending",
+    "approved_item_count": 0,
+    "reviewer_notes": ""
+  },
+  "overlap_summary": {
+    "urls": [],
+    "titles": [],
+    "subjects": []
+  },
+  "formal_default_triples_write": false,
+  "chroma_write": false,
+  "neo4j_write": false,
+  "active_source": "zh_wikipedia",
+  "registry": {
+    "zh_wikipedia": "active",
+    "nasa": "disabled",
+    "esa": "disabled",
+    "wikidata": "disabled"
+  },
+  "active_source_unchanged": true
+}
