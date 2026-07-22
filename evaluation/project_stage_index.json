@@ -1,0 +1,123 @@
+{
+  "current_stage": "Phase 36 index",
+  "previous_stage": "Phase 35 complete",
+  "generated_at": "2026-07-22T03:48:16.524961+00:00",
+  "source_status": {
+    "active_source": "zh_wikipedia",
+    "registry": {
+      "zh_wikipedia": "active",
+      "wikidata": "disabled",
+      "nasa": "disabled",
+      "esa": "disabled"
+    },
+    "candidate_registered": false
+  },
+  "report_index": [
+    {
+      "category": "final_status",
+      "path": "docs/project_current_stage_final_report.md",
+      "status": "present"
+    },
+    {
+      "category": "source_expansion_delivery",
+      "path": "docs/source_expansion_delivery_report.md",
+      "status": "present"
+    },
+    {
+      "category": "general_screening_overview",
+      "path": "docs/general_science_source_screening_overview.md",
+      "status": "present"
+    },
+    {
+      "category": "source_expansion_status",
+      "path": "evaluation/source_expansion/source_expansion_status_report.json",
+      "status": "present"
+    },
+    {
+      "category": "shadow_graph_probe",
+      "path": "evaluation/source_expansion/shadow_graph_probe_report.json",
+      "status": "present"
+    },
+    {
+      "category": "manifest_validation",
+      "path": "evaluation/source_quality/source_manifest_validation_report.json",
+      "status": "present"
+    },
+    {
+      "category": "candidate_sites_summary",
+      "path": "evaluation/source_quality/sandbox/candidate_science_sites_summary_phase28.json",
+      "status": "present"
+    },
+    {
+      "category": "candidate_sites_filled_review",
+      "path": "evaluation/source_quality/sandbox/candidate_science_sites_summary_phase29_filled.json",
+      "status": "present"
+    },
+    {
+      "category": "approved_plan_preview",
+      "path": "evaluation/source_quality/sandbox/candidate_science_sites_approved_plan_phase29.json",
+      "status": "present"
+    },
+    {
+      "category": "offline_fixture_quality",
+      "path": "evaluation/source_quality/sandbox/offline_fixture_quality_phase30.json",
+      "status": "present"
+    },
+    {
+      "category": "preview_probe_plan",
+      "path": "evaluation/source_quality/sandbox/preview_network_probe_plan_phase31.json",
+      "status": "present"
+    },
+    {
+      "category": "network_probe_approval_package",
+      "path": "evaluation/source_quality/sandbox/network_probe_approval_package_phase32.json",
+      "status": "present"
+    },
+    {
+      "category": "network_probe_approval_decisions",
+      "path": "evaluation/source_quality/sandbox/network_probe_approval_decisions_phase33_filled.json",
+      "status": "present"
+    },
+    {
+      "category": "manual_preview_command_card",
+      "path": "evaluation/source_quality/sandbox/manual_preview_command_card_phase34.json",
+      "status": "present"
+    }
+  ],
+  "github_hint": {
+    "network_checked": false,
+    "note": "分支和 commit 状态请在计划端或本地 git 命令中确认；本索引不联网查询。"
+  },
+  "verification_commands": [
+    "venv\\Scripts\\python.exe -m unittest discover tests",
+    "venv\\Scripts\\python.exe scripts\\validate_source_manifests.py",
+    "venv\\Scripts\\python.exe scripts\\report_sandbox_candidate_reviews.py --manifest-dir configs\\source_manifests\\candidates --sandbox-dir evaluation\\source_quality\\sandbox --out-json evaluation\\source_quality\\sandbox\\candidate_science_sites_summary_phase28.json --out-md evaluation\\source_quality\\sandbox\\candidate_science_sites_summary_phase28.md",
+    "venv\\Scripts\\python.exe scripts\\report_offline_fixture_quality.py --manifest-dir configs\\source_manifests\\candidates --source noaa_climate_candidate --source data_portal_candidate --fixture-dir tests\\fixtures\\source_quality --out-json evaluation\\source_quality\\sandbox\\offline_fixture_quality_phase30.json --out-md evaluation\\source_quality\\sandbox\\offline_fixture_quality_phase30.md",
+    "venv\\Scripts\\python.exe scripts\\render_network_probe_approval_package.py --probe-plan-json evaluation\\source_quality\\sandbox\\preview_network_probe_plan_phase31.json --out-json evaluation\\source_quality\\sandbox\\network_probe_approval_package_phase32.json --out-md evaluation\\source_quality\\sandbox\\network_probe_approval_package_phase32.md"
+  ],
+  "safety_boundaries": [
+    "不直接全网爬取。",
+    "不执行 fetch / crawl / ingest。",
+    "不写正式 raw、triples、narratives、Chroma 或 Neo4j。",
+    "不自动批准 preview-only 网络探测。",
+    "未注册 candidate source 只能停留在 sandbox / report。",
+    "ACTIVE_SOURCE 必须保持 zh_wikipedia。"
+  ],
+  "next_routes": [
+    {
+      "id": "A",
+      "title": "继续离线增强",
+      "description": "扩展 fixture pack、页面类型和人工审阅样本。"
+    },
+    {
+      "id": "B",
+      "title": "用户明确批准后做 NOAA 5 页 preview-only 网络探测",
+      "description": "使用 Phase 34 命令卡，仍只写 sandbox 报告。"
+    },
+    {
+      "id": "C",
+      "title": "准备答辩材料",
+      "description": "围绕三源 shadow 扩源和通用科学网站筛选闭环组织展示。"
+    }
+  ]
+}
