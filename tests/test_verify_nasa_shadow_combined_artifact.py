@@ -81,6 +81,34 @@ class VerifyNasaShadowCombinedArtifactTests(unittest.TestCase):
             self.assertTrue(module.output_allowed(root / "docs" / "x.md", allow_docs=True))
             self.assertFalse(module.output_allowed(root / "data" / "x.json"))
 
+    def test_cli_expected_counts_and_phase(self):
+        module = load_module()
+        with tempfile.TemporaryDirectory() as temp:
+            root = Path(temp)
+            shadow = self.make_artifact(root, items=3, triples=4, narratives=5)
+            code = module.main(
+                [
+                    "--shadow-dir",
+                    str(shadow),
+                    "--phase",
+                    "Phase 64",
+                    "--expected-items",
+                    "3",
+                    "--expected-triples",
+                    "4",
+                    "--expected-narratives",
+                    "5",
+                    "--out-json",
+                    str(root / "evaluation" / "four_source_expansion" / "report.json"),
+                    "--out-md",
+                    str(root / "docs" / "report.md"),
+                ]
+            )
+            self.assertEqual(code, 0)
+            report = json.loads((root / "evaluation" / "four_source_expansion" / "report.json").read_text(encoding="utf-8"))
+            self.assertEqual(report["phase"], "Phase 64")
+            self.assertEqual(report["counts"], {"items": 3, "triples": 4, "narratives": 5})
+
 
 if __name__ == "__main__":
     unittest.main()

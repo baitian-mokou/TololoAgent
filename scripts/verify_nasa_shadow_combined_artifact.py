@@ -48,18 +48,19 @@ def output_allowed(path: Path, *, allow_docs: bool = False) -> bool:
 def rebuild_command() -> str:
     return (
         "python scripts\\merge_nasa_shadow_packages.py "
-        "--phase45-package-dir evaluation\\four_source_expansion\\nasa_limited_shadow_package_phase45 "
-        "--phase52-package-dir evaluation\\four_source_expansion\\nasa_second_shadow_package_phase52 "
-        "--phase52-approval evaluation\\four_source_expansion\\nasa_second_shadow_package_approval_phase52.json "
+        "--report-phase \"Phase 62\" "
+        "--base-package-dir data\\triples_shadow\\nasa "
+        "--next-package-dir evaluation\\four_source_expansion\\nasa_fourth_shadow_package_phase60 "
+        "--next-approval evaluation\\four_source_expansion\\nasa_fourth_shadow_package_approval_phase60.json "
         "--shadow-output-dir data\\triples_shadow\\nasa "
-        "--report-json evaluation\\four_source_expansion\\nasa_shadow_combined_merge_apply_phase54.json "
-        "--report-md docs\\nasa_shadow_combined_merge_apply_phase54.md --execute"
+        "--report-json evaluation\\four_source_expansion\\nasa_shadow_combined_merge_apply_phase62.json "
+        "--report-md docs\\nasa_shadow_combined_merge_apply_phase62.md --execute"
     )
 
 
-def base_report(shadow_dir: Path) -> Dict[str, Any]:
+def base_report(shadow_dir: Path, phase: str = "Phase 56") -> Dict[str, Any]:
     return {
-        "phase": "Phase 56",
+        "phase": phase,
         "mode": "nasa_shadow_combined_artifact_verification",
         "generated_at": datetime.now(timezone.utc).isoformat(),
         "source_id": SOURCE_ID,
@@ -82,11 +83,12 @@ def triple_key(row: Dict[str, Any]) -> tuple[str, str, str, str]:
 def verify_artifact(
     shadow_dir: Path,
     *,
+    phase: str = "Phase 56",
     expected_items: int = EXPECTED["items"],
     expected_triples: int = EXPECTED["triples"],
     expected_narratives: int = EXPECTED["narratives"],
 ) -> Dict[str, Any]:
-    report = base_report(shadow_dir)
+    report = base_report(shadow_dir, phase)
     present = sorted(p.name for p in shadow_dir.glob("*") if p.is_file()) if shadow_dir.exists() else []
     missing = [name for name in REQUIRED_FILES if name not in present]
     extra = [name for name in present if name not in REQUIRED_FILES]
@@ -163,6 +165,10 @@ def main(argv: Sequence[str] | None = None) -> int:
     parser.add_argument("--shadow-dir", default=str(ROOT / "data" / "triples_shadow" / SOURCE_ID))
     parser.add_argument("--out-json", default=str(ROOT / "evaluation" / "four_source_expansion" / "nasa_shadow_combined_artifact_verification_phase56.json"))
     parser.add_argument("--out-md", default=str(ROOT / "docs" / "nasa_shadow_combined_artifact_verification_phase56.md"))
+    parser.add_argument("--phase", default="Phase 56")
+    parser.add_argument("--expected-items", type=int, default=EXPECTED["items"])
+    parser.add_argument("--expected-triples", type=int, default=EXPECTED["triples"])
+    parser.add_argument("--expected-narratives", type=int, default=EXPECTED["narratives"])
     args = parser.parse_args(argv)
 
     out_json = Path(args.out_json)
@@ -170,7 +176,13 @@ def main(argv: Sequence[str] | None = None) -> int:
     if not output_allowed(out_json) or not output_allowed(out_md, allow_docs=True):
         print("outputs must stay under evaluation/four_source_expansion/ or docs/", file=sys.stderr)
         return 2
-    report = verify_artifact(Path(args.shadow_dir))
+    report = verify_artifact(
+        Path(args.shadow_dir),
+        phase=args.phase,
+        expected_items=args.expected_items,
+        expected_triples=args.expected_triples,
+        expected_narratives=args.expected_narratives,
+    )
     write_json(out_json, report)
     write_text(out_md, render_markdown(report))
     print(f"ready={report['ready']} blocked={report['blocked_reason']} counts={report.get('counts', {})} active_source={ACTIVE_SOURCE}")
