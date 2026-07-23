@@ -1,0 +1,222 @@
+{
+  "phase": "Phase115",
+  "mode": "three_source_controlled_reentry_preview",
+  "generated_at": "2026-07-23T05:34:09.285241+00:00",
+  "input_report": "evaluation/four_source_expansion/phase114/three_source_source_strategy_repair_phase114.json",
+  "live_probe_used": true,
+  "probe_limits": {
+    "per_source_max": 3,
+    "total_max": 9,
+    "total_attempted": 9
+  },
+  "records_by_source": {
+    "zh_wikipedia": [
+      {
+        "source": "zh_wikipedia",
+        "title": "太阳",
+        "url": "https://zh.wikipedia.org/w/api.php?action=query&prop=extracts&explaintext=1&titles=%E5%A4%AA%E9%98%B3&format=json",
+        "method": "mediawiki_plaintext_extract_api",
+        "status_code": 0,
+        "status": "fetch_failed",
+        "content_type": "network_error",
+        "quality_class": "failed",
+        "reject_reason": "failed_or_noise_gate",
+        "narrative": "",
+        "triples_preview": []
+      },
+      {
+        "source": "zh_wikipedia",
+        "title": "太阳系",
+        "url": "https://zh.wikipedia.org/w/api.php?action=query&prop=extracts&explaintext=1&titles=%E5%A4%AA%E9%98%B3%E7%B3%BB&format=json",
+        "method": "mediawiki_plaintext_extract_api",
+        "status_code": 0,
+        "status": "fetch_failed",
+        "content_type": "network_error",
+        "quality_class": "failed",
+        "reject_reason": "failed_or_noise_gate",
+        "narrative": "",
+        "triples_preview": []
+      },
+      {
+        "source": "zh_wikipedia",
+        "title": "水星",
+        "url": "https://zh.wikipedia.org/w/api.php?action=query&prop=extracts&explaintext=1&titles=%E6%B0%B4%E6%98%9F&format=json",
+        "method": "mediawiki_plaintext_extract_api",
+        "status_code": 0,
+        "status": "fetch_failed",
+        "content_type": "network_error",
+        "quality_class": "failed",
+        "reject_reason": "failed_or_noise_gate",
+        "narrative": "",
+        "triples_preview": []
+      }
+    ],
+    "nasa": [
+      {
+        "source": "nasa",
+        "title": "Juno images metadata",
+        "url": "https://images-api.nasa.gov/search?q=Juno&media_type=image&page_size=3",
+        "method": "images_api_structured_description",
+        "status_code": 200,
+        "status": "http_200",
+        "content_type": "application/json",
+        "quality_class": "conditional",
+        "reject_reason": "",
+        "narrative": "The three LEGO figurines flying aboard the Juno spacecraft are the Roman god Jupiter, his wife Juno and Galileo Galilei. Three LEGO figurines representing the Roman god Jupiter, his wife Juno and Galileo Galilei are shown here aboard the Juno spacecraft. Technicians install components that will aid with guidance, navigation and control of NASA Juno spacecraft.",
+        "triples_preview": [
+          {
+            "subject": "Juno images metadata",
+            "predicate": "SOURCE_URL",
+            "object": "https://images-api.nasa.gov/search?q=Juno&media_type=image&page_size=3"
+          },
+          {
+            "subject": "Juno images metadata",
+            "predicate": "HAS_REENTRY_PREVIEW_TEXT",
+            "object": "The three LEGO figurines flying aboard the Juno spacecraft are the Roman god Jupiter, his wife Juno and Galileo Galilei. Three LEGO figurines representing the Roman god Jupiter, his wife Juno and Galileo Galilei are show"
+          }
+        ]
+      },
+      {
+        "source": "nasa",
+        "title": "Juno WP REST",
+        "url": "https://science.nasa.gov/wp-json/wp/v2/posts?per_page=3&search=Juno",
+        "method": "science_wp_rest_body",
+        "status_code": 200,
+        "status": "http_200",
+        "content_type": "application/json; charset=UTF-8",
+        "quality_class": "rejected",
+        "reject_reason": "failed_or_noise_gate",
+        "narrative": "Mapping Io’s Hidden Heat With NASA’s Juno 2 Min Read Mapping Io’s Hidden Heat With NASA’s Juno PIA26757 Credits: NASA/JPL-Caltech/SwRI/USGS Photojournal Navigation Downloads Mapping Io’s Hidden Heat With NASA’s Juno PNG (1.89 MB) Description This graphic illustrates the areas of Jupiter’s moon Io sampled by the Microwave Radiometer (MWR) instrument aboard NASA’s Juno spacecraft during two close flybys. The black overlapping lines show the instrument’s footprints during Perijove 57 on Dec. 30, 2023, when the spacecraft primarily mapped the northern hemisphere. The blue lines represent Perijove 58 on Feb. 3, 2024, which focused heavily on the moon’s mid-latitudes and equatorial regions. Both passes mapped the side of Io that constantly faces Jupiter. The sweeping, overlapping patterns are a ",
+        "triples_preview": []
+      },
+      {
+        "source": "nasa",
+        "title": "Artemis WP REST",
+        "url": "https://science.nasa.gov/wp-json/wp/v2/posts?per_page=1&search=Artemis",
+        "method": "science_wp_rest_body",
+        "status_code": 200,
+        "status": "http_200",
+        "content_type": "application/json; charset=UTF-8",
+        "quality_class": "failed",
+        "reject_reason": "failed_or_noise_gate",
+        "narrative": "",
+        "triples_preview": []
+      }
+    ],
+    "esa": [
+      {
+        "source": "esa",
+        "title": "Juice",
+        "url": "https://www.esa.int/Science_Exploration/Space_Science/Juice",
+        "method": "specific_article_body",
+        "status_code": 200,
+        "status": "http_200",
+        "content_type": "text/html; charset=utf-8",
+        "quality_class": "accepted",
+        "reject_reason": "",
+        "narrative": "ESA - Juice The mission ESA’s Jupiter Icy Moons Explorer, Juice, will make detailed observations of the giant gas planet and its three large ocean-bearing moons – Ganymede, Callisto and Europa – with a suite of remote sensing, geophysical and in situ instruments. The mission will characterise these moons as both planetary objects and possible habitats, explore Jupiter’s complex environment in depth, and study the wider Jupiter system as an archetype for gas giants across the Universe. The journey Launch : 14 April 2023 Launch location: Europe's Spaceport in French Guiana Launch vehicle: Ariane 5 Flybys en route : August 2024 Lunar-Earth, August 2025 Venus, September 2026 Earth, January 2029 Earth Arrival at Jupiter: July 2031 10 instruments 85 m 2 solar wings 35 Jovian moon flybys Latest A",
+        "triples_preview": [
+          {
+            "subject": "Juice",
+            "predicate": "SOURCE_URL",
+            "object": "https://www.esa.int/Science_Exploration/Space_Science/Juice"
+          },
+          {
+            "subject": "Juice",
+            "predicate": "HAS_REENTRY_PREVIEW_TEXT",
+            "object": "ESA - Juice The mission ESA’s Jupiter Icy Moons Explorer, Juice, will make detailed observations of the giant gas planet and its three large ocean-bearing moons – Ganymede, Callisto and Europa – with a suite of remote se"
+          }
+        ]
+      },
+      {
+        "source": "esa",
+        "title": "Mars Express",
+        "url": "https://www.esa.int/Science_Exploration/Space_Science/Mars_Express",
+        "method": "specific_article_body",
+        "status_code": 200,
+        "status": "http_200",
+        "content_type": "text/html; charset=utf-8",
+        "quality_class": "accepted",
+        "reject_reason": "",
+        "narrative": "ESA - Mars Express The mission Since beginning science operations in 2004, Mars Express has provided breathtaking views of Mars in three dimensions. It has provided the most complete map of the chemical composition of the atmosphere, studied Mars’s innermost moon Phobos in unprecedented detail, and traced the history of water across the globe, demonstrating that Mars once harboured environmental conditions that may have been suitable for life. Launch date: 2 June 2003 Arrival at Mars: December 2003 Status: In operation Targets: Mars's atmosphere, surface and subsurface; Mars's moons Phobos and Deimos 10 m imaging resolution 8 instruments 1120 kg launch mass 2 decades of operation Latest All Stories Videos Images Image View Story Read Story Read Story Read Story Read Story Read Video 00:03:",
+        "triples_preview": [
+          {
+            "subject": "Mars Express",
+            "predicate": "SOURCE_URL",
+            "object": "https://www.esa.int/Science_Exploration/Space_Science/Mars_Express"
+          },
+          {
+            "subject": "Mars Express",
+            "predicate": "HAS_REENTRY_PREVIEW_TEXT",
+            "object": "ESA - Mars Express The mission Since beginning science operations in 2004, Mars Express has provided breathtaking views of Mars in three dimensions. It has provided the most complete map of the chemical composition of th"
+          }
+        ]
+      },
+      {
+        "source": "esa",
+        "title": "Solar Orbiter",
+        "url": "https://www.esa.int/Science_Exploration/Space_Science/Solar_Orbiter",
+        "method": "specific_article_body",
+        "status_code": 200,
+        "status": "http_200",
+        "content_type": "text/html; charset=utf-8",
+        "quality_class": "accepted",
+        "reject_reason": "",
+        "narrative": "ESA - Solar Orbiter Solar Orbiter is the most complex scientific laboratory ever sent to our life-giving star, taking images of the Sun from closer than any spacecraft before and being the first to look at its polar regions. With Solar Orbiter's ten instruments, scientists hope to answer some profound questions: What drives the Sun’s 11-year cycle of rising and subsiding magnetic activity? What heats up the upper layer of its atmosphere, the corona, to millions of degrees Celsius? How does solar wind form, and what accelerates it to speeds of hundreds of kilometres per second? And how does it all affect our planet? Launch date: February 2020 First images: July 2020 Beginning of routine science operations: November 2021 Mission highlights: The closest-ever images of the Sun, the first ever ",
+        "triples_preview": [
+          {
+            "subject": "Solar Orbiter",
+            "predicate": "SOURCE_URL",
+            "object": "https://www.esa.int/Science_Exploration/Space_Science/Solar_Orbiter"
+          },
+          {
+            "subject": "Solar Orbiter",
+            "predicate": "HAS_REENTRY_PREVIEW_TEXT",
+            "object": "ESA - Solar Orbiter Solar Orbiter is the most complex scientific laboratory ever sent to our life-giving star, taking images of the Sun from closer than any spacecraft before and being the first to look at its polar regi"
+          }
+        ]
+      }
+    ]
+  },
+  "source_counts": {
+    "zh_wikipedia": {
+      "attempted": 3,
+      "succeeded": 0,
+      "accepted": 0,
+      "conditional": 0,
+      "rejected": 0,
+      "failed": 3
+    },
+    "nasa": {
+      "attempted": 3,
+      "succeeded": 3,
+      "accepted": 0,
+      "conditional": 1,
+      "rejected": 1,
+      "failed": 1
+    },
+    "esa": {
+      "attempted": 3,
+      "succeeded": 3,
+      "accepted": 3,
+      "conditional": 0,
+      "rejected": 0,
+      "failed": 0
+    }
+  },
+  "overall_verdict": "controlled_reentry_preview_partial_esa_ready_zh_nasa_need_review",
+  "next_recommendation": "review Phase115 records before any queue rebuild; no apply or preflight",
+  "production_ready": false,
+  "preflight_allowed": false,
+  "apply_preflight_allowed": false,
+  "apply_approved": false,
+  "ingest_approved": false,
+  "preflight_approved": false,
+  "formal_raw_write": false,
+  "formal_default_triples_write": false,
+  "chroma_write": false,
+  "neo4j_write": false,
+  "active_source": "zh_wikipedia",
+  "active_source_unchanged": true,
+  "clear_source_ingestion_outputs_called": false
+}
