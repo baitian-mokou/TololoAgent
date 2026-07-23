@@ -1,0 +1,486 @@
+{
+  "phase": "Phase110",
+  "mode": "controlled_deeper_crawl_preview",
+  "generated_at": "2026-07-23T04:49:46.209062+00:00",
+  "input_gate": "evaluation\\four_source_expansion\\phase109\\controlled_deeper_crawl_gate_phase109.json",
+  "limits": {
+    "zh_wikipedia": 20,
+    "nasa": 10,
+    "esa": 20,
+    "wikidata": 30
+  },
+  "total_limit": 80,
+  "total_attempted": 27,
+  "counts": {
+    "accepted": 15,
+    "rejected": 2,
+    "thin": 10
+  },
+  "source_breakdown": {
+    "zh_wikipedia": {
+      "accepted": 3
+    },
+    "nasa": {
+      "accepted": 5
+    },
+    "esa": {
+      "rejected": 2,
+      "accepted": 7
+    },
+    "wikidata": {
+      "thin": 10
+    }
+  },
+  "stop_reasons_by_source": {
+    "esa": "stop_condition_quality_gate"
+  },
+  "preview_records": [
+    {
+      "source": "zh_wikipedia",
+      "title_or_id": "太阳",
+      "url_or_entity": "https://zh.wikipedia.org/wiki/太阳",
+      "method": "live_fetch",
+      "fetch_status": "failed",
+      "status_code": 0,
+      "quality_status": "accepted",
+      "reject_reason": "",
+      "text_excerpt": "{\"source\": \"zh_wikipedia\", \"title\": \"太阳\", \"source_url\": \"https://zh.wikipedia.org/wiki/太阳\", \"source_id\": \"zh_wikipedia\", \"narrative_excerpt\": \"英語維基百科 相應條目来扩充 ，此條目在對應語言版為高品質條目。 2022年4月16日 若您熟悉来源语言和主题，请协助 参考外语维基百科扩充条目 。请勿直接提交机械翻译，也不要翻译不可靠、低品质内容。依 版权协议 ，译文需 在编辑摘要注明来源 ，或于讨论页顶部标记 Translated page 在2019年使用 太陽濾鏡 真實色彩 的太陽。 太陽、日、Sun、 Helios Solar 觀測數據 與地球的 平均距離 7011149597870700000♠ 7011149600000000000♠ 1.49",
+      "quality_flags": [
+        "body_extraction",
+        "template_table_ratio",
+        "minimum_readable_text"
+      ]
+    },
+    {
+      "source": "zh_wikipedia",
+      "title_or_id": "太阳系",
+      "url_or_entity": "https://zh.wikipedia.org/wiki/太阳系",
+      "method": "live_fetch",
+      "fetch_status": "failed",
+      "status_code": 0,
+      "quality_status": "accepted",
+      "reject_reason": "",
+      "text_excerpt": "{\"source\": \"zh_wikipedia\", \"title\": \"太阳系\", \"source_url\": \"https://zh.wikipedia.org/wiki/太阳系\", \"source_id\": \"zh_wikipedia\", \"narrative_excerpt\": \"此條目介紹的是太陽和它的行星系統。关于其他類似的系統，请见「 行星系統 有字幕（英文） 有字幕（正體中文） 有字幕（簡體中文） 行星、衛星和矮行星 （真實色彩、大小按比例、距離尺度未照比例） 45.68億年 本地星際雲 獵戶–天鵝臂 最近的恆星 (4.2465 （4.36光年） 行星系統 30.07 AU 古柏斷涯 50–70 AU 賽德娜 (小行星) 更多候選者... 天然衛星 1,368,528 4,591 銀河中心 星系盤面 ~60°, to the ecliptic 至銀河中心的距離 24,000",
+      "quality_flags": [
+        "body_extraction",
+        "template_table_ratio",
+        "minimum_readable_text"
+      ]
+    },
+    {
+      "source": "zh_wikipedia",
+      "title_or_id": "水星",
+      "url_or_entity": "https://zh.wikipedia.org/wiki/水星",
+      "method": "live_fetch",
+      "fetch_status": "failed",
+      "status_code": 0,
+      "quality_status": "accepted",
+      "reject_reason": "",
+      "text_excerpt": "{\"source\": \"zh_wikipedia\", \"title\": \"水星\", \"source_url\": \"https://zh.wikipedia.org/wiki/水星\", \"source_id\": \"zh_wikipedia\", \"narrative_excerpt\": \"取自信使神太空船的水星合成影像 Mercurian, Mercurial, Hermian 軌道參數 J2000 69,817,900 公里 0.466 697 46,001,200公里 0.307 499 AU 57,909,100公里 0.387 098 AU 0.205 630 軌道週期 87.969 1 (0.240 846 會合週期 115.88 d 軌道速度 47.87 km/s 平近點角 174.796° 軌道傾角 7.005° 對 3.38° 對 太陽的赤道 6.34° 對 不變平面 升交點黃",
+      "quality_flags": [
+        "body_extraction",
+        "template_table_ratio",
+        "minimum_readable_text"
+      ]
+    },
+    {
+      "source": "nasa",
+      "title_or_id": "Riding Along with Juno",
+      "url_or_entity": "https://images-assets.nasa.gov/image/PIA14414/collection.json",
+      "method": "live_fetch",
+      "fetch_status": "succeeded",
+      "status_code": 200,
+      "quality_status": "accepted",
+      "reject_reason": "",
+      "text_excerpt": "[\"http://images-assets.nasa.gov/image/PIA14414/PIA14414~orig.jpg\", \"http://images-assets.nasa.gov/image/PIA14414/PIA14414~large.jpg\", \"http://images-assets.nasa.gov/image/PIA14414/PIA14414~medium.jpg\", \"http://images-assets.nasa.gov/image/PIA14414/PIA14414~small.jpg\", \"http://images-assets.nasa.gov/image/PIA14414/PIA14414~thumb.jpg\", \"http://images-assets.nasa.gov/image/PIA14414/metadata.json\"]",
+      "quality_flags": [
+        "endpoint_method_recorded",
+        "non_navigation_text",
+        "metadata_not_thin_only"
+      ]
+    },
+    {
+      "source": "nasa",
+      "title_or_id": "LEGO Figurines Aboard Juno",
+      "url_or_entity": "https://images-assets.nasa.gov/image/PIA14413/collection.json",
+      "method": "live_fetch",
+      "fetch_status": "succeeded",
+      "status_code": 200,
+      "quality_status": "accepted",
+      "reject_reason": "",
+      "text_excerpt": "[\"http://images-assets.nasa.gov/image/PIA14413/PIA14413~orig.jpg\", \"http://images-assets.nasa.gov/image/PIA14413/PIA14413~thumb.jpg\", \"http://images-assets.nasa.gov/image/PIA14413/metadata.json\"]",
+      "quality_flags": [
+        "endpoint_method_recorded",
+        "non_navigation_text",
+        "metadata_not_thin_only"
+      ]
+    },
+    {
+      "source": "nasa",
+      "title_or_id": "Mapping Io’s Hidden Heat With NASA’s Juno",
+      "url_or_entity": "https://science.nasa.gov/photojournal/mapping-ios-hidden-heat-with-nasas-juno/",
+      "method": "live_fetch",
+      "fetch_status": "succeeded",
+      "status_code": 200,
+      "quality_status": "accepted",
+      "reject_reason": "",
+      "text_excerpt": "<!doctype html> <html lang=\"en-US\" prefix=\"og: https://ogp.me/ns#\"> <head> <meta charset=\"UTF-8\"> <script> var gform;gform||(document.addEventListener(\"gform_main_scripts_loaded\",function(){gform.scriptsLoaded=!0}),document.addEventListener(\"gform/theme/scripts_loaded\",function(){gform.themeScriptsLoaded=!0}),window.addEventListener(\"DOMContentLoaded\",function(){gform.domLoaded=!0}),gform={domLoad",
+      "quality_flags": [
+        "endpoint_method_recorded",
+        "non_navigation_text",
+        "metadata_not_thin_only"
+      ]
+    },
+    {
+      "source": "nasa",
+      "title_or_id": "NASA’s Juno Peers Beneath Io’s Surface",
+      "url_or_entity": "https://science.nasa.gov/photojournal/nasas-juno-peers-beneath-ios-surface/",
+      "method": "live_fetch",
+      "fetch_status": "succeeded",
+      "status_code": 200,
+      "quality_status": "accepted",
+      "reject_reason": "",
+      "text_excerpt": "<!doctype html> <html lang=\"en-US\" prefix=\"og: https://ogp.me/ns#\"> <head> <meta charset=\"UTF-8\"> <script> var gform;gform||(document.addEventListener(\"gform_main_scripts_loaded\",function(){gform.scriptsLoaded=!0}),document.addEventListener(\"gform/theme/scripts_loaded\",function(){gform.themeScriptsLoaded=!0}),window.addEventListener(\"DOMContentLoaded\",function(){gform.domLoaded=!0}),gform={domLoad",
+      "quality_flags": [
+        "endpoint_method_recorded",
+        "non_navigation_text",
+        "metadata_not_thin_only"
+      ]
+    },
+    {
+      "source": "nasa",
+      "title_or_id": "A Moonlit Earth as Seen From Artemis II",
+      "url_or_entity": "https://science.nasa.gov/earth/earth-observatory/a-moonlit-earth-as-seen-from-artemis-ii/",
+      "method": "live_fetch",
+      "fetch_status": "succeeded",
+      "status_code": 200,
+      "quality_status": "accepted",
+      "reject_reason": "",
+      "text_excerpt": "<!doctype html> <html lang=\"en-US\" prefix=\"og: https://ogp.me/ns#\"> <head> <meta charset=\"UTF-8\"> <script> var gform;gform||(document.addEventListener(\"gform_main_scripts_loaded\",function(){gform.scriptsLoaded=!0}),document.addEventListener(\"gform/theme/scripts_loaded\",function(){gform.themeScriptsLoaded=!0}),window.addEventListener(\"DOMContentLoaded\",function(){gform.domLoaded=!0}),gform={domLoad",
+      "quality_flags": [
+        "endpoint_method_recorded",
+        "non_navigation_text",
+        "metadata_not_thin_only"
+      ]
+    },
+    {
+      "source": "esa",
+      "title_or_id": "ESA - Rosetta",
+      "url_or_entity": "https://www.esa.int/science_exploration/space_science/rosetta",
+      "method": "live_fetch",
+      "fetch_status": "succeeded",
+      "status_code": 200,
+      "quality_status": "rejected",
+      "reject_reason": "stop_condition_quality_gate",
+      "text_excerpt": " <!doctype html> <html lang=\"en\"> <head> <meta charset=\"utf-8\"> <meta http-equiv=\"X-UA-Compatible\" content=\"IE=edge\"> <meta name=\"viewport\" content=\"width=device-width, user-scalable=no, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0\"> <link rel=\"stylesheet\" type=\"text/css\" href=\"/var/esa/cache/public/stylesheets/c35b41a32fb01cc5cc5a0efcc8ca483e_1769593272_all.css\" /> <link href=\"/fontawe",
+      "quality_flags": [
+        "mission_or_science_signal",
+        "index_listing_filter",
+        "minimum_readable_text"
+      ]
+    },
+    {
+      "source": "esa",
+      "title_or_id": "ESA - Gaia",
+      "url_or_entity": "https://www.esa.int/science_exploration/space_science/gaia",
+      "method": "live_fetch",
+      "fetch_status": "succeeded",
+      "status_code": 200,
+      "quality_status": "accepted",
+      "reject_reason": "",
+      "text_excerpt": " <!doctype html> <html lang=\"en\"> <head> <meta charset=\"utf-8\"> <meta http-equiv=\"X-UA-Compatible\" content=\"IE=edge\"> <meta name=\"viewport\" content=\"width=device-width, user-scalable=no, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0\"> <link rel=\"stylesheet\" type=\"text/css\" href=\"/var/esa/cache/public/stylesheets/c35b41a32fb01cc5cc5a0efcc8ca483e_1769593272_all.css\" /> <link href=\"/fontawe",
+      "quality_flags": [
+        "mission_or_science_signal",
+        "index_listing_filter",
+        "minimum_readable_text"
+      ]
+    },
+    {
+      "source": "esa",
+      "title_or_id": "ESA - Solar Orbiter",
+      "url_or_entity": "https://www.esa.int/science_exploration/space_science/solar_orbiter",
+      "method": "live_fetch",
+      "fetch_status": "succeeded",
+      "status_code": 200,
+      "quality_status": "accepted",
+      "reject_reason": "",
+      "text_excerpt": " <!doctype html> <html lang=\"en\"> <head> <meta charset=\"utf-8\"> <meta http-equiv=\"X-UA-Compatible\" content=\"IE=edge\"> <meta name=\"viewport\" content=\"width=device-width, user-scalable=no, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0\"> <link rel=\"stylesheet\" type=\"text/css\" href=\"/var/esa/cache/public/stylesheets/c35b41a32fb01cc5cc5a0efcc8ca483e_1769593272_all.css\" /> <link href=\"/fontawe",
+      "quality_flags": [
+        "mission_or_science_signal",
+        "index_listing_filter",
+        "minimum_readable_text"
+      ]
+    },
+    {
+      "source": "esa",
+      "title_or_id": "ESA - BepiColombo",
+      "url_or_entity": "https://www.esa.int/science_exploration/space_science/bepicolombo",
+      "method": "live_fetch",
+      "fetch_status": "succeeded",
+      "status_code": 200,
+      "quality_status": "accepted",
+      "reject_reason": "",
+      "text_excerpt": " <!doctype html> <html lang=\"en\"> <head> <meta charset=\"utf-8\"> <meta http-equiv=\"X-UA-Compatible\" content=\"IE=edge\"> <meta name=\"viewport\" content=\"width=device-width, user-scalable=no, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0\"> <link rel=\"stylesheet\" type=\"text/css\" href=\"/var/esa/cache/public/stylesheets/c35b41a32fb01cc5cc5a0efcc8ca483e_1769593272_all.css\" /> <link href=\"/fontawe",
+      "quality_flags": [
+        "mission_or_science_signal",
+        "index_listing_filter",
+        "minimum_readable_text"
+      ]
+    },
+    {
+      "source": "esa",
+      "title_or_id": "ESA - Euclid",
+      "url_or_entity": "https://www.esa.int/science_exploration/space_science/euclid",
+      "method": "live_fetch",
+      "fetch_status": "succeeded",
+      "status_code": 200,
+      "quality_status": "accepted",
+      "reject_reason": "",
+      "text_excerpt": " <!doctype html> <html lang=\"en\"> <head> <meta charset=\"utf-8\"> <meta http-equiv=\"X-UA-Compatible\" content=\"IE=edge\"> <meta name=\"viewport\" content=\"width=device-width, user-scalable=no, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0\"> <link rel=\"stylesheet\" type=\"text/css\" href=\"/var/esa/cache/public/stylesheets/c35b41a32fb01cc5cc5a0efcc8ca483e_1769593272_all.css\" /> <link href=\"/fontawe",
+      "quality_flags": [
+        "mission_or_science_signal",
+        "index_listing_filter",
+        "minimum_readable_text"
+      ]
+    },
+    {
+      "source": "esa",
+      "title_or_id": "ESA - ExoMars",
+      "url_or_entity": "https://www.esa.int/science_exploration/space_science/exomars",
+      "method": "live_fetch",
+      "fetch_status": "succeeded",
+      "status_code": 200,
+      "quality_status": "accepted",
+      "reject_reason": "",
+      "text_excerpt": " <!doctype html> <html lang=\"en\"> <head> <meta charset=\"utf-8\"> <meta http-equiv=\"X-UA-Compatible\" content=\"IE=edge\"> <meta name=\"viewport\" content=\"width=device-width, user-scalable=no, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0\"> <link rel=\"stylesheet\" type=\"text/css\" href=\"/var/esa/cache/public/stylesheets/c35b41a32fb01cc5cc5a0efcc8ca483e_1769593272_all.css\" /> <link href=\"/fontawe",
+      "quality_flags": [
+        "mission_or_science_signal",
+        "index_listing_filter",
+        "minimum_readable_text"
+      ]
+    },
+    {
+      "source": "esa",
+      "title_or_id": "ESA - Cluster",
+      "url_or_entity": "https://www.esa.int/science_exploration/space_science/cluster",
+      "method": "live_fetch",
+      "fetch_status": "succeeded",
+      "status_code": 200,
+      "quality_status": "accepted",
+      "reject_reason": "",
+      "text_excerpt": " <!doctype html> <html lang=\"en\"> <head> <meta charset=\"utf-8\"> <meta http-equiv=\"X-UA-Compatible\" content=\"IE=edge\"> <meta name=\"viewport\" content=\"width=device-width, user-scalable=no, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0\"> <link rel=\"stylesheet\" type=\"text/css\" href=\"/var/esa/cache/public/stylesheets/c35b41a32fb01cc5cc5a0efcc8ca483e_1769593272_all.css\" /> <link href=\"/fontawe",
+      "quality_flags": [
+        "mission_or_science_signal",
+        "index_listing_filter",
+        "minimum_readable_text"
+      ]
+    },
+    {
+      "source": "esa",
+      "title_or_id": "ESA - Webb",
+      "url_or_entity": "https://www.esa.int/science_exploration/space_science/webb",
+      "method": "live_fetch",
+      "fetch_status": "succeeded",
+      "status_code": 200,
+      "quality_status": "accepted",
+      "reject_reason": "",
+      "text_excerpt": " <!doctype html> <html lang=\"en\"> <head> <meta charset=\"utf-8\"> <meta http-equiv=\"X-UA-Compatible\" content=\"IE=edge\"> <meta name=\"viewport\" content=\"width=device-width, user-scalable=no, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0\"> <link rel=\"stylesheet\" type=\"text/css\" href=\"/var/esa/cache/public/stylesheets/c35b41a32fb01cc5cc5a0efcc8ca483e_1769593272_all.css\" /> <link href=\"/fontawe",
+      "quality_flags": [
+        "mission_or_science_signal",
+        "index_listing_filter",
+        "minimum_readable_text"
+      ]
+    },
+    {
+      "source": "esa",
+      "title_or_id": "ESA - Space Science",
+      "url_or_entity": "https://www.esa.int/science_exploration/space_science",
+      "method": "live_fetch",
+      "fetch_status": "succeeded",
+      "status_code": 200,
+      "quality_status": "rejected",
+      "reject_reason": "stop_condition_quality_gate",
+      "text_excerpt": " <!doctype html> <html lang=\"en\"> <head> <meta charset=\"utf-8\"> <meta http-equiv=\"X-UA-Compatible\" content=\"IE=edge\"> <meta name=\"viewport\" content=\"width=device-width, user-scalable=no, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0\"> <link rel=\"stylesheet\" type=\"text/css\" href=\"/var/esa/cache/public/stylesheets/c35b41a32fb01cc5cc5a0efcc8ca483e_1769593272_all.css\" /> <link href=\"/fontawe",
+      "quality_flags": [
+        "mission_or_science_signal",
+        "index_listing_filter",
+        "minimum_readable_text"
+      ]
+    },
+    {
+      "source": "wikidata",
+      "title_or_id": "太阳",
+      "url_or_entity": "https://www.wikidata.org/wiki/Q525",
+      "method": "gate_probe_existing_record",
+      "fetch_status": "not_fetched",
+      "status_code": 0,
+      "quality_status": "thin",
+      "reject_reason": "",
+      "text_excerpt": "{\"source\": \"wikidata\", \"title\": \"太阳\", \"source_url\": \"https://www.wikidata.org/wiki/Q525\", \"source_id\": \"wikidata\", \"narrative_excerpt\": \"太阳 is a Wikidata entity (Q525) available at https://www.wikidata.org/wiki/Q525.\", \"triples\": [{\"subject\": \"太阳\", \"predicate\": \"WIKIDATA_QID\", \"object\": \"Q525\"}, {\"subject\": \"太阳\", \"predicate\": \"SOURCE_URL\", \"object\": \"https://www.wikidata.org/wiki/Q525\"}], \"provena",
+      "quality_flags": [
+        "claim_filter",
+        "reference_or_source_field",
+        "non_empty_structured_fact"
+      ]
+    },
+    {
+      "source": "wikidata",
+      "title_or_id": "水星",
+      "url_or_entity": "https://www.wikidata.org/wiki/Q308",
+      "method": "gate_probe_existing_record",
+      "fetch_status": "not_fetched",
+      "status_code": 0,
+      "quality_status": "thin",
+      "reject_reason": "",
+      "text_excerpt": "{\"source\": \"wikidata\", \"title\": \"水星\", \"source_url\": \"https://www.wikidata.org/wiki/Q308\", \"source_id\": \"wikidata\", \"narrative_excerpt\": \"水星 is a Wikidata entity (Q308) available at https://www.wikidata.org/wiki/Q308.\", \"triples\": [{\"subject\": \"水星\", \"predicate\": \"WIKIDATA_QID\", \"object\": \"Q308\"}, {\"subject\": \"水星\", \"predicate\": \"SOURCE_URL\", \"object\": \"https://www.wikidata.org/wiki/Q308\"}], \"provena",
+      "quality_flags": [
+        "claim_filter",
+        "reference_or_source_field",
+        "non_empty_structured_fact"
+      ]
+    },
+    {
+      "source": "wikidata",
+      "title_or_id": "金星",
+      "url_or_entity": "https://www.wikidata.org/wiki/Q313",
+      "method": "gate_probe_existing_record",
+      "fetch_status": "not_fetched",
+      "status_code": 0,
+      "quality_status": "thin",
+      "reject_reason": "",
+      "text_excerpt": "{\"source\": \"wikidata\", \"title\": \"金星\", \"source_url\": \"https://www.wikidata.org/wiki/Q313\", \"source_id\": \"wikidata\", \"narrative_excerpt\": \"金星 is a Wikidata entity (Q313) available at https://www.wikidata.org/wiki/Q313.\", \"triples\": [{\"subject\": \"金星\", \"predicate\": \"WIKIDATA_QID\", \"object\": \"Q313\"}, {\"subject\": \"金星\", \"predicate\": \"SOURCE_URL\", \"object\": \"https://www.wikidata.org/wiki/Q313\"}], \"provena",
+      "quality_flags": [
+        "claim_filter",
+        "reference_or_source_field",
+        "non_empty_structured_fact"
+      ]
+    },
+    {
+      "source": "wikidata",
+      "title_or_id": "地球",
+      "url_or_entity": "https://www.wikidata.org/wiki/Q2",
+      "method": "gate_probe_existing_record",
+      "fetch_status": "not_fetched",
+      "status_code": 0,
+      "quality_status": "thin",
+      "reject_reason": "",
+      "text_excerpt": "{\"source\": \"wikidata\", \"title\": \"地球\", \"source_url\": \"https://www.wikidata.org/wiki/Q2\", \"source_id\": \"wikidata\", \"narrative_excerpt\": \"地球 is a Wikidata entity (Q2) available at https://www.wikidata.org/wiki/Q2.\", \"triples\": [{\"subject\": \"地球\", \"predicate\": \"WIKIDATA_QID\", \"object\": \"Q2\"}, {\"subject\": \"地球\", \"predicate\": \"SOURCE_URL\", \"object\": \"https://www.wikidata.org/wiki/Q2\"}], \"provenance\": {\"ph",
+      "quality_flags": [
+        "claim_filter",
+        "reference_or_source_field",
+        "non_empty_structured_fact"
+      ]
+    },
+    {
+      "source": "wikidata",
+      "title_or_id": "月球",
+      "url_or_entity": "https://www.wikidata.org/wiki/Q405",
+      "method": "gate_probe_existing_record",
+      "fetch_status": "not_fetched",
+      "status_code": 0,
+      "quality_status": "thin",
+      "reject_reason": "",
+      "text_excerpt": "{\"source\": \"wikidata\", \"title\": \"月球\", \"source_url\": \"https://www.wikidata.org/wiki/Q405\", \"source_id\": \"wikidata\", \"narrative_excerpt\": \"月球 is a Wikidata entity (Q405) available at https://www.wikidata.org/wiki/Q405.\", \"triples\": [{\"subject\": \"月球\", \"predicate\": \"WIKIDATA_QID\", \"object\": \"Q405\"}, {\"subject\": \"月球\", \"predicate\": \"SOURCE_URL\", \"object\": \"https://www.wikidata.org/wiki/Q405\"}], \"provena",
+      "quality_flags": [
+        "claim_filter",
+        "reference_or_source_field",
+        "non_empty_structured_fact"
+      ]
+    },
+    {
+      "source": "wikidata",
+      "title_or_id": "火星",
+      "url_or_entity": "https://www.wikidata.org/wiki/Q111",
+      "method": "gate_probe_existing_record",
+      "fetch_status": "not_fetched",
+      "status_code": 0,
+      "quality_status": "thin",
+      "reject_reason": "",
+      "text_excerpt": "{\"source\": \"wikidata\", \"title\": \"火星\", \"source_url\": \"https://www.wikidata.org/wiki/Q111\", \"source_id\": \"wikidata\", \"narrative_excerpt\": \"火星 is a Wikidata entity (Q111) available at https://www.wikidata.org/wiki/Q111.\", \"triples\": [{\"subject\": \"火星\", \"predicate\": \"WIKIDATA_QID\", \"object\": \"Q111\"}, {\"subject\": \"火星\", \"predicate\": \"SOURCE_URL\", \"object\": \"https://www.wikidata.org/wiki/Q111\"}], \"provena",
+      "quality_flags": [
+        "claim_filter",
+        "reference_or_source_field",
+        "non_empty_structured_fact"
+      ]
+    },
+    {
+      "source": "wikidata",
+      "title_or_id": "木星",
+      "url_or_entity": "https://www.wikidata.org/wiki/Q319",
+      "method": "gate_probe_existing_record",
+      "fetch_status": "not_fetched",
+      "status_code": 0,
+      "quality_status": "thin",
+      "reject_reason": "",
+      "text_excerpt": "{\"source\": \"wikidata\", \"title\": \"木星\", \"source_url\": \"https://www.wikidata.org/wiki/Q319\", \"source_id\": \"wikidata\", \"narrative_excerpt\": \"木星 is a Wikidata entity (Q319) available at https://www.wikidata.org/wiki/Q319.\", \"triples\": [{\"subject\": \"木星\", \"predicate\": \"WIKIDATA_QID\", \"object\": \"Q319\"}, {\"subject\": \"木星\", \"predicate\": \"SOURCE_URL\", \"object\": \"https://www.wikidata.org/wiki/Q319\"}], \"provena",
+      "quality_flags": [
+        "claim_filter",
+        "reference_or_source_field",
+        "non_empty_structured_fact"
+      ]
+    },
+    {
+      "source": "wikidata",
+      "title_or_id": "土星",
+      "url_or_entity": "https://www.wikidata.org/wiki/Q193",
+      "method": "gate_probe_existing_record",
+      "fetch_status": "not_fetched",
+      "status_code": 0,
+      "quality_status": "thin",
+      "reject_reason": "",
+      "text_excerpt": "{\"source\": \"wikidata\", \"title\": \"土星\", \"source_url\": \"https://www.wikidata.org/wiki/Q193\", \"source_id\": \"wikidata\", \"narrative_excerpt\": \"土星 is a Wikidata entity (Q193) available at https://www.wikidata.org/wiki/Q193.\", \"triples\": [{\"subject\": \"土星\", \"predicate\": \"WIKIDATA_QID\", \"object\": \"Q193\"}, {\"subject\": \"土星\", \"predicate\": \"SOURCE_URL\", \"object\": \"https://www.wikidata.org/wiki/Q193\"}], \"provena",
+      "quality_flags": [
+        "claim_filter",
+        "reference_or_source_field",
+        "non_empty_structured_fact"
+      ]
+    },
+    {
+      "source": "wikidata",
+      "title_or_id": "天王星",
+      "url_or_entity": "https://www.wikidata.org/wiki/Q324",
+      "method": "gate_probe_existing_record",
+      "fetch_status": "not_fetched",
+      "status_code": 0,
+      "quality_status": "thin",
+      "reject_reason": "",
+      "text_excerpt": "{\"source\": \"wikidata\", \"title\": \"天王星\", \"source_url\": \"https://www.wikidata.org/wiki/Q324\", \"source_id\": \"wikidata\", \"narrative_excerpt\": \"天王星 is a Wikidata entity (Q324) available at https://www.wikidata.org/wiki/Q324.\", \"triples\": [{\"subject\": \"天王星\", \"predicate\": \"WIKIDATA_QID\", \"object\": \"Q324\"}, {\"subject\": \"天王星\", \"predicate\": \"SOURCE_URL\", \"object\": \"https://www.wikidata.org/wiki/Q324\"}], \"pro",
+      "quality_flags": [
+        "claim_filter",
+        "reference_or_source_field",
+        "non_empty_structured_fact"
+      ]
+    },
+    {
+      "source": "wikidata",
+      "title_or_id": "海王星",
+      "url_or_entity": "https://www.wikidata.org/wiki/Q332",
+      "method": "gate_probe_existing_record",
+      "fetch_status": "not_fetched",
+      "status_code": 0,
+      "quality_status": "thin",
+      "reject_reason": "",
+      "text_excerpt": "{\"source\": \"wikidata\", \"title\": \"海王星\", \"source_url\": \"https://www.wikidata.org/wiki/Q332\", \"source_id\": \"wikidata\", \"narrative_excerpt\": \"海王星 is a Wikidata entity (Q332) available at https://www.wikidata.org/wiki/Q332.\", \"triples\": [{\"subject\": \"海王星\", \"predicate\": \"WIKIDATA_QID\", \"object\": \"Q332\"}, {\"subject\": \"海王星\", \"predicate\": \"SOURCE_URL\", \"object\": \"https://www.wikidata.org/wiki/Q332\"}], \"pro",
+      "quality_flags": [
+        "claim_filter",
+        "reference_or_source_field",
+        "non_empty_structured_fact"
+      ]
+    }
+  ],
+  "live_fetch_used": true,
+  "next_recommendation": "Phase111 normalize review preview only if reviewer accepts Phase110 preview quality; no apply/preflight",
+  "production_ready": false,
+  "preflight_allowed": false,
+  "apply_preflight_allowed": false,
+  "apply_approved": false,
+  "ingest_approved": false,
+  "preflight_approved": false,
+  "formal_raw_write": false,
+  "formal_default_triples_write": false,
+  "chroma_write": false,
+  "neo4j_write": false,
+  "active_source": "zh_wikipedia",
+  "active_source_unchanged": true,
+  "clear_source_ingestion_outputs_called": false
+}
