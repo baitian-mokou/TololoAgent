@@ -1,0 +1,127 @@
+{
+  "phase": "Phase127",
+  "mode": "four_source_production_gate_dry_run_design",
+  "generated_at": "2026-07-23T09:16:41.360630+00:00",
+  "dry_run_only": true,
+  "inputs": {
+    "zh_phase126": "evaluation\\four_source_expansion\\phase126\\zh_controlled_live_reentry_expanded_preview_phase126.json",
+    "phase116_fixes": "evaluation\\four_source_expansion\\phase116\\zh_nasa_strategy_fixes_phase116.json",
+    "esa_phase116_queue": "evaluation\\four_source_expansion\\phase116\\esa_reentry_queue_phase116.json",
+    "wikidata_phase111": "evaluation\\four_source_expansion\\phase111\\normalize_review_preview_phase111.json"
+  },
+  "source_verdicts": {
+    "zh_wikipedia": "manual_review_queue_candidate_not_production_ready",
+    "esa": "manual_review_pending_not_production_ready",
+    "nasa": "conditional_not_strong_blocked",
+    "wikidata": "thin_conditional_only_blocked"
+  },
+  "source_evidence": {
+    "zh_wikipedia": {
+      "accepted_review_only": 10,
+      "attempted": 10,
+      "phase126_verdict": "zh_live_reentry_expanded_preview_review_only_has_accepted"
+    },
+    "esa": {
+      "manual_review_pending_count": 3,
+      "review_status": "pending_manual_review"
+    },
+    "nasa": {
+      "status": "conditional_review_only_not_strong",
+      "conditional_count": 1,
+      "strong_count": 0,
+      "rejected_or_failed_count": 2,
+      "conditional_items": [
+        {
+          "title": "Juno images metadata",
+          "url": "https://images-api.nasa.gov/search?q=Juno&media_type=image&page_size=3",
+          "method": "images_api_structured_description",
+          "quality_labels": [
+            "conditional_not_strong",
+            "meta_or_endpoint_quality_risk",
+            "needs_review"
+          ],
+          "narrative": "The three LEGO figurines flying aboard the Juno spacecraft are the Roman god Jupiter, his wife Juno and Galileo Galilei. Three LEGO figurines representing the Roman god Jupiter, his wife Juno and Galileo Galilei are shown here aboard the Juno spacecraft. Technicians install components that will aid with guidance, navigation and control of NASA Juno spacecraft.",
+          "triples_preview": [
+            {
+              "subject": "Juno images metadata",
+              "predicate": "SOURCE_URL",
+              "object": "https://images-api.nasa.gov/search?q=Juno&media_type=image&page_size=3"
+            },
+            {
+              "subject": "Juno images metadata",
+              "predicate": "HAS_REENTRY_PREVIEW_TEXT",
+              "object": "The three LEGO figurines flying aboard the Juno spacecraft are the Roman god Jupiter, his wife Juno and Galileo Galilei. Three LEGO figurines representing the Roman god Jupiter, his wife Juno and Galileo Galilei are show"
+            }
+          ]
+        }
+      ],
+      "quality_labels": [
+        "conditional_not_strong",
+        "meta_or_endpoint_quality_risk",
+        "needs_review"
+      ],
+      "apply_preflight_allowed": false,
+      "production_ready": false
+    },
+    "wikidata": {
+      "phase111_note": "Thin Wikidata records are conditional_review only."
+    }
+  },
+  "blockers": {
+    "zh_wikipedia": [
+      "manual_review_required",
+      "queue_not_approved",
+      "production_write_not_approved"
+    ],
+    "esa": [
+      "manual_review_pending",
+      "production_write_not_approved"
+    ],
+    "nasa": [
+      "conditional_not_strong",
+      "no_strong_accepted_items",
+      "production_write_not_approved"
+    ],
+    "wikidata": [
+      "thin_conditional_only",
+      "needs_stronger_evidence",
+      "production_write_not_approved"
+    ]
+  },
+  "required_evidence": {
+    "zh_wikipedia": [
+      "manual review approval for 10/10 Phase126 accepted items",
+      "dedupe/noise check",
+      "explicit production write approval"
+    ],
+    "esa": [
+      "manual review approval for Phase116 pending items",
+      "dedupe/noise check",
+      "explicit production write approval"
+    ],
+    "nasa": [
+      "replace conditional_not_strong with strong accepted source evidence"
+    ],
+    "wikidata": [
+      "promote thin conditional records to stronger reviewed evidence"
+    ]
+  },
+  "next_minimal_steps": [
+    "review ZH Phase126 accepted items into a manual review queue candidate",
+    "finish ESA manual review",
+    "keep NASA and thin Wikidata blocked until stronger evidence exists",
+    "rerun this dry-run gate before any apply/preflight/ingest request"
+  ],
+  "production_ready": false,
+  "queue_allowed": false,
+  "apply_allowed": false,
+  "preflight_allowed": false,
+  "ingest_allowed": false,
+  "formal_raw_write": false,
+  "formal_default_triples_write": false,
+  "chroma_write": false,
+  "neo4j_write": false,
+  "active_source": "zh_wikipedia",
+  "active_source_unchanged": true,
+  "clear_source_ingestion_outputs_called": false
+}
