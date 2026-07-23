@@ -1,0 +1,52 @@
+{
+  "phase": "Phase124",
+  "mode": "restored_network_controlled_recheck",
+  "generated_at": "2026-07-23T08:39:18.797489+00:00",
+  "input_report": "evaluation/four_source_expansion/phase119/zh_mediawiki_network_diagnostics_phase119.json",
+  "request_limit": 2,
+  "live_probe_used": true,
+  "probes": [
+    {
+      "endpoint": "https://zh.wikipedia.org/w/api.php?action=query&meta=siteinfo&siprop=general&format=json&utf8=1",
+      "method": "siteinfo_status_probe",
+      "status_code": 200,
+      "status": "http_200",
+      "error": "",
+      "elapsed_ms": 879,
+      "content_type": "application/json; charset=utf-8",
+      "encoding": "utf-8",
+      "body_snippet_len": 200
+    },
+    {
+      "endpoint": "https://zh.wikipedia.org/w/api.php?action=query&prop=extracts&explaintext=1&titles=%E5%A4%AA%E9%98%B3&format=json&utf8=1",
+      "method": "known_good_title_extract_probe",
+      "status_code": 200,
+      "status": "http_200",
+      "error": "",
+      "elapsed_ms": 1294,
+      "content_type": "application/json; charset=utf-8",
+      "encoding": "utf-8",
+      "body_snippet_len": 200
+    }
+  ],
+  "network_reachable": true,
+  "siteinfo_ok": true,
+  "known_good_title_ok": true,
+  "failure_layer": "none_network_layer_reachable",
+  "network_verdict": "mediawiki_network_recovered_review_only",
+  "recommended_next": "controlled_zh_live_reentry_preview_max_3_titles",
+  "queue_allowed": false,
+  "production_ready": false,
+  "preflight_allowed": false,
+  "apply_preflight_allowed": false,
+  "apply_approved": false,
+  "ingest_approved": false,
+  "preflight_approved": false,
+  "formal_raw_write": false,
+  "formal_default_triples_write": false,
+  "chroma_write": false,
+  "neo4j_write": false,
+  "active_source": "zh_wikipedia",
+  "active_source_unchanged": true,
+  "clear_source_ingestion_outputs_called": false
+}
