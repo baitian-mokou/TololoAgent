@@ -37,6 +37,29 @@ class Phase113ExtractionRepairPreviewTest(unittest.TestCase):
         self.assertTrue(repaired["triples_preview"])
         self.assertEqual(blocked["repair_status"], "blocked")
 
+    def test_mojibake_and_nasa_url_array_are_blocked(self):
+        mojibake = phase113.repair_preview_record(
+            {
+                "source": "zh_wikipedia",
+                "title_or_id": "太阳",
+                "source_url_or_entity": "https://zh.wikipedia.org/wiki/太阳",
+                "narrative": '{"narrative_excerpt": "å¤ªé˜³æ˜¯å¤ªé˜³ç³»ä¸­å¿ƒçš„æ�’æ˜Ÿ"}',
+                "provenance": {"phase110_url_or_entity": "https://zh.wikipedia.org/wiki/太阳"},
+            }
+        )
+        url_array = phase113.repair_preview_record(
+            {
+                "source": "nasa",
+                "title_or_id": "Juno",
+                "source_url_or_entity": "https://images-assets.nasa.gov/image/x/collection.json",
+                "narrative": '["http://images-assets.nasa.gov/image/x.jpg", "http://images-assets.nasa.gov/image/y.jpg"]',
+                "provenance": {"phase110_url_or_entity": "https://images-assets.nasa.gov/image/x/collection.json"},
+            }
+        )
+
+        self.assertEqual(mojibake["repair_status"], "blocked")
+        self.assertEqual(url_array["repair_status"], "blocked")
+
     def test_report_counts_and_flags(self):
         report = phase113.build_repair_preview(
             phase112_rejected=phase113.ROOT
@@ -61,9 +84,9 @@ class Phase113ExtractionRepairPreviewTest(unittest.TestCase):
             / "controlled_deeper_crawl_preview_phase110.json",
         )
 
-        self.assertEqual(report["source_counts"]["zh_wikipedia"]["total"], 3)
-        self.assertEqual(report["source_counts"]["nasa"]["total"], 5)
-        self.assertEqual(report["source_counts"]["esa"]["total"], 7)
+        self.assertEqual(report["source_counts"]["zh_wikipedia"], {"total": 3, "repaired_preview_count": 0, "rejected_remaining": 3})
+        self.assertEqual(report["source_counts"]["nasa"], {"total": 5, "repaired_preview_count": 0, "rejected_remaining": 5})
+        self.assertEqual(report["source_counts"]["esa"], {"total": 7, "repaired_preview_count": 0, "rejected_remaining": 7})
         self.assertFalse(report["production_ready"])
         self.assertFalse(report["preflight_allowed"])
         self.assertFalse(report["apply_approved"])

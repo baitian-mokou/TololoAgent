@@ -49,7 +49,10 @@ def _json_field(text: str, field: str) -> str:
     match = re.search(rf'"{re.escape(field)}"\s*:\s*"((?:\\.|[^"\\])*)', text or "")
     if not match:
         return ""
-    return bytes(match.group(1), "utf-8").decode("unicode_escape", errors="ignore")
+    value = match.group(1)
+    if "\\" in value:
+        return bytes(value, "utf-8").decode("unicode_escape", errors="ignore")
+    return value
 
 
 def _strip_html(text: str) -> str:
@@ -60,15 +63,54 @@ def _strip_html(text: str) -> str:
 
 def _meaningful(text: str, source: str) -> bool:
     cleaned = re.sub(r"\s+", " ", text or "").strip()
-    if len(cleaned) < 24:
+    if source == "zh_wikipedia":
+        if len(re.findall(r"[\u4e00-\u9fff]", cleaned)) < 12:
+            return False
+    elif len(cleaned) < 24:
         return False
     lower = cleaned.lower()
+    if _looks_mojibake(cleaned):
+        return False
     bad_hits = sum(token in lower for token in ("doctype", "script", "menu", "footer", "navigation", "latest news", "index listing"))
     if bad_hits:
         return False
     if source == "zh_wikipedia":
-        return not any(token in lower for token in ("infobox", "wikitable", "class="))
+        digit_ratio = sum(ch.isdigit() for ch in cleaned) / max(len(cleaned), 1)
+        if digit_ratio > 0.15:
+            return False
+        return not any(
+            token in lower
+            for token in (
+                "infobox",
+                "wikitable",
+                "class=",
+                "合成影像",
+                "觀測數據",
+                "观测数据",
+                "軌道參數",
+                "轨道参数",
+                "平均距離",
+                "平均距离",
+                "維基百科",
+                "维基百科",
+                "條目",
+                "条目",
+                "模板",
+                "编辑",
+                "擴充",
+                "扩充",
+                "translated page",
+            )
+        )
     return True
+
+
+def _looks_mojibake(text: str) -> bool:
+    lower = text.lower()
+    if "�" in text:
+        return True
+    mojibake_tokens = ("å", "æ", "ç", "è", "é", "ð", "ã", "â", "¤", "¼", "œ")
+    return sum(token in lower for token in mojibake_tokens) >= 2
 
 
 def _candidate_text(row: dict) -> str:
@@ -80,14 +122,16 @@ def repair_preview_record(row: dict) -> dict:
     source = row["source"]
     title = row["title_or_id"]
     url = row["source_url_or_entity"]
+    root_cause = classify_source_noise(source, row.get("narrative", ""))
     candidate = _candidate_text(row)
-    if _meaningful(candidate, source):
+    hard_blockers = {"nasa_url_array_or_meta_thin", "nasa_html_boilerplate", "esa_html_listing_or_index"}
+    if root_cause not in hard_blockers and _meaningful(candidate, source):
         return {
             "source": source,
             "title_or_id": title,
             "source_url_or_entity": url,
             "repair_status": "repaired_preview",
-            "root_cause": classify_source_noise(source, row.get("narrative", "")),
+            "root_cause": root_cause,
             "narrative": candidate[:500],
             "triples_preview": [
                 {"subject": title, "predicate": "SOURCE_URL", "object": url},
@@ -102,7 +146,7 @@ def repair_preview_record(row: dict) -> dict:
         "title_or_id": title,
         "source_url_or_entity": url,
         "repair_status": "blocked",
-        "root_cause": classify_source_noise(source, row.get("narrative", "")),
+        "root_cause": root_cause,
         "blocker_reason": "no_meaningful_existing_body_after_repair_filter",
         "next_candidate_rules": candidate_rules(source),
         "provenance": row.get("provenance", {}),
