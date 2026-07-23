@@ -1,0 +1,230 @@
+{
+  "phase": "Phase109",
+  "mode": "controlled_deeper_crawl_gate_design",
+  "generated_at": "2026-07-23T04:42:23.470495+00:00",
+  "input_reports": {
+    "phase105": "evaluation\\four_source_expansion\\phase105\\review_handoff_phase105.json",
+    "phase106": "evaluation\\four_source_expansion\\phase106\\item_verdict_report_phase106.json",
+    "phase107": "evaluation\\four_source_expansion\\phase107\\final_closeout_phase107.json",
+    "phase108": "evaluation\\four_source_expansion\\phase108\\source_repair_preview_phase108.json"
+  },
+  "gate_readiness": "ready_to_run_controlled_deeper_crawl_after_review",
+  "ready_to_run_controlled_deeper_crawl": true,
+  "live_fetch_allowed_in_gate_design": false,
+  "actual_crawl_performed": false,
+  "total_max_batch": 80,
+  "gate_config": {
+    "mode": "controlled_deeper_crawl_gate_design_only",
+    "live_fetch_allowed": false,
+    "actual_crawl_allowed": false,
+    "output_root": "evaluation/four_source_expansion/phase109",
+    "total_max_batch": 80,
+    "sources": {
+      "zh_wikipedia": {
+        "max_batch": 20,
+        "entry_rules": [
+          "article body pages only",
+          "existing review context or approved seeds only"
+        ],
+        "allowlist": [
+          "zh.wikipedia.org/wiki/"
+        ],
+        "denylist": [
+          "infobox",
+          "table-heavy",
+          "template-heavy",
+          "category",
+          "special"
+        ],
+        "required_fields": [
+          "title",
+          "source_url",
+          "body_text",
+          "source",
+          "quality_flags"
+        ],
+        "quality_gates": [
+          "body_extraction",
+          "template_table_ratio",
+          "minimum_readable_text"
+        ],
+        "stop_conditions": [
+          "template/table noise dominates",
+          "duplicate title/source_url",
+          "batch limit reached"
+        ]
+      },
+      "nasa": {
+        "max_batch": 10,
+        "entry_rules": [
+          "validated endpoint/API strategy only",
+          "no generic web crawl"
+        ],
+        "allowlist": [
+          "images-api.nasa.gov",
+          "science.nasa.gov/wp-json",
+          "nasa.gov"
+        ],
+        "denylist": [
+          "search",
+          "gallery",
+          "index",
+          "tag",
+          "category",
+          "navigation"
+        ],
+        "required_fields": [
+          "title",
+          "source_url",
+          "source_id",
+          "body_or_metadata",
+          "endpoint_method",
+          "quality_flags"
+        ],
+        "quality_gates": [
+          "endpoint_method_recorded",
+          "non_navigation_text",
+          "metadata_not_thin_only"
+        ],
+        "stop_conditions": [
+          "navigation residue dominates",
+          "endpoint quality below reviewable",
+          "batch limit reached"
+        ]
+      },
+      "esa": {
+        "max_batch": 20,
+        "entry_rules": [
+          "mission/science content only",
+          "preserve known conditional quality labels"
+        ],
+        "allowlist": [
+          "esa.int",
+          "sci.esa.int",
+          "www.esa.int"
+        ],
+        "denylist": [
+          "index",
+          "news listing",
+          "latest",
+          "tag",
+          "category",
+          "press list"
+        ],
+        "required_fields": [
+          "title",
+          "source_url",
+          "body_text",
+          "source",
+          "quality_flags"
+        ],
+        "quality_gates": [
+          "mission_or_science_signal",
+          "index_listing_filter",
+          "minimum_readable_text"
+        ],
+        "stop_conditions": [
+          "index/news listing dominates",
+          "duplicate mission page",
+          "batch limit reached"
+        ]
+      },
+      "wikidata": {
+        "max_batch": 30,
+        "entry_rules": [
+          "structured QID/claim expansion only",
+          "no thin/no-claim entities"
+        ],
+        "allowlist": [
+          "wikidata.org/wiki/",
+          "wikidata.org/entity/",
+          "wikidata.org/w/api.php"
+        ],
+        "denylist": [
+          "no-claim",
+          "disambiguation",
+          "unreferenced",
+          "thin-label-only"
+        ],
+        "required_fields": [
+          "qid",
+          "label",
+          "claims",
+          "source_url",
+          "quality_flags"
+        ],
+        "quality_gates": [
+          "claim_filter",
+          "reference_or_source_field",
+          "non_empty_structured_fact"
+        ],
+        "stop_conditions": [
+          "no meaningful claims",
+          "duplicate QID",
+          "batch limit reached"
+        ]
+      }
+    },
+    "safety_flags": {
+      "production_ready": false,
+      "preflight_allowed": false,
+      "apply_approved": false,
+      "ingest_approved": false,
+      "formal_raw_write": false,
+      "formal_default_triples_write": false,
+      "chroma_write": false,
+      "neo4j_write": false
+    }
+  },
+  "dry_run_evaluation": {
+    "schema_pass": true,
+    "limit_pass": true,
+    "safety_pass": true,
+    "total_max_batch": 80,
+    "ready_to_run_controlled_deeper_crawl": true,
+    "production_ready": false,
+    "preflight_allowed": false
+  },
+  "source_context": {
+    "phase108_repair_counts": {
+      "zh_wikipedia": {
+        "repaired_candidates": 0,
+        "rejected_remaining": 3
+      },
+      "esa": {
+        "repaired_candidates": 0,
+        "conditional_preserved": 8,
+        "rejected_remaining": 1
+      },
+      "nasa": {
+        "conditional_preserved": 2,
+        "rejected_remaining": 3
+      },
+      "wikidata": {
+        "repaired_candidates": 10,
+        "conditional_preserved": 10
+      }
+    },
+    "phase107_final_verdict": "four_source_review_only_closeout_complete_approval_pending",
+    "phase106_conditional_counts": {
+      "nasa": 2,
+      "esa": 8,
+      "wikidata": 10
+    },
+    "phase105_status": "review_handoff_ready_approval_pending"
+  },
+  "production_ready": false,
+  "preflight_allowed": false,
+  "apply_preflight_allowed": false,
+  "apply_approved": false,
+  "ingest_approved": false,
+  "preflight_approved": false,
+  "formal_raw_write": false,
+  "formal_default_triples_write": false,
+  "chroma_write": false,
+  "neo4j_write": false,
+  "active_source": "zh_wikipedia",
+  "active_source_unchanged": true,
+  "clear_source_ingestion_outputs_called": false,
+  "next_recommendation": "review gate design before any controlled deeper crawl run"
+}
