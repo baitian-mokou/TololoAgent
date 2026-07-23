@@ -1,0 +1,34 @@
+{
+  "phase": "Phase129",
+  "mode": "manual_review_closure_report",
+  "generated_at": "2026-07-23T09:41:13.757559+00:00",
+  "closures": {
+    "zh_wikipedia": {
+      "closure_status": "manual_review_closed_review_only",
+      "manual_review_closed": true,
+      "source_phase": "Phase126",
+      "production_ready": false,
+      "queue_allowed": false
+    },
+    "esa": {
+      "closure_status": "review_queue_closed_review_only",
+      "manual_review_closed": true,
+      "source_phase": "Phase116",
+      "production_ready": false,
+      "queue_allowed": false
+    }
+  },
+  "production_ready": false,
+  "queue_allowed": false,
+  "apply_allowed": false,
+  "preflight_allowed": false,
+  "ingest_allowed": false,
+  "formal_raw_write": false,
+  "formal_default_triples_write": false,
+  "chroma_write": false,
+  "neo4j_write": false,
+  "active_source": "zh_wikipedia",
+  "active_source_unchanged": true,
+  "clear_source_ingestion_outputs_called": false,
+  "next": "review"
+}
