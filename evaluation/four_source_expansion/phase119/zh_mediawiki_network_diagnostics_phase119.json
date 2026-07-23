@@ -1,0 +1,52 @@
+{
+  "phase": "Phase119",
+  "mode": "controlled_mediawiki_network_diagnostics",
+  "generated_at": "2026-07-23T07:45:20.623501+00:00",
+  "input_report": "evaluation/four_source_expansion/phase118/zh_offline_fixture_diagnostics_phase118.json",
+  "request_limit": 2,
+  "live_probe_used": true,
+  "probes": [
+    {
+      "endpoint": "https://zh.wikipedia.org/w/api.php?action=query&meta=siteinfo&siprop=general&format=json&utf8=1",
+      "method": "siteinfo_status_probe",
+      "status_code": 0,
+      "status": "fetch_failed",
+      "error": "<urlopen error timed out>",
+      "elapsed_ms": 16057,
+      "content_type": "network_error",
+      "encoding": "utf-8_assumed",
+      "body_snippet_len": 0
+    },
+    {
+      "endpoint": "https://zh.wikipedia.org/w/api.php?action=query&prop=extracts&explaintext=1&titles=%E5%A4%AA%E9%98%B3&format=json&utf8=1",
+      "method": "known_good_title_extract_probe",
+      "status_code": 0,
+      "status": "fetch_failed",
+      "error": "<urlopen error timed out>",
+      "elapsed_ms": 16012,
+      "content_type": "network_error",
+      "encoding": "utf-8_assumed",
+      "body_snippet_len": 0
+    }
+  ],
+  "network_reachable": false,
+  "siteinfo_ok": false,
+  "known_good_title_ok": false,
+  "failure_layer": "network_or_timeout",
+  "network_verdict": "mediawiki_network_still_blocked",
+  "recommended_next": "review network layer result; do not queue zh until separately approved",
+  "queue_allowed": false,
+  "production_ready": false,
+  "preflight_allowed": false,
+  "apply_preflight_allowed": false,
+  "apply_approved": false,
+  "ingest_approved": false,
+  "preflight_approved": false,
+  "formal_raw_write": false,
+  "formal_default_triples_write": false,
+  "chroma_write": false,
+  "neo4j_write": false,
+  "active_source": "zh_wikipedia",
+  "active_source_unchanged": true,
+  "clear_source_ingestion_outputs_called": false
+}
