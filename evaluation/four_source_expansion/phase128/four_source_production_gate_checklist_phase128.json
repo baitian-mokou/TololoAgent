@@ -1,0 +1,44 @@
+{
+  "phase": "Phase128",
+  "mode": "production_gate_failure_checklist",
+  "generated_at": "2026-07-23T09:24:16.499159+00:00",
+  "dry_run_only": true,
+  "input_report": "evaluation\\four_source_expansion\\phase127\\four_source_production_gate_dry_run_phase127.json",
+  "checklist": {
+    "zh_wikipedia": [
+      "manual review queue approval",
+      "stable evidence"
+    ],
+    "esa": [
+      "manual review closure",
+      "stronger acceptance evidence"
+    ],
+    "nasa": [
+      "strong accepted sample evidence",
+      "current conditional too weak"
+    ],
+    "wikidata": [
+      "non-thin conditional evidence",
+      "explicit blocked status"
+    ]
+  },
+  "source_status": {
+    "zh_wikipedia": "not_ready_needs_manual_review_queue_approval",
+    "esa": "not_ready_needs_manual_review_closure",
+    "nasa": "blocked_conditional_too_weak",
+    "wikidata": "blocked_thin_conditional_or_explicit_block_required"
+  },
+  "production_ready": false,
+  "queue_allowed": false,
+  "apply_allowed": false,
+  "preflight_allowed": false,
+  "ingest_allowed": false,
+  "formal_raw_write": false,
+  "formal_default_triples_write": false,
+  "chroma_write": false,
+  "neo4j_write": false,
+  "active_source": "zh_wikipedia",
+  "active_source_unchanged": true,
+  "clear_source_ingestion_outputs_called": false,
+  "next": "review"
+}
