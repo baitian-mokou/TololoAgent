@@ -1,0 +1,557 @@
+[
+  {
+    "schema_version": "phase111.normalize_review.v1",
+    "source": "zh_wikipedia",
+    "title_or_id": "太阳",
+    "source_url_or_entity": "https://zh.wikipedia.org/wiki/太阳",
+    "extraction_method": "live_fetch",
+    "evidence_class": "accepted",
+    "narrative": "{\"source\": \"zh_wikipedia\", \"title\": \"太阳\", \"source_url\": \"https://zh.wikipedia.org/wiki/太阳\", \"source_id\": \"zh_wikipedia\", \"narrative_excerpt\": \"英語維基百科 相應條目来扩充 ，此條目在對應語言版為高品質條目。 2022年4月16日 若您熟悉来源语言和主题，请协助 参考外语维基百科扩充条目 。请勿直接提交机械翻译，也不要翻译不可靠、低品质内容。依 版权协议 ，译文需 在编辑摘要注明来源 ，或于讨论页顶部标记 Translated page 在2019年使用 太陽濾鏡 真實色彩 的太陽。 太陽、日、Sun、 Helios Solar 觀測數據 與地球的 平均距離 7011149597870700000♠ 7011149600000000000♠ 1.49",
+    "triples_preview": [
+      {
+        "subject": "太阳",
+        "predicate": "SOURCE_URL",
+        "object": "https://zh.wikipedia.org/wiki/太阳"
+      },
+      {
+        "subject": "太阳",
+        "predicate": "HAS_REVIEW_TEXT",
+        "object": "{\"source\": \"zh_wikipedia\", \"title\": \"太阳\", \"source_url\": \"https://zh.wikipedia.org/wiki/太阳\", \"source_id\": \"zh_wikipedia\", \"narrative_excerpt\": \"英語維基百科 相應條目来扩充 ，此條目在對應語言版為高品質條目。 2022年4月16日 若您熟悉来源语言和主题，请协助 参考外语维基百科扩充条目 。请勿直"
+      }
+    ],
+    "provenance": {
+      "input_phase": "Phase110",
+      "phase110_url_or_entity": "https://zh.wikipedia.org/wiki/太阳",
+      "phase110_fetch_status": "failed",
+      "phase110_status_code": 0
+    },
+    "quality_flags": [
+      "body_extraction",
+      "template_table_ratio",
+      "minimum_readable_text"
+    ],
+    "risk_labels": [],
+    "review_status": "REJECT_FOR_REVIEW",
+    "production_ready": false,
+    "apply_preflight_allowed": false,
+    "reviewer_reason": "html_json_or_boilerplate_noise"
+  },
+  {
+    "schema_version": "phase111.normalize_review.v1",
+    "source": "zh_wikipedia",
+    "title_or_id": "太阳系",
+    "source_url_or_entity": "https://zh.wikipedia.org/wiki/太阳系",
+    "extraction_method": "live_fetch",
+    "evidence_class": "accepted",
+    "narrative": "{\"source\": \"zh_wikipedia\", \"title\": \"太阳系\", \"source_url\": \"https://zh.wikipedia.org/wiki/太阳系\", \"source_id\": \"zh_wikipedia\", \"narrative_excerpt\": \"此條目介紹的是太陽和它的行星系統。关于其他類似的系統，请见「 行星系統 有字幕（英文） 有字幕（正體中文） 有字幕（簡體中文） 行星、衛星和矮行星 （真實色彩、大小按比例、距離尺度未照比例） 45.68億年 本地星際雲 獵戶–天鵝臂 最近的恆星 (4.2465 （4.36光年） 行星系統 30.07 AU 古柏斷涯 50–70 AU 賽德娜 (小行星) 更多候選者... 天然衛星 1,368,528 4,591 銀河中心 星系盤面 ~60°, to the ecliptic 至銀河中心的距離 24,000",
+    "triples_preview": [
+      {
+        "subject": "太阳系",
+        "predicate": "SOURCE_URL",
+        "object": "https://zh.wikipedia.org/wiki/太阳系"
+      },
+      {
+        "subject": "太阳系",
+        "predicate": "HAS_REVIEW_TEXT",
+        "object": "{\"source\": \"zh_wikipedia\", \"title\": \"太阳系\", \"source_url\": \"https://zh.wikipedia.org/wiki/太阳系\", \"source_id\": \"zh_wikipedia\", \"narrative_excerpt\": \"此條目介紹的是太陽和它的行星系統。关于其他類似的系統，请见「 行星系統 有字幕（英文） 有字幕（正體中文） 有字幕（簡體中文） 行星、衛星和矮行星 （"
+      }
+    ],
+    "provenance": {
+      "input_phase": "Phase110",
+      "phase110_url_or_entity": "https://zh.wikipedia.org/wiki/太阳系",
+      "phase110_fetch_status": "failed",
+      "phase110_status_code": 0
+    },
+    "quality_flags": [
+      "body_extraction",
+      "template_table_ratio",
+      "minimum_readable_text"
+    ],
+    "risk_labels": [],
+    "review_status": "REJECT_FOR_REVIEW",
+    "production_ready": false,
+    "apply_preflight_allowed": false,
+    "reviewer_reason": "html_json_or_boilerplate_noise"
+  },
+  {
+    "schema_version": "phase111.normalize_review.v1",
+    "source": "zh_wikipedia",
+    "title_or_id": "水星",
+    "source_url_or_entity": "https://zh.wikipedia.org/wiki/水星",
+    "extraction_method": "live_fetch",
+    "evidence_class": "accepted",
+    "narrative": "{\"source\": \"zh_wikipedia\", \"title\": \"水星\", \"source_url\": \"https://zh.wikipedia.org/wiki/水星\", \"source_id\": \"zh_wikipedia\", \"narrative_excerpt\": \"取自信使神太空船的水星合成影像 Mercurian, Mercurial, Hermian 軌道參數 J2000 69,817,900 公里 0.466 697 46,001,200公里 0.307 499 AU 57,909,100公里 0.387 098 AU 0.205 630 軌道週期 87.969 1 (0.240 846 會合週期 115.88 d 軌道速度 47.87 km/s 平近點角 174.796° 軌道傾角 7.005° 對 3.38° 對 太陽的赤道 6.34° 對 不變平面 升交點黃",
+    "triples_preview": [
+      {
+        "subject": "水星",
+        "predicate": "SOURCE_URL",
+        "object": "https://zh.wikipedia.org/wiki/水星"
+      },
+      {
+        "subject": "水星",
+        "predicate": "HAS_REVIEW_TEXT",
+        "object": "{\"source\": \"zh_wikipedia\", \"title\": \"水星\", \"source_url\": \"https://zh.wikipedia.org/wiki/水星\", \"source_id\": \"zh_wikipedia\", \"narrative_excerpt\": \"取自信使神太空船的水星合成影像 Mercurian, Mercurial, Hermian 軌道參數 J2000 69,817,900 公里 0.466 "
+      }
+    ],
+    "provenance": {
+      "input_phase": "Phase110",
+      "phase110_url_or_entity": "https://zh.wikipedia.org/wiki/水星",
+      "phase110_fetch_status": "failed",
+      "phase110_status_code": 0
+    },
+    "quality_flags": [
+      "body_extraction",
+      "template_table_ratio",
+      "minimum_readable_text"
+    ],
+    "risk_labels": [],
+    "review_status": "REJECT_FOR_REVIEW",
+    "production_ready": false,
+    "apply_preflight_allowed": false,
+    "reviewer_reason": "html_json_or_boilerplate_noise"
+  },
+  {
+    "schema_version": "phase111.normalize_review.v1",
+    "source": "nasa",
+    "title_or_id": "Riding Along with Juno",
+    "source_url_or_entity": "https://images-assets.nasa.gov/image/PIA14414/collection.json",
+    "extraction_method": "live_fetch",
+    "evidence_class": "accepted",
+    "narrative": "[\"http://images-assets.nasa.gov/image/PIA14414/PIA14414~orig.jpg\", \"http://images-assets.nasa.gov/image/PIA14414/PIA14414~large.jpg\", \"http://images-assets.nasa.gov/image/PIA14414/PIA14414~medium.jpg\", \"http://images-assets.nasa.gov/image/PIA14414/PIA14414~small.jpg\", \"http://images-assets.nasa.gov/image/PIA14414/PIA14414~thumb.jpg\", \"http://images-assets.nasa.gov/image/PIA14414/metadata.json\"]",
+    "triples_preview": [
+      {
+        "subject": "Riding Along with Juno",
+        "predicate": "SOURCE_URL",
+        "object": "https://images-assets.nasa.gov/image/PIA14414/collection.json"
+      },
+      {
+        "subject": "Riding Along with Juno",
+        "predicate": "HAS_REVIEW_TEXT",
+        "object": "[\"http://images-assets.nasa.gov/image/PIA14414/PIA14414~orig.jpg\", \"http://images-assets.nasa.gov/image/PIA14414/PIA14414~large.jpg\", \"http://images-assets.nasa.gov/image/PIA14414/PIA14414~medium.jpg\", \"http://images-ass"
+      }
+    ],
+    "provenance": {
+      "input_phase": "Phase110",
+      "phase110_url_or_entity": "https://images-assets.nasa.gov/image/PIA14414/collection.json",
+      "phase110_fetch_status": "succeeded",
+      "phase110_status_code": 200
+    },
+    "quality_flags": [
+      "endpoint_method_recorded",
+      "non_navigation_text",
+      "metadata_not_thin_only"
+    ],
+    "risk_labels": [],
+    "review_status": "REJECT_FOR_REVIEW",
+    "production_ready": false,
+    "apply_preflight_allowed": false,
+    "reviewer_reason": "html_json_or_boilerplate_noise"
+  },
+  {
+    "schema_version": "phase111.normalize_review.v1",
+    "source": "nasa",
+    "title_or_id": "LEGO Figurines Aboard Juno",
+    "source_url_or_entity": "https://images-assets.nasa.gov/image/PIA14413/collection.json",
+    "extraction_method": "live_fetch",
+    "evidence_class": "accepted",
+    "narrative": "[\"http://images-assets.nasa.gov/image/PIA14413/PIA14413~orig.jpg\", \"http://images-assets.nasa.gov/image/PIA14413/PIA14413~thumb.jpg\", \"http://images-assets.nasa.gov/image/PIA14413/metadata.json\"]",
+    "triples_preview": [
+      {
+        "subject": "LEGO Figurines Aboard Juno",
+        "predicate": "SOURCE_URL",
+        "object": "https://images-assets.nasa.gov/image/PIA14413/collection.json"
+      },
+      {
+        "subject": "LEGO Figurines Aboard Juno",
+        "predicate": "HAS_REVIEW_TEXT",
+        "object": "[\"http://images-assets.nasa.gov/image/PIA14413/PIA14413~orig.jpg\", \"http://images-assets.nasa.gov/image/PIA14413/PIA14413~thumb.jpg\", \"http://images-assets.nasa.gov/image/PIA14413/metadata.json\"]"
+      }
+    ],
+    "provenance": {
+      "input_phase": "Phase110",
+      "phase110_url_or_entity": "https://images-assets.nasa.gov/image/PIA14413/collection.json",
+      "phase110_fetch_status": "succeeded",
+      "phase110_status_code": 200
+    },
+    "quality_flags": [
+      "endpoint_method_recorded",
+      "non_navigation_text",
+      "metadata_not_thin_only"
+    ],
+    "risk_labels": [],
+    "review_status": "REJECT_FOR_REVIEW",
+    "production_ready": false,
+    "apply_preflight_allowed": false,
+    "reviewer_reason": "html_json_or_boilerplate_noise"
+  },
+  {
+    "schema_version": "phase111.normalize_review.v1",
+    "source": "nasa",
+    "title_or_id": "Mapping Io’s Hidden Heat With NASA’s Juno",
+    "source_url_or_entity": "https://science.nasa.gov/photojournal/mapping-ios-hidden-heat-with-nasas-juno/",
+    "extraction_method": "live_fetch",
+    "evidence_class": "accepted",
+    "narrative": "<!doctype html> <html lang=\"en-US\" prefix=\"og: https://ogp.me/ns#\"> <head> <meta charset=\"UTF-8\"> <script> var gform;gform||(document.addEventListener(\"gform_main_scripts_loaded\",function(){gform.scriptsLoaded=!0}),document.addEventListener(\"gform/theme/scripts_loaded\",function(){gform.themeScriptsLoaded=!0}),window.addEventListener(\"DOMContentLoaded\",function(){gform.domLoaded=!0}),gform={domLoad",
+    "triples_preview": [
+      {
+        "subject": "Mapping Io’s Hidden Heat With NASA’s Juno",
+        "predicate": "SOURCE_URL",
+        "object": "https://science.nasa.gov/photojournal/mapping-ios-hidden-heat-with-nasas-juno/"
+      },
+      {
+        "subject": "Mapping Io’s Hidden Heat With NASA’s Juno",
+        "predicate": "HAS_REVIEW_TEXT",
+        "object": "<!doctype html> <html lang=\"en-US\" prefix=\"og: https://ogp.me/ns#\"> <head> <meta charset=\"UTF-8\"> <script> var gform;gform||(document.addEventListener(\"gform_main_scripts_loaded\",function(){gform.scriptsLoaded=!0}),docum"
+      }
+    ],
+    "provenance": {
+      "input_phase": "Phase110",
+      "phase110_url_or_entity": "https://science.nasa.gov/photojournal/mapping-ios-hidden-heat-with-nasas-juno/",
+      "phase110_fetch_status": "succeeded",
+      "phase110_status_code": 200
+    },
+    "quality_flags": [
+      "endpoint_method_recorded",
+      "non_navigation_text",
+      "metadata_not_thin_only"
+    ],
+    "risk_labels": [],
+    "review_status": "REJECT_FOR_REVIEW",
+    "production_ready": false,
+    "apply_preflight_allowed": false,
+    "reviewer_reason": "html_json_or_boilerplate_noise"
+  },
+  {
+    "schema_version": "phase111.normalize_review.v1",
+    "source": "nasa",
+    "title_or_id": "NASA’s Juno Peers Beneath Io’s Surface",
+    "source_url_or_entity": "https://science.nasa.gov/photojournal/nasas-juno-peers-beneath-ios-surface/",
+    "extraction_method": "live_fetch",
+    "evidence_class": "accepted",
+    "narrative": "<!doctype html> <html lang=\"en-US\" prefix=\"og: https://ogp.me/ns#\"> <head> <meta charset=\"UTF-8\"> <script> var gform;gform||(document.addEventListener(\"gform_main_scripts_loaded\",function(){gform.scriptsLoaded=!0}),document.addEventListener(\"gform/theme/scripts_loaded\",function(){gform.themeScriptsLoaded=!0}),window.addEventListener(\"DOMContentLoaded\",function(){gform.domLoaded=!0}),gform={domLoad",
+    "triples_preview": [
+      {
+        "subject": "NASA’s Juno Peers Beneath Io’s Surface",
+        "predicate": "SOURCE_URL",
+        "object": "https://science.nasa.gov/photojournal/nasas-juno-peers-beneath-ios-surface/"
+      },
+      {
+        "subject": "NASA’s Juno Peers Beneath Io’s Surface",
+        "predicate": "HAS_REVIEW_TEXT",
+        "object": "<!doctype html> <html lang=\"en-US\" prefix=\"og: https://ogp.me/ns#\"> <head> <meta charset=\"UTF-8\"> <script> var gform;gform||(document.addEventListener(\"gform_main_scripts_loaded\",function(){gform.scriptsLoaded=!0}),docum"
+      }
+    ],
+    "provenance": {
+      "input_phase": "Phase110",
+      "phase110_url_or_entity": "https://science.nasa.gov/photojournal/nasas-juno-peers-beneath-ios-surface/",
+      "phase110_fetch_status": "succeeded",
+      "phase110_status_code": 200
+    },
+    "quality_flags": [
+      "endpoint_method_recorded",
+      "non_navigation_text",
+      "metadata_not_thin_only"
+    ],
+    "risk_labels": [],
+    "review_status": "REJECT_FOR_REVIEW",
+    "production_ready": false,
+    "apply_preflight_allowed": false,
+    "reviewer_reason": "html_json_or_boilerplate_noise"
+  },
+  {
+    "schema_version": "phase111.normalize_review.v1",
+    "source": "nasa",
+    "title_or_id": "A Moonlit Earth as Seen From Artemis II",
+    "source_url_or_entity": "https://science.nasa.gov/earth/earth-observatory/a-moonlit-earth-as-seen-from-artemis-ii/",
+    "extraction_method": "live_fetch",
+    "evidence_class": "accepted",
+    "narrative": "<!doctype html> <html lang=\"en-US\" prefix=\"og: https://ogp.me/ns#\"> <head> <meta charset=\"UTF-8\"> <script> var gform;gform||(document.addEventListener(\"gform_main_scripts_loaded\",function(){gform.scriptsLoaded=!0}),document.addEventListener(\"gform/theme/scripts_loaded\",function(){gform.themeScriptsLoaded=!0}),window.addEventListener(\"DOMContentLoaded\",function(){gform.domLoaded=!0}),gform={domLoad",
+    "triples_preview": [
+      {
+        "subject": "A Moonlit Earth as Seen From Artemis II",
+        "predicate": "SOURCE_URL",
+        "object": "https://science.nasa.gov/earth/earth-observatory/a-moonlit-earth-as-seen-from-artemis-ii/"
+      },
+      {
+        "subject": "A Moonlit Earth as Seen From Artemis II",
+        "predicate": "HAS_REVIEW_TEXT",
+        "object": "<!doctype html> <html lang=\"en-US\" prefix=\"og: https://ogp.me/ns#\"> <head> <meta charset=\"UTF-8\"> <script> var gform;gform||(document.addEventListener(\"gform_main_scripts_loaded\",function(){gform.scriptsLoaded=!0}),docum"
+      }
+    ],
+    "provenance": {
+      "input_phase": "Phase110",
+      "phase110_url_or_entity": "https://science.nasa.gov/earth/earth-observatory/a-moonlit-earth-as-seen-from-artemis-ii/",
+      "phase110_fetch_status": "succeeded",
+      "phase110_status_code": 200
+    },
+    "quality_flags": [
+      "endpoint_method_recorded",
+      "non_navigation_text",
+      "metadata_not_thin_only"
+    ],
+    "risk_labels": [],
+    "review_status": "REJECT_FOR_REVIEW",
+    "production_ready": false,
+    "apply_preflight_allowed": false,
+    "reviewer_reason": "html_json_or_boilerplate_noise"
+  },
+  {
+    "schema_version": "phase111.normalize_review.v1",
+    "source": "esa",
+    "title_or_id": "ESA - Gaia",
+    "source_url_or_entity": "https://www.esa.int/science_exploration/space_science/gaia",
+    "extraction_method": "live_fetch",
+    "evidence_class": "accepted",
+    "narrative": "<!doctype html> <html lang=\"en\"> <head> <meta charset=\"utf-8\"> <meta http-equiv=\"X-UA-Compatible\" content=\"IE=edge\"> <meta name=\"viewport\" content=\"width=device-width, user-scalable=no, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0\"> <link rel=\"stylesheet\" type=\"text/css\" href=\"/var/esa/cache/public/stylesheets/c35b41a32fb01cc5cc5a0efcc8ca483e_1769593272_all.css\" /> <link href=\"/fontawe",
+    "triples_preview": [
+      {
+        "subject": "ESA - Gaia",
+        "predicate": "SOURCE_URL",
+        "object": "https://www.esa.int/science_exploration/space_science/gaia"
+      },
+      {
+        "subject": "ESA - Gaia",
+        "predicate": "HAS_REVIEW_TEXT",
+        "object": "<!doctype html> <html lang=\"en\"> <head> <meta charset=\"utf-8\"> <meta http-equiv=\"X-UA-Compatible\" content=\"IE=edge\"> <meta name=\"viewport\" content=\"width=device-width, user-scalable=no, initial-scale=1.0, minimum-scale=1"
+      }
+    ],
+    "provenance": {
+      "input_phase": "Phase110",
+      "phase110_url_or_entity": "https://www.esa.int/science_exploration/space_science/gaia",
+      "phase110_fetch_status": "succeeded",
+      "phase110_status_code": 200
+    },
+    "quality_flags": [
+      "mission_or_science_signal",
+      "index_listing_filter",
+      "minimum_readable_text"
+    ],
+    "risk_labels": [],
+    "review_status": "REJECT_FOR_REVIEW",
+    "production_ready": false,
+    "apply_preflight_allowed": false,
+    "reviewer_reason": "html_json_or_boilerplate_noise"
+  },
+  {
+    "schema_version": "phase111.normalize_review.v1",
+    "source": "esa",
+    "title_or_id": "ESA - Solar Orbiter",
+    "source_url_or_entity": "https://www.esa.int/science_exploration/space_science/solar_orbiter",
+    "extraction_method": "live_fetch",
+    "evidence_class": "accepted",
+    "narrative": "<!doctype html> <html lang=\"en\"> <head> <meta charset=\"utf-8\"> <meta http-equiv=\"X-UA-Compatible\" content=\"IE=edge\"> <meta name=\"viewport\" content=\"width=device-width, user-scalable=no, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0\"> <link rel=\"stylesheet\" type=\"text/css\" href=\"/var/esa/cache/public/stylesheets/c35b41a32fb01cc5cc5a0efcc8ca483e_1769593272_all.css\" /> <link href=\"/fontawe",
+    "triples_preview": [
+      {
+        "subject": "ESA - Solar Orbiter",
+        "predicate": "SOURCE_URL",
+        "object": "https://www.esa.int/science_exploration/space_science/solar_orbiter"
+      },
+      {
+        "subject": "ESA - Solar Orbiter",
+        "predicate": "HAS_REVIEW_TEXT",
+        "object": "<!doctype html> <html lang=\"en\"> <head> <meta charset=\"utf-8\"> <meta http-equiv=\"X-UA-Compatible\" content=\"IE=edge\"> <meta name=\"viewport\" content=\"width=device-width, user-scalable=no, initial-scale=1.0, minimum-scale=1"
+      }
+    ],
+    "provenance": {
+      "input_phase": "Phase110",
+      "phase110_url_or_entity": "https://www.esa.int/science_exploration/space_science/solar_orbiter",
+      "phase110_fetch_status": "succeeded",
+      "phase110_status_code": 200
+    },
+    "quality_flags": [
+      "mission_or_science_signal",
+      "index_listing_filter",
+      "minimum_readable_text"
+    ],
+    "risk_labels": [],
+    "review_status": "REJECT_FOR_REVIEW",
+    "production_ready": false,
+    "apply_preflight_allowed": false,
+    "reviewer_reason": "html_json_or_boilerplate_noise"
+  },
+  {
+    "schema_version": "phase111.normalize_review.v1",
+    "source": "esa",
+    "title_or_id": "ESA - BepiColombo",
+    "source_url_or_entity": "https://www.esa.int/science_exploration/space_science/bepicolombo",
+    "extraction_method": "live_fetch",
+    "evidence_class": "accepted",
+    "narrative": "<!doctype html> <html lang=\"en\"> <head> <meta charset=\"utf-8\"> <meta http-equiv=\"X-UA-Compatible\" content=\"IE=edge\"> <meta name=\"viewport\" content=\"width=device-width, user-scalable=no, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0\"> <link rel=\"stylesheet\" type=\"text/css\" href=\"/var/esa/cache/public/stylesheets/c35b41a32fb01cc5cc5a0efcc8ca483e_1769593272_all.css\" /> <link href=\"/fontawe",
+    "triples_preview": [
+      {
+        "subject": "ESA - BepiColombo",
+        "predicate": "SOURCE_URL",
+        "object": "https://www.esa.int/science_exploration/space_science/bepicolombo"
+      },
+      {
+        "subject": "ESA - BepiColombo",
+        "predicate": "HAS_REVIEW_TEXT",
+        "object": "<!doctype html> <html lang=\"en\"> <head> <meta charset=\"utf-8\"> <meta http-equiv=\"X-UA-Compatible\" content=\"IE=edge\"> <meta name=\"viewport\" content=\"width=device-width, user-scalable=no, initial-scale=1.0, minimum-scale=1"
+      }
+    ],
+    "provenance": {
+      "input_phase": "Phase110",
+      "phase110_url_or_entity": "https://www.esa.int/science_exploration/space_science/bepicolombo",
+      "phase110_fetch_status": "succeeded",
+      "phase110_status_code": 200
+    },
+    "quality_flags": [
+      "mission_or_science_signal",
+      "index_listing_filter",
+      "minimum_readable_text"
+    ],
+    "risk_labels": [],
+    "review_status": "REJECT_FOR_REVIEW",
+    "production_ready": false,
+    "apply_preflight_allowed": false,
+    "reviewer_reason": "html_json_or_boilerplate_noise"
+  },
+  {
+    "schema_version": "phase111.normalize_review.v1",
+    "source": "esa",
+    "title_or_id": "ESA - Euclid",
+    "source_url_or_entity": "https://www.esa.int/science_exploration/space_science/euclid",
+    "extraction_method": "live_fetch",
+    "evidence_class": "accepted",
+    "narrative": "<!doctype html> <html lang=\"en\"> <head> <meta charset=\"utf-8\"> <meta http-equiv=\"X-UA-Compatible\" content=\"IE=edge\"> <meta name=\"viewport\" content=\"width=device-width, user-scalable=no, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0\"> <link rel=\"stylesheet\" type=\"text/css\" href=\"/var/esa/cache/public/stylesheets/c35b41a32fb01cc5cc5a0efcc8ca483e_1769593272_all.css\" /> <link href=\"/fontawe",
+    "triples_preview": [
+      {
+        "subject": "ESA - Euclid",
+        "predicate": "SOURCE_URL",
+        "object": "https://www.esa.int/science_exploration/space_science/euclid"
+      },
+      {
+        "subject": "ESA - Euclid",
+        "predicate": "HAS_REVIEW_TEXT",
+        "object": "<!doctype html> <html lang=\"en\"> <head> <meta charset=\"utf-8\"> <meta http-equiv=\"X-UA-Compatible\" content=\"IE=edge\"> <meta name=\"viewport\" content=\"width=device-width, user-scalable=no, initial-scale=1.0, minimum-scale=1"
+      }
+    ],
+    "provenance": {
+      "input_phase": "Phase110",
+      "phase110_url_or_entity": "https://www.esa.int/science_exploration/space_science/euclid",
+      "phase110_fetch_status": "succeeded",
+      "phase110_status_code": 200
+    },
+    "quality_flags": [
+      "mission_or_science_signal",
+      "index_listing_filter",
+      "minimum_readable_text"
+    ],
+    "risk_labels": [],
+    "review_status": "REJECT_FOR_REVIEW",
+    "production_ready": false,
+    "apply_preflight_allowed": false,
+    "reviewer_reason": "html_json_or_boilerplate_noise"
+  },
+  {
+    "schema_version": "phase111.normalize_review.v1",
+    "source": "esa",
+    "title_or_id": "ESA - ExoMars",
+    "source_url_or_entity": "https://www.esa.int/science_exploration/space_science/exomars",
+    "extraction_method": "live_fetch",
+    "evidence_class": "accepted",
+    "narrative": "<!doctype html> <html lang=\"en\"> <head> <meta charset=\"utf-8\"> <meta http-equiv=\"X-UA-Compatible\" content=\"IE=edge\"> <meta name=\"viewport\" content=\"width=device-width, user-scalable=no, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0\"> <link rel=\"stylesheet\" type=\"text/css\" href=\"/var/esa/cache/public/stylesheets/c35b41a32fb01cc5cc5a0efcc8ca483e_1769593272_all.css\" /> <link href=\"/fontawe",
+    "triples_preview": [
+      {
+        "subject": "ESA - ExoMars",
+        "predicate": "SOURCE_URL",
+        "object": "https://www.esa.int/science_exploration/space_science/exomars"
+      },
+      {
+        "subject": "ESA - ExoMars",
+        "predicate": "HAS_REVIEW_TEXT",
+        "object": "<!doctype html> <html lang=\"en\"> <head> <meta charset=\"utf-8\"> <meta http-equiv=\"X-UA-Compatible\" content=\"IE=edge\"> <meta name=\"viewport\" content=\"width=device-width, user-scalable=no, initial-scale=1.0, minimum-scale=1"
+      }
+    ],
+    "provenance": {
+      "input_phase": "Phase110",
+      "phase110_url_or_entity": "https://www.esa.int/science_exploration/space_science/exomars",
+      "phase110_fetch_status": "succeeded",
+      "phase110_status_code": 200
+    },
+    "quality_flags": [
+      "mission_or_science_signal",
+      "index_listing_filter",
+      "minimum_readable_text"
+    ],
+    "risk_labels": [],
+    "review_status": "REJECT_FOR_REVIEW",
+    "production_ready": false,
+    "apply_preflight_allowed": false,
+    "reviewer_reason": "html_json_or_boilerplate_noise"
+  },
+  {
+    "schema_version": "phase111.normalize_review.v1",
+    "source": "esa",
+    "title_or_id": "ESA - Cluster",
+    "source_url_or_entity": "https://www.esa.int/science_exploration/space_science/cluster",
+    "extraction_method": "live_fetch",
+    "evidence_class": "accepted",
+    "narrative": "<!doctype html> <html lang=\"en\"> <head> <meta charset=\"utf-8\"> <meta http-equiv=\"X-UA-Compatible\" content=\"IE=edge\"> <meta name=\"viewport\" content=\"width=device-width, user-scalable=no, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0\"> <link rel=\"stylesheet\" type=\"text/css\" href=\"/var/esa/cache/public/stylesheets/c35b41a32fb01cc5cc5a0efcc8ca483e_1769593272_all.css\" /> <link href=\"/fontawe",
+    "triples_preview": [
+      {
+        "subject": "ESA - Cluster",
+        "predicate": "SOURCE_URL",
+        "object": "https://www.esa.int/science_exploration/space_science/cluster"
+      },
+      {
+        "subject": "ESA - Cluster",
+        "predicate": "HAS_REVIEW_TEXT",
+        "object": "<!doctype html> <html lang=\"en\"> <head> <meta charset=\"utf-8\"> <meta http-equiv=\"X-UA-Compatible\" content=\"IE=edge\"> <meta name=\"viewport\" content=\"width=device-width, user-scalable=no, initial-scale=1.0, minimum-scale=1"
+      }
+    ],
+    "provenance": {
+      "input_phase": "Phase110",
+      "phase110_url_or_entity": "https://www.esa.int/science_exploration/space_science/cluster",
+      "phase110_fetch_status": "succeeded",
+      "phase110_status_code": 200
+    },
+    "quality_flags": [
+      "mission_or_science_signal",
+      "index_listing_filter",
+      "minimum_readable_text"
+    ],
+    "risk_labels": [],
+    "review_status": "REJECT_FOR_REVIEW",
+    "production_ready": false,
+    "apply_preflight_allowed": false,
+    "reviewer_reason": "html_json_or_boilerplate_noise"
+  },
+  {
+    "schema_version": "phase111.normalize_review.v1",
+    "source": "esa",
+    "title_or_id": "ESA - Webb",
+    "source_url_or_entity": "https://www.esa.int/science_exploration/space_science/webb",
+    "extraction_method": "live_fetch",
+    "evidence_class": "accepted",
+    "narrative": "<!doctype html> <html lang=\"en\"> <head> <meta charset=\"utf-8\"> <meta http-equiv=\"X-UA-Compatible\" content=\"IE=edge\"> <meta name=\"viewport\" content=\"width=device-width, user-scalable=no, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0\"> <link rel=\"stylesheet\" type=\"text/css\" href=\"/var/esa/cache/public/stylesheets/c35b41a32fb01cc5cc5a0efcc8ca483e_1769593272_all.css\" /> <link href=\"/fontawe",
+    "triples_preview": [
+      {
+        "subject": "ESA - Webb",
+        "predicate": "SOURCE_URL",
+        "object": "https://www.esa.int/science_exploration/space_science/webb"
+      },
+      {
+        "subject": "ESA - Webb",
+        "predicate": "HAS_REVIEW_TEXT",
+        "object": "<!doctype html> <html lang=\"en\"> <head> <meta charset=\"utf-8\"> <meta http-equiv=\"X-UA-Compatible\" content=\"IE=edge\"> <meta name=\"viewport\" content=\"width=device-width, user-scalable=no, initial-scale=1.0, minimum-scale=1"
+      }
+    ],
+    "provenance": {
+      "input_phase": "Phase110",
+      "phase110_url_or_entity": "https://www.esa.int/science_exploration/space_science/webb",
+      "phase110_fetch_status": "succeeded",
+      "phase110_status_code": 200
+    },
+    "quality_flags": [
+      "mission_or_science_signal",
+      "index_listing_filter",
+      "minimum_readable_text"
+    ],
+    "risk_labels": [],
+    "review_status": "REJECT_FOR_REVIEW",
+    "production_ready": false,
+    "apply_preflight_allowed": false,
+    "reviewer_reason": "html_json_or_boilerplate_noise"
+  }
+]

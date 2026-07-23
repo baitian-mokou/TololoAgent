@@ -1,0 +1,342 @@
+[
+  {
+    "schema_version": "phase111.normalize_review.v1",
+    "source": "wikidata",
+    "title_or_id": "太阳",
+    "source_url_or_entity": "https://www.wikidata.org/wiki/Q525",
+    "extraction_method": "gate_probe_existing_record",
+    "evidence_class": "thin",
+    "narrative": "太阳 has thin source evidence and requires reviewer confirmation.",
+    "triples_preview": [
+      {
+        "subject": "太阳",
+        "predicate": "HAS_SOURCE_ENTITY",
+        "object": "https://www.wikidata.org/wiki/Q525"
+      }
+    ],
+    "provenance": {
+      "input_phase": "Phase110",
+      "phase110_url_or_entity": "https://www.wikidata.org/wiki/Q525",
+      "phase110_fetch_status": "not_fetched",
+      "phase110_status_code": 0
+    },
+    "quality_flags": [
+      "claim_filter",
+      "reference_or_source_field",
+      "non_empty_structured_fact"
+    ],
+    "risk_labels": [
+      "thin_evidence_requires_review"
+    ],
+    "review_status": "ACCEPT_WITH_CONDITIONS",
+    "production_ready": false,
+    "apply_preflight_allowed": false,
+    "reviewer_reason": "thin_qid_source_fact_coherent"
+  },
+  {
+    "schema_version": "phase111.normalize_review.v1",
+    "source": "wikidata",
+    "title_or_id": "水星",
+    "source_url_or_entity": "https://www.wikidata.org/wiki/Q308",
+    "extraction_method": "gate_probe_existing_record",
+    "evidence_class": "thin",
+    "narrative": "水星 has thin source evidence and requires reviewer confirmation.",
+    "triples_preview": [
+      {
+        "subject": "水星",
+        "predicate": "HAS_SOURCE_ENTITY",
+        "object": "https://www.wikidata.org/wiki/Q308"
+      }
+    ],
+    "provenance": {
+      "input_phase": "Phase110",
+      "phase110_url_or_entity": "https://www.wikidata.org/wiki/Q308",
+      "phase110_fetch_status": "not_fetched",
+      "phase110_status_code": 0
+    },
+    "quality_flags": [
+      "claim_filter",
+      "reference_or_source_field",
+      "non_empty_structured_fact"
+    ],
+    "risk_labels": [
+      "thin_evidence_requires_review"
+    ],
+    "review_status": "ACCEPT_WITH_CONDITIONS",
+    "production_ready": false,
+    "apply_preflight_allowed": false,
+    "reviewer_reason": "thin_qid_source_fact_coherent"
+  },
+  {
+    "schema_version": "phase111.normalize_review.v1",
+    "source": "wikidata",
+    "title_or_id": "金星",
+    "source_url_or_entity": "https://www.wikidata.org/wiki/Q313",
+    "extraction_method": "gate_probe_existing_record",
+    "evidence_class": "thin",
+    "narrative": "金星 has thin source evidence and requires reviewer confirmation.",
+    "triples_preview": [
+      {
+        "subject": "金星",
+        "predicate": "HAS_SOURCE_ENTITY",
+        "object": "https://www.wikidata.org/wiki/Q313"
+      }
+    ],
+    "provenance": {
+      "input_phase": "Phase110",
+      "phase110_url_or_entity": "https://www.wikidata.org/wiki/Q313",
+      "phase110_fetch_status": "not_fetched",
+      "phase110_status_code": 0
+    },
+    "quality_flags": [
+      "claim_filter",
+      "reference_or_source_field",
+      "non_empty_structured_fact"
+    ],
+    "risk_labels": [
+      "thin_evidence_requires_review"
+    ],
+    "review_status": "ACCEPT_WITH_CONDITIONS",
+    "production_ready": false,
+    "apply_preflight_allowed": false,
+    "reviewer_reason": "thin_qid_source_fact_coherent"
+  },
+  {
+    "schema_version": "phase111.normalize_review.v1",
+    "source": "wikidata",
+    "title_or_id": "地球",
+    "source_url_or_entity": "https://www.wikidata.org/wiki/Q2",
+    "extraction_method": "gate_probe_existing_record",
+    "evidence_class": "thin",
+    "narrative": "地球 has thin source evidence and requires reviewer confirmation.",
+    "triples_preview": [
+      {
+        "subject": "地球",
+        "predicate": "HAS_SOURCE_ENTITY",
+        "object": "https://www.wikidata.org/wiki/Q2"
+      }
+    ],
+    "provenance": {
+      "input_phase": "Phase110",
+      "phase110_url_or_entity": "https://www.wikidata.org/wiki/Q2",
+      "phase110_fetch_status": "not_fetched",
+      "phase110_status_code": 0
+    },
+    "quality_flags": [
+      "claim_filter",
+      "reference_or_source_field",
+      "non_empty_structured_fact"
+    ],
+    "risk_labels": [
+      "thin_evidence_requires_review"
+    ],
+    "review_status": "ACCEPT_WITH_CONDITIONS",
+    "production_ready": false,
+    "apply_preflight_allowed": false,
+    "reviewer_reason": "thin_qid_source_fact_coherent"
+  },
+  {
+    "schema_version": "phase111.normalize_review.v1",
+    "source": "wikidata",
+    "title_or_id": "月球",
+    "source_url_or_entity": "https://www.wikidata.org/wiki/Q405",
+    "extraction_method": "gate_probe_existing_record",
+    "evidence_class": "thin",
+    "narrative": "月球 has thin source evidence and requires reviewer confirmation.",
+    "triples_preview": [
+      {
+        "subject": "月球",
+        "predicate": "HAS_SOURCE_ENTITY",
+        "object": "https://www.wikidata.org/wiki/Q405"
+      }
+    ],
+    "provenance": {
+      "input_phase": "Phase110",
+      "phase110_url_or_entity": "https://www.wikidata.org/wiki/Q405",
+      "phase110_fetch_status": "not_fetched",
+      "phase110_status_code": 0
+    },
+    "quality_flags": [
+      "claim_filter",
+      "reference_or_source_field",
+      "non_empty_structured_fact"
+    ],
+    "risk_labels": [
+      "thin_evidence_requires_review"
+    ],
+    "review_status": "ACCEPT_WITH_CONDITIONS",
+    "production_ready": false,
+    "apply_preflight_allowed": false,
+    "reviewer_reason": "thin_qid_source_fact_coherent"
+  },
+  {
+    "schema_version": "phase111.normalize_review.v1",
+    "source": "wikidata",
+    "title_or_id": "火星",
+    "source_url_or_entity": "https://www.wikidata.org/wiki/Q111",
+    "extraction_method": "gate_probe_existing_record",
+    "evidence_class": "thin",
+    "narrative": "火星 has thin source evidence and requires reviewer confirmation.",
+    "triples_preview": [
+      {
+        "subject": "火星",
+        "predicate": "HAS_SOURCE_ENTITY",
+        "object": "https://www.wikidata.org/wiki/Q111"
+      }
+    ],
+    "provenance": {
+      "input_phase": "Phase110",
+      "phase110_url_or_entity": "https://www.wikidata.org/wiki/Q111",
+      "phase110_fetch_status": "not_fetched",
+      "phase110_status_code": 0
+    },
+    "quality_flags": [
+      "claim_filter",
+      "reference_or_source_field",
+      "non_empty_structured_fact"
+    ],
+    "risk_labels": [
+      "thin_evidence_requires_review"
+    ],
+    "review_status": "ACCEPT_WITH_CONDITIONS",
+    "production_ready": false,
+    "apply_preflight_allowed": false,
+    "reviewer_reason": "thin_qid_source_fact_coherent"
+  },
+  {
+    "schema_version": "phase111.normalize_review.v1",
+    "source": "wikidata",
+    "title_or_id": "木星",
+    "source_url_or_entity": "https://www.wikidata.org/wiki/Q319",
+    "extraction_method": "gate_probe_existing_record",
+    "evidence_class": "thin",
+    "narrative": "木星 has thin source evidence and requires reviewer confirmation.",
+    "triples_preview": [
+      {
+        "subject": "木星",
+        "predicate": "HAS_SOURCE_ENTITY",
+        "object": "https://www.wikidata.org/wiki/Q319"
+      }
+    ],
+    "provenance": {
+      "input_phase": "Phase110",
+      "phase110_url_or_entity": "https://www.wikidata.org/wiki/Q319",
+      "phase110_fetch_status": "not_fetched",
+      "phase110_status_code": 0
+    },
+    "quality_flags": [
+      "claim_filter",
+      "reference_or_source_field",
+      "non_empty_structured_fact"
+    ],
+    "risk_labels": [
+      "thin_evidence_requires_review"
+    ],
+    "review_status": "ACCEPT_WITH_CONDITIONS",
+    "production_ready": false,
+    "apply_preflight_allowed": false,
+    "reviewer_reason": "thin_qid_source_fact_coherent"
+  },
+  {
+    "schema_version": "phase111.normalize_review.v1",
+    "source": "wikidata",
+    "title_or_id": "土星",
+    "source_url_or_entity": "https://www.wikidata.org/wiki/Q193",
+    "extraction_method": "gate_probe_existing_record",
+    "evidence_class": "thin",
+    "narrative": "土星 has thin source evidence and requires reviewer confirmation.",
+    "triples_preview": [
+      {
+        "subject": "土星",
+        "predicate": "HAS_SOURCE_ENTITY",
+        "object": "https://www.wikidata.org/wiki/Q193"
+      }
+    ],
+    "provenance": {
+      "input_phase": "Phase110",
+      "phase110_url_or_entity": "https://www.wikidata.org/wiki/Q193",
+      "phase110_fetch_status": "not_fetched",
+      "phase110_status_code": 0
+    },
+    "quality_flags": [
+      "claim_filter",
+      "reference_or_source_field",
+      "non_empty_structured_fact"
+    ],
+    "risk_labels": [
+      "thin_evidence_requires_review"
+    ],
+    "review_status": "ACCEPT_WITH_CONDITIONS",
+    "production_ready": false,
+    "apply_preflight_allowed": false,
+    "reviewer_reason": "thin_qid_source_fact_coherent"
+  },
+  {
+    "schema_version": "phase111.normalize_review.v1",
+    "source": "wikidata",
+    "title_or_id": "天王星",
+    "source_url_or_entity": "https://www.wikidata.org/wiki/Q324",
+    "extraction_method": "gate_probe_existing_record",
+    "evidence_class": "thin",
+    "narrative": "天王星 has thin source evidence and requires reviewer confirmation.",
+    "triples_preview": [
+      {
+        "subject": "天王星",
+        "predicate": "HAS_SOURCE_ENTITY",
+        "object": "https://www.wikidata.org/wiki/Q324"
+      }
+    ],
+    "provenance": {
+      "input_phase": "Phase110",
+      "phase110_url_or_entity": "https://www.wikidata.org/wiki/Q324",
+      "phase110_fetch_status": "not_fetched",
+      "phase110_status_code": 0
+    },
+    "quality_flags": [
+      "claim_filter",
+      "reference_or_source_field",
+      "non_empty_structured_fact"
+    ],
+    "risk_labels": [
+      "thin_evidence_requires_review"
+    ],
+    "review_status": "ACCEPT_WITH_CONDITIONS",
+    "production_ready": false,
+    "apply_preflight_allowed": false,
+    "reviewer_reason": "thin_qid_source_fact_coherent"
+  },
+  {
+    "schema_version": "phase111.normalize_review.v1",
+    "source": "wikidata",
+    "title_or_id": "海王星",
+    "source_url_or_entity": "https://www.wikidata.org/wiki/Q332",
+    "extraction_method": "gate_probe_existing_record",
+    "evidence_class": "thin",
+    "narrative": "海王星 has thin source evidence and requires reviewer confirmation.",
+    "triples_preview": [
+      {
+        "subject": "海王星",
+        "predicate": "HAS_SOURCE_ENTITY",
+        "object": "https://www.wikidata.org/wiki/Q332"
+      }
+    ],
+    "provenance": {
+      "input_phase": "Phase110",
+      "phase110_url_or_entity": "https://www.wikidata.org/wiki/Q332",
+      "phase110_fetch_status": "not_fetched",
+      "phase110_status_code": 0
+    },
+    "quality_flags": [
+      "claim_filter",
+      "reference_or_source_field",
+      "non_empty_structured_fact"
+    ],
+    "risk_labels": [
+      "thin_evidence_requires_review"
+    ],
+    "review_status": "ACCEPT_WITH_CONDITIONS",
+    "production_ready": false,
+    "apply_preflight_allowed": false,
+    "reviewer_reason": "thin_qid_source_fact_coherent"
+  }
+]
