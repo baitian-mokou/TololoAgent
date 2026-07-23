@@ -1,0 +1,38 @@
+{
+  "phase": "Phase123",
+  "mode": "zh_external_seed_availability_proxy_readiness",
+  "generated_at": "2026-07-23T08:26:31.798522+00:00",
+  "candidate_dirs": [
+    "external_seeds\\zh_wikipedia",
+    "evaluation\\four_source_expansion\\phase123\\input_seeds"
+  ],
+  "found_seed_dirs": [],
+  "external_seed_count": 0,
+  "seed_availability": "no_external_seeds_found",
+  "validation_run": false,
+  "validation_summary": null,
+  "proxy_env_detected": {
+    "HTTP_PROXY": false,
+    "HTTPS_PROXY": false
+  },
+  "proxy_env_values": {
+    "HTTP_PROXY": "",
+    "HTTPS_PROXY": ""
+  },
+  "recommended_next": "provide audited seed JSON under external_seeds/zh_wikipedia or configure proxy then request controlled retest",
+  "live_fetch_used": false,
+  "queue_allowed": false,
+  "production_ready": false,
+  "preflight_allowed": false,
+  "apply_preflight_allowed": false,
+  "apply_approved": false,
+  "ingest_approved": false,
+  "preflight_approved": false,
+  "formal_raw_write": false,
+  "formal_default_triples_write": false,
+  "chroma_write": false,
+  "neo4j_write": false,
+  "active_source": "zh_wikipedia",
+  "active_source_unchanged": true,
+  "clear_source_ingestion_outputs_called": false
+}
