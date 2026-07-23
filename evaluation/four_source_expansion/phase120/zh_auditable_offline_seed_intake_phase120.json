@@ -1,0 +1,64 @@
+{
+  "phase": "Phase120",
+  "mode": "zh_auditable_offline_seed_intake_preview",
+  "generated_at": "2026-07-23T07:52:20.254242+00:00",
+  "input_mode": "auditable_offline_seed_only",
+  "live_fetch_used": false,
+  "records": [
+    {
+      "source": "zh_wikipedia",
+      "source_url": "https://zh.wikipedia.org/wiki/太阳",
+      "title": "太阳",
+      "retrieved_at": "2026-07-23T00:00:00Z",
+      "license_or_terms": "CC BY-SA",
+      "checksum": "c012ad6f65862dcaed7895d57be76986ed4ce2b84377594dba7b7dff8e3a46bc",
+      "expected_sha256": "c012ad6f65862dcaed7895d57be76986ed4ce2b84377594dba7b7dff8e3a46bc",
+      "quality_verdict": "accepted",
+      "reject_reasons": [],
+      "body_length": 42,
+      "body_preview": "太阳是太阳系中心的恒星，主要由氢和氦组成，通过核聚变释放光和热，并维持行星运行环境。",
+      "review_status": "pending_manual_review",
+      "queue_allowed": false,
+      "production_ready": false
+    }
+  ],
+  "review_only_candidates": [
+    {
+      "source": "zh_wikipedia",
+      "source_url": "https://zh.wikipedia.org/wiki/太阳",
+      "title": "太阳",
+      "retrieved_at": "2026-07-23T00:00:00Z",
+      "license_or_terms": "CC BY-SA",
+      "checksum": "c012ad6f65862dcaed7895d57be76986ed4ce2b84377594dba7b7dff8e3a46bc",
+      "expected_sha256": "c012ad6f65862dcaed7895d57be76986ed4ce2b84377594dba7b7dff8e3a46bc",
+      "quality_verdict": "accepted",
+      "reject_reasons": [],
+      "body_length": 42,
+      "body_preview": "太阳是太阳系中心的恒星，主要由氢和氦组成，通过核聚变释放光和热，并维持行星运行环境。",
+      "review_status": "pending_manual_review",
+      "queue_allowed": false,
+      "production_ready": false
+    }
+  ],
+  "counts": {
+    "total": 1,
+    "accepted": 1,
+    "rejected": 0
+  },
+  "verdict": "offline_seed_intake_preview_ready_for_review",
+  "queue_allowed": false,
+  "production_ready": false,
+  "preflight_allowed": false,
+  "apply_preflight_allowed": false,
+  "apply_approved": false,
+  "ingest_approved": false,
+  "preflight_approved": false,
+  "formal_raw_write": false,
+  "formal_default_triples_write": false,
+  "chroma_write": false,
+  "neo4j_write": false,
+  "active_source": "zh_wikipedia",
+  "active_source_unchanged": true,
+  "clear_source_ingestion_outputs_called": false,
+  "next_recommendation": "review offline seed provenance and checksum before any zh queue decision"
+}
