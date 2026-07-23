@@ -1,0 +1,424 @@
+{
+  "phase": "Phase113",
+  "mode": "three_source_extraction_source_repair_preview",
+  "generated_at": "2026-07-23T05:06:31.043122+00:00",
+  "input_reports": {
+    "phase110": "evaluation\\four_source_expansion\\phase110\\controlled_deeper_crawl_preview_phase110.json",
+    "phase111": "evaluation\\four_source_expansion\\phase111\\normalize_review_preview_phase111.json",
+    "phase112": "evaluation\\four_source_expansion\\phase112\\filtered_review_verdict_phase112.json",
+    "phase112_rejected": "evaluation\\four_source_expansion\\phase112\\rejected_queue_phase112.json"
+  },
+  "source_repairs": {
+    "zh_wikipedia": [
+      {
+        "source": "zh_wikipedia",
+        "title_or_id": "太阳",
+        "source_url_or_entity": "https://zh.wikipedia.org/wiki/太阳",
+        "repair_status": "repaired_preview",
+        "root_cause": "zh_json_template_table_noise",
+        "narrative": "è±èªç¶­åºç¾ç§ ç¸ææ¢ç®æ¥æ©å ï¼æ­¤æ¢ç®å¨å°æèªè¨ççºé«åè³ªæ¢ç®ã 2022å¹´4æ16æ¥ è¥æ¨çææ¥æºè¯­è¨åä¸»é¢ï¼è¯·åå© åèå¤è¯­ç»´åºç¾ç§æ©åæ¡ç® ãè¯·å¿ç´æ¥æäº¤æºæ¢°ç¿»è¯ï¼ä¹ä¸è¦ç¿»è¯ä¸å¯é ãä½åè´¨åå®¹ãä¾ çæåè®® ï¼è¯æé å¨ç¼è¾æè¦æ³¨ææ¥æº ï¼æäºè®¨è®ºé¡µé¡¶é¨æ è®° Translated page å¨2019å¹´ä½¿ç¨ å¤ªé½æ¿¾é¡ çå¯¦è²å½© çå¤ªé½ã å¤ªé½ãæ¥ãSunã Helios Solar è§æ¸¬æ¸æ èå°çç å¹³å",
+        "triples_preview": [
+          {
+            "subject": "太阳",
+            "predicate": "SOURCE_URL",
+            "object": "https://zh.wikipedia.org/wiki/太阳"
+          },
+          {
+            "subject": "太阳",
+            "predicate": "HAS_REPAIRED_REVIEW_TEXT",
+            "object": "è±èªç¶­åºç¾ç§ ç¸ææ¢ç®æ¥æ©å ï¼æ­¤æ¢ç®å¨å°æèªè¨ççºé«åè³ªæ¢ç®ã 2022å¹´4æ16æ¥ è¥æ¨çææ¥æºè¯­è¨åä¸»é¢ï¼è¯·åå© åèå¤è¯­ç»´åºç¾ç§æ©åæ¡ç® ãè¯·å¿ç´æ¥æäº¤æºæ¢°"
+          }
+        ],
+        "quality_flags": [
+          "phase113_existing_field_repair",
+          "pending_review"
+        ],
+        "review_status": "pending_review",
+        "provenance": {
+          "input_phase": "Phase110",
+          "phase110_url_or_entity": "https://zh.wikipedia.org/wiki/太阳",
+          "phase110_fetch_status": "failed",
+          "phase110_status_code": 0
+        }
+      },
+      {
+        "source": "zh_wikipedia",
+        "title_or_id": "太阳系",
+        "source_url_or_entity": "https://zh.wikipedia.org/wiki/太阳系",
+        "repair_status": "repaired_preview",
+        "root_cause": "zh_json_template_table_noise",
+        "narrative": "æ­¤æ¢ç®ä»ç´¹çæ¯å¤ªé½åå®çè¡æç³»çµ±ãå³äºå¶ä»é¡ä¼¼çç³»çµ±ï¼è¯·è§ã è¡æç³»çµ± æå­å¹ï¼è±æï¼ æå­å¹ï¼æ­£é«ä¸­æï¼ æå­å¹ï¼ç°¡é«ä¸­æï¼ è¡æãè¡æåç®è¡æ ï¼çå¯¦è²å½©ãå¤§å°ææ¯ä¾ãè·é¢å°ºåº¦æªç§æ¯ä¾ï¼ 45.68åå¹´ æ¬å°æéé² çµæ¶âå¤©éµè æè¿çææ (4.2465 ï¼4.36åå¹´ï¼ è¡æç³»çµ± 30.07 AU å¤ææ·æ¶¯ 50â70 AU è³½å¾·å¨ (å°è¡æ) æ´å¤åé¸è... å¤©ç¶è¡æ 1,368,528 4,591 éæ²³ä¸­å¿ æç³»ç¤",
+        "triples_preview": [
+          {
+            "subject": "太阳系",
+            "predicate": "SOURCE_URL",
+            "object": "https://zh.wikipedia.org/wiki/太阳系"
+          },
+          {
+            "subject": "太阳系",
+            "predicate": "HAS_REPAIRED_REVIEW_TEXT",
+            "object": "æ­¤æ¢ç®ä»ç´¹çæ¯å¤ªé½åå®çè¡æç³»çµ±ãå³äºå¶ä»é¡ä¼¼çç³»çµ±ï¼è¯·è§ã è¡æç³»çµ± æå­å¹ï¼è±æï¼ æå­å¹ï¼æ­£é«ä¸­æï¼ æå­å¹ï¼ç°¡é«ä¸­æï¼ è¡æãè¡æåç®è¡æ ï¼çå¯¦è"
+          }
+        ],
+        "quality_flags": [
+          "phase113_existing_field_repair",
+          "pending_review"
+        ],
+        "review_status": "pending_review",
+        "provenance": {
+          "input_phase": "Phase110",
+          "phase110_url_or_entity": "https://zh.wikipedia.org/wiki/太阳系",
+          "phase110_fetch_status": "failed",
+          "phase110_status_code": 0
+        }
+      },
+      {
+        "source": "zh_wikipedia",
+        "title_or_id": "水星",
+        "source_url_or_entity": "https://zh.wikipedia.org/wiki/水星",
+        "repair_status": "repaired_preview",
+        "root_cause": "zh_json_template_table_noise",
+        "narrative": "åèªä¿¡ä½¿ç¥å¤ªç©ºè¹çæ°´æåæå½±å Mercurian, Mercurial, Hermian è»éåæ¸ J2000 69,817,900 å¬é 0.466 697 46,001,200å¬é 0.307 499 AU 57,909,100å¬é 0.387 098 AU 0.205 630 è»éé±æ 87.969 1 (0.240 846 æåé±æ 115.88 d è»ééåº¦ 47.87 km/s å¹³è¿é»è§ 174.796Â° è»éå¾è§ 7.005Â° å° 3.38Â° å° å¤ªé½çèµ¤é 6.34Â° å° ä¸è®å¹³é¢ åäº¤é»é»",
+        "triples_preview": [
+          {
+            "subject": "水星",
+            "predicate": "SOURCE_URL",
+            "object": "https://zh.wikipedia.org/wiki/水星"
+          },
+          {
+            "subject": "水星",
+            "predicate": "HAS_REPAIRED_REVIEW_TEXT",
+            "object": "åèªä¿¡ä½¿ç¥å¤ªç©ºè¹çæ°´æåæå½±å Mercurian, Mercurial, Hermian è»éåæ¸ J2000 69,817,900 å¬é 0.466 697 46,001,200å¬é 0.307 499 AU 57,909,100å¬é 0.387 098 AU 0.205 630 è»éé±æ 87.969 1 (0.24"
+          }
+        ],
+        "quality_flags": [
+          "phase113_existing_field_repair",
+          "pending_review"
+        ],
+        "review_status": "pending_review",
+        "provenance": {
+          "input_phase": "Phase110",
+          "phase110_url_or_entity": "https://zh.wikipedia.org/wiki/水星",
+          "phase110_fetch_status": "failed",
+          "phase110_status_code": 0
+        }
+      }
+    ],
+    "nasa": [
+      {
+        "source": "nasa",
+        "title_or_id": "Riding Along with Juno",
+        "source_url_or_entity": "https://images-assets.nasa.gov/image/PIA14414/collection.json",
+        "repair_status": "repaired_preview",
+        "root_cause": "nasa_url_array_or_meta_thin",
+        "narrative": "[\"http://images-assets.nasa.gov/image/PIA14414/PIA14414~orig.jpg\", \"http://images-assets.nasa.gov/image/PIA14414/PIA14414~large.jpg\", \"http://images-assets.nasa.gov/image/PIA14414/PIA14414~medium.jpg\", \"http://images-assets.nasa.gov/image/PIA14414/PIA14414~small.jpg\", \"http://images-assets.nasa.gov/image/PIA14414/PIA14414~thumb.jpg\", \"http://images-assets.nasa.gov/image/PIA14414/metadata.json\"]",
+        "triples_preview": [
+          {
+            "subject": "Riding Along with Juno",
+            "predicate": "SOURCE_URL",
+            "object": "https://images-assets.nasa.gov/image/PIA14414/collection.json"
+          },
+          {
+            "subject": "Riding Along with Juno",
+            "predicate": "HAS_REPAIRED_REVIEW_TEXT",
+            "object": "[\"http://images-assets.nasa.gov/image/PIA14414/PIA14414~orig.jpg\", \"http://images-assets.nasa.gov/image/PIA14414/PIA14414~large.jpg\", \"http://images-assets.nasa.gov/image/PIA14414/PIA14414~medium.jpg\", \"http://images-ass"
+          }
+        ],
+        "quality_flags": [
+          "phase113_existing_field_repair",
+          "pending_review"
+        ],
+        "review_status": "pending_review",
+        "provenance": {
+          "input_phase": "Phase110",
+          "phase110_url_or_entity": "https://images-assets.nasa.gov/image/PIA14414/collection.json",
+          "phase110_fetch_status": "succeeded",
+          "phase110_status_code": 200
+        }
+      },
+      {
+        "source": "nasa",
+        "title_or_id": "LEGO Figurines Aboard Juno",
+        "source_url_or_entity": "https://images-assets.nasa.gov/image/PIA14413/collection.json",
+        "repair_status": "repaired_preview",
+        "root_cause": "nasa_url_array_or_meta_thin",
+        "narrative": "[\"http://images-assets.nasa.gov/image/PIA14413/PIA14413~orig.jpg\", \"http://images-assets.nasa.gov/image/PIA14413/PIA14413~thumb.jpg\", \"http://images-assets.nasa.gov/image/PIA14413/metadata.json\"]",
+        "triples_preview": [
+          {
+            "subject": "LEGO Figurines Aboard Juno",
+            "predicate": "SOURCE_URL",
+            "object": "https://images-assets.nasa.gov/image/PIA14413/collection.json"
+          },
+          {
+            "subject": "LEGO Figurines Aboard Juno",
+            "predicate": "HAS_REPAIRED_REVIEW_TEXT",
+            "object": "[\"http://images-assets.nasa.gov/image/PIA14413/PIA14413~orig.jpg\", \"http://images-assets.nasa.gov/image/PIA14413/PIA14413~thumb.jpg\", \"http://images-assets.nasa.gov/image/PIA14413/metadata.json\"]"
+          }
+        ],
+        "quality_flags": [
+          "phase113_existing_field_repair",
+          "pending_review"
+        ],
+        "review_status": "pending_review",
+        "provenance": {
+          "input_phase": "Phase110",
+          "phase110_url_or_entity": "https://images-assets.nasa.gov/image/PIA14413/collection.json",
+          "phase110_fetch_status": "succeeded",
+          "phase110_status_code": 200
+        }
+      },
+      {
+        "source": "nasa",
+        "title_or_id": "Mapping Io’s Hidden Heat With NASA’s Juno",
+        "source_url_or_entity": "https://science.nasa.gov/photojournal/mapping-ios-hidden-heat-with-nasas-juno/",
+        "repair_status": "blocked",
+        "root_cause": "nasa_html_boilerplate",
+        "blocker_reason": "no_meaningful_existing_body_after_repair_filter",
+        "next_candidate_rules": [
+          "use structured endpoint/body fields only",
+          "reject image URL arrays and generic HTML pages",
+          "require non-boilerplate mission/science body text"
+        ],
+        "provenance": {
+          "input_phase": "Phase110",
+          "phase110_url_or_entity": "https://science.nasa.gov/photojournal/mapping-ios-hidden-heat-with-nasas-juno/",
+          "phase110_fetch_status": "succeeded",
+          "phase110_status_code": 200
+        }
+      },
+      {
+        "source": "nasa",
+        "title_or_id": "NASA’s Juno Peers Beneath Io’s Surface",
+        "source_url_or_entity": "https://science.nasa.gov/photojournal/nasas-juno-peers-beneath-ios-surface/",
+        "repair_status": "blocked",
+        "root_cause": "nasa_html_boilerplate",
+        "blocker_reason": "no_meaningful_existing_body_after_repair_filter",
+        "next_candidate_rules": [
+          "use structured endpoint/body fields only",
+          "reject image URL arrays and generic HTML pages",
+          "require non-boilerplate mission/science body text"
+        ],
+        "provenance": {
+          "input_phase": "Phase110",
+          "phase110_url_or_entity": "https://science.nasa.gov/photojournal/nasas-juno-peers-beneath-ios-surface/",
+          "phase110_fetch_status": "succeeded",
+          "phase110_status_code": 200
+        }
+      },
+      {
+        "source": "nasa",
+        "title_or_id": "A Moonlit Earth as Seen From Artemis II",
+        "source_url_or_entity": "https://science.nasa.gov/earth/earth-observatory/a-moonlit-earth-as-seen-from-artemis-ii/",
+        "repair_status": "blocked",
+        "root_cause": "nasa_html_boilerplate",
+        "blocker_reason": "no_meaningful_existing_body_after_repair_filter",
+        "next_candidate_rules": [
+          "use structured endpoint/body fields only",
+          "reject image URL arrays and generic HTML pages",
+          "require non-boilerplate mission/science body text"
+        ],
+        "provenance": {
+          "input_phase": "Phase110",
+          "phase110_url_or_entity": "https://science.nasa.gov/earth/earth-observatory/a-moonlit-earth-as-seen-from-artemis-ii/",
+          "phase110_fetch_status": "succeeded",
+          "phase110_status_code": 200
+        }
+      }
+    ],
+    "esa": [
+      {
+        "source": "esa",
+        "title_or_id": "ESA - Gaia",
+        "source_url_or_entity": "https://www.esa.int/science_exploration/space_science/gaia",
+        "repair_status": "blocked",
+        "root_cause": "esa_html_listing_or_index",
+        "blocker_reason": "no_meaningful_existing_body_after_repair_filter",
+        "next_candidate_rules": [
+          "use mission/science article body extraction",
+          "reject HTML shell, news/listing/index pages",
+          "require body paragraph after page-type filter"
+        ],
+        "provenance": {
+          "input_phase": "Phase110",
+          "phase110_url_or_entity": "https://www.esa.int/science_exploration/space_science/gaia",
+          "phase110_fetch_status": "succeeded",
+          "phase110_status_code": 200
+        }
+      },
+      {
+        "source": "esa",
+        "title_or_id": "ESA - Solar Orbiter",
+        "source_url_or_entity": "https://www.esa.int/science_exploration/space_science/solar_orbiter",
+        "repair_status": "blocked",
+        "root_cause": "esa_html_listing_or_index",
+        "blocker_reason": "no_meaningful_existing_body_after_repair_filter",
+        "next_candidate_rules": [
+          "use mission/science article body extraction",
+          "reject HTML shell, news/listing/index pages",
+          "require body paragraph after page-type filter"
+        ],
+        "provenance": {
+          "input_phase": "Phase110",
+          "phase110_url_or_entity": "https://www.esa.int/science_exploration/space_science/solar_orbiter",
+          "phase110_fetch_status": "succeeded",
+          "phase110_status_code": 200
+        }
+      },
+      {
+        "source": "esa",
+        "title_or_id": "ESA - BepiColombo",
+        "source_url_or_entity": "https://www.esa.int/science_exploration/space_science/bepicolombo",
+        "repair_status": "blocked",
+        "root_cause": "esa_html_listing_or_index",
+        "blocker_reason": "no_meaningful_existing_body_after_repair_filter",
+        "next_candidate_rules": [
+          "use mission/science article body extraction",
+          "reject HTML shell, news/listing/index pages",
+          "require body paragraph after page-type filter"
+        ],
+        "provenance": {
+          "input_phase": "Phase110",
+          "phase110_url_or_entity": "https://www.esa.int/science_exploration/space_science/bepicolombo",
+          "phase110_fetch_status": "succeeded",
+          "phase110_status_code": 200
+        }
+      },
+      {
+        "source": "esa",
+        "title_or_id": "ESA - Euclid",
+        "source_url_or_entity": "https://www.esa.int/science_exploration/space_science/euclid",
+        "repair_status": "blocked",
+        "root_cause": "esa_html_listing_or_index",
+        "blocker_reason": "no_meaningful_existing_body_after_repair_filter",
+        "next_candidate_rules": [
+          "use mission/science article body extraction",
+          "reject HTML shell, news/listing/index pages",
+          "require body paragraph after page-type filter"
+        ],
+        "provenance": {
+          "input_phase": "Phase110",
+          "phase110_url_or_entity": "https://www.esa.int/science_exploration/space_science/euclid",
+          "phase110_fetch_status": "succeeded",
+          "phase110_status_code": 200
+        }
+      },
+      {
+        "source": "esa",
+        "title_or_id": "ESA - ExoMars",
+        "source_url_or_entity": "https://www.esa.int/science_exploration/space_science/exomars",
+        "repair_status": "blocked",
+        "root_cause": "esa_html_listing_or_index",
+        "blocker_reason": "no_meaningful_existing_body_after_repair_filter",
+        "next_candidate_rules": [
+          "use mission/science article body extraction",
+          "reject HTML shell, news/listing/index pages",
+          "require body paragraph after page-type filter"
+        ],
+        "provenance": {
+          "input_phase": "Phase110",
+          "phase110_url_or_entity": "https://www.esa.int/science_exploration/space_science/exomars",
+          "phase110_fetch_status": "succeeded",
+          "phase110_status_code": 200
+        }
+      },
+      {
+        "source": "esa",
+        "title_or_id": "ESA - Cluster",
+        "source_url_or_entity": "https://www.esa.int/science_exploration/space_science/cluster",
+        "repair_status": "blocked",
+        "root_cause": "esa_html_listing_or_index",
+        "blocker_reason": "no_meaningful_existing_body_after_repair_filter",
+        "next_candidate_rules": [
+          "use mission/science article body extraction",
+          "reject HTML shell, news/listing/index pages",
+          "require body paragraph after page-type filter"
+        ],
+        "provenance": {
+          "input_phase": "Phase110",
+          "phase110_url_or_entity": "https://www.esa.int/science_exploration/space_science/cluster",
+          "phase110_fetch_status": "succeeded",
+          "phase110_status_code": 200
+        }
+      },
+      {
+        "source": "esa",
+        "title_or_id": "ESA - Webb",
+        "source_url_or_entity": "https://www.esa.int/science_exploration/space_science/webb",
+        "repair_status": "blocked",
+        "root_cause": "esa_html_listing_or_index",
+        "blocker_reason": "no_meaningful_existing_body_after_repair_filter",
+        "next_candidate_rules": [
+          "use mission/science article body extraction",
+          "reject HTML shell, news/listing/index pages",
+          "require body paragraph after page-type filter"
+        ],
+        "provenance": {
+          "input_phase": "Phase110",
+          "phase110_url_or_entity": "https://www.esa.int/science_exploration/space_science/webb",
+          "phase110_fetch_status": "succeeded",
+          "phase110_status_code": 200
+        }
+      }
+    ]
+  },
+  "source_counts": {
+    "zh_wikipedia": {
+      "total": 3,
+      "repaired_preview_count": 3,
+      "rejected_remaining": 0
+    },
+    "nasa": {
+      "total": 5,
+      "repaired_preview_count": 2,
+      "rejected_remaining": 3
+    },
+    "esa": {
+      "total": 7,
+      "repaired_preview_count": 0,
+      "rejected_remaining": 7
+    }
+  },
+  "source_readiness": {
+    "zh_wikipedia": "can_reenter_controlled_preview_after_review",
+    "nasa": "can_reenter_controlled_preview_after_review",
+    "esa": "blocked_needs_source_strategy_repair"
+  },
+  "blocker_summary": {
+    "zh_wikipedia": [],
+    "nasa": [
+      "no_meaningful_existing_body_after_repair_filter",
+      "no_meaningful_existing_body_after_repair_filter",
+      "no_meaningful_existing_body_after_repair_filter"
+    ],
+    "esa": [
+      "no_meaningful_existing_body_after_repair_filter",
+      "no_meaningful_existing_body_after_repair_filter",
+      "no_meaningful_existing_body_after_repair_filter",
+      "no_meaningful_existing_body_after_repair_filter",
+      "no_meaningful_existing_body_after_repair_filter",
+      "no_meaningful_existing_body_after_repair_filter",
+      "no_meaningful_existing_body_after_repair_filter"
+    ]
+  },
+  "root_cause_counts": {
+    "zh_json_template_table_noise": 3,
+    "nasa_url_array_or_meta_thin": 2,
+    "nasa_html_boilerplate": 3,
+    "esa_html_listing_or_index": 7
+  },
+  "overall_status": "three_source_repair_preview_ready_for_review",
+  "next_recommendation": "review repaired previews; source-specific strategy repair before deeper crawl rerun",
+  "production_ready": false,
+  "preflight_allowed": false,
+  "apply_preflight_allowed": false,
+  "apply_approved": false,
+  "ingest_approved": false,
+  "preflight_approved": false,
+  "formal_raw_write": false,
+  "formal_default_triples_write": false,
+  "chroma_write": false,
+  "neo4j_write": false,
+  "active_source": "zh_wikipedia",
+  "active_source_unchanged": true,
+  "clear_source_ingestion_outputs_called": false
+}
