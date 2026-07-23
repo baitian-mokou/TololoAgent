@@ -1,0 +1,33 @@
+{
+  "phase": "Phase118",
+  "mode": "zh_offline_fixture_network_diagnostics",
+  "generated_at": "2026-07-23T07:23:53.779310+00:00",
+  "input_report": "evaluation/four_source_expansion/phase117/zh_mediawiki_fetch_encoding_phase117.json",
+  "offline_fixture": {
+    "title": "太阳",
+    "content_type": "application/json; charset=utf-8",
+    "narrative": "太阳是太阳系中心的恒星，主要由氢和氦组成，通过核聚变释放光和热，并维持行星运行环境。",
+    "quality_class": "accepted"
+  },
+  "encoding_logic_ok": true,
+  "quality_gate_ok": true,
+  "network_status": {
+    "network_probe_used": false
+  },
+  "likely_root_cause": "external_network_or_api_reachability_blocker",
+  "quality_verdict": "offline_logic_ok_network_blocked",
+  "next_recommendation": "review network diagnostics; do not queue zh until live MediaWiki access succeeds",
+  "production_ready": false,
+  "preflight_allowed": false,
+  "apply_preflight_allowed": false,
+  "apply_approved": false,
+  "ingest_approved": false,
+  "preflight_approved": false,
+  "formal_raw_write": false,
+  "formal_default_triples_write": false,
+  "chroma_write": false,
+  "neo4j_write": false,
+  "active_source": "zh_wikipedia",
+  "active_source_unchanged": true,
+  "clear_source_ingestion_outputs_called": false
+}
