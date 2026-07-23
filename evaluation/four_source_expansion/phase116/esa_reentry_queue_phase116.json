@@ -1,0 +1,83 @@
+[
+  {
+    "source": "esa",
+    "title": "Juice",
+    "url": "https://www.esa.int/Science_Exploration/Space_Science/Juice",
+    "method": "specific_article_body",
+    "narrative": "ESA - Juice The mission ESA’s Jupiter Icy Moons Explorer, Juice, will make detailed observations of the giant gas planet and its three large ocean-bearing moons – Ganymede, Callisto and Europa – with a suite of remote sensing, geophysical and in situ instruments. The mission will characterise these moons as both planetary objects and possible habitats, explore Jupiter’s complex environment in depth, and study the wider Jupiter system as an archetype for gas giants across the Universe. The journey Launch : 14 April 2023 Launch location: Europe's Spaceport in French Guiana Launch vehicle: Ariane 5 Flybys en route : August 2024 Lunar-Earth, August 2025 Venus, September 2026 Earth, January 2029 Earth Arrival at Jupiter: July 2031 10 instruments 85 m 2 solar wings 35 Jovian moon flybys Latest A",
+    "triples_preview": [
+      {
+        "subject": "Juice",
+        "predicate": "SOURCE_URL",
+        "object": "https://www.esa.int/Science_Exploration/Space_Science/Juice"
+      },
+      {
+        "subject": "Juice",
+        "predicate": "HAS_REENTRY_PREVIEW_TEXT",
+        "object": "ESA - Juice The mission ESA’s Jupiter Icy Moons Explorer, Juice, will make detailed observations of the giant gas planet and its three large ocean-bearing moons – Ganymede, Callisto and Europa – with a suite of remote se"
+      }
+    ],
+    "quality_class": "accepted_for_reentry_review",
+    "review_status": "pending_manual_review",
+    "source_risks": [
+      "esa_specific_page_body_extraction",
+      "keep_index_news_listing_filter"
+    ],
+    "apply_preflight_allowed": false,
+    "production_ready": false
+  },
+  {
+    "source": "esa",
+    "title": "Mars Express",
+    "url": "https://www.esa.int/Science_Exploration/Space_Science/Mars_Express",
+    "method": "specific_article_body",
+    "narrative": "ESA - Mars Express The mission Since beginning science operations in 2004, Mars Express has provided breathtaking views of Mars in three dimensions. It has provided the most complete map of the chemical composition of the atmosphere, studied Mars’s innermost moon Phobos in unprecedented detail, and traced the history of water across the globe, demonstrating that Mars once harboured environmental conditions that may have been suitable for life. Launch date: 2 June 2003 Arrival at Mars: December 2003 Status: In operation Targets: Mars's atmosphere, surface and subsurface; Mars's moons Phobos and Deimos 10 m imaging resolution 8 instruments 1120 kg launch mass 2 decades of operation Latest All Stories Videos Images Image View Story Read Story Read Story Read Story Read Story Read Video 00:03:",
+    "triples_preview": [
+      {
+        "subject": "Mars Express",
+        "predicate": "SOURCE_URL",
+        "object": "https://www.esa.int/Science_Exploration/Space_Science/Mars_Express"
+      },
+      {
+        "subject": "Mars Express",
+        "predicate": "HAS_REENTRY_PREVIEW_TEXT",
+        "object": "ESA - Mars Express The mission Since beginning science operations in 2004, Mars Express has provided breathtaking views of Mars in three dimensions. It has provided the most complete map of the chemical composition of th"
+      }
+    ],
+    "quality_class": "accepted_for_reentry_review",
+    "review_status": "pending_manual_review",
+    "source_risks": [
+      "esa_specific_page_body_extraction",
+      "keep_index_news_listing_filter"
+    ],
+    "apply_preflight_allowed": false,
+    "production_ready": false
+  },
+  {
+    "source": "esa",
+    "title": "Solar Orbiter",
+    "url": "https://www.esa.int/Science_Exploration/Space_Science/Solar_Orbiter",
+    "method": "specific_article_body",
+    "narrative": "ESA - Solar Orbiter Solar Orbiter is the most complex scientific laboratory ever sent to our life-giving star, taking images of the Sun from closer than any spacecraft before and being the first to look at its polar regions. With Solar Orbiter's ten instruments, scientists hope to answer some profound questions: What drives the Sun’s 11-year cycle of rising and subsiding magnetic activity? What heats up the upper layer of its atmosphere, the corona, to millions of degrees Celsius? How does solar wind form, and what accelerates it to speeds of hundreds of kilometres per second? And how does it all affect our planet? Launch date: February 2020 First images: July 2020 Beginning of routine science operations: November 2021 Mission highlights: The closest-ever images of the Sun, the first ever ",
+    "triples_preview": [
+      {
+        "subject": "Solar Orbiter",
+        "predicate": "SOURCE_URL",
+        "object": "https://www.esa.int/Science_Exploration/Space_Science/Solar_Orbiter"
+      },
+      {
+        "subject": "Solar Orbiter",
+        "predicate": "HAS_REENTRY_PREVIEW_TEXT",
+        "object": "ESA - Solar Orbiter Solar Orbiter is the most complex scientific laboratory ever sent to our life-giving star, taking images of the Sun from closer than any spacecraft before and being the first to look at its polar regi"
+      }
+    ],
+    "quality_class": "accepted_for_reentry_review",
+    "review_status": "pending_manual_review",
+    "source_risks": [
+      "esa_specific_page_body_extraction",
+      "keep_index_news_listing_filter"
+    ],
+    "apply_preflight_allowed": false,
+    "production_ready": false
+  }
+]

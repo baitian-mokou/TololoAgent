@@ -1,0 +1,68 @@
+{
+  "zh_strategy_fix_preview": {
+    "status": "blocked_needs_mediawiki_fetch_encoding_fix",
+    "failed_count": 3,
+    "attempted_titles": [
+      "太阳",
+      "太阳系",
+      "水星"
+    ],
+    "root_cause": "Phase115 MediaWiki plaintext API probes returned fetch_failed/network_error for all zh titles",
+    "strategy_fix": [
+      "retry same three title/API probes only after review approval",
+      "record exact HTTP status/error body and response encoding",
+      "use action=query&prop=extracts&explaintext=1&format=json with URL-encoded titles",
+      "do not auto-queue successful zh candidates in Phase116"
+    ],
+    "auto_queue_allowed": false
+  },
+  "nasa_conditional_fix_preview": {
+    "status": "conditional_review_only_not_strong",
+    "conditional_count": 1,
+    "strong_count": 0,
+    "rejected_or_failed_count": 2,
+    "conditional_items": [
+      {
+        "title": "Juno images metadata",
+        "url": "https://images-api.nasa.gov/search?q=Juno&media_type=image&page_size=3",
+        "method": "images_api_structured_description",
+        "quality_labels": [
+          "conditional_not_strong",
+          "meta_or_endpoint_quality_risk",
+          "needs_review"
+        ],
+        "narrative": "The three LEGO figurines flying aboard the Juno spacecraft are the Roman god Jupiter, his wife Juno and Galileo Galilei. Three LEGO figurines representing the Roman god Jupiter, his wife Juno and Galileo Galilei are shown here aboard the Juno spacecraft. Technicians install components that will aid with guidance, navigation and control of NASA Juno spacecraft.",
+        "triples_preview": [
+          {
+            "subject": "Juno images metadata",
+            "predicate": "SOURCE_URL",
+            "object": "https://images-api.nasa.gov/search?q=Juno&media_type=image&page_size=3"
+          },
+          {
+            "subject": "Juno images metadata",
+            "predicate": "HAS_REENTRY_PREVIEW_TEXT",
+            "object": "The three LEGO figurines flying aboard the Juno spacecraft are the Roman god Jupiter, his wife Juno and Galileo Galilei. Three LEGO figurines representing the Roman god Jupiter, his wife Juno and Galileo Galilei are show"
+          }
+        ]
+      }
+    ],
+    "quality_labels": [
+      "conditional_not_strong",
+      "meta_or_endpoint_quality_risk",
+      "needs_review"
+    ],
+    "apply_preflight_allowed": false,
+    "production_ready": false
+  },
+  "source_statuses": {
+    "esa": "reentry_review_queue_ready_pending_manual_review",
+    "zh_wikipedia": "blocked_needs_mediawiki_fetch_encoding_fix",
+    "nasa": "conditional_review_only_not_strong"
+  },
+  "flags": {
+    "production_ready": false,
+    "preflight_allowed": false,
+    "apply_approved": false,
+    "ingest_approved": false
+  }
+}
