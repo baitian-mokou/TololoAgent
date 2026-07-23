@@ -1,0 +1,190 @@
+{
+  "phase": "Phase114",
+  "mode": "three_source_source_strategy_repair_preview",
+  "generated_at": "2026-07-23T05:19:07.351066+00:00",
+  "input_reports": {
+    "phase113": "evaluation\\four_source_expansion\\phase113\\three_source_extraction_repair_preview_phase113.json",
+    "phase100": "evaluation\\four_source_expansion\\phase100\\nasa_source_endpoint_strategy_preview_phase100.json"
+  },
+  "live_probe_used": false,
+  "probe_limits": {
+    "per_source_max": 3,
+    "total_max": 9,
+    "total_attempted": 9
+  },
+  "source_strategy_candidates": {
+    "zh_wikipedia": [
+      {
+        "source": "zh_wikipedia",
+        "entry_strategy": "mediawiki_plaintext_extract_api",
+        "url_or_api": "https://zh.wikipedia.org/w/api.php?action=query&prop=extracts&explaintext=1&titles=太阳&format=json",
+        "method": "api_extract_plaintext",
+        "status": "not_fetched_existing_evaluation_or_strategy_probe",
+        "live_probe_used": false,
+        "allowlisted": true,
+        "suitability_verdict": "accepted_strategy_candidate",
+        "evidence_basis": "Phase113 blocked JSON/table/template noise; use MediaWiki plaintext extract before templates/tables.",
+        "blocked_reason": ""
+      },
+      {
+        "source": "zh_wikipedia",
+        "entry_strategy": "mediawiki_parse_plaintext_section0",
+        "url_or_api": "https://zh.wikipedia.org/w/api.php?action=parse&prop=text&page=太阳&format=json",
+        "method": "api_parse_then_text_filter",
+        "status": "not_fetched_existing_evaluation_or_strategy_probe",
+        "live_probe_used": false,
+        "allowlisted": false,
+        "suitability_verdict": "blocked_not_allowlisted",
+        "evidence_basis": "Fallback only if plaintext extract is unavailable; must strip tables/templates before review.",
+        "blocked_reason": "requires table/template stripping gate"
+      },
+      {
+        "source": "zh_wikipedia",
+        "entry_strategy": "generic_article_url",
+        "url_or_api": "https://zh.wikipedia.org/wiki/太阳",
+        "method": "generic_html",
+        "status": "not_fetched_existing_evaluation_or_strategy_probe",
+        "live_probe_used": false,
+        "allowlisted": false,
+        "suitability_verdict": "blocked_not_allowlisted",
+        "evidence_basis": "Known Phase110/113 failure mode produced template/table noise.",
+        "blocked_reason": "generic wiki HTML is not accepted for this gate"
+      }
+    ],
+    "nasa": [
+      {
+        "source": "nasa",
+        "entry_strategy": "images_api_structured_description",
+        "url_or_api": "https://images-api.nasa.gov/search?q=Juno&media_type=image&page_size=3",
+        "method": "api_json_description",
+        "status": "not_fetched_existing_evaluation_or_strategy_probe",
+        "live_probe_used": false,
+        "allowlisted": true,
+        "suitability_verdict": "accepted_strategy_candidate",
+        "evidence_basis": "Phase100/101 showed Images API metadata is clean but thin.",
+        "blocked_reason": ""
+      },
+      {
+        "source": "nasa",
+        "entry_strategy": "science_wp_rest_body",
+        "url_or_api": "https://science.nasa.gov/wp-json/wp/v2/posts?per_page=3&search=Juno",
+        "method": "wp_rest_content_then_boilerplate_filter",
+        "status": "not_fetched_existing_evaluation_or_strategy_probe",
+        "live_probe_used": false,
+        "allowlisted": true,
+        "suitability_verdict": "conditional_strategy_candidate",
+        "evidence_basis": "Phase100 found body fields, but Phase101/113 showed Photojournal/EO navigation residue risk.",
+        "blocked_reason": "requires body-field and navigation residue gate"
+      },
+      {
+        "source": "nasa",
+        "entry_strategy": "generic_science_search_or_gallery",
+        "url_or_api": "https://science.nasa.gov/search/?search=Juno",
+        "method": "generic_search_html",
+        "status": "not_fetched_existing_evaluation_or_strategy_probe",
+        "live_probe_used": false,
+        "allowlisted": false,
+        "suitability_verdict": "blocked_not_allowlisted",
+        "evidence_basis": "Search/gallery/navigation pages caused NASA blocks.",
+        "blocked_reason": "search/gallery/navigation denied"
+      }
+    ],
+    "esa": [
+      {
+        "source": "esa",
+        "entry_strategy": "specific_mission_article_body",
+        "url_or_api": "https://www.esa.int/Science_Exploration/Space_Science/Juice",
+        "method": "specific_page_body_extract",
+        "status": "not_fetched_existing_evaluation_or_strategy_probe",
+        "live_probe_used": false,
+        "allowlisted": true,
+        "suitability_verdict": "conditional_strategy_candidate",
+        "evidence_basis": "ESA conditional samples were strongest when mission/science body pages were used.",
+        "blocked_reason": "requires page-type filter and body paragraph gate"
+      },
+      {
+        "source": "esa",
+        "entry_strategy": "esa_rss_or_sitemap_candidate_probe",
+        "url_or_api": "https://www.esa.int/rssfeed/Our_Activities/Space_Science",
+        "method": "rss_or_sitemap_then_specific_article_filter",
+        "status": "not_fetched_existing_evaluation_or_strategy_probe",
+        "live_probe_used": false,
+        "allowlisted": true,
+        "suitability_verdict": "conditional_strategy_candidate",
+        "evidence_basis": "May provide candidates, but must reject index/news/listing entries before extraction.",
+        "blocked_reason": "candidate discovery only; not review text by itself"
+      },
+      {
+        "source": "esa",
+        "entry_strategy": "space_science_index",
+        "url_or_api": "https://www.esa.int/Science_Exploration/Space_Science",
+        "method": "generic_index_html",
+        "status": "not_fetched_existing_evaluation_or_strategy_probe",
+        "live_probe_used": false,
+        "allowlisted": false,
+        "suitability_verdict": "blocked_not_allowlisted",
+        "evidence_basis": "Phase104 rejected ESA - Space Science because listing dominated.",
+        "blocked_reason": "index/listing denied"
+      }
+    ]
+  },
+  "source_counts": {
+    "zh_wikipedia": {
+      "attempted": 3,
+      "accepted_strategy_candidates": 1,
+      "conditional_strategy_candidates": 0,
+      "blocked_strategy_candidates": 2
+    },
+    "nasa": {
+      "attempted": 3,
+      "accepted_strategy_candidates": 1,
+      "conditional_strategy_candidates": 1,
+      "blocked_strategy_candidates": 1
+    },
+    "esa": {
+      "attempted": 3,
+      "accepted_strategy_candidates": 0,
+      "conditional_strategy_candidates": 2,
+      "blocked_strategy_candidates": 1
+    }
+  },
+  "source_verdicts": {
+    "zh_wikipedia": "strategy_ready_for_small_controlled_plaintext_api_preview",
+    "nasa": "strategy_ready_with_images_api_preferred_wp_rest_conditional",
+    "esa": "strategy_conditional_needs_specific_article_page_type_gate"
+  },
+  "ready_to_reenter_controlled_deeper_crawl_preview": {
+    "zh_wikipedia": true,
+    "nasa": true,
+    "esa": true
+  },
+  "next_candidate_rules": {
+    "zh_wikipedia": [
+      "use MediaWiki plaintext extract API",
+      "reject infobox/table/template/caption-heavy text"
+    ],
+    "nasa": [
+      "prefer Images API structured description",
+      "allow WP REST only with body-field and navigation residue gates"
+    ],
+    "esa": [
+      "use specific mission/article pages",
+      "reject index/news/listing pages before extraction"
+    ]
+  },
+  "overall_status": "source_strategy_repair_preview_ready_for_review",
+  "next_recommendation": "review Phase114 strategies before any controlled deeper crawl rerun",
+  "production_ready": false,
+  "preflight_allowed": false,
+  "apply_preflight_allowed": false,
+  "apply_approved": false,
+  "ingest_approved": false,
+  "preflight_approved": false,
+  "formal_raw_write": false,
+  "formal_default_triples_write": false,
+  "chroma_write": false,
+  "neo4j_write": false,
+  "active_source": "zh_wikipedia",
+  "active_source_unchanged": true,
+  "clear_source_ingestion_outputs_called": false
+}
