@@ -1,0 +1,137 @@
+{
+  "phase": "Phase117",
+  "mode": "zh_mediawiki_fetch_encoding_fix_preview",
+  "generated_at": "2026-07-23T07:05:00.765537+00:00",
+  "input_reports": {
+    "phase115": "evaluation/four_source_expansion/phase115/three_source_controlled_reentry_preview_phase115.json",
+    "phase116": "evaluation/four_source_expansion/phase116/zh_nasa_strategy_fixes_phase116.json"
+  },
+  "live_probe_used": true,
+  "records": [
+    {
+      "source": "zh_wikipedia",
+      "title": "太阳",
+      "endpoint": "https://zh.wikipedia.org/w/api.php?action=query&prop=extracts&explaintext=1&titles=%E5%A4%AA%E9%98%B3&format=json&utf8=1",
+      "method": "mediawiki_extracts_then_parse_utf8",
+      "status_code": 0,
+      "encoding": "utf-8_assumed",
+      "quality_class": "failed",
+      "narrative": "",
+      "triples_preview": [],
+      "attempts": [
+        {
+          "endpoint": "https://zh.wikipedia.org/w/api.php?action=query&prop=extracts&explaintext=1&titles=%E5%A4%AA%E9%98%B3&format=json&utf8=1",
+          "method": "mediawiki_extracts_utf8",
+          "status_code": 0,
+          "status": "fetch_failed",
+          "content_type": "network_error",
+          "encoding": "utf-8_assumed",
+          "quality_class": "failed",
+          "failure_reason": "fetch_failed_or_quality_gate"
+        },
+        {
+          "endpoint": "https://zh.wikipedia.org/w/api.php?action=parse&prop=text&page=%E5%A4%AA%E9%98%B3&format=json&utf8=1",
+          "method": "mediawiki_parse_utf8",
+          "status_code": 0,
+          "status": "fetch_failed",
+          "content_type": "network_error",
+          "encoding": "utf-8_assumed",
+          "quality_class": "failed",
+          "failure_reason": "fetch_failed_or_quality_gate"
+        }
+      ],
+      "review_status": "blocked"
+    },
+    {
+      "source": "zh_wikipedia",
+      "title": "太阳系",
+      "endpoint": "https://zh.wikipedia.org/w/api.php?action=query&prop=extracts&explaintext=1&titles=%E5%A4%AA%E9%98%B3%E7%B3%BB&format=json&utf8=1",
+      "method": "mediawiki_extracts_then_parse_utf8",
+      "status_code": 0,
+      "encoding": "utf-8_assumed",
+      "quality_class": "failed",
+      "narrative": "",
+      "triples_preview": [],
+      "attempts": [
+        {
+          "endpoint": "https://zh.wikipedia.org/w/api.php?action=query&prop=extracts&explaintext=1&titles=%E5%A4%AA%E9%98%B3%E7%B3%BB&format=json&utf8=1",
+          "method": "mediawiki_extracts_utf8",
+          "status_code": 0,
+          "status": "fetch_failed",
+          "content_type": "network_error",
+          "encoding": "utf-8_assumed",
+          "quality_class": "failed",
+          "failure_reason": "fetch_failed_or_quality_gate"
+        },
+        {
+          "endpoint": "https://zh.wikipedia.org/w/api.php?action=parse&prop=text&page=%E5%A4%AA%E9%98%B3%E7%B3%BB&format=json&utf8=1",
+          "method": "mediawiki_parse_utf8",
+          "status_code": 0,
+          "status": "fetch_failed",
+          "content_type": "network_error",
+          "encoding": "utf-8_assumed",
+          "quality_class": "failed",
+          "failure_reason": "fetch_failed_or_quality_gate"
+        }
+      ],
+      "review_status": "blocked"
+    },
+    {
+      "source": "zh_wikipedia",
+      "title": "水星",
+      "endpoint": "https://zh.wikipedia.org/w/api.php?action=query&prop=extracts&explaintext=1&titles=%E6%B0%B4%E6%98%9F&format=json&utf8=1",
+      "method": "mediawiki_extracts_then_parse_utf8",
+      "status_code": 0,
+      "encoding": "utf-8_assumed",
+      "quality_class": "failed",
+      "narrative": "",
+      "triples_preview": [],
+      "attempts": [
+        {
+          "endpoint": "https://zh.wikipedia.org/w/api.php?action=query&prop=extracts&explaintext=1&titles=%E6%B0%B4%E6%98%9F&format=json&utf8=1",
+          "method": "mediawiki_extracts_utf8",
+          "status_code": 0,
+          "status": "fetch_failed",
+          "content_type": "network_error",
+          "encoding": "utf-8_assumed",
+          "quality_class": "failed",
+          "failure_reason": "fetch_failed_or_quality_gate"
+        },
+        {
+          "endpoint": "https://zh.wikipedia.org/w/api.php?action=parse&prop=text&page=%E6%B0%B4%E6%98%9F&format=json&utf8=1",
+          "method": "mediawiki_parse_utf8",
+          "status_code": 0,
+          "status": "fetch_failed",
+          "content_type": "network_error",
+          "encoding": "utf-8_assumed",
+          "quality_class": "failed",
+          "failure_reason": "fetch_failed_or_quality_gate"
+        }
+      ],
+      "review_status": "blocked"
+    }
+  ],
+  "source_counts": {
+    "attempted": 3,
+    "succeeded": 0,
+    "accepted": 0,
+    "rejected": 0,
+    "failed": 3
+  },
+  "zh_reentry_candidates": [],
+  "quality_verdict": "zh_mediawiki_fetch_encoding_still_blocked",
+  "next_recommendation": "review accepted zh candidates only; do not apply or preflight",
+  "production_ready": false,
+  "preflight_allowed": false,
+  "apply_preflight_allowed": false,
+  "apply_approved": false,
+  "ingest_approved": false,
+  "preflight_approved": false,
+  "formal_raw_write": false,
+  "formal_default_triples_write": false,
+  "chroma_write": false,
+  "neo4j_write": false,
+  "active_source": "zh_wikipedia",
+  "active_source_unchanged": true,
+  "clear_source_ingestion_outputs_called": false
+}
