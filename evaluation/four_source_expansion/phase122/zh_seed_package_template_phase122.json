@@ -1,0 +1,9 @@
+{
+  "source_url": "https://zh.wikipedia.org/wiki/<title>",
+  "title": "<title>",
+  "retrieved_at": "YYYY-MM-DDTHH:MM:SSZ",
+  "license_or_terms": "CC BY-SA; include MediaWiki export/source terms used by operator",
+  "provenance_notes": "Downloaded by <operator/tool/environment>; include API URL or export method.",
+  "body": "<paste UTF-8 MediaWiki plain text extract here>",
+  "expected_sha256": "2885e94d1780891dca57cee92bc7a9117387694d9389383de5431d3bb57bbb0a"
+}

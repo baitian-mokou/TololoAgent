@@ -1,0 +1,50 @@
+{
+  "phase": "Phase122",
+  "mode": "zh_external_seed_package_spec_and_operator_guide",
+  "generated_at": "2026-07-23T08:09:15.277616+00:00",
+  "template_validation": {
+    "missing_fields": [],
+    "warnings": [
+      "placeholder_body",
+      "placeholder_title"
+    ],
+    "accepted_as_real_seed": false
+  },
+  "required_fields": [
+    "source_url",
+    "title",
+    "retrieved_at",
+    "license_or_terms",
+    "body",
+    "expected_sha256"
+  ],
+  "checksum_algorithm": "sha256(UTF-8 body)",
+  "operator_steps": [
+    "download or export MediaWiki plain text in a network-enabled environment",
+    "fill one JSON file per seed or a JSON list of seeds",
+    "compute expected_sha256 over the exact UTF-8 body",
+    "run Phase121 intake with --input-dir against the seed folder",
+    "review accepted records manually before any later queue decision"
+  ],
+  "forbidden": [
+    "live fetch in this phase",
+    "default data writes",
+    "queue/apply/preflight/ingest/production approval"
+  ],
+  "live_fetch_used": false,
+  "queue_allowed": false,
+  "production_ready": false,
+  "preflight_allowed": false,
+  "apply_preflight_allowed": false,
+  "apply_approved": false,
+  "ingest_approved": false,
+  "preflight_approved": false,
+  "formal_raw_write": false,
+  "formal_default_triples_write": false,
+  "chroma_write": false,
+  "neo4j_write": false,
+  "active_source": "zh_wikipedia",
+  "active_source_unchanged": true,
+  "clear_source_ingestion_outputs_called": false,
+  "next_recommendation": "prepare audited external seed files, then rerun Phase121 intake for review-only output"
+}
